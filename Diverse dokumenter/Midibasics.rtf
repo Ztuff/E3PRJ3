@@ -1,0 +1,632 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1138\cocoasubrtf230
+{\fonttbl\f0\fnil\fcharset0 Verdana;\f1\fswiss\fcharset0 ArialMT;}
+{\colortbl;\red255\green255\blue255;\red175\green31\blue55;\red109\green26\blue125;\red153\green153\blue153;
+\red76\green108\blue219;\red222\green79\blue30;\red72\green135\blue43;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww24300\viewh14600\viewkind0
+\deftab720
+\pard\pardeftab720
+
+\f0\b\fs56 \cf2 MIDI BASICS: Part 1\
+\pard\pardeftab720
+
+\f1\b0\fs40 \cf0 \
+\pard\pardeftab720\sa240
+\cf0 You might imagine that most 
+\i SOS
+\i0  readers already have a pretty firm grasp of MIDI, but new readers are joining us every month. Furthermore, there are those amongst our existing readership who mainly record using traditional multitrack methods, and they too could benefit from a refresher course in MIDI practices. One of the problems is that many of the musicians who could reap the benefits of MIDI are frightened off by the jargon -- and there's also the underlying suspicion that MIDI has something to do with computerising and dehumanising music. Furthermore, it's not always clear what MIDI can actually help you achieve. But before looking at all the great things you can do with MIDI, is it true that MIDI is complicated?\
+Technically, MIDI is quite complicated -- but then the same is true of TV, telephones, cars, and the insides of your hi-fi system. Even so, most of us take these things for granted and use them without giving a second thought to what really makes them tick. The ease of use of something doesn't necessarily relate to the complexity of the technology that makes it work, and that's certainly true of MIDI, because although it does provide the scope for you to do complicated things if you wish to, you can choose to approach it on your own terms and make use only of the facilities that you need.\
+\pard\pardeftab720\sa280\qc
+
+\b\fs44 \cf0 WHAT IS MIDI?\
+\pard\pardeftab720\sa240
+
+\b0\fs40 \cf0 MIDI is essentially a communications protocol or common language that enables any MIDI-equipped electronic instruments to be linked together in a musically useful way. The data that makes this possible is in digital form, hence the acronym MIDI (
+\b Musical Instrument Digital Interface
+\b0 ). Don't worry if you don't know how digital data works -- it doesn't know how you work either, but that doesn't mean you can't work together!\
+MIDI compatible instruments and other MIDI devices are connected to each other via standard MIDI cables, with 5-pin DIN plugs on either end. There are a few simple rules determining what should be plugged where, but what would really help at this stage would be to talk more about this mysterious 'musically useful' information that MIDI instruments send to each other. In reality, there are many types of MIDI message, and to try to grasp them all at once would probably give you a headache, so what I'm going to do is cover the essentials first (and if I have to bend the truth occasionally to keep things simple, it won't do you any lasting damage!).\
+Electronic keyboard instruments are, by definition, electronic, which means that the sound is created by circuitry, not by something being hit, bowed, or blown. Whereas a piano key activates a mechanism which hits the string, the keys on an electronic MIDI instrument generate electronic signals to tell the internal circuitry what note to play and how loud to play it. When a key is depressed, a signal known as a 
+\b Note On
+\b0  message is transmitted, and when the key is released, a 
+\b Note Off
+\b0  message is sent. The actually key that you depress dictates which musical note will be played, and the loudness of the note depends on how hard the key is hit -- which is really the same thing as saying how fast the key is pushed down. This speed, or 
+\b velocity
+\b0 , is read by circuitry within the keyboard and used to control the volume of the sound being played. The term 'velocity' is one piece of MIDI jargon that crops up quite regularly.\
+To recap so far, the main parameters of a musical note played from a keyboard are: which note it is, when it starts, when it stops, and how loud it is. There are other things that you can do to a note, such as bending the pitch or adding vibrato, but they'll keep for now...\
+If pitch, Note On, Note Off and Velocity information all exists in the form of electronic signals, it must be possible to send these signals along a piece of wire and use them to control the sound generating circuitry in another electronic instrument, and it's precisely that concept which is at the heart of MIDI. (It might occur to you at this stage that you could send the same signals directly from a computer and cut out the middle man -- but that avenue of exploration comes later, when we look at sequencing.) The main point to get across to new users is that MIDI is not a means of transmitting audible sounds -- it is a means of transmitting instructions or messages. A good analogy might be to compare MIDI data with a written musical score; the score only tells the performer what to play, it doesn't have any influence over the sound of the instrument. What's more, you could read a score written for violin and choose to play it on a piano. MIDI allows us to play any piece of music using any sound at our disposal.\
+If we plug the MIDI Out of the keyboard we are physically playing (the 
+\b Master
+\b0  keyboard) into the MIDI In socket of another MIDI instrument (the 
+\b Slave
+\b0 ), then the slave is able to play the notes as performed on the master keyboard. This simple arrangement is shown in Figure 1.\
+Great -- but why would I want to do that? Well, when playing live, the ability to link a second instrument via MIDI means that the sounds of both instruments can be played without changing keyboards. Not so flash as wearing a gold cape and standing in front of tiered banks of Moog synths, perhaps, but far more practical. Indeed, only the master synth needs to have a keyboard at all -- the other MIDI devices can simply be sound modules, which certainly saves on space if you have to drive to a gig in a Metro, and it saves money.\
+To understand how the control of multiple modules is possible without them all playing at once, all of the time, the concept of MIDI channels has to be introduced.\
+\pard\pardeftab720\sa280\qc
+
+\b\fs44 \cf0 MIDI CHANNELS\
+\pard\pardeftab720\sa240
+
+\b0\fs40 \cf0 In a basic MIDI system, the way the instruments are linked means they all receive the same MIDI information. In order to allow the master instrument to communicate with the slaves on a more selective basis, the 
+\b MIDI Channel
+\b0  system was devised. There are 16 MIDI channels available, numbered 1 to 16, and they work in a very similar way to TV channels. Most people in the UK receive four TV channels (forget Sky just for now), yet all four channels arrive at the same aerial and reach the set down the same piece of wire. Which one we actually watch depends on which TV channel we select on the set.\
+With MIDI, the information sent down the MIDI cable can be transmitted on any one of 16 channels selected on the master keyboard; similarly, the sound modules may be set to receive on any of the 16 channels. If we, for example, set the master keyboard to transmit on MIDI channel 1 and connect up three different MIDI modules set to receive on channels 1, 2, and 3, only the first module set to channel 1 will respond. The others still receive the information, but the MIDI data tells them that the information is not on their channel and so they ignore it. Of course, you can set all your modules on the same MIDI channel and have them all playing at once, if you want to.\
+Putting it briefly, by switching channels at the master keyboard end, up to 16 different modules (set to the 16 different MIDI channels) can be addressed/played individually, even though they are all wired into the same system.\
+\pard\pardeftab720\sa280\qc
+
+\b\fs44 \cf0 MULTITIMBRAL APPROACH\
+\pard\pardeftab720\sa240
+
+\b0\fs40 \cf0 We've already discovered that a MIDI sound module is essentially a MIDI instrument without a keyboard, but many current MIDI modules actually contain the equivalent of several MIDI instruments, each of which can be addressed on a different MIDI channel. These are known as 
+\b multitimbral
+\b0  modules, but the instruments inside are not usually quite as independent as they appear; for example, some parameters may affect all the voices globally, or the sounds may all be mixed to a single stereo pair of audio output sockets. Even so, it is always possible to change the relative volume levels of the different instrument voices and to change their left/right pan positions.\
+Why should you want a multitimbral module, after all, you only have one pair of hands? If you're playing live, then you probably can't take full advantage of multitimbral modules (though you could use them to assign different sounds to different regions of your keyboard), but if you want to add a sequencer to your setup to allow you to make multitrack MIDI recordings, just one multitimbral module can provide you with a complete backing band or orchestra, including the drums. Before multitimbral sound modules appeared, you needed a different MIDI instrument for each of the parts you wanted to sequence.\
+On top of that, all MIDI sound modules have what is known as a 'maximum polyphony' -- the maximum number of notes that they can play at any one time. This being the case, if some of the MIDI channels are already playing very busy parts, you might find that trying to play yet another part on top causes some of the notes to drop out or be cut short. The bottom line here is that the more polyphony you have (64-note polyphony is typically the maximum for modern modules), the better -- especially if you're in the habit of writing complex pieces of music where lots of sustained notes overlap.\
+Drum machines may also be used as MIDI modules, even though they have their own built-in rhythm sequencers. It is possible to access their sounds externally over MIDI, each drum sound being 'mapped' to a different note on the keyboard. Some MIDI drum modules, such as the Alesis D4, are specifically designed with no internal sequencing capability, just sounds.\
+\pard\pardeftab720\sa280\qc
+
+\b\fs44 \cf0 MIDI CONNECTIONS\
+\pard\pardeftab720\sa240
+
+\b0\fs40 \cf0 Most MIDI instruments have three MIDI sockets, labelled 
+\b In
+\b0 , 
+\b Out
+\b0 , and 
+\b Thru
+\b0 , though some older models may not have all three. The master instrument always sends information from its MIDI Out socket, which must be connected to the MIDI In socket of one of the slaves. The MIDI Thru of the slave is then connected to the MIDI In of the next slave and its Thru connected to the In of the next one, and so on... What we end up with is a daisy-chain and, in theory, this can be indefinitely long. Not so in practice, however, because the MIDI signal deteriorates slightly as it passes through each successive instrument. After passing through three or four instruments, the MIDI messages may start to become unreliable, resulting in notes which stick on or refuse to play at all.\
+A better way to interconnect multiple instruments, in anything other than the smallest MIDI system, is to use a so-called 
+\b MIDI Thru box
+\b0 . This takes the Out from the master keyboard and splits it into several Thru connections, which then feed the individual modules directly. Figure 2 shows the standard method of daisy-chaining, followed by the same system using a MIDI Thru box instead. In practice, many people use a combination of MIDI Thru boxes and short daisy-chains of instruments.\
+The MIDI Outs of the slave units are normally unused during performance, but they are useful when you want to hook up your keyboard to a MIDI sound editor or librarian program, running on a MIDI-equipped computer.\
+\pard\pardeftab720\sa280\qc
+
+\b\fs44 \cf0 PROGRAM CHANGE\
+\pard\pardeftab720\sa240
+
+\b0\fs40 \cf0 So far, I've explained that MIDI operates on 16 channels and can be used to send note information from a MIDI-compatible master instrument to a MIDI-compatible slave, but there's a lot more useful information that you can send over MIDI.\
+Today's synthesizers are programmable, and they have memory banks full of sounds (often called 'patches') from which you can choose. MIDI provides direct access for up to 128 patches, sometimes numbered from 0 to 127 and sometimes from 1 to 128. The buttons that are used to select the patches on the master keyboard also enable Program Change information to be transmitted to the slave synthesizer modules, so now we can play the modules remotely 
+\i and
+\i0  we can select the sound or patch that they will play. These Program Change messages may also be used to switch to different effects patches on a MIDI effects unit that responds to MIDI Program Changes (most units do). In the case of a MIDI instrument that offers more than 128 sounds, the likelihood is that these sounds will be organised into banks, each bank containing no more than 128 sounds. The MIDI protocol now includes the facility to switch from one bank to another, though some older instruments have non-standard bank change systems which are usually explained in their respective operation manuals.\
+\pard\pardeftab720\sa280\qc
+
+\b\fs44 \cf0 PERFORMANCE CONTROL\
+\pard\pardeftab720\sa240
+
+\b0\fs40 \cf0 A typical MIDI synthesizer has two control wheels mounted to the left of the keyboard, and though these are often assignable to allow them to control various different effects, one is generally used to control pitch bend while the other controls vibrato depth. These controls work by generating electronic signals which, in turn, control the circuitry that creates the sound. And, like note information, control information may also be transmitted down a MIDI cable -- simply move the control wheel on the master, and the slave instrument will respond.\
+Time to introduce a possible pitfall. MIDI instruments can often be 'scaled' so that, for example, the maximum travel of the pitch bend wheel might cause a pitch shift of as little as one semitone or as much as an octave. It is important to ensure that any instruments likely to play at the same time are set with the same scaling values, especially for pitch bend, otherwise when you try to bend a note on the master keyboard, the sound coming from the master keyboard might go up by a third and the sound from the slave by a fourth -- clearly not desirable. Similarly when you're working with a sequencer, it makes sense to set up your instruments so that they all have the same pitch bend range.\
+Another useful MIDI controller is 
+\b master volume
+\b0  -- most modern instruments respond to it while some older ones do not. On an instrument that transmits master volume information, turning up the master volume slider will send the appropriate control information over MIDI and the receiving slave instrument (providing it understands master volume) will respond to it. In fact, when you get into MIDI you'll find that there's a whole list of controllers that can be used to add expression to your performance, including sustain pedals, vector joysticks, sostenuto, and so on. You'll find a list of the controllers to which your MIDI instruments can respond in their respective manuals, and you'll notice that the controllers are divided into two types: switch controllers which are either on or off, and continuous controllers which allow something to be varied. For example, a sustain pedal is a simple on/off switch, but a volume control is a continuous controller. Because of the structure of MIDI data, you'll find that the maximum range of any MIDI parameter or controller is usually from 1 to 128. In other words, a continuous controller really provides you with 128 small (but separate) steps.\
+\pard\pardeftab720\sa280\qc
+
+\b\fs44 \cf0 MORE ON MIDI\
+\pard\pardeftab720\sa240
+
+\b0\fs40 \cf0 So far I've only touched on the basics of MIDI, and much of what MIDI can do has been left unsaid for the time being. Even so, with what you've learned so far, you should be able to start putting MIDI into practice. However, there is time to introduce just one more concept, and that's the idea of 
+\b MIDI Clock
+\b0 .\
+Some MIDI instruments, like drum machines, have a built-in sequencer which allows drum patterns to be set up and played back at different tempos. Such instruments both send and receive MIDI Clock data, a series of electronic timing markers which go down the MIDI lead along with the other data. Think of it as the electronic equivalent of the sprocket holes at the edge of a cine film and you'll soon grasp the idea. MIDI Clock is very useful as it allows us to synchronise two or more MIDI devices together. For example, a drum machine could be slaved to a second drum machine so that both play together, allowing you to use sounds from both machines. And as we shall see later, MIDI Clock is what allows us to synchronise sequencers and drum machines together or to sync sequencers to tape recorders. Also associated with MIDI synchronisation are commands for starting and stopping things like drum machines and sequencers, and these are known as MIDI Real Time messages (see box).\
+
+\i There'll be more about MIDI Clock when we delve into the basics of sequencing next month
+\i0 ."Like note information, control information may also be transmitted down a MIDI cable -- simply move the control wheel on the master, and the slave instrument will respond.""...when you get into MIDI you'll find that there's a whole list of controllers that can be used to add expression to your performance...""If you want to add a sequencer to your setup to allow you to make multitrack MIDI recordings, just one multitimbral module can provide you with a complete backing band or orchestra, including the drums."\
+\pard\pardeftab720\sa280
+
+\b\fs44 \cf0 \'a0\
+\pard\pardeftab720\sa280
+\cf3 MIDI MODES\cf0 \
+\pard\pardeftab720\sa240
+
+\b0\fs40 \cf0 Most MIDI instruments can be set to receive on any of the 16 MIDI channels, but there is also a setting called Omni mode, which allows the unit to respond to all incoming data, regardless of its channel. Some MIDI equipment, especially older models, tends to default to Omni mode when first switched on. Although this is a trifle tedious, it isn't really a problem so long as you remember to reset the instrument to the desired MIDI channel before you continue. If the instrument is set to receive on separate MIDI channels, then it is said to be in Omni Off mode.\
+It is also possible to tell an instrument whether to play polyphonically or monophonically, and while polyphonic operation is by far the most common requirement, mono operation has certain advantages, not least for guitar synth users. In Mono mode, a single polyphonic synth can be made to behave as several single-voice synths, each voice being on a different MIDI channel. If you have a MIDI guitar, it makes sense to set up the system so that each guitar string controls its own single synthesizer voice on its own MIDI channel. Not only does that make the note allocation mirror that of the guitar (where each string can only be played monophonically), but it also allows independent amounts of pitch bend to added to each string.\
+The four possible combinations of Omni On/Off and Poly/Mono operation form the four modes of MIDI operation and are defined as follows:\
+Mode 1: Omni On/Poly\
+Mode 2: Omni On/Mono\
+Mode 3: Omni Off/Poly\
+Mode 4: Omni Off/Mono\
+Most of the time, players using keyboards will use Mode 3, which is the default mode for the majority of MIDI instruments. In Mode 3, the instrument works polyphonically and responds only to notes sent on its chosen MIDI channel (or channels, in the case of a multitimbral instrument).\
+Mode 2 is the least useful mode -- indeed, I've never met anyone who's found any use for it at all! Stories abound that it crept into the MIDI specification as the result of a misunderstanding, so if your synth doesn't support Mode 2, don't feel you're missing out.\
+\pard\pardeftab720\sa280
+
+\b\fs44 \cf0 \'a0\
+\pard\pardeftab720\sa280
+\cf3 MIDI JARGON BUSTER\cf0 \
+\pard\pardeftab720\sa240
+
+\fs40 \cf0 \'95 
+\b0 MIDI Musical Instrument Digital Interface.\
+
+\b \'95 
+\b0 MIDI Clock Series of tempo-related electronic timing markers embedded in the MIDI data stream.\
+
+\b \'95 
+\b0 Note On MIDI message sent when note is played (key pressed).\
+
+\b \'95 
+\b0 Note Off MIDI Message sent when key is released.\
+
+\b \'95 
+\b0 MIDI Module Sound generating device with no integral keyboard.\
+
+\b \'95 
+\b0 Multitimbral Module MIDI sound source capable of producing several different sounds at the same time, controlled on different MIDI channels.\
+
+\b \'95 
+\b0 MIDI Channels The 16 channels over which MIDI information can be sent.\
+
+\b \'95 
+\b0 MIDI Mode MIDI information can be interpreted by the receiving MIDI instrument in a number of ways, the most common being polyphonically on a single MIDI channel (Poly-Omni Off mode). Omni mode enables a MIDI instrument to play all incoming data regardless of channel setting.\
+
+\b \'95 
+\b0 MIDI Program Change Type of MIDI message used to change sound patches on a remote module or the effects patch on a MIDI effects unit.\
+
+\b \'95 
+\b0 MIDI Controller MIDI message sent in response to movement of certain physical controls on the master keyboard (or other master MIDI instrument).\
+
+\b \'95 
+\b0 MIDI Thru Box Device which splits the MIDI Out signal of a master instrument or sequencer to avoid daisy-chaining.\
+
+\b \'95 
+\b0 MIDI In Socket used to receive information from a master controller or from the MIDI Thru socket of a slave unit.\
+
+\b \'95 
+\b0 MIDI Out Socket on a master controller or sequencer used to send MIDI information to the slave units.\
+
+\b \'95 
+\b0 MIDI Thru Socket on a slave unit used to feed the MIDI In socket of the next unit in line.\
+\pard\pardeftab720\sa280
+
+\b\fs44 \cf0 \'a0\
+\pard\pardeftab720\sa280
+\cf3 REAL TIME MESSAGES\cf0 \
+\pard\pardeftab720\sa240
+
+\b0\fs40 \cf0 Before MIDI arrived on the scene in 1982/83, attempts were made to provide tempo-related clock systems to allow devices from different manufacturers to be synchronised together, but quite often they used different numbers of clocks per bar which meant some form of convertor box had to be employed. MIDI uses 96 clock pulses per 4-beat bar (or 'whole note', as the Americans like to call it) so any piece of MIDI gear that can send or read tempo information will sync to any other. If the tempo of the master machine is speeded up, its MIDI Clock rate speeds up accordingly, so the slave tempo is forced to follow.\
+Even when the master machine is not playing, it is still sending out MIDI Clock data at the current tempo, which means that any connected slave device knows exactly what tempo to take off at when it receives a Start command. The Stop command will cause both the master and slave machines to stop running, and a further command, Continue, allows the machines to continue playing from wherever in the song they were stopped. Start always causes the master and slave to start from the beginning of the song.\
+If you're wondering how the machines know whether they're supposed to be the master or a slave, it's because they can all be switched for internal sync (master) or external MIDI sync (slave) operation. Any machine switched to external MIDI sync can be used as a slave. As with MIDI note information, the MIDI connection runs from the master's MIDI Out to the slave's MIDI In.\
+\pard\pardeftab720
+
+\fs36 \cf4 \
+\pard\pardeftab720
+
+\f0\b\fs56 \cf2 MIDI BASICS: Part 2\
+\pard\pardeftab720\sa240
+
+\f1\b0\fs40 \cf0 \'a0\
+This month, he explains the concept of MIDI sequencing.To anyone used to playing and recording using traditional methods and skills, the MIDI sequencer is sometimes viewed as little short of cheating, but to the sequencer user, MIDI and sequencing are seen as practical tools that make complex multi-part composition and performance a reality. Before MIDI appeared, few people could compose a symphony (or pop song, for that matter) and ever expect to hear it performed; now almost anyone can turn their musical ideas into a performance using affordable technology.\
+Before exploring the mechanics of sequencing, however, I'd like to tackle the idea that sequencing is somehow 'cheating' by looking at how things were done before the introduction of MIDI.\
+\pard\pardeftab720\sa280\qc
+
+\b\fs44 \cf0 WHAT DID WE DO BEFORE MIDI?\
+\pard\pardeftab720\sa240
+
+\b0\fs40 \cf0 Having never personally written a symphony, I can't detail the exact stages involved, but I expect it goes something like this...\
+The composer sits at his or her chosen instrument testing musical ideas, and the ones that make it are then written down on manuscript paper for the various sections of the orchestra to play. The composer visualises (or should it be auralises?) the parts already written down while adding new sections, harmonies and so forth. Then, when the music is nominally finished, the score will be scrutinised and any required alterations or adjustments will be made.\
+Once the score is complete, an orchestra will be hired and given copies of the score, and the music will be played back as written by the composer. The composer, who may not even be able to perform to an acceptable standard on even one instrument, has conceived a piece of music and then written a list of instructions in the form of a musical score in order that a musically proficient orchestra can perform it. But has anyone ever accused Stravinski or Beethoven of being cheats, because they couldn't play all the orchestral instruments themselves? I think not.\
+In contrast, let's see how the MIDI composer writes. As with the orchestral composer, the work usually starts at the keyboard, but this time the keyboard is a MIDI instrument connected to a MIDI sequencer. Instead of writing down a score, the composer will record sections of the music into the sequencer against an electronic metronome set to the desired tempo. Instead of scanning a score to verify what's been done, it's a simple matter to play back the MIDI sequence to hear exactly what has been recorded. Best of all, you don't have to hire in an orchestra -- a relatively inexpensive multitimbral synthesizer will provide all the sounds for you; each 'part' of the multitimbral synth plays one line of your electronic score.\
+In some ways, the sequencer is better than the written score, because it can play back a part 
+\i exactly
+\i0  as you played it in the first place -- it doesn't necessarily have to 'quantise' everything to equal subdivisions of a musical bar, as the written score does. And, just like the written score, if you're unhappy with something you've done, you don't have to start from scratch; you just erase the unwanted notes and 'write' in new ones.\
+When you summarise the way a musician composes using a sequencer, it isn't really too different from the way a traditional composer works. Both types of composer are likely to edit their compositions to some degree before they're entirely happy with them, and both bring in performers to play the finished composition. It doesn't really matter whether the finished piece is played by a bank of synths or by a hired orchestra whose role is simply to reproduce the composer's original work as faithfully as possible. My verdict, then is that electronic composition is as legitimate as any other form of composition. Note that I have no intention of fuelling the 'synths versus real instruments' debate at this point. If you have the talent to write a major symphonic work using synths, you can always get your computer to print out the score and have a real orchestra play it for you later!\
+Having covered the philosophical groundwork, it's now time to look more closely at the MIDI sequencer.\
+\pard\pardeftab720\sa280\qc
+
+\b\fs44 \cf0 MIDI AND SEQUENCING\
+\pard\pardeftab720\sa240
+
+\b0\fs40 \cf0 What exactly is a 
+\b sequencer
+\b0 ? It's often convenient to visualise a sequencer as being analogous to a multitrack tape recorder, and indeed, the 'layers' or parts of a sequence are recorded onto tracks, but it is vitally important to understand that what is being recorded is 
+\i not
+\i0  the sound itself, but the electronic equivalent of a musical score. Just as a musical score is a series of instructions to the musicians, a MIDI sequence holds a series of instructions which tell your synths what to play. In some ways, a better analogy might be the player piano or pianola, where a punched paper roll holds the instructions that make the piano play, except in the case of MIDI, you have a multitrack, a virtual 'paper roll' capable of controlling many instruments at the same time.\
+In a typical setup, a MIDI instrument (usually, but not invariably, a keyboard) is connected to a sequencer via a MIDI cable, and when the sequencer is set to record, any notes played on the keyboard are recorded as MIDI data into whichever sequencer track has been selected for recording. In a simple system, you might have 16 MIDI tracks set up so that each is on a different MIDI channel, and if you feed the MIDI output of the sequencer to a 16-part multitimbral sound module, you can play back all 16 tracks at once. If you only have an 8-part multitimbral module, then you can only play back eight different sounds at once, in the same way that a real-life string quartet can only play four lines of music at the same time.\
+To avoid having to switch the MIDI send channel on your keyboard every time you want to record onto a new sequencer track, modern sequencers convert the incoming MIDI data to the appropriate channel for the track you're recording on. This makes life very easy, because once you've completed one track, all you need do is select the next one and carry on playing.\
+The remaining capabilities of a MIDI sequencer bear more resemblance to a word processor than anything else. Like a word processor, you can delete or replace wrong characters (in this case, musical notes) and if you want to use the same phrase more than once, you can copy it and paste copies into new locations to save having to do the same thing lots of times. For example, if a song has the same structure for each chorus, you only need play the chorus once, then copy it to any place in the sequence where you'd like another chorus to appear.\
+Of course, there's more to MIDI data than notes, and a sequencer will record just about any MIDI data you throw at it, with the exception of MIDI clock -- a sequencer has its own timing clock. Nevertheless, you can synchronise a sequencer to an external source if you wish, such as a tape machine (via a suitable sync box) or to a MIDI drum machine.\
+Unless you deliberately filter out certain types of MIDI data, you'll find that your sequencer captures Note On/Off, Pitch, Velocity, Aftertouch and Controller information as well as MIDI Program Changes and even System Exclusive (SysEx) data. If these terms are unfamiliar, fear not -- we'll be looking at Controllers and Program Change information next month. There's even 
+\i less
+\i0  need to worry about the concept of SysEx data at this point, but it is useful to know that it is possible to record a SysEx dump of all your synth sounds at the start of a song, so that when you first play the sequence, your synths are automatically loaded up with the appropriate set of new sounds to play that particular musical sequence.\
+A MIDI 
+\b Program Change
+\b0  command recorded during the count-in period of a track will ensure that the connected synth switches to the correct sound patch before playback commences, but you can also insert Program Changes part way through a track (as many times as you like) if you want the sound to change for, say, a solo. This is the orchestral equivalent of writing a note on the score at a certain bar number to tell a violin player to put down his violin and play the next part on a flute! This isn't something you'd usually do in real life, but a MIDI sound module is equally proficient on all instruments and, as yet, MIDI modules don't have trade unions!\
+When your sequence is played back, the sequencer transmits the MIDI information to the receiving synth(s) -- or sampler, drum machine, and so on -- in exactly the same order, and with the same timing as you originally played it. If you so wish, you can change the tempo after recording without affecting the pitch (unlike a tape recorder, where you're dealing with sound rather than MIDI data). If you're still not sure why the pitch doesn't increase as the tempo goes up, think back to the orchestra and score analogy; if the conductor asks for a piece to be played faster, the orchestral instruments don't change in pitch. Similarly, if you pedal a pianola faster, the paper roll will be played faster but the piano's tuning will remain the same.\
+In reality, MIDI does has a finite timing resolution, because the sequencer or computer sending the MIDI information has to work to an internal timing routine based on an electronic clock. However, in practice, MIDI is far more accurate than a typical human performer, and is capable of resolving a bar of music into at least 960 time divisions, and frequently more.\
+\pard\pardeftab720\sa280\qc
+
+\b\fs44 \cf0 SEQUENCER TYPES\
+\pard\pardeftab720\sa240
+
+\b0\fs40 \cf0 All MIDI sequencers are based on computer technology, but you have a choice of buying a sequencer system that runs on an existing computer (such as an Atari ST, Apple Mac, Apple Power Mac, IBM-compatible PC or Commodore Amiga) or opting for a piece of dedicated hardware where everything you need is built into one box. The two types work in a similar manner -- what tends to vary is the way in which the recorded information is displayed, and how easily it can be edited.\
+For those who are relatively accomplished players, hardware sequencers (like the Roland MC500) offer the benefits of simplicity and convenience, but they rarely have the information display capability of a full-size computer screen. And because there's no computer mouse, editing is generally less comprehensive and more time-consuming than it would be on a computer-based system. However, the recording process is usually just a matter of hitting the Record button and playing. A significant benefit of hardware sequencers is that they are more practical in live performance situations; they are more compact and more rugged than a computer-plus-monitor, and you have fewer things to plug in.\
+\'a0\
+\pard\pardeftab720\sa280
+
+\b\fs52 \cf5 "Has anyone ever accused Stravinski or Beethoven of being cheats, because they couldn't play all the orchestral instruments themselves? I think not."\cf0 \
+\pard\pardeftab720\sa240
+
+\b0\fs40 \cf0 \'a0\
+Some MIDI sequencers (including all the computer-based ones) lose all information stored in their memory (RAM) when they are switched off, so it is vital to save your work to disk at regular intervals. The MIDI information which makes up a completed song can normally be saved onto either floppy or hard disk in the form of a song data file, and a single floppy disk will hold several songs of average complexity. Many hardware sequencers also have a built-in disk drive, allowing songs to be saved as files on floppy disk, though some of the less expensive models (such as the Alesis MMT8) use battery-backed-up memory instead of disks. Once the memory is full, however, you either have to save your work to a MIDI data filer (which has an in-built disk drive) or throw away your old project before you can start a new one. Usually, this kind of sequencer can only store a few songs at a time.\
+The computer-based sequencer is capable of more sophistication than most hardware models, which means there may be a steeper learning curve. However, this is more than made up for in my opinion by the amount of visual feedback available, especially when it comes to tasks like song arrangement.\
+Unless you're using an Atari ST, which has a built-in MIDI connections, you'll have to buy an external 
+\b MIDI interface
+\b0  box, though some of the newer GM synth modules (such as Yamaha's MU50) come with PC and Mac MIDI interfaces built in. MIDI interfaces for Apple Macintosh computers usually plug into the modem or printer ports on the machine, while PC users need an interface card which goes inside the computer. A basic sequencing setup is shown in Figure 1, and to keep things simple, I've depicted a 'dumb' master MIDI keyboard; if you have a MIDI keyboard that includes a sound generation section, simply select Local Off and connect it up like any other synth module.\
+The majority of the leading software sequencing packages have adopted the style of user interface pioneered by Steinberg in their 
+\i Cubase
+\i0  software. This typically comprises a main screen page, which handles the basic 'recording' and arranging, plus a number of further pages which address various aspects of editing and, where applicable, scoring. The record and playback controls are designed to look something like a tape recorder's transport control, and the edit pages usually allow you to examine (and change) the recorded data in several ways: (i) as a list of MIDI events; (ii) graphically, in the guise of a 'piano roll' display; or (iii) in the case of 'score' versions, in the form of a conventional musical score.\
+Some software sequencers include sophisticated scorewriting facilities which enable you to print out sheet music for your compositions, in which case you'll need a printer that is compatible both with your computer and the software package. However, some musical literacy is useful, because the computer doesn't always interpret what you play in the same way that a trained scorewriter would.\
+\pard\pardeftab720\sa280\qc
+
+\b\fs44 \cf0 EDITING\
+\pard\pardeftab720\sa240
+
+\b0\fs40 \cf0 From the editing pages of a typical sequencer, you can change the value, timing, and velocity of any of the notes you've played. Alternatively, you can build up compositions manually, by placing new notes onto the quantise grid in non-real-time, rather like writing out a manuscript. The non-real-time entry of note information may also be referred to as 
+\b step-time entry
+\b0 .\
+A number of related non-destructive (ie. the operation is not permanent and can be reversed) editing options are sometimes available, including the ability to transpose your music, either as you play or after recording. You also usually have the ability to make the music louder or softer by adjusting the overall velocity. On some systems, you can even compress the dynamic range of your MIDI data to even out the difference between your loudest notes and the quietest ones, as well as delay or advance tracks relative to each other (to make timing adjustments). This is frequently achieved by recalculating the note data during playback, but the real data isn't changed, so you can always revert to your original performance data.\
+\pard\pardeftab720\sa280\qc
+
+\b\fs44 \cf0 MIDI DRUMS\
+\pard\pardeftab720\sa240
+
+\b0\fs40 \cf0 It is possible to sequence the sounds from your drum machine just as you can any other type of MIDI sound module, but remember to turn off the drum machine's external MIDI sync first, otherwise every time you start your sequencer, the drum machine's internal patterns will start to play. Unlike a conventional instrument, where each note on the keyboard plays a different pitch of the same sound, drum machines place different sounds on different keys, allowing access to many varied drum sounds. Because it's difficult to play a complete drum part in one go via a keyboard, it is common practice to spread the drum part over several sequencer tracks -- enabling you to record, say, your bass and snare first, your hi-hats next and finally your fills. This method of working makes it easy to edit your drum tracks later, without having to work out what note corresponds to what drum sound. And once the drum part is completed, of course, you can always merge the drum tracks into one for convenience. Most sequencers offer a suitable track merge function these days.\
+\pard\pardeftab720\sa280\qc
+
+\b\fs44 \cf0 SUMMARY\
+\pard\pardeftab720\sa240
+
+\b0\fs40 \cf0 MIDI sequencers are very powerful tools both for music composition and recording, and because they have grown so sophisticated, there are still a great many features that I haven't discussed. For example, MIDI allows you to remotely control the volume of your instruments, so by recording MIDI Volume information (Controller 7) in your sequences, you can create automated mixes.\
+Wonderful though sequencers are, they are still far from perfect. Aside from the inevitable software bugs that creep in, they tend to force you to work in a way that you probably wouldn't adopt if you were playing and composing conventionally. Most insidious is the metronome or tempo click that you have to play along to, and although you can turn this off and record 'freestyle' regardless of bar positions, you won't be able to quantise your data (for an explanation of quantisation, see the box elsewhere in this article), and you won't be able to print out a meaningful score. This means that tempo changes have to be planned ahead rather than being intuitive. Although software designers are now including features to help you in this area (such as re-barring), it takes a lot of determination to move away from the fixed tempo, four-to-the-bar, music that we've all become so accustomed to.\
+Despite the pitfalls mentioned, MIDI sequencing still offers far more advantages than disadvantages, and used creatively, it makes many things possible that would have been far too impractical or expensive in the pre-MIDI era. And finally, don't think that sequencing is difficult -- once you've made a start and seen how easy it is to handle the basics, you'll wonder why the manuals ever needed to be so thick!\
+\'a0\
+\pard\pardeftab720\sa280
+
+\b\fs44 \cf5 MIDI AND SYNCHRONISATION\cf0 \
+\pard\pardeftab720\sa240
+
+\b0\fs40 \cf0 MIDI sync was covered in some depth in Part 1 of this series, but it is useful to recap here on the main points.\
+Sequencers with integral hard disk recording facilities offer a great way of combining audio with MIDI, but they still tend to be expensive and there's also the problem of backing up very large audio data files. Because of this, most people still use multitrack tape, but there's no advantage in recording your sequenced material to tape if you can find a way of making the sequencer run in sync with your multitrack.\
+The easy answer is to record some form of MIDI sync code onto tape. This means you give up one tape track to record the necessary sync code, but you gain as many 'virtual tracks' as your sequencer and synth/sound module collection can provide. The simplest way to achieve this is to use a 'Smart FSK' MIDI-to-tape sync box which you can buy for as little as \'a3100. These use both MIDI Clock and MIDI Song Position Pointers to ensure that your sequencer starts at the right time and remains in perfect synchronisation with your multitrack, regardless of whether you play the tape from the start of the song or from half way through. For more on MIDI sync, FSK, and Song Position Pointers, take a look at the article 'Synchronisation Explained', starting on page 186 of July '94's 
+\i SOS
+\i0 .\
+\pard\pardeftab720\sa280
+
+\b\fs44 \cf0 \'a0\
+\pard\pardeftab720\sa280
+\cf5 SEQUENCER FEATURES\cf0 \
+\pard\pardeftab720\sa240
+
+\b0\fs40 \cf0 What basic features can you expect from a MIDI sequencer? Obviously every sequencer is different, but all should be capable of the following core functions.\
+\pard\pardeftab720\sa240
+
+\b \cf0 \'95 REAL-TIME RECORDING:\uc0\u8232 
+\b0 You play in your MIDI data from a keyboard and record just as you would with a tape recorder. Unlike a tape recorder, you can transpose, change tempo and quantise your data after recording. If you want to use the quantise feature, you have to play to the internal metronome track when recording.\
+
+\b \'95 STEP-TIME RECORDING:\uc0\u8232 
+\b0 Notes are played in one at a time -- it's rather like typing a letter with one finger! You decide where the notes go and how long they're going to be, after which you can play back your work at any tempo. Most people mainly use real-time recording with occasional recourse to step-time when the going gets tough. With a piano-roll type of editing screen, you can also 'draw' your notes directly onto the quantise grid and then use the mouse pointer to 'stretch' them to the desired note length.\
+
+\b \'95 EDIT:\uc0\u8232 
+\b0 A typical sequencer will have a variety of editing tools to enable you to change your composition once you have recorded it. These range from the ability to change individual notes to the ability to change entire arrangements and swap instruments.\
+
+\b \'95 QUANTISATION:\uc0\u8232 
+\b0 This is the ability to move your notes to the nearest accurate subdivision of a bar (for example, 16ths of a bar). See 'Quantisation' box elsewhere in this article for more details.\
+
+\b \'95 TRANSPOSITION:\uc0\u8232 
+\b0 Notes can be transposed by any amount without altering their lengths, while entire compositions or sections of compositions can easily be shifted to a different key.\
+
+\b \'95 COPY/CUT/PASTE:\uc0\u8232 
+\b0 Any section of music can be copied to different tracks or to different locations in the song. This is useful for duplicating repeated sections, such as a chorus, or for doubling up a line of music on two tracks by assigning them to different instrument sounds. Cut allows unwanted material to be removed.\
+
+\b \'95 ARRANGING:\uc0\u8232 
+\b0 This may be implemented in a separate part of the program, as in C-Lab's 
+\i Notator/Creator
+\i0 , or it may be handled using Cut/Copy/Paste as in the case of Steinberg's 
+\i Cubase
+\i0 , EMAGIC's 
+\i Logic
+\i0  and Opcode's 
+\i Vision
+\i0 .\
+
+\b \'95 MUTE:\uc0\u8232 
+\b0 Most sequencers allow you to mute tracks, or solo a track, so that you can hear it in isolation.\
+
+\b \'95 CYCLE:\uc0\u8232 
+\b0 Simply allows you to continually loop around a specific section of music while you record or edit.\
+
+\b \'95 UNDO:\uc0\u8232 
+\b0 Computer-based sequencers, and some hardware sequencers, have an Undo function which, as the name implies, lets you undo the last seemingly permanent thing you did.\
+\pard\pardeftab720\sa280
+
+\b\fs44 \cf0 \'a0\
+\pard\pardeftab720\sa280
+\cf5 QUANTISATION\cf0 \
+\pard\pardeftab720\sa240
+
+\b0\fs40 \cf0 One important feature common to both hardware and software sequencers is the ability to quantise data after recording -- a useful feature for those musicians not possessed of a perfect sense of timing. Essentially, when you choose to quantise something, the timing is changed so as to push each note you've recorded to the nearest exact subdivision of a bar. For example, if you are working in 4/4 time, and you select 16 as your quantise value, all the notes becomes locked to an invisible grid which in effect divides the bar into 16 equal time slots. Quantise must be used carefully as it can strip all the feel from some types of music; however, if you're doing dance music where precise timing is essential, the quantise feature is indispensible.\
+The most recent computer-based sequencers allow you to unquantise data as well as to quantise it, but be aware that some less advanced software sequencers and a number of hardware sequencers perform what is known as 
+\i destructive quantise
+\i0 . So if you think you might need to go back to the original version, it's vital that you keep a copy of the sequence.\
+Another feature which I find really valuable is what is usually referred to as 
+\i percentage quantise
+\i0 . Using this, you don't have to make all your notes snap to the quantise grid; instead, by setting a quantise value of say 50%, you can have your notes moved to a position that's half way between where you originally played them and the nearest time slot in the quantise grid. This is great for tightening up your playing without losing all the feel.\
+Yet another quantise-related function is 
+\i swing
+\i0 , where the quantise grid is moved away from regular slots to alternating longer and shorter slots. This can be used subtly to add feel or used more aggressively to turn a 4/4 track into a 2/4 track, say. It's now even possible to load in third-party groove templates (such as DNA Grooves) created from the timing of real players.\
+\pard\pardeftab720\sa280
+
+\b\fs44 \cf0 \'a0\
+\pard\pardeftab720\sa280
+\cf5 HARD OR SOFT?\cf0 \
+\pard\pardeftab720\sa240
+
+\b0\fs40 \cf0 Software sequencers have several obvious advantages over hardware sequencers, but that doesn't mean that they're better -- it all depends on what facilities you need and whether you want your sequencer to be portable.\
+\pard\pardeftab720\sa240
+
+\b \cf0 SOFT OPTION
+\b0 \uc0\u8232 The main pros of software sequencers are as follows:\u8232 \'95 A good visual interface.\u8232 \'95 More comprehensive editing facilities.\u8232 \'95 You can still use the computer for other purposes.\u8232 \'95 You're not tied to one manufacturer for software upgrades -- if somebody comes out with a better program, you can always move over to it.\u8232 \'95 Most computer sequencers support multiple MIDI output ports via a special multi-port MIDI interface. This means you are not restricted to 16 MIDI channels and a typical system will provide six output ports, giving you up to 96 MIDI channels to work with.\u8232 \'95 The most popular sequencer software packages now allow you to transfer song data from one computer platform to another and, in some cases, even from one manufacturer's software sequencer to another's.\u8232 \'95 Professional standard score printing is available from many sequencing packages, using either an inexpensive ink-jet printer or a laser printer.\
+
+\b HARD OPTION
+\b0 \uc0\u8232 Hardware sequencers have their advantages too, the main ones being listed below:\u8232 \'95 One-box solution to sequencing.\u8232 \'95 Generally more reliable than computers in live situations or when being moved from studio to studio.\u8232 \'95 Although they may have fewer editing options than a software sequencer, they also tend to be easier to use.\u8232 \'95 You don't have to learn to use a computer before you can begin to learn your sequencer software.\
+\pard\pardeftab720\sa280
+
+\b\fs44 \cf0 \'a0\
+\pard\pardeftab720\sa280
+\cf5 AVOIDING MIDI PROBLEMS\cf0 \
+\pard\pardeftab720\sa240
+
+\b0\fs40 \cf0 A basic MIDI sequencing setup starts at your keyboard -- it's here that the MIDI information to be recorded originates. The master keyboard is connected via its MIDI Out socket to the MIDI In of your MIDI interface, or directly to the MIDI In of your hardware sequencer or Atari ST. As mentioned earlier, if your keyboard includes a synth section (in other words, if it makes sounds), then turn Local Off and patch a MIDI cable from the sequencer's MIDI Out to the keyboard's MIDI In.\
+If you have other MIDI modules in the system, you can daisy-chain them in any order by feeding the MIDI Thru of one piece of gear to the MIDI In of the next, as described last month. Up to three modules can normally be chained in this way without problems, but longer chains may cause stuck or missed notes (due to corruption of the MIDI signal), in which case you should use a multiple output MIDI Thru box connected to the output of your sequencer and then feed each module (or short chain of two or three modules) from separate outputs on this Thru box. MIDI Thru boxes were explained in Part 1 of this series, last month.\
+If you've connected up your system as described but no sound comes out, here are a few things you might want to check before you get into serious panic mode.\
+\'95 Check that everything is switched on and that your synth modules are set to Multi or Sequencer mode (assuming you want to use them multitimbrally).\
+\'95 Check your MIDI cable connections and don't rule out the possibility a faulty MIDI lead. Some modules have a combined MIDI Out/Thru socket; if so, ensure MIDI Thru is enabled (see handbook for that piece of equipment). To help narrow the problem down, most sequencers have some form of indication that they're receiving MIDI data and many modules have a MIDI light or other indicator that blinks when data is being received.\
+\'95 Check that you've set the MIDI channels correctly on your modules and that Omni mode is switched off on all modules. If two or more instruments try to play the same part, the chances are you've either got more than one module set to the same MIDI channel or something's been left set to Omni. If your master keyboard plays its own sounds when you're trying to record using the sound of another module, check that Local Off is really set to Off.\
+\'95 If playing a single note results in a burst of sound, rather like machine gun fire, or if you get stuck notes or apparently reduced polyphony, the chances are you have a MIDI loop. In a MIDI loop, MIDI data generated by the master keyboard passes through the sequencer and somehow finds its way back to the input of the master keyboard, where it starts its round trip all over again, rather like acoustic feedback. This usually happens when you are using a keyboard synth as your master keyboard and have forgotten to select Local Off.\
+If you have one of those rare instruments with no Local Off facility, you'll probably find that your sequencer allows you to disable the MIDI Thru on whatever channel your master keyboard is sending on (most people leave it set to channel 1).\
+If you are unfortunate enough to have neither facility, then all you can do is record with the MIDI In disconnected from your master keyboard and use the sounds from external modules. When you've finished recording, you can reconnect the master keyboard's MIDI In, if you wish, and use it to play back one of the recorded parts or to layer with an existing synth voice.\
+\pard\pardeftab720
+
+\fs36 \cf4 \
+\pard\pardeftab720
+
+\f0\b\fs56 \cf2 MIDI BASICS: Part 3\
+\pard\pardeftab720
+
+\f1\b0\fs46 \cf0 \
+\pard\pardeftab720\sa240
+
+\fs40 \cf0 Over the past couple of months I've introduced the concept of MIDI and explored the basic role of MIDI sequencers, but as I've already hinted, there's a lot more to MIDI than simply sending note information from one machine to another. In computer terms, MIDI is simply a serial data link system and you could, in theory, send any kind of musically relevant digital information along it. Unfortunately, because MIDI is a 
+\b serial
+\b0  system, packets of information have to move in single file, one after another. If you try to put too much data down the cable, you end up with the MIDI equivalent of a traffic jam -- which might leave you with some notes apologising for arriving late!\
+Because there is a limit to how quickly you can pipe data down a MIDI cable, MIDI can't be used for the transmission of audio or sample information in real time, though you can transfer samples in non-real time from a computer sample editor to a sampler using MIDI's Sample Dump protocol (if you're prepared to put up with the slowness of it).\
+\pard\pardeftab720\sa280\qc
+
+\b\fs44 \cf0 MIDI CHANNEL MESSAGES\
+\pard\pardeftab720\sa240
+
+\b0\fs40 \cf0 The majority of MIDI messages are 
+\b Channel
+\b0  messages. As the name implies, these messages are accepted by the receiving device (synth module, drum machine etc) on the basis that they are addressed to a specific MIDI channel. MIDI notes are Channel messages, as are all other types of performance data relating to Velocity, Release Velocity (where supported), Pitch Bend, Controller Data, Aftertouch, Polyphonic Key Pressure, and of course Program Changes. Whereas a MIDI note is a fairly basic type of MIDI message requiring only a Note-On event followed by a Note-Off event, controller information can be far busier, and if you look at the event list in a typical sequencer after you've recorded a part which uses lots of Pitch Bend, you'll probably find that the Controller change events outnumber the notes by at least 10 to one.\
+Aftertouch also throws out an enormous amount of MIDI data, whether the receiving device can make use of it or not, and if you're experiencing inexplicable MIDI timing problems, try turning off the aftertouch on your master keyboard. It's good practice to switch off aftertouch unless you're using it in, as unnecessary aftertouch data will quickly fill up your sequencer's memory.\
+If you own one of the rare keyboards that isn't velocity-sensitive, whenever you play a note it will be sent with a fixed velocity level of 64, which is a little too low. So it's best to increase this value to around 100 using your sequencer's edit facilities. If you don't do this, the signal-to-noise ratio of the receiving instrument won't be as good as if all the notes were playing at or near maximum level.\
+Any MIDI message that includes a variable value (such as MIDI note number or controller information) comprises, in addition to the MIDI channel address, two parts: one to say what sort of message it is, and the other to say what value is being transmitted. Because MIDI is an 8-bit system where seven of the eight bits are used to carry data values, the maximum range of a conventional MIDI message is from 0 to 127. This limit also applies to musical notes, which means MIDI can address a maximum of 128 different notes. Similarly, you can only address 128 different patches directly over MIDI, but with modern synths coming packed with more and more sounds, MIDI 
+\b Bank Change
+\b0  messages are often used to access multiple sound banks, each containing up to 128 patches.\
+\pard\pardeftab720\sa280\qc
+
+\b\fs44 \cf0 MIDI CONTROLLERS\
+\pard\pardeftab720\sa240
+
+\b0\fs40 \cf0 Modern synths may look pretty inscrutable, but there are lots of parameters that can be twiddled in real time using MIDI Controllers -- such as wheels, pedals, or simply Controller data created in your sequencer. MIDI effects units are also often provided with some form of real-time control, so you could, for example, send MIDI Controller messages to vary the delay time of an echo effect during performance, or to to change an EQ setting. Quite often, instruments and effects units allow you to assign which Controller relates to a specific parameter. So the Modulation Wheel on your synth, to take one example, could be used to control the reverb decay time of an effects unit or the filter brightness of a synth module.\
+MIDI Controllers can be divided into two main types: those that are variable or continuous (like a knob) and those that are either on or off (like a switch). For example, a Sustain Pedal is simply a switch, so it can only be on or off, whereas Pitch Bend is described as a 
+\b Continuous Controller
+\b0  because the actual position of the Controller is transmitted. In theory, MIDI could allow you to have up to 128 different Controllers working at the same time, but this is far greater than would ever be needed in practice. This being the case, the architects of MIDI have reserved Controllers 122 and upwards for selecting the various MIDI modes (Local On/Off, All Notes Off, Omni Off, Omni On, Mono On and Poly On). MIDI modes aren't really Controller messages at all, but this just seemed like a convenient place for the designers to put them! (See 'MIDI Modes' box.)\
+The remaining slots are broken down into Continuous Controllers 0 to 63, Switch Controllers 64 to 95 and Undefined Controllers (free for future use) 96 to 121. If you look at MIDI Controllers 0 to 31, you'll find that they are duplicated in slots 32 to 63, the reason being that by using two Controller messages rather than one, you can generate Controller information with a much higher resolution than 128 steps. In effect, one Controller provides you with 128 steps and the other puts up to 128 smaller steps within each of the larger ones, providing 14-bit resolution. Controllers 0 to 31 handle the most significant 'bit' (MSB) of the data while Controllers 32 to 63 handle the least significant bit (LSB). In practice, most instruments stick with the basic 128 steps, though I have experienced instruments where the Controller data is only read with 4-bit or 5-bit accuracy, which means that functions like pitch bend have noticeable steps in them rather than operating smoothly. However, some modern synths use both MSB and LSB Controllers to provide Bank Change commands.\
+As touched upon earlier, Controllers are particularly useful for adding movement and interest to electronic sounds, where parameters such as filter frequency or effect level can be changed during performance. You can also create some very interesting dynamic effects by using one or more MIDI Controllers in conjunction with a MIDI effects unit, but you don't have to operate all the Controllers as you play. If you're working with a sequencer, Controller information may be recorded on a separate track (usually after you've recorded the basic notes), simply by going into record, then moving the appropriate Controller wheels, sliders or pedals but without playing any notes. Using this technique, you can create MIDI volume changes, pan position changes, and timbral changes -- and if you feel really creative, you can construct short Controller sequences which are related to the tempo of your song, then save these for use in future compositions.\
+\pard\pardeftab720\sa280\qc
+
+\b\fs44 \cf0 MIDI SYSTEM MESSAGES\
+\pard\pardeftab720\sa240
+
+\b0\fs40 \cf0 MIDI 
+\b System
+\b0  messages have no particular channel address, so they are received by all the instruments in your MIDI system. The most common form of System message is related to timing in the context of drum machines and sequencers, and perhaps the most important of all these messages is 
+\b MIDI Clock
+\b0 . MIDI Clock is related to the tempo of the sending device and provides 96 clocks for each 4-beat bar of music. A practical use of MIDI Clock is to synchronise a drum machine to a sequencer, with either one acting as the 'master' timing source. The machine(s) being controlled (often known as the 'slave'), must be set to 
+\b external MIDI sync
+\b0 , which means that it will follow the tempo generated by the master device.\
+Of course, there's more to getting in sync than a simple timing clock -- the slave device needs to know when to start and stop, so MIDI also includes 
+\b Start
+\b0 , 
+\b Stop
+\b0  and 
+\b Continue
+\b0  messages. There also needs to be a way of getting into sync if you commence a MIDI sequence from a point that isn't the start of the song, which is why the MIDI 
+\b Song Position Pointer
+\b0  (SPP) message was added. This is quite transparent to the user, but on starting your sequence, a Song Position Pointer message is sent which tells the receiving MIDI device how many one sixteenths of a bar have elapsed since the start of the song. Using this information, the slave device can lock up almost instantaneously and start at the correct beat and bar of the song. All the so-called 'Smart FSK' tape-to-MIDI sync boxes rely on MIDI Song Position Pointers to work.\
+MIDI also includes something called 
+\b Active Sensing
+\b0  (though it isn't always implemented), which is MIDI's way of checking that a connection exists between several devices. In reality, it's the MIDI equivalent of the receiving device shouting "Are you still there?", and a short while later the transmitting device shouts back "Yes!" If a Yes is not forthcoming, the receiving device assumes the transmitting device has gone off in a sulk and, metaphorically speaking, takes its ball home! What actually happens is that the receiving device shuts off all notes that are playing. If it didn't do this and the MIDI cable was accidentally unplugged between a Note-On being sent and a Note-Off being sent, the receiving instrument would continue to play that note until it eventually rusted away!\
+Because MIDI sequencers can hold more than one song in memory, MIDI also includes a 
+\b Song Select
+\b0  message. As you might expect, tunes can be requested by number in the range 0 to 127.\
+Nowadays we're all very used to MIDI instruments being perfectly in tune, but it is still possible for MIDI-controlled analogue synths to drift in pitch over a period of time, unless they incorporate intelligent auto-retuning systems. However, many of them do have an internal tuning routine which can be initiated manually or over MIDI, using a 
+\b Tune Request
+\b0  command. If a Tune Request command is sent, 
+\i all
+\i0  the MIDI instruments in the system that have a tuning routine will give themselves a quick checkover and retune to their own internal reference. There's no guarantee that they'll all end up at the same pitch, but at least the thought was there!\
+\pard\pardeftab720\sa280\qc
+
+\b\fs44 \cf0 SYSTEM EXCLUSIVE MESSAGES\
+\pard\pardeftab720\sa240
+
+\fs40 \cf0 System Exclusive
+\b0  (or SysEx) messages are also part of the MIDI System message portfolio, but whereas the rest of MIDI is pretty precisely defined, SysEx is provided so that manufacturers can build instruments with unique facilities yet still conform to the MIDI Specification. For example, the programming parameters of analogue and digital synths tend to be quite different, so if you want to allow the user to get at these parameters via MIDI, then a system such as SysEx is the only viable means of doing it. It's important to be able to adjust parameters via MIDI, because if this wasn't possible, editor/librarian programs would have no way to pass patch information back and forth.\
+Since SysEx messages are only recognised by the instrument type for which they are designed, there's no worry that your drum machine might try to interpret a message intended for your Waldorf Microwave and blow a fuse. The way this works is that each SysEx message kicks off with a manufacturer's ID code -- if the identification code isn't recognised by the receiving instrument, then the rest of the message is ignored.\
+Only very advanced MIDI users tend to have more than a passing association with MIDI SysEx data, but anyone can use it at a basic level for copying patches or banks of patches from a synth into a MIDI storage device, such as a sequencer or MIDI data filer. You'll find that most modern MIDI instruments have a SysEx dump facility tucked away somewhere in their MIDI configuration pages -- all you have to do is connect the MIDI Out of the instrument to your sequencer's input, put the sequencer into record mode, and then activate the SysEx dump procedure.\
+The SysEx data usually takes a few seconds to record, after which it can be played back into the instrument at any time to restore the patches you saved. If you are in the habit of using lots of different patches in your songs and you don't have enough user memories to hold them all, you can store a SysEx dump in your sequencer, right at the start of each song, to automatically set up the required patches for you. Depending on how long the dump takes, you may have to leave a few bars of count-in to allow it to finish before the music starts. Once you've loaded your new sounds, it might be a good idea to mute the SysEx track, otherwise the patches will get reloaded every time you start the song sequence from the top.\
+\pard\pardeftab720\sa280\qc
+
+\b\fs44 \cf0 AND FINALLY...\
+\pard\pardeftab720\sa240
+
+\b0\fs40 \cf0 If you expect every MIDI instrument to support every feature implemented in the MIDI Specification, you're destined to lead a sad and disappointed life. Most new instruments support most of the features, but few are actually compulsory and about the only thing you can take for granted is that a MIDI synth will send and receive MIDI note data. If a MIDI message is received by an instrument incapable of responding to that message, then the message is simply ignored. However, you should be aware that different instruments can legitimately respond to the same MIDI message in different ways. For example, the Pitch Bend range of an instrument is not tied to the data received but is specified in the MIDI menu of the instrument itself. Here, full movement of the Pitch Bend wheel (or a full range of Pitch Bend messages) can be made to shift the pitch by as little as one semitone or by as much as an octave. Unless all your instruments are set to the 
+\i same
+\i0  Pitch Bend range (two semitones is popular), you could end up with an horrendous discord.\
+Very few instruments incorporate Polyphonic Key Pressure or Release Velocity, but just about everything you can buy now (other than some really basic home keyboards) is velocity-sensitive and even relatively inexpensive keyboards have aftertouch. Some older instruments (like my otherwise deeply-revered Proteus 1), don't respond to MIDI Bank Change messages, which can be rather frustrating, and you may also find some instruments which refuse to respond to Controller 7 (Master Volume) commands, my old Yamaha EMT10 being one of them. If in doubt, the back of the relevant equipment manual should show a table of what MIDI facilities are supported.\
+
+\i Next month I'll be taking a first look at samplers and sampling.
+\i0 "...you should be aware that different instruments can legitimately respond to the same MIDI message in different ways."\
+\pard\pardeftab720\sa280
+
+\b\fs44 \cf0 \'a0\
+\pard\pardeftab720\sa280
+\cf6 MIDI MODES\cf0 \
+\pard\pardeftab720\sa240
+
+\b0\fs40 \cf0 Most of the time, we use our synths polyphonically and set to a specific MIDI channel, so we rarely give MIDI modes a second thought. But there are actually four possible modes of operation defined by the official MIDI Spec.\
+\pard\pardeftab720\sa240
+
+\b \cf0 \'95 MODE 1:
+\b0  
+\b OMNI ON/POLY.
+\b0  In practical terms, this means that the instrument will play polyphonically but MIDI channel data is ignored. In other words, whatever you send it, on whatever channel, it'll have a go at playing it. Some older instruments still default to Omni On mode when they're first powered up, which can be a nuisance as you have to switch them back to Omni Off mode before you can use them in a multi-keyboard setup. There are few things that sound worse than a single synth trying to play back an entire composition -- including the drum parts! The only good thing about instruments defaulting to Omni mode is that shop assistants with little or no MIDI experience can usually get a sound out of them.\
+
+\b \'95 MODE 2: OMNI ON/MONO.
+\b0  This is the monophonic equivalent of Mode 1. Mode 2 is little used, but if you want a polyphonic synth to behave like an old monosynth, then it may be useful. Mono mode is also useful for guitar synths, where each string controls what is in effect a separate mono synth, but this requires Omni mode to be switched off.\
+
+\b \'95 MODE 3: OMNI OFF/POLY.
+\b0  This is the most commonly used MIDI mode, especially for MIDI sequencing. In Mode 3, the instrument responds to messages only on its own MIDI channel and plays polyphonically.\
+
+\b \'95 MODE 4: OMNI OFF/MONO.
+\b0  This is the monophonic equivalent of Mode 3. Before multitimbral synths came along, Mode 4 was incredibly useful because it was possible to use simple 4-voice synths (such as the Casio CZ101) to play four different mono sounds on four different MIDI channels. Now that we have multitimbrality coming out of our ears, this kind of dodge is perhaps less important than it previously was. However, Mode 4 is still vital to MIDI guitar players, who need to have each string working on a separate MIDI channel in order to be able to bend notes or apply vibrato on independent strings. Because each string of a guitar is mono (it can only play one note at a time), it makes sense to use the receiving synth in Mono mode to emulate the way a real guitar handles notes.\
+\pard\pardeftab720
+
+\fs36 \cf4 \
+\pard\pardeftab720
+
+\f0\b\fs56 \cf2 MIDI BASICS: Part 4\
+\pard\pardeftab720
+
+\f1\b0\fs46 \cf0 \
+\pard\pardeftab720\sa240
+
+\fs40 \cf0 As you'll already know if you've been following this series, MIDI isn't restricted to carrying information relating to musical notes -- amongst other things it also caters for Controller information. MIDI Controllers can be used to adjust many different parameters relating to a musical instrument, the most useful in a mix situation being 
+\b Main Volume
+\b0  (Controller 7) and 
+\b Pan
+\b0  (Controller 10). However, you're not limited to automating volume and pan during a mix -- you can, in theory, change any parameter of an instrument that is assignable to a MIDI Controller, including 
+\b Portamento Rate
+\b0  (Controller 5), 
+\b Sustain Pedal
+\b0  (Controller 64) and, where supported, parameters such as 
+\b Filter Frequency
+\b0  or 
+\b Resonance
+\b0 . These latter parameters aren't defined Controllers, and it's up to individual manufacturers whether and how they are implemented, so you'll need to look in the back of your instrument manual to see exactly what you can access via MIDI. You may also find that you can construct Bank Change messages for your synth using Controller data, so it really is worth looking into those apparently tedious back pages once in a while!\
+\pard\pardeftab720\sa280\qc
+
+\b\fs44 \cf0 PATCH CHANGES\
+\pard\pardeftab720\sa240
+
+\b0\fs40 \cf0 Another fundamental of MIDI mix automation is the 
+\b Program Change
+\b0  command. It's surprising how often even this humble feature remains unused, yet if you have a limited number of MIDI instruments, it can be very useful to be able to change sounds mid-song. Most sequencers will let you enter a new program change command directly from within the event list, so that you can decide at exactly which bar and beat the change should take place. Sometimes, you need to be careful where you put the command in order to get a graceful changeover of sounds, but the vast majority of synths help you out by retaining the old patch sound for any sustained notes -- these don't change until they are released, even if newly-played notes have switched to the sound of the new patch.\
+If you have a sequencer that doesn't let you enter program changes directly (and to be honest, I can't think of one off-hand that doesn't allow you do this in one way or another), you can instead use the Program Select buttons on your master keyboard to send a patch change command at the appropriate time. The patch change will be recorded into your sequencer just like any other MIDI event, and if it isn't in quite the right place, you can always go into the edit list and move it.\
+Program changes may also be used to switch MIDI effects units from one patch to the next, but here you have to be more careful, as some units can take up to a couple of seconds to change over, during which time the output is usually muted. If you're using a reverb or delay effect with a long decay time, you have to give the effect time to finish doing its thing before you hit it with a patch change, otherwise you're certain to hear the changeover when you listen to the mix. The basic rule here is: always change effect patches when there's no signal passing through them and where you have enough space following the changeover to allow the new patch to load up.\
+Even if you don't intend to change patches during a song, you should still put Program Change commands at the start of each track, ideally during the count-in period, so that all your instruments are automatically set to the appropriate patches before playing commences. It also pays to be aware that if you copy a track so that you can use it with a different MIDI instrument, any embedded patch change information will also be copied, so don't forget to update these Program Change numbers before continuing work, otherwise you might find that totally inappropriate patches are being called up.\
+\pard\pardeftab720\sa280\qc
+
+\b\fs44 \cf0 PRACTICALITIES\
+\pard\pardeftab720\sa240
+
+\b0\fs40 \cf0 When you come to use Controller information to set up volume and pan effects, you first have to make sure that your instruments respond to these messages. This may sound obvious, but there are a few instruments out there, including Yamaha's otherwise excellent EMT10 piano module, that are totally oblivious to Controller 7. The only way to fade one of these babies is to either pull down the fader by hand or doctor the MIDI note velocity data in your sequencer so that the notes actually become quieter.\
+Thanks to modern sequencer design, there are now lots of ways to enter Controller information. In the early days of MIDI, you had to add Controller numbers and values to the MIDI event list or record them in real time, but now there are more intuitive graphic methods, for example Emagic 
+\i Logic
+\i0 's new 'Hyper Draw'. This lets you shape your own Controller 'envelope' by dragging points on a line representing the Controller's numerical value. Once again, if you have no easy way to do this in your sequencer, you can send the data direct from your MIDI keyboard by using the modulation wheel (Controller 1). It helps to record this data on a separate track after recording the main musical part. Once you're happy with the result, you can merge the two tracks, but do keep them separate for as long as possible, as it's often easier to change or delete the controller information if it isn't mixed in with note data. Even though your mod wheel sends out Controller 1 data, you can still change the Controller number in your sequencer event edit list after recording. Having said that, if you have a sequencer that will allow you to change the Controller number in real time as you record, that's a better option, as you'll be able to hear what you are doing. If you simply record the data first and then edit it afterwards, you'll hear vibrato when recording rather than volume, pan or whatever it is you're trying to change, and that's certain to be very confusing! If you have a keyboard with assignable data sliders or wheels, these represent an even more convenient way of sending Controller data in real time without having to edit it afterwards.\
+\pard\pardeftab720\sa280\qc
+
+\b\fs44 \cf0 AUTOMATION\
+\pard\pardeftab720\sa240
+
+\b0\fs40 \cf0 Controller 7 acts exactly like a conventional volume control, enabling you to turn level up or down during a single sustained note -- something you can't do simply by changing the note's velocity data. In practice, this allows you to vary levels during the course of a song, just as you would with an automated mixing console. The easiest way to enter data in this case (if you don't have a hardware MIDI fader unit or a bank of assignable faders on your master keyboard), is to create an on-screen fader in your sequencer assigned to the appropriate Controller and MIDI channel. Most current computer-based sequencers allow you to create faders which can be moved with the mouse, and if there are functions you want to use regularly, it's best to save these as part of your default song, so you don't have to re-invent the wheel every time you boot up. For example, I have a couple of multitimbral instruments with built-in reverb and chorus, so I've created a pair of faders for each part that can be used to set the appropriate effect levels. I work mainly in Emagic's 
+\i Logic
+\i0 , and this allows you to give faders their own sequencer tracks if you want to automate their movements, but equivalent functions are available in most of the leading sequencer packages.\
+\'a0\
+\pard\pardeftab720\sa280
+
+\b\fs52 \cf7 "Once you've tried using MIDI mix automation, you'll probably wonder how you ever managed without it."\cf0 \
+\pard\pardeftab720\sa240
+
+\b0\fs40 \cf0 \'a0\
+When automating functions such as level and pan, you have to remember that if you fade out at the end of a song, the next time you run the song, those instruments will remain turned down until new Controller information is sent. So don't simply use Controller data to fade the last few seconds of your song -- also place some which sets your starting levels at the beginning of the song, during the count-in bar. The same is true of pan: if everything goes out stage left, it will stay there until either the instrument is reset or new Controller information is registered. Putting Controller information at the start of a song is a good habit to get into, and once again, you can do this in your default song so that you only have to do it once. You can always make any required changes once the song is loaded.\
+Pan effects can work very nicely when they are in sync with the song tempo. An easy way to do this is to create a short section of pan information and then either copy or loop it. And yes, if you save a few examples as part of your default song, you can either use them or dump them when the song is loaded up.\
+\pard\pardeftab720\sa280\qc
+
+\b\fs44 \cf0 HINTS AND TIPS\
+\pard\pardeftab720\sa240
+
+\b0\fs40 \cf0 Once you've tried using MIDI mix automation, you'll probably wonder how you ever managed without it, but there is a potential danger in treating MIDI automation like 'real' console automation; there are differences, especially when it comes to noise. On a conventional mixer, when you pull down a fader, anything being fed into that channel, both signal 
+\i and
+\i0  noise, is turned down; on a MIDI instrument, when you turn down the instrument level, a certain amount of residual noise remains, because the output converters and any subsequent analogue circuitry are still as live as ever. What's more, because Controller 7 turns down a sound digitally, the lower the volume, the lower the resolution of the sound, because fewer bits are used to represent it. As you lower the resolution of a digital signal, the quantisation noise and distortion increases.\
+To make the best of this situation, always have the nominal level of your MIDI instruments set as high as possible, and in the case of a multitimbral instrument, make sure that the loudest part is peaking at or near to velocity values of 127, and that Controller 7 is fully up on the loudest parts. The only time you might need to rethink this is if you are using budget multitimbral modules that have insufficient headroom to allow everything to run flat out without distortion. If distortion occurs, reduce the value of Controller 7 until it stops.\
+As you can save all your automation data with your song, you can recreate the same mix any time you like -- 
+\i provided
+\i0  that you decide on standard gain settings for your keyboard mixer channels and always stick to them. Your external effects can also be called up repeatedly, as long as you always allocate the same effects unit to the same send and return points, use consistent gain settings, and include the effect's Patch Change data at the start of your song. If you work exclusively with MIDI pan and leave your console pans alone, you'll be able to recreate even the most complicated of mixes, providing you make a note of any console EQ settings -- but then, making it too easy would spoil the fun, wouldn't it?\
+Because it's so easy to automate instruments in a MIDI mix, you'll probably find that you're able to do things never before possible, and though you may go over the top at first, don't be reluctant to experiment -- it's only because users have constantly pushed at the boundaries of MIDI's capabilities that we have such a powerful MIDI spec available to us today.\
+\pard\pardeftab720\sa280
+
+\b\fs52 \cf0 \'a0\
+\pard\pardeftab720\sa280
+
+\fs44 \cf7 ERRATUM\cf0 \
+\pard\pardeftab720\sa240
+
+\b0\fs40 \cf0 At the end of last month's instalment of MIDI Basics, we promised the start of a new series on the basics of sampling. We got our months a bit confused, as there are still parts of MIDI Basics to come! Needless to say, the Sampling Basics series will follow when MIDI Basics has finished.\
+\pard\pardeftab720\sa280
+
+\b\fs44 \cf0 \'a0\
+\pard\pardeftab720\sa280
+\cf7 ADVANCED USES OF CONTROLLER 7\cf0 \
+\pard\pardeftab720\sa240
+
+\b0\fs40 \cf0 If you have the patience, you can create envelopes for sounds using Controller 7 data. One neat trick is to emulate a keyed gating effect by using Controller 7 values of 0 and 127 to create a full-on or full-off effect.\
+By placing the Controller data at exactly the start of beats on your quantise grid, you can imitate the effect normally achieved by keying a noise gate from a drum track or other rhythmic source. For example, if you take a four-beat bar where each beat is one eighth of a bar in duration, set Controller 7 to 127 at the start of each beat and to 0 at the end of each beat, your synth patch will pulse four to the bar. With a little imagination, you can design your Controller data to create interesting rhythmic effects, and you can, of course, use intermediate Controller values if you want the level to pulse rather than switch hard on and off.\
+Controller 7 can also be a useful way of tailing off a long sound that otherwise ends too abruptly -- especially useful at the end of a song. You could achieve this by editing your synth patch, but the Controller 7 workaround is generally a lot easier and arguably more precise.\
+\pard\pardeftab720\sa280
+
+\b\fs44 \cf0 \'a0\
+\pard\pardeftab720\sa280
+\cf7 HARDWARE CONTROL\cf0 \
+\pard\pardeftab720\sa240
+
+\b0\fs40 \cf0 If you intend to make extensive use of MIDI automation, you may feel it's worthwhile to buy a hardware MIDI fader control unit. These comprise a bank of faders, each of which can be independently assigned to send different types of MIDI message; suitable units are made by JL Cooper, Peavey, Roland (whose MCR8 controller is pictured left) and Penny & Giles, to name a few. To use one of these without unplugging your keyboard, you'll either need a fader unit with a MIDI Merge facility, a separate MIDI Merge box, or a MIDI interface with a Merge facility.\
+\
+\pard\pardeftab720
+
+\f0\b\fs56 \cf2 MIDI BASICS: Part 5\
+\pard\pardeftab720
+
+\f1\b0\fs46 \cf0 \
+\
+\pard\pardeftab720\sa240
+
+\fs40 \cf0 Those still using Atari STs have an advantage in that the machine comes with a built-in MIDI interface, but in the case of the other computers popularly used in music, you have to provide your own. PC interfaces generally come as plug-in cards, whereas Mac interfaces are invariably boxes that connect either to the modem or printer port. In the case of the PC, it's as well to check that the interface will run alongside any other cards you have installed, such as soundcards (and music software for that matter), because there can be problems with conflicts or incompatible software drivers. If you buy your interface from a store that has good technical support, then you should be able to confirm this at the time of purchase, and even if you can get a cheaper deal from a box-shifting outlet, I'd still recommend you buy from a specialist unless you really know what you are doing. One of the most successful PC MIDI interfaces is the Roland MPU401, and you'll find that many of the third party cards state that they have MPU401 compatibility.\
+A possible alternative to the conventional MIDI interface is to buy a synth module with an interface built in, and there are already several GM-style modules on the market that can link directly to a PC or Mac. However, I didn't start this article just to tell you about basic MIDI interfaces, but rather to introduce the concept of the multi-port MIDI interface for those needing more than 16 channels.\
+\pard\pardeftab720\sa280\qc
+
+\b\fs44 \cf0 THE MULTI-PORT MIDI INTERFACE\
+\pard\pardeftab720\sa240
+
+\b0\fs40 \cf0 When MIDI was first introduced, 16 channels seemed perfectly adequate, but we now have multitimbral sound modules that can gobble up all 16 channels in one bite (pun intended!). This poses a problem if you want to use, and access several different synth modules at the same time. The solution is to gain more channels, but how is this possible when MIDI is limited to 16?\
+The answer lies in the multi-port MIDI interface, where there are two or more MIDI output sockets, each of which has its own set of MIDI channels. (This shouldn't be confused with an interface that has multiple Thru outputs, as these simply send the same information via all outputs to save you having to buy a separate Thru box.) In order to make use of a multi-port interface, you have to use sequencing software that supports multi-port operation, but all the current market leaders (Steinberg, Emagic, MOTU, Opcode, and so on) have this facility. Within the software is a setup section that allows you to tell the system what type of interface you are using, and the most commonly supported models for the Mac (in addition to anything the software company might supply) are the MOTU MIDI Time Piece, the MOTU MIDI Express, and the Opcode Studio series interfaces. Software-specific interfaces for use with Ataris include Emagic's Log 3, C-Lab's Unitor and Xport, and Steinberg's Midex, although there's now a Log 3 for the Mac as well. The more sophisticated of these interfaces include SMPTE read/write facilities, SMPTE to MTC conversion, and a degree of programmable MIDI routing, as well as multiple MIDI Ins which can be merged. If you're running a system which includes a software editor/librarian package, then the ability to route the MIDI Outs of your modules back to the computer without repatching is very valuable.\
+This brings us back to the software -- how are these extra channels named and used? Normally, the separate MIDI output ports are numbered A, B, C, D, and so on, and inside the sequencer software, the MIDI channel number may be followed by a letter. For example, MIDI channel 8 on MIDI port B would simply be Ch 8B. I've created a multiple column list in my own studio which shows me which synths are connected to which MIDI ports, and on which channels they are set to operate. Obviously a 16-part multitimbral instrument will take up a whole port if you intend to use all 16 channels at once, but 8-part modules or non-multitimbral modules can share a port in the conventional manner.\
+\pard\pardeftab720\sa280\qc
+
+\b\fs44 \cf0 TAKE NOTE\
+\pard\pardeftab720\sa240
+
+\b0\fs40 \cf0 It sounds straightforward enough so far, but there are one or two things it pays to be aware of, the most important of which is that with all the interfaces I've used, MIDI clock only comes out of port A. In other words, if you need to sync a drum machine or a second sequencer using MIDI clock, you have to connect it to port A.\
+Mac users should also note that you can have one MIDI interface connected to the modem port and another connected to the printer port -- these can both be used at once. This makes defining the MIDI channel a bit more complicated, because now we have the channel number, the port letter, and an M for modem, or a P for printer. The actual order of letters and numbers may vary from sequencer to sequencer, but the idea is simple enough. Due to its two outputs, the Mac can support up to 32 channels using two single-port interfaces, but at the other extreme, you could use two 8-output interfaces to give you 16 sets of 16 channels, which should cover most eventualities.\
+One further benefit of using a multi-port interface is that MIDI data can be spread over the different ports to avoid data bottleneck problems. Each port is, in theory, as capable of providing MIDI data as a single conventional MIDI interface, but if you were to use all 16 ports, each running 16 busy channels, you might be asking rather a lot of your computer!\
+\'a0\
+\pard\pardeftab720\qr
+
+\fs36 \cf4 Published in SOS December 1}
