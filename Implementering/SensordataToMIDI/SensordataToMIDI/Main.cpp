@@ -5,9 +5,11 @@
 #include <windows.h> //Bruges for at inkludere mmsystem
 #include <mmsystem.h> //Multimedie-metoder til windows, og vi skal bruge MIDI-metoderne.
 
-#pragma comment(lib, "Winmm.lib")	//Nødvendigt for at man ikke skal deklarere MIDI-metoderne??
+#pragma comment(lib, "Winmm.lib")	//Nødvendigt for at man ikke skal deklarere MIDI-metoderne
 
 using namespace std;
+
+static unsigned char sensorDataOld;
 
 
 void playSingleNote(struct singleNote parameter)
@@ -56,18 +58,73 @@ void playSingleNote(struct singleNote parameter)
 }
 
 /*
-void playContNotes(struct continuousNote parameter)
+void quantizeDiatonic(&noteln, scale)
 {
-	if( parameter.sensorData != sensorDataOld ) //Skal sensordata ikke også være med i continuousNote structen?
+
+}
+*/
+
+void playContNotes(struct continuousNote parameter, note_scale scale)
+{
+	/* Til sidst i denne metode, kan jeg se at den bare afspiller én tone. Det kan den finde på at gøre flere gange.
+	Kan det måske passe at vi i bunden af dette bare skal kalde playSingleNote? Funktionaliteten er ens.
+	Jeg tror ikke det er nødvendigt med en continuousNote struct, da scala er noget man får fra et preset anyway?*/
+
+	if( parameter.sensorData != sensorDataOld ) //Skal sensordata ikke også være med i continuousNote structen? Ellers kan du da ikke tilgå sensorData. Skal vi lave sensorDataOld uden for dette scope måske?
 	{
-		//SensorDataOld skal defineres et eller andet sted.
+		int noteln = 0;
+		/*Afkod sensorData til tone (noteln)/*
+		//kode her
+
+		/*Noget med direction/*
+		//kode her
+
+		/* Forskyd jævnfør grundtone*/
+		int root = 0;
+		if (root == 0)
+		{
+			noteln = 0;
+		}
+		else
+		{
+			noteln = noteln + (12-root);
+		}
+
+		/*Kvantiser til skala*/ //Går ud fra at det bliver valgt i et preset eller sådan noget
+		switch(scale)
+		{
+		case CROMATIC:
+			break;
+		case MAJOR:
+		case MINOR:
+			//quantizieDiatonic(&noteln, scale);
+			break;
+		}
+
+		/* Forskyd tilbage jævnfør grundtone */
+
+		if( root == 0)
+		{
+			noteln = 0;
+		}
+		else
+		{
+			noteln = noteln - (12-root);
+		}
+
+		/* Ingen behov for endnu en if/else. 
+		Hvis der ikke er nogen ændring i sensorData,
+		så sker der bare ikke noget!*/
+
+		/* Afpsil tone */
+		//Stop tone (ALSA besked)
+		//Afspil ny stone (ALSA besked)
 	}
-	else //hvis sensorData == sensorDataOld (altså man har ikke flyttet sensoren
-	{
-	}
+
+	sensorDataOld = parameter.sensorData;
 }
 
-
+/*
 void controlChangeAbs(struct ccAbs parameter)
 {
 }
@@ -77,7 +134,7 @@ void controlChangeRel(struct ccRel parameter)
 }
 */
 
-void paramSelect()	//Skal modtage en template struct. men switch-cases kører på ints (?). Måske vi skulle overveje if-sætninger.
+void paramSelect()	//Skal modtage en template struct - tror jeg
 {
 	/*
 	switch (parameter){
