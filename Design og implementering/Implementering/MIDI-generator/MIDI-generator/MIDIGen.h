@@ -1,4 +1,6 @@
 #pragma once
+
+#include <string>
 #include <iostream>
 
 using namespace std;
@@ -6,10 +8,11 @@ using namespace std;
 class MIDIGen
 {
 public:
-	MIDIGen(unsigned int dataIn = 0);		//dataIn: 0-127
-	void setDataIn(unsigned int dataIn);
-	unsigned int getDataIn();
-private:
-	unsigned int dataIn_;
-	//unsigned int noteStringToInt(string note);	//utility function
+	MIDIGen(int dataIn = 0);							//dataIn: 0-127
+	int getDataIn() const;
+	virtual void setDataIn(int dataIn);
+	virtual void sendMIDI(int dataIn = -1) = 0;			//dataIn frivillig
+protected:
+	int noteStringToInt(string note);					//utility function, default return 1
+	int dataIn_;
 };

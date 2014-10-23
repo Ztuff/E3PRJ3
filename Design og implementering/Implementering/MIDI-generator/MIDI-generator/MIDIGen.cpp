@@ -1,35 +1,33 @@
 #include "MIDIGen.h"
 
-MIDIGen::MIDIGen(unsigned int dataIn)
+MIDIGen::MIDIGen(int dataIn)
 {
 	setDataIn(dataIn);
 }
 
-void MIDIGen::setDataIn(unsigned int dataIn)
+void MIDIGen::setDataIn(int dataIn)
 {
-	dataIn_ = (dataIn > 127 ? 127 : dataIn);
+	dataIn_ = (dataIn > 127 || dataIn < 0 ? 127 : dataIn);
 }
 
-unsigned int MIDIGen::getDataIn()
+int MIDIGen::getDataIn() const
 {
 	return dataIn_;
 }
 
-/*unsigned int MIDIGen::noteStringToInt(string note)
+int MIDIGen::noteStringToInt(string note)
 {
-	switch(note)
-	{
-		case "c": return 1;
-		case "cis": return 2;
-		case "d": return 3;
-		case "dis": return 4;
-		case "e": return 5;
-		case "f": return 6;
-		case "fis": return 7;
-		case "g": return 8;
-		case "gis": return 9;
-		case "a": return 10;
-		case "ais": return 11;
-		case "b": return 12;
-	}
-}*/
+	if(note.compare("c") == 0) return 1;
+	else if(note.compare("cis") == 0) return 2;
+	else if(note.compare("d") == 0) return 3;
+	else if(note.compare("dis") == 0) return 4;
+	else if(note.compare("e") == 0) return 5;
+	else if(note.compare("f") == 0) return 6;
+	else if(note.compare("fis") == 0) return 7;
+	else if(note.compare("g") == 0) return 8;
+	else if(note.compare("gis") == 0) return 9;
+	else if(note.compare("a") == 0) return 10;
+	else if(note.compare("ais") == 0) return 11;
+	else if(note.compare("b") == 0) return 12;
+	else return 1;
+}
