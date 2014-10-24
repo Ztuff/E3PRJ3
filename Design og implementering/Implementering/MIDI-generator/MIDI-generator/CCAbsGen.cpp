@@ -38,7 +38,7 @@ void CCAbsGen::sendMIDI(int dataIn)			//dataIn is optional
 	}
 }
 
-void CCAbsGen::printStrategies()
+void CCAbsGen::printStrategies() const
 {
 
 }

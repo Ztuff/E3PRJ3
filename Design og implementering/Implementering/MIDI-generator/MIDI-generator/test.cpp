@@ -5,10 +5,10 @@
 
 int main()
 {
-	/**** test of singleNoteGen ****
-	singleNoteGen testNote;								//default
-	singleNoteGen testNote2("cis",-3,50,60);				//root, octave, lowerThreshold, dataIn
-	testNote2.sendMIDI();*/
+	/**** test of singleNoteGen ****/
+	//singleNoteGen testNote;							//default
+	singleNoteGen testNote2("c",3,50,60);				//root, octave, lowerThreshold, dataIn
+	testNote2.sendMIDI();
 
 	/**** test of contNoteGen ****
 	contNoteGen testNote;								//default
@@ -22,11 +22,11 @@ int main()
 	//testNote.sendMIDI();
 	testNote2.sendMIDI();*/
 
-	/**** test of CCRelGen ****/
+	/**** test of CCRelGen ****
 	//CCRelGen testNote;								//default
 	CCRelGen testNote2("medium",120);						//int minVal, int maxVal, int dataIn
 	//testNote.sendMIDI();
-	testNote2.sendMIDI();
+	testNote2.sendMIDI();*/
 
 	return 0;
 }

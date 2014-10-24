@@ -8,7 +8,7 @@ class singleNoteGen : public MIDIGen
 public:
 	singleNoteGen(string root = "c", int octave = 0, unsigned int lowerThreshold = 0, int dataIn = 0);
 	virtual void sendMIDI(int dataIn = -1);	//dataIn optional
-	virtual void printStrategies();
+	virtual void printStrategies() const;
 private:
 	/**** dataIn is the input velocoty ****/
 	int root_;						//value from 1 to 12
