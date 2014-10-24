@@ -22,7 +22,7 @@ int main()
 	//testNote.sendMIDI();
 	testNote2.sendMIDI();*/
 
-	/**** test of CCAbsGen ****/
+	/**** test of CCRelGen ****/
 	//CCRelGen testNote;								//default
 	CCRelGen testNote2("medium",120);						//int minVal, int maxVal, int dataIn
 	//testNote.sendMIDI();

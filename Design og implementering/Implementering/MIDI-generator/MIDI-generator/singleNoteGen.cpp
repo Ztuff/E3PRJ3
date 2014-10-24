@@ -37,3 +37,8 @@ void singleNoteGen::sendMIDI(int dataIn)
 	}
 }
 
+void singleNoteGen::printStrategies()
+{
+
+}
+
