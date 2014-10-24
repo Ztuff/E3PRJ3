@@ -78,6 +78,11 @@ void contNoteGen::sendMIDI(int dataIn)
 	}
 }
 
+void contNoteGen::printStrategies()
+{
+
+}
+
 
 void contNoteGen::quantizeDiatonic(int dataIn)
 {
