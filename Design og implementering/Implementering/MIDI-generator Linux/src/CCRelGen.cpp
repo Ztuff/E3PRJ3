@@ -47,7 +47,7 @@ void CCRelGen::sendMIDI(int dataIn)			//dataIn is optional
 	}
 }
 
-void CCRelGen::printStrategies() const
+void CCRelGen::printStrategies()
 {
 
 }

@@ -78,7 +78,7 @@ void contNoteGen::sendMIDI(int dataIn)
 	}
 }
 
-void contNoteGen::printStrategies() const
+void contNoteGen::printStrategies()
 {
 
 }

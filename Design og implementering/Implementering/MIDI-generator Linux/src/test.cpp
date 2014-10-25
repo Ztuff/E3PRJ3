@@ -6,8 +6,8 @@
 int main()
 {
 	/**** test of singleNoteGen ****/
-	//singleNoteGen testNote;							//default
-	singleNoteGen testNote2("c",3,50,60);				//root, octave, lowerThreshold, dataIn
+	//singleNoteGen testNote;								//default
+	singleNoteGen testNote2("cis",-3,50,60);				//root, octave, lowerThreshold, dataIn
 	testNote2.sendMIDI();
 
 	/**** test of contNoteGen ****

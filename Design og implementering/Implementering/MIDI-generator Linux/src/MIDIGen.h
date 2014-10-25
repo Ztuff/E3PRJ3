@@ -1,4 +1,5 @@
-#pragma once
+#ifndef MIDIGEN_H_
+#define MIDIGEN_H_
 
 #include <string>
 #include <iostream>
@@ -12,8 +13,10 @@ public:
 	int getDataIn() const;
 	virtual void setDataIn(int dataIn);
 	virtual void sendMIDI(int dataIn = -1) = 0;			//Abstract function
-	virtual void printStrategies() const = 0;
+	virtual void printStrategies() = 0;
 protected:
 	int noteStringToInt(string note);					//utility function, default return 1
 	int dataIn_;
 };
+
+#endif  /* MIDIGEN_H_ */

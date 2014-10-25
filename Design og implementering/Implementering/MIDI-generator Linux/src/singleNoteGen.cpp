@@ -2,13 +2,13 @@
 
 singleNoteGen::singleNoteGen(string root, int octave, unsigned int lowerThreshold, int dataIn ) : MIDIGen(dataIn)
 {
-	root_= MIDIGen::noteStringToInt(root);							//værdi fra 1 til 12
-	octave_ = (octave >=-3 && octave<=8 ? octave : 0);				//værdi fra -3 til 8
-	lowerThreshold_ = (lowerThreshold>127 ? 127 : lowerThreshold);	//værdi fra -3 til 8
+	root_= MIDIGen::noteStringToInt(root);							//vï¿½rdi fra 1 til 12
+	octave_ = (octave >=-3 && octave<=8 ? octave : 0);				//vï¿½rdi fra -3 til 8
+	lowerThreshold_ = (lowerThreshold>127 ? 127 : lowerThreshold);	//vï¿½rdi fra 0 til 127
 	noteState_ = 0;
 
 	int note= (octave_+3)*12+root_-1;								//indstilling af tone
-	note_= (note>127 ? 127: note);									//frasortering af værdier over 127
+	note_= (note>127 ? 127: note);									//frasortering af vï¿½rdier over 127
 	cout << "Note has number " <<note_ << "\n";		//for testing
 }
 
@@ -37,7 +37,7 @@ void singleNoteGen::sendMIDI(int dataIn)
 	}
 }
 
-void singleNoteGen::printStrategies() const
+void singleNoteGen::printStrategies()
 {
 
 }

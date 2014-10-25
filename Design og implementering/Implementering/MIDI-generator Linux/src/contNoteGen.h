@@ -1,4 +1,6 @@
-#pragma once
+#ifndef CONTNOTEGEN_H_
+#define CONTNOTEGEN_H_
+
 #include "MIDIGen.h"
 
 using namespace std;
@@ -9,7 +11,7 @@ public:
 	contNoteGen(string root = "c", string scale = "cromatic", string direction = "rising", int dataIn = 0);		
 	virtual void setDataIn(int dataIn);				//overloaded version. sets note as strategy dictates
 	virtual void sendMIDI(int dataIn = -1);			//dataIn is optional
-	virtual void printStrategies() const;
+	virtual void printStrategies();
 private:
 	/**** dataIn is the note control ****/
 	string root_;									//strategies: c, cis, d, dis, e, f, fis, g, gis, a, ais, b
@@ -21,3 +23,5 @@ private:
 	void convertDataToNote();						//utility function - bruges i updateData
 	void quantizeDiatonic(int dataIn);				//utility function - kvantiserer jf. scale- og root strategy
 };
+
+#endif /* CONTNOTEGEN_H_ */
