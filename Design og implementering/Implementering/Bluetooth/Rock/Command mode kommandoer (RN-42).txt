@@ -1,0 +1,22 @@
+﻿Hardwareopkobling:
+RXD - Pin 12[7]
+TXD - Pin 12[6]
+Jumper3 - Pin 0[4] (HIGH)
+
+Softwareindstillinger:
+Default baud rate i AT: 115200
+Control -> Terminal: Receive & Transmit sættes til CR
+
+Kommandoer til opsætning:
+
+$$$ // commando mode - OBS det skal gøres inden for 60 sekunder efter opstart
++ // sæt echo til
+
+H // help
+
+SR,hexAdresse //sætter adressen til auto-connect enheden. Se BT enheder for adresser
+
+SM,4 //Auto-connect DTR Mode - OBS hvis JP3 er SC connector den + Husk at sætte ST
+ST,60 //Sætter CMD tiden til 60 sek efter reboot VIGTIGT for adgang!
+
+Husk Jumper3 er reconnect pin
