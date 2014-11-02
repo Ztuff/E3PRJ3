@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.025" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
@@ -473,12 +473,12 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <wire x1="-1.778" y1="-5.207" x2="-1.778" y2="-8.128" width="0.2032" layer="51"/>
 <wire x1="-1.778" y1="-8.128" x2="11.938" y2="-8.128" width="0.2032" layer="51"/>
 <wire x1="11.938" y1="-8.128" x2="11.938" y2="-5.207" width="0.2032" layer="51"/>
-<pad name="1" x="1.905" y="8.89" drill="1.016" diameter="1.8796"/>
-<pad name="2" x="3.175" y="6.35" drill="1.016" diameter="1.8796"/>
-<pad name="3" x="4.445" y="8.89" drill="1.016" diameter="1.8796"/>
-<pad name="4" x="5.715" y="6.35" drill="1.016" diameter="1.8796"/>
-<pad name="5" x="6.985" y="8.89" drill="1.016" diameter="1.8796"/>
-<pad name="6" x="8.255" y="6.35" drill="1.016" diameter="1.8796"/>
+<pad name="1" x="1.905" y="8.89" drill="0.7" shape="long" rot="R90"/>
+<pad name="2" x="3.175" y="6.35" drill="0.7" shape="long" rot="R90"/>
+<pad name="3" x="4.445" y="8.89" drill="0.7" shape="long" rot="R90"/>
+<pad name="4" x="5.715" y="6.35" drill="0.7" shape="long" rot="R90"/>
+<pad name="5" x="6.985" y="8.89" drill="0.7" shape="long" rot="R90"/>
+<pad name="6" x="8.255" y="6.35" drill="0.7" shape="long" rot="R90"/>
 <hole x="0" y="0" drill="3.2512"/>
 <hole x="10.16" y="0" drill="3.2512"/>
 </package>

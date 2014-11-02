@@ -139,6 +139,11 @@
 <text x="92.71" y="29.21" size="3.81" layer="16" font="vector" ratio="17" rot="MR0">BR3K</text>
 <text x="39.37" y="27.94" size="2.1844" layer="16" font="vector" ratio="15" rot="MR0">ADXL345
 V1.0</text>
+<text x="47.625" y="59.69" size="2.1844" layer="16" font="vector" ratio="15" rot="MR270">[x--]
+[--x]</text>
+<text x="51.435" y="58.42" size="2.1844" layer="16" font="vector" ratio="15" rot="MR270">GND</text>
+<text x="40.005" y="58.42" size="2.1844" layer="16" font="vector" ratio="15" rot="MR270">VCC</text>
+<text x="35.56" y="54.61" size="2.54" layer="16" font="vector" ratio="19" rot="MR0">&lt;-ADO</text>
 </plain>
 <libraries>
 <library name="BodyRockParts">
@@ -640,6 +645,12 @@ design rules under a new name.</description>
 <wire x1="43.18" y1="38.1" x2="43.18" y2="41.91" width="0.6096" layer="16"/>
 <wire x1="43.18" y1="41.91" x2="44.45" y2="43.18" width="0.6096" layer="16"/>
 <wire x1="44.45" y1="43.18" x2="45.72" y2="43.18" width="0.6096" layer="16"/>
+</signal>
+<signal name="N$3">
+<wire x1="22.86" y1="60.96" x2="95.25" y2="60.96" width="0.6096" layer="16"/>
+<wire x1="95.25" y1="60.96" x2="95.25" y2="26.67" width="0.6096" layer="16"/>
+<wire x1="95.25" y1="26.67" x2="22.86" y2="26.67" width="0.6096" layer="16"/>
+<wire x1="22.86" y1="26.67" x2="22.86" y2="60.96" width="0.6096" layer="16"/>
 </signal>
 </signals>
 </board>
