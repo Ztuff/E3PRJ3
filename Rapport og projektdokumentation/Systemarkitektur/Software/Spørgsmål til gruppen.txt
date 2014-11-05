@@ -1,0 +1,5 @@
++ Preset getActivePreset() //get a copy of the entire preset indicated by the active preset variable (Felix' noter)
+Hvorfor hele presettet, og ikke bare en *this-pointer?
+- Effektivt
+
+Hvordan tilgår Preset Sensorkonfiguration?
