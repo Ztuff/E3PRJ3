@@ -136,6 +136,9 @@
 <circle x="86.36" y="38.1" radius="1.27" width="0.8128" layer="16"/>
 <circle x="50.8" y="50.165" radius="1.27" width="0.3048" layer="16"/>
 <circle x="71.12" y="50.165" radius="1.27" width="0.3048" layer="16"/>
+<text x="92.71" y="29.21" size="3.81" layer="16" font="vector" ratio="17" rot="MR0">BR3K</text>
+<text x="39.37" y="27.94" size="2.1844" layer="16" font="vector" ratio="15" rot="MR0">ADXL345
+V1.0</text>
 </plain>
 <libraries>
 <library name="BodyRockParts">
