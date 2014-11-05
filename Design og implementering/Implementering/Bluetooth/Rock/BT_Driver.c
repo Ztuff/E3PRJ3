@@ -124,19 +124,7 @@ struct file_operations BT_fops =
 
 static int __init BT_init(void)
 {
-  // Request GPIO
-  if( gpio_request( BT_PIN, "BT" ) != NULL)
-  {
-    printk ( KERN_ALERT "Access to BT pin has failed\n" );
-    goto err1;
-  }
-  
-  // Set GPIO direction (in or out)
-  if( gpio_direction_output( BT_PIN, 1 ) != NULL)
-  {
-    printk ( KERN_ALERT "BT direction set has failed\n" );
-    goto err2;
-  }
+  // FIFO management setup
   
   // Make device no
   if( alloc_chrdev_region( &devno, BT_MINOR, BT_NBR_MINOR, "BT_Driver") != NULL )
