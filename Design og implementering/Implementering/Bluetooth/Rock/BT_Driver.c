@@ -124,7 +124,30 @@ struct file_operations BT_fops =
 
 static int __init BT_init(void)
 {
-  // FIFO management setup
+  // Sæt FIFO trigger level til 8 spaces
+  UART2.FCR_REG & 0b00001111; // Sæt TX og RX trigger field til 00, svarende til 8 pladser (side 2545)
+  TLR_REG = 0; // Sæt TLR_REG for både TX og RX lav, så trigger field kan ændres
+  SCR_REG = & 0b00111111; // Sæt SCR_REG for både TX og RX lav, så trigger field kan ændres
+  
+  // Enable FIFO interrupt mode
+  UART2.FCR_REG | 1; // Sæt FIFO_EN
+  
+  // Sæt værdien som skal overstiges, for at MPU'en reagerer
+  UART2.TCR_REG | 0b00000010; // Sæt RX_FIFO_HALT til 8 bytes (2 x 4)
+  UART2.TCR_REG & 0b11110010; // En mulig fejlkilde kan være at RX_FIFO_START ikke er sat, men vi tror, den er 0 som standard
+  
+  
+
+  // FIFO management setup - side 2543
+  // Holder styr på og tjekker på køen
+  // Tilgås ved at læse/skrive til/fra UART2.RHR_REG og UART2.THR_REG
+  // Trigger level defineres ved at 
+  
+  // Mode selection
+  // Bestemmer om det skal være UART eller andet
+  
+  // Protocol formatting
+  // Styrer Clock generation, DATA formatting og Interrupt Management
   
   // Make device no
   if( alloc_chrdev_region( &devno, BT_MINOR, BT_NBR_MINOR, "BT_Driver") != NULL )
