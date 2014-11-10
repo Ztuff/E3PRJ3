@@ -5543,12 +5543,12 @@ naming: grid - package width</description>
 <instance part="C1" gate="G$1" x="5.08" y="15.24"/>
 <instance part="C2" gate="G$1" x="10.16" y="15.24"/>
 <instance part="R5" gate="G$1" x="5.08" y="22.86" rot="R90"/>
-<instance part="RN2" gate="A" x="129.54" y="109.22"/>
-<instance part="RN2" gate="B" x="129.54" y="104.14"/>
+<instance part="RN2" gate="A" x="129.54" y="88.9"/>
+<instance part="RN2" gate="B" x="129.54" y="83.82"/>
 <instance part="RN2" gate="C" x="129.54" y="99.06"/>
 <instance part="RN2" gate="D" x="129.54" y="93.98"/>
-<instance part="RN3" gate="A" x="129.54" y="88.9"/>
-<instance part="RN3" gate="B" x="129.54" y="83.82"/>
+<instance part="RN3" gate="A" x="129.54" y="109.22"/>
+<instance part="RN3" gate="B" x="129.54" y="104.14"/>
 <instance part="RN3" gate="C" x="129.54" y="78.74"/>
 <instance part="RN3" gate="D" x="129.54" y="73.66"/>
 </instances>
@@ -5609,10 +5609,9 @@ naming: grid - package width</description>
 <junction x="152.4" y="71.12"/>
 <pinref part="RN3" gate="C" pin="1"/>
 <pinref part="RN3" gate="D" pin="1"/>
-<pinref part="RN3" gate="A" pin="1"/>
+<pinref part="RN2" gate="A" pin="1"/>
 <wire x1="124.46" y1="88.9" x2="121.92" y2="88.9" width="0.1524" layer="91"/>
-<pinref part="RN3" gate="B" pin="1"/>
-<wire x1="124.46" y1="83.82" x2="121.92" y2="83.82" width="0.1524" layer="91"/>
+<wire x1="127" y1="83.82" x2="121.92" y2="83.82" width="0.1524" layer="91"/>
 <junction x="121.92" y="83.82"/>
 </segment>
 </net>
@@ -5655,25 +5654,26 @@ naming: grid - package width</description>
 <pinref part="P+10" gate="VCC" pin="VCC"/>
 </segment>
 <segment>
-<wire x1="124.46" y1="109.22" x2="121.92" y2="109.22" width="0.1524" layer="91"/>
+<wire x1="121.92" y1="114.3" x2="121.92" y2="109.22" width="0.1524" layer="91"/>
 <wire x1="121.92" y1="109.22" x2="121.92" y2="104.14" width="0.1524" layer="91"/>
 <wire x1="121.92" y1="104.14" x2="121.92" y2="99.06" width="0.1524" layer="91"/>
 <wire x1="121.92" y1="99.06" x2="121.92" y2="93.98" width="0.1524" layer="91"/>
-<wire x1="124.46" y1="104.14" x2="121.92" y2="104.14" width="0.1524" layer="91"/>
-<wire x1="121.92" y1="109.22" x2="121.92" y2="114.3" width="0.1524" layer="91"/>
-<junction x="121.92" y="109.22"/>
 <pinref part="IC1" gate="P" pin="V+"/>
 <wire x1="121.92" y1="114.3" x2="152.4" y2="114.3" width="0.1524" layer="91"/>
 <wire x1="152.4" y1="114.3" x2="152.4" y2="96.52" width="0.1524" layer="91"/>
 <pinref part="P+5" gate="VCC" pin="VCC"/>
 <junction x="152.4" y="114.3"/>
-<pinref part="RN2" gate="A" pin="1"/>
-<pinref part="RN2" gate="B" pin="1"/>
 <pinref part="RN2" gate="C" pin="1"/>
 <wire x1="124.46" y1="99.06" x2="121.92" y2="99.06" width="0.1524" layer="91"/>
 <junction x="121.92" y="99.06"/>
 <pinref part="RN2" gate="D" pin="1"/>
 <wire x1="124.46" y1="93.98" x2="121.92" y2="93.98" width="0.1524" layer="91"/>
+<pinref part="RN3" gate="A" pin="1"/>
+<wire x1="124.46" y1="109.22" x2="121.92" y2="109.22" width="0.1524" layer="91"/>
+<junction x="121.92" y="109.22"/>
+<pinref part="RN3" gate="B" pin="1"/>
+<wire x1="124.46" y1="104.14" x2="121.92" y2="104.14" width="0.1524" layer="91"/>
+<junction x="121.92" y="104.14"/>
 </segment>
 </net>
 <net name="VCC/2" class="0">
@@ -5851,8 +5851,6 @@ naming: grid - package width</description>
 </net>
 <net name="N$11" class="0">
 <segment>
-<wire x1="134.62" y1="109.22" x2="137.16" y2="109.22" width="0.1524" layer="91"/>
-<wire x1="137.16" y1="109.22" x2="137.16" y2="104.14" width="0.1524" layer="91"/>
 <wire x1="137.16" y1="78.74" x2="137.16" y2="73.66" width="0.1524" layer="91"/>
 <wire x1="137.16" y1="73.66" x2="134.62" y2="73.66" width="0.1524" layer="91"/>
 <wire x1="134.62" y1="78.74" x2="137.16" y2="78.74" width="0.1524" layer="91"/>
@@ -5860,28 +5858,31 @@ naming: grid - package width</description>
 <wire x1="137.16" y1="83.82" x2="137.16" y2="88.9" width="0.1524" layer="91"/>
 <wire x1="137.16" y1="88.9" x2="137.16" y2="91.44" width="0.1524" layer="91"/>
 <wire x1="137.16" y1="91.44" x2="137.16" y2="93.98" width="0.1524" layer="91"/>
-<wire x1="137.16" y1="93.98" x2="137.16" y2="99.06" width="0.1524" layer="91"/>
-<wire x1="137.16" y1="99.06" x2="137.16" y2="104.14" width="0.1524" layer="91"/>
-<wire x1="137.16" y1="104.14" x2="134.62" y2="104.14" width="0.1524" layer="91"/>
 <pinref part="IC1" gate="D" pin="+IN"/>
 <wire x1="144.78" y1="91.44" x2="137.16" y2="91.44" width="0.1524" layer="91"/>
 <junction x="137.16" y="91.44"/>
-<pinref part="RN2" gate="A" pin="2"/>
-<pinref part="RN2" gate="B" pin="2"/>
 <pinref part="RN3" gate="C" pin="2"/>
 <pinref part="RN3" gate="D" pin="2"/>
 <pinref part="RN2" gate="D" pin="2"/>
 <wire x1="134.62" y1="93.98" x2="137.16" y2="93.98" width="0.1524" layer="91"/>
-<junction x="137.16" y="93.98"/>
-<pinref part="RN2" gate="C" pin="2"/>
-<wire x1="134.62" y1="99.06" x2="137.16" y2="99.06" width="0.1524" layer="91"/>
-<junction x="137.16" y="99.06"/>
-<pinref part="RN3" gate="A" pin="2"/>
-<wire x1="134.62" y1="88.9" x2="137.16" y2="88.9" width="0.1524" layer="91"/>
-<junction x="137.16" y="88.9"/>
-<pinref part="RN3" gate="B" pin="2"/>
+<pinref part="RN2" gate="B" pin="2"/>
 <wire x1="134.62" y1="83.82" x2="137.16" y2="83.82" width="0.1524" layer="91"/>
 <junction x="137.16" y="83.82"/>
+<pinref part="RN2" gate="A" pin="2"/>
+<wire x1="134.62" y1="88.9" x2="137.16" y2="88.9" width="0.1524" layer="91"/>
+<junction x="137.16" y="88.9"/>
+<pinref part="RN2" gate="C" pin="2"/>
+<wire x1="134.62" y1="99.06" x2="137.16" y2="99.06" width="0.1524" layer="91"/>
+<wire x1="137.16" y1="99.06" x2="137.16" y2="104.14" width="0.1524" layer="91"/>
+<wire x1="137.16" y1="104.14" x2="137.16" y2="109.22" width="0.1524" layer="91"/>
+<wire x1="137.16" y1="93.98" x2="137.16" y2="99.06" width="0.1524" layer="91"/>
+<junction x="137.16" y="93.98"/>
+<junction x="137.16" y="99.06"/>
+<pinref part="RN3" gate="B" pin="2"/>
+<wire x1="134.62" y1="104.14" x2="137.16" y2="104.14" width="0.1524" layer="91"/>
+<junction x="137.16" y="104.14"/>
+<pinref part="RN3" gate="A" pin="2"/>
+<wire x1="134.62" y1="109.22" x2="137.16" y2="109.22" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>

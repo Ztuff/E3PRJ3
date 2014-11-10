@@ -5611,7 +5611,8 @@ naming: grid - package width</description>
 <pinref part="RN3" gate="D" pin="1"/>
 <pinref part="RN2" gate="A" pin="1"/>
 <wire x1="124.46" y1="88.9" x2="121.92" y2="88.9" width="0.1524" layer="91"/>
-<wire x1="127" y1="83.82" x2="121.92" y2="83.82" width="0.1524" layer="91"/>
+<pinref part="RN2" gate="B" pin="1"/>
+<wire x1="124.46" y1="83.82" x2="121.92" y2="83.82" width="0.1524" layer="91"/>
 <junction x="121.92" y="83.82"/>
 </segment>
 </net>

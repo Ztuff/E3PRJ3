@@ -5474,8 +5474,8 @@ naming: grid - package width</description>
 <part name="C1" library="capacitor-wima" deviceset="C" device="5/2.5" value="10µF X7R"/>
 <part name="C2" library="capacitor-wima" deviceset="C" device="5/2.5" value="10nF NPO"/>
 <part name="R5" library="resistor" deviceset="R-EU_" device="0207_10" value="10 Ohm"/>
-<part name="RN2" library="resistor-sil" deviceset="E4R" device=""/>
-<part name="RN3" library="resistor-sil" deviceset="E4R" device=""/>
+<part name="RN2" library="resistor-sil" deviceset="E4R" device="" value="100kOhm"/>
+<part name="RN3" library="resistor-sil" deviceset="E4R" device="" value="100kOhm"/>
 </parts>
 <sheets>
 <sheet>
