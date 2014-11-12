@@ -24,7 +24,8 @@ SOURCES += main.cpp\
     sletpreset.cpp \
     nysensorkonf.cpp \
     redigersensorkonfi.cpp \
-    sletsensorkonf.cpp
+    sletsensorkonf.cpp \
+    sensorliste.cpp
 
 HEADERS  += mainwindow.h \
     sensorwindow.h \
@@ -37,7 +38,8 @@ HEADERS  += mainwindow.h \
     sletpreset.h \
     nysensorkonf.h \
     redigersensorkonfi.h \
-    sletsensorkonf.h
+    sletsensorkonf.h \
+    sensorliste.h
 
 FORMS    += mainwindow.ui \
     sensorwindow.ui \
@@ -50,4 +52,5 @@ FORMS    += mainwindow.ui \
     sletpreset.ui \
     nysensorkonf.ui \
     redigersensorkonfi.ui \
-    sletsensorkonf.ui
+    sletsensorkonf.ui \
+    sensorliste.ui

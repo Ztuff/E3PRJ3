@@ -6,9 +6,15 @@ SletPreset::SletPreset(QWidget *parent) :
     ui(new Ui::SletPreset)
 {
     ui->setupUi(this);
+    this->setWindowState(Qt::WindowFullScreen);
 }
 
 SletPreset::~SletPreset()
 {
     delete ui;
+}
+
+void SletPreset::on_backButton_clicked()
+{
+    this->close();
 }

@@ -15,6 +15,9 @@ public:
     explicit NyPreset(QWidget *parent = 0);
     ~NyPreset();
 
+private slots:
+    void on_backButton_clicked();
+
 private:
     Ui::NyPreset *ui;
 };

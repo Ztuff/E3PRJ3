@@ -15,6 +15,9 @@ public:
     explicit NySensorkonf(QWidget *parent = 0);
     ~NySensorkonf();
 
+private slots:
+    void on_backButton_clicked();
+
 private:
     Ui::NySensorkonf *ui;
 };

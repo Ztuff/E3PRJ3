@@ -15,6 +15,9 @@ public:
     explicit RedigerPreset(QWidget *parent = 0);
     ~RedigerPreset();
 
+private slots:
+    void on_backButton_clicked();
+
 private:
     Ui::RedigerPreset *ui;
 };

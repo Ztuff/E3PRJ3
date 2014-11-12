@@ -24,6 +24,8 @@ private slots:
 
     void on_SletSensorKon_clicked();
 
+    void on_backButton_clicked();
+
 private:
     Ui::SensorWindow *ui;
 };

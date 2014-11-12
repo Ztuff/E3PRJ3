@@ -6,9 +6,15 @@ ImporterLydpakke::ImporterLydpakke(QWidget *parent) :
     ui(new Ui::ImporterLydpakke)
 {
     ui->setupUi(this);
+    this->setWindowState(Qt::WindowFullScreen);
 }
 
 ImporterLydpakke::~ImporterLydpakke()
 {
     delete ui;
+}
+
+void ImporterLydpakke::on_backButton_clicked()
+{
+    this->close();
 }

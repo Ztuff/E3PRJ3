@@ -9,6 +9,7 @@ SensorWindow::SensorWindow(QWidget *parent) :
     ui(new Ui::SensorWindow)
 {
     ui->setupUi(this);
+    this->setWindowState(Qt::WindowFullScreen);
 }
 
 SensorWindow::~SensorWindow()
@@ -32,4 +33,9 @@ void SensorWindow::on_SletSensorKon_clicked()
 {
     SletSensorkonf *SSKWindow = new SletSensorkonf;
     SSKWindow->show();
+}
+
+void SensorWindow::on_backButton_clicked()
+{
+    this->close();
 }

@@ -13,6 +13,7 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    this->setWindowState(Qt::WindowFullScreen);
 
 }
 
@@ -41,4 +42,9 @@ void MainWindow::on_pushButton_2_clicked()
 {
     LydpakkerWindow *lWindow = new LydpakkerWindow;
     lWindow->show();
+}
+
+void MainWindow::on_CloseButton_clicked()
+{
+    this->close();
 }

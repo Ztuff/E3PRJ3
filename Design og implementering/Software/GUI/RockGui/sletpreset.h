@@ -15,6 +15,9 @@ public:
     explicit SletPreset(QWidget *parent = 0);
     ~SletPreset();
 
+private slots:
+    void on_backButton_clicked();
+
 private:
     Ui::SletPreset *ui;
 };

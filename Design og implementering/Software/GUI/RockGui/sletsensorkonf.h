@@ -15,6 +15,9 @@ public:
     explicit SletSensorkonf(QWidget *parent = 0);
     ~SletSensorkonf();
 
+private slots:
+    void on_backButton_clicked();
+
 private:
     Ui::SletSensorkonf *ui;
 };

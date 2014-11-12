@@ -15,6 +15,15 @@ public:
     explicit PresetWindow(QWidget *parent = 0);
     ~PresetWindow();
 
+private slots:
+    void on_NytPreset_clicked();
+
+    void on_RedigerPreset_clicked();
+
+    void on_SletPreset_clicked();
+
+    void on_backButton_clicked();
+
 private:
     Ui::PresetWindow *ui;
 };

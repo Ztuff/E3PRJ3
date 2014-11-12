@@ -15,6 +15,9 @@ public:
     explicit SletLydpakke(QWidget *parent = 0);
     ~SletLydpakke();
 
+private slots:
+    void on_backButton_clicked();
+
 private:
     Ui::SletLydpakke *ui;
 };

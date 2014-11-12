@@ -6,9 +6,15 @@ RedigerSensorkonfi::RedigerSensorkonfi(QWidget *parent) :
     ui(new Ui::RedigerSensorkonfi)
 {
     ui->setupUi(this);
+    this->setWindowState(Qt::WindowFullScreen);
 }
 
 RedigerSensorkonfi::~RedigerSensorkonfi()
 {
     delete ui;
+}
+
+void RedigerSensorkonfi::on_backButton_clicked()
+{
+    this->close();
 }

@@ -6,9 +6,15 @@ NyPreset::NyPreset(QWidget *parent) :
     ui(new Ui::NyPreset)
 {
     ui->setupUi(this);
+    this->setWindowState(Qt::WindowFullScreen);
 }
 
 NyPreset::~NyPreset()
 {
     delete ui;
+}
+
+void NyPreset::on_backButton_clicked()
+{
+    this->close();
 }

@@ -6,9 +6,15 @@ SletLydpakke::SletLydpakke(QWidget *parent) :
     ui(new Ui::SletLydpakke)
 {
     ui->setupUi(this);
+    this->setWindowState(Qt::WindowFullScreen);
 }
 
 SletLydpakke::~SletLydpakke()
 {
     delete ui;
+}
+
+void SletLydpakke::on_backButton_clicked()
+{
+    this->close();
 }

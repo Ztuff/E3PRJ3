@@ -20,6 +20,10 @@ private slots:
 
     void on_ImporterLydpakke_clicked();
 
+    void on_SletLydpakke_clicked();
+
+    void on_backButton_clicked();
+
 private:
     Ui::LydpakkerWindow *ui;
 };
