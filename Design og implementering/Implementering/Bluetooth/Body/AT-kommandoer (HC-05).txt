@@ -1,0 +1,20 @@
+Hardwareopkobling:
+RXD - Pin 12[7]
+TXD - Pin 12[6]
+Key - Pin 0[4] (HIGH)
+
+Softwareindstillinger:
+Default baud rate i AT: (Sandsynligvis) 38400
+Control -> Terminal: Receive & Transmit sættes til CR + LF
+
+
+Kommandoer:
+http://developer.mbed.org/users/edodm85/notebook/HC-05-bluetooth/
+
+Kommando:						Respons:						Effekt:
+
+AT								OK								Bekræftelse
+AT+VERSION?						+VERSION:2.0-20100601			Firmwareversion returneres
+AT+NAME=BODY					OK								Navn skiftet til Body
+AT+UART=						+UART:115200,0,0-20100601		Baud rate, stop bit, parity pit
+AT+UART=115200,0,0				OK								Baud rate, stop bit, parity bit
