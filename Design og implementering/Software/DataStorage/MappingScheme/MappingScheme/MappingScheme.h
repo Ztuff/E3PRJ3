@@ -3,6 +3,10 @@
 
 #define DEBUG 0
 
+#define SLOW 1		//Used for CCRel
+#define MEDIUM 2
+#define FAST 3
+
 #include <string>
 #include <iostream>
 #include "MidiSignal.h"
@@ -19,19 +23,20 @@ struct Velocity
 {
 	int lowerThreshold_;			//value from 0 to 127
 };
-struct CCAbs
+struct ContControl
 {
 	int cNum_;						//0-127
 	int minVal_;					//0-127
 	int maxVal_;					//0-127
+	int speed_;						//strategies: SLOW, MEDIUM, FAST, egt 1,2,3
 };
 struct CCRel						/**** dataIn is Rel CC change with 0-point at 64 ****/
 {
 	int cNum_;						//0-127
-	string speed_;					//strategies: "slow", "medium", "fast"
+	
 };
 
-class MappingScheme
+class MappingScheme	//KODEN KAN EVT EFFEKTIVISERES VED AT BRUGE DEFINES I STEDET FOR STRINGS I KEY
 {
 public:
 	MappingScheme(string param,	
@@ -42,7 +47,7 @@ public:
 					int cNum,			//controller#
 					int minVal,			//CCAbs.minVal, value from 0 to 127
 					int maxVal,			//CCAbs.maxVal, value from 0 to 127
-					string speed);		//CCRel.speed, strategies: "slow", "medium", "fast"
+					int speed);			//CCRel.speed, strategies: SLOW, MEDIUM, FAST
 
 	bool map(int data, MidiSignal & signal);	
 private:
@@ -58,8 +63,7 @@ private:
 	string param_;
 	Key key_;
 	Velocity velocity_;
-	CCAbs CCAbs_;
-	CCRel CCRel_;
+	ContControl CC_;
 };
 
 #endif /* MAPPINGSCHEME_H_ */

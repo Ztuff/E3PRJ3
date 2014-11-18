@@ -4,7 +4,7 @@
 #define NOTEOFF 0x80
 #define NOTEON 0x90
 #define AFTERTOUCH 0xA0
-#define CC 0xB0
+#define CONTIUOUSCONTROLLER 0xB0
 
 #include <string>
 #include <iostream>
@@ -25,10 +25,10 @@ struct MidiSignal
 
 	void print()
 	{
-		cout<<   "     channel_ = " << channel_
+		cout<<   "     channel_ = " << dec << channel_
 			<< "\n     command_ = 0x"<< hex << command_
-			<< "\n     param1_ = "<< param1_
-			<< "\n     param2_ = "<< param2_ << endl;
+			<< "\n     param1_ = "<< dec << param1_
+			<< "\n     param2_ = "<< dec << param2_ << endl;
 	}
 };
 

@@ -8,7 +8,7 @@ MappingScheme::	MappingScheme(	string param,
 								int cNum,			//CC (both)
 								int minVal,			//CCAbs
 								int maxVal,			//CCAbs
-								string speed)		//CCRel
+								int speed)			//CCRel
 {
 	/*** Initailize atributes ***/
 	param_=((param == "key" || param == "velocity" || param == "CCAbs" || param == "CCRel") ? param : "velocity");
@@ -22,13 +22,13 @@ MappingScheme::	MappingScheme(	string param,
 
 	velocity_.lowerThreshold_=((lowerThreshold < 128 || lowerThreshold >= 0) ? lowerThreshold : NULL);
 
-	CCAbs_.cNum_=CCRel_.cNum_=((cNum < 128 || cNum >= 0) ? cNum : NULL); //set both CCAbs and CCRel 
-		
-	CCAbs_.minVal_=((minVal < 128 || minVal >= 0) ? minVal : NULL);
+	CC_.cNum_=((cNum < 128 || cNum >= 0) ? cNum : NULL); //set both CCAbs and CCRel 
 	
-	CCAbs_.maxVal_=((maxVal < 128 || maxVal >= 0) ? maxVal : NULL);
+	CC_.minVal_=((minVal < 128 || minVal >= 0) ? minVal : NULL);
 	
-	CCRel_.speed_ = ((speed == "slow" || speed == "medium" || speed == "fast") ? speed : "0");
+	CC_.maxVal_=((maxVal < 128 || maxVal >= 0) ? maxVal : NULL);
+	
+	CC_.speed_ = ((speed == SLOW || speed == MEDIUM || speed == FAST) ? speed : SLOW);
 }
 
 
@@ -121,21 +121,22 @@ bool MappingScheme::mapCCAbs(int data, MidiSignal & signal)
 
 	data = (data > 127 || data < 0 ? 127 : data);	//Valider data
 
-	if( data != signal.param2Old_ )						//Gør intet hvis samme værdi igen
+	int range = CC_.maxVal_- CC_.minVal_;		//check for neccesity of scaling
+	if(data > CC_.minVal_ || data < range)
 	{
-		int range = CCAbs_.maxVal_- CCAbs_.minVal_;		//check for neccesity of scaling
-		if(data > CCAbs_.minVal_ || data < range)
-		{
-			if(DEBUG)
-				cout << "Entering scaling\n";
+		if(DEBUG)
+			cout << "Entering scaling\n";
 
-			data= int((data*range)/127 + CCAbs_.minVal_);	//int casting nessecary
-		}
-		
-		signal.command_ = CC;	//Continuous controller
-		
-		signal.param2Old_ = data;
+		data= int((data*range)/127 + CC_.minVal_);	//int casting nessecary
 	}
+				
+	/*** Set MidiSignal ***/
+	signal.command_ = CONTIUOUSCONTROLLER;	//Set command
+	signal.param1_ = CC_.cNum_;			//Set CC#
+	signal.param2_ = data;					//Set controller value
+
+	signal.param2Old_ = data;				//Set old value
+	
 	return 1;
 }
 
@@ -144,8 +145,43 @@ bool MappingScheme::mapCCRel(int data, MidiSignal & signal)
 	if(DEBUG)
 		cout << "Inside mapCCRel\n";
 
+	data = (data > 127 || data < 0 ? 127 : data);	//Valider data
+
+	/** Select strategy according to input range **/
+	int strategy;
+	if(data < 26) strategy = -2;
+	else if(data < 51) strategy = -1;
+	else if(data < 77) strategy = 0;
+	else if(data < 102) strategy = 1;
+	else strategy = 2; 
+	
+	if(DEBUG)
+		cout << "strategy : " << strategy << endl;
+
+	if(strategy !=0)
+	{
+		strategy = strategy*CC_.speed_;	//Additional scaling akkording to speed
+	}
+	
+	if(DEBUG)
+		cout << "Strategy post scaling: " << strategy << endl;												
+	
+	/*** Set MidiSignal ***/
+	signal.command_ = CONTIUOUSCONTROLLER;			//Set command
+	signal.param1_ = CC_.cNum_;						//Set CC#
+	
+	if(((signal.param2Old_ + strategy) <= CC_.maxVal_) && ((signal.param2Old_ + strategy)>= CC_.minVal_))
+		signal.param2_ = signal.param2Old_ + strategy;	//Set controller value relative to old
+	else if((signal.param2Old_ + strategy) > CC_.maxVal_)
+		signal.param2_ = CC_.maxVal_;
+	else
+		signal.param2_ = CC_.minVal_;
+
+	signal.param2Old_ = signal.param2_;				//Set old value
+	
 	return 1;
 }
+
 int MappingScheme::noteStringToInt(string note)
 {
 	if(DEBUG)
