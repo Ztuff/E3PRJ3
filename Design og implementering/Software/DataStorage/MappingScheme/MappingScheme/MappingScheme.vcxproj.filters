@@ -26,5 +26,8 @@
     <ClInclude Include="MappingScheme.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="MidiSignal.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

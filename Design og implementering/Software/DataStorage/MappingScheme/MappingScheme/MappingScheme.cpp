@@ -5,6 +5,7 @@ MappingScheme::	MappingScheme(	string param,
 								string scale,		//key
 								string direction,	//key
 								int lowerThreshold,	//velocity
+								int cNum,			//CC (both)
 								int minVal,			//CCAbs
 								int maxVal,			//CCAbs
 								string speed)		//CCRel
@@ -20,6 +21,8 @@ MappingScheme::	MappingScheme(	string param,
 	key_.direction_=((direction == "rising" || direction == "falling") ? direction : "0");
 
 	velocity_.lowerThreshold_=((lowerThreshold < 128 || lowerThreshold >= 0) ? lowerThreshold : NULL);
+
+	CCAbs_.cNum_=CCRel_.cNum_=((cNum < 128 || cNum >= 0) ? cNum : NULL); //set both CCAbs and CCRel 
 		
 	CCAbs_.minVal_=((minVal < 128 || minVal >= 0) ? minVal : NULL);
 	
@@ -82,10 +85,10 @@ bool MappingScheme::mapKey(int data, MidiSignal & signal)
 	
 	if(signal.param1_ != data)
 	{
-		if(data != param1Old_)
+		if(data != signal.param1Old_)
 		{
 			signal.command_ = 0x80;	//Note Off
-			param1Old_ = data;
+			signal.param1Old_ = data;
 		}
 		else
 			signal.param1_ = data;	//set key value hvis forrige tone er slukket.
@@ -98,17 +101,15 @@ bool MappingScheme::mapVelocity(int data, MidiSignal & signal)
 	if(DEBUG)
 		cout << "Inside mapVelocity\n";
 	
-	data = (data > 127 || data < 0 ? 65 : data);
-		signal.param2_ = data;	//set velocity value
+	data = ((data > 127) || (data < 0) ? 65 : data);
+	signal.param2_ = data;	//set velocity value
 
-	if(signal.command_== 0x80 && data > velocity_.lowerThreshold_)	//Hvis Note-Off og data er højere end lowerThreshold
-		signal.command_ = 0x90;	//Note On
-	
-	if(signal.command_== 0x90 && data > velocity_.lowerThreshold_)	//Hvis Note-On og data er højere end lowerThreshold
-		signal.command_ = 0xA0;	//Aftertouch
-	
-	if(signal.command_== 0x90 && data < velocity_.lowerThreshold_)	//Hvis Note-On og data er lavere end lowerThreshold
-		signal.command_ = 0x80;	//Note Off
+	if((signal.command_== NOTEOFF) && (data > velocity_.lowerThreshold_))		//Hvis Note-Off og data er højere end lowerThreshold
+		signal.command_ = NOTEON;	
+	else if((signal.command_== NOTEON) && (data > velocity_.lowerThreshold_))	//Hvis Note-On og data er højere end lowerThreshold
+		signal.command_ = AFTERTOUCH;	
+	else if((signal.command_== NOTEON) && (data < velocity_.lowerThreshold_))	//Hvis Note-On og data er lavere end lowerThreshold
+		signal.command_ = NOTEOFF;	
 
 	return 1;
 }
@@ -118,6 +119,23 @@ bool MappingScheme::mapCCAbs(int data, MidiSignal & signal)
 	if(DEBUG)
 		cout << "Inside mapCCAbs\n";
 
+	data = (data > 127 || data < 0 ? 127 : data);	//Valider data
+
+	if( data != signal.param2Old_ )						//Gør intet hvis samme værdi igen
+	{
+		int range = CCAbs_.maxVal_- CCAbs_.minVal_;		//check for neccesity of scaling
+		if(data > CCAbs_.minVal_ || data < range)
+		{
+			if(DEBUG)
+				cout << "Entering scaling\n";
+
+			data= int((data*range)/127 + CCAbs_.minVal_);	//int casting nessecary
+		}
+		
+		signal.command_ = CC;	//Continuous controller
+		
+		signal.param2Old_ = data;
+	}
 	return 1;
 }
 

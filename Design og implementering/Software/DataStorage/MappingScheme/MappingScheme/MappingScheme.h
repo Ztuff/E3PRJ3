@@ -5,25 +5,9 @@
 
 #include <string>
 #include <iostream>
+#include "MidiSignal.h"
 
 using namespace std;
-
-struct MidiSignal
-{
-	int channel_;
-	int command_;
-	int param1_;
-	int param2_;
-
-	void print()
-	{
-		cout<<   "     channel_ = " << channel_
-			<< "\n     command_ = 0x"<< hex << command_
-			<< "\n     param1_ = "<< param1_
-			<< "\n     param2_ = "<< param2_ << endl;
-	}
-};
-
 
 struct Key
 {
@@ -37,11 +21,13 @@ struct Velocity
 };
 struct CCAbs
 {
+	int cNum_;						//0-127
 	int minVal_;					//0-127
 	int maxVal_;					//0-127
 };
 struct CCRel						/**** dataIn is Rel CC change with 0-point at 64 ****/
 {
+	int cNum_;						//0-127
 	string speed_;					//strategies: "slow", "medium", "fast"
 };
 
@@ -53,6 +39,7 @@ public:
 					string scale,		//key.scale, strategies: cromatic, major, minor
 					string direction,	//key.direction, strategies: rising, falling
 					int lowerThreshold,	//velocity.lowerThreshold, value from 0 to 127
+					int cNum,			//controller#
 					int minVal,			//CCAbs.minVal, value from 0 to 127
 					int maxVal,			//CCAbs.maxVal, value from 0 to 127
 					string speed);		//CCRel.speed, strategies: "slow", "medium", "fast"
@@ -65,9 +52,8 @@ private:
 	bool mapCCRel(int data, MidiSignal & signal);
 	
 	/*** mapKey utility ***/
-	void quantizeDiatonic(int &dataIn);			//kvantiserer jf. scale- og root strategy
-	int noteStringToInt(string note);	
-	int param1Old_;
+	void quantizeDiatonic(int &dataIn);	//kvantiserer jf. scale- og root strategy
+	int noteStringToInt(string note);
 
 	string param_;
 	Key key_;
