@@ -27,3 +27,8 @@ Insert after cursor:
 
 Delete under cursor:
 	x
+	
+Exit without saving:
+	:q!
+	
+Exit and save
