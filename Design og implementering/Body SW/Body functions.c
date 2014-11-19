@@ -2,8 +2,19 @@
 
 int numOfRegToRead = 0;	//current number of initialized sensors
 
-int sensArray[MAXSENSKONFNUM][2];	//Array containing {sensNum, I2CAdress, RegisterToRead}
-initSensors()
+int sensArray[MAXSENSKONFNUM][3];	//Array containing {sensNum, I2CAdress, RegisterToRead}
+
+int main()
+{
+	initSensors();
+	
+	while(1)
+		readAllSensors();
+		
+	return 0;
+}
+
+void initSensors()
 {	
 	/***** INIT INDIVIDUAL SENSORS *****/
 	initMPU6050();	//Gyroscope
