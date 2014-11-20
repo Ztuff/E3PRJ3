@@ -1,6 +1,11 @@
 class PresetBank{
 	public:
 	PresetBank();
+	void edit();
+	string[] list();
+	Preset get();
+	
+	
 	~PresetBank();
 	
 	private:

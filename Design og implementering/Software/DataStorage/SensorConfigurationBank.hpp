@@ -1,11 +1,11 @@
 #include "MappingScheme/MappingScheme/MappingScheme.h"
-
+#include <string>
 class SensorConfigurationBank{
 	public:
 	SensorConfigurationBank();
 	~SensorConfigurationBank();
 	void edit(string key);
-	void list(); //returtype?
+	string[] list(); //returtype?
 	SensorConfiguration get(string key);
 	void add(SensorConfiguration);
 	void removeSensorConf(string key);

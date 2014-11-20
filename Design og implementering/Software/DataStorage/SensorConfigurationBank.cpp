@@ -3,12 +3,11 @@
 SensorConfigurationBank::SensorConfigurationBank()
 {	
 	//læs fra fil... gem i sensorConfigurations
-	sensorConfigurations_ = sensorConfigurations;
 }
 
 SensorConfigurationBank::~SensorConfigurationBank()
 {
-
+	saveAll();
 }
 
 void SensorConfigurationBank:: edit(string key)
