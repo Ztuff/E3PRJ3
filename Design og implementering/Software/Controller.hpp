@@ -23,6 +23,7 @@ class Controller
 		enum typeId
 		{
 			SHUTDOWN_MSG
+			
 			//put msg types here as they are implemented.
 		}
 			
