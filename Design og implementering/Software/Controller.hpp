@@ -1,5 +1,6 @@
 #include <pthread.h>
 #include "MsgQueue.h"
+#include "msghandling.h"  
 
 class Controller
 {
@@ -12,17 +13,23 @@ class Controller
 		void start();
 		void join();
 		
-		class qtMsg : public Message
+		struct QtMsg : Message
 		{
-			public:
-				MsgQueue* qtMsgQPtr;
-				int intArg;
-				string stringArg;
+			QtMsg(MsgQueue* msgQPtr, int intArg = -1, string stringArg = NULL)
+			{
+				qtMsgQPtr = msgQPtr;
+				this.intArg = intArg;
+				this.stringArg = stringArg;
+			}
+			MsgQueue* qtMsgQPtr;
+			int intArg;
+			string stringArg;
 		}
 		
 		enum typeId
 		{
-			SHUTDOWN_MSG
+			SHUTDOWN_MSG,
+			GET_NEW_SENS_CONF_INFO
 			
 			//put msg types here as they are implemented.
 		}
@@ -31,5 +38,7 @@ class Controller
 		void* eventDispatcher(void*);
 		
 		pthread_t threadHandle;
+		
+		MsgQueue msgQ;
 		
 }
