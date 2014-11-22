@@ -1,6 +1,12 @@
 #include "MappingScheme.h"
 
-MappingScheme::	MappingScheme(	string param,	
+MappingScheme:: MappingScheme()
+{
+	MappingScheme("defaultID", "velocity", "0", "0", "0", NULL, NULL, NULL, NULL, SLOW);
+}
+
+MappingScheme::	MappingScheme(	string id,
+								string param,	
 								string root,		//key
 								string scale,		//key
 								string direction,	//key
@@ -11,6 +17,9 @@ MappingScheme::	MappingScheme(	string param,
 								int speed)			//CCRel
 {
 	/*** Initailize atributes ***/
+
+	id_= id;
+
 	param_=((param == "key" || param == "velocity" || param == "CCAbs" || param == "CCRel") ? param : "velocity");
 
 	key_.root_=((root == "c" || root == "cis" || root == "d" || root == "dis" || root == "e" || root == "f" || root == "fis" 

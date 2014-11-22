@@ -39,7 +39,9 @@ struct CCRel						/**** dataIn is Rel CC change with 0-point at 64 ****/
 class MappingScheme	//KODEN KAN EVT EFFEKTIVISERES VED AT BRUGE DEFINES I STEDET FOR STRINGS I KEY
 {
 public:
-	MappingScheme(string param,	
+	MappingScheme(); // der skal bruges en default constructor
+	MappingScheme(	string id,			//bruges i SensorConfigurationsBanken for at kende forskel på MappingSchemes.
+					string param,	
 					string root,		//key.root, strategies: c, cis, d, dis, e, f, fis, g, gis, a, ais, b	
 					string scale,		//key.scale, strategies: cromatic, major, minor
 					string direction,	//key.direction, strategies: rising, falling
@@ -60,6 +62,7 @@ private:
 	void quantizeDiatonic(int &dataIn);	//kvantiserer jf. scale- og root strategy
 	int noteStringToInt(string note);
 
+	string id_;
 	string param_;
 	Key key_;
 	Velocity velocity_;
