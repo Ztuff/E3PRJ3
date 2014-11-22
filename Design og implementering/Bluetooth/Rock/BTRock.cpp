@@ -23,7 +23,7 @@ BTRock::~BTRock()
   disconnect();
 }
 
-void BTRock::open()
+void BTRock::connect()
 {
   //-------------------------
   //----- SETUP USART 0 -----
@@ -121,6 +121,5 @@ void BTRock::receive()  // Skal tilpasses til mængden af data som modtages, og 
       rx_buffer[rx_length] = '\0';
       cout << rx_length << " bytes read: " << rx_buffer << endl;
     }
-    for
   }
 }
