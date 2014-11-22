@@ -1,6 +1,8 @@
 #ifndef NYSENSORKONF_H
 #define NYSENSORKONF_H
-
+#include <vector>
+#include "MsgQueue.hpp"
+#include <string>
 #include <QWidget>
 
 namespace Ui {
@@ -17,6 +19,8 @@ public:
 
 private slots:
     void on_backButton_clicked();
+
+    void on_Sensordropdown_activated(const QString &arg1);
 
 private:
     Ui::NySensorkonf *ui;
