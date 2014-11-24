@@ -22,3 +22,15 @@ SM,4 //Auto-connect DTR Mode - OBS hvis JP3 er SC connector den + Husk at sætte
 ST,60 //Sætter CMD tiden til 60 sek efter reboot VIGTIGT for adgang!
 
 Husk Jumper3 er reconnect pin
+
+
+BT enheder:
+
+HC-05
+98D331B07C6B
+
+
+
+Måske kommandoer:
+SQ,128 //Ved en evt disconnect rebooter modulet
+
