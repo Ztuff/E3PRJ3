@@ -2,9 +2,7 @@
 
 Controller::Controller()
 {
-	msgQ = MsgQueue();
-{
-	
+	msgQ = MsgQueue();	
 }
 
 MsgQueue* Controller::getMsgQueue()
