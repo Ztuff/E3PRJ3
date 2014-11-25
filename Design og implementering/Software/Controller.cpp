@@ -1,3 +1,5 @@
+#include "Controller.hpp"
+
 Controller::Controller()
 {
 	msgQ = MsgQueue();
