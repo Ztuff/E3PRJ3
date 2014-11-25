@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<mappingschemes>
+		<scheme
+			<id>mappingscheme1</id>
+			<param>velocity</param>
+			<root>c</root>
+			<scale>cromatic</scale>
+			<direction>rising</direction>
+			<lowerthreshold>16</lowerthreshold>
+			<cnum>16</cnum>
+			<minval>16</minval>
+			<maxval>16</maxval>
+			<speed>SLOW</speed>
+		</scheme>
+		<scheme>
+			<id>mappingscheme2</id>
+			<param>key</param>
+			<root>a</root>
+			<scale>cromatic</scale>
+			<direction>falling</direction>
+			<lowerthreshold>16</lowerthreshold>
+			<cnum>16</cnum>
+			<minval>16</minval>
+			<maxval>16</maxval>
+			<speed>SLOW</speed>
+		</scheme>
+	</mappingschemes>
+</root>

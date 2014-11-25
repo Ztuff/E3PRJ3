@@ -1,37 +1,73 @@
-#include "MappingScheme/MappingScheme/MappingScheme.h"
+#include "MappingScheme\MappingScheme.h""
+#include "SampleBank.hpp"
 #include <string>
-class SensorConfigurationBank{
-	public:
-	SensorConfigurationBank();
-	~SensorConfigurationBank();
-	void edit(string key);
-	string[] list(); //returtype?
-	SensorConfiguration get(string key);
-	void add(SensorConfiguration);
-	void removeSensorConf(string key);
-	void saveBank();
-	
-	private:
-	map<SensorConfiguration> sensorConfigurations_;
-	
-};
-	
+#include <vector>
+#include <map>
+
 class SensorConfiguration{
 	public:
-	SensorConfiguration( 	string name,
+	SensorConfiguration();
+	SensorConfiguration( 	std::string name,
 							int sensorID,
 							int signalIndex,
-							MIDIParameter midiParam,
 							MappingScheme mScheme,
-							Soundpack sound);
+							SoundPack sound);
 	~SensorConfiguration();
-	
+
+	/*----- GET-SET METODER -----*/
+	std::string getName()
+	{
+		return name_;
+	}
+
+	void setName(std::string name)
+	{
+		name_ = name;
+	}
+
+	void setSensorID(int sensorID)
+	{
+		sensorID_ = sensorID;
+	}
+
+	void setSignalIndex(int signalIndex)
+	{
+		signalIndex_ = signalIndex;
+	}
+
+	void setMappingScheme(MappingScheme mScheme)
+	{
+		mScheme_ = mScheme;
+	}
+
+	void setSoundPack(SoundPack sound)
+	{
+		sound_ = sound;
+	}
+	/*----- GET-SET METODER -----*/
 	private:
-	string name_;
+	std::string name_;
 	int sensorID_;
 	int signalIndex_;
-	MIDIParameter midiParam_;
 	MappingScheme mScheme_;
-	Soundpack sound_;
+	SoundPack sound_;
 	
 };
+class SensorConfigurationBank
+{	
+public:
+	SensorConfigurationBank();
+	MappingScheme getMappingScheme(std::string id);
+	~SensorConfigurationBank();
+	void edit(SensorConfiguration sensorConf);
+	std::vector<std::string> list();
+	SensorConfiguration get(std::string key);
+	
+	void add(SensorConfiguration sensorConf);
+	void removeSensorConf(std::string key);
+	void save();
+	
+private:
+	std::map<std::string, SensorConfiguration> sensorConfigurations_;
+};
+	

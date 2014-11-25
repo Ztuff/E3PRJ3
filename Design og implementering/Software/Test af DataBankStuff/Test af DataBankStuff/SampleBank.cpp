@@ -2,10 +2,13 @@
 #include <boost/property_tree/ptree.hpp>
 #include <boost/property_tree/xml_parser.hpp>
 #include <boost/foreach.hpp>
-#include <iostream>
-#include <set>
 
 using namespace std;
+
+SoundPack::SoundPack()
+{
+	SoundPack("defaultSound.wav"); //en lyd der ligger i roden af projektet
+}
 
 SoundPack::SoundPack(string filepath)
 	:filepath_(filepath)
