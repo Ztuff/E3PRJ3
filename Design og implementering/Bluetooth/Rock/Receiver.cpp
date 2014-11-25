@@ -7,23 +7,23 @@
 #include <unistd.h>     //Used for UART
 #include <fcntl.h>      //Used for UART
 #include <termios.h>    //Used for UART
-#include "BTRock.hpp"
+#include "Receiver.hpp"
 
 using namespace std;
 
-BTRock::BTRock( /*MsgQueue* contrQ, MsgQueue* midiQ*/ )
+Receiver::Receiver( /*MsgQueue* contrQ, MsgQueue* midiQ*/ )
 {
   connect();
   /*msgQs msgQs_ = { contrQ, midiQ };
   pthread_create(*/
 }
 
-BTRock::~BTRock()
+Receiver::~Receiver()
 {
   disconnect();
 }
 
-void BTRock::connect()
+void Receiver::connect()
 {
   //-------------------------
   //----- SETUP USART 0 -----
@@ -69,13 +69,14 @@ void BTRock::connect()
   tcsetattr( uart0_filestream_, TCSANOW, &options );
 }
 
-void BTRock::disconnect()
+void Receiver::disconnect()
 {
   //----- CLOSE THE UART -----
   close( uart0_filestream_ );
 }
 
-void BTRock::send() // Vi skal overveje hvad der skal sendes, og hvilken form det har
+/* Test function for send. Function not needed by current version of BodyRock3000
+void Receiver::send()
 {
   //----- TX BYTES -----
   unsigned char tx_buffer[ 20 ]; // Statisk eller dynamisk størrelse?
@@ -97,16 +98,16 @@ void BTRock::send() // Vi skal overveje hvad der skal sendes, og hvilken form de
     }
   }
 }
+*/
 
-void BTRock::receive()  // Skal tilpasses til mængden af data som modtages, og evt. returnere en struct?
-                    // Eller skal der et array med som argument, som skrives direkte i?
+void Receiver::receive()
 {
   //----- CHECK FOR ANY RX BYTES -----
   if ( uart0_filestream_ != -1 )
   {
-    // Read up to 255 characters from the port if they are there
-    unsigned char rx_buffer[ 256 ];
-    int rx_length = read( uart0_filestream_, ( void* )rx_buffer, 255 );    //filestream_, buffer to store in, number of bytes to read (max)
+    // Read up to 100 characters from the port if they are there
+    unsigned char rx_buffer[ RX_BUFFER_SIZE ];
+    int rx_length = read( uart0_filestream_, ( void* )rx_buffer, 100 );    //filestream_, buffer to store in, number of bytes to read (max)
     if ( rx_length < 0 )
     {
       //An error occured (will occur if there are no bytes)
@@ -118,8 +119,17 @@ void BTRock::receive()  // Skal tilpasses til mængden af data som modtages, og 
     else
     {
       //Bytes received
-      rx_buffer[rx_length] = '\0';
-      cout << rx_length << " bytes read: " << rx_buffer << endl;
+      if( rx_buffer[ 0 ] == 0x0F ) // Hvis 0x0F er data-startbit'en
+      {
+        rx_buffer[rx_length] = '\0'; // Indsæt nulterminering når der ikke er mere data, efterfølgende pladser er ugyldige
+        // Send rx_buffer til rette modtager
+        // Modtageren får så en pointer til første plads, og kan køre det igennem indtil nulterminering
+      }
+      else if( rx_buffer[ 0 ] == 0xF0 ) // Hvis 0xF0 er preset-startbit'en
+      {
+        // Send rx_buffer til rette modtager
+        // Preset'et vil altid være af samme længde, og behøver derfor ikke at køre til nulterminering
+      }
     }
   }
 }
