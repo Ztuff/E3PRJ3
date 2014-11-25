@@ -1,11 +1,11 @@
-#include "BTRock.hpp"
+#include "Receiver.hpp"
 
 using namespace std;
 
 int main()
 {
-  BTRock bt;
-  bt.send();
+  Receiver rcv;
+  rcv.send();
   for(;;)
-    bt.receive();
+    rcv.receive();
 }
