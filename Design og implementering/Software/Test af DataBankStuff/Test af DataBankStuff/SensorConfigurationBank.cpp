@@ -6,7 +6,6 @@
 
 SensorConfigurationBank::SensorConfigurationBank()
 {	
-	//læs fra fil... gem i sensorConfigurations
 	string m_level;
 	using boost::property_tree::ptree;
 	ptree pt;
@@ -25,11 +24,7 @@ SensorConfigurationBank::SensorConfigurationBank()
 				}
 				if(w.first == "sensorid")
 				{
-					string stringToInt = w.second.data();
-					istringstream iss(stringToInt);
-					int value;
-					iss >> value;
-					newSensorConf.setSensorID(value);
+					newSensorConf.setSensorID(w.second.data());
 				}
 				if(w.first == "signalindex")
 				{
@@ -51,7 +46,7 @@ SensorConfigurationBank::SensorConfigurationBank()
 			sensorConfigurations_.insert(make_pair(newSensorConf.getName(), newSensorConf));
 		}
 	}
-	//save();
+	save();
 }
 
 MappingScheme SensorConfigurationBank::getMappingScheme(string id) //finder specifikt mapping scheme i MappingSchemes.xml
@@ -60,14 +55,75 @@ MappingScheme SensorConfigurationBank::getMappingScheme(string id) //finder spec
 	using boost::property_tree::ptree;
 	ptree pt;
 	read_xml("MappingSchemes.xml", pt);
-	MappingScheme newMappingScheme;
-	//get de 10 parametre fra den xml node med den id node der indeholder 'id'
-	return newMappingScheme;
+	MappingScheme myMappingScheme;
+
+	BOOST_FOREACH(ptree::value_type &v, pt.get_child("root.mappingschemes"))
+	{
+		ptree pt = v.second;
+		string checkID = pt.get<string>("id");
+		if ( checkID == id)
+		{
+			BOOST_FOREACH(ptree::value_type &w,v.second)
+			{	
+				if(w.first == "id"){
+					myMappingScheme.setId(w.second.data());
+				}
+				if(w.first == "param"){
+					myMappingScheme.setParam(w.second.data());
+				}
+				if(w.first == "root"){
+					myMappingScheme.setRoot(w.second.data());
+				}
+				if(w.first == "scale"){
+					myMappingScheme.setScale(w.second.data());
+				}
+				if(w.first == "direction"){
+					myMappingScheme.setDirection(w.second.data());
+				}
+				if(w.first == "lowerthreshold"){
+					string stringToInt = w.second.data();
+					istringstream iss(stringToInt);
+					int value;
+					iss >> value;
+					myMappingScheme.setLowerThreshold(value);
+				}
+				if(w.first == "cnum"){
+					string stringToInt = w.second.data();
+					istringstream iss(stringToInt);
+					int value;
+					iss >> value;
+					myMappingScheme.setCNum(value);
+				}
+				if(w.first == "minval"){
+					string stringToInt = w.second.data();
+					istringstream iss(stringToInt);
+					int value;
+					iss >> value;
+					myMappingScheme.setMinVal(value);
+				}
+				if(w.first == "maxval"){
+					string stringToInt = w.second.data();
+					istringstream iss(stringToInt);
+					int value;
+					iss >> value;
+					myMappingScheme.setMaxVal(value);
+				}
+				if(w.first == "speed"){
+					string stringToInt = w.second.data();
+					istringstream iss(stringToInt);
+					int value;
+					iss >> value;
+					myMappingScheme.setSpeed(value);
+				}
+			}
+		}
+	}
+	return myMappingScheme;
 }
 
 SensorConfigurationBank::~SensorConfigurationBank()
 {
-	//save();
+	save();
 }
 
 void SensorConfigurationBank:: edit(SensorConfiguration sensorConf)
@@ -107,25 +163,35 @@ void SensorConfigurationBank::save()
 {
 	using boost::property_tree::ptree;
 	ptree pt;
-	pt.put("root.sensorconfigurations", "");
 	for(map<string, SensorConfiguration>:: iterator it = sensorConfigurations_.begin(); it != sensorConfigurations_.end(); ++it) 
 	{
-		//tilføj node som har (sensorconfiguration-attributer)-mængder af child-nodes
+		ptree myTree;
+		myTree.put("name", it->second.getName());
+		myTree.put("sensorid", it->second.getSensorID());
+		myTree.put("signalindex", it->second.getsignalIndex());
+		MappingScheme myScheme = it->second.getMScheme();
+		myTree.put("mappingscheme", myScheme.getId());
+		SoundPack mySound = it->second.getSound();
+		myTree.put("soundpack", mySound.filepath_);
+
+		pt.add_child("root.sensorconfigurations.configuration", myTree);
 	}
-	write_xml("SensorConfigurationBank.xml", pt); //Sletter den gamle fil (hvis den er der) og laver en helt ny, i princippet.
+	boost::property_tree::xml_writer_settings<char> settings('\t', 1);
+	write_xml("file2.xml", pt, std::locale(), settings);
 }
 
 SensorConfiguration::SensorConfiguration()
 {
 	MappingScheme mScheme;
 	SoundPack sound;
-	string defaultString = "Default Sensorconfiguration";
-	SensorConfiguration(defaultString, -1, -1, mScheme, sound);
+	string defaultName = "Default Sensorconfiguration";
+	string defaultSensorID = "Accelerometer1-X";
+	SensorConfiguration(defaultName, defaultSensorID, -1, mScheme, sound);
 }
 
 SensorConfiguration::SensorConfiguration(
 	string name,
-	int sensorID,
+	string sensorID,
 	int signalIndex,
 	MappingScheme mScheme,
 	SoundPack sound)

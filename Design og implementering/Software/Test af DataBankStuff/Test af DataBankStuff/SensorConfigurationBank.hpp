@@ -1,4 +1,4 @@
-#include "MappingScheme\MappingScheme.h""
+#include "MappingScheme\MappingScheme.h"
 #include "SampleBank.hpp"
 #include <string>
 #include <vector>
@@ -8,7 +8,7 @@ class SensorConfiguration{
 	public:
 	SensorConfiguration();
 	SensorConfiguration( 	std::string name,
-							int sensorID,
+							std::string sensorID,
 							int signalIndex,
 							MappingScheme mScheme,
 							SoundPack sound);
@@ -20,12 +20,32 @@ class SensorConfiguration{
 		return name_;
 	}
 
+	std::string getSensorID()
+	{
+		return sensorID_;
+	}
+
+	int getsignalIndex()
+	{
+		return signalIndex_;
+	}
+	
+	MappingScheme getMScheme()
+	{
+		return mScheme_;
+	}
+	
+	SoundPack getSound()
+	{
+		return sound_;
+	}
+	
 	void setName(std::string name)
 	{
 		name_ = name;
 	}
 
-	void setSensorID(int sensorID)
+	void setSensorID(std::string sensorID)
 	{
 		sensorID_ = sensorID;
 	}
@@ -47,7 +67,7 @@ class SensorConfiguration{
 	/*----- GET-SET METODER -----*/
 	private:
 	std::string name_;
-	int sensorID_;
+	std::string sensorID_;
 	int signalIndex_;
 	MappingScheme mScheme_;
 	SoundPack sound_;

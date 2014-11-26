@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <root>
 	<mappingschemes>
-		<scheme
+		<scheme>
 			<id>mappingscheme1</id>
 			<param>velocity</param>
 			<root>c</root>
@@ -11,7 +11,7 @@
 			<cnum>16</cnum>
 			<minval>16</minval>
 			<maxval>16</maxval>
-			<speed>SLOW</speed>
+			<speed>0</speed>
 		</scheme>
 		<scheme>
 			<id>mappingscheme2</id>
@@ -23,7 +23,7 @@
 			<cnum>16</cnum>
 			<minval>16</minval>
 			<maxval>16</maxval>
-			<speed>SLOW</speed>
+			<speed>0</speed>
 		</scheme>
 	</mappingschemes>
 </root>
