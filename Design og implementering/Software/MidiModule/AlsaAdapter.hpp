@@ -1,16 +1,33 @@
+#ifndef ALSAADAPTER_HPP
+#define ALSAADAPTER_HPP
+
+
+#include <alsa/asoundlib.h>
+#include <vector>
+
+/******************************************************************************************
+*bemærk at channel og command skal være chars på formen 'x', hvor x er en enkelt ciffer. */
 struct MidiSignal{
-	uint8_t channel;
-	uint8_t command;
-	uint8_t param1;
-	uint8_t param2;
-};
+			char channel;
+			char command;
+			int param1;
+			int param2;
+		};
+
 
 class AlsaAdapter{
 	public:
+
 		//contructor and destructor
-		AlsaAdapter();
+		AlsaAdapter(int type);
 		~AlsaAdapter();
 		
+		/**** open function ***************************
+		 * This function opens the midiport.
+		 * Returns true on succes and false on error.
+		 **********************************************/
+		bool open();
+
 		/**** send function ***************************
 		 * This function send the signals in the null 
 		 * terminated array of MidiSignal objects. The 
@@ -18,6 +35,24 @@ class AlsaAdapter{
 		 * array.
 		 * Returns true on succes and false on error.
 		 **********************************************/
-		bool send(MidiSignal[] signals);
+		bool send(std::vector<MidiSignal>);
+
+
+	private:
+		/***********************************************
+		*variable to determine type of desired midi-direction
+		*accepted values are internal / external / both
+		*default is internal
+		***********************************************/
+		int _type;
+
+		/***********************************************
+		*midi ports
+		************************************************/
+		snd_rawmidi_t* midiport_internal;
+		snd_rawmidi_t* midiport_external;
+
+
 };
 
+#endif

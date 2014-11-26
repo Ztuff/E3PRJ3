@@ -1,14 +1,16 @@
 //#include <pthread.h>    //For thread handling
 //#include "MsgQueue.hpp" //For event based programming
 
-class BTRock
+#define RX_BUFFER_SIZE 100
+
+class Receiver
 {
 public:
-  BTRock( /*MsgQueue* contrQ, MsgQueue* midiQ*/ );
-  ~BTRock();
-  void send();
+  Receiver( /*MsgQueue* contrQ, MsgQueue* midiQ*/ );
+  ~Receiver();
+//void send();
   void receive();
-  //MsgQueue* getMsgQueue();
+//MsgQueue* getMsgQueue();
   
 private:
   void connect();

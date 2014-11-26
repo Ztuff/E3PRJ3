@@ -16,7 +16,7 @@
 // 0.2 - Needs full implementation of functions
 //========================================================================
 #include <avr/interrupt.h>
-#define F_CPU 1000000UL	      // Sets up the default speed for delay.h
+#define F_CPU 8000000UL	      // Sets up the default speed for delay.h
 #include <util/delay.h>
 #include <avr/io.h>
 #include "USI_I2C_Slave_Setup.h"
@@ -50,7 +50,7 @@ int main()
 	** Flexiforce read and I2C transfer. 
 	**	If Flexiforce A301 is pressed, then an interrupt is generated
 	** 	reading the magnitude of the pressure. This pressure is 
-	** 	ADC converted into a number between 0 and 127 and then send via
+	** 	ADC converted into a number between 0 and 255 and then send via
 	**	the I2C slave interface.
 	**
 	** 	Flexiforce A301 has an "not pressed value". When this value 

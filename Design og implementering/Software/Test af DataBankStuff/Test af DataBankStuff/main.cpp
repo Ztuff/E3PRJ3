@@ -1,13 +1,26 @@
 #include "SampleBank.hpp"
+#include "SensorConfigurationBank.hpp"
 #include <vector>
 #include <string>
 
 using namespace std; 
-int main()
+
+void testSampleBank()
 {
 	SampleBank sb;
 	sb.add("test.mp3");
 	SoundPack testSoundPack = sb.get("test.mp3");
 	vector<string> testVector = sb.list();
-	return 0;
 }
+
+void testSensorConfigurationBank()
+{
+	SensorConfigurationBank scb; //mapping schemes skal have et NAVN i Mapping Scheme.h filen
+}
+
+int main()
+{
+	//testSampleBank();
+	testSensorConfigurationBank();
+}
+

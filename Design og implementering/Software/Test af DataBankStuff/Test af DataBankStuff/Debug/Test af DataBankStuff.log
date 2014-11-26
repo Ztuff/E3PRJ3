@@ -1,14 +1,50 @@
-﻿Build started 21-11-2014 17:42:00.
-     1>Project "C:\Users\Mathias\Dropbox\Skole\3. SEMESTER\Midlertidige filer\Test af DataBankStuff\Test af DataBankStuff\Test af DataBankStuff.vcxproj" on node 2 (Build target(s)).
+﻿Build started 25-11-2014 22:37:09.
+     1>Project "C:\Users\Mathias\Dropbox\Skole\3. SEMESTER\PROJEKT FUCKING MAPPEN\Design og implementering\Software\Test af DataBankStuff\Test af DataBankStuff\Test af DataBankStuff.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt SampleBank.cpp
-         SampleBank.cpp
-       Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Mathias\Dropbox\Skole\3. SEMESTER\Midlertidige filer\Test af DataBankStuff\Debug\Test af DataBankStuff.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Mathias\Dropbox\Skole\3. SEMESTER\Midlertidige filer\Test af DataBankStuff\Debug\Test af DataBankStuff.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Mathias\Dropbox\Skole\3. SEMESTER\Midlertidige filer\Test af DataBankStuff\Debug\Test af DataBankStuff.lib" /MACHINE:X86 Debug\main.obj
-         Debug\SampleBank.obj
-         Test af DataBankStuff.vcxproj -> C:\Users\Mathias\Dropbox\Skole\3. SEMESTER\Midlertidige filer\Test af DataBankStuff\Debug\Test af DataBankStuff.exe
-     1>Done Building Project "C:\Users\Mathias\Dropbox\Skole\3. SEMESTER\Midlertidige filer\Test af DataBankStuff\Test af DataBankStuff\Test af DataBankStuff.vcxproj" (Build target(s)).
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt SensorConfigurationBank.cpp
+         SensorConfigurationBank.cpp
+     1>c:\boost_1_57_0\boost\property_tree\detail\xml_parser_writer_settings.hpp(38): error C2825: 'Str': must be a class or namespace when followed by '::'
+                 c:\users\mathias\dropbox\skole\3. semester\projekt fucking mappen\design og implementering\software\test af databankstuff\test af databankstuff\sensorconfigurationbank.cpp(179) : see reference to class template instantiation 'boost::property_tree::xml_parser::xml_writer_settings<Str>' being compiled
+                 with
+                 [
+                     Str=char
+                 ]
+     1>c:\boost_1_57_0\boost\property_tree\detail\xml_parser_writer_settings.hpp(38): error C2039: 'value_type' : is not a member of '`global namespace''
+     1>c:\boost_1_57_0\boost\property_tree\detail\xml_parser_writer_settings.hpp(38): error C2146: syntax error : missing ';' before identifier 'Ch'
+     1>c:\boost_1_57_0\boost\property_tree\detail\xml_parser_writer_settings.hpp(38): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\boost_1_57_0\boost\property_tree\detail\xml_parser_writer_settings.hpp(40): error C2061: syntax error : identifier 'Ch'
+     1>c:\boost_1_57_0\boost\property_tree\detail\xml_parser_writer_settings.hpp(49): error C2146: syntax error : missing ';' before identifier 'indent_char'
+     1>c:\boost_1_57_0\boost\property_tree\detail\xml_parser_writer_settings.hpp(49): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\boost_1_57_0\boost\property_tree\detail\xml_parser_writer_settings.hpp(50): error C2825: 'Str': must be a class or namespace when followed by '::'
+     1>c:\boost_1_57_0\boost\property_tree\detail\xml_parser_writer_settings.hpp(50): error C2039: 'size_type' : is not a member of '`global namespace''
+     1>c:\boost_1_57_0\boost\property_tree\detail\xml_parser_writer_settings.hpp(50): error C2146: syntax error : missing ';' before identifier 'indent_count'
+     1>c:\boost_1_57_0\boost\property_tree\detail\xml_parser_writer_settings.hpp(50): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\users\mathias\dropbox\skole\3. semester\projekt fucking mappen\design og implementering\software\test af databankstuff\test af databankstuff\sensorconfigurationbank.cpp(179): error C2661: 'boost::property_tree::xml_parser::xml_writer_settings<Str>::xml_writer_settings' : no overloaded function takes 2 arguments
+                 with
+                 [
+                     Str=char
+                 ]
+     1>c:\users\mathias\dropbox\skole\3. semester\projekt fucking mappen\design og implementering\software\test af databankstuff\test af databankstuff\sensorconfigurationbank.cpp(180): error C2664: 'boost::property_tree::xml_parser::write_xml' : cannot convert parameter 4 from 'boost::property_tree::xml_parser::xml_writer_settings<Str>' to 'const boost::property_tree::xml_parser::xml_writer_settings<Str> &'
+                 with
+                 [
+                     Str=char
+                 ]
+                 and
+                 [
+                     Str=std::string
+                 ]
+                 Reason: cannot convert from 'boost::property_tree::xml_parser::xml_writer_settings<Str>' to 'const boost::property_tree::xml_parser::xml_writer_settings<Str>'
+                 with
+                 [
+                     Str=char
+                 ]
+                 and
+                 [
+                     Str=std::string
+                 ]
+                 No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
+     1>Done Building Project "C:\Users\Mathias\Dropbox\Skole\3. SEMESTER\PROJEKT FUCKING MAPPEN\Design og implementering\Software\Test af DataBankStuff\Test af DataBankStuff\Test af DataBankStuff.vcxproj" (Build target(s)) -- FAILED.
 
-Build succeeded.
+Build FAILED.
 
-Time Elapsed 00:00:03.49
+Time Elapsed 00:00:02.38

@@ -1,15 +1,17 @@
 #include <vector>
 #include <string>
 #include <map>
+#pragma once
 
 class SoundPack
 {
 	public:
 	std::string filepath_;
+	SoundPack();
 	SoundPack(std::string filepath);
 	~SoundPack();
-
 };
+
 class SampleBank
 {
 	public:
@@ -24,4 +26,3 @@ class SampleBank
 	private:
 	std::map<std::string, SoundPack> soundPacks_; //Key-typen er string, data-typen er SoundPack
 };
-

@@ -77,10 +77,16 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="MappingScheme\MappingScheme.cpp" />
+    <ClCompile Include="PresetBank.cpp" />
     <ClCompile Include="SampleBank.cpp" />
+    <ClCompile Include="SensorConfigurationBank.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="MappingScheme\MappingScheme.h" />
+    <ClInclude Include="PresetBank.hpp" />
     <ClInclude Include="SampleBank.hpp" />
+    <ClInclude Include="SensorConfigurationBank.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
