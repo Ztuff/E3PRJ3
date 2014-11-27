@@ -83,6 +83,7 @@ class SensorConfiguration{
 	int signalIndex_;
 	MappingScheme mScheme_;
 	SoundPack sound_;
+	vector<MidiSignal>::iterator midiIter_;
 	
 };
 class SensorConfigurationBank
