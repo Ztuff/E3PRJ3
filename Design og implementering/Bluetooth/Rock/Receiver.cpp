@@ -121,14 +121,20 @@ void Receiver::receive()
       //Bytes received
       if( rx_buffer[ 0 ] == 0x0F ) // Hvis 0x0F er data-startbit'en
       {
+        data* dataArray = new data[16];
         rx_buffer[rx_length] = '\0'; // Indsæt nulterminering når der ikke er mere data, efterfølgende pladser er ugyldige
-        // Send rx_buffer til rette modtager
-        // Modtageren får så en pointer til første plads, og kan køre det igennem indtil nulterminering
+        for( int i = 1; rx_buffer[ i ] != '\0'; i + 4 ) // Kør til nulterminering
+        {
+          dataArray[ rx_buffer[ i ] ] = {       rx_buffer[ ( i + 1 ],
+                                                rx_buffer[ ( i + 2 ],
+                                                rx_buffer[ ( i + 3 ] }
+        }
+        sendData( dataArray ); // Send dataArray til rette modtager
+        // Modtageren får så en pointer til første plads, og hvert id ligger på tilsvarende plads i arrayet
       }
       else if( rx_buffer[ 0 ] == 0xF0 ) // Hvis 0xF0 er preset-startbit'en
       {
-        // Send rx_buffer til rette modtager
-        // Preset'et vil altid være af samme længde, og behøver derfor ikke at køre til nulterminering
+        sendData( rx_buffer[ 1 ];// Send preset til rette modtager
       }
     }
   }

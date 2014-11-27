@@ -16,6 +16,14 @@ private:
   void connect();
   void disconnect();
   int uart0_filestream_;
+  
+  struct data
+  {
+    char x = 0;
+    char y = 0;
+    char z = 0;
+  };
+  
   /*MsgQueue msgQ_( 10 );
   pthread_t btThr_;
   
