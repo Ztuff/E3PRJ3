@@ -30,7 +30,7 @@ void MidiModule::startTimer()
 void MidiModule::timerFunct()
 {
 	my_timer_.expires = jiffies + timeout_in_milliseconds*HZ;    //Re-schedule the timer 
-	add_timer(&my_timer_);                					 	//Add to timer queue
+	add_timer(&my_timer_);                					 	 //Add to timer queue
 	
 	wqFlag = 1;
 	wake_up_interruptible(&wq);
@@ -66,5 +66,16 @@ void MidiModule::handleTick(list<SensKonfiguration> myList)
 																og vectorplads jf indstillet  i SensKonfiguration indstillet vectorplads */
 																
 	}	
+
 }
+
+bool MidiModule::sendVector()
+{
+	//se på timer:
+	//når den proc'er så send midiSignalVector_
+	//til alsaadapter. 
+}
+
+
+
 

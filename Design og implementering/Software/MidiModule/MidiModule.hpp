@@ -26,7 +26,7 @@ class MidiModule{
 
 		list<SensorConfiguration>::iterator createSensorConfList();
 
-		bool send();  //Void?
+		bool sendVector();  //Void?
 
 		void startTimer();
 
