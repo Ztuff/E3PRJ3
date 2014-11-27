@@ -24,7 +24,16 @@ SensorConfigurationBank::SensorConfigurationBank()
 				}
 				if(w.first == "sensorid")
 				{
-					newSensorConf.setSensorID(w.second.data());
+					string stringToInt = w.second.data();
+					istringstream iss(stringToInt);
+					int value;
+					iss >> value;
+					newSensorConf.setSensorID(value);
+				}
+				if(w.first == "axis")
+				{
+					char axis = w.second.data().back();
+					newSensorConf.setAxis(axis);
 				}
 				if(w.first == "signalindex")
 				{
@@ -168,6 +177,7 @@ void SensorConfigurationBank::save()
 		ptree myTree;
 		myTree.put("name", it->second.getName());
 		myTree.put("sensorid", it->second.getSensorID());
+		myTree.put("axis", it->second.getAxis());
 		myTree.put("signalindex", it->second.getsignalIndex());
 		MappingScheme myScheme = it->second.getMScheme();
 		myTree.put("mappingscheme", myScheme.getId());
@@ -176,8 +186,8 @@ void SensorConfigurationBank::save()
 
 		pt.add_child("root.sensorconfigurations.configuration", myTree);
 	}
-	boost::property_tree::xml_writer_settings<char> settings('\t', 1);
-	write_xml("file2.xml", pt, std::locale(), settings);
+	boost::property_tree::xml_writer_settings<std::string> settings('\t', 1);
+	write_xml("SensorConfigurationBank2.xml", pt, std::locale(), settings);
 }
 
 SensorConfiguration::SensorConfiguration()
@@ -185,19 +195,21 @@ SensorConfiguration::SensorConfiguration()
 	MappingScheme mScheme;
 	SoundPack sound;
 	string defaultName = "Default Sensorconfiguration";
-	string defaultSensorID = "Accelerometer1-X";
-	SensorConfiguration(defaultName, defaultSensorID, -1, mScheme, sound);
+	char defaultAxis = 'x';
+	SensorConfiguration(defaultName, 1, defaultAxis, -1, mScheme, sound);
 }
 
 SensorConfiguration::SensorConfiguration(
 	string name,
-	string sensorID,
+	int sensorID,
+	char axis,
 	int signalIndex,
 	MappingScheme mScheme,
 	SoundPack sound)
 {
 	name_ 			= name;
 	sensorID_ 		= sensorID;
+	axis_			= axis;
 	signalIndex_ 	= signalIndex;
 	mScheme_ 		= mScheme;
 	sound_			= sound;

@@ -1,2 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<root><sensorconfigurations><configuration><name>SensorConfiguration1</name><sensorid>1</sensorid><signalindex>1</signalindex><mappingscheme>mappingscheme1</mappingscheme><soundpack>test1.wav</soundpack></configuration><configuration><name>SensorConfiguration2</name><sensorid>2</sensorid><signalindex>2</signalindex><mappingscheme>mappingscheme1</mappingscheme><soundpack>test2.wav</soundpack></configuration><configuration><name>SensorConfiguration3</name><sensorid>3</sensorid><signalindex>3</signalindex><mappingscheme>mappingscheme2</mappingscheme><soundpack>test3.wav</soundpack></configuration></sensorconfigurations></root>
+<root>
+	<sensorconfigurations>
+		<configuration>
+			<name>SensorConfiguration1</name>
+			<sensorid>1</sensorid>
+			<axis>x</axis>
+			<signalindex>1</signalindex>
+			<mappingscheme>mappingscheme1</mappingscheme>
+			<soundpack>test1.wav</soundpack>
+		</configuration>
+		<configuration>
+			<name>SensorConfiguration2</name>
+			<sensorid>2</sensorid>
+			<axis>x</axis>
+			<signalindex>2</signalindex>
+			<mappingscheme>mappingscheme1</mappingscheme>
+			<soundpack>test2.wav</soundpack>
+		</configuration>
+		<configuration>
+			<name>SensorConfiguration3</name>
+			<sensorid>3</sensorid>
+			<axis>x</axis>
+			<signalindex>3</signalindex>
+			<mappingscheme>mappingscheme2</mappingscheme>
+			<soundpack>test3.wav</soundpack>
+		</configuration>
+	</sensorconfigurations>
+</root>

@@ -8,7 +8,8 @@ class SensorConfiguration{
 	public:
 	SensorConfiguration();
 	SensorConfiguration( 	std::string name,
-							std::string sensorID,
+							int sensorID,
+							char axis,
 							int signalIndex,
 							MappingScheme mScheme,
 							SoundPack sound);
@@ -20,9 +21,14 @@ class SensorConfiguration{
 		return name_;
 	}
 
-	std::string getSensorID()
+	int getSensorID()
 	{
 		return sensorID_;
+	}
+
+	char getAxis()
+	{
+		return axis_;
 	}
 
 	int getsignalIndex()
@@ -45,9 +51,14 @@ class SensorConfiguration{
 		name_ = name;
 	}
 
-	void setSensorID(std::string sensorID)
+	void setSensorID(int sensorID)
 	{
 		sensorID_ = sensorID;
+	}
+
+	void setAxis(char axis)
+	{
+		axis_ = axis;
 	}
 
 	void setSignalIndex(int signalIndex)
@@ -67,10 +78,12 @@ class SensorConfiguration{
 	/*----- GET-SET METODER -----*/
 	private:
 	std::string name_;
-	std::string sensorID_;
+	int sensorID_;
+	char axis_;
 	int signalIndex_;
 	MappingScheme mScheme_;
 	SoundPack sound_;
+	vector<MidiSignal>::iterator midiIter_;
 	
 };
 class SensorConfigurationBank

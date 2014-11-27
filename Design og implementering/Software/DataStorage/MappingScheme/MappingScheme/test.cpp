@@ -4,7 +4,7 @@
 
 int main()
 {
-	vector<MidiSignal> MidiSigs(VECTORSIZE);
+	/*vector<MidiSignal> MidiSigs(VECTORSIZE);
 
 	for (int i = 0; i < VECTORSIZE; ++i)
 	{
@@ -17,8 +17,8 @@ int main()
 	}
 
 	MidiSigs[16].print();
-
-	/*MidiSignal testSignal = {0,0x80,0,0};
+	*/
+	MidiSignal testSignal = {'1','8',0,0};
 	cout <<   "Original signal\n  TestSignal = " << endl; 
 	testSignal.print();
 	
@@ -77,7 +77,7 @@ int main()
 	delete CCRelPtr;
 	delete CCAbsPtr;
 	delete velocityPtr;
-	delete keyPtr; */
+	delete keyPtr; 
 	return 0;
 }
 
