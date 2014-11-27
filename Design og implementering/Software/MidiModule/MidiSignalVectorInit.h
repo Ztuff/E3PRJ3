@@ -1,12 +1,12 @@
 #include <vector>
 #include "MidiSignal.h"
-#define VECTORSIZE 16
+
 
 using namespace std;
 
 int main()
 {
-	vector<MidiSignal> MidiSigs(VECTORSIZE);
+	vector<MidiSignal> MidiSigs;
 	MidiSignalVectorInit(MidiSigs, VECTORSIZE);
 
 	MidiSigs[15].print();	//check correct init
@@ -23,8 +23,8 @@ vector<MidiSignal>::iterator MidiSignalVectorAdd(vector<MidiSignal> &vec, int nu
 	{
 		vec.push_back(MidiSignal());
 		
-		vec[i].channel_=0;
-		vec[i].command_=0x80;
+		vec[i].channel_='0';
+		vec[i].command_='8';
 		vec[i].param1_=0;
 		vec[i].param2_=0;
 		vec[i].param1Old_=0;
