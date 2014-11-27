@@ -13,7 +13,28 @@
 #include "stdlib.h"
 #include <stdio.h>
 
-#define MAXREGNUM 96
+//Sensor ID's 0-15
+#define ACC1_ID 0
+#define GYR1_ID 1
+#define FLE1_ID 2
+#define	PRX1_ID 3
+#define ACC2_ID 4
+#define GYR2_ID 5
+#define FLE2_ID 6
+#define	PRX2_ID 7
+#define ACC3_ID 8
+#define GYR3_ID 9
+#define FLE3_ID 10
+#define	PRX3_ID 11
+#define ACC4_ID 12
+#define GYR4_ID 13
+#define FLE4_ID 14
+#define	PRX4_ID 15
+
+
+#define MAXREGNUM 96 //Maks antal registre at læse fra 
+#define MAXSENSDATA 65 // Maks antal som skal fyldes i array'et som sendes via BT
+#define START_SENSDATA 0x0F // Start byte, 
 #define DEFAULT_DATA -1 // Default data i array sættes til 0. 
 //Accelerometer ADXL345 defines
 #define ACCEL_ADDRESS 0x53 // jumperen sættes til GND 
@@ -41,6 +62,7 @@ uint8_t numOfRegToRead = 0;	//current number of initialized sensor registers to 
  
 int sensArray[MAXREGNUM][3];	//Array containing {i2c device address, registerToRead, dataTarget}
 								//Initeres til 0 og fyldes op undervejs i funktionen setSensarray
+int dataArray[MAXSENSDATA];     // Array with id-number and data to send via BT
 
 //Prototyper
 void setupI2C();
@@ -51,6 +73,7 @@ int readSensor(int i);
 void initADXL345();
 void initMPU6050();
 void setSensArray(int deviceAddress, int registerToRead, int dataTarget);
+void setdataArray(int ID, int x_data, int y_data, int z_data);
 int readI2C(int numOfReg);
 void convSensData();
 void handleI2CError();
@@ -179,7 +202,8 @@ void initMPU6050()
 void convSensData()
 {
     //ADXL345
-    int16 x, y, z; 
+    int16 x, y, z; // Da det er to 8 bit registre som skal lægges sammen
+    uint8 x1, y1, z1; 
     //Samler most significant og least significant for X
     x = sensArray[1][2]<< 8; 
     x+= sensArray[0][2];
@@ -192,9 +216,45 @@ void convSensData()
     z = sensArray[5][2]<< 8; 
     z+= sensArray[4][2];
     
-    char ADXL345_data[32];
-    sprintf(ADXL345_data, "x is: %d, y is: %d, z is: %d\n\r", x, y, z);
-    UART_1_UartPutString(ADXL345_data); 
+   
+    
+   
+    /*char ADXL345_data[32];
+    sprintf(ADXL345_data, "\n\rx is: %d, y is: %d, z is: %d\n\r", x, y, z);
+    UART_1_UartPutString(ADXL345_data); */
+    
+    //conversion from int16 to uint8 which is the scale midi can receive
+    x1 = (x+512)/8; 
+    y1 = (y+512)/8;
+    z1 = (z+512)/8;
+    
+    setdataArray(ACC1_ID, x1, y1, z1);
+    
+   
+    /*char ADXL345_data2[32];
+    sprintf(ADXL345_data2, "\n\rx is: %d, y is: %d, z is: %d\n\r", x1, y1, z1);
+    UART_1_UartPutString(ADXL345_data2); */
+}
+
+void setdataArray(int ID, int x_data, int y_data, int z_data)
+{
+    int i;
+    dataArray[0] = START_SENSDATA; //Sætter de første 5 pladser i Array'et
+    dataArray[1] = ID; 
+    dataArray[2] = x_data;
+    dataArray[3] = y_data;
+    dataArray[4] = z_data;
+    
+    for(i = 5; i<MAXSENSDATA; i++) //Sætter de resterende pladser i array'et til 0. 
+    {
+        dataArray[i] = 0; 
+    }
+    // Sender dataArray over UART vha. forløkke og PutChar
+        int index;
+        for(index = 0; index < MAXSENSDATA; index++)
+        {
+            UART_1_UartPutChar(dataArray[index]);
+        }
 }
     
 

@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Kristian\AppData\Local\Temp\ccB5dkOf.s 			page 1
+ARM GAS  C:\Users\Kristian\AppData\Local\Temp\cca0rRNt.s 			page 1
 
 
    1              		.cpu cortex-m0
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Kristian\AppData\Local\Temp\ccB5dkOf.s 			page 1
   30:.\Generated_Source\PSoC4/I2C_1_sda.c **** ********************************************************************************
   31:.\Generated_Source\PSoC4/I2C_1_sda.c **** *
   32:.\Generated_Source\PSoC4/I2C_1_sda.c **** * Summary:
-ARM GAS  C:\Users\Kristian\AppData\Local\Temp\ccB5dkOf.s 			page 2
+ARM GAS  C:\Users\Kristian\AppData\Local\Temp\cca0rRNt.s 			page 2
 
 
   33:.\Generated_Source\PSoC4/I2C_1_sda.c **** *  Assign a new value to the digital port's data output register.  
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Kristian\AppData\Local\Temp\ccB5dkOf.s 			page 1
   66              		.loc 1 46 0
   67 0038 034B     		ldr	r3, .L2
   68 003a 3A1C     		mov	r2, r7
-ARM GAS  C:\Users\Kristian\AppData\Local\Temp\ccB5dkOf.s 			page 3
+ARM GAS  C:\Users\Kristian\AppData\Local\Temp\cca0rRNt.s 			page 3
 
 
   69 003c 0F32     		add	r2, r2, #15
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Kristian\AppData\Local\Temp\ccB5dkOf.s 			page 1
   95              	.LCFI3:
   96              		.cfi_def_cfa_offset 8
   97              		.cfi_offset 7, -8
-ARM GAS  C:\Users\Kristian\AppData\Local\Temp\ccB5dkOf.s 			page 4
+ARM GAS  C:\Users\Kristian\AppData\Local\Temp\cca0rRNt.s 			page 4
 
 
   98              		.cfi_offset 14, -4
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\Kristian\AppData\Local\Temp\ccB5dkOf.s 			page 1
   86:.\Generated_Source\PSoC4/I2C_1_sda.c **** *
   87:.\Generated_Source\PSoC4/I2C_1_sda.c **** * Parameters:  
   88:.\Generated_Source\PSoC4/I2C_1_sda.c **** *  None 
-ARM GAS  C:\Users\Kristian\AppData\Local\Temp\ccB5dkOf.s 			page 5
+ARM GAS  C:\Users\Kristian\AppData\Local\Temp\cca0rRNt.s 			page 5
 
 
   89:.\Generated_Source\PSoC4/I2C_1_sda.c **** *
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\Kristian\AppData\Local\Temp\ccB5dkOf.s 			page 1
  106:.\Generated_Source\PSoC4/I2C_1_sda.c **** *
  107:.\Generated_Source\PSoC4/I2C_1_sda.c **** * Summary:
  108:.\Generated_Source\PSoC4/I2C_1_sda.c **** *  Read the current value assigned to a Digital Port's data output register
-ARM GAS  C:\Users\Kristian\AppData\Local\Temp\ccB5dkOf.s 			page 6
+ARM GAS  C:\Users\Kristian\AppData\Local\Temp\cca0rRNt.s 			page 6
 
 
  109:.\Generated_Source\PSoC4/I2C_1_sda.c **** *
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\Kristian\AppData\Local\Temp\ccB5dkOf.s 			page 1
  126:.\Generated_Source\PSoC4/I2C_1_sda.c ****     /*******************************************************************************
  127:.\Generated_Source\PSoC4/I2C_1_sda.c ****     * Function Name: I2C_1_sda_ClearInterrupt
  128:.\Generated_Source\PSoC4/I2C_1_sda.c ****     ********************************************************************************
-ARM GAS  C:\Users\Kristian\AppData\Local\Temp\ccB5dkOf.s 			page 7
+ARM GAS  C:\Users\Kristian\AppData\Local\Temp\cca0rRNt.s 			page 7
 
 
  129:.\Generated_Source\PSoC4/I2C_1_sda.c ****     *
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\Kristian\AppData\Local\Temp\ccB5dkOf.s 			page 1
  251 002a 80BD     		pop	{r7, pc}
  252              	.L18:
  253              		.align	2
-ARM GAS  C:\Users\Kristian\AppData\Local\Temp\ccB5dkOf.s 			page 8
+ARM GAS  C:\Users\Kristian\AppData\Local\Temp\cca0rRNt.s 			page 8
 
 
  254              	.L17:
@@ -436,10 +436,10 @@ ARM GAS  C:\Users\Kristian\AppData\Local\Temp\ccB5dkOf.s 			page 1
  266 0006 00000000 		.4byte	.Ldebug_abbrev0
  267 000a 04       		.byte	0x4
  268 000b 01       		.uleb128 0x1
- 269 000c 70010000 		.4byte	.LASF24
+ 269 000c 3C010000 		.4byte	.LASF24
  270 0010 01       		.byte	0x1
- 271 0011 40000000 		.4byte	.LASF25
- 272 0015 06000000 		.4byte	.LASF26
+ 271 0011 0C000000 		.4byte	.LASF25
+ 272 0015 9A010000 		.4byte	.LASF26
  273 0019 00000000 		.4byte	.Ldebug_ranges0+0
  274 001d 00000000 		.4byte	0
  275 0021 00000000 		.4byte	0
@@ -447,38 +447,38 @@ ARM GAS  C:\Users\Kristian\AppData\Local\Temp\ccB5dkOf.s 			page 1
  277 0029 02       		.uleb128 0x2
  278 002a 01       		.byte	0x1
  279 002b 06       		.byte	0x6
- 280 002c C2010000 		.4byte	.LASF0
+ 280 002c 8E010000 		.4byte	.LASF0
  281 0030 02       		.uleb128 0x2
  282 0031 01       		.byte	0x1
  283 0032 08       		.byte	0x8
- 284 0033 7A000000 		.4byte	.LASF1
+ 284 0033 46000000 		.4byte	.LASF1
  285 0037 02       		.uleb128 0x2
  286 0038 02       		.byte	0x2
  287 0039 05       		.byte	0x5
- 288 003a 60010000 		.4byte	.LASF2
+ 288 003a 2C010000 		.4byte	.LASF2
  289 003e 02       		.uleb128 0x2
  290 003f 02       		.byte	0x2
  291 0040 07       		.byte	0x7
- 292 0041 A0000000 		.4byte	.LASF3
+ 292 0041 6C000000 		.4byte	.LASF3
  293 0045 02       		.uleb128 0x2
  294 0046 04       		.byte	0x4
  295 0047 05       		.byte	0x5
- 296 0048 B9010000 		.4byte	.LASF4
+ 296 0048 85010000 		.4byte	.LASF4
  297 004c 02       		.uleb128 0x2
  298 004d 04       		.byte	0x4
  299 004e 07       		.byte	0x7
- 300 004f 8E000000 		.4byte	.LASF5
+ 300 004f 5A000000 		.4byte	.LASF5
  301 0053 02       		.uleb128 0x2
  302 0054 08       		.byte	0x8
  303 0055 05       		.byte	0x5
- 304 0056 11010000 		.4byte	.LASF6
+ 304 0056 DD000000 		.4byte	.LASF6
  305 005a 02       		.uleb128 0x2
  306 005b 08       		.byte	0x8
  307 005c 07       		.byte	0x7
- 308 005d E5000000 		.4byte	.LASF7
+ 308 005d B1000000 		.4byte	.LASF7
  309 0061 03       		.uleb128 0x3
  310 0062 04       		.byte	0x4
-ARM GAS  C:\Users\Kristian\AppData\Local\Temp\ccB5dkOf.s 			page 9
+ARM GAS  C:\Users\Kristian\AppData\Local\Temp\cca0rRNt.s 			page 9
 
 
  311 0063 05       		.byte	0x5
@@ -486,29 +486,29 @@ ARM GAS  C:\Users\Kristian\AppData\Local\Temp\ccB5dkOf.s 			page 1
  313 0068 02       		.uleb128 0x2
  314 0069 04       		.byte	0x4
  315 006a 07       		.byte	0x7
- 316 006b D8000000 		.4byte	.LASF8
+ 316 006b A4000000 		.4byte	.LASF8
  317 006f 04       		.uleb128 0x4
- 318 0070 6A010000 		.4byte	.LASF9
+ 318 0070 36010000 		.4byte	.LASF9
  319 0074 02       		.byte	0x2
  320 0075 5B       		.byte	0x5b
  321 0076 30000000 		.4byte	0x30
  322 007a 04       		.uleb128 0x4
- 323 007b D1000000 		.4byte	.LASF10
+ 323 007b 9D000000 		.4byte	.LASF10
  324 007f 02       		.byte	0x2
  325 0080 5D       		.byte	0x5d
  326 0081 4C000000 		.4byte	0x4c
  327 0085 02       		.uleb128 0x2
  328 0086 04       		.byte	0x4
  329 0087 04       		.byte	0x4
- 330 0088 74000000 		.4byte	.LASF11
+ 330 0088 40000000 		.4byte	.LASF11
  331 008c 02       		.uleb128 0x2
  332 008d 08       		.byte	0x8
  333 008e 04       		.byte	0x4
- 334 008f CA000000 		.4byte	.LASF12
+ 334 008f 96000000 		.4byte	.LASF12
  335 0093 02       		.uleb128 0x2
  336 0094 01       		.byte	0x1
  337 0095 08       		.byte	0x8
- 338 0096 2C010000 		.4byte	.LASF13
+ 338 0096 F8000000 		.4byte	.LASF13
  339 009a 04       		.uleb128 0x4
  340 009b 00000000 		.4byte	.LASF14
  341 009f 02       		.byte	0x2
@@ -518,7 +518,7 @@ ARM GAS  C:\Users\Kristian\AppData\Local\Temp\ccB5dkOf.s 			page 1
  345 00a6 7A000000 		.4byte	0x7a
  346 00aa 06       		.uleb128 0x6
  347 00ab 01       		.byte	0x1
- 348 00ac 01010000 		.4byte	.LASF15
+ 348 00ac CD000000 		.4byte	.LASF15
  349 00b0 01       		.byte	0x1
  350 00b1 2A       		.byte	0x2a
  351 00b2 01       		.byte	0x1
@@ -528,7 +528,7 @@ ARM GAS  C:\Users\Kristian\AppData\Local\Temp\ccB5dkOf.s 			page 1
  355 00bf 01       		.byte	0x1
  356 00c0 E1000000 		.4byte	0xe1
  357 00c4 07       		.uleb128 0x7
- 358 00c5 3A000000 		.4byte	.LASF17
+ 358 00c5 06000000 		.4byte	.LASF17
  359 00c9 01       		.byte	0x1
  360 00ca 2A       		.byte	0x2a
  361 00cb 6F000000 		.4byte	0x6f
@@ -536,9 +536,9 @@ ARM GAS  C:\Users\Kristian\AppData\Local\Temp\ccB5dkOf.s 			page 1
  363 00d0 91       		.byte	0x91
  364 00d1 6F       		.sleb128 -17
  365 00d2 08       		.uleb128 0x8
- 366 00d3 88000000 		.4byte	.LASF22
+ 366 00d3 54000000 		.4byte	.LASF22
  367 00d7 01       		.byte	0x1
-ARM GAS  C:\Users\Kristian\AppData\Local\Temp\ccB5dkOf.s 			page 10
+ARM GAS  C:\Users\Kristian\AppData\Local\Temp\cca0rRNt.s 			page 10
 
 
  368 00d8 2C       		.byte	0x2c
@@ -549,7 +549,7 @@ ARM GAS  C:\Users\Kristian\AppData\Local\Temp\ccB5dkOf.s 			page 1
  373 00e0 00       		.byte	0
  374 00e1 06       		.uleb128 0x6
  375 00e2 01       		.byte	0x1
- 376 00e3 B3000000 		.4byte	.LASF16
+ 376 00e3 7F000000 		.4byte	.LASF16
  377 00e7 01       		.byte	0x1
  378 00e8 49       		.byte	0x49
  379 00e9 01       		.byte	0x1
@@ -559,7 +559,7 @@ ARM GAS  C:\Users\Kristian\AppData\Local\Temp\ccB5dkOf.s 			page 1
  383 00f6 01       		.byte	0x1
  384 00f7 0A010000 		.4byte	0x10a
  385 00fb 07       		.uleb128 0x7
- 386 00fc FC000000 		.4byte	.LASF18
+ 386 00fc C8000000 		.4byte	.LASF18
  387 0100 01       		.byte	0x1
  388 0101 49       		.byte	0x49
  389 0102 6F000000 		.4byte	0x6f
@@ -569,7 +569,7 @@ ARM GAS  C:\Users\Kristian\AppData\Local\Temp\ccB5dkOf.s 			page 1
  393 0109 00       		.byte	0
  394 010a 09       		.uleb128 0x9
  395 010b 01       		.byte	0x1
- 396 010c 65000000 		.4byte	.LASF19
+ 396 010c 31000000 		.4byte	.LASF19
  397 0110 01       		.byte	0x1
  398 0111 61       		.byte	0x61
  399 0112 01       		.byte	0x1
@@ -580,7 +580,7 @@ ARM GAS  C:\Users\Kristian\AppData\Local\Temp\ccB5dkOf.s 			page 1
  404 0123 01       		.byte	0x1
  405 0124 09       		.uleb128 0x9
  406 0125 01       		.byte	0x1
- 407 0126 31010000 		.4byte	.LASF20
+ 407 0126 FD000000 		.4byte	.LASF20
  408 012a 01       		.byte	0x1
  409 012b 75       		.byte	0x75
  410 012c 01       		.byte	0x1
@@ -591,20 +591,20 @@ ARM GAS  C:\Users\Kristian\AppData\Local\Temp\ccB5dkOf.s 			page 1
  415 013d 01       		.byte	0x1
  416 013e 0A       		.uleb128 0xa
  417 013f 01       		.byte	0x1
- 418 0140 47010000 		.4byte	.LASF21
+ 418 0140 13010000 		.4byte	.LASF21
  419 0144 01       		.byte	0x1
  420 0145 8D       		.byte	0x8d
  421 0146 01       		.byte	0x1
  422 0147 6F000000 		.4byte	0x6f
  423 014b 00000000 		.4byte	.LFB4
  424 014f 30000000 		.4byte	.LFE4
-ARM GAS  C:\Users\Kristian\AppData\Local\Temp\ccB5dkOf.s 			page 11
+ARM GAS  C:\Users\Kristian\AppData\Local\Temp\cca0rRNt.s 			page 11
 
 
  425 0153 C8000000 		.4byte	.LLST4
  426 0157 01       		.byte	0x1
  427 0158 08       		.uleb128 0x8
- 428 0159 1F010000 		.4byte	.LASF23
+ 428 0159 EB000000 		.4byte	.LASF23
  429 015d 01       		.byte	0x1
  430 015e 8F       		.byte	0x8f
  431 015f 6F000000 		.4byte	0x6f
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\Kristian\AppData\Local\Temp\ccB5dkOf.s 			page 1
  479 0028 08       		.uleb128 0x8
  480 0029 00       		.byte	0
  481 002a 00       		.byte	0
-ARM GAS  C:\Users\Kristian\AppData\Local\Temp\ccB5dkOf.s 			page 12
+ARM GAS  C:\Users\Kristian\AppData\Local\Temp\cca0rRNt.s 			page 12
 
 
  482 002b 04       		.uleb128 0x4
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\Kristian\AppData\Local\Temp\ccB5dkOf.s 			page 1
  536 0062 49       		.uleb128 0x49
  537 0063 13       		.uleb128 0x13
  538 0064 02       		.uleb128 0x2
-ARM GAS  C:\Users\Kristian\AppData\Local\Temp\ccB5dkOf.s 			page 13
+ARM GAS  C:\Users\Kristian\AppData\Local\Temp\cca0rRNt.s 			page 13
 
 
  539 0065 0A       		.uleb128 0xa
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\Kristian\AppData\Local\Temp\ccB5dkOf.s 			page 1
  593 009c 27       		.uleb128 0x27
  594 009d 0C       		.uleb128 0xc
  595 009e 49       		.uleb128 0x49
-ARM GAS  C:\Users\Kristian\AppData\Local\Temp\ccB5dkOf.s 			page 14
+ARM GAS  C:\Users\Kristian\AppData\Local\Temp\cca0rRNt.s 			page 14
 
 
  596 009f 13       		.uleb128 0x13
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\Kristian\AppData\Local\Temp\ccB5dkOf.s 			page 1
  650 0060 30000000 		.4byte	.LFE1
  651 0064 0200     		.2byte	0x2
  652 0066 77       		.byte	0x77
-ARM GAS  C:\Users\Kristian\AppData\Local\Temp\ccB5dkOf.s 			page 15
+ARM GAS  C:\Users\Kristian\AppData\Local\Temp\cca0rRNt.s 			page 15
 
 
  653 0067 10       		.sleb128 16
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\Kristian\AppData\Local\Temp\ccB5dkOf.s 			page 1
  707 00eb 10       		.sleb128 16
  708 00ec 06000000 		.4byte	.LCFI12
  709 00f0 30000000 		.4byte	.LFE4
-ARM GAS  C:\Users\Kristian\AppData\Local\Temp\ccB5dkOf.s 			page 16
+ARM GAS  C:\Users\Kristian\AppData\Local\Temp\cca0rRNt.s 			page 16
 
 
  710 00f4 0200     		.2byte	0x2
@@ -950,140 +950,143 @@ ARM GAS  C:\Users\Kristian\AppData\Local\Temp\ccB5dkOf.s 			page 1
  752              	.LASF14:
  753 0000 72656733 		.ascii	"reg32\000"
  753      3200
- 754              	.LASF26:
- 755 0006 433A5C55 		.ascii	"C:\\Users\\Kristian\\Desktop\\Body_main\\Body_main."
- 755      73657273 
- 755      5C4B7269 
- 755      73746961 
- 755      6E5C4465 
- 756 0034 63796473 		.ascii	"cydsn\000"
- 756      6E00
-ARM GAS  C:\Users\Kristian\AppData\Local\Temp\ccB5dkOf.s 			page 17
+ 754              	.LASF17:
+ 755 0006 76616C75 		.ascii	"value\000"
+ 755      6500
+ 756              	.LASF25:
+ 757 000c 2E5C4765 		.ascii	".\\Generated_Source\\PSoC4\\I2C_1_sda.c\000"
+ 757      6E657261 
+ 757      7465645F 
+ 757      536F7572 
+ARM GAS  C:\Users\Kristian\AppData\Local\Temp\cca0rRNt.s 			page 17
 
 
- 757              	.LASF17:
- 758 003a 76616C75 		.ascii	"value\000"
- 758      6500
- 759              	.LASF25:
- 760 0040 2E5C4765 		.ascii	".\\Generated_Source\\PSoC4\\I2C_1_sda.c\000"
- 760      6E657261 
- 760      7465645F 
- 760      536F7572 
- 760      63655C50 
- 761              	.LASF19:
- 762 0065 4932435F 		.ascii	"I2C_1_sda_Read\000"
- 762      315F7364 
- 762      615F5265 
- 762      616400
- 763              	.LASF11:
- 764 0074 666C6F61 		.ascii	"float\000"
- 764      7400
- 765              	.LASF1:
- 766 007a 756E7369 		.ascii	"unsigned char\000"
- 766      676E6564 
- 766      20636861 
- 766      7200
- 767              	.LASF22:
- 768 0088 64725661 		.ascii	"drVal\000"
- 768      6C00
- 769              	.LASF5:
- 770 008e 6C6F6E67 		.ascii	"long unsigned int\000"
- 770      20756E73 
- 770      69676E65 
- 770      6420696E 
- 770      7400
- 771              	.LASF3:
- 772 00a0 73686F72 		.ascii	"short unsigned int\000"
- 772      7420756E 
- 772      7369676E 
- 772      65642069 
- 772      6E7400
- 773              	.LASF16:
- 774 00b3 4932435F 		.ascii	"I2C_1_sda_SetDriveMode\000"
- 774      315F7364 
- 774      615F5365 
- 774      74447269 
- 774      76654D6F 
- 775              	.LASF12:
- 776 00ca 646F7562 		.ascii	"double\000"
- 776      6C6500
- 777              	.LASF10:
- 778 00d1 75696E74 		.ascii	"uint32\000"
- 778      333200
- 779              	.LASF8:
- 780 00d8 756E7369 		.ascii	"unsigned int\000"
- 780      676E6564 
- 780      20696E74 
- 780      00
- 781              	.LASF7:
- 782 00e5 6C6F6E67 		.ascii	"long long unsigned int\000"
- 782      206C6F6E 
-ARM GAS  C:\Users\Kristian\AppData\Local\Temp\ccB5dkOf.s 			page 18
+ 757      63655C50 
+ 758              	.LASF19:
+ 759 0031 4932435F 		.ascii	"I2C_1_sda_Read\000"
+ 759      315F7364 
+ 759      615F5265 
+ 759      616400
+ 760              	.LASF11:
+ 761 0040 666C6F61 		.ascii	"float\000"
+ 761      7400
+ 762              	.LASF1:
+ 763 0046 756E7369 		.ascii	"unsigned char\000"
+ 763      676E6564 
+ 763      20636861 
+ 763      7200
+ 764              	.LASF22:
+ 765 0054 64725661 		.ascii	"drVal\000"
+ 765      6C00
+ 766              	.LASF5:
+ 767 005a 6C6F6E67 		.ascii	"long unsigned int\000"
+ 767      20756E73 
+ 767      69676E65 
+ 767      6420696E 
+ 767      7400
+ 768              	.LASF3:
+ 769 006c 73686F72 		.ascii	"short unsigned int\000"
+ 769      7420756E 
+ 769      7369676E 
+ 769      65642069 
+ 769      6E7400
+ 770              	.LASF16:
+ 771 007f 4932435F 		.ascii	"I2C_1_sda_SetDriveMode\000"
+ 771      315F7364 
+ 771      615F5365 
+ 771      74447269 
+ 771      76654D6F 
+ 772              	.LASF12:
+ 773 0096 646F7562 		.ascii	"double\000"
+ 773      6C6500
+ 774              	.LASF10:
+ 775 009d 75696E74 		.ascii	"uint32\000"
+ 775      333200
+ 776              	.LASF8:
+ 777 00a4 756E7369 		.ascii	"unsigned int\000"
+ 777      676E6564 
+ 777      20696E74 
+ 777      00
+ 778              	.LASF7:
+ 779 00b1 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 779      206C6F6E 
+ 779      6720756E 
+ 779      7369676E 
+ 779      65642069 
+ 780              	.LASF18:
+ 781 00c8 6D6F6465 		.ascii	"mode\000"
+ 781      00
+ 782              	.LASF15:
+ 783 00cd 4932435F 		.ascii	"I2C_1_sda_Write\000"
+ARM GAS  C:\Users\Kristian\AppData\Local\Temp\cca0rRNt.s 			page 18
 
 
- 782      6720756E 
- 782      7369676E 
- 782      65642069 
- 783              	.LASF18:
- 784 00fc 6D6F6465 		.ascii	"mode\000"
- 784      00
- 785              	.LASF15:
- 786 0101 4932435F 		.ascii	"I2C_1_sda_Write\000"
- 786      315F7364 
- 786      615F5772 
- 786      69746500 
- 787              	.LASF6:
- 788 0111 6C6F6E67 		.ascii	"long long int\000"
- 788      206C6F6E 
- 788      6720696E 
- 788      7400
- 789              	.LASF23:
- 790 011f 6D61736B 		.ascii	"maskedStatus\000"
- 790      65645374 
- 790      61747573 
- 790      00
- 791              	.LASF13:
- 792 012c 63686172 		.ascii	"char\000"
- 792      00
- 793              	.LASF20:
- 794 0131 4932435F 		.ascii	"I2C_1_sda_ReadDataReg\000"
- 794      315F7364 
- 794      615F5265 
- 794      61644461 
- 794      74615265 
- 795              	.LASF21:
- 796 0147 4932435F 		.ascii	"I2C_1_sda_ClearInterrupt\000"
- 796      315F7364 
- 796      615F436C 
- 796      65617249 
- 796      6E746572 
- 797              	.LASF2:
- 798 0160 73686F72 		.ascii	"short int\000"
- 798      7420696E 
- 798      7400
- 799              	.LASF9:
- 800 016a 75696E74 		.ascii	"uint8\000"
- 800      3800
- 801              	.LASF24:
- 802 0170 474E5520 		.ascii	"GNU C 4.7.3 20130312 (release) [ARM/embedded-4_7-br"
- 802      4320342E 
- 802      372E3320 
- 802      32303133 
- 802      30333132 
- 803 01a3 616E6368 		.ascii	"anch revision 196615]\000"
- 803      20726576 
- 803      6973696F 
- 803      6E203139 
- 803      36363135 
- 804              	.LASF4:
- 805 01b9 6C6F6E67 		.ascii	"long int\000"
- 805      20696E74 
-ARM GAS  C:\Users\Kristian\AppData\Local\Temp\ccB5dkOf.s 			page 19
+ 783      315F7364 
+ 783      615F5772 
+ 783      69746500 
+ 784              	.LASF6:
+ 785 00dd 6C6F6E67 		.ascii	"long long int\000"
+ 785      206C6F6E 
+ 785      6720696E 
+ 785      7400
+ 786              	.LASF23:
+ 787 00eb 6D61736B 		.ascii	"maskedStatus\000"
+ 787      65645374 
+ 787      61747573 
+ 787      00
+ 788              	.LASF13:
+ 789 00f8 63686172 		.ascii	"char\000"
+ 789      00
+ 790              	.LASF20:
+ 791 00fd 4932435F 		.ascii	"I2C_1_sda_ReadDataReg\000"
+ 791      315F7364 
+ 791      615F5265 
+ 791      61644461 
+ 791      74615265 
+ 792              	.LASF21:
+ 793 0113 4932435F 		.ascii	"I2C_1_sda_ClearInterrupt\000"
+ 793      315F7364 
+ 793      615F436C 
+ 793      65617249 
+ 793      6E746572 
+ 794              	.LASF2:
+ 795 012c 73686F72 		.ascii	"short int\000"
+ 795      7420696E 
+ 795      7400
+ 796              	.LASF9:
+ 797 0136 75696E74 		.ascii	"uint8\000"
+ 797      3800
+ 798              	.LASF24:
+ 799 013c 474E5520 		.ascii	"GNU C 4.7.3 20130312 (release) [ARM/embedded-4_7-br"
+ 799      4320342E 
+ 799      372E3320 
+ 799      32303133 
+ 799      30333132 
+ 800 016f 616E6368 		.ascii	"anch revision 196615]\000"
+ 800      20726576 
+ 800      6973696F 
+ 800      6E203139 
+ 800      36363135 
+ 801              	.LASF4:
+ 802 0185 6C6F6E67 		.ascii	"long int\000"
+ 802      20696E74 
+ 802      00
+ 803              	.LASF0:
+ 804 018e 7369676E 		.ascii	"signed char\000"
+ 804      65642063 
+ 804      68617200 
+ 805              	.LASF26:
+ 806 019a 443A5C33 		.ascii	"D:\\3. Semester\\Projekt\\gitProjekt\\Design og imp"
+ 806      2E205365 
+ARM GAS  C:\Users\Kristian\AppData\Local\Temp\cca0rRNt.s 			page 19
 
 
- 805      00
- 806              	.LASF0:
- 807 01c2 7369676E 		.ascii	"signed char\000"
- 807      65642063 
- 807      68617200 
+ 806      6D657374 
+ 806      65725C50 
+ 806      726F6A65 
+ 807 01c9 6C656D65 		.ascii	"lementering\\Body SW\\Body_main\\Body_main.cydsn\000"
+ 807      6E746572 
+ 807      696E675C 
+ 807      426F6479 
+ 807      2053575C 
  808              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.7.3 20130312 (release) [ARM/embedded-4_7-br

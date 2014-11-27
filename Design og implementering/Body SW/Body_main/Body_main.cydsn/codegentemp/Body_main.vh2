@@ -2,7 +2,7 @@
 --	Conversion of Body_main.v to vh2:
 --
 --	Cypress Semiconductor - WARP Version 6.3 IR 41
---	Sat Nov 22 15:45:12 2014
+--	Thu Nov 27 15:12:14 2014
 --
 
 USE cypress.cypress.all;
