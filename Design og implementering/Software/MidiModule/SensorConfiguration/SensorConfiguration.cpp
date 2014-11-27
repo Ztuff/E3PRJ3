@@ -10,15 +10,13 @@ SensorConfiguration::SensorConfiguration()
 SensorConfiguration::SensorConfiguration(	string name,
 											int sensorID,
 											char axis,
-											int signalIndex,
-											MappingScheme mScheme,
+											MappingScheme &mScheme,
 											//SoundPack sound,
 											vector<MidiSignal> &midiVec)
 {
 	name_ 			= name;
 	sensorID_ 		= sensorID;
 	axis_			= axis;
-	signalIndex_ 	= signalIndex;
 	mScheme_ 		= mScheme;
 	//sound_			= sound;
 	
@@ -46,13 +44,8 @@ char SensorConfiguration::getAxis()
 {
 	return axis_;
 }
-
-int SensorConfiguration::getsignalIndex()
-{
-	return signalIndex_;
-}
 		
-MappingScheme SensorConfiguration::getMScheme()
+MappingScheme &SensorConfiguration::getMScheme()
 {
 	return mScheme_;
 }
@@ -77,12 +70,7 @@ void SensorConfiguration::setAxis(char axis)
 	axis_ = axis;
 }
 
-void SensorConfiguration::setSignalIndex(int signalIndex)
-{
-	signalIndex_ = signalIndex;
-}
-
-void SensorConfiguration::setMappingScheme(MappingScheme mScheme)
+void SensorConfiguration::setMappingScheme(MappingScheme &mScheme)
 {
 	mScheme_ = mScheme;
 }

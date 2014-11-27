@@ -41,7 +41,7 @@ class MappingScheme	//KODEN KAN EVT EFFEKTIVISERES VED AT BRUGE DEFINES I STEDET
 public:
 	MappingScheme(); // der skal bruges en default constructor
 	MappingScheme(	string id,			//bruges i SensorConfigurationsBanken for at kende forskel på MappingSchemes.
-					string param,	
+					string param,		//strategies: "key", "velocity", "CCAbs", "CCRel"
 					string root,		//key.root, strategies: c, cis, d, dis, e, f, fis, g, gis, a, ais, b	
 					string scale,		//key.scale, strategies: cromatic, major, minor
 					string direction,	//key.direction, strategies: rising, falling
