@@ -4,6 +4,7 @@ MidiModule::MidiModule(AlsaAdapter* alsaAdapter)
 {
 	timeout_in_milliseconds_ = 20;	//50 times per second = 20 ms
 	mute_ = 0;	
+
 }
 
 MidiModule::~MidiModule()
@@ -13,21 +14,23 @@ MidiModule::~MidiModule()
 
 list<SensorConfiguration>::iterator MidiModule::createSensorConfList()
 {
-	
+	//oprette list af sensorkonfs
+
+	//returnere iterator over denne liste
 }
 
 void MidiModule::startTimer()
 {
-	init_timer(&my_timer); 
-	my_timer.expires = jiffies + timeout_in_sec*HZ; 
-	my_timer.function = timer_funct; 
-	add_timer(&my_timer);
+	init_timer(&my_timer_); 
+	my_timer_.expires = jiffies + timeout_in_sec*HZ; 
+	my_timer_.function = timer_funct; 
+	add_timer(&my_timer_);
 }
 
 void MidiModule::timerFunct()
 {
-	my_timer.expires = jiffies + timeout_in_milliseconds*HZ;    //Re-schedule the timer 
-	add_timer(&my_timer);                					 	//Add to timer queue
+	my_timer_.expires = jiffies + timeout_in_milliseconds*HZ;    //Re-schedule the timer 
+	add_timer(&my_timer_);                					 	//Add to timer queue
 	
 	wqFlag = 1;
 	wake_up_interruptible(&wq);

@@ -9,6 +9,7 @@
 #include <vector>
 #include <iostream>
 #include <list>
+#include "AlsaAdapter.hpp"
 
 using namespece std;
 
@@ -36,10 +37,12 @@ class MidiModule{
 	private:
 
 		vector<MidiSignal> midiSignalVector_;
-		list<SensorConfiguration> sensorConfList;
-		unsigned int timeout_in_milliseconds;
-		struct timer_list my_timer;
-		bool stop;	
+		list<SensorConfiguration> sensorConfList_;
+		unsigned int timeout_in_milliseconds_;
+		struct timer_list my_timer_;
+		bool stop_;	
+		AlsaAdapter* alsaAdapter_;
+
 
 
 
