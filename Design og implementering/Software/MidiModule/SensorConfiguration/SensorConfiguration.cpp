@@ -12,7 +12,7 @@ SensorConfiguration::SensorConfiguration(	string name,
 											char axis,
 											int signalIndex,
 											MappingScheme mScheme,
-											SoundPack sound,
+											//SoundPack sound,
 											vector<MidiSignal> &midiVec)
 {
 	name_ 			= name;
@@ -20,7 +20,7 @@ SensorConfiguration::SensorConfiguration(	string name,
 	axis_			= axis;
 	signalIndex_ 	= signalIndex;
 	mScheme_ 		= mScheme;
-	sound_			= sound;
+	//sound_			= sound;
 	
 	midiIter_ = MidiSignalVectorAdd(midiVec, 1)	/*	MidiIter er attribut i SensorKonfiguration
 													MidiSignalVectorAdd returnerer iterator til den nye sidste plads i vector
@@ -57,10 +57,10 @@ MappingScheme SensorConfiguration::getMScheme()
 	return mScheme_;
 }
 		
-SoundPack SensorConfiguration::getSound()
+/*SoundPack SensorConfiguration::getSound()
 {
 	return sound_;
-}
+}*/
 		
 void SensorConfiguration::setName(string name)
 {
@@ -87,20 +87,20 @@ void SensorConfiguration::setMappingScheme(MappingScheme mScheme)
 	mScheme_ = mScheme;
 }
 
-void SensorConfiguration::setSoundPack(SoundPack sound)
+/*void SensorConfiguration::setSoundPack(SoundPack sound)
 {
 	sound_ = sound;
-}
+}*/
 
 /** Udvider vector med "num" og initialiserer til default **/
 vector<MidiSignal>::iterator MidiSignalVectorAdd(vector<MidiSignal> &vec, int num)	
 {
-	for (int i = 0; i < VECTORSIZE; ++i)
+	for (int i = 0; i < num; ++i)
 	{
 		vec.push_back(MidiSignal());
 		
 		vec[i].channel_='0';
-		vec[i].command_='8';
+		vec[i].command_=NOTEOFF;
 		vec[i].param1_=0;
 		vec[i].param2_=0;
 		vec[i].param1Old_=0;
