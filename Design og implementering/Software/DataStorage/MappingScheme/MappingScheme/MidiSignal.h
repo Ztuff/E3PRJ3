@@ -1,10 +1,10 @@
 #ifndef MIDISIGNAL_H_
 #define MIDISIGNAL_H_
 
-#define NOTEOFF 0x80
-#define NOTEON 0x90
-#define AFTERTOUCH 0xA0
-#define CONTIUOUSCONTROLLER 0xB0
+#define NOTEOFF '8'
+#define NOTEON '9'
+#define AFTERTOUCH 'A'
+#define CONTIUOUSCONTROLLER 'B'
 
 #include <string>
 #include <iostream>
@@ -14,8 +14,8 @@ using namespace std;
 struct MidiSignal
 {
 	/** ATRIBUTES USED FOR ALSA **/
-	int channel_;
-	int command_;
+	char channel_;
+	char command_;
 	int param1_;
 	int param2_;
 
@@ -25,8 +25,8 @@ struct MidiSignal
 
 	void print()
 	{
-		cout<<   "     channel_ = " << dec << channel_
-			<< "\n     command_ = 0x"<< hex << command_
+		cout<<   "     channel_ = " << hex << channel_
+			<< "\n     command_ = " << hex << command_
 			<< "\n     param1_ = "<< dec << param1_
 			<< "\n     param2_ = "<< dec << param2_ << endl;
 	}

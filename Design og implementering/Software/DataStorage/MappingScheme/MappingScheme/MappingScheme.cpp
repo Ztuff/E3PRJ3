@@ -96,7 +96,7 @@ bool MappingScheme::mapKey(int data, MidiSignal & signal)
 	{
 		if(data != signal.param1Old_)
 		{
-			signal.command_ = 0x80;	//Note Off
+			signal.command_ = NOTEOFF;		//Note Off
 			signal.param1Old_ = data;
 		}
 		else
@@ -141,7 +141,7 @@ bool MappingScheme::mapCCAbs(int data, MidiSignal & signal)
 				
 	/*** Set MidiSignal ***/
 	signal.command_ = CONTIUOUSCONTROLLER;	//Set command
-	signal.param1_ = CC_.cNum_;			//Set CC#
+	signal.param1_ = CC_.cNum_;				//Set CC#
 	signal.param2_ = data;					//Set controller value
 
 	signal.param2Old_ = data;				//Set old value
