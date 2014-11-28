@@ -1,4 +1,4 @@
-D:/3.\ Semester/Projekt/gitProjekt/Design\ og\ implementering/Body\ SW/Body_main/Body_main.cydsn/CortexM0/ARM_GCC_473/Debug/CyBootAsmGnu.o : D:/3.\ Semester/Projekt/gitProjekt/Design\ og\ implementering/Body\ SW/Body_main/Body_main.cydsn/Generated_Source/PSoC4/CyBootAsmGnu.s 
+C:/Users/Kristian/Desktop/Body_main/Body_main.cydsn/CortexM0/ARM_GCC_473/Debug/CyBootAsmGnu.o : C:/Users/Kristian/Desktop/Body_main/Body_main.cydsn/Generated_Source/PSoC4/CyBootAsmGnu.s 
 
-D:/3.\ Semester/Projekt/gitProjekt/Design\ og\ implementering/Body\ SW/Body_main/Body_main.cydsn/Generated_Source/PSoC4/CyBootAsmGnu.s : 
+C:/Users/Kristian/Desktop/Body_main/Body_main.cydsn/Generated_Source/PSoC4/CyBootAsmGnu.s : 
 

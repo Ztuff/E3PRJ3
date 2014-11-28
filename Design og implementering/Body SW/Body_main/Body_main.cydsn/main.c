@@ -33,8 +33,8 @@
 
 
 #define MAXREGNUM 96 //Maks antal registre at læse fra 
-#define MAXSENSDATA 65 // Maks antal som skal fyldes i array'et som sendes via BT
-#define START_SENSDATA 0x0F // Start byte, 
+#define MAXSENSDATA 66 // Maks antal som skal fyldes i array'et som sendes via BT
+#define START_SENSDATA 100 // Start byte, 
 #define DEFAULT_DATA -1 // Default data i array sættes til 0. 
 //Accelerometer ADXL345 defines
 #define ACCEL_ADDRESS 0x53 // jumperen sættes til GND 
@@ -62,7 +62,7 @@ uint8_t numOfRegToRead = 0;	//current number of initialized sensor registers to 
  
 int sensArray[MAXREGNUM][3];	//Array containing {i2c device address, registerToRead, dataTarget}
 								//Initeres til 0 og fyldes op undervejs i funktionen setSensarray
-int dataArray[MAXSENSDATA];     // Array with id-number and data to send via BT
+char dataArray[MAXSENSDATA];     // Array with id-number and data to send via BT
 
 //Prototyper
 void setupI2C();
@@ -77,11 +77,14 @@ void setdataArray(int ID, int x_data, int y_data, int z_data);
 int readI2C(int numOfReg);
 void convSensData();
 void handleI2CError();
-
-
+ 
+CY_ISR(MY_ISR)
+{
+}
 
 int main()
 {
+    
     initUART();
 	setupI2C(); 
 	
@@ -90,7 +93,7 @@ int main()
 	//while(1)
 		readAllSensors();
         
-        //Tester med UART at array'et bliver fyldt rigtig 
+      /*  //Tester med UART at array'et bliver fyldt rigtig 
         UART_1_UartPutString("Sensor Array is:\n\r"); 
         int i;
         char arrayString[20];
@@ -98,7 +101,7 @@ int main()
         {
             sprintf(arrayString, "%d: %d, %d, %d\n\r", i, sensArray[i][0], sensArray[i][1], sensArray[i][2]);
             UART_1_UartPutString(arrayString); 
-        }
+        }*/
         
         //Tjekker at data bliver samlet korrekt. 
         convSensData();
@@ -203,7 +206,7 @@ void convSensData()
 {
     //ADXL345
     int16 x, y, z; // Da det er to 8 bit registre som skal lægges sammen
-    uint8 x1, y1, z1; 
+    unsigned char x1, y1, z1; 
     //Samler most significant og least significant for X
     x = sensArray[1][2]<< 8; 
     x+= sensArray[0][2];
@@ -223,7 +226,7 @@ void convSensData()
     sprintf(ADXL345_data, "\n\rx is: %d, y is: %d, z is: %d\n\r", x, y, z);
     UART_1_UartPutString(ADXL345_data); */
     
-    //conversion from int16 to uint8 which is the scale midi can receive
+    //conversion from int16 to char which is the scale midi can receive
     x1 = (x+512)/8; 
     y1 = (y+512)/8;
     z1 = (z+512)/8;
@@ -240,21 +243,37 @@ void setdataArray(int ID, int x_data, int y_data, int z_data)
 {
     int i;
     dataArray[0] = START_SENSDATA; //Sætter de første 5 pladser i Array'et
-    dataArray[1] = ID; 
-    dataArray[2] = x_data;
-    dataArray[3] = y_data;
-    dataArray[4] = z_data;
+    dataArray[1] = 48;//ID+1; 
+    dataArray[2] = 49;//x_data+1;
+    dataArray[3] = 50;//y_data+1;
+    dataArray[4] = 51;//z_data+1;
+    dataArray[5] = 52;
+    dataArray[6] = 53;
+    dataArray[7] = 54;
+    dataArray[8] = 55; //Sætter de første 5 pladser i Array'et
+    dataArray[9] = 56; 
+    dataArray[10] = 57;//x_data+1;
+    dataArray[11] = 58;//y_data+1;
+    dataArray[12] = 59;//z_data+1;
+    dataArray[13] = 60;
+    dataArray[14] = 61;
+    dataArray[15] = 62;
+   
     
-    for(i = 5; i<MAXSENSDATA; i++) //Sætter de resterende pladser i array'et til 0. 
+    for(i = 16; i<MAXSENSDATA; i++) //Sætter de resterende pladser i array'et til 1. 
     {
-        dataArray[i] = 0; 
+        dataArray[i] = 48; 
     }
+    dataArray[64] = 66;
+    dataArray[63] = 65;
+    dataArray[65] = 0; 
+    
     // Sender dataArray over UART vha. forløkke og PutChar
-        int index;
-        for(index = 0; index < MAXSENSDATA; index++)
-        {
-            UART_1_UartPutChar(dataArray[index]);
-        }
+           while(1)
+           {
+            UART_1_UartPutString(dataArray);
+            CyDelay(2000);
+           }
 }
     
 
@@ -262,7 +281,7 @@ void setdataArray(int ID, int x_data, int y_data, int z_data)
 void initUART()
 {
     UART_1_Start();
-    UART_1_UartPutString("This is a a test of body main\n\r\n");
+   /* UART_1_UartPutString("This is a a test of body main\n\r\n"); */
 }
 
 void handleI2CError()
