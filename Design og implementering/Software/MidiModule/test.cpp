@@ -1,6 +1,4 @@
 #include "MidiModule.hpp"
-#include "AlsaAdapter.hpp"
-#include "SensorConfiguration.hpp"
 
 struct DataStruct	//DataStruct Dummy
 {
@@ -11,24 +9,16 @@ struct DataStruct	//DataStruct Dummy
 
 int main()
 {
-	testInit();
-	
-	//do something
-	
-	return 0;
-}
-
-void testInit()
-{
+	/****************************************** INITIALIZATION **********************************************/
 	/*** Opret DataStruct array Dummy ***/
 	int size = 16;
-	DataStruct[size];
+	DataStruct myData[size];
 	
 	for (int i = 0; i< size; ++i)
 	{
-		DataStruct[i].x = i;
-		DataStruct[i].y = i;
-		DataStruct[i].z = i;
+		myData[i].x = i;
+		myData[i].y = i;
+		myData[i].z = i;
 	}
 	
 	/*** Klargør vector<MidiSignal> ***/
@@ -54,8 +44,12 @@ void testInit()
 							*testMScheme,	//MappingScheme mScheme,
 							midiVec);		//vector<MidiSignal> &midiVec);
 	
-	
 	/*** Klargør MidiModule ***/
 	MidiModule(&alsaAdapter);
+	
+	/******************************************* FUNCITON TEST ***********************************************/
+	
+	
+	return 0;
 }
 

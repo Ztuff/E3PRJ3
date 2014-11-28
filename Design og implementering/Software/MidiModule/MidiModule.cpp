@@ -1,9 +1,11 @@
-#include "MidiModule.h"
+#include "MidiModule.hpp"
 
 MidiModule::MidiModule(AlsaAdapter* alsaAdapter)
 {
 	timeout_in_milliseconds_ = 20;	//50 times per second = 20 ms
 	mute_ = 0;	
+	
+	alsaAdapter_ = alsaAdapter;
 
 }
 
@@ -44,23 +46,23 @@ void MidiModule::handleTick(list<SensKonfiguration> myList)
 	
 	for (list<SensKonfiguration>::iterator i = myList.begin(); i != myList.end(); ++i)	//Iterate through sensor konfigurations
 	{
-		switch ((i*).accis)	//Find correct data in dataArray
+		switch ((*i).accis)	//Find correct data in dataArray
 		{
 			case 'x'
-				data = dataArray[(i*).ID].x;
+				data = dataArray[(*i).ID].x;
 				break;
 			case 'y'
-				data = dataArray[(i*).ID].y;
+				data = dataArray[(*i).ID].y;
 				break;
 			case 'z'
-				data = dataArray[(i*).ID].z;
+				data = dataArray[(*i).ID].z;
 				break;
 			default:
-				data = dataArray[(i*).ID].x;
+				data = dataArray[(*i).ID].x;
 				break;
 		}
 		
-		(i*).MappingScheme.map(data,(i*).MidiIter*);		/* 	Prototype: bool map(int data, MidiSignal & signal);
+		(*i).MappingScheme.map(data,(*i).(*MidiIter));		/* 	Prototype: bool map(int data, MidiSignal & signal);
 																alder map i den givne SensKonfigurations MappingScheme
 																og giver den datapunkt jf. i SensKonfiguration indstillet sensor
 																og vectorplads jf indstillet  i SensKonfiguration indstillet vectorplads */
