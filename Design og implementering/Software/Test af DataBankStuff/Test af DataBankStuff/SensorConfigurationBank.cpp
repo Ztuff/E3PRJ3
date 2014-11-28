@@ -15,43 +15,38 @@ SensorConfigurationBank::SensorConfigurationBank()
 	{
 		if (v.first == "configuration")
 		{
-			SensorConfiguration newSensorConf;
+			string name;
+			int sensorid;
+			char axis;
+			MappingScheme mscheme;
+			SoundPack sound;
 			BOOST_FOREACH(ptree::value_type &w,v.second)
 			{
 				if(w.first == "name")
 				{
-					newSensorConf.setName(w.second.data());
+					name =w.second.data();
 				}
 				if(w.first == "sensorid")
 				{
 					string stringToInt = w.second.data();
 					istringstream iss(stringToInt);
-					int value;
-					iss >> value;
-					newSensorConf.setSensorID(value);
+					iss >> sensorid;
 				}
 				if(w.first == "axis")
 				{
-					char axis = w.second.data().back();
-					newSensorConf.setAxis(axis);
-				}
-				if(w.first == "signalindex")
-				{
-					string stringToInt = w.second.data();
-					istringstream iss(stringToInt);
-					int value;
-					iss >> value;
-					newSensorConf.setSignalIndex(value);
+					axis = w.second.data().back();
 				}
 				if(w.first == "mappingscheme")
 				{
-					newSensorConf.setMappingScheme(getMappingScheme(w.second.data()));
+					mscheme = getMappingScheme(w.second.data());
 				}
 				if(w.first == "soundpack")
 				{
-					newSensorConf.setSoundPack(w.second.data());
+					sound = w.second.data();
 				}
 			}
+			vector<MidiSignal> midiVec;
+			SensorConfiguration newSensorConf(name, sensorid, axis, mscheme, sound, midiVec);
 			sensorConfigurations_.insert(make_pair(newSensorConf.getName(), newSensorConf));
 		}
 	}
@@ -177,8 +172,7 @@ void SensorConfigurationBank::save()
 		ptree myTree;
 		myTree.put("name", it->second.getName());
 		myTree.put("sensorid", it->second.getSensorID());
-		myTree.put("axis", it->second.getAxis());
-		myTree.put("signalindex", it->second.getsignalIndex());
+		myTree.put("axis", it->second.getSensorID());
 		MappingScheme myScheme = it->second.getMScheme();
 		myTree.put("mappingscheme", myScheme.getId());
 		SoundPack mySound = it->second.getSound();
@@ -187,34 +181,5 @@ void SensorConfigurationBank::save()
 		pt.add_child("root.sensorconfigurations.configuration", myTree);
 	}
 	boost::property_tree::xml_writer_settings<std::string> settings('\t', 1);
-	write_xml("SensorConfigurationBank2.xml", pt, std::locale(), settings);
-}
-
-SensorConfiguration::SensorConfiguration()
-{
-	MappingScheme mScheme;
-	SoundPack sound;
-	string defaultName = "Default Sensorconfiguration";
-	char defaultAxis = 'x';
-	SensorConfiguration(defaultName, 1, defaultAxis, -1, mScheme, sound);
-}
-
-SensorConfiguration::SensorConfiguration(
-	string name,
-	int sensorID,
-	char axis,
-	int signalIndex,
-	MappingScheme mScheme,
-	SoundPack sound)
-{
-	name_ 			= name;
-	sensorID_ 		= sensorID;
-	axis_			= axis;
-	signalIndex_ 	= signalIndex;
-	mScheme_ 		= mScheme;
-	sound_			= sound;
-}
-
-SensorConfiguration::~SensorConfiguration()
-{
+	write_xml("SensorConfigurationBank.xml", pt, std::locale(), settings);
 }
