@@ -53,6 +53,46 @@ SensorConfigurationBank::SensorConfigurationBank()
 	save();
 }
 
+vector<string> SensorConfigurationBank::getMappingSchemes()
+{
+	using boost::property_tree::ptree;
+	ptree pt;
+	read_xml("MappingSchemes.xml", pt);
+	vector<string> myMappingSchemeList;
+
+	BOOST_FOREACH(ptree::value_type &v, pt.get_child("root.mappingschemes"))
+	{
+		BOOST_FOREACH(ptree::value_type &w, v.second)
+		{
+			if (w.first == "id")
+			{
+				myMappingSchemeList.push_back(w.second.data());
+			}
+		}
+	}
+	return myMappingSchemeList;
+}
+
+vector<string> SensorConfigurationBank::getSensorIDs()
+{
+	using boost::property_tree::ptree;
+	ptree pt;
+	read_xml("SensorConfigurationBank.xml", pt);
+	vector<string> mySensorIDs;
+
+	BOOST_FOREACH(ptree::value_type &v, pt.get_child("root.sensorconfigurations"))
+	{
+		BOOST_FOREACH(ptree::value_type &w, v.second)
+		{
+			if (w.first == "sensorid")
+			{
+				mySensorIDs.push_back(w.second.data());
+			}
+		}
+	}
+	return mySensorIDs;
+}
+
 MappingScheme SensorConfigurationBank::getMappingScheme(string id) //finder specifikt mapping scheme i MappingSchemes.xml
 {
 	string m_level;
