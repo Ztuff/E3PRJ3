@@ -1,12 +1,29 @@
+#include <vector>
 #include "MappingScheme.h"
+#define VECTORSIZE 16
 
 int main()
 {
-	MidiSignal testSignal = {0,0x80,0,0};
+	/*vector<MidiSignal> MidiSigs(VECTORSIZE);
+
+	for (int i = 0; i < VECTORSIZE; ++i)
+	{
+		MidiSigs[i].channel_=0;
+		MidiSigs[i].command_=0x80;
+		MidiSigs[i].param1_=0;
+		MidiSigs[i].param2_=0;
+		MidiSigs[i].param1Old_=0;
+		MidiSigs[i].param2Old_=0;
+	}
+
+	MidiSigs[16].print();
+	*/
+	MidiSignal testSignal = {'1','8',0,0};
 	cout <<   "Original signal\n  TestSignal = " << endl; 
 	testSignal.print();
 	
-	MappingScheme *velocityPtr = new MappingScheme(	"velocity",			//param
+	MappingScheme *velocityPtr = new MappingScheme(	"one",				//id
+													"velocity",			//param
 													"0", "0", "0",		//key params
 													20,					//velocity params
 													NULL,				//Common CC param
@@ -17,7 +34,8 @@ int main()
 	cout <<   "\nTesting velocity\n  TestSignal = " << endl; 
 	testSignal.print();
 
-	MappingScheme *keyPtr = new MappingScheme(	"key",						//param
+	MappingScheme *keyPtr = new MappingScheme(	"two",						//id
+												"key",						//param
 												"cis", "major", "falling",	//key params
 												NULL,						//velocity params
 												NULL,						//Common CC param
@@ -34,7 +52,8 @@ int main()
 	cout <<   "\nTesting velocity and (same)key again\n  TestSignal = " << endl; 
 	testSignal.print();
 
-	MappingScheme *CCAbsPtr = new MappingScheme("CCAbs",		//param
+	MappingScheme *CCAbsPtr = new MappingScheme("three",		//id
+												"CCAbs",		//param
 												"0", "0", "0",	//key params
 												NULL,			//velocity params
 												10,				//Common CC param: CC num
@@ -44,7 +63,8 @@ int main()
 	cout <<   "\nTesting CCAbs\n  TestSignal = " << endl; 
 	testSignal.print();
 
-	MappingScheme *CCRelPtr = new MappingScheme("CCRel",		//param
+	MappingScheme *CCRelPtr = new MappingScheme("four",			//id
+												"CCRel",		//param
 												"0", "0", "0",	//key params
 												NULL,			//velocity params
 												10,				//Common CC param: CC num
@@ -57,7 +77,7 @@ int main()
 	delete CCRelPtr;
 	delete CCAbsPtr;
 	delete velocityPtr;
-	delete keyPtr;
+	delete keyPtr; 
 	return 0;
 }
 
