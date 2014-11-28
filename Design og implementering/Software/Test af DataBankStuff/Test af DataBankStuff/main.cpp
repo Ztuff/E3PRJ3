@@ -1,5 +1,4 @@
-#include "SampleBank.hpp"
-#include "SensorConfigurationBank.hpp"
+#include "DataBank.h"
 #include <vector>
 #include <string>
 
@@ -11,6 +10,7 @@ void testSampleBank()
 	sb.add("test.mp3");
 	SoundPack testSoundPack = sb.get("test.mp3");
 	vector<string> testVector = sb.list();
+
 }
 
 void testSensorConfigurationBank()
@@ -22,5 +22,7 @@ int main()
 {
 	//testSampleBank();
 	testSensorConfigurationBank();
+	DataBank db;
+	vector<string> mappingSchemes = db.getSensorIDs();
 }
 

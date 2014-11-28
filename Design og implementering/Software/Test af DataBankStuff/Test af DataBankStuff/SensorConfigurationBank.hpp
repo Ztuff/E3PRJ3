@@ -10,6 +10,8 @@ class SensorConfigurationBank
 public:
 	SensorConfigurationBank();
 	MappingScheme getMappingScheme(std::string id);
+	std::vector<std::string> getSensorIDs();
+	std::vector<std::string> getMappingSchemes();
 	~SensorConfigurationBank();
 	void edit(SensorConfiguration sensorConf);
 	std::vector<std::string> list();
