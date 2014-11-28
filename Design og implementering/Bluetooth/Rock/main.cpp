@@ -1,11 +1,10 @@
 #include "Receiver.hpp"
+#include <iostream>
 
 using namespace std;
 
 int main()
 {
-  Receiver rcv;
-  rcv.send();
-  for(;;)
+  Receiver rcv;  for(;;)
     rcv.receive();
 }
