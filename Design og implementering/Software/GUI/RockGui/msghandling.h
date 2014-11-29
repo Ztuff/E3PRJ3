@@ -15,7 +15,8 @@ public:
 
 struct DatabankInfoMsg : Message
 {
-    DatabankInfoMsg(vector <string> sensorListe, vector <string> mappingschemeListe, vector <string> lydpakkeListe, vector <string> midiparameterList){
+    DatabankInfoMsg(vector <string> sensorListe, vector <string> mappingschemeListe, vector <string> lydpakkeListe, vector <string> midiparameterList)
+    {
         this->sensorListe = sensorListe;
         this->mappingschemeListe = mappingschemeListe;
         this->lydpakkeListe = lydpakkeListe;

@@ -8,7 +8,7 @@ NySensorkonf::NySensorkonf(QWidget *parent) :
 {
     msghandling::DatabankInfoMsg sensInfo
             = static_cast<DatabankInfoMsg>(sendMsgWRelpy(Controller::GET_NEW_SENS_CONF_INFO, msghandling::DATA_BANK_INFO_MSG));
-    sensInfo.sensorList
+    sensInfo.sensorList;
     ui->setupUi(this);
     this->setWindowState(Qt::WindowFullScreen);
 }

@@ -42,7 +42,7 @@ void Receiver::connect()
   //                      immediately with a failure status if the output can't be written immediately.
   //
   //  O_NOCTTY - When set and path identifies a terminal device, open() shall not cause the terminal device to become the controlling terminal for the process.
-  uart0_filestream_ = open( "/dev/ttyAMA0", O_RDWR | O_NOCTTY | O_NDELAY );    //Open in non blocking read/write mode
+  uart0_filestream_ = open( "/dev/ttyAMA0", O_RDONLY | O_NOCTTY | O_NDELAY );    //Open in non blocking read/write mode
   if ( uart0_filestream_ == -1 )
   {
     //ERROR - CAN'T OPEN SERIAL PORT
@@ -97,8 +97,8 @@ void Receiver::send()
       cout << "UART TX error" << endl;
     }
   }
-}
-*/
+}*/
+
 
 void Receiver::receive()
 {
@@ -106,35 +106,61 @@ void Receiver::receive()
   if ( uart0_filestream_ != -1 )
   {
     // Read up to 100 characters from the port if they are there
-    unsigned char rx_buffer[ RX_BUFFER_SIZE ];
-    int rx_length = read( uart0_filestream_, ( void* )rx_buffer, 100 );    //filestream_, buffer to store in, number of bytes to read (max)
+    unsigned char rx_buffer[ 256 ] = { 0 };
+    int rx_length = read( uart0_filestream_, ( void* )rx_buffer, 256 );    //filestream_, buffer to store in, number of bytes to read (max)
+    rx_buffer[rx_length] = '\0';
+    for( int i = 0; i < MAX_SENSORS; i++ )
+    {
+      cout << "Step 6." << i << endl;
+      dataArray_[ i ].x = 0;
+      dataArray_[ i ].y = 0;
+      dataArray_[ i ].z = 0;
+    }
+    
     if ( rx_length < 0 )
     {
       //An error occured (will occur if there are no bytes)
     }
     else if ( rx_length == 0 )
     {
-      //No data waiting
+      cout << "ERROR: No data waiting" << endl;//No data waiting
     }
     else
     {
       //Bytes received
       if( rx_buffer[ 0 ] == 0x0F ) // Hvis 0x0F er data-startbit'en
       {
-        data* dataArray = new data[16];
-        rx_buffer[rx_length] = '\0'; // Indsæt nulterminering når der ikke er mere data, efterfølgende pladser er ugyldige
-        for( int i = 1; rx_buffer[ i ] != '\0'; i + 4 ) // Kør til nulterminering
+        // Til test: Udskriv nøjagtig det array som er modtaget
+        for( int i = 0; ( i < MAX_RECEIVED_BYTES ) && ( rx_buffer[ i ] != 0 ); i++ )
+          cout << "[" << (int)rx_buffer[ i ] << "]";
+          
+        // Pak til data-struct
+        for( int i = 1; rx_buffer[ i ] != 0; i++ ) // Kør til nulterminering
         {
-          dataArray[ rx_buffer[ i ] ] = {       rx_buffer[ ( i + 1 ],
-                                                rx_buffer[ ( i + 2 ],
-                                                rx_buffer[ ( i + 3 ] }
+          if( i % 4  == 1 )
+          {
+            dataArray_[ rx_buffer[ i ] - 1 ].x = rx_buffer[ i + 1 ] - 1;
+            dataArray_[ rx_buffer[ i ] - 1 ].y = rx_buffer[ i + 2 ] - 1;
+            dataArray_[ rx_buffer[ i ] - 1 ].z = rx_buffer[ i + 3 ] - 1;
+          }
         }
-        sendData( dataArray ); // Send dataArray til rette modtager
+        //sendData( dataArray_ ); // Send dataArray_ til rette modtager
         // Modtageren får så en pointer til første plads, og hvert id ligger på tilsvarende plads i arrayet
+        
+        // Til test: Udskriv data-struct som pakket
+        for( int i = 0; i < MAX_SENSORS; i++ )
+        {
+          cout << endl << "ID: " << i << endl
+            << "x value: " << ( int )( dataArray_[ i ].x )
+            << ", y value: " << ( int )( dataArray_[ i ].y )
+            << ", z value: " << ( int )( dataArray_[ i ].z ) << endl;
+        }
+        
+        cout << endl << "----------------------------------------------" << endl << endl;
       }
       else if( rx_buffer[ 0 ] == 0xF0 ) // Hvis 0xF0 er preset-startbit'en
       {
-        sendData( rx_buffer[ 1 ];// Send preset til rette modtager
+        //sendData( rx_buffer[ 1 ] );// Send preset til rette modtager
       }
     }
   }

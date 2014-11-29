@@ -1,7 +1,8 @@
 //#include <pthread.h>    //For thread handling
 //#include "MsgQueue.hpp" //For event based programming
 
-#define RX_BUFFER_SIZE 100
+#define MAX_RECEIVED_BYTES 66
+#define MAX_SENSORS 16
 
 class Receiver
 {
@@ -19,10 +20,12 @@ private:
   
   struct data
   {
-    char x = 0;
-    char y = 0;
-    char z = 0;
+    char x;
+    char y;
+    char z;
   };
+  
+  data dataArray_[ MAX_SENSORS ];
   
   /*MsgQueue msgQ_( 10 );
   pthread_t btThr_;
