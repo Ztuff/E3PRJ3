@@ -47,7 +47,7 @@ int main()
 	AlsaAdapter alsaAdapter(3);
 	
 	/*** Klargør MidiModule ***/
-	MidiModule(&alsaAdapter, myList);
+	MidiModule myMidiModule(&alsaAdapter, myList);
 	
 	/******************************************* FUNCITON TEST ***********************************************/
 	
