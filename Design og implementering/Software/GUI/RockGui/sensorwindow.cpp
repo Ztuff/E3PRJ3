@@ -3,6 +3,7 @@
 #include "nysensorkonf.h"
 #include "redigersensorkonfi.h"
 #include "sletsensorkonf.h"
+#include "msghandling.h"
 
 SensorWindow::SensorWindow(QWidget *parent) :
     QWidget(parent),
@@ -20,6 +21,7 @@ SensorWindow::~SensorWindow()
 void SensorWindow::on_NySensorkon_clicked()
 {
     NySensorkonf *NSKWindow = new NySensorkonf;
+    sendMsgWReply();
     NSKWindow->show();
 }
 

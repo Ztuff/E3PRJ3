@@ -26,7 +26,7 @@
     <string>Indtast navn her</string>
    </property>
   </widget>
-  <widget class="QComboBox" name="comboBox">
+  <widget class="QComboBox" name="Sensordropdown">
    <property name="geometry">
     <rect>
      <x>20</x>
@@ -36,17 +36,17 @@
     </rect>
    </property>
   </widget>
-  <widget class="QComboBox" name="comboBox_2">
+  <widget class="QComboBox" name="MappingschemeDropdown">
    <property name="geometry">
     <rect>
      <x>20</x>
      <y>150</y>
-     <width>211</width>
+     <width>161</width>
      <height>21</height>
     </rect>
    </property>
   </widget>
-  <widget class="QComboBox" name="comboBox_3">
+  <widget class="QComboBox" name="MidiParameterDropdown">
    <property name="geometry">
     <rect>
      <x>240</x>
@@ -56,7 +56,7 @@
     </rect>
    </property>
   </widget>
-  <widget class="QComboBox" name="comboBox_4">
+  <widget class="QComboBox" name="LydpakkeDropdown">
    <property name="geometry">
     <rect>
      <x>240</x>
@@ -155,6 +155,19 @@
    </property>
    <property name="text">
     <string>Gem</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="NewMappingscheme">
+   <property name="geometry">
+    <rect>
+     <x>190</x>
+     <y>150</y>
+     <width>41</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>New</string>
    </property>
   </widget>
  </widget>

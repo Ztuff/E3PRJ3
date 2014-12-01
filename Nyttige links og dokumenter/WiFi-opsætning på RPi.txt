@@ -1,0 +1,31 @@
+Guide til opsætning af trådløst netværk på Raspberry Pi
+
+Følgende skal kun gøres én gang efter installation af Raspbian:
+
+Indtast i terminal:
+  sudo apt-get update
+  sudo apt-get install wicd-curses
+
+
+Følgende benyttes når der skal oprettes forbindelse til et nyt netværk:
+
+Indtast i terminal:
+  sudo wicd-curses
+
+Vælg det ønskede netværk med pil op/ned, og tryk på pil til højre for at redigere dets indstillinger.
+
+Vælg den korrekte type kryptering - på eduroam er det sandsynligvis WPA2-PEAP eller PEAP with TKIP/MSCHAPV2
+
+Indtast adgangskode og andre eventuelt ønskede indstillinger
+
+Tryk F10 for et gemme
+
+Tryk C (husk, case-sensitive) for at forbinde til det ønskede netværk
+
+[
+  Hvis forbindelsen ryger, skal den oprettes igen. Det burde stadig kunne lade sig gøre via kabel.
+  Opret forbindelse igen, og indtast "sudo wicd-curses" igen
+]
+
+Den trådløse IP-adresse fremgår nu nede i bundet af skærmen:
+  Connected to [WiFi-navn] at [signalstyrke]% (IP: [IP-adresse])

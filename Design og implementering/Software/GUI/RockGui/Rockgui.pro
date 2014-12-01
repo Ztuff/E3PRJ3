@@ -25,7 +25,8 @@ SOURCES += main.cpp\
     nysensorkonf.cpp \
     redigersensorkonfi.cpp \
     sletsensorkonf.cpp \
-    sensorliste.cpp
+    sensorliste.cpp \
+    msghandling.cpp
 
 HEADERS  += mainwindow.h \
     sensorwindow.h \
@@ -39,7 +40,9 @@ HEADERS  += mainwindow.h \
     nysensorkonf.h \
     redigersensorkonfi.h \
     sletsensorkonf.h \
-    sensorliste.h
+    sensorliste.h \
+    msghandling.h \
+    Controller.hpp
 
 FORMS    += mainwindow.ui \
     sensorwindow.ui \

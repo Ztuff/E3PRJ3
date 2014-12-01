@@ -1,6 +1,8 @@
 ﻿Hardwareopkobling:
-RXD - Pin 12[7]
-TXD - Pin 12[6]
+RXD (pin 2 fra venstre) - Pin 12[7]
+TXD (pin 3 fra venstre) - Pin 12[6]
+VCC (pin 1 fra højre) - 3,3V
+GND (pin 2 fra højre) - Ground
 Jumper3 - Pin 0[4] (HIGH)
 
 Softwareindstillinger:
@@ -20,3 +22,15 @@ SM,4 //Auto-connect DTR Mode - OBS hvis JP3 er SC connector den + Husk at sætte
 ST,60 //Sætter CMD tiden til 60 sek efter reboot VIGTIGT for adgang!
 
 Husk Jumper3 er reconnect pin
+
+
+BT enheder:
+
+HC-05
+98D331B07C6B
+
+
+
+Måske kommandoer:
+SQ,128 //Ved en evt disconnect rebooter modulet
+
