@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Kristian\AppData\Local\Temp\cclBSq2E.s 			page 1
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccD6wVVZ.s 			page 1
 
 
    1              		.cpu cortex-m0
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Kristian\AppData\Local\Temp\cclBSq2E.s 			page 1
   22:.\main.c      **** #define GYR2_ID 5
   23:.\main.c      **** #define FLE2_ID 6
   24:.\main.c      **** #define	PRX2_ID 7
-ARM GAS  C:\Users\Kristian\AppData\Local\Temp\cclBSq2E.s 			page 2
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccD6wVVZ.s 			page 2
 
 
   25:.\main.c      **** #define ACC3_ID 8
@@ -73,7 +73,7 @@ ARM GAS  C:\Users\Kristian\AppData\Local\Temp\cclBSq2E.s 			page 1
   34:.\main.c      **** 
   35:.\main.c      **** #define MAXREGNUM 96 //Maks antal registre at læse fra 
   36:.\main.c      **** #define MAXSENSDATA 16 // Maks antal som skal fyldes i array'et som sendes via BT
-  37:.\main.c      **** #define START_SENSDATA 100 // Start byte, 
+  37:.\main.c      **** #define START_SENSDATA 0x0F // Start byte, 
   38:.\main.c      **** #define DEFAULT_DATA -1 // Default data i array sættes til 0. 
   39:.\main.c      **** //Accelerometer ADXL345 defines
   40:.\main.c      **** #define ACCEL_ADDRESS 0x53 // jumperen sættes til GND 
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Kristian\AppData\Local\Temp\cclBSq2E.s 			page 1
   79:.\main.c      **** void convSensData();
   80:.\main.c      **** void handleI2CError();
   81:.\main.c      ****  
-ARM GAS  C:\Users\Kristian\AppData\Local\Temp\cclBSq2E.s 			page 3
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccD6wVVZ.s 			page 3
 
 
   82:.\main.c      **** CY_ISR(MY_ISR)
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Kristian\AppData\Local\Temp\cclBSq2E.s 			page 1
   95:.\main.c      **** 		readAllSensors();
   75              		.loc 1 95 0
   76 0010 FFF7FEFF 		bl	readAllSensors
-ARM GAS  C:\Users\Kristian\AppData\Local\Temp\cclBSq2E.s 			page 4
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccD6wVVZ.s 			page 4
 
 
   96:.\main.c      ****         
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\Kristian\AppData\Local\Temp\cclBSq2E.s 			page 1
  120:.\main.c      **** 	initADXL345();	//Accellerometer
  107              		.loc 1 120 0
  108 0004 FFF7FEFF 		bl	initADXL345
-ARM GAS  C:\Users\Kristian\AppData\Local\Temp\cclBSq2E.s 			page 5
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccD6wVVZ.s 			page 5
 
 
  121:.\main.c      **** 	// ..osv
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\Kristian\AppData\Local\Temp\cclBSq2E.s 			page 1
  156 0028 131C     		mov	r3, r2
  157 002a 5B00     		lsl	r3, r3, #1
  158 002c 9B18     		add	r3, r3, r2
-ARM GAS  C:\Users\Kristian\AppData\Local\Temp\cclBSq2E.s 			page 6
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccD6wVVZ.s 			page 6
 
 
  159 002e 9B00     		lsl	r3, r3, #2
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\Kristian\AppData\Local\Temp\cclBSq2E.s 			page 1
  205              		.loc 1 135 0
  206              		.cfi_startproc
  207 0000 80B5     		push	{r7, lr}
-ARM GAS  C:\Users\Kristian\AppData\Local\Temp\cclBSq2E.s 			page 7
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccD6wVVZ.s 			page 7
 
 
  208              	.LCFI9:
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\Kristian\AppData\Local\Temp\cclBSq2E.s 			page 1
  253              		.align	2
  254              		.global	readI2C
  255              		.code	16
-ARM GAS  C:\Users\Kristian\AppData\Local\Temp\cclBSq2E.s 			page 8
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccD6wVVZ.s 			page 8
 
 
  256              		.thumb_func
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\Kristian\AppData\Local\Temp\cclBSq2E.s 			page 1
  302 0040 22D1     		bne	.L14
  151:.\main.c      **** 		{
  152:.\main.c      ****             if(I2C_1_I2CMasterSendRestart(sensArray[numOfReg][0], I2C_1_I2C_READ_XFER_MODE) == I2C_
-ARM GAS  C:\Users\Kristian\AppData\Local\Temp\cclBSq2E.s 			page 9
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccD6wVVZ.s 			page 9
 
 
  303              		.loc 1 152 0
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\Kristian\AppData\Local\Temp\cclBSq2E.s 			page 1
  346              	.L16:
  347              		.align	2
  348              	.L15:
-ARM GAS  C:\Users\Kristian\AppData\Local\Temp\cclBSq2E.s 			page 10
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccD6wVVZ.s 			page 10
 
 
  349 0090 00000000 		.word	sensArray
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\Kristian\AppData\Local\Temp\cclBSq2E.s 			page 1
  392 0000 80B5     		push	{r7, lr}
  393              	.LCFI17:
  394              		.cfi_def_cfa_offset 8
-ARM GAS  C:\Users\Kristian\AppData\Local\Temp\cclBSq2E.s 			page 11
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccD6wVVZ.s 			page 11
 
 
  395              		.cfi_offset 7, -8
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\Kristian\AppData\Local\Temp\cclBSq2E.s 			page 1
  182:.\main.c      **** 	
  183:.\main.c      **** 	//Opsætter til I2C 
  184:.\main.c      **** 	if(I2C_1_I2CMasterSendStart(ACCEL_ADDRESS, I2C_1_I2C_WRITE_XFER_MODE) == I2C_1_I2C_MSTR_NO_ERROR /
-ARM GAS  C:\Users\Kristian\AppData\Local\Temp\cclBSq2E.s 			page 12
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccD6wVVZ.s 			page 12
 
 
  442              		.loc 1 184 0
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\Kristian\AppData\Local\Temp\cclBSq2E.s 			page 1
  488              		.cfi_def_cfa_register 7
  193:.\main.c      **** 	// Fylder ADXL345 ind i sensor array'et. 
  194:.\main.c      **** 	setSensArray(GYRO_ADDRESS, GYRO_XOUT_H, DEFAULT_DATA);
-ARM GAS  C:\Users\Kristian\AppData\Local\Temp\cclBSq2E.s 			page 13
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccD6wVVZ.s 			page 13
 
 
  489              		.loc 1 194 0
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\Kristian\AppData\Local\Temp\cclBSq2E.s 			page 1
  535 0060 031C     		mov	r3, r0
  536 0062 002B     		cmp	r3, #0
  537 0064 01D1     		bne	.L20
-ARM GAS  C:\Users\Kristian\AppData\Local\Temp\cclBSq2E.s 			page 14
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccD6wVVZ.s 			page 14
 
 
  203:.\main.c      **** 	handleI2CError();
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\Kristian\AppData\Local\Temp\cclBSq2E.s 			page 1
  581 001a 0E33     		add	r3, r3, #14
  582 001c 1B88     		ldrh	r3, [r3]
  583 001e D318     		add	r3, r2, r3
-ARM GAS  C:\Users\Kristian\AppData\Local\Temp\cclBSq2E.s 			page 15
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccD6wVVZ.s 			page 15
 
 
  584 0020 9AB2     		uxth	r2, r3
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\Kristian\AppData\Local\Temp\cclBSq2E.s 			page 1
  226:.\main.c      ****     /*char ADXL345_data[32];
  227:.\main.c      ****     sprintf(ADXL345_data, "\n\rx is: %d, y is: %d, z is: %d\n\r", x, y, z);
  228:.\main.c      ****     UART_1_UartPutString(ADXL345_data); */
-ARM GAS  C:\Users\Kristian\AppData\Local\Temp\cclBSq2E.s 			page 16
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccD6wVVZ.s 			page 16
 
 
  229:.\main.c      ****     
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\Kristian\AppData\Local\Temp\cclBSq2E.s 			page 1
  675 00c2 1A70     		strb	r2, [r3]
  234:.\main.c      ****     
  235:.\main.c      ****     setdataArray(ACC1_ID, x1, y1, z1);
-ARM GAS  C:\Users\Kristian\AppData\Local\Temp\cclBSq2E.s 			page 17
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccD6wVVZ.s 			page 17
 
 
  676              		.loc 1 235 0
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\Kristian\AppData\Local\Temp\cclBSq2E.s 			page 1
  721 0008 B960     		str	r1, [r7, #8]
  722 000a 7A60     		str	r2, [r7, #4]
  723 000c 3B60     		str	r3, [r7]
-ARM GAS  C:\Users\Kristian\AppData\Local\Temp\cclBSq2E.s 			page 18
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccD6wVVZ.s 			page 18
 
 
  245:.\main.c      ****     int i;
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\Kristian\AppData\Local\Temp\cclBSq2E.s 			page 1
  251:.\main.c      ****     for(i = 4; i<MAXSENSDATA; i++) //Sætter de resterende pladser i array'et til 1. 
  768              		.loc 1 251 0 is_stmt 0 discriminator 1
  769 0054 7B69     		ldr	r3, [r7, #20]
-ARM GAS  C:\Users\Kristian\AppData\Local\Temp\cclBSq2E.s 			page 19
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccD6wVVZ.s 			page 19
 
 
  770 0056 0F2B     		cmp	r3, #15
@@ -1131,33 +1131,33 @@ ARM GAS  C:\Users\Kristian\AppData\Local\Temp\cclBSq2E.s 			page 1
  805              		.loc 1 265 0
  806 0006 3B1C     		mov	r3, r7
  807 0008 1833     		add	r3, r3, #24
- 808 000a 6422     		mov	r2, #100
+ 808 000a 0F22     		mov	r2, #15
  809 000c 1A70     		strb	r2, [r3]
- 266:.\main.c      ****     accelArray[1] = dataArray[0];
+ 266:.\main.c      ****     accelArray[1] = dataArray[0];   // ID 0
  810              		.loc 1 266 0
  811 000e 384B     		ldr	r3, .L34
  812 0010 1A78     		ldrb	r2, [r3]
  813 0012 3B1C     		mov	r3, r7
-ARM GAS  C:\Users\Kristian\AppData\Local\Temp\cclBSq2E.s 			page 20
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccD6wVVZ.s 			page 20
 
 
  814 0014 1833     		add	r3, r3, #24
  815 0016 5A70     		strb	r2, [r3, #1]
- 267:.\main.c      ****     accelArray[2] = dataArray[1];
+ 267:.\main.c      ****     accelArray[2] = dataArray[1];   // x
  816              		.loc 1 267 0
  817 0018 354B     		ldr	r3, .L34
  818 001a 5A78     		ldrb	r2, [r3, #1]
  819 001c 3B1C     		mov	r3, r7
  820 001e 1833     		add	r3, r3, #24
  821 0020 9A70     		strb	r2, [r3, #2]
- 268:.\main.c      ****     accelArray[3] = dataArray[2];
+ 268:.\main.c      ****     accelArray[3] = dataArray[2];   // y
  822              		.loc 1 268 0
  823 0022 334B     		ldr	r3, .L34
  824 0024 9A78     		ldrb	r2, [r3, #2]
  825 0026 3B1C     		mov	r3, r7
  826 0028 1833     		add	r3, r3, #24
  827 002a DA70     		strb	r2, [r3, #3]
- 269:.\main.c      ****     accelArray[4] = dataArray[3];
+ 269:.\main.c      ****     accelArray[4] = dataArray[3];   // z
  828              		.loc 1 269 0
  829 002c 304B     		ldr	r3, .L34
  830 002e DA78     		ldrb	r2, [r3, #3]
@@ -1175,30 +1175,30 @@ ARM GAS  C:\Users\Kristian\AppData\Local\Temp\cclBSq2E.s 			page 1
  839              		.loc 1 272 0
  840 003e 3B1C     		mov	r3, r7
  841 0040 1033     		add	r3, r3, #16
- 842 0042 6422     		mov	r2, #100
+ 842 0042 0F22     		mov	r2, #15
  843 0044 1A70     		strb	r2, [r3]
- 273:.\main.c      ****     gyroArray[1] = 1;
+ 273:.\main.c      ****     gyroArray[1] = 1+1;             // ID 1
  844              		.loc 1 273 0
  845 0046 3B1C     		mov	r3, r7
  846 0048 1033     		add	r3, r3, #16
- 847 004a 0122     		mov	r2, #1
+ 847 004a 0222     		mov	r2, #2
  848 004c 5A70     		strb	r2, [r3, #1]
- 274:.\main.c      ****     gyroArray[2] = 1;
+ 274:.\main.c      ****     gyroArray[2] = 1;               // x
  849              		.loc 1 274 0
  850 004e 3B1C     		mov	r3, r7
  851 0050 1033     		add	r3, r3, #16
  852 0052 0122     		mov	r2, #1
  853 0054 9A70     		strb	r2, [r3, #2]
- 275:.\main.c      ****     gyroArray[3] = 1;
+ 275:.\main.c      ****     gyroArray[3] = 1;               // y
  854              		.loc 1 275 0
  855 0056 3B1C     		mov	r3, r7
  856 0058 1033     		add	r3, r3, #16
  857 005a 0122     		mov	r2, #1
  858 005c DA70     		strb	r2, [r3, #3]
- 276:.\main.c      ****     gyroArray[4] = 1;
+ 276:.\main.c      ****     gyroArray[4] = 1;               // z
  859              		.loc 1 276 0
  860 005e 3B1C     		mov	r3, r7
-ARM GAS  C:\Users\Kristian\AppData\Local\Temp\cclBSq2E.s 			page 21
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccD6wVVZ.s 			page 21
 
 
  861 0060 1033     		add	r3, r3, #16
@@ -1215,27 +1215,27 @@ ARM GAS  C:\Users\Kristian\AppData\Local\Temp\cclBSq2E.s 			page 1
  869              		.loc 1 279 0
  870 006e 3B1C     		mov	r3, r7
  871 0070 0833     		add	r3, r3, #8
- 872 0072 6422     		mov	r2, #100
+ 872 0072 0F22     		mov	r2, #15
  873 0074 1A70     		strb	r2, [r3]
- 280:.\main.c      ****     proxArray[1] = 1;
+ 280:.\main.c      ****     proxArray[1] = 2+1;             // ID 2
  874              		.loc 1 280 0
  875 0076 3B1C     		mov	r3, r7
  876 0078 0833     		add	r3, r3, #8
- 877 007a 0122     		mov	r2, #1
+ 877 007a 0322     		mov	r2, #3
  878 007c 5A70     		strb	r2, [r3, #1]
- 281:.\main.c      ****     proxArray[2] = 1;
+ 281:.\main.c      ****     proxArray[2] = 1;               // x
  879              		.loc 1 281 0
  880 007e 3B1C     		mov	r3, r7
  881 0080 0833     		add	r3, r3, #8
  882 0082 0122     		mov	r2, #1
  883 0084 9A70     		strb	r2, [r3, #2]
- 282:.\main.c      ****     proxArray[3] = 1;
+ 282:.\main.c      ****     proxArray[3] = 1;               // y
  884              		.loc 1 282 0
  885 0086 3B1C     		mov	r3, r7
  886 0088 0833     		add	r3, r3, #8
  887 008a 0122     		mov	r2, #1
  888 008c DA70     		strb	r2, [r3, #3]
- 283:.\main.c      ****     proxArray[4] = 1;
+ 283:.\main.c      ****     proxArray[4] = 1;               // z
  889              		.loc 1 283 0
  890 008e 3B1C     		mov	r3, r7
  891 0090 0833     		add	r3, r3, #8
@@ -1251,27 +1251,27 @@ ARM GAS  C:\Users\Kristian\AppData\Local\Temp\cclBSq2E.s 			page 1
  286:.\main.c      ****     flexArray[0] = START_SENSDATA;
  899              		.loc 1 286 0
  900 009e 3B1C     		mov	r3, r7
- 901 00a0 6422     		mov	r2, #100
+ 901 00a0 0F22     		mov	r2, #15
  902 00a2 1A70     		strb	r2, [r3]
- 287:.\main.c      ****     flexArray[1] = 1;
+ 287:.\main.c      ****     flexArray[1] = 3+1;             // ID 3
  903              		.loc 1 287 0
  904 00a4 3B1C     		mov	r3, r7
- 905 00a6 0122     		mov	r2, #1
+ 905 00a6 0422     		mov	r2, #4
  906 00a8 5A70     		strb	r2, [r3, #1]
-ARM GAS  C:\Users\Kristian\AppData\Local\Temp\cclBSq2E.s 			page 22
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccD6wVVZ.s 			page 22
 
 
- 288:.\main.c      ****     flexArray[2] = 1;
+ 288:.\main.c      ****     flexArray[2] = 1;               // x
  907              		.loc 1 288 0
  908 00aa 3B1C     		mov	r3, r7
  909 00ac 0122     		mov	r2, #1
  910 00ae 9A70     		strb	r2, [r3, #2]
- 289:.\main.c      ****     flexArray[3] = 1;
+ 289:.\main.c      ****     flexArray[3] = 1;               // y
  911              		.loc 1 289 0
  912 00b0 3B1C     		mov	r3, r7
  913 00b2 0122     		mov	r2, #1
  914 00b4 DA70     		strb	r2, [r3, #3]
- 290:.\main.c      ****     flexArray[4] = 1;
+ 290:.\main.c      ****     flexArray[4] = 1;               // z
  915              		.loc 1 290 0
  916 00b6 3B1C     		mov	r3, r7
  917 00b8 0122     		mov	r2, #1
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\Kristian\AppData\Local\Temp\cclBSq2E.s 			page 1
  950 00f0 00000000 		.word	dataArray
  951              		.cfi_endproc
  952              	.LFE44:
-ARM GAS  C:\Users\Kristian\AppData\Local\Temp\cclBSq2E.s 			page 23
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccD6wVVZ.s 			page 23
 
 
  953              		.size	senddataArrays, .-senddataArrays
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\Kristian\AppData\Local\Temp\cclBSq2E.s 			page 1
  996 0002 00AF     		add	r7, sp, #0
  997              	.LCFI33:
  998              		.cfi_def_cfa_register 7
-ARM GAS  C:\Users\Kristian\AppData\Local\Temp\cclBSq2E.s 			page 24
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccD6wVVZ.s 			page 24
 
 
  310:.\main.c      ****     I2C_1_I2CMasterSendStop();	 
@@ -1403,10 +1403,10 @@ ARM GAS  C:\Users\Kristian\AppData\Local\Temp\cclBSq2E.s 			page 1
  1016 0006 00000000 		.4byte	.Ldebug_abbrev0
  1017 000a 04       		.byte	0x4
  1018 000b 01       		.uleb128 0x1
- 1019 000c A5010000 		.4byte	.LASF44
+ 1019 000c 0A020000 		.4byte	.LASF44
  1020 0010 01       		.byte	0x1
- 1021 0011 A8000000 		.4byte	.LASF45
- 1022 0015 3D020000 		.4byte	.LASF46
+ 1021 0011 17010000 		.4byte	.LASF45
+ 1022 0015 7A000000 		.4byte	.LASF46
  1023 0019 00000000 		.4byte	.Ldebug_ranges0+0
  1024 001d 00000000 		.4byte	0
  1025 0021 00000000 		.4byte	0
@@ -1414,20 +1414,20 @@ ARM GAS  C:\Users\Kristian\AppData\Local\Temp\cclBSq2E.s 			page 1
  1027 0029 02       		.uleb128 0x2
  1028 002a 01       		.byte	0x1
  1029 002b 06       		.byte	0x6
- 1030 002c 15020000 		.4byte	.LASF0
+ 1030 002c 7A020000 		.4byte	.LASF0
  1031 0030 03       		.uleb128 0x3
- 1032 0031 40010000 		.4byte	.LASF9
+ 1032 0031 B2010000 		.4byte	.LASF9
  1033 0035 02       		.byte	0x2
  1034 0036 2A       		.byte	0x2a
  1035 0037 3B000000 		.4byte	0x3b
  1036 003b 02       		.uleb128 0x2
  1037 003c 01       		.byte	0x1
  1038 003d 08       		.byte	0x8
- 1039 003e 7A000000 		.4byte	.LASF1
+ 1039 003e E9000000 		.4byte	.LASF1
  1040 0042 02       		.uleb128 0x2
  1041 0043 02       		.byte	0x2
  1042 0044 05       		.byte	0x5
- 1043 0045 8C010000 		.4byte	.LASF2
+ 1043 0045 F1010000 		.4byte	.LASF2
  1044 0049 02       		.uleb128 0x2
  1045 004a 02       		.byte	0x2
  1046 004b 07       		.byte	0x7
@@ -1435,14 +1435,14 @@ ARM GAS  C:\Users\Kristian\AppData\Local\Temp\cclBSq2E.s 			page 1
  1048 0050 02       		.uleb128 0x2
  1049 0051 04       		.byte	0x4
  1050 0052 05       		.byte	0x5
- 1051 0053 03020000 		.4byte	.LASF4
+ 1051 0053 68020000 		.4byte	.LASF4
  1052 0057 02       		.uleb128 0x2
  1053 0058 04       		.byte	0x4
-ARM GAS  C:\Users\Kristian\AppData\Local\Temp\cclBSq2E.s 			page 25
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccD6wVVZ.s 			page 25
 
 
  1054 0059 07       		.byte	0x7
- 1055 005a D1000000 		.4byte	.LASF5
+ 1055 005a 36010000 		.4byte	.LASF5
  1056 005e 02       		.uleb128 0x2
  1057 005f 08       		.byte	0x8
  1058 0060 05       		.byte	0x5
@@ -1450,7 +1450,7 @@ ARM GAS  C:\Users\Kristian\AppData\Local\Temp\cclBSq2E.s 			page 1
  1060 0065 02       		.uleb128 0x2
  1061 0066 08       		.byte	0x8
  1062 0067 07       		.byte	0x7
- 1063 0068 04010000 		.4byte	.LASF7
+ 1063 0068 76010000 		.4byte	.LASF7
  1064 006c 04       		.uleb128 0x4
  1065 006d 04       		.byte	0x4
  1066 006e 05       		.byte	0x5
@@ -1458,14 +1458,14 @@ ARM GAS  C:\Users\Kristian\AppData\Local\Temp\cclBSq2E.s 			page 1
  1068 0073 02       		.uleb128 0x2
  1069 0074 04       		.byte	0x4
  1070 0075 07       		.byte	0x7
- 1071 0076 F7000000 		.4byte	.LASF8
+ 1071 0076 5C010000 		.4byte	.LASF8
  1072 007a 03       		.uleb128 0x3
  1073 007b 4D000000 		.4byte	.LASF10
  1074 007f 03       		.byte	0x3
  1075 0080 5B       		.byte	0x5b
  1076 0081 3B000000 		.4byte	0x3b
  1077 0085 03       		.uleb128 0x3
- 1078 0086 97000000 		.4byte	.LASF11
+ 1078 0086 06010000 		.4byte	.LASF11
  1079 008a 03       		.byte	0x3
  1080 008b 5F       		.byte	0x5f
  1081 008c 42000000 		.4byte	0x42
@@ -1476,15 +1476,15 @@ ARM GAS  C:\Users\Kristian\AppData\Local\Temp\cclBSq2E.s 			page 1
  1086 0097 02       		.uleb128 0x2
  1087 0098 08       		.byte	0x8
  1088 0099 04       		.byte	0x4
- 1089 009a 32010000 		.4byte	.LASF13
+ 1089 009a A4010000 		.4byte	.LASF13
  1090 009e 02       		.uleb128 0x2
  1091 009f 01       		.byte	0x1
  1092 00a0 08       		.byte	0x8
- 1093 00a1 5B010000 		.4byte	.LASF14
+ 1093 00a1 CD010000 		.4byte	.LASF14
  1094 00a5 02       		.uleb128 0x2
  1095 00a6 04       		.byte	0x4
  1096 00a7 07       		.byte	0x7
- 1097 00a8 52010000 		.4byte	.LASF15
+ 1097 00a8 C4010000 		.4byte	.LASF15
  1098 00ac 05       		.uleb128 0x5
  1099 00ad 01       		.byte	0x1
  1100 00ae 19000000 		.4byte	.LASF16
@@ -1497,8 +1497,8 @@ ARM GAS  C:\Users\Kristian\AppData\Local\Temp\cclBSq2E.s 			page 1
  1107 00c1 01       		.byte	0x1
  1108 00c2 06       		.uleb128 0x6
  1109 00c3 01       		.byte	0x1
- 1110 00c4 F2000000 		.4byte	.LASF17
-ARM GAS  C:\Users\Kristian\AppData\Local\Temp\cclBSq2E.s 			page 26
+ 1110 00c4 57010000 		.4byte	.LASF17
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccD6wVVZ.s 			page 26
 
 
  1111 00c8 01       		.byte	0x1
@@ -1510,7 +1510,7 @@ ARM GAS  C:\Users\Kristian\AppData\Local\Temp\cclBSq2E.s 			page 1
  1117 00da 01       		.byte	0x1
  1118 00db 07       		.uleb128 0x7
  1119 00dc 01       		.byte	0x1
- 1120 00dd C5000000 		.4byte	.LASF25
+ 1120 00dd 2A010000 		.4byte	.LASF25
  1121 00e1 01       		.byte	0x1
  1122 00e2 74       		.byte	0x74
  1123 00e3 00000000 		.4byte	.LFB35
@@ -1519,7 +1519,7 @@ ARM GAS  C:\Users\Kristian\AppData\Local\Temp\cclBSq2E.s 			page 1
  1126 00ef 01       		.byte	0x1
  1127 00f0 08       		.uleb128 0x8
  1128 00f1 01       		.byte	0x1
- 1129 00f2 60010000 		.4byte	.LASF21
+ 1129 00f2 69010000 		.4byte	.LASF21
  1130 00f6 01       		.byte	0x1
  1131 00f7 7C       		.byte	0x7c
  1132 00f8 01       		.byte	0x1
@@ -1537,7 +1537,7 @@ ARM GAS  C:\Users\Kristian\AppData\Local\Temp\cclBSq2E.s 			page 1
  1144 0116 91       		.byte	0x91
  1145 0117 74       		.sleb128 -12
  1146 0118 09       		.uleb128 0x9
- 1147 0119 76010000 		.4byte	.LASF19
+ 1147 0119 DB010000 		.4byte	.LASF19
  1148 011d 01       		.byte	0x1
  1149 011e 7C       		.byte	0x7c
  1150 011f 6C000000 		.4byte	0x6c
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\Kristian\AppData\Local\Temp\cclBSq2E.s 			page 1
  1165 0137 53000000 		.4byte	.LASF22
  1166 013b 01       		.byte	0x1
  1167 013c 86       		.byte	0x86
-ARM GAS  C:\Users\Kristian\AppData\Local\Temp\cclBSq2E.s 			page 27
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccD6wVVZ.s 			page 27
 
 
  1168 013d 6C000000 		.4byte	0x6c
@@ -1568,7 +1568,7 @@ ARM GAS  C:\Users\Kristian\AppData\Local\Temp\cclBSq2E.s 			page 1
  1172 014d 01       		.byte	0x1
  1173 014e 61010000 		.4byte	0x161
  1174 0152 0B       		.uleb128 0xb
- 1175 0153 2D020000 		.4byte	.LASF23
+ 1175 0153 92020000 		.4byte	.LASF23
  1176 0157 01       		.byte	0x1
  1177 0158 88       		.byte	0x88
  1178 0159 6C000000 		.4byte	0x6c
@@ -1589,7 +1589,7 @@ ARM GAS  C:\Users\Kristian\AppData\Local\Temp\cclBSq2E.s 			page 1
  1193 017a 01       		.byte	0x1
  1194 017b 9C010000 		.4byte	0x19c
  1195 017f 09       		.uleb128 0x9
- 1196 0180 2D020000 		.4byte	.LASF23
+ 1196 0180 92020000 		.4byte	.LASF23
  1197 0184 01       		.byte	0x1
  1198 0185 90       		.byte	0x90
  1199 0186 6C000000 		.4byte	0x6c
@@ -1597,7 +1597,7 @@ ARM GAS  C:\Users\Kristian\AppData\Local\Temp\cclBSq2E.s 			page 1
  1201 018b 91       		.byte	0x91
  1202 018c 6C       		.sleb128 -20
  1203 018d 0B       		.uleb128 0xb
- 1204 018e FB010000 		.4byte	.LASF24
+ 1204 018e 60020000 		.4byte	.LASF24
  1205 0192 01       		.byte	0x1
  1206 0193 92       		.byte	0x92
  1207 0194 7A000000 		.4byte	0x7a
@@ -1607,7 +1607,7 @@ ARM GAS  C:\Users\Kristian\AppData\Local\Temp\cclBSq2E.s 			page 1
  1211 019b 00       		.byte	0
  1212 019c 07       		.uleb128 0x7
  1213 019d 01       		.byte	0x1
- 1214 019e 0C020000 		.4byte	.LASF26
+ 1214 019e 71020000 		.4byte	.LASF26
  1215 01a2 01       		.byte	0x1
  1216 01a3 A5       		.byte	0xa5
  1217 01a4 00000000 		.4byte	.LFB39
@@ -1616,9 +1616,9 @@ ARM GAS  C:\Users\Kristian\AppData\Local\Temp\cclBSq2E.s 			page 1
  1220 01b0 01       		.byte	0x1
  1221 01b1 07       		.uleb128 0x7
  1222 01b2 01       		.byte	0x1
- 1223 01b3 21020000 		.4byte	.LASF27
+ 1223 01b3 86020000 		.4byte	.LASF27
  1224 01b7 01       		.byte	0x1
-ARM GAS  C:\Users\Kristian\AppData\Local\Temp\cclBSq2E.s 			page 28
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccD6wVVZ.s 			page 28
 
 
  1225 01b8 AD       		.byte	0xad
@@ -1637,7 +1637,7 @@ ARM GAS  C:\Users\Kristian\AppData\Local\Temp\cclBSq2E.s 			page 1
  1238 01da 01       		.byte	0x1
  1239 01db 0D       		.uleb128 0xd
  1240 01dc 01       		.byte	0x1
- 1241 01dd EE010000 		.4byte	.LASF33
+ 1241 01dd 53020000 		.4byte	.LASF33
  1242 01e1 01       		.byte	0x1
  1243 01e2 CE       		.byte	0xce
  1244 01e3 00000000 		.4byte	.LFB42
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\Kristian\AppData\Local\Temp\cclBSq2E.s 			page 1
  1279 0223 91       		.byte	0x91
  1280 0224 71       		.sleb128 -15
  1281 0225 0E       		.uleb128 0xe
-ARM GAS  C:\Users\Kristian\AppData\Local\Temp\cclBSq2E.s 			page 29
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccD6wVVZ.s 			page 29
 
 
  1282 0226 793100   		.ascii	"y1\000"
@@ -1699,7 +1699,7 @@ ARM GAS  C:\Users\Kristian\AppData\Local\Temp\cclBSq2E.s 			page 1
  1297 023f 00       		.byte	0
  1298 0240 08       		.uleb128 0x8
  1299 0241 01       		.byte	0x1
- 1300 0242 25010000 		.4byte	.LASF29
+ 1300 0242 97010000 		.4byte	.LASF29
  1301 0246 01       		.byte	0x1
  1302 0247 F3       		.byte	0xf3
  1303 0248 01       		.byte	0x1
@@ -1717,7 +1717,7 @@ ARM GAS  C:\Users\Kristian\AppData\Local\Temp\cclBSq2E.s 			page 1
  1315 0265 91       		.byte	0x91
  1316 0266 6C       		.sleb128 -20
  1317 0267 09       		.uleb128 0x9
- 1318 0268 36020000 		.4byte	.LASF30
+ 1318 0268 9B020000 		.4byte	.LASF30
  1319 026c 01       		.byte	0x1
  1320 026d F3       		.byte	0xf3
  1321 026e 6C000000 		.4byte	0x6c
@@ -1725,7 +1725,7 @@ ARM GAS  C:\Users\Kristian\AppData\Local\Temp\cclBSq2E.s 			page 1
  1323 0273 91       		.byte	0x91
  1324 0274 68       		.sleb128 -24
  1325 0275 09       		.uleb128 0x9
- 1326 0276 85010000 		.4byte	.LASF31
+ 1326 0276 EA010000 		.4byte	.LASF31
  1327 027a 01       		.byte	0x1
  1328 027b F3       		.byte	0xf3
  1329 027c 6C000000 		.4byte	0x6c
@@ -1733,12 +1733,12 @@ ARM GAS  C:\Users\Kristian\AppData\Local\Temp\cclBSq2E.s 			page 1
  1331 0281 91       		.byte	0x91
  1332 0282 64       		.sleb128 -28
  1333 0283 09       		.uleb128 0x9
- 1334 0284 39010000 		.4byte	.LASF32
+ 1334 0284 AB010000 		.4byte	.LASF32
  1335 0288 01       		.byte	0x1
  1336 0289 F3       		.byte	0xf3
  1337 028a 6C000000 		.4byte	0x6c
  1338 028e 02       		.byte	0x2
-ARM GAS  C:\Users\Kristian\AppData\Local\Temp\cclBSq2E.s 			page 30
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccD6wVVZ.s 			page 30
 
 
  1339 028f 91       		.byte	0x91
@@ -1754,7 +1754,7 @@ ARM GAS  C:\Users\Kristian\AppData\Local\Temp\cclBSq2E.s 			page 1
  1349 029d 00       		.byte	0
  1350 029e 10       		.uleb128 0x10
  1351 029f 01       		.byte	0x1
- 1352 02a0 88000000 		.4byte	.LASF34
+ 1352 02a0 F7000000 		.4byte	.LASF34
  1353 02a4 01       		.byte	0x1
  1354 02a5 0201     		.2byte	0x102
  1355 02a7 00000000 		.4byte	.LFB44
@@ -1763,7 +1763,7 @@ ARM GAS  C:\Users\Kristian\AppData\Local\Temp\cclBSq2E.s 			page 1
  1358 02b3 01       		.byte	0x1
  1359 02b4 F5020000 		.4byte	0x2f5
  1360 02b8 11       		.uleb128 0x11
- 1361 02b9 9D000000 		.4byte	.LASF35
+ 1361 02b9 0C010000 		.4byte	.LASF35
  1362 02bd 01       		.byte	0x1
  1363 02be 0401     		.2byte	0x104
  1364 02c0 F5020000 		.4byte	0x2f5
@@ -1771,7 +1771,7 @@ ARM GAS  C:\Users\Kristian\AppData\Local\Temp\cclBSq2E.s 			page 1
  1366 02c5 91       		.byte	0x91
  1367 02c6 70       		.sleb128 -16
  1368 02c7 11       		.uleb128 0x11
- 1369 02c8 1B010000 		.4byte	.LASF36
+ 1369 02c8 8D010000 		.4byte	.LASF36
  1370 02cc 01       		.byte	0x1
  1371 02cd 0501     		.2byte	0x105
  1372 02cf F5020000 		.4byte	0x2f5
@@ -1787,7 +1787,7 @@ ARM GAS  C:\Users\Kristian\AppData\Local\Temp\cclBSq2E.s 			page 1
  1382 02e3 91       		.byte	0x91
  1383 02e4 60       		.sleb128 -32
  1384 02e5 11       		.uleb128 0x11
- 1385 02e6 BB000000 		.4byte	.LASF38
+ 1385 02e6 20010000 		.4byte	.LASF38
  1386 02ea 01       		.byte	0x1
  1387 02eb 0701     		.2byte	0x107
  1388 02ed F5020000 		.4byte	0x2f5
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\Kristian\AppData\Local\Temp\cclBSq2E.s 			page 1
  1393 02f5 12       		.uleb128 0x12
  1394 02f6 9E000000 		.4byte	0x9e
  1395 02fa 05030000 		.4byte	0x305
-ARM GAS  C:\Users\Kristian\AppData\Local\Temp\cclBSq2E.s 			page 31
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccD6wVVZ.s 			page 31
 
 
  1396 02fe 13       		.uleb128 0x13
@@ -1807,7 +1807,7 @@ ARM GAS  C:\Users\Kristian\AppData\Local\Temp\cclBSq2E.s 			page 1
  1399 0304 00       		.byte	0
  1400 0305 14       		.uleb128 0x14
  1401 0306 01       		.byte	0x1
- 1402 0307 6D010000 		.4byte	.LASF39
+ 1402 0307 D2010000 		.4byte	.LASF39
  1403 030b 01       		.byte	0x1
  1404 030c 2E01     		.2byte	0x12e
  1405 030e 00000000 		.4byte	.LFB45
@@ -1816,7 +1816,7 @@ ARM GAS  C:\Users\Kristian\AppData\Local\Temp\cclBSq2E.s 			page 1
  1408 031a 01       		.byte	0x1
  1409 031b 14       		.uleb128 0x14
  1410 031c 01       		.byte	0x1
- 1411 031d E3000000 		.4byte	.LASF40
+ 1411 031d 48010000 		.4byte	.LASF40
  1412 0321 01       		.byte	0x1
  1413 0322 3401     		.2byte	0x134
  1414 0324 00000000 		.4byte	.LFB46
@@ -1824,7 +1824,7 @@ ARM GAS  C:\Users\Kristian\AppData\Local\Temp\cclBSq2E.s 			page 1
  1416 032c 84020000 		.4byte	.LLST13
  1417 0330 01       		.byte	0x1
  1418 0331 15       		.uleb128 0x15
- 1419 0332 96010000 		.4byte	.LASF41
+ 1419 0332 FB010000 		.4byte	.LASF41
  1420 0336 01       		.byte	0x1
  1421 0337 3D       		.byte	0x3d
  1422 0338 30000000 		.4byte	0x30
@@ -1843,7 +1843,7 @@ ARM GAS  C:\Users\Kristian\AppData\Local\Temp\cclBSq2E.s 			page 1
  1435 0357 02       		.byte	0x2
  1436 0358 00       		.byte	0
  1437 0359 15       		.uleb128 0x15
- 1438 035a B1000000 		.4byte	.LASF42
+ 1438 035a A2020000 		.4byte	.LASF42
  1439 035e 01       		.byte	0x1
  1440 035f 3F       		.byte	0x3f
  1441 0360 43030000 		.4byte	0x343
@@ -1858,11 +1858,11 @@ ARM GAS  C:\Users\Kristian\AppData\Local\Temp\cclBSq2E.s 			page 1
  1450 0375 A5000000 		.4byte	0xa5
  1451 0379 0F       		.byte	0xf
  1452 037a 00       		.byte	0
-ARM GAS  C:\Users\Kristian\AppData\Local\Temp\cclBSq2E.s 			page 32
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccD6wVVZ.s 			page 32
 
 
  1453 037b 15       		.uleb128 0x15
- 1454 037c 48010000 		.4byte	.LASF43
+ 1454 037c BA010000 		.4byte	.LASF43
  1455 0380 01       		.byte	0x1
  1456 0381 41       		.byte	0x41
  1457 0382 6B030000 		.4byte	0x36b
@@ -1918,7 +1918,7 @@ ARM GAS  C:\Users\Kristian\AppData\Local\Temp\cclBSq2E.s 			page 1
  1507 002a 13       		.uleb128 0x13
  1508 002b 00       		.byte	0
  1509 002c 00       		.byte	0
-ARM GAS  C:\Users\Kristian\AppData\Local\Temp\cclBSq2E.s 			page 33
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccD6wVVZ.s 			page 33
 
 
  1510 002d 04       		.uleb128 0x4
@@ -1978,7 +1978,7 @@ ARM GAS  C:\Users\Kristian\AppData\Local\Temp\cclBSq2E.s 			page 1
  1564 0065 0C       		.uleb128 0xc
  1565 0066 00       		.byte	0
  1566 0067 00       		.byte	0
-ARM GAS  C:\Users\Kristian\AppData\Local\Temp\cclBSq2E.s 			page 34
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccD6wVVZ.s 			page 34
 
 
  1567 0068 07       		.uleb128 0x7
@@ -2038,7 +2038,7 @@ ARM GAS  C:\Users\Kristian\AppData\Local\Temp\cclBSq2E.s 			page 1
  1621 00a0 0B       		.uleb128 0xb
  1622 00a1 49       		.uleb128 0x49
  1623 00a2 13       		.uleb128 0x13
-ARM GAS  C:\Users\Kristian\AppData\Local\Temp\cclBSq2E.s 			page 35
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccD6wVVZ.s 			page 35
 
 
  1624 00a3 02       		.uleb128 0x2
@@ -2098,7 +2098,7 @@ ARM GAS  C:\Users\Kristian\AppData\Local\Temp\cclBSq2E.s 			page 1
  1678 00da 0B       		.uleb128 0xb
  1679 00db 27       		.uleb128 0x27
  1680 00dc 0C       		.uleb128 0xc
-ARM GAS  C:\Users\Kristian\AppData\Local\Temp\cclBSq2E.s 			page 36
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccD6wVVZ.s 			page 36
 
 
  1681 00dd 49       		.uleb128 0x49
@@ -2158,7 +2158,7 @@ ARM GAS  C:\Users\Kristian\AppData\Local\Temp\cclBSq2E.s 			page 1
  1735 0115 00       		.byte	0
  1736 0116 03       		.uleb128 0x3
  1737 0117 08       		.uleb128 0x8
-ARM GAS  C:\Users\Kristian\AppData\Local\Temp\cclBSq2E.s 			page 37
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccD6wVVZ.s 			page 37
 
 
  1738 0118 3A       		.uleb128 0x3a
@@ -2218,7 +2218,7 @@ ARM GAS  C:\Users\Kristian\AppData\Local\Temp\cclBSq2E.s 			page 1
  1792 014f 13       		.uleb128 0x13
  1793 0150 00       		.byte	0
  1794 0151 00       		.byte	0
-ARM GAS  C:\Users\Kristian\AppData\Local\Temp\cclBSq2E.s 			page 38
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccD6wVVZ.s 			page 38
 
 
  1795 0152 13       		.uleb128 0x13
@@ -2278,7 +2278,7 @@ ARM GAS  C:\Users\Kristian\AppData\Local\Temp\cclBSq2E.s 			page 1
  1849 000a 7D       		.byte	0x7d
  1850 000b 00       		.sleb128 0
  1851 000c 02000000 		.4byte	.LCFI0
-ARM GAS  C:\Users\Kristian\AppData\Local\Temp\cclBSq2E.s 			page 39
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccD6wVVZ.s 			page 39
 
 
  1852 0010 04000000 		.4byte	.LCFI1
@@ -2338,7 +2338,7 @@ ARM GAS  C:\Users\Kristian\AppData\Local\Temp\cclBSq2E.s 			page 1
  1906 0094 04000000 		.4byte	.LCFI7
  1907 0098 0200     		.2byte	0x2
  1908 009a 7D       		.byte	0x7d
-ARM GAS  C:\Users\Kristian\AppData\Local\Temp\cclBSq2E.s 			page 40
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccD6wVVZ.s 			page 40
 
 
  1909 009b 08       		.sleb128 8
@@ -2398,7 +2398,7 @@ ARM GAS  C:\Users\Kristian\AppData\Local\Temp\cclBSq2E.s 			page 1
  1963 0120 0200     		.2byte	0x2
  1964 0122 77       		.byte	0x77
  1965 0123 18       		.sleb128 24
-ARM GAS  C:\Users\Kristian\AppData\Local\Temp\cclBSq2E.s 			page 41
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccD6wVVZ.s 			page 41
 
 
  1966 0124 00000000 		.4byte	0
@@ -2458,7 +2458,7 @@ ARM GAS  C:\Users\Kristian\AppData\Local\Temp\cclBSq2E.s 			page 1
  2020 01a8 00000000 		.4byte	0
  2021 01ac 00000000 		.4byte	0
  2022              	.LLST9:
-ARM GAS  C:\Users\Kristian\AppData\Local\Temp\cclBSq2E.s 			page 42
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccD6wVVZ.s 			page 42
 
 
  2023 01b0 00000000 		.4byte	.LFB42
@@ -2518,7 +2518,7 @@ ARM GAS  C:\Users\Kristian\AppData\Local\Temp\cclBSq2E.s 			page 1
  2077 0236 7D       		.byte	0x7d
  2078 0237 08       		.sleb128 8
  2079 0238 04000000 		.4byte	.LCFI28
-ARM GAS  C:\Users\Kristian\AppData\Local\Temp\cclBSq2E.s 			page 43
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccD6wVVZ.s 			page 43
 
 
  2080 023c 06000000 		.4byte	.LCFI29
@@ -2578,7 +2578,7 @@ ARM GAS  C:\Users\Kristian\AppData\Local\Temp\cclBSq2E.s 			page 1
  2134 000e 0000     		.2byte	0
  2135 0010 00000000 		.4byte	.LFB33
  2136 0014 08000000 		.4byte	.LFE33-.LFB33
-ARM GAS  C:\Users\Kristian\AppData\Local\Temp\cclBSq2E.s 			page 44
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccD6wVVZ.s 			page 44
 
 
  2137 0018 00000000 		.4byte	.LFB34
@@ -2638,7 +2638,7 @@ ARM GAS  C:\Users\Kristian\AppData\Local\Temp\cclBSq2E.s 			page 1
  2191 0060 00000000 		.4byte	.LFB45
  2192 0064 0C000000 		.4byte	.LFE45
  2193 0068 00000000 		.4byte	.LFB46
-ARM GAS  C:\Users\Kristian\AppData\Local\Temp\cclBSq2E.s 			page 45
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccD6wVVZ.s 			page 45
 
 
  2194 006c 0C000000 		.4byte	.LFE46
@@ -2696,179 +2696,184 @@ ARM GAS  C:\Users\Kristian\AppData\Local\Temp\cclBSq2E.s 			page 1
  2220              	.LASF12:
  2221 0074 666C6F61 		.ascii	"float\000"
  2221      7400
- 2222              	.LASF1:
- 2223 007a 756E7369 		.ascii	"unsigned char\000"
-ARM GAS  C:\Users\Kristian\AppData\Local\Temp\cclBSq2E.s 			page 46
+ 2222              	.LASF46:
+ 2223 007a 433A5C55 		.ascii	"C:\\Users\\Jeppe\\Documents\\Engineer\\3_Semester\\"
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccD6wVVZ.s 			page 46
 
 
- 2223      676E6564 
- 2223      20636861 
- 2223      7200
- 2224              	.LASF34:
- 2225 0088 73656E64 		.ascii	"senddataArrays\000"
- 2225      64617461 
- 2225      41727261 
- 2225      797300
- 2226              	.LASF11:
- 2227 0097 696E7431 		.ascii	"int16\000"
- 2227      3600
- 2228              	.LASF35:
- 2229 009d 61636365 		.ascii	"accelArray\000"
- 2229      6C417272 
- 2229      617900
- 2230              	.LASF45:
- 2231 00a8 2E5C6D61 		.ascii	".\\main.c\000"
- 2231      696E2E63 
- 2231      00
- 2232              	.LASF42:
- 2233 00b1 73656E73 		.ascii	"sensArray\000"
- 2233      41727261 
- 2233      7900
- 2234              	.LASF38:
- 2235 00bb 666C6578 		.ascii	"flexArray\000"
- 2235      41727261 
- 2235      7900
- 2236              	.LASF25:
- 2237 00c5 696E6974 		.ascii	"initSensors\000"
- 2237      53656E73 
- 2237      6F727300 
- 2238              	.LASF5:
- 2239 00d1 6C6F6E67 		.ascii	"long unsigned int\000"
- 2239      20756E73 
- 2239      69676E65 
- 2239      6420696E 
- 2239      7400
- 2240              	.LASF40:
- 2241 00e3 68616E64 		.ascii	"handleI2CError\000"
- 2241      6C654932 
- 2241      43457272 
- 2241      6F7200
- 2242              	.LASF17:
- 2243 00f2 6D61696E 		.ascii	"main\000"
- 2243      00
- 2244              	.LASF8:
- 2245 00f7 756E7369 		.ascii	"unsigned int\000"
- 2245      676E6564 
- 2245      20696E74 
+ 2223      73657273 
+ 2223      5C4A6570 
+ 2223      70655C44 
+ 2223      6F63756D 
+ 2224 00a7 45335052 		.ascii	"E3PRJ3\\Design og implementering\\Body SW\\Body_mai"
+ 2224      4A335C44 
+ 2224      65736967 
+ 2224      6E206F67 
+ 2224      20696D70 
+ 2225 00d7 6E5C426F 		.ascii	"n\\Body_main.cydsn\000"
+ 2225      64795F6D 
+ 2225      61696E2E 
+ 2225      63796473 
+ 2225      6E00
+ 2226              	.LASF1:
+ 2227 00e9 756E7369 		.ascii	"unsigned char\000"
+ 2227      676E6564 
+ 2227      20636861 
+ 2227      7200
+ 2228              	.LASF34:
+ 2229 00f7 73656E64 		.ascii	"senddataArrays\000"
+ 2229      64617461 
+ 2229      41727261 
+ 2229      797300
+ 2230              	.LASF11:
+ 2231 0106 696E7431 		.ascii	"int16\000"
+ 2231      3600
+ 2232              	.LASF35:
+ 2233 010c 61636365 		.ascii	"accelArray\000"
+ 2233      6C417272 
+ 2233      617900
+ 2234              	.LASF45:
+ 2235 0117 2E5C6D61 		.ascii	".\\main.c\000"
+ 2235      696E2E63 
+ 2235      00
+ 2236              	.LASF38:
+ 2237 0120 666C6578 		.ascii	"flexArray\000"
+ 2237      41727261 
+ 2237      7900
+ 2238              	.LASF25:
+ 2239 012a 696E6974 		.ascii	"initSensors\000"
+ 2239      53656E73 
+ 2239      6F727300 
+ 2240              	.LASF5:
+ 2241 0136 6C6F6E67 		.ascii	"long unsigned int\000"
+ 2241      20756E73 
+ 2241      69676E65 
+ 2241      6420696E 
+ 2241      7400
+ 2242              	.LASF40:
+ 2243 0148 68616E64 		.ascii	"handleI2CError\000"
+ 2243      6C654932 
+ 2243      43457272 
+ 2243      6F7200
+ 2244              	.LASF17:
+ 2245 0157 6D61696E 		.ascii	"main\000"
  2245      00
- 2246              	.LASF7:
- 2247 0104 6C6F6E67 		.ascii	"long long unsigned int\000"
- 2247      206C6F6E 
- 2247      6720756E 
- 2247      7369676E 
- 2247      65642069 
- 2248              	.LASF36:
-ARM GAS  C:\Users\Kristian\AppData\Local\Temp\cclBSq2E.s 			page 47
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccD6wVVZ.s 			page 47
 
 
- 2249 011b 6779726F 		.ascii	"gyroArray\000"
- 2249      41727261 
- 2249      7900
- 2250              	.LASF29:
- 2251 0125 73657464 		.ascii	"setdataArray\000"
- 2251      61746141 
- 2251      72726179 
- 2251      00
- 2252              	.LASF13:
- 2253 0132 646F7562 		.ascii	"double\000"
- 2253      6C6500
- 2254              	.LASF32:
- 2255 0139 7A5F6461 		.ascii	"z_data\000"
- 2255      746100
- 2256              	.LASF9:
- 2257 0140 75696E74 		.ascii	"uint8_t\000"
- 2257      385F7400 
- 2258              	.LASF43:
- 2259 0148 64617461 		.ascii	"dataArray\000"
- 2259      41727261 
- 2259      7900
- 2260              	.LASF15:
- 2261 0152 73697A65 		.ascii	"sizetype\000"
- 2261      74797065 
- 2261      00
- 2262              	.LASF14:
- 2263 015b 63686172 		.ascii	"char\000"
- 2263      00
- 2264              	.LASF21:
- 2265 0160 73657453 		.ascii	"setSensArray\000"
- 2265      656E7341 
- 2265      72726179 
+ 2246              	.LASF8:
+ 2247 015c 756E7369 		.ascii	"unsigned int\000"
+ 2247      676E6564 
+ 2247      20696E74 
+ 2247      00
+ 2248              	.LASF21:
+ 2249 0169 73657453 		.ascii	"setSensArray\000"
+ 2249      656E7341 
+ 2249      72726179 
+ 2249      00
+ 2250              	.LASF7:
+ 2251 0176 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 2251      206C6F6E 
+ 2251      6720756E 
+ 2251      7369676E 
+ 2251      65642069 
+ 2252              	.LASF36:
+ 2253 018d 6779726F 		.ascii	"gyroArray\000"
+ 2253      41727261 
+ 2253      7900
+ 2254              	.LASF29:
+ 2255 0197 73657464 		.ascii	"setdataArray\000"
+ 2255      61746141 
+ 2255      72726179 
+ 2255      00
+ 2256              	.LASF13:
+ 2257 01a4 646F7562 		.ascii	"double\000"
+ 2257      6C6500
+ 2258              	.LASF32:
+ 2259 01ab 7A5F6461 		.ascii	"z_data\000"
+ 2259      746100
+ 2260              	.LASF9:
+ 2261 01b2 75696E74 		.ascii	"uint8_t\000"
+ 2261      385F7400 
+ 2262              	.LASF43:
+ 2263 01ba 64617461 		.ascii	"dataArray\000"
+ 2263      41727261 
+ 2263      7900
+ 2264              	.LASF15:
+ 2265 01c4 73697A65 		.ascii	"sizetype\000"
+ 2265      74797065 
  2265      00
- 2266              	.LASF39:
- 2267 016d 696E6974 		.ascii	"initUART\000"
- 2267      55415254 
+ 2266              	.LASF14:
+ 2267 01cd 63686172 		.ascii	"char\000"
  2267      00
- 2268              	.LASF19:
- 2269 0176 72656769 		.ascii	"registerToRead\000"
- 2269      73746572 
- 2269      546F5265 
- 2269      616400
- 2270              	.LASF31:
- 2271 0185 795F6461 		.ascii	"y_data\000"
- 2271      746100
- 2272              	.LASF2:
- 2273 018c 73686F72 		.ascii	"short int\000"
- 2273      7420696E 
- 2273      7400
- 2274              	.LASF41:
- 2275 0196 6E756D4F 		.ascii	"numOfRegToRead\000"
- 2275      66526567 
- 2275      546F5265 
- 2275      616400
- 2276              	.LASF44:
- 2277 01a5 474E5520 		.ascii	"GNU C 4.7.3 20130312 (release) [ARM/embedded-4_7-br"
- 2277      4320342E 
-ARM GAS  C:\Users\Kristian\AppData\Local\Temp\cclBSq2E.s 			page 48
+ 2268              	.LASF39:
+ 2269 01d2 696E6974 		.ascii	"initUART\000"
+ 2269      55415254 
+ 2269      00
+ 2270              	.LASF19:
+ 2271 01db 72656769 		.ascii	"registerToRead\000"
+ 2271      73746572 
+ 2271      546F5265 
+ 2271      616400
+ 2272              	.LASF31:
+ 2273 01ea 795F6461 		.ascii	"y_data\000"
+ 2273      746100
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccD6wVVZ.s 			page 48
 
 
- 2277      372E3320 
- 2277      32303133 
- 2277      30333132 
- 2278 01d8 616E6368 		.ascii	"anch revision 196615]\000"
- 2278      20726576 
- 2278      6973696F 
- 2278      6E203139 
- 2278      36363135 
- 2279              	.LASF33:
- 2280 01ee 636F6E76 		.ascii	"convSensData\000"
- 2280      53656E73 
- 2280      44617461 
- 2280      00
- 2281              	.LASF24:
- 2282 01fb 72617744 		.ascii	"rawData\000"
- 2282      61746100 
- 2283              	.LASF4:
- 2284 0203 6C6F6E67 		.ascii	"long int\000"
- 2284      20696E74 
- 2284      00
- 2285              	.LASF26:
- 2286 020c 73657475 		.ascii	"setupI2C\000"
- 2286      70493243 
+ 2274              	.LASF2:
+ 2275 01f1 73686F72 		.ascii	"short int\000"
+ 2275      7420696E 
+ 2275      7400
+ 2276              	.LASF41:
+ 2277 01fb 6E756D4F 		.ascii	"numOfRegToRead\000"
+ 2277      66526567 
+ 2277      546F5265 
+ 2277      616400
+ 2278              	.LASF44:
+ 2279 020a 474E5520 		.ascii	"GNU C 4.7.3 20130312 (release) [ARM/embedded-4_7-br"
+ 2279      4320342E 
+ 2279      372E3320 
+ 2279      32303133 
+ 2279      30333132 
+ 2280 023d 616E6368 		.ascii	"anch revision 196615]\000"
+ 2280      20726576 
+ 2280      6973696F 
+ 2280      6E203139 
+ 2280      36363135 
+ 2281              	.LASF33:
+ 2282 0253 636F6E76 		.ascii	"convSensData\000"
+ 2282      53656E73 
+ 2282      44617461 
+ 2282      00
+ 2283              	.LASF24:
+ 2284 0260 72617744 		.ascii	"rawData\000"
+ 2284      61746100 
+ 2285              	.LASF4:
+ 2286 0268 6C6F6E67 		.ascii	"long int\000"
+ 2286      20696E74 
  2286      00
- 2287              	.LASF0:
- 2288 0215 7369676E 		.ascii	"signed char\000"
- 2288      65642063 
- 2288      68617200 
- 2289              	.LASF27:
- 2290 0221 696E6974 		.ascii	"initADXL345\000"
- 2290      4144584C 
- 2290      33343500 
- 2291              	.LASF23:
- 2292 022d 6E756D4F 		.ascii	"numOfReg\000"
- 2292      66526567 
- 2292      00
- 2293              	.LASF30:
- 2294 0236 785F6461 		.ascii	"x_data\000"
- 2294      746100
- 2295              	.LASF46:
- 2296 023d 443A5C33 		.ascii	"D:\\3. Semester\\Projekt\\gitProjekt\\Design og imp"
- 2296      2E205365 
- 2296      6D657374 
- 2296      65725C50 
- 2296      726F6A65 
- 2297 026c 6C656D65 		.ascii	"lementering\\Body SW\\Body_main\\Body_main.cydsn\000"
- 2297      6E746572 
- 2297      696E675C 
- 2297      426F6479 
- 2297      2053575C 
- 2298              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.7.3 20130312 (release) [ARM/embedded-4_7-br
+ 2287              	.LASF26:
+ 2288 0271 73657475 		.ascii	"setupI2C\000"
+ 2288      70493243 
+ 2288      00
+ 2289              	.LASF0:
+ 2290 027a 7369676E 		.ascii	"signed char\000"
+ 2290      65642063 
+ 2290      68617200 
+ 2291              	.LASF27:
+ 2292 0286 696E6974 		.ascii	"initADXL345\000"
+ 2292      4144584C 
+ 2292      33343500 
+ 2293              	.LASF23:
+ 2294 0292 6E756D4F 		.ascii	"numOfReg\000"
+ 2294      66526567 
+ 2294      00
+ 2295              	.LASF30:
+ 2296 029b 785F6461 		.ascii	"x_data\000"
+ 2296      746100
+ 2297              	.LASF42:
+ 2298 02a2 73656E73 		.ascii	"sensArray\000"
+ 2298      41727261 
+ 2298      7900
+ 2299              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.7.3 20130312 (release) [ARM/embedded-4_7-br

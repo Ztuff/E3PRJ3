@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Kristian\AppData\Local\Temp\ccLLnlPh.s 			page 1
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccTtf1ad.s 			page 1
 
 
    1              		.cpu cortex-m0
@@ -25,46 +25,46 @@ ARM GAS  C:\Users\Kristian\AppData\Local\Temp\ccLLnlPh.s 			page 1
   22 0006 00000000 		.4byte	.Ldebug_abbrev0
   23 000a 04       		.byte	0x4
   24 000b 01       		.uleb128 0x1
-  25 000c 1B000000 		.4byte	.LASF13
+  25 000c 7D000000 		.4byte	.LASF13
   26 0010 01       		.byte	0x1
-  27 0011 9B000000 		.4byte	.LASF14
-  28 0015 CC000000 		.4byte	.LASF15
+  27 0011 FD000000 		.4byte	.LASF14
+  28 0015 0E000000 		.4byte	.LASF15
   29 0019 00000000 		.4byte	.Ldebug_line0
   30 001d 02       		.uleb128 0x2
   31 001e 01       		.byte	0x1
   32 001f 06       		.byte	0x6
-  33 0020 4C010000 		.4byte	.LASF0
+  33 0020 51010000 		.4byte	.LASF0
   34 0024 02       		.uleb128 0x2
   35 0025 01       		.byte	0x1
   36 0026 08       		.byte	0x8
-  37 0027 8D000000 		.4byte	.LASF1
+  37 0027 EF000000 		.4byte	.LASF1
   38 002b 02       		.uleb128 0x2
   39 002c 02       		.byte	0x2
   40 002d 05       		.byte	0x5
-  41 002e 5E010000 		.4byte	.LASF2
+  41 002e 63010000 		.4byte	.LASF2
   42 0032 02       		.uleb128 0x2
   43 0033 02       		.byte	0x2
   44 0034 07       		.byte	0x7
-  45 0035 39010000 		.4byte	.LASF3
+  45 0035 3E010000 		.4byte	.LASF3
   46 0039 02       		.uleb128 0x2
   47 003a 04       		.byte	0x4
   48 003b 05       		.byte	0x5
-  49 003c 29010000 		.4byte	.LASF4
+  49 003c 2E010000 		.4byte	.LASF4
   50 0040 02       		.uleb128 0x2
   51 0041 04       		.byte	0x4
   52 0042 07       		.byte	0x7
-  53 0043 64000000 		.4byte	.LASF5
+  53 0043 C6000000 		.4byte	.LASF5
   54 0047 02       		.uleb128 0x2
   55 0048 08       		.byte	0x8
   56 0049 05       		.byte	0x5
   57 004a 00000000 		.4byte	.LASF6
-ARM GAS  C:\Users\Kristian\AppData\Local\Temp\ccLLnlPh.s 			page 2
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccTtf1ad.s 			page 2
 
 
   58 004e 02       		.uleb128 0x2
   59 004f 08       		.byte	0x8
   60 0050 07       		.byte	0x7
-  61 0051 76000000 		.4byte	.LASF7
+  61 0051 D8000000 		.4byte	.LASF7
   62 0055 03       		.uleb128 0x3
   63 0056 04       		.byte	0x4
   64 0057 05       		.byte	0x5
@@ -72,23 +72,23 @@ ARM GAS  C:\Users\Kristian\AppData\Local\Temp\ccLLnlPh.s 			page 1
   66 005c 02       		.uleb128 0x2
   67 005d 04       		.byte	0x4
   68 005e 07       		.byte	0x7
-  69 005f 0E000000 		.4byte	.LASF8
+  69 005f 6D010000 		.4byte	.LASF8
   70 0063 02       		.uleb128 0x2
   71 0064 04       		.byte	0x4
   72 0065 04       		.byte	0x4
-  73 0066 58010000 		.4byte	.LASF9
+  73 0066 5D010000 		.4byte	.LASF9
   74 006a 02       		.uleb128 0x2
   75 006b 08       		.byte	0x8
   76 006c 04       		.byte	0x4
-  77 006d 32010000 		.4byte	.LASF10
+  77 006d 37010000 		.4byte	.LASF10
   78 0071 02       		.uleb128 0x2
   79 0072 01       		.byte	0x1
   80 0073 08       		.byte	0x8
-  81 0074 C7000000 		.4byte	.LASF11
+  81 0074 29010000 		.4byte	.LASF11
   82 0078 02       		.uleb128 0x2
   83 0079 04       		.byte	0x4
   84 007a 07       		.byte	0x7
-  85 007b 68010000 		.4byte	.LASF12
+  85 007b 7A010000 		.4byte	.LASF12
   86 007f 00       		.byte	0
   87              		.section	.debug_abbrev,"",%progbits
   88              	.Ldebug_abbrev0:
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Kristian\AppData\Local\Temp\ccLLnlPh.s 			page 1
  112 0017 0E       		.uleb128 0xe
  113 0018 00       		.byte	0
  114 0019 00       		.byte	0
-ARM GAS  C:\Users\Kristian\AppData\Local\Temp\ccLLnlPh.s 			page 3
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccTtf1ad.s 			page 3
 
 
  115 001a 03       		.uleb128 0x3
@@ -155,91 +155,96 @@ ARM GAS  C:\Users\Kristian\AppData\Local\Temp\ccLLnlPh.s 			page 1
  141      206C6F6E 
  141      6720696E 
  141      7400
- 142              	.LASF8:
- 143 000e 756E7369 		.ascii	"unsigned int\000"
- 143      676E6564 
- 143      20696E74 
- 143      00
- 144              	.LASF13:
- 145 001b 474E5520 		.ascii	"GNU C 4.7.3 20130312 (release) [ARM/embedded-4_7-br"
- 145      4320342E 
- 145      372E3320 
- 145      32303133 
- 145      30333132 
- 146 004e 616E6368 		.ascii	"anch revision 196615]\000"
- 146      20726576 
- 146      6973696F 
- 146      6E203139 
- 146      36363135 
- 147              	.LASF5:
- 148 0064 6C6F6E67 		.ascii	"long unsigned int\000"
- 148      20756E73 
- 148      69676E65 
- 148      6420696E 
- 148      7400
- 149              	.LASF7:
-ARM GAS  C:\Users\Kristian\AppData\Local\Temp\ccLLnlPh.s 			page 4
+ 142              	.LASF15:
+ 143 000e 433A5C55 		.ascii	"C:\\Users\\Jeppe\\Documents\\Engineer\\3_Semester\\"
+ 143      73657273 
+ 143      5C4A6570 
+ 143      70655C44 
+ 143      6F63756D 
+ 144 003b 45335052 		.ascii	"E3PRJ3\\Design og implementering\\Body SW\\Body_mai"
+ 144      4A335C44 
+ 144      65736967 
+ 144      6E206F67 
+ 144      20696D70 
+ 145 006b 6E5C426F 		.ascii	"n\\Body_main.cydsn\000"
+ 145      64795F6D 
+ 145      61696E2E 
+ 145      63796473 
+ 145      6E00
+ 146              	.LASF13:
+ 147 007d 474E5520 		.ascii	"GNU C 4.7.3 20130312 (release) [ARM/embedded-4_7-br"
+ 147      4320342E 
+ 147      372E3320 
+ 147      32303133 
+ 147      30333132 
+ 148 00b0 616E6368 		.ascii	"anch revision 196615]\000"
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccTtf1ad.s 			page 4
 
 
- 150 0076 6C6F6E67 		.ascii	"long long unsigned int\000"
- 150      206C6F6E 
- 150      6720756E 
- 150      7369676E 
- 150      65642069 
- 151              	.LASF1:
- 152 008d 756E7369 		.ascii	"unsigned char\000"
- 152      676E6564 
- 152      20636861 
- 152      7200
- 153              	.LASF14:
- 154 009b 2E5C4765 		.ascii	".\\Generated_Source\\PSoC4\\UART_1_UART_BOOT.c\000"
- 154      6E657261 
- 154      7465645F 
- 154      536F7572 
- 154      63655C50 
- 155              	.LASF11:
- 156 00c7 63686172 		.ascii	"char\000"
- 156      00
- 157              	.LASF15:
- 158 00cc 443A5C33 		.ascii	"D:\\3. Semester\\Projekt\\gitProjekt\\Design og imp"
- 158      2E205365 
- 158      6D657374 
- 158      65725C50 
- 158      726F6A65 
- 159 00fb 6C656D65 		.ascii	"lementering\\Body SW\\Body_main\\Body_main.cydsn\000"
- 159      6E746572 
- 159      696E675C 
- 159      426F6479 
- 159      2053575C 
- 160              	.LASF4:
- 161 0129 6C6F6E67 		.ascii	"long int\000"
- 161      20696E74 
- 161      00
- 162              	.LASF10:
- 163 0132 646F7562 		.ascii	"double\000"
- 163      6C6500
- 164              	.LASF3:
- 165 0139 73686F72 		.ascii	"short unsigned int\000"
- 165      7420756E 
- 165      7369676E 
- 165      65642069 
- 165      6E7400
- 166              	.LASF0:
- 167 014c 7369676E 		.ascii	"signed char\000"
- 167      65642063 
- 167      68617200 
- 168              	.LASF9:
- 169 0158 666C6F61 		.ascii	"float\000"
- 169      7400
- 170              	.LASF2:
- 171 015e 73686F72 		.ascii	"short int\000"
- 171      7420696E 
- 171      7400
- 172              	.LASF12:
- 173 0168 73697A65 		.ascii	"sizetype\000"
- 173      74797065 
-ARM GAS  C:\Users\Kristian\AppData\Local\Temp\ccLLnlPh.s 			page 5
+ 148      20726576 
+ 148      6973696F 
+ 148      6E203139 
+ 148      36363135 
+ 149              	.LASF5:
+ 150 00c6 6C6F6E67 		.ascii	"long unsigned int\000"
+ 150      20756E73 
+ 150      69676E65 
+ 150      6420696E 
+ 150      7400
+ 151              	.LASF7:
+ 152 00d8 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 152      206C6F6E 
+ 152      6720756E 
+ 152      7369676E 
+ 152      65642069 
+ 153              	.LASF1:
+ 154 00ef 756E7369 		.ascii	"unsigned char\000"
+ 154      676E6564 
+ 154      20636861 
+ 154      7200
+ 155              	.LASF14:
+ 156 00fd 2E5C4765 		.ascii	".\\Generated_Source\\PSoC4\\UART_1_UART_BOOT.c\000"
+ 156      6E657261 
+ 156      7465645F 
+ 156      536F7572 
+ 156      63655C50 
+ 157              	.LASF11:
+ 158 0129 63686172 		.ascii	"char\000"
+ 158      00
+ 159              	.LASF4:
+ 160 012e 6C6F6E67 		.ascii	"long int\000"
+ 160      20696E74 
+ 160      00
+ 161              	.LASF10:
+ 162 0137 646F7562 		.ascii	"double\000"
+ 162      6C6500
+ 163              	.LASF3:
+ 164 013e 73686F72 		.ascii	"short unsigned int\000"
+ 164      7420756E 
+ 164      7369676E 
+ 164      65642069 
+ 164      6E7400
+ 165              	.LASF0:
+ 166 0151 7369676E 		.ascii	"signed char\000"
+ 166      65642063 
+ 166      68617200 
+ 167              	.LASF9:
+ 168 015d 666C6F61 		.ascii	"float\000"
+ 168      7400
+ 169              	.LASF2:
+ 170 0163 73686F72 		.ascii	"short int\000"
+ 170      7420696E 
+ 170      7400
+ 171              	.LASF8:
+ 172 016d 756E7369 		.ascii	"unsigned int\000"
+ 172      676E6564 
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccTtf1ad.s 			page 5
 
 
- 173      00
- 174              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.7.3 20130312 (release) [ARM/embedded-4_7-br
+ 172      20696E74 
+ 172      00
+ 173              	.LASF12:
+ 174 017a 73697A65 		.ascii	"sizetype\000"
+ 174      74797065 
+ 174      00
+ 175              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.7.3 20130312 (release) [ARM/embedded-4_7-br
