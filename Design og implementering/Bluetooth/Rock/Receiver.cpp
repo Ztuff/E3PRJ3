@@ -109,13 +109,6 @@ void Receiver::receive()
     unsigned char rx_buffer[ 256 ] = { 0 };
     int rx_length = read( uart0_filestream_, ( void* )rx_buffer, 256 );    //filestream_, buffer to store in, number of bytes to read (max)
     rx_buffer[rx_length] = '\0';
-    for( int i = 0; i < MAX_SENSORS; i++ )
-    {
-      cout << "Step 6." << i << endl;
-      dataArray_[ i ].x = 0;
-      dataArray_[ i ].y = 0;
-      dataArray_[ i ].z = 0;
-    }
     
     if ( rx_length < 0 )
     {
@@ -127,37 +120,40 @@ void Receiver::receive()
     }
     else
     {
+      // Til test: Udskriv nøjagtig det array som er modtaget
+      for( int i = 0; ( i < rx_length ); i++ )
+        cout << "[" << (int)rx_buffer[ i ] << "]";
+      
       //Bytes received
       if( rx_buffer[ 0 ] == 0x0F ) // Hvis 0x0F er data-startbit'en
-      {
-        // Til test: Udskriv nøjagtig det array som er modtaget
-        for( int i = 0; ( i < MAX_RECEIVED_BYTES ) && ( rx_buffer[ i ] != 0 ); i++ )
-          cout << "[" << (int)rx_buffer[ i ] << "]";
+      {          
+        if( lastID_ <= rx_buffer[ 1 ] ) // Send og start forfra efter sidste ID
+        {
+          // Send data (skal implementeres)
+          // Til test udskrives det i stedet.
+          
+          allData.print();
+          cout << endl << "----------------------------------------------" << endl << endl;
+        }
+
+        // Husk sidste ID
+        lastID_ = rx_buffer[ 0 ];
+        
+        // Nulstil data
+        allData.reset();
           
         // Pak til data-struct
-        for( int i = 1; rx_buffer[ i ] != 0; i++ ) // Kør til nulterminering
-        {
-          if( i % 4  == 1 )
-          {
-            dataArray_[ rx_buffer[ i ] - 1 ].x = rx_buffer[ i + 1 ] - 1;
-            dataArray_[ rx_buffer[ i ] - 1 ].y = rx_buffer[ i + 2 ] - 1;
-            dataArray_[ rx_buffer[ i ] - 1 ].z = rx_buffer[ i + 3 ] - 1;
-          }
-        }
-        //sendData( dataArray_ ); // Send dataArray_ til rette modtager
-        // Modtageren får så en pointer til første plads, og hvert id ligger på tilsvarende plads i arrayet
+        allData.pack( rx_buffer );
         
         // Til test: Udskriv data-struct som pakket
-        for( int i = 0; i < MAX_SENSORS; i++ )
-        {
-          cout << endl << "ID: " << i << endl
-            << "x value: " << ( int )( dataArray_[ i ].x )
-            << ", y value: " << ( int )( dataArray_[ i ].y )
-            << ", z value: " << ( int )( dataArray_[ i ].z ) << endl;
-        }
+        cout << endl << "ID: " << rx_buffer[ 1 ] - 1 << endl
+          << "x value: " << ( int )( allData.dataArray_[ rx_buffer[ 1 ] - 1 ].x )
+          << ", y value: " << ( int )( allData.dataArray_[ rx_buffer[ 1 ] - 1 ].y )
+          << ", z value: " << ( int )( allData.dataArray_[ rx_buffer[ 1 ] - 1 ].z ) << endl;
         
         cout << endl << "----------------------------------------------" << endl << endl;
       }
+      
       else if( rx_buffer[ 0 ] == 0xF0 ) // Hvis 0xF0 er preset-startbit'en
       {
         //sendData( rx_buffer[ 1 ] );// Send preset til rette modtager
