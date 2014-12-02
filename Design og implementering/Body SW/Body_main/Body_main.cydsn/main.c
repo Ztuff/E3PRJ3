@@ -34,7 +34,7 @@
 
 #define MAXREGNUM 96 //Maks antal registre at læse fra 
 #define MAXSENSDATA 16 // Maks antal som skal fyldes i array'et som sendes via BT
-#define START_SENSDATA 100 // Start byte, 
+#define START_SENSDATA 0x0F // Start byte, 
 #define DEFAULT_DATA -1 // Default data i array sættes til 0. 
 //Accelerometer ADXL345 defines
 #define ACCEL_ADDRESS 0x53 // jumperen sættes til GND 
@@ -263,31 +263,31 @@ void senddataArrays()
     char flexArray[6];
     // Sættter accelerometer array.
     accelArray[0] = START_SENSDATA;
-    accelArray[1] = dataArray[0];
-    accelArray[2] = dataArray[1];
-    accelArray[3] = dataArray[2];
-    accelArray[4] = dataArray[3];
+    accelArray[1] = dataArray[0];   // ID 0
+    accelArray[2] = dataArray[1];   // x
+    accelArray[3] = dataArray[2];   // y
+    accelArray[4] = dataArray[3];   // z
     accelArray[5] = 0; //Nul terminering 
     //Sætter gyroskop array
     gyroArray[0] = START_SENSDATA;
-    gyroArray[1] = 1;
-    gyroArray[2] = 1;
-    gyroArray[3] = 1;
-    gyroArray[4] = 1;
+    gyroArray[1] = 1+1;             // ID 1
+    gyroArray[2] = 1;               // x
+    gyroArray[3] = 1;               // y
+    gyroArray[4] = 1;               // z
     gyroArray[5] = 0; //Nul terminering
     //Sætter Proximity array
     proxArray[0] = START_SENSDATA;
-    proxArray[1] = 1;
-    proxArray[2] = 1;
-    proxArray[3] = 1;
-    proxArray[4] = 1;
+    proxArray[1] = 2+1;             // ID 2
+    proxArray[2] = 1;               // x
+    proxArray[3] = 1;               // y
+    proxArray[4] = 1;               // z
     proxArray[5] = 0; //Nul terminering
     //Sætter flex array
     flexArray[0] = START_SENSDATA;
-    flexArray[1] = 1;
-    flexArray[2] = 1;
-    flexArray[3] = 1;
-    flexArray[4] = 1;
+    flexArray[1] = 3+1;             // ID 3
+    flexArray[2] = 1;               // x
+    flexArray[3] = 1;               // y
+    flexArray[4] = 1;               // z
     flexArray[5] = 0; //Nul terminering
     
     UART_1_UartPutString(accelArray);
