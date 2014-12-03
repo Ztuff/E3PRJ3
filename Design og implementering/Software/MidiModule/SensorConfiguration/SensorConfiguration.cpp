@@ -81,6 +81,7 @@ void SensorConfiguration::setMappingScheme(MappingScheme mScheme)
 }*/
 
 /** Udvider vector med "num" og initialiserer til default **/
+
 vector<MidiSignal>::iterator MidiSignalVectorAdd(vector<MidiSignal> &vec, int num)	
 {
 	for (int i = 0; i < num; ++i)

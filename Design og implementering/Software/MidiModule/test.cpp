@@ -51,7 +51,7 @@ int main()
 	
 	/******************************************* FUNCITON TEST ***********************************************/
 	
-	MidiModule.run();
+	//MidiModule.run();
 	
 	delete testMSchemePtr;
 	delete testSensConfPtr;

@@ -38,36 +38,37 @@ void MidiModule::timerFunct()
 	wake_up_interruptible(&wq);
 }
 
-void MidiModule::handleTick(list<SensKonfiguration> myList)
+void MidiModule::handleDataMsg(DataMsg msg); 
 {
-	handleQueue();
-	
+	/******* Update vector<MidiSignal> jf modtaget data. *******/
 	int data = 0;
 	
-	for (list<SensKonfiguration>::iterator i = myList.begin(); i != myList.end(); ++i)	//Iterate through sensor konfigurations
+	for (list<SensConfiguration>::iterator i = sensorConfList_.begin(); i != sensorConfList_.end(); ++i)	//Iterate through sensor konfigurations
 	{
-		switch ((*i).accis)	//Find correct data in dataArray
+		switch ((*i).axis_)	//Find correct data in dataArray
 		{
 			case 'x'
-				data = dataArray[(*i).ID].x;
+				data = dataArray[(*i).sensorID_].x;
 				break;
 			case 'y'
-				data = dataArray[(*i).ID].y;
+				data = dataArray[(*i).sensorID_].y;
 				break;
 			case 'z'
-				data = dataArray[(*i).ID].z;
+				data = dataArray[(*i).sensorID_].z;
 				break;
 			default:
-				data = dataArray[(*i).ID].x;
+				data = dataArray[(*i).sensorID_].x;
 				break;
 		}
 		
-		(*i).MappingScheme.map(data,(*i).(*MidiIter));		/* 	Prototype: bool map(int data, MidiSignal & signal);
-																alder map i den givne SensKonfigurations MappingScheme
-																og giver den datapunkt jf. i SensKonfiguration indstillet sensor
-																og vectorplads jf indstillet  i SensKonfiguration indstillet vectorplads */
-																
+		(*i).mScheme_.map(data,*((*i).midiIter_));		/* 	Prototype: bool map(int data, MidiSignal & signal);
+															alder map i den givne SensKonfigurations MappingScheme
+															og giver den datapunkt jf. i SensKonfiguration indstillet sensor
+															og vectorplads jf indstillet  i SensKonfiguration indstillet vectorplads */															
 	}	
+	
+	/******* Send opdateret vector af MidiSignaler *******/
+	alsaAdapter_->send(const & midiSignalVector_);		
 
 }
 

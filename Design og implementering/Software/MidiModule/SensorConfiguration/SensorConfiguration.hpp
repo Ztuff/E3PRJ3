@@ -39,6 +39,7 @@ class SensorConfiguration
 		MappingScheme mScheme_;
 		//SoundPack sound_;
 		vector<MidiSignal>::iterator midiIter_;
+		vector<MidiSignal>::iterator MidiSignalVectorAdd(vector<MidiSignal> &vec, int num);
 	
 };
 
