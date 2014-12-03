@@ -1,39 +1,39 @@
-#ifndef MIDIMODULE_HPP
-#define MIDIMODULE_HPP
+#include <string>
+#include <pthread.h>
+#include "message.hpp"
 
-#include <linux/wait.h>
-#include <linux/schedule>
-#include <vector>
-#include <list>
-#include <iostream>
-#include "MidiSignal.h"
-#include "MappingScheme.h"
-#include "SensorConfigurationBank.hpp"
-#include "AlsaAdapter.hpp"
-
-using namespece std;
-
-static int wqFlag = 0;						
-
-DECLARE_WAIT_QUEUE_HEAD(wq);	//Wait queue declaration
- 
-class MidiModule{
-
+class MidiMapper
+{
 	public:
-		MidiModule(AlsaAdapter *alsaAdapter);
-		~MidiModule();
-		list<SensorConfiguration>::iterator createSensorConfList();
-		bool sendVector();  //Void?
-		void startTimer();
-		void timerFunct();
-		void handleTick();
-	private:
-		vector<MidiSignal> midiSignalVector_;
-		list<SensorConfiguration> sensorConfList_;
-		unsigned int timeout_in_milliseconds_;
-		struct timer_list my_timer_;
-		bool stop_;	
-		AlsaAdapter* alsaAdapter_;
-};
+		MidiMapper();
+		~MidiMapper();
+		
+		MsgQueue* getMsgQueue();
+		
+		void start();
+		void join();
+		
+		void eventDispatcher();
+		
+		struct DataMsg : Message
+		{
+			//Skriv det her Stuff:)
+		};
+		
+		enum typeId
+		{
+			SHUTDOWN_MSG,
+			GET_NEW_SENS_CONF_INFO
+			
+			//put msg types here as they are implemented.
+		};
+			
+	private:		
+		pthread_t threadHandle;
+		
+		MsgQueue msgQ;
 
-#endif
+		void handleGetNewSensConfInfo(QtMsg* msg);
+		void handleShutdownMsg();
+		void BR3K_error(int errorNum, std::string msg);
+};

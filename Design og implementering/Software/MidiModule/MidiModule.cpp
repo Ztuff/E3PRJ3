@@ -1,83 +1,89 @@
-#include "MidiModule.hpp"
+#include "Controller.hpp"
 
-MidiModule::MidiModule(AlsaAdapter* alsaAdapter)
+using namespace std;
+
+Controller::Controller()
+: msgQ(40)
+{	
+}
+
+MsgQueue* Controller::getMsgQueue()
 {
-	timeout_in_milliseconds_ = 20;	//50 times per second = 20 ms
-	mute_ = 0;	
+	return &msgQ;
+}
+
+void* threadFunction(void* arg)
+{
+	static_cast<Controller*>(arg)->eventDispatcher();
+	return NULL;
+}
+
+
+void Controller::start()
+{
+  int Ct = pthread_create(&threadHandle, NULL,
+  	 threadFunction, this);
+  if( Ct != 0)
+  {
+    BR3K_error(Ct, "Error: Couldn't create controller thread");
+  }
+}
+
+void Controller::join()
+{
+  int Cj = pthread_join(threadHandle, NULL);
+  if( Cj != 0)
+  {
+    BR3K_error(Cj, "Error: Couldn't join controller thread");
+  }
+}
+
+void Controller::BR3K_error(int errorNum, std::string msg)
+{
+	std::cout << "An error has occured." << std::endl;
+	std::cout << "Error code: " << errorNum << std::endl;
+	std::cout << "Msg: " << msg << std::endl;
+}
+
+
+
+
+void Controller::eventDispatcher()
+{
+	 Message* msgPtr;
+	 unsigned long id;
+	 bool active = true;
+	 while(active){
+	 	msgPtr = msgQ.receive(id);
+	 	
+	 	switch(id)
+	 	{
+	 		case GET_NEW_SENS_CONF_INFO:
+	 			handleGetNewSensConfInfo(
+	 				static_cast<QtMsg*>(msgPtr));
+	 			break;
+	 		case SHUTDOWN_MSG:
+	 			handleShutdownMsg();
+	 			active = false;
+	 			break;
+	 		default:
+	 			BR3K_error(-1, "Controller eventDispatch received unknown type.\n");
+	 			break;
+	 	}
+	 	delete msgPtr;
+	 }
+	 
+	 return;
+}
+	 			
+void Controller::handleGetNewSensConfInfo(QtMsg* msg){
+	cout << "handleGetDatabankInfo" << endl;
+}
+
+void Controller::handleShutdownMsg(){
+	cout << "shutdown" << endl;
+}
+
+
+	 	
 	
-	alsaAdapter_ = alsaAdapter;
-
-}
-
-MidiModule::~MidiModule()
-{
-	
-}
-
-list<SensorConfiguration>::iterator MidiModule::createSensorConfList()
-{
-	//oprette list af sensorkonfs
-
-	//returnere iterator over denne liste
-}
-
-void MidiModule::startTimer()
-{
-	init_timer(&my_timer_); 
-	my_timer_.expires = jiffies + timeout_in_sec*HZ; 
-	my_timer_.function = timer_funct; 
-	add_timer(&my_timer_);
-}
-
-void MidiModule::timerFunct()
-{
-	my_timer_.expires = jiffies + timeout_in_milliseconds*HZ;    //Re-schedule the timer 
-	add_timer(&my_timer_);                					 	 //Add to timer queue
-	
-	wqFlag = 1;
-	wake_up_interruptible(&wq);
-}
-
-void MidiModule::handleTick(list<SensKonfiguration> myList)
-{
-	handleQueue();
-	
-	int data = 0;
-	
-	for (list<SensKonfiguration>::iterator i = myList.begin(); i != myList.end(); ++i)	//Iterate through sensor konfigurations
-	{
-		switch ((*i).accis)	//Find correct data in dataArray
-		{
-			case 'x'
-				data = dataArray[(*i).ID].x;
-				break;
-			case 'y'
-				data = dataArray[(*i).ID].y;
-				break;
-			case 'z'
-				data = dataArray[(*i).ID].z;
-				break;
-			default:
-				data = dataArray[(*i).ID].x;
-				break;
-		}
-		
-		(*i).MappingScheme.map(data,(*i).(*MidiIter));		/* 	Prototype: bool map(int data, MidiSignal & signal);
-																alder map i den givne SensKonfigurations MappingScheme
-																og giver den datapunkt jf. i SensKonfiguration indstillet sensor
-																og vectorplads jf indstillet  i SensKonfiguration indstillet vectorplads */
-																
-	}	
-
-}
-
-bool MidiModule::sendVector()
-{
-	//se på timer:
-	//når den proc'er så send midiSignalVector_
-	//til alsaadapter. 
-}
-
-
-
-
