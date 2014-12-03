@@ -112,7 +112,7 @@ bool AlsaAdapter::open()
 }
 
 
-bool AlsaAdapter::send(vector<MidiSignal> signal)
+bool AlsaAdapter::send(const vector<MidiSignal> &signal)
 { 
 	switch (_type)
 	{
