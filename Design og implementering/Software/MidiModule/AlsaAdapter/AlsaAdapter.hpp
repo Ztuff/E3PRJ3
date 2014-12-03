@@ -35,7 +35,7 @@ class AlsaAdapter{
 		 * array.
 		 * Returns true on succes and false on error.
 		 **********************************************/
-		bool send(std::vector<MidiSignal>);
+		bool send(const std::vector<MidiSignal>&);
 
 
 	private:
