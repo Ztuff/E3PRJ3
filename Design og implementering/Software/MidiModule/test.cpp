@@ -11,7 +11,7 @@ int main()
 	/*** Opret DataStruct array Dummy ***/
 	DataMsg myData;
 	
-	for (int i = 50; i< 54; ++i)
+	for (int i = 0; i< 4; ++i)
 	{
 		myData[i].x = i;
 		myData[i].y = i;
@@ -53,9 +53,21 @@ int main()
 	MsgQueue* msgQPtr = myMidiModule.getMsgQueue();
 	for(;;)
 	{
-		msgQPtr->send(MidiModule::DATA_MSG, &myData);
+		for(int i = 0; i<127; i++)
+		{
+			//opdater data
+			for (int index = 0; index< 4; ++index)
+			{
+				myData[i].x = i;
+				myData[i].y = i;
+				myData[i].z = i;
+			}
+
+			//send msg
+			msgQPtr->send(MidiModule::DATA_MSG, &myData);
+		}
 	}
-	
+
 	msgQPtr->send(MidiModule::SHUTDOWN_MSG, NULL);
 	myMidiModule.join();
 	
