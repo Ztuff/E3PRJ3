@@ -1,3 +1,4 @@
+#include <unistd.h>
 #include "MidiModule.hpp"
 #include "DataBank/SensorConfiguration.hpp"
 #include "DataBank/MappingScheme.h"
@@ -51,19 +52,19 @@ int main()
 	
 	myMidiModule.start();
 	MsgQueue* msgQPtr = myMidiModule.getMsgQueue();
-	for(;;)
+	for(int i = 0; i<(0-1); i++)
 	{
 		for(int i = 0; i<127; i++)
 		{
-			//opdater data
-			for (int index = 0; index< 4; ++index)
+			for (int index = 0; index< 4; ++index)	//opdater data
 			{
 				myData[i].x = i;
 				myData[i].y = i;
 				myData[i].z = i;
 			}
 
-			//send msg
+			usleep(19000);		//sleep. T=20ms -> f=50Hz
+			
 			msgQPtr->send(MidiModule::DATA_MSG, &myData);
 		}
 	}
