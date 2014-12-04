@@ -59,7 +59,7 @@ private:
 	
 	/*** mapKey utility ***/
 	void quantizeDiatonic(int &dataIn);	//kvantiserer jf. scale- og root strategy
-	int noteStringToInt(string note);
+	int noteStringToInt(std::string note);
 
 	std::string id_;
 	std::string param_;

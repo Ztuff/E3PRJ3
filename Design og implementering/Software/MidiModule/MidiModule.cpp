@@ -124,8 +124,8 @@ void MidiModule::handleDataMsg(DataMsg* msg)
 	#ifdef DEBUG
 	midiSignalVector_[0].print();
 	#endif
+	
 	alsaAdapter_->send(midiSignalVector_);		
-
 }
 
 void MidiModule::handleShutdownMsg(){
