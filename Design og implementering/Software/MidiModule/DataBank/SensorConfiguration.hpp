@@ -15,9 +15,9 @@ class SensorConfiguration
 		SensorConfiguration( 	string name,
 								int sensorID,
 								char axis,
-								MappingScheme mScheme,
+								MappingScheme mScheme
 								//SoundPack sound,
-								vector<MidiSignal> &midiVec);
+								);
 		~SensorConfiguration();
 
 		/*----- GET-SET METODER -----*/
@@ -25,7 +25,7 @@ class SensorConfiguration
 		int getSensorID();
 		char getAxis();
 		MappingScheme& getMScheme();
-		vector<MidiSignal>::iterator getMidiIter();
+		int getChannel() const;
 		//SoundPack getSound();
 		void setName(string name);
 		void setSensorID(int sensorID);
@@ -39,8 +39,7 @@ class SensorConfiguration
 		char axis_;
 		MappingScheme mScheme_;
 		//SoundPack sound_;
-		vector<MidiSignal>::iterator midiIter_;
-		vector<MidiSignal>::iterator MidiSignalVectorAdd(vector<MidiSignal> &vec, int num);
+		int channel_;
 	
 };
 

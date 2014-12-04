@@ -4,10 +4,11 @@ using namespace std;
 
 MappingScheme:: MappingScheme()
 {
-	MappingScheme("defaultID", "velocity", "0", "0", "0", NULL, NULL, NULL, NULL, SLOW);
+	MappingScheme("defaultID", 1, "velocity", "0", "0", "0", 0, 0, 0, 0, SLOW);
 }
 
 MappingScheme::	MappingScheme(	string id,
+								int channel,
 								string param,	
 								string root,		//key
 								string scale,		//key
@@ -21,6 +22,8 @@ MappingScheme::	MappingScheme(	string id,
 	/*** Initailize atributes ***/
 
 	id_= id;
+
+	channel_=((channel < 16 || channel >= 0) ? channel : 1);
 
 	param_=((param == "key" || param == "velocity" || param == "CCAbs" || param == "CCRel") ? param : "velocity");
 
@@ -45,7 +48,7 @@ MappingScheme::	MappingScheme(	string id,
 
 bool MappingScheme::map(int data, MidiSignal & signal)
 {
-	if(DEBUG)
+	if(MAPDEBUG)
 		cout << "Inside map\n";
 
 	if(param_ == "key")
@@ -66,8 +69,10 @@ bool MappingScheme::map(int data, MidiSignal & signal)
 
 bool MappingScheme::mapKey(int data, MidiSignal & signal)
 {
-	if(DEBUG)
+	if(MAPDEBUG)
 		cout << "Inside mapKey\n";
+
+	signal.channel_ = channel_;
 
 	/*** omkonvertering til værdi mellem 0-119. dataIn værdier fra 3-122 benyttes ***/
 	if(2 < data && data < 122)							
@@ -77,7 +82,7 @@ bool MappingScheme::mapKey(int data, MidiSignal & signal)
 	
 	if(key_.direction_=="falling")			//hvis "falling" så "vend"
 	{
-		if(DEBUG)
+		if(MAPDEBUG)
 			cout <<"key_.direction_==falling" << endl;
 		
 		data = 119-data;
@@ -91,7 +96,7 @@ bool MappingScheme::mapKey(int data, MidiSignal & signal)
 
 	data -= 13-noteStringToInt(key_.root_);		//Forskyd tilbage jævnfør grundtone
 	
-	if(DEBUG)
+	if(MAPDEBUG)
 		cout << "Data post quantizeDiatonic: " << data<< endl;
 	
 	if(signal.param1_ != data)
@@ -109,8 +114,10 @@ bool MappingScheme::mapKey(int data, MidiSignal & signal)
 
 bool MappingScheme::mapVelocity(int data, MidiSignal & signal)
 {
-	if(DEBUG)
+	if(MAPDEBUG)
 		cout << "Inside mapVelocity\n";
+
+	signal.channel_ = channel_;
 	
 	data = ((data > 127) || (data < 0) ? 65 : data);
 	signal.param2_ = data;	//set velocity value
@@ -127,15 +134,17 @@ bool MappingScheme::mapVelocity(int data, MidiSignal & signal)
 
 bool MappingScheme::mapCCAbs(int data, MidiSignal & signal)
 {
-	if(DEBUG)
+	if(MAPDEBUG)
 		cout << "Inside mapCCAbs\n";
+
+	signal.channel_ = channel_;
 
 	data = (data > 127 || data < 0 ? 127 : data);	//Valider data
 
 	int range = CC_.maxVal_- CC_.minVal_;		//check for neccesity of scaling
 	if(data > CC_.minVal_ || data < range)
 	{
-		if(DEBUG)
+		if(MAPDEBUG)
 			cout << "Entering scaling\n";
 
 		data= int((data*range)/127 + CC_.minVal_);	//int casting nessecary
@@ -153,8 +162,10 @@ bool MappingScheme::mapCCAbs(int data, MidiSignal & signal)
 
 bool MappingScheme::mapCCRel(int data, MidiSignal & signal)
 {
-	if(DEBUG)
+	if(MAPDEBUG)
 		cout << "Inside mapCCRel\n";
+
+	signal.channel_ = channel_;
 
 	data = (data > 127 || data < 0 ? 127 : data);	//Valider data
 
@@ -166,7 +177,7 @@ bool MappingScheme::mapCCRel(int data, MidiSignal & signal)
 	else if(data < 102) strategy = 1;
 	else strategy = 2; 
 	
-	if(DEBUG)
+	if(MAPDEBUG)
 		cout << "strategy : " << strategy << endl;
 
 	if(strategy !=0)
@@ -174,7 +185,7 @@ bool MappingScheme::mapCCRel(int data, MidiSignal & signal)
 		strategy = strategy*CC_.speed_;	//Additional scaling akkording to speed
 	}
 	
-	if(DEBUG)
+	if(MAPDEBUG)
 		cout << "Strategy post scaling: " << strategy << endl;												
 	
 	/*** Set MidiSignal ***/
@@ -195,7 +206,7 @@ bool MappingScheme::mapCCRel(int data, MidiSignal & signal)
 
 int MappingScheme::noteStringToInt(string note)
 {
-	if(DEBUG)
+	if(MAPDEBUG)
 		cout << "Inside noteStringToInt\n";
 
 	if(note.compare("c") == 0) return 1;
@@ -214,14 +225,14 @@ int MappingScheme::noteStringToInt(string note)
 }
 void MappingScheme::quantizeDiatonic(int &dataIn)
 {
-	if(DEBUG)
+	if(MAPDEBUG)
 		cout << "inside quantizeDiatonic\n";
 	
 	int noteStep = dataIn%12;
 	
 	if(key_.scale_=="major")
 	{
-		if(DEBUG)
+		if(MAPDEBUG)
 			cout << "inside major quantizer\n";
 		/**** Major (dur) kvantisering herunder ****/
 		switch (noteStep){
@@ -242,7 +253,7 @@ void MappingScheme::quantizeDiatonic(int &dataIn)
 	}else if(key_.scale_=="minor")
 	{
 		/**** Minor (mol) kvantisering herunder ****/
-		if(DEBUG)
+		if(MAPDEBUG)
 			cout << "inside minor quantizer\n";
 
 		switch(noteStep)

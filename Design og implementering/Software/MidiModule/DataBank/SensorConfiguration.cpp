@@ -1,28 +1,26 @@
+#include "SensorConfiguration.hpp"
+
 SensorConfiguration::SensorConfiguration()
 {
 	MappingScheme mScheme;
 	//SoundPack sound;
 	string defaultName = "Default Sensorconfiguration";
 	char defaultAxis = 'x';
-	SensorConfiguration(defaultName, 1, defaultAxis, mScheme, /*sound*/);
+	SensorConfiguration(defaultName, 1, defaultAxis, mScheme/*, sound*/);
 }
 
 SensorConfiguration::SensorConfiguration(	string name,
 											int sensorID,
 											char axis,
-											MappingScheme mScheme,
+											MappingScheme mScheme
 											//SoundPack sound,
-											vector<MidiSignal> &midiVec)
+											)
 {
 	name_ 			= name;
 	sensorID_ 		= sensorID;
 	axis_			= axis;
 	mScheme_ 		= mScheme;
-	//sound_			= sound;
-	
-	midiIter_ = MidiSignalVectorAdd(midiVec, 1)	/*	MidiIter er attribut i SensorKonfiguration
-													MidiSignalVectorAdd returnerer iterator til den nye sidste plads i vector
-													og modtager parametrene(vector&, #nyePladser) */
+	//sound_		= sound;
 }
 
 SensorConfiguration::~SensorConfiguration()
@@ -44,16 +42,17 @@ char SensorConfiguration::getAxis()
 {
 	return axis_;
 }
+
+int SensorConfiguration::getChannel() const
+{
+	return channel_;
+}
 		
 MappingScheme& SensorConfiguration::getMScheme()
 {
 	return mScheme_;
 }
 
-vector<MidiSignal>::iterator SensorConfiguration::getMidiIter()
-{
-	return midiIter_;
-}		
 /*SoundPack SensorConfiguration::getSound()
 {
 	return sound_;

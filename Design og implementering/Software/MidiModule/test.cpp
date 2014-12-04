@@ -18,12 +18,11 @@ int main()
 		myData[i].z = i;
 	}
 	
-	/*** Klargør vector<MidiSignal> ***/
-	vector<MidiSignal> midiVec;
-	
+		
 	/*** Opret Mapping Scheme og SensorConfiguration Dummy ***/
-	MappingScheme *testMSchemePtr = new MappingScheme(	"test",						//id
-														"key",						//param
+	MappingScheme *testMSchemePtr = new MappingScheme(	"test",					//id
+														1,						//channel
+														"key",					//param
 														"cis", "major", "rising",	//key params
 														0,						//velocity params
 														0,						//Common CC param
@@ -34,8 +33,8 @@ int main()
 	SensorConfiguration *testSensConfPtr = new SensorConfiguration("testConfig",	//string name,
 																	0,				//int sensorID,
 																	'x',				//char axis,
-																	*testMSchemePtr,	//MappingScheme mScheme,
-																	midiVec);		//vector<MidiSignal> &midiVec);
+																	*testMSchemePtr	//MappingScheme mScheme,
+																	);		//vector<MidiSignal> &midiVec);
 	
 	list <SensorConfiguration> myList;
 	myList.push_back(*testSensConfPtr);
@@ -45,7 +44,8 @@ int main()
 	AlsaAdapter alsaAdapter(3);
 	
 	/*** Klargør MidiModule ***/
-	MidiModule myMidiModule(&alsaAdapter, myList);
+	MidiModule myMidiModule(&alsaAdapter);
+	myMidiModule.setPreset(myList);
 	
 	/******************************************* FUNCITON TEST ***********************************************/
 	

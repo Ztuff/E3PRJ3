@@ -1,7 +1,7 @@
 #ifndef MAPPINGSCHEME_H_
 #define MAPPINGSCHEME_H_
 
-#define DEBUG 0
+#define MAPDEBUG 0
 
 #define SLOW 1		//Used for CCRel
 #define MEDIUM 2
@@ -39,6 +39,7 @@ class MappingScheme	//KODEN KAN EVT EFFEKTIVISERES VED AT BRUGE DEFINES I STEDET
 public:
 	MappingScheme(); // der skal bruges en default constructor
 	MappingScheme(	std::string id,			//bruges i SensorConfigurationsBanken for at kende forskel på MappingSchemes.
+					int channel,			//kanal
 					std::string param,		//strategies: "key", "velocity", "CCAbs", "CCRel"
 					std::string root,		//key.root, strategies: c, cis, d, dis, e, f, fis, g, gis, a, ais, b	
 					std::string scale,		//key.scale, strategies: cromatic, major, minor
@@ -65,6 +66,7 @@ private:
 	Key key_;
 	Velocity velocity_;
 	ContControl CC_;
+	int channel_;
 };
 
 #endif /* MAPPINGSCHEME_H_ */
