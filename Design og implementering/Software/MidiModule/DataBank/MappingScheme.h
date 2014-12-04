@@ -11,13 +11,11 @@
 #include <iostream>
 #include "MidiSignal.h"
 
-using namespace std;
-
 struct Key
 {
-	string root_;					//strategies: c, cis, d, dis, e, f, fis, g, gis, a, ais, b
-	string scale_;					//strategies: cromatic, major, minor
-	string direction_;				//strategies: rising, falling
+	std::string root_;					//strategies: c, cis, d, dis, e, f, fis, g, gis, a, ais, b
+	std::string scale_;					//strategies: cromatic, major, minor
+	std::string direction_;				//strategies: rising, falling
 };
 struct Velocity
 {
@@ -40,11 +38,11 @@ class MappingScheme	//KODEN KAN EVT EFFEKTIVISERES VED AT BRUGE DEFINES I STEDET
 {
 public:
 	MappingScheme(); // der skal bruges en default constructor
-	MappingScheme(	string id,			//bruges i SensorConfigurationsBanken for at kende forskel på MappingSchemes.
-					string param,		//strategies: "key", "velocity", "CCAbs", "CCRel"
-					string root,		//key.root, strategies: c, cis, d, dis, e, f, fis, g, gis, a, ais, b	
-					string scale,		//key.scale, strategies: cromatic, major, minor
-					string direction,	//key.direction, strategies: rising, falling
+	MappingScheme(	std::string id,			//bruges i SensorConfigurationsBanken for at kende forskel på MappingSchemes.
+					std::string param,		//strategies: "key", "velocity", "CCAbs", "CCRel"
+					std::string root,		//key.root, strategies: c, cis, d, dis, e, f, fis, g, gis, a, ais, b	
+					std::string scale,		//key.scale, strategies: cromatic, major, minor
+					std::string direction,	//key.direction, strategies: rising, falling
 					int lowerThreshold,	//velocity.lowerThreshold, value from 0 to 127
 					int cNum,			//controller#
 					int minVal,			//CCAbs.minVal, value from 0 to 127
@@ -62,8 +60,8 @@ private:
 	void quantizeDiatonic(int &dataIn);	//kvantiserer jf. scale- og root strategy
 	int noteStringToInt(string note);
 
-	string id_;
-	string param_;
+	std::string id_;
+	std::string param_;
 	Key key_;
 	Velocity velocity_;
 	ContControl CC_;

@@ -1,39 +1,44 @@
 #include <string>
 #include <pthread.h>
-#include "message.hpp"
+#include <vector>
+#include <list>
+#include <iostream>
+#include "DataBank/MidiSignal.h"
+#include "DataBank/MappingScheme.h"
+#include "DataBank/SensorConfiguration.hpp"
+#include "AlsaAdapter/AlsaAdapter.hpp"
+#include "../MsgHandler/message.hpp"
+#include "DataMsg.hpp"
 
-class MidiMapper
+class MidiModule
 {
 	public:
-		MidiMapper();
-		~MidiMapper();
-		
-		MsgQueue* getMsgQueue();
+		MidiModule(AlsaAdapter* alsaAdapter,
+			 		list<SensorConfiguration> sensConfList);
+		~MidiModule();
 		
 		void start();
 		void join();
 		
-		void eventDispatcher();
+		MsgQueue* getMsgQueue();
 		
-		struct DataMsg : Message
-		{
-			//Skriv det her Stuff:)
-		};
+		void eventDispatcher();
 		
 		enum typeId
 		{
 			SHUTDOWN_MSG,
-			GET_NEW_SENS_CONF_INFO
-			
-			//put msg types here as they are implemented.
+			DATA_MSG
 		};
 			
 	private:		
-		pthread_t threadHandle;
-		
+		AlsaAdapter* alsaAdapter_;
 		MsgQueue msgQ;
-
-		void handleGetNewSensConfInfo(QtMsg* msg);
+		vector<MidiSignal> midiSignalVector_;
+		list<SensorConfiguration> sensorConfList_;
+		pthread_t threadHandle;
+	
+		
+		void handleDataMsg(DataMsg* msg);
 		void handleShutdownMsg();
 		void BR3K_error(int errorNum, std::string msg);
 };

@@ -24,7 +24,8 @@ class SensorConfiguration
 		string getName();
 		int getSensorID();
 		char getAxis();
-		MappingScheme getMScheme();
+		MappingScheme& getMScheme();
+		vector<MidiSignal>::iterator getMidiIter();
 		//SoundPack getSound();
 		void setName(string name);
 		void setSensorID(int sensorID);

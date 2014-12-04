@@ -45,11 +45,15 @@ char SensorConfiguration::getAxis()
 	return axis_;
 }
 		
-MappingScheme SensorConfiguration::getMScheme()
+MappingScheme& SensorConfiguration::getMScheme()
 {
 	return mScheme_;
 }
-		
+
+vector<MidiSignal>::iterator SensorConfiguration::getMidiIter()
+{
+	return midiIter_;
+}		
 /*SoundPack SensorConfiguration::getSound()
 {
 	return sound_;

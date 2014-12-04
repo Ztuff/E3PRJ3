@@ -1,5 +1,7 @@
 #include "MappingScheme.h"
 
+using namespace std;
+
 MappingScheme:: MappingScheme()
 {
 	MappingScheme("defaultID", "velocity", "0", "0", "0", NULL, NULL, NULL, NULL, SLOW);

@@ -4,15 +4,10 @@
 
 #include <alsa/asoundlib.h>
 #include <vector>
-
+#include "../DataBank/MidiSignal.h"
 /******************************************************************************************
 *bemærk at channel og command skal være chars på formen 'x', hvor x er en enkelt ciffer. */
-struct MidiSignal{
-			char channel;
-			char command;
-			int param1;
-			int param2;
-		};
+
 
 
 class AlsaAdapter{
