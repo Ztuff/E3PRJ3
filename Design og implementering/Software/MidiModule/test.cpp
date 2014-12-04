@@ -21,7 +21,7 @@ int main()
 		
 	/*** Opret Mapping Scheme og SensorConfiguration Dummy ***/
 	MappingScheme *testMSchemePtr = new MappingScheme(	"test",					//id
-														1,						//channel
+														0,						//channel
 														"key",					//param
 														"cis", "major", "rising",	//key params
 														0,						//velocity params
