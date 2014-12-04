@@ -41,7 +41,7 @@ int main()
 	
 	/*** Klargør ALSA-delen ***/
 	//????
-	AlsaAdapter alsaAdapter(3);
+	AlsaAdapter alsaAdapter(2);
 	
 	/*** Klargør MidiModule ***/
 	MidiModule myMidiModule(&alsaAdapter);
