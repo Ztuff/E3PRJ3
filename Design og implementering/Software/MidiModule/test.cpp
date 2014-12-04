@@ -11,7 +11,7 @@ int main()
 	/*** Opret DataStruct array Dummy ***/
 	DataMsg myData;
 	
-	for (int i = 0; i< 4; ++i)
+	for (int i = 50; i< 54; ++i)
 	{
 		myData[i].x = i;
 		myData[i].y = i;
@@ -32,7 +32,7 @@ int main()
 	
 	SensorConfiguration *testSensConfPtr = new SensorConfiguration("testConfig",	//string name,
 																	0,				//int sensorID,
-																	'x',				//char axis,
+																	'x',			//char axis,
 																	*testMSchemePtr	//MappingScheme mScheme,
 																	);		//vector<MidiSignal> &midiVec);
 	
@@ -51,7 +51,11 @@ int main()
 	
 	myMidiModule.start();
 	MsgQueue* msgQPtr = myMidiModule.getMsgQueue();
-	msgQPtr->send(MidiModule::DATA_MSG, &myData);
+	for(;;)
+	{
+		msgQPtr->send(MidiModule::DATA_MSG, &myData);
+	}
+	
 	msgQPtr->send(MidiModule::SHUTDOWN_MSG, NULL);
 	myMidiModule.join();
 	
