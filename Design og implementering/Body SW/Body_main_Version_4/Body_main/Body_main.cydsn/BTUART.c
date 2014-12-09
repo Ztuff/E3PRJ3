@@ -75,6 +75,8 @@ void sendDataArray()
     flexArray[4] = 1+1;               // z
     flexArray[5] = 0; //Nul terminering
     
+    //UART_1_UartPutString("Test");
+    
     CyDelay(3);
     UART_1_UartPutString(accelArray);
     CyDelay(3);
@@ -83,7 +85,7 @@ void sendDataArray()
     UART_1_UartPutString(proxArray);
     CyDelay(3);
     UART_1_UartPutString(flexArray);
- 
+     
 }
 
 
