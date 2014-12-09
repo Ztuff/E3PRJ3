@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccD6wVVZ.s 			page 1
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccuoRTOj.s 			page 1
 
 
    1              		.cpu cortex-m0
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccD6wVVZ.s 			page 1
   22:.\main.c      **** #define GYR2_ID 5
   23:.\main.c      **** #define FLE2_ID 6
   24:.\main.c      **** #define	PRX2_ID 7
-ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccD6wVVZ.s 			page 2
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccuoRTOj.s 			page 2
 
 
   25:.\main.c      **** #define ACC3_ID 8
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccD6wVVZ.s 			page 1
   79:.\main.c      **** void convSensData();
   80:.\main.c      **** void handleI2CError();
   81:.\main.c      ****  
-ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccD6wVVZ.s 			page 3
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccuoRTOj.s 			page 3
 
 
   82:.\main.c      **** CY_ISR(MY_ISR)
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccD6wVVZ.s 			page 1
   95:.\main.c      **** 		readAllSensors();
   75              		.loc 1 95 0
   76 0010 FFF7FEFF 		bl	readAllSensors
-ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccD6wVVZ.s 			page 4
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccuoRTOj.s 			page 4
 
 
   96:.\main.c      ****         
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccD6wVVZ.s 			page 1
  120:.\main.c      **** 	initADXL345();	//Accellerometer
  107              		.loc 1 120 0
  108 0004 FFF7FEFF 		bl	initADXL345
-ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccD6wVVZ.s 			page 5
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccuoRTOj.s 			page 5
 
 
  121:.\main.c      **** 	// ..osv
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccD6wVVZ.s 			page 1
  156 0028 131C     		mov	r3, r2
  157 002a 5B00     		lsl	r3, r3, #1
  158 002c 9B18     		add	r3, r3, r2
-ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccD6wVVZ.s 			page 6
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccuoRTOj.s 			page 6
 
 
  159 002e 9B00     		lsl	r3, r3, #2
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccD6wVVZ.s 			page 1
  205              		.loc 1 135 0
  206              		.cfi_startproc
  207 0000 80B5     		push	{r7, lr}
-ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccD6wVVZ.s 			page 7
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccuoRTOj.s 			page 7
 
 
  208              	.LCFI9:
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccD6wVVZ.s 			page 1
  253              		.align	2
  254              		.global	readI2C
  255              		.code	16
-ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccD6wVVZ.s 			page 8
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccuoRTOj.s 			page 8
 
 
  256              		.thumb_func
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccD6wVVZ.s 			page 1
  302 0040 22D1     		bne	.L14
  151:.\main.c      **** 		{
  152:.\main.c      ****             if(I2C_1_I2CMasterSendRestart(sensArray[numOfReg][0], I2C_1_I2C_READ_XFER_MODE) == I2C_
-ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccD6wVVZ.s 			page 9
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccuoRTOj.s 			page 9
 
 
  303              		.loc 1 152 0
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccD6wVVZ.s 			page 1
  346              	.L16:
  347              		.align	2
  348              	.L15:
-ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccD6wVVZ.s 			page 10
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccuoRTOj.s 			page 10
 
 
  349 0090 00000000 		.word	sensArray
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccD6wVVZ.s 			page 1
  392 0000 80B5     		push	{r7, lr}
  393              	.LCFI17:
  394              		.cfi_def_cfa_offset 8
-ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccD6wVVZ.s 			page 11
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccuoRTOj.s 			page 11
 
 
  395              		.cfi_offset 7, -8
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccD6wVVZ.s 			page 1
  182:.\main.c      **** 	
  183:.\main.c      **** 	//Opsætter til I2C 
  184:.\main.c      **** 	if(I2C_1_I2CMasterSendStart(ACCEL_ADDRESS, I2C_1_I2C_WRITE_XFER_MODE) == I2C_1_I2C_MSTR_NO_ERROR /
-ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccD6wVVZ.s 			page 12
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccuoRTOj.s 			page 12
 
 
  442              		.loc 1 184 0
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccD6wVVZ.s 			page 1
  488              		.cfi_def_cfa_register 7
  193:.\main.c      **** 	// Fylder ADXL345 ind i sensor array'et. 
  194:.\main.c      **** 	setSensArray(GYRO_ADDRESS, GYRO_XOUT_H, DEFAULT_DATA);
-ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccD6wVVZ.s 			page 13
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccuoRTOj.s 			page 13
 
 
  489              		.loc 1 194 0
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccD6wVVZ.s 			page 1
  535 0060 031C     		mov	r3, r0
  536 0062 002B     		cmp	r3, #0
  537 0064 01D1     		bne	.L20
-ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccD6wVVZ.s 			page 14
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccuoRTOj.s 			page 14
 
 
  203:.\main.c      **** 	handleI2CError();
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccD6wVVZ.s 			page 1
  581 001a 0E33     		add	r3, r3, #14
  582 001c 1B88     		ldrh	r3, [r3]
  583 001e D318     		add	r3, r2, r3
-ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccD6wVVZ.s 			page 15
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccuoRTOj.s 			page 15
 
 
  584 0020 9AB2     		uxth	r2, r3
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccD6wVVZ.s 			page 1
  226:.\main.c      ****     /*char ADXL345_data[32];
  227:.\main.c      ****     sprintf(ADXL345_data, "\n\rx is: %d, y is: %d, z is: %d\n\r", x, y, z);
  228:.\main.c      ****     UART_1_UartPutString(ADXL345_data); */
-ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccD6wVVZ.s 			page 16
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccuoRTOj.s 			page 16
 
 
  229:.\main.c      ****     
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccD6wVVZ.s 			page 1
  675 00c2 1A70     		strb	r2, [r3]
  234:.\main.c      ****     
  235:.\main.c      ****     setdataArray(ACC1_ID, x1, y1, z1);
-ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccD6wVVZ.s 			page 17
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccuoRTOj.s 			page 17
 
 
  676              		.loc 1 235 0
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccD6wVVZ.s 			page 1
  721 0008 B960     		str	r1, [r7, #8]
  722 000a 7A60     		str	r2, [r7, #4]
  723 000c 3B60     		str	r3, [r7]
-ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccD6wVVZ.s 			page 18
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccuoRTOj.s 			page 18
 
 
  245:.\main.c      ****     int i;
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccD6wVVZ.s 			page 1
  251:.\main.c      ****     for(i = 4; i<MAXSENSDATA; i++) //Sætter de resterende pladser i array'et til 1. 
  768              		.loc 1 251 0 is_stmt 0 discriminator 1
  769 0054 7B69     		ldr	r3, [r7, #20]
-ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccD6wVVZ.s 			page 19
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccuoRTOj.s 			page 19
 
 
  770 0056 0F2B     		cmp	r3, #15
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccD6wVVZ.s 			page 1
  811 000e 384B     		ldr	r3, .L34
  812 0010 1A78     		ldrb	r2, [r3]
  813 0012 3B1C     		mov	r3, r7
-ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccD6wVVZ.s 			page 20
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccuoRTOj.s 			page 20
 
 
  814 0014 1833     		add	r3, r3, #24
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccD6wVVZ.s 			page 1
  276:.\main.c      ****     gyroArray[4] = 1;               // z
  859              		.loc 1 276 0
  860 005e 3B1C     		mov	r3, r7
-ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccD6wVVZ.s 			page 21
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccuoRTOj.s 			page 21
 
 
  861 0060 1033     		add	r3, r3, #16
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccD6wVVZ.s 			page 1
  904 00a4 3B1C     		mov	r3, r7
  905 00a6 0422     		mov	r2, #4
  906 00a8 5A70     		strb	r2, [r3, #1]
-ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccD6wVVZ.s 			page 22
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccuoRTOj.s 			page 22
 
 
  288:.\main.c      ****     flexArray[2] = 1;               // x
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccD6wVVZ.s 			page 1
  950 00f0 00000000 		.word	dataArray
  951              		.cfi_endproc
  952              	.LFE44:
-ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccD6wVVZ.s 			page 23
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccuoRTOj.s 			page 23
 
 
  953              		.size	senddataArrays, .-senddataArrays
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccD6wVVZ.s 			page 1
  996 0002 00AF     		add	r7, sp, #0
  997              	.LCFI33:
  998              		.cfi_def_cfa_register 7
-ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccD6wVVZ.s 			page 24
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccuoRTOj.s 			page 24
 
 
  310:.\main.c      ****     I2C_1_I2CMasterSendStop();	 
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccD6wVVZ.s 			page 1
  1051 0053 68020000 		.4byte	.LASF4
  1052 0057 02       		.uleb128 0x2
  1053 0058 04       		.byte	0x4
-ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccD6wVVZ.s 			page 25
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccuoRTOj.s 			page 25
 
 
  1054 0059 07       		.byte	0x7
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccD6wVVZ.s 			page 1
  1108 00c2 06       		.uleb128 0x6
  1109 00c3 01       		.byte	0x1
  1110 00c4 57010000 		.4byte	.LASF17
-ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccD6wVVZ.s 			page 26
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccuoRTOj.s 			page 26
 
 
  1111 00c8 01       		.byte	0x1
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccD6wVVZ.s 			page 1
  1165 0137 53000000 		.4byte	.LASF22
  1166 013b 01       		.byte	0x1
  1167 013c 86       		.byte	0x86
-ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccD6wVVZ.s 			page 27
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccuoRTOj.s 			page 27
 
 
  1168 013d 6C000000 		.4byte	0x6c
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccD6wVVZ.s 			page 1
  1222 01b2 01       		.byte	0x1
  1223 01b3 86020000 		.4byte	.LASF27
  1224 01b7 01       		.byte	0x1
-ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccD6wVVZ.s 			page 28
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccuoRTOj.s 			page 28
 
 
  1225 01b8 AD       		.byte	0xad
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccD6wVVZ.s 			page 1
  1279 0223 91       		.byte	0x91
  1280 0224 71       		.sleb128 -15
  1281 0225 0E       		.uleb128 0xe
-ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccD6wVVZ.s 			page 29
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccuoRTOj.s 			page 29
 
 
  1282 0226 793100   		.ascii	"y1\000"
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccD6wVVZ.s 			page 1
  1336 0289 F3       		.byte	0xf3
  1337 028a 6C000000 		.4byte	0x6c
  1338 028e 02       		.byte	0x2
-ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccD6wVVZ.s 			page 30
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccuoRTOj.s 			page 30
 
 
  1339 028f 91       		.byte	0x91
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccD6wVVZ.s 			page 1
  1393 02f5 12       		.uleb128 0x12
  1394 02f6 9E000000 		.4byte	0x9e
  1395 02fa 05030000 		.4byte	0x305
-ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccD6wVVZ.s 			page 31
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccuoRTOj.s 			page 31
 
 
  1396 02fe 13       		.uleb128 0x13
@@ -1858,7 +1858,7 @@ ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccD6wVVZ.s 			page 1
  1450 0375 A5000000 		.4byte	0xa5
  1451 0379 0F       		.byte	0xf
  1452 037a 00       		.byte	0
-ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccD6wVVZ.s 			page 32
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccuoRTOj.s 			page 32
 
 
  1453 037b 15       		.uleb128 0x15
@@ -1918,7 +1918,7 @@ ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccD6wVVZ.s 			page 1
  1507 002a 13       		.uleb128 0x13
  1508 002b 00       		.byte	0
  1509 002c 00       		.byte	0
-ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccD6wVVZ.s 			page 33
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccuoRTOj.s 			page 33
 
 
  1510 002d 04       		.uleb128 0x4
@@ -1978,7 +1978,7 @@ ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccD6wVVZ.s 			page 1
  1564 0065 0C       		.uleb128 0xc
  1565 0066 00       		.byte	0
  1566 0067 00       		.byte	0
-ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccD6wVVZ.s 			page 34
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccuoRTOj.s 			page 34
 
 
  1567 0068 07       		.uleb128 0x7
@@ -2038,7 +2038,7 @@ ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccD6wVVZ.s 			page 1
  1621 00a0 0B       		.uleb128 0xb
  1622 00a1 49       		.uleb128 0x49
  1623 00a2 13       		.uleb128 0x13
-ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccD6wVVZ.s 			page 35
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccuoRTOj.s 			page 35
 
 
  1624 00a3 02       		.uleb128 0x2
@@ -2098,7 +2098,7 @@ ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccD6wVVZ.s 			page 1
  1678 00da 0B       		.uleb128 0xb
  1679 00db 27       		.uleb128 0x27
  1680 00dc 0C       		.uleb128 0xc
-ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccD6wVVZ.s 			page 36
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccuoRTOj.s 			page 36
 
 
  1681 00dd 49       		.uleb128 0x49
@@ -2158,7 +2158,7 @@ ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccD6wVVZ.s 			page 1
  1735 0115 00       		.byte	0
  1736 0116 03       		.uleb128 0x3
  1737 0117 08       		.uleb128 0x8
-ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccD6wVVZ.s 			page 37
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccuoRTOj.s 			page 37
 
 
  1738 0118 3A       		.uleb128 0x3a
@@ -2218,7 +2218,7 @@ ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccD6wVVZ.s 			page 1
  1792 014f 13       		.uleb128 0x13
  1793 0150 00       		.byte	0
  1794 0151 00       		.byte	0
-ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccD6wVVZ.s 			page 38
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccuoRTOj.s 			page 38
 
 
  1795 0152 13       		.uleb128 0x13
@@ -2278,7 +2278,7 @@ ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccD6wVVZ.s 			page 1
  1849 000a 7D       		.byte	0x7d
  1850 000b 00       		.sleb128 0
  1851 000c 02000000 		.4byte	.LCFI0
-ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccD6wVVZ.s 			page 39
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccuoRTOj.s 			page 39
 
 
  1852 0010 04000000 		.4byte	.LCFI1
@@ -2338,7 +2338,7 @@ ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccD6wVVZ.s 			page 1
  1906 0094 04000000 		.4byte	.LCFI7
  1907 0098 0200     		.2byte	0x2
  1908 009a 7D       		.byte	0x7d
-ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccD6wVVZ.s 			page 40
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccuoRTOj.s 			page 40
 
 
  1909 009b 08       		.sleb128 8
@@ -2398,7 +2398,7 @@ ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccD6wVVZ.s 			page 1
  1963 0120 0200     		.2byte	0x2
  1964 0122 77       		.byte	0x77
  1965 0123 18       		.sleb128 24
-ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccD6wVVZ.s 			page 41
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccuoRTOj.s 			page 41
 
 
  1966 0124 00000000 		.4byte	0
@@ -2458,7 +2458,7 @@ ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccD6wVVZ.s 			page 1
  2020 01a8 00000000 		.4byte	0
  2021 01ac 00000000 		.4byte	0
  2022              	.LLST9:
-ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccD6wVVZ.s 			page 42
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccuoRTOj.s 			page 42
 
 
  2023 01b0 00000000 		.4byte	.LFB42
@@ -2518,7 +2518,7 @@ ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccD6wVVZ.s 			page 1
  2077 0236 7D       		.byte	0x7d
  2078 0237 08       		.sleb128 8
  2079 0238 04000000 		.4byte	.LCFI28
-ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccD6wVVZ.s 			page 43
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccuoRTOj.s 			page 43
 
 
  2080 023c 06000000 		.4byte	.LCFI29
@@ -2578,7 +2578,7 @@ ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccD6wVVZ.s 			page 1
  2134 000e 0000     		.2byte	0
  2135 0010 00000000 		.4byte	.LFB33
  2136 0014 08000000 		.4byte	.LFE33-.LFB33
-ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccD6wVVZ.s 			page 44
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccuoRTOj.s 			page 44
 
 
  2137 0018 00000000 		.4byte	.LFB34
@@ -2638,7 +2638,7 @@ ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccD6wVVZ.s 			page 1
  2191 0060 00000000 		.4byte	.LFB45
  2192 0064 0C000000 		.4byte	.LFE45
  2193 0068 00000000 		.4byte	.LFB46
-ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccD6wVVZ.s 			page 45
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccuoRTOj.s 			page 45
 
 
  2194 006c 0C000000 		.4byte	.LFE46
@@ -2698,7 +2698,7 @@ ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccD6wVVZ.s 			page 1
  2221      7400
  2222              	.LASF46:
  2223 007a 433A5C55 		.ascii	"C:\\Users\\Jeppe\\Documents\\Engineer\\3_Semester\\"
-ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccD6wVVZ.s 			page 46
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccuoRTOj.s 			page 46
 
 
  2223      73657273 
@@ -2758,7 +2758,7 @@ ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccD6wVVZ.s 			page 1
  2244              	.LASF17:
  2245 0157 6D61696E 		.ascii	"main\000"
  2245      00
-ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccD6wVVZ.s 			page 47
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccuoRTOj.s 			page 47
 
 
  2246              	.LASF8:
@@ -2818,7 +2818,7 @@ ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccD6wVVZ.s 			page 1
  2272              	.LASF31:
  2273 01ea 795F6461 		.ascii	"y_data\000"
  2273      746100
-ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccD6wVVZ.s 			page 48
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccuoRTOj.s 			page 48
 
 
  2274              	.LASF2:

@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccWut0ul.s 			page 1
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccxm96pB.s 			page 1
 
 
    1              		.cpu cortex-m0
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccWut0ul.s 			page 1
   29:.\Generated_Source\PSoC4/I2C_1_I2C.c **** #if(I2C_1_SCB_MODE_UNCONFIG_CONST_CFG)
   30:.\Generated_Source\PSoC4/I2C_1_I2C.c **** 
   31:.\Generated_Source\PSoC4/I2C_1_I2C.c ****     /***************************************
-ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccWut0ul.s 			page 2
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccxm96pB.s 			page 2
 
 
   32:.\Generated_Source\PSoC4/I2C_1_I2C.c ****     *  Config Structure Initialization
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccWut0ul.s 			page 1
   86:.\Generated_Source\PSoC4/I2C_1_I2C.c ****                                             I2C_1_GET_CTRL_EC_AM_MODE (config->enableWake);
   87:.\Generated_Source\PSoC4/I2C_1_I2C.c **** 
   88:.\Generated_Source\PSoC4/I2C_1_I2C.c ****             I2C_1_I2C_CTRL_REG = I2C_1_GET_I2C_CTRL_HIGH_PHASE_OVS(config->oversampleHigh) |
-ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccWut0ul.s 			page 3
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccxm96pB.s 			page 3
 
 
   89:.\Generated_Source\PSoC4/I2C_1_I2C.c ****                                             I2C_1_GET_I2C_CTRL_LOW_PHASE_OVS (config->oversampleLow
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccWut0ul.s 			page 1
  143:.\Generated_Source\PSoC4/I2C_1_I2C.c ****             I2C_1_slOverFlowCount = 0u;
  144:.\Generated_Source\PSoC4/I2C_1_I2C.c **** 
  145:.\Generated_Source\PSoC4/I2C_1_I2C.c ****             /* Internal master variables */
-ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccWut0ul.s 			page 4
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccxm96pB.s 			page 4
 
 
  146:.\Generated_Source\PSoC4/I2C_1_I2C.c ****             I2C_1_mstrStatus     = 0u;
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccWut0ul.s 			page 1
   50 0018 0A43     		orr	r2, r1
   51 001a 1A60     		str	r2, [r3]
  177:.\Generated_Source\PSoC4/I2C_1_I2C.c ****     #endif /* (I2C_1_CY_SCBIP_V0) */
-ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccWut0ul.s 			page 5
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccxm96pB.s 			page 5
 
 
  178:.\Generated_Source\PSoC4/I2C_1_I2C.c **** 
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccWut0ul.s 			page 1
   84              		.loc 1 199 0
   85 0052 1C4B     		ldr	r3, .L2+48
   86 0054 0022     		mov	r2, #0
-ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccWut0ul.s 			page 6
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccxm96pB.s 			page 6
 
 
   87 0056 1A60     		str	r2, [r3]
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccWut0ul.s 			page 1
  118 0084 0022     		mov	r2, #0
  119 0086 1A60     		str	r2, [r3]
  223:.\Generated_Source\PSoC4/I2C_1_I2C.c ****         I2C_1_mstrWrBufIndex = 0u;
-ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccWut0ul.s 			page 7
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccxm96pB.s 			page 7
 
 
  120              		.loc 1 223 0
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccWut0ul.s 			page 1
  233:.\Generated_Source\PSoC4/I2C_1_I2C.c **** * Summary:
  234:.\Generated_Source\PSoC4/I2C_1_I2C.c **** *  Resets the I2C FSM into the default state and disables TX interrupt sources.
  235:.\Generated_Source\PSoC4/I2C_1_I2C.c **** *
-ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccWut0ul.s 			page 8
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccxm96pB.s 			page 8
 
 
  236:.\Generated_Source\PSoC4/I2C_1_I2C.c **** * Parameters:
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccWut0ul.s 			page 1
  195              		.cfi_endproc
  196              	.LFE1:
  197              		.size	I2C_1_I2CStop, .-I2C_1_I2CStop
-ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccWut0ul.s 			page 9
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccxm96pB.s 			page 9
 
 
  198              		.text
@@ -494,8 +494,8 @@ ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccWut0ul.s 			page 1
  208 000b 01       		.uleb128 0x1
  209 000c 45000000 		.4byte	.LASF23
  210 0010 01       		.byte	0x1
- 211 0011 EE000000 		.4byte	.LASF24
- 212 0015 4D010000 		.4byte	.LASF25
+ 211 0011 5C010000 		.4byte	.LASF24
+ 212 0015 BD000000 		.4byte	.LASF25
  213 0019 00000000 		.4byte	.Ldebug_ranges0+0
  214 001d 00000000 		.4byte	0
  215 0021 00000000 		.4byte	0
@@ -503,23 +503,23 @@ ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccWut0ul.s 			page 1
  217 0029 02       		.uleb128 0x2
  218 002a 01       		.byte	0x1
  219 002b 06       		.byte	0x6
- 220 002c 41010000 		.4byte	.LASF0
+ 220 002c AF010000 		.4byte	.LASF0
  221 0030 02       		.uleb128 0x2
  222 0031 01       		.byte	0x1
  223 0032 08       		.byte	0x8
- 224 0033 D2000000 		.4byte	.LASF1
+ 224 0033 40010000 		.4byte	.LASF1
  225 0037 02       		.uleb128 0x2
  226 0038 02       		.byte	0x2
  227 0039 05       		.byte	0x5
- 228 003a A1010000 		.4byte	.LASF2
+ 228 003a F3010000 		.4byte	.LASF2
  229 003e 02       		.uleb128 0x2
  230 003f 02       		.byte	0x2
  231 0040 07       		.byte	0x7
- 232 0041 2E010000 		.4byte	.LASF3
+ 232 0041 9C010000 		.4byte	.LASF3
  233 0045 02       		.uleb128 0x2
  234 0046 04       		.byte	0x4
  235 0047 05       		.byte	0x5
- 236 0048 E5000000 		.4byte	.LASF4
+ 236 0048 53010000 		.4byte	.LASF4
  237 004c 02       		.uleb128 0x2
  238 004d 04       		.byte	0x4
  239 004e 07       		.byte	0x7
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccWut0ul.s 			page 1
  252 0064 696E7400 		.ascii	"int\000"
  253 0068 02       		.uleb128 0x2
  254 0069 04       		.byte	0x4
-ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccWut0ul.s 			page 10
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccxm96pB.s 			page 10
 
 
  255 006a 07       		.byte	0x7
@@ -549,7 +549,7 @@ ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccWut0ul.s 			page 1
  260 0075 5B       		.byte	0x5b
  261 0076 30000000 		.4byte	0x30
  262 007a 04       		.uleb128 0x4
- 263 007b AB010000 		.4byte	.LASF10
+ 263 007b FD010000 		.4byte	.LASF10
  264 007f 02       		.byte	0x2
  265 0080 5C       		.byte	0x5c
  266 0081 3E000000 		.4byte	0x3e
@@ -561,21 +561,21 @@ ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccWut0ul.s 			page 1
  272 0090 02       		.uleb128 0x2
  273 0091 04       		.byte	0x4
  274 0092 04       		.byte	0x4
- 275 0093 7E010000 		.4byte	.LASF12
+ 275 0093 D0010000 		.4byte	.LASF12
  276 0097 02       		.uleb128 0x2
  277 0098 08       		.byte	0x8
  278 0099 04       		.byte	0x4
- 279 009a 13010000 		.4byte	.LASF13
+ 279 009a 81010000 		.4byte	.LASF13
  280 009e 02       		.uleb128 0x2
  281 009f 01       		.byte	0x1
  282 00a0 08       		.byte	0x8
- 283 00a1 E0000000 		.4byte	.LASF14
+ 283 00a1 4E010000 		.4byte	.LASF14
  284 00a5 05       		.uleb128 0x5
  285 00a6 6F000000 		.4byte	0x6f
  286 00aa 05       		.uleb128 0x5
  287 00ab 7A000000 		.4byte	0x7a
  288 00af 04       		.uleb128 0x4
- 289 00b0 1A010000 		.4byte	.LASF15
+ 289 00b0 88010000 		.4byte	.LASF15
  290 00b4 02       		.byte	0x2
  291 00b5 F2       		.byte	0xf2
  292 00b6 BA000000 		.4byte	0xba
@@ -584,10 +584,10 @@ ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccWut0ul.s 			page 1
  295 00bf 02       		.uleb128 0x2
  296 00c0 04       		.byte	0x4
  297 00c1 07       		.byte	0x7
- 298 00c2 B2010000 		.4byte	.LASF16
+ 298 00c2 04020000 		.4byte	.LASF16
  299 00c6 06       		.uleb128 0x6
  300 00c7 01       		.byte	0x1
- 301 00c8 20010000 		.4byte	.LASF17
+ 301 00c8 8E010000 		.4byte	.LASF17
  302 00cc 01       		.byte	0x1
  303 00cd A8       		.byte	0xa8
  304 00ce 01       		.byte	0x1
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccWut0ul.s 			page 1
  309 00dc 06       		.uleb128 0x6
  310 00dd 01       		.byte	0x1
  311 00de 37000000 		.4byte	.LASF18
-ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccWut0ul.s 			page 11
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccxm96pB.s 			page 11
 
 
  312 00e2 01       		.byte	0x1
@@ -609,7 +609,7 @@ ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccWut0ul.s 			page 1
  317 00ed 2C000000 		.4byte	.LLST1
  318 00f1 01       		.byte	0x1
  319 00f2 07       		.uleb128 0x7
- 320 00f3 84010000 		.4byte	.LASF19
+ 320 00f3 D6010000 		.4byte	.LASF19
  321 00f7 01       		.byte	0x1
  322 00f8 1A       		.byte	0x1a
  323 00f9 A5000000 		.4byte	0xa5
@@ -618,14 +618,14 @@ ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccWut0ul.s 			page 1
  326 00ff 03       		.byte	0x3
  327 0100 00000000 		.4byte	I2C_1_state
  328 0104 08       		.uleb128 0x8
- 329 0105 90010000 		.4byte	.LASF20
+ 329 0105 E2010000 		.4byte	.LASF20
  330 0109 03       		.byte	0x3
  331 010a 30       		.byte	0x30
  332 010b AA000000 		.4byte	0xaa
  333 010f 01       		.byte	0x1
  334 0110 01       		.byte	0x1
  335 0111 08       		.uleb128 0x8
- 336 0112 BD000000 		.4byte	.LASF21
+ 336 0112 BB010000 		.4byte	.LASF21
  337 0116 03       		.byte	0x3
  338 0117 36       		.byte	0x36
  339 0118 BA000000 		.4byte	0xba
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccWut0ul.s 			page 1
  366 000e 01       		.uleb128 0x1
  367 000f 52       		.uleb128 0x52
  368 0010 01       		.uleb128 0x1
-ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccWut0ul.s 			page 12
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccxm96pB.s 			page 12
 
 
  369 0011 10       		.uleb128 0x10
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccWut0ul.s 			page 1
  423 0047 0B       		.uleb128 0xb
  424 0048 3B       		.uleb128 0x3b
  425 0049 0B       		.uleb128 0xb
-ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccWut0ul.s 			page 13
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccxm96pB.s 			page 13
 
 
  426 004a 27       		.uleb128 0x27
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccWut0ul.s 			page 1
  480 000b 00       		.sleb128 0
  481 000c 02000000 		.4byte	.LCFI0
  482 0010 04000000 		.4byte	.LCFI1
-ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccWut0ul.s 			page 14
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccxm96pB.s 			page 14
 
 
  483 0014 0200     		.2byte	0x2
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccWut0ul.s 			page 1
  535      00000201 
  535      FB0E0D00 
  535      01010101 
-ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccWut0ul.s 			page 15
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccxm96pB.s 			page 15
 
 
  536              	.LASF6:
@@ -891,86 +891,95 @@ ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccWut0ul.s 			page 1
  554      6720756E 
  554      7369676E 
  554      65642069 
- 555              	.LASF21:
- 556 00bd 4932435F 		.ascii	"I2C_1_mstrRdBufIndex\000"
- 556      315F6D73 
- 556      74725264 
- 556      42756649 
- 556      6E646578 
- 557              	.LASF1:
-ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccWut0ul.s 			page 16
+ 555              	.LASF25:
+ 556 00bd 433A5C55 		.ascii	"C:\\Users\\Jeppe\\Documents\\Engineer\\3_Semester\\"
+ 556      73657273 
+ 556      5C4A6570 
+ 556      70655C44 
+ 556      6F63756D 
+ 557 00ea 45335052 		.ascii	"E3PRJ3\\Design og implementering\\Body SW\\Body_mai"
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccxm96pB.s 			page 16
 
 
- 558 00d2 756E7369 		.ascii	"unsigned char\000"
- 558      676E6564 
- 558      20636861 
- 558      7200
- 559              	.LASF14:
- 560 00e0 63686172 		.ascii	"char\000"
- 560      00
- 561              	.LASF4:
- 562 00e5 6C6F6E67 		.ascii	"long int\000"
- 562      20696E74 
+ 557      4A335C44 
+ 557      65736967 
+ 557      6E206F67 
+ 557      20696D70 
+ 558 011a 6E5F5665 		.ascii	"n_Version_4\\Body_main\\Body_main.cydsn\000"
+ 558      7273696F 
+ 558      6E5F345C 
+ 558      426F6479 
+ 558      5F6D6169 
+ 559              	.LASF1:
+ 560 0140 756E7369 		.ascii	"unsigned char\000"
+ 560      676E6564 
+ 560      20636861 
+ 560      7200
+ 561              	.LASF14:
+ 562 014e 63686172 		.ascii	"char\000"
  562      00
- 563              	.LASF24:
- 564 00ee 2E5C4765 		.ascii	".\\Generated_Source\\PSoC4\\I2C_1_I2C.c\000"
- 564      6E657261 
- 564      7465645F 
- 564      536F7572 
- 564      63655C50 
- 565              	.LASF13:
- 566 0113 646F7562 		.ascii	"double\000"
- 566      6C6500
- 567              	.LASF15:
- 568 011a 72656733 		.ascii	"reg32\000"
- 568      3200
- 569              	.LASF17:
- 570 0120 4932435F 		.ascii	"I2C_1_I2CInit\000"
- 570      315F4932 
- 570      43496E69 
- 570      7400
- 571              	.LASF3:
- 572 012e 73686F72 		.ascii	"short unsigned int\000"
- 572      7420756E 
- 572      7369676E 
- 572      65642069 
- 572      6E7400
- 573              	.LASF0:
- 574 0141 7369676E 		.ascii	"signed char\000"
- 574      65642063 
- 574      68617200 
- 575              	.LASF25:
- 576 014d 433A5C55 		.ascii	"C:\\Users\\Jeppe\\Desktop\\Body_main\\Body_main.cyd"
- 576      73657273 
- 576      5C4A6570 
- 576      70655C44 
- 576      65736B74 
- 577 017b 736E00   		.ascii	"sn\000"
- 578              	.LASF12:
- 579 017e 666C6F61 		.ascii	"float\000"
- 579      7400
- 580              	.LASF19:
- 581 0184 4932435F 		.ascii	"I2C_1_state\000"
- 581      315F7374 
- 581      61746500 
- 582              	.LASF20:
- 583 0190 4932435F 		.ascii	"I2C_1_mstrStatus\000"
- 583      315F6D73 
- 583      74725374 
- 583      61747573 
-ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccWut0ul.s 			page 17
+ 563              	.LASF4:
+ 564 0153 6C6F6E67 		.ascii	"long int\000"
+ 564      20696E74 
+ 564      00
+ 565              	.LASF24:
+ 566 015c 2E5C4765 		.ascii	".\\Generated_Source\\PSoC4\\I2C_1_I2C.c\000"
+ 566      6E657261 
+ 566      7465645F 
+ 566      536F7572 
+ 566      63655C50 
+ 567              	.LASF13:
+ 568 0181 646F7562 		.ascii	"double\000"
+ 568      6C6500
+ 569              	.LASF15:
+ 570 0188 72656733 		.ascii	"reg32\000"
+ 570      3200
+ 571              	.LASF17:
+ 572 018e 4932435F 		.ascii	"I2C_1_I2CInit\000"
+ 572      315F4932 
+ 572      43496E69 
+ 572      7400
+ 573              	.LASF3:
+ 574 019c 73686F72 		.ascii	"short unsigned int\000"
+ 574      7420756E 
+ 574      7369676E 
+ 574      65642069 
+ 574      6E7400
+ 575              	.LASF0:
+ 576 01af 7369676E 		.ascii	"signed char\000"
+ 576      65642063 
+ 576      68617200 
+ 577              	.LASF21:
+ 578 01bb 4932435F 		.ascii	"I2C_1_mstrRdBufIndex\000"
+ 578      315F6D73 
+ 578      74725264 
+ 578      42756649 
+ 578      6E646578 
+ 579              	.LASF12:
+ 580 01d0 666C6F61 		.ascii	"float\000"
+ 580      7400
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccxm96pB.s 			page 17
 
 
- 583      00
- 584              	.LASF2:
- 585 01a1 73686F72 		.ascii	"short int\000"
- 585      7420696E 
- 585      7400
- 586              	.LASF10:
- 587 01ab 75696E74 		.ascii	"uint16\000"
- 587      313600
- 588              	.LASF16:
- 589 01b2 73697A65 		.ascii	"sizetype\000"
- 589      74797065 
- 589      00
- 590              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.7.3 20130312 (release) [ARM/embedded-4_7-br
+ 581              	.LASF19:
+ 582 01d6 4932435F 		.ascii	"I2C_1_state\000"
+ 582      315F7374 
+ 582      61746500 
+ 583              	.LASF20:
+ 584 01e2 4932435F 		.ascii	"I2C_1_mstrStatus\000"
+ 584      315F6D73 
+ 584      74725374 
+ 584      61747573 
+ 584      00
+ 585              	.LASF2:
+ 586 01f3 73686F72 		.ascii	"short int\000"
+ 586      7420696E 
+ 586      7400
+ 587              	.LASF10:
+ 588 01fd 75696E74 		.ascii	"uint16\000"
+ 588      313600
+ 589              	.LASF16:
+ 590 0204 73697A65 		.ascii	"sizetype\000"
+ 590      74797065 
+ 590      00
+ 591              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.7.3 20130312 (release) [ARM/embedded-4_7-br

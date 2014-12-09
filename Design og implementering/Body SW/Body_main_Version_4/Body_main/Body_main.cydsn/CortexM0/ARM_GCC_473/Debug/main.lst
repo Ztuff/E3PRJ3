@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccRbVAsW.s 			page 1
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccLKH3Z9.s 			page 1
 
 
    1              		.cpu cortex-m0
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccRbVAsW.s 			page 1
   23:.\main.c      **** #define PWR_MODE (1<<3) // Sættes i measurement mode, standby til den skal måle (Strømbesparende
   24:.\main.c      **** #define DATAX0 0x32 //least significant 
   25:.\main.c      **** #define DATAX1 0x33 //most significant
-ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccRbVAsW.s 			page 2
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccLKH3Z9.s 			page 2
 
 
   26:.\main.c      **** #define DATAY0 0x34
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccRbVAsW.s 			page 1
   49              	.L2:
   64:.\main.c      **** 	
   65:.\main.c      ****     //ISR enable
-ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccRbVAsW.s 			page 3
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccLKH3Z9.s 			page 3
 
 
   66:.\main.c      **** 	//isr_sendBT_StartEx(ISR_BT_Handler);
@@ -143,10 +143,9 @@ ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccRbVAsW.s 			page 1
   56              		.loc 1 78 0 discriminator 1
   57 001c 0720     		mov	r0, #7
   58 001e FFF7FEFF 		bl	CyDelay
-  79:.\main.c      ****        
-  80:.\main.c      ****         
-  81:.\main.c      ****     }     
-  59              		.loc 1 81 0 discriminator 1
+  79:.\main.c      ****      
+  80:.\main.c      ****     }     
+  59              		.loc 1 80 0 discriminator 1
   60 0022 F5E7     		b	.L2
   61              		.cfi_endproc
   62              	.LFE33:
@@ -159,14 +158,14 @@ ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccRbVAsW.s 			page 1
   69              		.type	ISR_BT_Handler, %function
   70              	ISR_BT_Handler:
   71              	.LFB34:
-  82:.\main.c      ****             
-  83:.\main.c      **** 		
-  84:.\main.c      **** 	return 0;
-  85:.\main.c      **** }
-  86:.\main.c      **** 
-  87:.\main.c      **** CY_ISR(ISR_BT_Handler)
-  88:.\main.c      **** {
-  72              		.loc 1 88 0
+  81:.\main.c      ****             
+  82:.\main.c      **** 		
+  83:.\main.c      **** 	return 0;
+  84:.\main.c      **** }
+  85:.\main.c      **** 
+  86:.\main.c      **** CY_ISR(ISR_BT_Handler)
+  87:.\main.c      **** {
+  72              		.loc 1 87 0
   73              		.cfi_startproc
   74 0000 80B5     		push	{r7, lr}
   75              	.LCFI2:
@@ -176,20 +175,20 @@ ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccRbVAsW.s 			page 1
   79 0002 00AF     		add	r7, sp, #0
   80              	.LCFI3:
   81              		.cfi_def_cfa_register 7
-  89:.\main.c      ****         //SEND DATA VIA BT
-  90:.\main.c      ****         sendDataArray(); 
-ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccRbVAsW.s 			page 4
+  88:.\main.c      ****         //SEND DATA VIA BT
+  89:.\main.c      ****         sendDataArray(); 
+  82              		.loc 1 89 0
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccLKH3Z9.s 			page 4
 
 
-  82              		.loc 1 90 0
   83 0004 FFF7FEFF 		bl	sendDataArray
-  91:.\main.c      ****         ready_to_send_flag = 0;
-  84              		.loc 1 91 0
+  90:.\main.c      ****         ready_to_send_flag = 0;
+  84              		.loc 1 90 0
   85 0008 024B     		ldr	r3, .L4
   86 000a 0022     		mov	r2, #0
   87 000c 1A60     		str	r2, [r3]
-  92:.\main.c      **** }
-  88              		.loc 1 92 0
+  91:.\main.c      **** }
+  88              		.loc 1 91 0
   89 000e BD46     		mov	sp, r7
   90              		@ sp needed for prologue
   91 0010 80BD     		pop	{r7, pc}
@@ -208,12 +207,12 @@ ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccRbVAsW.s 			page 1
  104              		.type	initSensors, %function
  105              	initSensors:
  106              	.LFB35:
+  92:.\main.c      **** 
   93:.\main.c      **** 
   94:.\main.c      **** 
-  95:.\main.c      **** 
-  96:.\main.c      **** void initSensors()
-  97:.\main.c      **** {	
- 107              		.loc 1 97 0
+  95:.\main.c      **** void initSensors()
+  96:.\main.c      **** {	
+ 107              		.loc 1 96 0
  108              		.cfi_startproc
  109 0000 80B5     		push	{r7, lr}
  110              	.LCFI4:
@@ -223,14 +222,14 @@ ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccRbVAsW.s 			page 1
  114 0002 00AF     		add	r7, sp, #0
  115              	.LCFI5:
  116              		.cfi_def_cfa_register 7
-  98:.\main.c      **** 	/***** INIT INDIVIDUAL SENSORS *****/
-  99:.\main.c      **** 	//initMPU6050();	//Gyroscope
- 100:.\main.c      **** 	initADXL345();	//Accellerometer
- 117              		.loc 1 100 0
+  97:.\main.c      **** 	/***** INIT INDIVIDUAL SENSORS *****/
+  98:.\main.c      **** 	//initMPU6050();	//Gyroscope
+  99:.\main.c      **** 	initADXL345();	//Accellerometer
+ 117              		.loc 1 99 0
  118 0004 FFF7FEFF 		bl	initADXL345
- 101:.\main.c      **** 	// ..osv
- 102:.\main.c      **** }
- 119              		.loc 1 102 0
+ 100:.\main.c      **** 	// ..osv
+ 101:.\main.c      **** }
+ 119              		.loc 1 101 0
  120 0008 BD46     		mov	sp, r7
  121              		@ sp needed for prologue
  122 000a 80BD     		pop	{r7, pc}
@@ -238,23 +237,23 @@ ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccRbVAsW.s 			page 1
  124              	.LFE35:
  125              		.size	initSensors, .-initSensors
  126              		.section	.text.initADXL345,"ax",%progbits
-ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccRbVAsW.s 			page 5
-
-
  127              		.align	2
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccLKH3Z9.s 			page 5
+
+
  128              		.global	initADXL345
  129              		.code	16
  130              		.thumb_func
  131              		.type	initADXL345, %function
  132              	initADXL345:
  133              	.LFB36:
+ 102:.\main.c      **** 
  103:.\main.c      **** 
  104:.\main.c      **** 
- 105:.\main.c      **** 
- 106:.\main.c      **** //init accelerometer
- 107:.\main.c      **** void initADXL345()
- 108:.\main.c      **** {
- 134              		.loc 1 108 0
+ 105:.\main.c      **** //init accelerometer
+ 106:.\main.c      **** void initADXL345()
+ 107:.\main.c      **** {
+ 134              		.loc 1 107 0
  135              		.cfi_startproc
  136 0000 80B5     		push	{r7, lr}
  137              	.LCFI6:
@@ -264,88 +263,88 @@ ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccRbVAsW.s 			page 1
  141 0002 00AF     		add	r7, sp, #0
  142              	.LCFI7:
  143              		.cfi_def_cfa_register 7
- 109:.\main.c      **** 	// Fylder ADXL345 ind i sensor array'et. 
- 110:.\main.c      **** 	setSensArray(ACCEL_ADDRESS, DATAX0, DEFAULT_DATA);
- 144              		.loc 1 110 0
+ 108:.\main.c      **** 	// Fylder ADXL345 ind i sensor array'et. 
+ 109:.\main.c      **** 	setSensArray(ACCEL_ADDRESS, DATAX0, DEFAULT_DATA);
+ 144              		.loc 1 109 0
  145 0004 0123     		mov	r3, #1
  146 0006 5B42     		neg	r3, r3
  147 0008 5320     		mov	r0, #83
  148 000a 3221     		mov	r1, #50
  149 000c 1A1C     		mov	r2, r3
  150 000e FFF7FEFF 		bl	setSensArray
- 111:.\main.c      **** 	setSensArray(ACCEL_ADDRESS, DATAX1, DEFAULT_DATA);
- 151              		.loc 1 111 0
+ 110:.\main.c      **** 	setSensArray(ACCEL_ADDRESS, DATAX1, DEFAULT_DATA);
+ 151              		.loc 1 110 0
  152 0012 0123     		mov	r3, #1
  153 0014 5B42     		neg	r3, r3
  154 0016 5320     		mov	r0, #83
  155 0018 3321     		mov	r1, #51
  156 001a 1A1C     		mov	r2, r3
  157 001c FFF7FEFF 		bl	setSensArray
- 112:.\main.c      **** 	setSensArray(ACCEL_ADDRESS, DATAY0, DEFAULT_DATA);
- 158              		.loc 1 112 0
+ 111:.\main.c      **** 	setSensArray(ACCEL_ADDRESS, DATAY0, DEFAULT_DATA);
+ 158              		.loc 1 111 0
  159 0020 0123     		mov	r3, #1
  160 0022 5B42     		neg	r3, r3
  161 0024 5320     		mov	r0, #83
  162 0026 3421     		mov	r1, #52
  163 0028 1A1C     		mov	r2, r3
  164 002a FFF7FEFF 		bl	setSensArray
- 113:.\main.c      **** 	setSensArray(ACCEL_ADDRESS, DATAY1, DEFAULT_DATA);
- 165              		.loc 1 113 0
+ 112:.\main.c      **** 	setSensArray(ACCEL_ADDRESS, DATAY1, DEFAULT_DATA);
+ 165              		.loc 1 112 0
  166 002e 0123     		mov	r3, #1
  167 0030 5B42     		neg	r3, r3
  168 0032 5320     		mov	r0, #83
  169 0034 3521     		mov	r1, #53
  170 0036 1A1C     		mov	r2, r3
  171 0038 FFF7FEFF 		bl	setSensArray
- 114:.\main.c      **** 	setSensArray(ACCEL_ADDRESS, DATAZ0, DEFAULT_DATA);
-ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccRbVAsW.s 			page 6
+ 113:.\main.c      **** 	setSensArray(ACCEL_ADDRESS, DATAZ0, DEFAULT_DATA);
+ 172              		.loc 1 113 0
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccLKH3Z9.s 			page 6
 
 
- 172              		.loc 1 114 0
  173 003c 0123     		mov	r3, #1
  174 003e 5B42     		neg	r3, r3
  175 0040 5320     		mov	r0, #83
  176 0042 3621     		mov	r1, #54
  177 0044 1A1C     		mov	r2, r3
  178 0046 FFF7FEFF 		bl	setSensArray
- 115:.\main.c      **** 	setSensArray(ACCEL_ADDRESS, DATAZ1, DEFAULT_DATA);
- 179              		.loc 1 115 0
+ 114:.\main.c      **** 	setSensArray(ACCEL_ADDRESS, DATAZ1, DEFAULT_DATA);
+ 179              		.loc 1 114 0
  180 004a 0123     		mov	r3, #1
  181 004c 5B42     		neg	r3, r3
  182 004e 5320     		mov	r0, #83
  183 0050 3721     		mov	r1, #55
  184 0052 1A1C     		mov	r2, r3
  185 0054 FFF7FEFF 		bl	setSensArray
- 116:.\main.c      **** 	
- 117:.\main.c      **** 	//Opsætter til I2C 
- 118:.\main.c      **** 	if(I2C_1_I2CMasterSendStart(ACCEL_ADDRESS, I2C_1_I2C_WRITE_XFER_MODE) == I2C_1_I2C_MSTR_NO_ERROR /
- 186              		.loc 1 118 0
+ 115:.\main.c      **** 	
+ 116:.\main.c      **** 	//Opsætter til I2C 
+ 117:.\main.c      **** 	if(I2C_1_I2CMasterSendStart(ACCEL_ADDRESS, I2C_1_I2C_WRITE_XFER_MODE) == I2C_1_I2C_MSTR_NO_ERROR /
+ 186              		.loc 1 117 0
  187 0058 5320     		mov	r0, #83
  188 005a 0021     		mov	r1, #0
  189 005c FFF7FEFF 		bl	I2C_1_I2CMasterSendStart
  190 0060 031C     		mov	r3, r0
  191 0062 002B     		cmp	r3, #0
  192 0064 0DD1     		bne	.L7
- 119:.\main.c      ****         && I2C_1_I2CMasterWriteByte(PWR_CTRL_REG) == I2C_1_I2C_MSTR_NO_ERROR // POWER CONTROL REGIS
- 193              		.loc 1 119 0
+ 118:.\main.c      ****         && I2C_1_I2CMasterWriteByte(PWR_CTRL_REG) == I2C_1_I2C_MSTR_NO_ERROR // POWER CONTROL REGIS
+ 193              		.loc 1 118 0
  194 0066 2D20     		mov	r0, #45
  195 0068 FFF7FEFF 		bl	I2C_1_I2CMasterWriteByte
  196 006c 031C     		mov	r3, r0
  197 006e 002B     		cmp	r3, #0
  198 0070 07D1     		bne	.L7
- 120:.\main.c      ****         && I2C_1_I2CMasterWriteByte(PWR_MODE) == I2C_1_I2C_MSTR_NO_ERROR) // Sættes i measurement 
- 199              		.loc 1 120 0
+ 119:.\main.c      ****         && I2C_1_I2CMasterWriteByte(PWR_MODE) == I2C_1_I2C_MSTR_NO_ERROR) // Sættes i measurement 
+ 199              		.loc 1 119 0
  200 0072 0820     		mov	r0, #8
  201 0074 FFF7FEFF 		bl	I2C_1_I2CMasterWriteByte
  202 0078 031C     		mov	r3, r0
  203 007a 002B     		cmp	r3, #0
  204 007c 01D1     		bne	.L7
- 121:.\main.c      **** 	handleI2CError();
- 205              		.loc 1 121 0
+ 120:.\main.c      **** 	handleI2CError();
+ 205              		.loc 1 120 0
  206 007e FFF7FEFF 		bl	handleI2CError
  207              	.L7:
- 122:.\main.c      **** }
- 208              		.loc 1 122 0
+ 121:.\main.c      **** }
+ 208              		.loc 1 121 0
  209 0082 BD46     		mov	sp, r7
  210              		@ sp needed for prologue
  211 0084 80BD     		pop	{r7, pc}
@@ -358,16 +357,16 @@ ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccRbVAsW.s 			page 1
  218              		.code	16
  219              		.thumb_func
  220              		.type	initMPU6050, %function
-ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccRbVAsW.s 			page 7
-
-
  221              	initMPU6050:
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccLKH3Z9.s 			page 7
+
+
  222              	.LFB37:
- 123:.\main.c      **** 
- 124:.\main.c      **** //init gyroscope 
- 125:.\main.c      **** void initMPU6050()
- 126:.\main.c      **** {
- 223              		.loc 1 126 0
+ 122:.\main.c      **** 
+ 123:.\main.c      **** //init gyroscope 
+ 124:.\main.c      **** void initMPU6050()
+ 125:.\main.c      **** {
+ 223              		.loc 1 125 0
  224              		.cfi_startproc
  225 0000 80B5     		push	{r7, lr}
  226              	.LCFI8:
@@ -377,74 +376,74 @@ ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccRbVAsW.s 			page 1
  230 0002 00AF     		add	r7, sp, #0
  231              	.LCFI9:
  232              		.cfi_def_cfa_register 7
- 127:.\main.c      **** 	// Fylder ADXL345 ind i sensor array'et. 
- 128:.\main.c      **** 	setSensArray(GYRO_ADDRESS, GYRO_XOUT_H, DEFAULT_DATA);
- 233              		.loc 1 128 0
+ 126:.\main.c      **** 	// Fylder ADXL345 ind i sensor array'et. 
+ 127:.\main.c      **** 	setSensArray(GYRO_ADDRESS, GYRO_XOUT_H, DEFAULT_DATA);
+ 233              		.loc 1 127 0
  234 0004 0123     		mov	r3, #1
  235 0006 5B42     		neg	r3, r3
  236 0008 6820     		mov	r0, #104
  237 000a 4321     		mov	r1, #67
  238 000c 1A1C     		mov	r2, r3
  239 000e FFF7FEFF 		bl	setSensArray
- 129:.\main.c      ****     setSensArray(GYRO_ADDRESS, GYRO_XOUT_L, DEFAULT_DATA);
- 240              		.loc 1 129 0
+ 128:.\main.c      ****     setSensArray(GYRO_ADDRESS, GYRO_XOUT_L, DEFAULT_DATA);
+ 240              		.loc 1 128 0
  241 0012 0123     		mov	r3, #1
  242 0014 5B42     		neg	r3, r3
  243 0016 6820     		mov	r0, #104
  244 0018 4421     		mov	r1, #68
  245 001a 1A1C     		mov	r2, r3
  246 001c FFF7FEFF 		bl	setSensArray
- 130:.\main.c      **** 	setSensArray(GYRO_ADDRESS, GYRO_YOUT_H, DEFAULT_DATA);
- 247              		.loc 1 130 0
+ 129:.\main.c      **** 	setSensArray(GYRO_ADDRESS, GYRO_YOUT_H, DEFAULT_DATA);
+ 247              		.loc 1 129 0
  248 0020 0123     		mov	r3, #1
  249 0022 5B42     		neg	r3, r3
  250 0024 6820     		mov	r0, #104
  251 0026 4521     		mov	r1, #69
  252 0028 1A1C     		mov	r2, r3
  253 002a FFF7FEFF 		bl	setSensArray
- 131:.\main.c      **** 	setSensArray(GYRO_ADDRESS, GYRO_YOUT_L, DEFAULT_DATA);
- 254              		.loc 1 131 0
+ 130:.\main.c      **** 	setSensArray(GYRO_ADDRESS, GYRO_YOUT_L, DEFAULT_DATA);
+ 254              		.loc 1 130 0
  255 002e 0123     		mov	r3, #1
  256 0030 5B42     		neg	r3, r3
  257 0032 6820     		mov	r0, #104
  258 0034 4621     		mov	r1, #70
  259 0036 1A1C     		mov	r2, r3
  260 0038 FFF7FEFF 		bl	setSensArray
- 132:.\main.c      **** 	setSensArray(GYRO_ADDRESS, GYRO_ZOUT_H, DEFAULT_DATA);
- 261              		.loc 1 132 0
+ 131:.\main.c      **** 	setSensArray(GYRO_ADDRESS, GYRO_ZOUT_H, DEFAULT_DATA);
+ 261              		.loc 1 131 0
  262 003c 0123     		mov	r3, #1
  263 003e 5B42     		neg	r3, r3
  264 0040 6820     		mov	r0, #104
  265 0042 4721     		mov	r1, #71
  266 0044 1A1C     		mov	r2, r3
  267 0046 FFF7FEFF 		bl	setSensArray
-ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccRbVAsW.s 			page 8
+ 132:.\main.c      **** 	setSensArray(GYRO_ADDRESS, GYRO_ZOUT_L, DEFAULT_DATA);
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccLKH3Z9.s 			page 8
 
 
- 133:.\main.c      **** 	setSensArray(GYRO_ADDRESS, GYRO_ZOUT_L, DEFAULT_DATA);
- 268              		.loc 1 133 0
+ 268              		.loc 1 132 0
  269 004a 0123     		mov	r3, #1
  270 004c 5B42     		neg	r3, r3
  271 004e 6820     		mov	r0, #104
  272 0050 4821     		mov	r1, #72
  273 0052 1A1C     		mov	r2, r3
  274 0054 FFF7FEFF 		bl	setSensArray
- 134:.\main.c      **** 	
- 135:.\main.c      **** 	//Opsætter til I2C 
- 136:.\main.c      **** 	if(I2C_1_I2CMasterSendStart(GYRO_ADDRESS, I2C_1_I2C_WRITE_XFER_MODE) == I2C_1_I2C_MSTR_NO_ERROR) /
- 275              		.loc 1 136 0
+ 133:.\main.c      **** 	
+ 134:.\main.c      **** 	//Opsætter til I2C 
+ 135:.\main.c      **** 	if(I2C_1_I2CMasterSendStart(GYRO_ADDRESS, I2C_1_I2C_WRITE_XFER_MODE) == I2C_1_I2C_MSTR_NO_ERROR) /
+ 275              		.loc 1 135 0
  276 0058 6820     		mov	r0, #104
  277 005a 0021     		mov	r1, #0
  278 005c FFF7FEFF 		bl	I2C_1_I2CMasterSendStart
  279 0060 031C     		mov	r3, r0
  280 0062 002B     		cmp	r3, #0
  281 0064 01D1     		bne	.L9
- 137:.\main.c      **** 	handleI2CError();
- 282              		.loc 1 137 0
+ 136:.\main.c      **** 	handleI2CError();
+ 282              		.loc 1 136 0
  283 0066 FFF7FEFF 		bl	handleI2CError
  284              	.L9:
- 138:.\main.c      **** }
- 285              		.loc 1 138 0
+ 137:.\main.c      **** }
+ 285              		.loc 1 137 0
  286 006a BD46     		mov	sp, r7
  287              		@ sp needed for prologue
  288 006c 80BD     		pop	{r7, pc}
@@ -462,8 +461,8 @@ ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccRbVAsW.s 			page 1
  300 000b 01       		.uleb128 0x1
  301 000c 33000000 		.4byte	.LASF18
  302 0010 01       		.byte	0x1
- 303 0011 4F010000 		.4byte	.LASF19
- 304 0015 18010000 		.4byte	.LASF20
+ 303 0011 A1010000 		.4byte	.LASF19
+ 304 0015 A5000000 		.4byte	.LASF20
  305 0019 00000000 		.4byte	.Ldebug_ranges0+0
  306 001d 00000000 		.4byte	0
  307 0021 00000000 		.4byte	0
@@ -471,26 +470,26 @@ ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccRbVAsW.s 			page 1
  309 0029 02       		.uleb128 0x2
  310 002a 01       		.byte	0x1
  311 002b 06       		.byte	0x6
- 312 002c 0C010000 		.4byte	.LASF0
+ 312 002c 83010000 		.4byte	.LASF0
  313 0030 02       		.uleb128 0x2
  314 0031 01       		.byte	0x1
  315 0032 08       		.byte	0x8
- 316 0033 B1000000 		.4byte	.LASF1
+ 316 0033 34010000 		.4byte	.LASF1
  317 0037 02       		.uleb128 0x2
  318 0038 02       		.byte	0x2
-ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccRbVAsW.s 			page 9
-
-
  319 0039 05       		.byte	0x5
- 320 003a E8000000 		.4byte	.LASF2
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccLKH3Z9.s 			page 9
+
+
+ 320 003a 5F010000 		.4byte	.LASF2
  321 003e 02       		.uleb128 0x2
  322 003f 02       		.byte	0x2
  323 0040 07       		.byte	0x7
- 324 0041 F9000000 		.4byte	.LASF3
+ 324 0041 70010000 		.4byte	.LASF3
  325 0045 02       		.uleb128 0x2
  326 0046 04       		.byte	0x4
  327 0047 05       		.byte	0x5
- 328 0048 DF000000 		.4byte	.LASF4
+ 328 0048 56010000 		.4byte	.LASF4
  329 004c 02       		.uleb128 0x2
  330 004d 04       		.byte	0x4
  331 004e 07       		.byte	0x7
@@ -514,19 +513,19 @@ ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccRbVAsW.s 			page 1
  349 006f 02       		.uleb128 0x2
  350 0070 04       		.byte	0x4
  351 0071 04       		.byte	0x4
- 352 0072 49010000 		.4byte	.LASF9
+ 352 0072 9B010000 		.4byte	.LASF9
  353 0076 02       		.uleb128 0x2
  354 0077 08       		.byte	0x8
  355 0078 04       		.byte	0x4
- 356 0079 F2000000 		.4byte	.LASF10
+ 356 0079 69010000 		.4byte	.LASF10
  357 007d 02       		.uleb128 0x2
  358 007e 01       		.byte	0x1
  359 007f 08       		.byte	0x8
- 360 0080 CB000000 		.4byte	.LASF11
+ 360 0080 42010000 		.4byte	.LASF11
  361 0084 02       		.uleb128 0x2
  362 0085 04       		.byte	0x4
  363 0086 07       		.byte	0x7
- 364 0087 64010000 		.4byte	.LASF12
+ 364 0087 B6010000 		.4byte	.LASF12
  365 008b 04       		.uleb128 0x4
  366 008c 01       		.byte	0x1
  367 008d 1B000000 		.4byte	.LASF13
@@ -538,13 +537,13 @@ ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccRbVAsW.s 			page 1
  373 009f 00000000 		.4byte	.LLST0
  374 00a3 01       		.byte	0x1
  375 00a4 05       		.uleb128 0x5
-ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccRbVAsW.s 			page 10
-
-
  376 00a5 01       		.byte	0x1
- 377 00a6 D0000000 		.4byte	.LASF14
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccLKH3Z9.s 			page 10
+
+
+ 377 00a6 47010000 		.4byte	.LASF14
  378 00aa 01       		.byte	0x1
- 379 00ab 57       		.byte	0x57
+ 379 00ab 56       		.byte	0x56
  380 00ac 01       		.byte	0x1
  381 00ad 00000000 		.4byte	.LFB34
  382 00b1 18000000 		.4byte	.LFE34
@@ -552,9 +551,9 @@ ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccRbVAsW.s 			page 1
  384 00b9 01       		.byte	0x1
  385 00ba 05       		.uleb128 0x5
  386 00bb 01       		.byte	0x1
- 387 00bc A5000000 		.4byte	.LASF15
+ 387 00bc 28010000 		.4byte	.LASF15
  388 00c0 01       		.byte	0x1
- 389 00c1 60       		.byte	0x60
+ 389 00c1 5F       		.byte	0x5f
  390 00c2 01       		.byte	0x1
  391 00c3 00000000 		.4byte	.LFB35
  392 00c7 0C000000 		.4byte	.LFE35
@@ -562,18 +561,18 @@ ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccRbVAsW.s 			page 1
  394 00cf 01       		.byte	0x1
  395 00d0 06       		.uleb128 0x6
  396 00d1 01       		.byte	0x1
- 397 00d2 58010000 		.4byte	.LASF16
+ 397 00d2 AA010000 		.4byte	.LASF16
  398 00d6 01       		.byte	0x1
- 399 00d7 6B       		.byte	0x6b
+ 399 00d7 6A       		.byte	0x6a
  400 00d8 00000000 		.4byte	.LFB36
  401 00dc 86000000 		.4byte	.LFE36
  402 00e0 84000000 		.4byte	.LLST3
  403 00e4 01       		.byte	0x1
  404 00e5 06       		.uleb128 0x6
  405 00e6 01       		.byte	0x1
- 406 00e7 BF000000 		.4byte	.LASF17
+ 406 00e7 8F010000 		.4byte	.LASF17
  407 00eb 01       		.byte	0x1
- 408 00ec 7D       		.byte	0x7d
+ 408 00ec 7C       		.byte	0x7c
  409 00ed 00000000 		.4byte	.LFB37
  410 00f1 6E000000 		.4byte	.LFE37
  411 00f5 B0000000 		.4byte	.LLST4
@@ -598,10 +597,10 @@ ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccRbVAsW.s 			page 1
  430 0005 13       		.uleb128 0x13
  431 0006 0B       		.uleb128 0xb
  432 0007 03       		.uleb128 0x3
-ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccRbVAsW.s 			page 11
-
-
  433 0008 0E       		.uleb128 0xe
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccLKH3Z9.s 			page 11
+
+
  434 0009 1B       		.uleb128 0x1b
  435 000a 0E       		.uleb128 0xe
  436 000b 55       		.uleb128 0x55
@@ -658,10 +657,10 @@ ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccRbVAsW.s 			page 1
  487 003e 9642     		.uleb128 0x2116
  488 0040 0C       		.uleb128 0xc
  489 0041 00       		.byte	0
-ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccRbVAsW.s 			page 12
-
-
  490 0042 00       		.byte	0
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccLKH3Z9.s 			page 12
+
+
  491 0043 05       		.uleb128 0x5
  492 0044 2E       		.uleb128 0x2e
  493 0045 00       		.byte	0
@@ -718,10 +717,10 @@ ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccRbVAsW.s 			page 1
  544 007a 49       		.uleb128 0x49
  545 007b 13       		.uleb128 0x13
  546 007c 3F       		.uleb128 0x3f
-ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccRbVAsW.s 			page 13
-
-
  547 007d 0C       		.uleb128 0xc
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccLKH3Z9.s 			page 13
+
+
  548 007e 02       		.uleb128 0x2
  549 007f 0A       		.uleb128 0xa
  550 0080 00       		.byte	0
@@ -778,10 +777,10 @@ ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccRbVAsW.s 			page 1
  601 006f 08       		.sleb128 8
  602 0070 04000000 		.4byte	.LCFI5
  603 0074 0C000000 		.4byte	.LFE35
-ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccRbVAsW.s 			page 14
-
-
  604 0078 0200     		.2byte	0x2
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccLKH3Z9.s 			page 14
+
+
  605 007a 77       		.byte	0x77
  606 007b 08       		.sleb128 8
  607 007c 00000000 		.4byte	0
@@ -838,10 +837,10 @@ ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccRbVAsW.s 			page 1
  658 0024 0C000000 		.4byte	.LFE35-.LFB35
  659 0028 00000000 		.4byte	.LFB36
  660 002c 86000000 		.4byte	.LFE36-.LFB36
-ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccRbVAsW.s 			page 15
-
-
  661 0030 00000000 		.4byte	.LFB37
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccLKH3Z9.s 			page 15
+
+
  662 0034 6E000000 		.4byte	.LFE37-.LFB37
  663 0038 00000000 		.4byte	0
  664 003c 00000000 		.4byte	0
@@ -898,10 +897,10 @@ ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccRbVAsW.s 			page 1
  692      36363135 
  693              	.LASF5:
  694 007c 6C6F6E67 		.ascii	"long unsigned int\000"
-ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccRbVAsW.s 			page 16
-
-
  694      20756E73 
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccLKH3Z9.s 			page 16
+
+
  694      69676E65 
  694      6420696E 
  694      7400
@@ -911,71 +910,80 @@ ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccRbVAsW.s 			page 1
  696      6720756E 
  696      7369676E 
  696      65642069 
- 697              	.LASF15:
- 698 00a5 696E6974 		.ascii	"initSensors\000"
- 698      53656E73 
- 698      6F727300 
- 699              	.LASF1:
- 700 00b1 756E7369 		.ascii	"unsigned char\000"
- 700      676E6564 
- 700      20636861 
- 700      7200
- 701              	.LASF17:
- 702 00bf 696E6974 		.ascii	"initMPU6050\000"
- 702      4D505536 
- 702      30353000 
- 703              	.LASF11:
- 704 00cb 63686172 		.ascii	"char\000"
- 704      00
- 705              	.LASF14:
- 706 00d0 4953525F 		.ascii	"ISR_BT_Handler\000"
- 706      42545F48 
- 706      616E646C 
- 706      657200
- 707              	.LASF4:
- 708 00df 6C6F6E67 		.ascii	"long int\000"
- 708      20696E74 
- 708      00
- 709              	.LASF2:
- 710 00e8 73686F72 		.ascii	"short int\000"
- 710      7420696E 
- 710      7400
- 711              	.LASF10:
- 712 00f2 646F7562 		.ascii	"double\000"
- 712      6C6500
- 713              	.LASF3:
- 714 00f9 73686F72 		.ascii	"short unsigned int\000"
- 714      7420756E 
- 714      7369676E 
- 714      65642069 
- 714      6E7400
- 715              	.LASF0:
- 716 010c 7369676E 		.ascii	"signed char\000"
- 716      65642063 
- 716      68617200 
- 717              	.LASF20:
- 718 0118 433A5C55 		.ascii	"C:\\Users\\Jeppe\\Desktop\\Body_main\\Body_main.cyd"
- 718      73657273 
- 718      5C4A6570 
- 718      70655C44 
-ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccRbVAsW.s 			page 17
+ 697              	.LASF20:
+ 698 00a5 433A5C55 		.ascii	"C:\\Users\\Jeppe\\Documents\\Engineer\\3_Semester\\"
+ 698      73657273 
+ 698      5C4A6570 
+ 698      70655C44 
+ 698      6F63756D 
+ 699 00d2 45335052 		.ascii	"E3PRJ3\\Design og implementering\\Body SW\\Body_mai"
+ 699      4A335C44 
+ 699      65736967 
+ 699      6E206F67 
+ 699      20696D70 
+ 700 0102 6E5F5665 		.ascii	"n_Version_4\\Body_main\\Body_main.cydsn\000"
+ 700      7273696F 
+ 700      6E5F345C 
+ 700      426F6479 
+ 700      5F6D6169 
+ 701              	.LASF15:
+ 702 0128 696E6974 		.ascii	"initSensors\000"
+ 702      53656E73 
+ 702      6F727300 
+ 703              	.LASF1:
+ 704 0134 756E7369 		.ascii	"unsigned char\000"
+ 704      676E6564 
+ 704      20636861 
+ 704      7200
+ 705              	.LASF11:
+ 706 0142 63686172 		.ascii	"char\000"
+ 706      00
+ 707              	.LASF14:
+ 708 0147 4953525F 		.ascii	"ISR_BT_Handler\000"
+ 708      42545F48 
+ 708      616E646C 
+ 708      657200
+ 709              	.LASF4:
+ 710 0156 6C6F6E67 		.ascii	"long int\000"
+ 710      20696E74 
+ 710      00
+ 711              	.LASF2:
+ 712 015f 73686F72 		.ascii	"short int\000"
+ 712      7420696E 
+ 712      7400
+ 713              	.LASF10:
+ 714 0169 646F7562 		.ascii	"double\000"
+ 714      6C6500
+ 715              	.LASF3:
+ 716 0170 73686F72 		.ascii	"short unsigned int\000"
+ 716      7420756E 
+ 716      7369676E 
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccLKH3Z9.s 			page 17
 
 
- 718      65736B74 
- 719 0146 736E00   		.ascii	"sn\000"
- 720              	.LASF9:
- 721 0149 666C6F61 		.ascii	"float\000"
- 721      7400
- 722              	.LASF19:
- 723 014f 2E5C6D61 		.ascii	".\\main.c\000"
- 723      696E2E63 
- 723      00
- 724              	.LASF16:
- 725 0158 696E6974 		.ascii	"initADXL345\000"
- 725      4144584C 
- 725      33343500 
- 726              	.LASF12:
- 727 0164 73697A65 		.ascii	"sizetype\000"
- 727      74797065 
- 727      00
- 728              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.7.3 20130312 (release) [ARM/embedded-4_7-br
+ 716      65642069 
+ 716      6E7400
+ 717              	.LASF0:
+ 718 0183 7369676E 		.ascii	"signed char\000"
+ 718      65642063 
+ 718      68617200 
+ 719              	.LASF17:
+ 720 018f 696E6974 		.ascii	"initMPU6050\000"
+ 720      4D505536 
+ 720      30353000 
+ 721              	.LASF9:
+ 722 019b 666C6F61 		.ascii	"float\000"
+ 722      7400
+ 723              	.LASF19:
+ 724 01a1 2E5C6D61 		.ascii	".\\main.c\000"
+ 724      696E2E63 
+ 724      00
+ 725              	.LASF16:
+ 726 01aa 696E6974 		.ascii	"initADXL345\000"
+ 726      4144584C 
+ 726      33343500 
+ 727              	.LASF12:
+ 728 01b6 73697A65 		.ascii	"sizetype\000"
+ 728      74797065 
+ 728      00
+ 729              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.7.3 20130312 (release) [ARM/embedded-4_7-br
