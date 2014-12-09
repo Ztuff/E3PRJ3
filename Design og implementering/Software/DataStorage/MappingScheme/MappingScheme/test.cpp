@@ -4,6 +4,18 @@
 
 int main()
 {
+	MidiSignal mySig;
+	mySig.print();
+	mySig.channel_ = '0';
+	mySig.command_ = '8';
+	mySig.param1_ = 0;
+	mySig.param2_ = 0;
+	mySig.param1Old_ = 0;
+	mySig.param2Old_ = 0;
+
+	mySig.print();
+
+	return 0;
 	/*vector<MidiSignal> MidiSigs(VECTORSIZE);
 
 	for (int i = 0; i < VECTORSIZE; ++i)
@@ -18,6 +30,7 @@ int main()
 
 	MidiSigs[16].print();
 	*/
+	/*
 	MidiSignal testSignal = {'1','8',0,0};
 	cout <<   "Original signal\n  TestSignal = " << endl; 
 	testSignal.print();
@@ -79,6 +92,7 @@ int main()
 	delete velocityPtr;
 	delete keyPtr; 
 	return 0;
+	*/
 }
 
 
