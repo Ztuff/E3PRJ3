@@ -1,0 +1,1329 @@
+Loading plugins phase: Elapsed time ==> 0s.911ms
+Initializing data phase: Elapsed time ==> 5s.467ms
+<CYPRESSTAG name="CyDsfit arguments...">
+cydsfit arguments: -.fdsnotice -.fdswarpdepfile=warp_dependencies.txt -.fdselabdepfile=elab_dependencies.txt -.fdsbldfile=generated_files.txt -p C:\Users\Felix\Git Repository\PRJ3\Design og implementering\Body SW\BR3K\BMTester.cydsn\BMTester.cyprj -d CY8C4245AXI-483 -s C:\Users\Felix\Git Repository\PRJ3\Design og implementering\Body SW\BR3K\BMTester.cydsn\Generated_Source\PSoC4 -- -yv2 -v3 -ygs -q10 -o2 -.fftcfgtype=LE</CYPRESSTAG>
+<CYPRESSTAG name="Design elaboration results...">
+</CYPRESSTAG>
+Elaboration phase: Elapsed time ==> 17s.549ms
+<CYPRESSTAG name="HDL generation results...">
+</CYPRESSTAG>
+HDL generation phase: Elapsed time ==> 0s.233ms
+<CYPRESSTAG name="Synthesis results...">
+
+     | | | | | | |
+   _________________
+  -|               |-
+  -|               |-
+  -|               |-
+  -|    CYPRESS    |-
+  -|               |-
+  -|               |-   Warp Verilog Synthesis Compiler: Version 6.3 IR 41
+  -|               |-   Copyright (C) 1991-2001 Cypress Semiconductor
+   |_______________|
+     | | | | | | |
+
+======================================================================
+Compiling:  BMTester.v
+Program  :   C:\Program Files (x86)\Cypress\PSoC Creator\3.0\PSoC Creator\warp\bin/warp.exe
+Options  :    -yv2 -v3 -ygs -q10 -o2 -.fftcfgtype=LE -ya -.fftprj=C:\Users\Felix\Git Repository\PRJ3\Design og implementering\Body SW\BR3K\BMTester.cydsn\BMTester.cyprj -dcpsoc3 BMTester.v -verilog
+======================================================================
+
+======================================================================
+Compiling:  BMTester.v
+Program  :   C:\Program Files (x86)\Cypress\PSoC Creator\3.0\PSoC Creator\warp\bin/warp.exe
+Options  :    -yv2 -v3 -ygs -q10 -o2 -.fftcfgtype=LE -ya -.fftprj=C:\Users\Felix\Git Repository\PRJ3\Design og implementering\Body SW\BR3K\BMTester.cydsn\BMTester.cyprj -dcpsoc3 BMTester.v -verilog
+======================================================================
+
+======================================================================
+Compiling:  BMTester.v
+Program  :   vlogfe
+Options  :    -yv2 -v3 -ygs -q10 -o2 -.fftcfgtype=LE -ya -.fftprj=C:\Users\Felix\Git Repository\PRJ3\Design og implementering\Body SW\BR3K\BMTester.cydsn\BMTester.cyprj -dcpsoc3 -verilog BMTester.v
+======================================================================
+
+vlogfe V6.3 IR 41:  Verilog parser
+Wed Nov 19 14:53:35 2014
+
+
+======================================================================
+Compiling:  BMTester.v
+Program  :   vpp
+Options  :    -yv2 -q10 BMTester.v
+======================================================================
+
+vpp V6.3 IR 41:  Verilog Pre-Processor
+Wed Nov 19 14:53:35 2014
+
+Flattening file 'C:\Program Files (x86)\Cypress\PSoC Creator\3.0\PSoC Creator\warp\..\psoc\content\cyprimitives\CyPrimitives.cylib\ZeroTerminal\ZeroTerminal.v'
+Flattening file 'C:\Program Files (x86)\Cypress\PSoC Creator\3.0\PSoC Creator\warp\..\psoc\content\cyprimitives\CyPrimitives.cylib\cy_virtualmux_v1_0\cy_virtualmux_v1_0.v'
+Flattening file 'C:\Program Files (x86)\Cypress\PSoC Creator\3.0\PSoC Creator\warp\..\psoc\content\cyprimitives\CyPrimitives.cylib\or_v1_0\or_v1_0.v'
+
+vpp:  No errors.
+
+Library 'work' => directory 'lcpsoc3'
+General_symbol_table
+General_symbol_table
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\3.0\PSoC Creator\warp\lib\common\std.vhd'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\3.0\PSoC Creator\warp\lib\common\cypress.vhd'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\3.0\PSoC Creator\warp\lib\common\work\cypress.vif'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\3.0\PSoC Creator\warp\lib\ieee\work\stdlogic.vif'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\3.0\PSoC Creator\warp\lib\common\stdlogic\lpmpkg.vif'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\3.0\PSoC Creator\warp\lib\common\stdlogic\rtlpkg.vif'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\3.0\PSoC Creator\warp\lib\common\stdlogic\mod_cnst.vif'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\3.0\PSoC Creator\warp\lib\common\stdlogic\mod_mthv.vif'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\3.0\PSoC Creator\warp\lib\common\stdlogic\mod_genv.vif'.
+Using control file 'BMTester.ctl'.
+
+vlogfe:  No errors.
+
+
+======================================================================
+Compiling:  BMTester.v
+Program  :   tovif
+Options  :    -yv2 -v3 -ygs -q10 -o2 -.fftcfgtype=LE -ya -.fftprj=C:\Users\Felix\Git Repository\PRJ3\Design og implementering\Body SW\BR3K\BMTester.cydsn\BMTester.cyprj -dcpsoc3 -verilog BMTester.v
+======================================================================
+
+tovif V6.3 IR 41:  High-level synthesis
+Wed Nov 19 14:53:36 2014
+
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\3.0\PSoC Creator\warp\lib\common\std.vhd'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\3.0\PSoC Creator\warp\lib\common\cypress.vhd'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\3.0\PSoC Creator\warp\lib\common\work\cypress.vif'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\3.0\PSoC Creator\warp\lib\ieee\work\stdlogic.vif'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\3.0\PSoC Creator\warp\lib\common\stdlogic\lpmpkg.vif'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\3.0\PSoC Creator\warp\lib\common\stdlogic\rtlpkg.vif'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\3.0\PSoC Creator\warp\lib\common\stdlogic\mod_cnst.vif'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\3.0\PSoC Creator\warp\lib\common\stdlogic\mod_mthv.vif'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\3.0\PSoC Creator\warp\lib\common\stdlogic\mod_genv.vif'.
+Linking 'C:\Users\Felix\Git Repository\PRJ3\Design og implementering\Body SW\BR3K\BMTester.cydsn\codegentemp\BMTester.ctl'.
+Linking 'C:\Users\Felix\Git Repository\PRJ3\Design og implementering\Body SW\BR3K\BMTester.cydsn\codegentemp\BMTester.v'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\3.0\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\ZeroTerminal\ZeroTerminal.v'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\3.0\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\cy_virtualmux_v1_0\cy_virtualmux_v1_0.v'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\3.0\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\or_v1_0\or_v1_0.v'.
+
+tovif:  No errors.
+
+
+======================================================================
+Compiling:  BMTester.v
+Program  :   topld
+Options  :    -yv2 -v3 -ygs -q10 -o2 -.fftcfgtype=LE -ya -.fftprj=C:\Users\Felix\Git Repository\PRJ3\Design og implementering\Body SW\BR3K\BMTester.cydsn\BMTester.cyprj -dcpsoc3 -verilog BMTester.v
+======================================================================
+
+topld V6.3 IR 41:  Synthesis and optimization
+Wed Nov 19 14:53:37 2014
+
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\3.0\PSoC Creator\warp\lib\common\std.vhd'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\3.0\PSoC Creator\warp\lib\common\cypress.vhd'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\3.0\PSoC Creator\warp\lib\common\work\cypress.vif'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\3.0\PSoC Creator\warp\lib\ieee\work\stdlogic.vif'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\3.0\PSoC Creator\warp\lib\common\stdlogic\lpmpkg.vif'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\3.0\PSoC Creator\warp\lib\common\stdlogic\rtlpkg.vif'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\3.0\PSoC Creator\warp\lib\common\stdlogic\mod_cnst.vif'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\3.0\PSoC Creator\warp\lib\common\stdlogic\mod_mthv.vif'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\3.0\PSoC Creator\warp\lib\common\stdlogic\mod_genv.vif'.
+Linking 'C:\Users\Felix\Git Repository\PRJ3\Design og implementering\Body SW\BR3K\BMTester.cydsn\codegentemp\BMTester.ctl'.
+Linking 'C:\Users\Felix\Git Repository\PRJ3\Design og implementering\Body SW\BR3K\BMTester.cydsn\codegentemp\BMTester.v'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\3.0\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\ZeroTerminal\ZeroTerminal.v'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\3.0\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\cy_virtualmux_v1_0\cy_virtualmux_v1_0.v'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\3.0\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\or_v1_0\or_v1_0.v'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\3.0\PSoC Creator\warp\lib\lcpsoc3\stdlogic\cpsoc3.vif'.
+
+----------------------------------------------------------
+Detecting unused logic.
+----------------------------------------------------------
+    User names
+	\UART:Net_682\
+	\UART:Net_427\
+	Net_28
+
+
+Deleted 3 User equations/components.
+Deleted 0 Synthesized equations/components.
+
+------------------------------------------------------
+Alias Detection
+------------------------------------------------------
+Aliasing one to \ButtonMatrix01_1:tmpOE__BM_A_net_0\
+Aliasing \ButtonMatrix01_1:tmpOE__BM_1_net_0\ to \ButtonMatrix01_1:tmpOE__BM_A_net_0\
+Aliasing \ButtonMatrix01_1:tmpOE__BM_2_net_0\ to \ButtonMatrix01_1:tmpOE__BM_A_net_0\
+Aliasing \ButtonMatrix01_1:tmpOE__BM_3_net_0\ to \ButtonMatrix01_1:tmpOE__BM_A_net_0\
+Aliasing \ButtonMatrix01_1:tmpOE__BM_4_net_0\ to \ButtonMatrix01_1:tmpOE__BM_A_net_0\
+Aliasing \ButtonMatrix01_1:tmpOE__BM_B_net_0\ to \ButtonMatrix01_1:tmpOE__BM_A_net_0\
+Aliasing \ButtonMatrix01_1:tmpOE__BM_C_net_0\ to \ButtonMatrix01_1:tmpOE__BM_A_net_0\
+Aliasing \UART:Net_459\ to zero
+Aliasing \UART:Net_452\ to zero
+Aliasing \UART:Net_676\ to zero
+Aliasing \UART:Net_245\ to zero
+Aliasing \UART:Net_416\ to zero
+Aliasing \UART:tmpOE__tx_net_0\ to \ButtonMatrix01_1:tmpOE__BM_A_net_0\
+Removing Rhs of wire one[6] = \ButtonMatrix01_1:tmpOE__BM_A_net_0\[1]
+Removing Lhs of wire \ButtonMatrix01_1:tmpOE__BM_1_net_0\[9] = one[6]
+Removing Lhs of wire \ButtonMatrix01_1:tmpOE__BM_2_net_0\[15] = one[6]
+Removing Lhs of wire \ButtonMatrix01_1:tmpOE__BM_3_net_0\[21] = one[6]
+Removing Lhs of wire \ButtonMatrix01_1:tmpOE__BM_4_net_0\[27] = one[6]
+Removing Lhs of wire \ButtonMatrix01_1:tmpOE__BM_B_net_0\[33] = one[6]
+Removing Lhs of wire \ButtonMatrix01_1:tmpOE__BM_C_net_0\[39] = one[6]
+Removing Lhs of wire \UART:Net_459\[49] = zero[2]
+Removing Lhs of wire \UART:Net_652\[50] = zero[2]
+Removing Lhs of wire \UART:Net_452\[51] = zero[2]
+Removing Lhs of wire \UART:Net_676\[52] = zero[2]
+Removing Lhs of wire \UART:Net_245\[53] = zero[2]
+Removing Lhs of wire \UART:Net_416\[54] = zero[2]
+Removing Lhs of wire \UART:Net_654\[55] = zero[2]
+Removing Lhs of wire \UART:Net_655\[58] = \UART:Net_284\[48]
+Removing Lhs of wire \UART:Net_653\[59] = zero[2]
+Removing Lhs of wire \UART:Net_651\[60] = zero[2]
+Removing Lhs of wire \UART:Net_663\[61] = zero[2]
+Removing Lhs of wire \UART:tmpOE__tx_net_0\[63] = one[6]
+
+------------------------------------------------------
+Aliased 0 equations, 19 wires.
+------------------------------------------------------
+
+----------------------------------------------------------
+Circuit simplification
+----------------------------------------------------------
+
+Substituting virtuals - pass 1:
+
+
+----------------------------------------------------------
+Circuit simplification results:
+
+	Expanded 0 signals.
+	Turned 0 signals into soft nodes.
+	Maximum default expansion cost was set at 3.
+----------------------------------------------------------
+
+topld:  No errors.
+
+CYPRESS_DIR    : C:\Program Files (x86)\Cypress\PSoC Creator\3.0\PSoC Creator\warp
+Warp Program   : C:\Program Files (x86)\Cypress\PSoC Creator\3.0\PSoC Creator\warp\bin/warp.exe
+Warp Arguments : -yv2 -v3 -ygs -q10 -o2 -.fftcfgtype=LE -ya "-.fftprj=C:\Users\Felix\Git Repository\PRJ3\Design og implementering\Body SW\BR3K\BMTester.cydsn\BMTester.cyprj" -dcpsoc3 BMTester.v -verilog
+</CYPRESSTAG>
+Warp synthesis phase: Elapsed time ==> 3s.006ms
+<CYPRESSTAG name="Fitter results...">
+<CYPRESSTAG name="Fitter startup details...">
+cyp3fit: V3.0.0.3023, Family: PSoC3, Started at: Wednesday, 19 November 2014 14:53:37
+Options: -yv2 -v3 -ygs -q10 -o2 -.fftcfgtype=LE -ya -.fftprj=C:\Users\Felix\Git Repository\PRJ3\Design og implementering\Body SW\BR3K\BMTester.cydsn\BMTester.cyprj -d CY8C4245AXI-483 BMTester.v -verilog
+</CYPRESSTAG>
+<CYPRESSTAG name="Design parsing">
+Design parsing phase: Elapsed time ==> 0s.069ms
+</CYPRESSTAG>
+<CYPRESSTAG name="Tech mapping">
+<CYPRESSTAG name="Initial Mapping" icon="FILE_RPT_TECHM">
+<CYPRESSTAG name="Global Clock Selection" icon="FILE_RPT_TECHM">
+    Fixed Function Clock 2: Automatic-assigning  clock 'UART_SCBCLK'. Signal=\UART:Net_284_ff2\
+<CYPRESSTAG name="UDB Clock/Enable Remapping Results">
+</CYPRESSTAG>
+</CYPRESSTAG>
+
+Removing unused cells resulting from optimization
+    Removed unused cell/equation '__ZERO__:macrocell'
+Done removing unused cells.
+<CYPRESSTAG name="Duplicate Macrocell detection">
+</CYPRESSTAG>
+</CYPRESSTAG>
+<CYPRESSTAG name="Duplicate Macrocell detection">
+</CYPRESSTAG>
+<CYPRESSTAG name="Design Equations" icon="FILE_RPT_EQUATION">
+
+------------------------------------------------------------
+Design Equations
+------------------------------------------------------------
+    <CYPRESSTAG name="Pin listing">
+
+    ------------------------------------------------------------
+    Pin listing
+    ------------------------------------------------------------
+
+    Pin : Name = \ButtonMatrix01_1:BM_1(0)\
+        Attributes:
+            In Group/Port: True
+            In Sync Option: AUTO
+            Out Sync Option: NOSYNC
+            Interrupt generated: False
+            Interrupt mode: NONE
+            Drive mode: CMOS_OUT
+            VTrip: EITHER
+            Slew: FAST
+            Input Sync needed: False
+            Output Sync needed: False
+            SC shield enabled: False
+            POR State: ANY
+            LCD Mode: COMMON
+            Register Mode: RegComb
+            CaSense Mode: NEITHER
+            Treat as pin: True
+            Is OE Registered: False
+            Uses Analog: False
+            Can contain Digital: True
+            Is SIO: False
+            SIO Output Buf: NONREGULATED
+            SIO Input Buf: SINGLE_ENDED
+            SIO HiFreq: LOW
+            SIO Hyst: DISABLED
+            SIO Vtrip: MULTIPLIER_0_5
+            SIO RefSel: VCC_IO
+            Required Capabilitites: DIGITAL
+            Initial Value: 0
+            IO Voltage: 0
+        PORT MAP (
+            pa_out => \ButtonMatrix01_1:BM_1(0)\__PA ,
+            pad => \ButtonMatrix01_1:BM_1(0)_PAD\ );
+        Properties:
+        {
+        }
+
+    Pin : Name = \ButtonMatrix01_1:BM_2(0)\
+        Attributes:
+            In Group/Port: True
+            In Sync Option: AUTO
+            Out Sync Option: NOSYNC
+            Interrupt generated: False
+            Interrupt mode: NONE
+            Drive mode: CMOS_OUT
+            VTrip: EITHER
+            Slew: FAST
+            Input Sync needed: False
+            Output Sync needed: False
+            SC shield enabled: False
+            POR State: ANY
+            LCD Mode: COMMON
+            Register Mode: RegComb
+            CaSense Mode: NEITHER
+            Treat as pin: True
+            Is OE Registered: False
+            Uses Analog: False
+            Can contain Digital: True
+            Is SIO: False
+            SIO Output Buf: NONREGULATED
+            SIO Input Buf: SINGLE_ENDED
+            SIO HiFreq: LOW
+            SIO Hyst: DISABLED
+            SIO Vtrip: MULTIPLIER_0_5
+            SIO RefSel: VCC_IO
+            Required Capabilitites: DIGITAL
+            Initial Value: 0
+            IO Voltage: 0
+        PORT MAP (
+            pa_out => \ButtonMatrix01_1:BM_2(0)\__PA ,
+            pad => \ButtonMatrix01_1:BM_2(0)_PAD\ );
+        Properties:
+        {
+        }
+
+    Pin : Name = \ButtonMatrix01_1:BM_3(0)\
+        Attributes:
+            In Group/Port: True
+            In Sync Option: AUTO
+            Out Sync Option: NOSYNC
+            Interrupt generated: False
+            Interrupt mode: NONE
+            Drive mode: CMOS_OUT
+            VTrip: EITHER
+            Slew: FAST
+            Input Sync needed: False
+            Output Sync needed: False
+            SC shield enabled: False
+            POR State: ANY
+            LCD Mode: COMMON
+            Register Mode: RegComb
+            CaSense Mode: NEITHER
+            Treat as pin: True
+            Is OE Registered: False
+            Uses Analog: False
+            Can contain Digital: True
+            Is SIO: False
+            SIO Output Buf: NONREGULATED
+            SIO Input Buf: SINGLE_ENDED
+            SIO HiFreq: LOW
+            SIO Hyst: DISABLED
+            SIO Vtrip: MULTIPLIER_0_5
+            SIO RefSel: VCC_IO
+            Required Capabilitites: DIGITAL
+            Initial Value: 0
+            IO Voltage: 0
+        PORT MAP (
+            pa_out => \ButtonMatrix01_1:BM_3(0)\__PA ,
+            pad => \ButtonMatrix01_1:BM_3(0)_PAD\ );
+        Properties:
+        {
+        }
+
+    Pin : Name = \ButtonMatrix01_1:BM_4(0)\
+        Attributes:
+            In Group/Port: True
+            In Sync Option: AUTO
+            Out Sync Option: NOSYNC
+            Interrupt generated: False
+            Interrupt mode: NONE
+            Drive mode: CMOS_OUT
+            VTrip: EITHER
+            Slew: FAST
+            Input Sync needed: False
+            Output Sync needed: False
+            SC shield enabled: False
+            POR State: ANY
+            LCD Mode: COMMON
+            Register Mode: RegComb
+            CaSense Mode: NEITHER
+            Treat as pin: True
+            Is OE Registered: False
+            Uses Analog: False
+            Can contain Digital: True
+            Is SIO: False
+            SIO Output Buf: NONREGULATED
+            SIO Input Buf: SINGLE_ENDED
+            SIO HiFreq: LOW
+            SIO Hyst: DISABLED
+            SIO Vtrip: MULTIPLIER_0_5
+            SIO RefSel: VCC_IO
+            Required Capabilitites: DIGITAL
+            Initial Value: 0
+            IO Voltage: 0
+        PORT MAP (
+            pa_out => \ButtonMatrix01_1:BM_4(0)\__PA ,
+            pad => \ButtonMatrix01_1:BM_4(0)_PAD\ );
+        Properties:
+        {
+        }
+
+    Pin : Name = \ButtonMatrix01_1:BM_A(0)\
+        Attributes:
+            In Group/Port: True
+            In Sync Option: SYNC
+            Out Sync Option: AUTO
+            Interrupt generated: True
+            Interrupt mode: ON_CHANGE
+            Drive mode: RES_PULL_UP
+            VTrip: CMOS
+            Slew: FAST
+            Input Sync needed: True
+            Output Sync needed: False
+            SC shield enabled: False
+            POR State: ANY
+            LCD Mode: COMMON
+            Register Mode: RegComb
+            CaSense Mode: NEITHER
+            Treat as pin: False
+            Is OE Registered: False
+            Uses Analog: False
+            Can contain Digital: True
+            Is SIO: False
+            SIO Output Buf: NONREGULATED
+            SIO Input Buf: SINGLE_ENDED
+            SIO HiFreq: LOW
+            SIO Hyst: DISABLED
+            SIO Vtrip: MULTIPLIER_0_5
+            SIO RefSel: VCC_IO
+            Required Capabilitites: DIGITAL, ROUTABLE
+            Initial Value: 1
+            IO Voltage: 0
+        PORT MAP (
+            pa_out => \ButtonMatrix01_1:BM_A(0)\__PA ,
+            pad => \ButtonMatrix01_1:BM_A(0)_PAD\ );
+        Properties:
+        {
+        }
+
+    Pin : Name = \ButtonMatrix01_1:BM_B(0)\
+        Attributes:
+            In Group/Port: True
+            In Sync Option: SYNC
+            Out Sync Option: AUTO
+            Interrupt generated: True
+            Interrupt mode: ON_CHANGE
+            Drive mode: RES_PULL_UP
+            VTrip: CMOS
+            Slew: FAST
+            Input Sync needed: True
+            Output Sync needed: False
+            SC shield enabled: False
+            POR State: ANY
+            LCD Mode: COMMON
+            Register Mode: RegComb
+            CaSense Mode: NEITHER
+            Treat as pin: False
+            Is OE Registered: False
+            Uses Analog: False
+            Can contain Digital: True
+            Is SIO: False
+            SIO Output Buf: NONREGULATED
+            SIO Input Buf: SINGLE_ENDED
+            SIO HiFreq: LOW
+            SIO Hyst: DISABLED
+            SIO Vtrip: MULTIPLIER_0_5
+            SIO RefSel: VCC_IO
+            Required Capabilitites: DIGITAL, ROUTABLE
+            Initial Value: 1
+            IO Voltage: 0
+        PORT MAP (
+            pa_out => \ButtonMatrix01_1:BM_B(0)\__PA ,
+            pad => \ButtonMatrix01_1:BM_B(0)_PAD\ );
+        Properties:
+        {
+        }
+
+    Pin : Name = \ButtonMatrix01_1:BM_C(0)\
+        Attributes:
+            In Group/Port: True
+            In Sync Option: SYNC
+            Out Sync Option: AUTO
+            Interrupt generated: True
+            Interrupt mode: ON_CHANGE
+            Drive mode: RES_PULL_UP
+            VTrip: CMOS
+            Slew: FAST
+            Input Sync needed: True
+            Output Sync needed: False
+            SC shield enabled: False
+            POR State: ANY
+            LCD Mode: COMMON
+            Register Mode: RegComb
+            CaSense Mode: NEITHER
+            Treat as pin: False
+            Is OE Registered: False
+            Uses Analog: False
+            Can contain Digital: True
+            Is SIO: False
+            SIO Output Buf: NONREGULATED
+            SIO Input Buf: SINGLE_ENDED
+            SIO HiFreq: LOW
+            SIO Hyst: DISABLED
+            SIO Vtrip: MULTIPLIER_0_5
+            SIO RefSel: VCC_IO
+            Required Capabilitites: DIGITAL, ROUTABLE
+            Initial Value: 1
+            IO Voltage: 0
+        PORT MAP (
+            pa_out => \ButtonMatrix01_1:BM_C(0)\__PA ,
+            pad => \ButtonMatrix01_1:BM_C(0)_PAD\ );
+        Properties:
+        {
+        }
+
+    Pin : Name = \UART:tx(0)\
+        Attributes:
+            In Group/Port: True
+            In Sync Option: NOSYNC
+            Out Sync Option: NOSYNC
+            Interrupt generated: False
+            Interrupt mode: NONE
+            Drive mode: CMOS_OUT
+            VTrip: CMOS
+            Slew: FAST
+            Input Sync needed: False
+            Output Sync needed: False
+            SC shield enabled: False
+            POR State: ANY
+            LCD Mode: COMMON
+            Register Mode: RegComb
+            CaSense Mode: NEITHER
+            Treat as pin: True
+            Is OE Registered: False
+            Uses Analog: False
+            Can contain Digital: True
+            Is SIO: False
+            SIO Output Buf: NONREGULATED
+            SIO Input Buf: SINGLE_ENDED
+            SIO HiFreq: LOW
+            SIO Hyst: DISABLED
+            SIO Vtrip: MULTIPLIER_0_5
+            SIO RefSel: VCC_IO
+            Required Capabilitites: DIGITAL, SCB_UART_TX
+            Initial Value: 1
+            IO Voltage: 0
+        PORT MAP (
+            pa_out => \UART:tx(0)\__PA ,
+            input => \UART:Net_656\ ,
+            pad => \UART:tx(0)_PAD\ );
+        Properties:
+        {
+        }
+    </CYPRESSTAG>
+    <CYPRESSTAG name="Macrocell listing" icon="FILE_RPT_EQUATION">
+    </CYPRESSTAG>
+    <CYPRESSTAG name="Datapath listing">
+    </CYPRESSTAG>
+    <CYPRESSTAG name="Status register listing">
+    </CYPRESSTAG>
+    <CYPRESSTAG name="StatusI register listing">
+    </CYPRESSTAG>
+    <CYPRESSTAG name="Sync listing">
+    </CYPRESSTAG>
+    <CYPRESSTAG name="Control register listing">
+    </CYPRESSTAG>
+    <CYPRESSTAG name="Count7 listing">
+    </CYPRESSTAG>
+    <CYPRESSTAG name="DRQ listing">
+    </CYPRESSTAG>
+    <CYPRESSTAG name="Interrupt listing">
+
+    ------------------------------------------------------------
+    Interrupt listing
+    ------------------------------------------------------------
+
+    interrupt: Name =\ButtonMatrix01_1:ISR_A\
+        PORT MAP (
+            interrupt => \ButtonMatrix01_1:Net_156\ );
+        Properties:
+        {
+            int_type = "10"
+        }
+
+    interrupt: Name =\ButtonMatrix01_1:ISR_B\
+        PORT MAP (
+            interrupt => \ButtonMatrix01_1:Net_118\ );
+        Properties:
+        {
+            int_type = "10"
+        }
+
+    interrupt: Name =\ButtonMatrix01_1:ISR_C\
+        PORT MAP (
+            interrupt => \ButtonMatrix01_1:Net_151\ );
+        Properties:
+        {
+            int_type = "10"
+        }
+    </CYPRESSTAG>
+</CYPRESSTAG>
+<CYPRESSTAG name="Technology mapping summary" expanded>
+
+------------------------------------------------------------
+Technology mapping summary
+------------------------------------------------------------
+
+Resource Type                 : Used : Free :  Max :  % Used
+============================================================
+Digital clock dividers        :    0 :    4 :    4 :   0.00%
+Pins                          :   10 :   26 :   36 :  27.78%
+UDB Macrocells                :    0 :   32 :   32 :   0.00%
+UDB Unique Pterms             :    0 :   64 :   64 :   0.00%
+UDB Datapath Cells            :    0 :    4 :    4 :   0.00%
+UDB Status Cells              :    0 :    4 :    4 :   0.00%
+UDB Control Cells             :    0 :    4 :    4 :   0.00%
+Interrupts                    :    3 :   29 :   32 :   9.38%
+Comparator/Opamp Fixed Blocks :    0 :    2 :    2 :   0.00%
+SAR Fixed Blocks              :    0 :    1 :    1 :   0.00%
+CSD Fixed Blocks              :    0 :    1 :    1 :   0.00%
+CapSense Blocks               :    0 :    1 :    1 :   0.00%
+8-bit CapSense IDACs          :    0 :    1 :    1 :   0.00%
+7-bit CapSense IDACs          :    0 :    1 :    1 :   0.00%
+Temperature Sensor            :    0 :    1 :    1 :   0.00%
+Low Power Comparator          :    0 :    2 :    2 :   0.00%
+TCPWM Blocks                  :    0 :    4 :    4 :   0.00%
+Serial Communication Blocks   :    1 :    1 :    2 :  50.00%
+Segment LCD Blocks            :    0 :    1 :    1 :   0.00%
+</CYPRESSTAG>
+Technology Mapping: Elapsed time ==> 0s.179ms
+Info: mpr.M0037: Unused pieces of the design have been optimized out. See the Tech mapping section of the report file for details. (App=cydsfit)
+Tech mapping phase: Elapsed time ==> 0s.267ms
+</CYPRESSTAG>
+<CYPRESSTAG name="Analog Placement">
+<CYPRESSTAG name="Analog Placement">
+Elapsed time ==> 0.0201650s
+</CYPRESSTAG>
+Analog Placement phase: Elapsed time ==> 0s.098ms
+</CYPRESSTAG>
+<CYPRESSTAG name="Analog Routing">
+<CYPRESSTAG name="Analog Routing">
+Route success=True, Iterations=1 Elapsed=0.0009218 secs
+</CYPRESSTAG>
+Analog Routing phase: Elapsed time ==> 0s.004ms
+</CYPRESSTAG>
+<CYPRESSTAG name="Analog Code Generation">
+============ Analog Final Answer Routes ============
+Dump of CyAnalogRoutingResultsDB
+Map of net to items {
+}
+Map of item to net {
+}
+Mux Info {
+}
+Analog Code Generation phase: Elapsed time ==> 0s.357ms
+</CYPRESSTAG>
+<CYPRESSTAG name="Digital Placement">
+<CYPRESSTAG name="Detailed placement messages">
+I2659: No Constrained paths were found. The placer will run in non-timing driven mode.
+I2076: Total run-time: 0.6 sec.
+
+</CYPRESSTAG>
+<CYPRESSTAG name="PLD Packing">
+<CYPRESSTAG name="PLD Packing Summary">
+No PLDs were packed.
+</CYPRESSTAG>
+PLD Packing: Elapsed time ==> 0s.000ms
+</CYPRESSTAG>
+<CYPRESSTAG name="Partitioning">
+<CYPRESSTAG name="Initial Partitioning Summary">
+Initial Partitioning Summary not displayed at this verbose level.</CYPRESSTAG>
+<CYPRESSTAG name="Final Partitioning Summary">
+Final Partitioning Summary not displayed at this verbose level.</CYPRESSTAG>
+Partitioning: Elapsed time ==> 0s.035ms
+</CYPRESSTAG>
+<CYPRESSTAG name="Simulated Annealing">
+Annealing: Elapsed time ==> 0s.004ms
+<CYPRESSTAG name="Simulated Annealing Results">
+The seed used for moves was 114161200.
+Inital cost was 16, final cost is 16 (0.00% improvement).</CYPRESSTAG>
+</CYPRESSTAG>
+<CYPRESSTAG name="Final Placement Summary">
+
+------------------------------------------------------------
+Final Placement Summary
+------------------------------------------------------------
+
+       Resource Type :      Count : Avg Inputs : Avg Outputs
+    ========================================================
+                 UDB :          0 :       0.00 :       0.00
+<CYPRESSTAG name="Final Placement Details">
+<CYPRESSTAG name="Component Details">
+
+------------------------------------------------------------
+Component Placement Details
+------------------------------------------------------------
+UDB [UDB=(0,0)] is empty.
+UDB [UDB=(0,1)] is empty.
+UDB [UDB=(1,0)] is empty.
+UDB [UDB=(1,1)] is empty.
+Intr hod @ [IntrHod=(0)]: 
+  Intr@ [IntrHod=(0)][IntrId=(0)] 
+    interrupt: Name =\ButtonMatrix01_1:ISR_B\
+        PORT MAP (
+            interrupt => \ButtonMatrix01_1:Net_118\ );
+        Properties:
+        {
+            int_type = "10"
+        }
+  Intr@ [IntrHod=(0)][IntrId=(1)] 
+    interrupt: Name =\ButtonMatrix01_1:ISR_C\
+        PORT MAP (
+            interrupt => \ButtonMatrix01_1:Net_151\ );
+        Properties:
+        {
+            int_type = "10"
+        }
+  Intr@ [IntrHod=(0)][IntrId=(3)] 
+    interrupt: Name =\ButtonMatrix01_1:ISR_A\
+        PORT MAP (
+            interrupt => \ButtonMatrix01_1:Net_156\ );
+        Properties:
+        {
+            int_type = "10"
+        }
+Port 0 generates interrupt for logical port:
+    logicalport: Name =\ButtonMatrix01_1:BM_B\
+        PORT MAP (
+            in_clock_en => one ,
+            in_reset => zero ,
+            out_clock_en => one ,
+            out_reset => zero ,
+            interrupt => \ButtonMatrix01_1:Net_118\ ,
+            in_clock => ClockBlock_HFCLK );
+        Properties:
+        {
+            drive_mode = "010"
+            ibuf_enabled = "1"
+            id = "7932921d-55b0-4486-ba20-9c902ffb4b15/a8c7f6a9-a841-459e-ac29-2c237a377615"
+            init_dr_st = "1"
+            input_clk_en = 0
+            input_sync = "1"
+            input_sync_mode = "0"
+            intr_mode = "11"
+            invert_in_clock = 0
+            invert_in_clock_en = 0
+            invert_in_reset = 0
+            invert_out_clock = 0
+            invert_out_clock_en = 0
+            invert_out_reset = 0
+            io_voltage = ""
+            layout_mode = "CONTIGUOUS"
+            oe_conn = "0"
+            oe_reset = 0
+            oe_sync = "0"
+            output_clk_en = 0
+            output_clock_mode = "0"
+            output_conn = "0"
+            output_mode = "0"
+            output_reset = 0
+            output_sync = "0"
+            pa_in_clock = -1
+            pa_in_clock_en = -1
+            pa_in_reset = -1
+            pa_out_clock = -1
+            pa_out_clock_en = -1
+            pa_out_reset = -1
+            pin_aliases = ""
+            pin_mode = "I"
+            por_state = 4
+            port_alias_group = ""
+            port_alias_required = 0
+            sio_group_cnt = 0
+            sio_hifreq = ""
+            sio_hyst = "0"
+            sio_ibuf = "00000000"
+            sio_info = "00"
+            sio_obuf = "00000000"
+            sio_refsel = "00000000"
+            sio_vtrip = "00000000"
+            slew_rate = "0"
+            spanning = 0
+            sw_only = 0
+            use_annotation = "0"
+            vtrip = "00"
+            width = 1
+        }
+    and contains the following IO cells:
+[IoId=1]: 
+Pin : Name = \ButtonMatrix01_1:BM_B(0)\
+    Attributes:
+        In Group/Port: True
+        In Sync Option: SYNC
+        Out Sync Option: AUTO
+        Interrupt generated: True
+        Interrupt mode: ON_CHANGE
+        Drive mode: RES_PULL_UP
+        VTrip: CMOS
+        Slew: FAST
+        Input Sync needed: True
+        Output Sync needed: False
+        SC shield enabled: False
+        POR State: ANY
+        LCD Mode: COMMON
+        Register Mode: RegComb
+        CaSense Mode: NEITHER
+        Treat as pin: False
+        Is OE Registered: False
+        Uses Analog: False
+        Can contain Digital: True
+        Is SIO: False
+        SIO Output Buf: NONREGULATED
+        SIO Input Buf: SINGLE_ENDED
+        SIO HiFreq: LOW
+        SIO Hyst: DISABLED
+        SIO Vtrip: MULTIPLIER_0_5
+        SIO RefSel: VCC_IO
+        Required Capabilitites: DIGITAL, ROUTABLE
+        Initial Value: 1
+        IO Voltage: 0
+    PORT MAP (
+        pa_out => \ButtonMatrix01_1:BM_B(0)\__PA ,
+        pad => \ButtonMatrix01_1:BM_B(0)_PAD\ );
+    Properties:
+    {
+    }
+
+[IoId=5]: 
+Pin : Name = \UART:tx(0)\
+    Attributes:
+        In Group/Port: True
+        In Sync Option: NOSYNC
+        Out Sync Option: NOSYNC
+        Interrupt generated: False
+        Interrupt mode: NONE
+        Drive mode: CMOS_OUT
+        VTrip: CMOS
+        Slew: FAST
+        Input Sync needed: False
+        Output Sync needed: False
+        SC shield enabled: False
+        POR State: ANY
+        LCD Mode: COMMON
+        Register Mode: RegComb
+        CaSense Mode: NEITHER
+        Treat as pin: True
+        Is OE Registered: False
+        Uses Analog: False
+        Can contain Digital: True
+        Is SIO: False
+        SIO Output Buf: NONREGULATED
+        SIO Input Buf: SINGLE_ENDED
+        SIO HiFreq: LOW
+        SIO Hyst: DISABLED
+        SIO Vtrip: MULTIPLIER_0_5
+        SIO RefSel: VCC_IO
+        Required Capabilitites: DIGITAL, SCB_UART_TX
+        Initial Value: 1
+        IO Voltage: 0
+    PORT MAP (
+        pa_out => \UART:tx(0)\__PA ,
+        input => \UART:Net_656\ ,
+        pad => \UART:tx(0)_PAD\ );
+    Properties:
+    {
+    }
+
+Port 1 generates interrupt for logical port:
+    logicalport: Name =\ButtonMatrix01_1:BM_C\
+        PORT MAP (
+            in_clock_en => one ,
+            in_reset => zero ,
+            out_clock_en => one ,
+            out_reset => zero ,
+            interrupt => \ButtonMatrix01_1:Net_151\ ,
+            in_clock => ClockBlock_HFCLK );
+        Properties:
+        {
+            drive_mode = "010"
+            ibuf_enabled = "1"
+            id = "7932921d-55b0-4486-ba20-9c902ffb4b15/c803d388-35f1-4247-9750-27901a2badda"
+            init_dr_st = "1"
+            input_clk_en = 0
+            input_sync = "1"
+            input_sync_mode = "0"
+            intr_mode = "11"
+            invert_in_clock = 0
+            invert_in_clock_en = 0
+            invert_in_reset = 0
+            invert_out_clock = 0
+            invert_out_clock_en = 0
+            invert_out_reset = 0
+            io_voltage = ""
+            layout_mode = "CONTIGUOUS"
+            oe_conn = "0"
+            oe_reset = 0
+            oe_sync = "0"
+            output_clk_en = 0
+            output_clock_mode = "0"
+            output_conn = "0"
+            output_mode = "0"
+            output_reset = 0
+            output_sync = "0"
+            pa_in_clock = -1
+            pa_in_clock_en = -1
+            pa_in_reset = -1
+            pa_out_clock = -1
+            pa_out_clock_en = -1
+            pa_out_reset = -1
+            pin_aliases = ""
+            pin_mode = "I"
+            por_state = 4
+            port_alias_group = ""
+            port_alias_required = 0
+            sio_group_cnt = 0
+            sio_hifreq = ""
+            sio_hyst = "0"
+            sio_ibuf = "00000000"
+            sio_info = "00"
+            sio_obuf = "00000000"
+            sio_refsel = "00000000"
+            sio_vtrip = "00000000"
+            slew_rate = "0"
+            spanning = 0
+            sw_only = 0
+            use_annotation = "0"
+            vtrip = "00"
+            width = 1
+        }
+    and contains the following IO cells:
+[IoId=0]: 
+Pin : Name = \ButtonMatrix01_1:BM_C(0)\
+    Attributes:
+        In Group/Port: True
+        In Sync Option: SYNC
+        Out Sync Option: AUTO
+        Interrupt generated: True
+        Interrupt mode: ON_CHANGE
+        Drive mode: RES_PULL_UP
+        VTrip: CMOS
+        Slew: FAST
+        Input Sync needed: True
+        Output Sync needed: False
+        SC shield enabled: False
+        POR State: ANY
+        LCD Mode: COMMON
+        Register Mode: RegComb
+        CaSense Mode: NEITHER
+        Treat as pin: False
+        Is OE Registered: False
+        Uses Analog: False
+        Can contain Digital: True
+        Is SIO: False
+        SIO Output Buf: NONREGULATED
+        SIO Input Buf: SINGLE_ENDED
+        SIO HiFreq: LOW
+        SIO Hyst: DISABLED
+        SIO Vtrip: MULTIPLIER_0_5
+        SIO RefSel: VCC_IO
+        Required Capabilitites: DIGITAL, ROUTABLE
+        Initial Value: 1
+        IO Voltage: 0
+    PORT MAP (
+        pa_out => \ButtonMatrix01_1:BM_C(0)\__PA ,
+        pad => \ButtonMatrix01_1:BM_C(0)_PAD\ );
+    Properties:
+    {
+    }
+
+Port 2 contains the following IO cells:
+[IoId=2]: 
+Pin : Name = \ButtonMatrix01_1:BM_1(0)\
+    Attributes:
+        In Group/Port: True
+        In Sync Option: AUTO
+        Out Sync Option: NOSYNC
+        Interrupt generated: False
+        Interrupt mode: NONE
+        Drive mode: CMOS_OUT
+        VTrip: EITHER
+        Slew: FAST
+        Input Sync needed: False
+        Output Sync needed: False
+        SC shield enabled: False
+        POR State: ANY
+        LCD Mode: COMMON
+        Register Mode: RegComb
+        CaSense Mode: NEITHER
+        Treat as pin: True
+        Is OE Registered: False
+        Uses Analog: False
+        Can contain Digital: True
+        Is SIO: False
+        SIO Output Buf: NONREGULATED
+        SIO Input Buf: SINGLE_ENDED
+        SIO HiFreq: LOW
+        SIO Hyst: DISABLED
+        SIO Vtrip: MULTIPLIER_0_5
+        SIO RefSel: VCC_IO
+        Required Capabilitites: DIGITAL
+        Initial Value: 0
+        IO Voltage: 0
+    PORT MAP (
+        pa_out => \ButtonMatrix01_1:BM_1(0)\__PA ,
+        pad => \ButtonMatrix01_1:BM_1(0)_PAD\ );
+    Properties:
+    {
+    }
+
+[IoId=3]: 
+Pin : Name = \ButtonMatrix01_1:BM_2(0)\
+    Attributes:
+        In Group/Port: True
+        In Sync Option: AUTO
+        Out Sync Option: NOSYNC
+        Interrupt generated: False
+        Interrupt mode: NONE
+        Drive mode: CMOS_OUT
+        VTrip: EITHER
+        Slew: FAST
+        Input Sync needed: False
+        Output Sync needed: False
+        SC shield enabled: False
+        POR State: ANY
+        LCD Mode: COMMON
+        Register Mode: RegComb
+        CaSense Mode: NEITHER
+        Treat as pin: True
+        Is OE Registered: False
+        Uses Analog: False
+        Can contain Digital: True
+        Is SIO: False
+        SIO Output Buf: NONREGULATED
+        SIO Input Buf: SINGLE_ENDED
+        SIO HiFreq: LOW
+        SIO Hyst: DISABLED
+        SIO Vtrip: MULTIPLIER_0_5
+        SIO RefSel: VCC_IO
+        Required Capabilitites: DIGITAL
+        Initial Value: 0
+        IO Voltage: 0
+    PORT MAP (
+        pa_out => \ButtonMatrix01_1:BM_2(0)\__PA ,
+        pad => \ButtonMatrix01_1:BM_2(0)_PAD\ );
+    Properties:
+    {
+    }
+
+[IoId=4]: 
+Pin : Name = \ButtonMatrix01_1:BM_3(0)\
+    Attributes:
+        In Group/Port: True
+        In Sync Option: AUTO
+        Out Sync Option: NOSYNC
+        Interrupt generated: False
+        Interrupt mode: NONE
+        Drive mode: CMOS_OUT
+        VTrip: EITHER
+        Slew: FAST
+        Input Sync needed: False
+        Output Sync needed: False
+        SC shield enabled: False
+        POR State: ANY
+        LCD Mode: COMMON
+        Register Mode: RegComb
+        CaSense Mode: NEITHER
+        Treat as pin: True
+        Is OE Registered: False
+        Uses Analog: False
+        Can contain Digital: True
+        Is SIO: False
+        SIO Output Buf: NONREGULATED
+        SIO Input Buf: SINGLE_ENDED
+        SIO HiFreq: LOW
+        SIO Hyst: DISABLED
+        SIO Vtrip: MULTIPLIER_0_5
+        SIO RefSel: VCC_IO
+        Required Capabilitites: DIGITAL
+        Initial Value: 0
+        IO Voltage: 0
+    PORT MAP (
+        pa_out => \ButtonMatrix01_1:BM_3(0)\__PA ,
+        pad => \ButtonMatrix01_1:BM_3(0)_PAD\ );
+    Properties:
+    {
+    }
+
+[IoId=5]: 
+Pin : Name = \ButtonMatrix01_1:BM_4(0)\
+    Attributes:
+        In Group/Port: True
+        In Sync Option: AUTO
+        Out Sync Option: NOSYNC
+        Interrupt generated: False
+        Interrupt mode: NONE
+        Drive mode: CMOS_OUT
+        VTrip: EITHER
+        Slew: FAST
+        Input Sync needed: False
+        Output Sync needed: False
+        SC shield enabled: False
+        POR State: ANY
+        LCD Mode: COMMON
+        Register Mode: RegComb
+        CaSense Mode: NEITHER
+        Treat as pin: True
+        Is OE Registered: False
+        Uses Analog: False
+        Can contain Digital: True
+        Is SIO: False
+        SIO Output Buf: NONREGULATED
+        SIO Input Buf: SINGLE_ENDED
+        SIO HiFreq: LOW
+        SIO Hyst: DISABLED
+        SIO Vtrip: MULTIPLIER_0_5
+        SIO RefSel: VCC_IO
+        Required Capabilitites: DIGITAL
+        Initial Value: 0
+        IO Voltage: 0
+    PORT MAP (
+        pa_out => \ButtonMatrix01_1:BM_4(0)\__PA ,
+        pad => \ButtonMatrix01_1:BM_4(0)_PAD\ );
+    Properties:
+    {
+    }
+
+Port 3 generates interrupt for logical port:
+    logicalport: Name =\ButtonMatrix01_1:BM_A\
+        PORT MAP (
+            in_clock_en => one ,
+            in_reset => zero ,
+            out_clock_en => one ,
+            out_reset => zero ,
+            interrupt => \ButtonMatrix01_1:Net_156\ ,
+            in_clock => ClockBlock_HFCLK );
+        Properties:
+        {
+            drive_mode = "010"
+            ibuf_enabled = "1"
+            id = "7932921d-55b0-4486-ba20-9c902ffb4b15/5048e5c6-62c8-4447-80b6-14eb0fde1073"
+            init_dr_st = "1"
+            input_clk_en = 0
+            input_sync = "1"
+            input_sync_mode = "0"
+            intr_mode = "11"
+            invert_in_clock = 0
+            invert_in_clock_en = 0
+            invert_in_reset = 0
+            invert_out_clock = 0
+            invert_out_clock_en = 0
+            invert_out_reset = 0
+            io_voltage = ""
+            layout_mode = "CONTIGUOUS"
+            oe_conn = "0"
+            oe_reset = 0
+            oe_sync = "0"
+            output_clk_en = 0
+            output_clock_mode = "0"
+            output_conn = "0"
+            output_mode = "0"
+            output_reset = 0
+            output_sync = "0"
+            pa_in_clock = -1
+            pa_in_clock_en = -1
+            pa_in_reset = -1
+            pa_out_clock = -1
+            pa_out_clock_en = -1
+            pa_out_reset = -1
+            pin_aliases = ""
+            pin_mode = "I"
+            por_state = 4
+            port_alias_group = ""
+            port_alias_required = 0
+            sio_group_cnt = 0
+            sio_hifreq = ""
+            sio_hyst = "0"
+            sio_ibuf = "00000000"
+            sio_info = "00"
+            sio_obuf = "00000000"
+            sio_refsel = "00000000"
+            sio_vtrip = "00000000"
+            slew_rate = "0"
+            spanning = 0
+            sw_only = 0
+            use_annotation = "0"
+            vtrip = "00"
+            width = 1
+        }
+    and contains the following IO cells:
+[IoId=5]: 
+Pin : Name = \ButtonMatrix01_1:BM_A(0)\
+    Attributes:
+        In Group/Port: True
+        In Sync Option: SYNC
+        Out Sync Option: AUTO
+        Interrupt generated: True
+        Interrupt mode: ON_CHANGE
+        Drive mode: RES_PULL_UP
+        VTrip: CMOS
+        Slew: FAST
+        Input Sync needed: True
+        Output Sync needed: False
+        SC shield enabled: False
+        POR State: ANY
+        LCD Mode: COMMON
+        Register Mode: RegComb
+        CaSense Mode: NEITHER
+        Treat as pin: False
+        Is OE Registered: False
+        Uses Analog: False
+        Can contain Digital: True
+        Is SIO: False
+        SIO Output Buf: NONREGULATED
+        SIO Input Buf: SINGLE_ENDED
+        SIO HiFreq: LOW
+        SIO Hyst: DISABLED
+        SIO Vtrip: MULTIPLIER_0_5
+        SIO RefSel: VCC_IO
+        Required Capabilitites: DIGITAL, ROUTABLE
+        Initial Value: 1
+        IO Voltage: 0
+    PORT MAP (
+        pa_out => \ButtonMatrix01_1:BM_A(0)\__PA ,
+        pad => \ButtonMatrix01_1:BM_A(0)_PAD\ );
+    Properties:
+    {
+    }
+
+Port 4 is empty
+Fixed Function block hod @ [FFB(Clock,0)]: 
+    M0S8 Clock Block @ [FFB(Clock,0)]: 
+    m0s8clockblockcell: Name =ClockBlock
+        PORT MAP (
+            lfclk => ClockBlock_LFCLK ,
+            ilo => ClockBlock_ILO ,
+            sysclk => ClockBlock_SYSCLK ,
+            ext => ClockBlock_EXTCLK ,
+            imo => ClockBlock_IMO ,
+            hfclk => ClockBlock_HFCLK ,
+            ff_div_2 => \UART:Net_284_ff2\ );
+        Properties:
+        {
+        }
+Fixed Function block hod @ [FFB(PM,0)]: empty
+Fixed Function block hod @ [FFB(SPC,0)]: empty
+Fixed Function block hod @ [FFB(WDT,0)]: empty
+Fixed Function block hod @ [FFB(FSS,0)]: empty
+Fixed Function block hod @ [FFB(LPCOMP,0)]: empty
+Fixed Function block hod @ [FFB(SCB,0)]: 
+    Scb Block @ [FFB(SCB,1)]: 
+    m0s8scbcell: Name =\UART:SCB\
+        PORT MAP (
+            clock => \UART:Net_284_ff2\ ,
+            interrupt => Net_29 ,
+            tx => \UART:Net_656\ ,
+            mosi_m => \UART:Net_660\ ,
+            select_m_3 => \UART:ss_3\ ,
+            select_m_2 => \UART:ss_2\ ,
+            select_m_1 => \UART:ss_1\ ,
+            select_m_0 => \UART:ss_0\ ,
+            sclk_m => \UART:Net_687\ ,
+            miso_s => \UART:Net_703\ );
+        Properties:
+        {
+            cy_registers = ""
+            scb_mode = 2
+        }
+Fixed Function block hod @ [FFB(CSD,0)]: empty
+Fixed Function block hod @ [FFB(CSIDAC8,0)]: empty
+Fixed Function block hod @ [FFB(CSIDAC7,0)]: empty
+Fixed Function block hod @ [FFB(TCPWM,0)]: empty
+Fixed Function block hod @ [FFB(OA,0)]: empty
+Fixed Function block hod @ [FFB(TEMP,0)]: empty
+Fixed Function block hod @ [FFB(SARADC,0)]: empty
+Fixed Function block hod @ [FFB(M0S8LCD,0)]: empty
+Fixed Function block hod @ [FFB(CLK_GEN,0)]: 
+    M0S8 Clock Gen Block @ [FFB(CLK_GEN,0)]: 
+    m0s8clockgenblockcell: Name =ClockGenBlock
+        PORT MAP (
+             );
+        Properties:
+        {
+        }
+Fixed Function block hod @ [FFB(LPCOMPBLOCK,0)]: empty
+Fixed Function block hod @ [FFB(CTBMBLOCK,0)]: empty
+Fixed Function block hod @ [FFB(ANAPUMP,0)]: empty
+</CYPRESSTAG>
+<CYPRESSTAG name="Port Configuration Details">
+
+------------------------------------------------------------
+Port Configuration report
+------------------------------------------------------------
+     |     |       | Interrupt |                  |                            | 
+Port | Pin | Fixed |      Type |       Drive Mode |                       Name | Connections
+-----+-----+-------+-----------+------------------+----------------------------+-------------------
+   0 |   1 |     * | ON_CHANGE |      RES_PULL_UP | \ButtonMatrix01_1:BM_B(0)\ | 
+     |   5 |     * |      NONE |         CMOS_OUT |               \UART:tx(0)\ | In(\UART:Net_656\)
+-----+-----+-------+-----------+------------------+----------------------------+-------------------
+   1 |   0 |     * | ON_CHANGE |      RES_PULL_UP | \ButtonMatrix01_1:BM_C(0)\ | 
+-----+-----+-------+-----------+------------------+----------------------------+-------------------
+   2 |   2 |     * |      NONE |         CMOS_OUT | \ButtonMatrix01_1:BM_1(0)\ | 
+     |   3 |     * |      NONE |         CMOS_OUT | \ButtonMatrix01_1:BM_2(0)\ | 
+     |   4 |     * |      NONE |         CMOS_OUT | \ButtonMatrix01_1:BM_3(0)\ | 
+     |   5 |     * |      NONE |         CMOS_OUT | \ButtonMatrix01_1:BM_4(0)\ | 
+-----+-----+-------+-----------+------------------+----------------------------+-------------------
+   3 |   5 |     * | ON_CHANGE |      RES_PULL_UP | \ButtonMatrix01_1:BM_A(0)\ | 
+---------------------------------------------------------------------------------------------------
+</CYPRESSTAG>
+</CYPRESSTAG>
+</CYPRESSTAG>
+Digital component placer commit/Report: Elapsed time ==> 0s.003ms
+Digital Placement phase: Elapsed time ==> 1s.348ms
+</CYPRESSTAG>
+<CYPRESSTAG name="Digital Routing">
+Routing successful.
+Digital Routing phase: Elapsed time ==> 1s.272ms
+</CYPRESSTAG>
+<CYPRESSTAG name="Bitstream and API generation">
+Bitstream and API generation phase: Elapsed time ==> 0s.311ms
+</CYPRESSTAG>
+<CYPRESSTAG name="Bitstream verification">
+Bitstream verification phase: Elapsed time ==> 0s.073ms
+</CYPRESSTAG>
+<CYPRESSTAG name="Static timing analysis">
+Timing report is in BMTester_timing.html.
+Static timing analysis phase: Elapsed time ==> 0s.538ms
+</CYPRESSTAG>
+<CYPRESSTAG name="Data reporting">
+Data reporting phase: Elapsed time ==> 0s.000ms
+</CYPRESSTAG>
+<CYPRESSTAG name="Database update...">
+Design database save phase: Elapsed time ==> 0s.341ms
+</CYPRESSTAG>
+cydsfit: Elapsed time ==> 4s.723ms
+</CYPRESSTAG>
+Fitter phase: Elapsed time ==> 4s.800ms
+API generation phase: Elapsed time ==> 2s.908ms
+Dependency generation phase: Elapsed time ==> 0s.033ms
+Cleanup phase: Elapsed time ==> 0s.007ms

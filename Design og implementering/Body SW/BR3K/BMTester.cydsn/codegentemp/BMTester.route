@@ -1,0 +1,39 @@
+net ClockBlock_HFCLK
+	term   ":m0s8clockblockcell.hfclk"
+	switch ":m0s8clockblockcell.hfclk==>:ioport3_clock_io_mux.hfclk"
+	switch ":ioport3_clock_io_mux.clk_in==>:ioport3:pin5.in_clock"
+	term   ":ioport3:pin5.in_clock"
+	switch ":m0s8clockblockcell.hfclk==>:ioport0_clock_io_mux.hfclk"
+	switch ":ioport0_clock_io_mux.clk_in==>:ioport0:pin1.in_clock"
+	term   ":ioport0:pin1.in_clock"
+	switch ":m0s8clockblockcell.hfclk==>:ioport1_clock_io_mux.hfclk"
+	switch ":ioport1_clock_io_mux.clk_in==>:ioport1:pin0.in_clock"
+	term   ":ioport1:pin0.in_clock"
+	switch ":m0s8clockblockcell.hfclk==>:interrupt_3.clock"
+	term   ":interrupt_3.clock"
+	switch ":m0s8clockblockcell.hfclk==>:interrupt_0.clock"
+	term   ":interrupt_0.clock"
+	switch ":m0s8clockblockcell.hfclk==>:interrupt_1.clock"
+	term   ":interrupt_1.clock"
+end ClockBlock_HFCLK
+net \ButtonMatrix01_1:Net_118\
+	term   ":logicalport_0.interrupt"
+	switch ":logicalport_0.interrupt==>Stub-:dsiswitch_bottom@[DSI=(1,1)][side=bottom]:dsihc_bottom:v16+:dsiswitch_bottom@[DSI=(1,1)][side=bottom]:dsihc_bottom:v18"
+	switch "Stub-:dsiswitch_bottom@[DSI=(1,1)][side=bottom]:dsihc_bottom:v16+:dsiswitch_bottom@[DSI=(1,1)][side=bottom]:dsihc_bottom:v18==>:interrupt_idmux_0.in_0"
+	switch ":interrupt_idmux_0.interrupt_idmux_0__out==>:interrupt_0.interrupt"
+	term   ":interrupt_0.interrupt"
+end \ButtonMatrix01_1:Net_118\
+net \ButtonMatrix01_1:Net_151\
+	term   ":logicalport_1.interrupt"
+	switch ":logicalport_1.interrupt==>Stub-:dsiswitch_bottom@[DSI=(1,1)][side=bottom]:dsihc_bottom:v17+:dsiswitch_bottom@[DSI=(1,1)][side=bottom]:dsihc_bottom:v19"
+	switch "Stub-:dsiswitch_bottom@[DSI=(1,1)][side=bottom]:dsihc_bottom:v17+:dsiswitch_bottom@[DSI=(1,1)][side=bottom]:dsihc_bottom:v19==>:interrupt_idmux_1.in_0"
+	switch ":interrupt_idmux_1.interrupt_idmux_1__out==>:interrupt_1.interrupt"
+	term   ":interrupt_1.interrupt"
+end \ButtonMatrix01_1:Net_151\
+net \ButtonMatrix01_1:Net_156\
+	term   ":logicalport_3.interrupt"
+	switch ":logicalport_3.interrupt==>Stub-:dsiswitch_bottom@[DSI=(1,1)][side=bottom]:dsihc_bottom:v21+:dsiswitch_bottom@[DSI=(1,1)][side=bottom]:dsihc_bottom:v23"
+	switch "Stub-:dsiswitch_bottom@[DSI=(1,1)][side=bottom]:dsihc_bottom:v21+:dsiswitch_bottom@[DSI=(1,1)][side=bottom]:dsihc_bottom:v23==>:interrupt_idmux_3.in_0"
+	switch ":interrupt_idmux_3.interrupt_idmux_3__out==>:interrupt_3.interrupt"
+	term   ":interrupt_3.interrupt"
+end \ButtonMatrix01_1:Net_156\

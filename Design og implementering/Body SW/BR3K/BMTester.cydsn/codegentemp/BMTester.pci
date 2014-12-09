@@ -1,0 +1,16 @@
+# BMTester
+# 2014-11-19 13:53:38Z
+
+# IO_2@[IOP=(3)][IoId=(2)] is reserved: SWDDebugEnabled
+dont_use_io iocell 3 2
+# IO_3@[IOP=(3)][IoId=(3)] is reserved: SWDDebugEnabled
+dont_use_io iocell 3 3
+set_location "ClockGenBlock" m0s8clockgenblockcell -1 -1 0
+set_io "\ButtonMatrix01_1:BM_1(0)\" iocell 2 2
+set_io "\ButtonMatrix01_1:BM_2(0)\" iocell 2 3
+set_io "\ButtonMatrix01_1:BM_3(0)\" iocell 2 4
+set_io "\ButtonMatrix01_1:BM_4(0)\" iocell 2 5
+set_io "\ButtonMatrix01_1:BM_A(0)\" iocell 3 5
+set_io "\ButtonMatrix01_1:BM_B(0)\" iocell 0 1
+set_io "\ButtonMatrix01_1:BM_C(0)\" iocell 1 0
+set_io "\UART:tx(0)\" iocell 0 5

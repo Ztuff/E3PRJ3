@@ -1,0 +1,57 @@
+--------------- Rebuild Started: 11/18/2014 01:18:53 Project: BMTester, Configuration: ARM GCC 4.7.3 Debug ---------------
+Deleting file ".\CortexM0\ARM_GCC_473\Debug\main.o"
+Deleting file ".\CortexM0\ARM_GCC_473\Debug\cyfitter_cfg.o"
+Deleting file ".\CortexM0\ARM_GCC_473\Debug\cymetadata.o"
+Deleting file ".\CortexM0\ARM_GCC_473\Debug\ButtonMatrix01_1_API.o"
+Deleting file ".\CortexM0\ARM_GCC_473\Debug\ButtonMatrix01_1_UDefKeyActions.o"
+Deleting file ".\CortexM0\ARM_GCC_473\Debug\ButtonMatrix01_1_BM_A.o"
+Deleting file ".\CortexM0\ARM_GCC_473\Debug\ButtonMatrix01_1_BM_1.o"
+Deleting file ".\CortexM0\ARM_GCC_473\Debug\ButtonMatrix01_1_BM_2.o"
+Deleting file ".\CortexM0\ARM_GCC_473\Debug\ButtonMatrix01_1_BM_3.o"
+Deleting file ".\CortexM0\ARM_GCC_473\Debug\ButtonMatrix01_1_BM_4.o"
+Deleting file ".\CortexM0\ARM_GCC_473\Debug\ButtonMatrix01_1_BM_B.o"
+Deleting file ".\CortexM0\ARM_GCC_473\Debug\ButtonMatrix01_1_BM_C.o"
+Deleting file ".\CortexM0\ARM_GCC_473\Debug\ButtonMatrix01_1_ISR_A.o"
+Deleting file ".\CortexM0\ARM_GCC_473\Debug\ButtonMatrix01_1_ISR_B.o"
+Deleting file ".\CortexM0\ARM_GCC_473\Debug\ButtonMatrix01_1_ISR_C.o"
+Deleting file ".\CortexM0\ARM_GCC_473\Debug\Cm0Start.o"
+Deleting file ".\CortexM0\ARM_GCC_473\Debug\CyBootAsmGnu.o"
+Deleting file ".\CortexM0\ARM_GCC_473\Debug\CyFlash.o"
+Deleting file ".\CortexM0\ARM_GCC_473\Debug\CyLib.o"
+Deleting file ".\CortexM0\ARM_GCC_473\Debug\cyPm.o"
+Deleting file ".\CortexM0\ARM_GCC_473\Debug\cyutils.o"
+Deleting file ".\CortexM0\ARM_GCC_473\Debug\UART.o"
+Deleting file ".\CortexM0\ARM_GCC_473\Debug\UART_SPI_UART.o"
+Deleting file ".\CortexM0\ARM_GCC_473\Debug\UART_SPI_UART_INT.o"
+Deleting file ".\CortexM0\ARM_GCC_473\Debug\UART_PM.o"
+Deleting file ".\CortexM0\ARM_GCC_473\Debug\UART_UART.o"
+Deleting file ".\CortexM0\ARM_GCC_473\Debug\UART_BOOT.o"
+Deleting file ".\CortexM0\ARM_GCC_473\Debug\UART_UART_BOOT.o"
+Deleting file ".\CortexM0\ARM_GCC_473\Debug\UART_tx.o"
+Deleting file ".\CortexM0\ARM_GCC_473\Debug\BMTester.hex"
+Deleting file ".\CortexM0\ARM_GCC_473\Debug\BMTester.elf"
+Deleting file ".\CortexM0\ARM_GCC_473\Debug\BMTester.map"
+Deleting file ".\BMTester.cycdx"
+Deleting file ".\BMTester.rpt"
+Deleting file ".\BMTester_timing.html"
+Deleting file ".\CortexM0\ARM_GCC_473\Debug\.deps\C_FILE.P"
+Deleting file ".\CortexM0\ARM_GCC_473\Debug\.deps\ARM_C_FILE.P"
+Deleting file ".\CortexM0\ARM_GCC_473\Debug\.deps\GNU_ARM_ASM_FILE.P"
+cydsfit.exe "-.appdatapath" "C:\Users\Felix\AppData\Local\Cypress Semiconductor\PSoC Creator\3.0" "-.fdsnotice" "-.fdswarpdepfile=warp_dependencies.txt" "-.fdselabdepfile=elab_dependencies.txt" "-.fdsbldfile=generated_files.txt" "-p" "C:\Users\Felix\Git Repository\PRJ3\Design og implementering\Body SW\BR3K\BMTester.cydsn\BMTester.cyprj" "-d" "CY8C4245AXI-483" "-s" "C:\Users\Felix\Git Repository\PRJ3\Design og implementering\Body SW\BR3K\BMTester.cydsn\Generated_Source\PSoC4" "--" "-yv2" "-v3" "-ygs" "-q10" "-o2" "-.fftcfgtype=LE"
+Elaborating Design...
+HDL Generation ...
+Synthesis ...
+Place and Route ...
+Tech mapping ...
+Info: mpr.M0037: Unused pieces of the design have been optimized out. See the Tech mapping section of the report file for details. (App=cydsfit)
+Analog Placement ...
+Analog Routing ...
+Analog Code Generation ...
+Digital Placement ...
+Digital Routing ...
+Error: rtr.M0004: E1217: Failed to route all nets; unable to resove overuse
+Error: rtr.M0004: Error routing design: Routing Failed (11)
+Dependency Generation ...
+Clean Temporary Files ...
+Error: cdf.M0005: CyDsFit aborted due to errors, please address all errors and rerun CyDsFit. (App=cydsfit)
+--------------- Rebuild Failed: 11/18/2014 01:19:20 ---------------
