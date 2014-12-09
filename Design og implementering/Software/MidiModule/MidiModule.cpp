@@ -8,13 +8,13 @@ void* MidiModuleThreadFunction(void* arg)
 
 using namespace std;
 
-MidiModule::MidiModule(AlsaAdapter* alsaAdapter,
-						list<SensorConfiguration> sensConfList)
+MidiModule::MidiModule(AlsaAdapter* alsaAdapter) 	//in test
  : alsaAdapter_(alsaAdapter),
-   sensorConfList_(sensConfList),
    msgQ(50)
-{	
-}
+   {}
+
+MidiModule::~MidiModule()
+{}
 
 MsgQueue* MidiModule::getMsgQueue()
 {
@@ -79,11 +79,23 @@ void MidiModule::eventDispatcher()
 	 return;
 }
 
+void MidiModule::setPreset(list<SensorConfiguration> & sensConfList)
+{
+	/** Send stop to all MidiSignals **/
+	//stopMidiSignals();
+
+	
+	/** Initialize new preset **/
+	sensorConfList_ = sensConfList;
+	midiSignalVector_ = std::vector<MidiSignal>(sensConfList.size());
+
+}
+
 void MidiModule::handleDataMsg(DataMsg* msg)
 {
 	/******* Update vector<MidiSignal> jf modtaget data. *******/
 	int data = 0;
-	
+	int index = 0;
 	for (list<SensorConfiguration>::iterator i = sensorConfList_.begin(); i != sensorConfList_.end(); ++i)	//Iterate through sensor konfigurations
 	{
 		switch ((*i).getAxis())	//Find correct data in dataArray
@@ -102,18 +114,18 @@ void MidiModule::handleDataMsg(DataMsg* msg)
 				break;
 		}
 		
-		(*i).getMScheme().map(data,*((*i).getMidiIter()));		/* 	Prototype: bool map(int data, MidiSignal & signal);
-															alder map i den givne SensKonfigurations MappingScheme
-															og giver den datapunkt jf. i SensKonfiguration indstillet sensor
-															og vectorplads jf indstillet  i SensKonfiguration indstillet vectorplads */															
+		(*i).getMScheme().map(data,midiSignalVector_[index++]);		/* 	Prototype: bool map(int data, MidiSignal & signal);
+																alder map i den givne SensKonfigurations MappingScheme
+																og giver den datapunkt jf. i SensKonfiguration indstillet sensor
+																og vectorplads jf indstillet  i SensKonfiguration indstillet vectorplads */															
 	}	
 	
 	/******* Send opdateret vector af MidiSignaler *******/
 	#ifdef DEBUG
 	midiSignalVector_[0].print();
 	#endif
+	
 	alsaAdapter_->send(midiSignalVector_);		
-
 }
 
 void MidiModule::handleShutdownMsg(){

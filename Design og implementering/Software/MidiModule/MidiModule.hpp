@@ -13,8 +13,7 @@
 class MidiModule
 {
 	public:
-		MidiModule(AlsaAdapter* alsaAdapter,
-			 		list<SensorConfiguration> sensConfList);
+		MidiModule(AlsaAdapter* alsaAdapter);
 		~MidiModule();
 		
 		void start();
@@ -24,6 +23,8 @@ class MidiModule
 		
 		void eventDispatcher();
 		
+		void setPreset(list<SensorConfiguration> & sensConfList);
+
 		enum typeId
 		{
 			SHUTDOWN_MSG,

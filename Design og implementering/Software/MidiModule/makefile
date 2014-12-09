@@ -1,7 +1,7 @@
-SOURCES=test.cpp MidiModule.cpp DataBank/MappingScheme.cpp AlsaAdapter/AlsaAdapter.cpp DataBank/SensorConfiguration/SensorConfiguration.cpp
-
+SOURCES=test.cpp MidiModule.cpp DataBank/MappingScheme.cpp AlsaAdapter/AlsaAdapter.cpp DataBank/SensorConfiguration.cpp 
+SUBDIRS=DataBank AlsaAdapter
 TARGET=MidiModuleTest
-LIBRARIES=-lpthread
+LIBRARIES=-lpthread -lasound
 
 # Decide target
 ifeq ($(ARCH), target)
@@ -21,6 +21,8 @@ endif
 OBJECTS=${addprefix ${OBJDIR}/,${SOURCES:.cpp=.o}}
 DEPS=${addprefix ${OBJDIR}/,${SOURCES:.cpp=.d}}
 EXECUTABLE=${OBJDIR}/${TARGET}
+FULLSUBDIRS=${addprefix ${OBJDIR}/,${SUBDIRS}}
+
 
 ${OBJDIR}/%.d: %.cpp | ${OBJDIR}
 	${CXX} -MT${@:.d=.o} -MM ${CXXFLAGS} $^ > $@
@@ -35,6 +37,7 @@ ${EXECUTABLE}: ${OBJECTS} ${DEPS}
 
 ${OBJDIR}:
 	mkdir -p ${OBJDIR}
+	mkdir -p ${FULLSUBDIRS}
 
 .PHONY: clean
 clean: 

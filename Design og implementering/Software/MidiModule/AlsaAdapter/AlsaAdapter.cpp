@@ -124,7 +124,7 @@ bool AlsaAdapter::send(const vector<MidiSignal> &signal)
 			{
 		
 
-					 char midiMessage[3] = {+signal[i].command + signal[i].channel, signal[i].param1, signal[i].param2}; //husk at command skal være de 4 MSB, så f.eks. 0x90 for noteon, ikke 0x9 
+					 char midiMessage[3] = {signal[i].command_ + signal[i].channel_, signal[i].param1_, signal[i].param2_}; //husk at command skal være de 4 MSB, så f.eks. 0x90 for noteon, ikke 0x9 
 
 					
 
@@ -145,7 +145,7 @@ bool AlsaAdapter::send(const vector<MidiSignal> &signal)
 
 			for(int i=0; i<signal.size(); i++) //evt noget signal.getlenght? / maxlenght i stedet for 16
 			{
-					char midiMessage[3] = {(signal[i].command + signal[i].channel), signal[i].param1, signal[i].param2}; //husk at command skal være de 4 MSB, så f.eks. 0x90 for noteon, ikke 0x9
+					char midiMessage[3] = {(signal[i].command_ + signal[i].channel_), signal[i].param1_, signal[i].param2_}; //husk at command skal være de 4 MSB, så f.eks. 0x90 for noteon, ikke 0x9
 
 
 					if(snd_rawmidi_write(midiport_external, midiMessage, 3)<0) //det er egentligt en ops write, så den returner -1 ved fejl. 
@@ -171,7 +171,7 @@ bool AlsaAdapter::send(const vector<MidiSignal> &signal)
 
 			for(int i=0; i<signal.size(); i++) //evt noget signal.getlenght? / maxlenght i stedet for 16
 			{
-				char midiMessage[3] = {(signal[i].command + signal[i].channel), signal[i].param1, signal[i].param2}; //husk at command skal være de 4 MSB, så f.eks. 0x90 for noteon, ikke 0x9 
+				char midiMessage[3] = {(signal[i].command_ + signal[i].channel_), signal[i].param1_, signal[i].param2_}; //husk at command skal være de 4 MSB, så f.eks. 0x90 for noteon, ikke 0x9 
 				if(snd_rawmidi_write(midiport_internal, midiMessage, 3)<0) //det er egentligt en ops write, så den returner -1 ved fejl. 
 
 						{
@@ -208,180 +208,4 @@ AlsaAdapter::~AlsaAdapter()
 	}
 }
 
-
-int main()
-{
-
-	
-
-	MidiSignal testsignalKEY, prim, terts, kvint; 
-
-	testsignalKEY.command = 0x90;
-	testsignalKEY.channel = 0x00;
-	testsignalKEY.param1 = 60;
-
-	prim.command = 0x90;
-	terts.command = 0x90;
-	kvint.command = 0x90;
-
-	prim.channel = 0x00;
-	terts.channel = 0x00;
-	kvint.channel = 0x00;
-
-	prim.param2 = 100;
-	terts.param2 = 100;
-	kvint.param2 = 100;
-
-	AlsaAdapter adapter1(2);
-
-	adapter1.open();
-
-	vector<MidiSignal> testVector;
-
-	while(true)
-	{
-		for(int i = 0 ; i < 4 ; i++)
-		{
-			for(int key = 48; key < 85 ; key++)
-				{
-					testsignalKEY.param2 = key;
-					testsignalKEY.param1 = key;
-					testVector.push_back(testsignalKEY);	
-					adapter1.send(testVector);
-					testVector.pop_back();
-					usleep(20000);
-					
-
-					testsignalKEY.param2 = 0;
-					testVector.push_back(testsignalKEY);	
-					adapter1.send(testVector);
-					testVector.pop_back();
-					if(key == 84)
-					{
-						for(int key = 83; key > 48 ; key--)
-							{
-								testsignalKEY.param2 = key;
-								testsignalKEY.param1 = key;
-								testVector.push_back(testsignalKEY);	
-								adapter1.send(testVector);
-								testVector.pop_back();
-								usleep(20000);
-								
-
-								testsignalKEY.param2 = 0;
-								testVector.push_back(testsignalKEY);	
-								adapter1.send(testVector);
-								testVector.pop_back();
-								}
-
-					}
-
-				}
-			}
-
-		
-			prim.param1 = 33;
-			terts.param1 = 35;
-			kvint.param1 = 38;
-			
-			testVector.push_back(prim);
-
-			adapter1.send(testVector);
-
-			testVector.pop_back();
-
-			usleep(1000000);
-
-			testVector.push_back(terts);
-
-			adapter1.send(testVector);
-
-			testVector.pop_back();
-
-			usleep(1000000);
-
-			testVector.push_back(kvint);
-
-			adapter1.send(testVector);
-
-			testVector.pop_back();
-
-			usleep(1000000);
-		
-			prim.param2 = 0;
-			terts.param2 = 0;
-			kvint.param2 = 0;
-
-			testVector.push_back(prim);
-			testVector.push_back(terts);
-			testVector.push_back(kvint);
-
-			adapter1.send(testVector);
-
-			testVector.pop_back();
-			testVector.pop_back();
-			testVector.pop_back();
-
-
-
-			prim.param1 = 38;
-			terts.param1 = 41;
-			kvint.param1 = 33;
-			
-			testVector.push_back(prim);
-
-			adapter1.send(testVector);
-
-			testVector.pop_back();
-
-			usleep(1000000);
-
-			testVector.push_back(terts);
-
-			adapter1.send(testVector);
-
-			testVector.pop_back();
-
-			usleep(1000000);
-
-			testVector.push_back(kvint);
-
-			adapter1.send(testVector);
-
-			testVector.pop_back();
-
-			usleep(1000000);
-		
-			prim.param2 = 0;
-			terts.param2 = 0;
-			kvint.param2 = 0;
-
-			testVector.push_back(prim);
-			testVector.push_back(terts);
-			testVector.push_back(kvint);
-
-			adapter1.send(testVector);
-
-			testVector.pop_back();
-			testVector.pop_back();
-			testVector.pop_back();
-
-		/*testsignalKEY.param2 = 100;
-		testVector.push_back(testsignalKEY);	
-		adapter1.send(testVector);
-		testVector.pop_back();
-		usleep(20000);
-		
-
-		testsignalKEY.param2 = 0;
-		testVector.push_back(testsignalKEY);	
-		adapter1.send(testVector);
-		testVector.pop_back();*/
-		
-		
-
-	}
-
-	return 1;
-}
 
