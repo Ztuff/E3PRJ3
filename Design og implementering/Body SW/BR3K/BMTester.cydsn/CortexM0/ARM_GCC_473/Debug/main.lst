@@ -1,0 +1,383 @@
+ARM GAS  C:\Users\Felix\AppData\Local\Temp\ccQeQlWd.s 			page 1
+
+
+   1              		.cpu cortex-m0
+   2              		.fpu softvfp
+   3              		.eabi_attribute 20, 1
+   4              		.eabi_attribute 21, 1
+   5              		.eabi_attribute 23, 3
+   6              		.eabi_attribute 24, 1
+   7              		.eabi_attribute 25, 1
+   8              		.eabi_attribute 26, 1
+   9              		.eabi_attribute 30, 6
+  10              		.eabi_attribute 34, 0
+  11              		.eabi_attribute 18, 4
+  12              		.code	16
+  13              		.file	"main.c"
+  14              		.text
+  15              	.Ltext0:
+  16              		.cfi_sections	.debug_frame
+  17              		.section	.text.main,"ax",%progbits
+  18              		.align	2
+  19              		.global	main
+  20              		.code	16
+  21              		.thumb_func
+  22              		.type	main, %function
+  23              	main:
+  24              	.LFB33:
+  25              		.file 1 ".\\main.c"
+   1:.\main.c      **** /* ========================================
+   2:.\main.c      ****  *
+   3:.\main.c      ****  * Copyright YOUR COMPANY, THE YEAR
+   4:.\main.c      ****  * All Rights Reserved
+   5:.\main.c      ****  * UNPUBLISHED, LICENSED SOFTWARE.
+   6:.\main.c      ****  *
+   7:.\main.c      ****  * CONFIDENTIAL AND PROPRIETARY INFORMATION
+   8:.\main.c      ****  * WHICH IS THE PROPERTY OF your company.
+   9:.\main.c      ****  *
+  10:.\main.c      ****  * ========================================
+  11:.\main.c      **** */
+  12:.\main.c      **** #include <project.h>
+  13:.\main.c      **** 
+  14:.\main.c      **** int main()
+  15:.\main.c      **** {
+  26              		.loc 1 15 0
+  27              		.cfi_startproc
+  28 0000 80B5     		push	{r7, lr}
+  29              	.LCFI0:
+  30              		.cfi_def_cfa_offset 8
+  31              		.cfi_offset 7, -8
+  32              		.cfi_offset 14, -4
+  33 0002 00AF     		add	r7, sp, #0
+  34              	.LCFI1:
+  35              		.cfi_def_cfa_register 7
+  16:.\main.c      ****     /* Place your initialization/startup code here (e.g. MyInst_Start()) */
+  17:.\main.c      ****     UART_Start();
+  36              		.loc 1 17 0
+  37 0004 FFF7FEFF 		bl	UART_Start
+  18:.\main.c      ****     ButtonMatrix01_1_Start();
+  38              		.loc 1 18 0
+  39 0008 FFF7FEFF 		bl	ButtonMatrix01_1_Start
+ARM GAS  C:\Users\Felix\AppData\Local\Temp\ccQeQlWd.s 			page 2
+
+
+  19:.\main.c      ****     CyGlobalIntEnable;
+  40              		.loc 1 19 0
+  41              	@ 19 ".\main.c" 1
+  42 000c 62B6     		CPSIE   i
+  43              	@ 0 "" 2
+  44              		.code	16
+  45              	.L2:
+  20:.\main.c      ****     /* CyGlobalIntEnable; */ /* Uncomment this line to enable global interrupts. */
+  21:.\main.c      ****     for(;;)
+  22:.\main.c      ****     {
+  23:.\main.c      ****         ButtonMatrix01_1_ISR_A_Disable();
+  46              		.loc 1 23 0 discriminator 1
+  47 000e FFF7FEFF 		bl	ButtonMatrix01_1_ISR_A_Disable
+  24:.\main.c      ****     }
+  48              		.loc 1 24 0 discriminator 1
+  49 0012 FCE7     		b	.L2
+  50              		.cfi_endproc
+  51              	.LFE33:
+  52              		.size	main, .-main
+  53              		.text
+  54              	.Letext0:
+  55              		.section	.debug_info,"",%progbits
+  56              	.Ldebug_info0:
+  57 0000 A1000000 		.4byte	0xa1
+  58 0004 0200     		.2byte	0x2
+  59 0006 00000000 		.4byte	.Ldebug_abbrev0
+  60 000a 04       		.byte	0x4
+  61 000b 01       		.uleb128 0x1
+  62 000c 20000000 		.4byte	.LASF13
+  63 0010 01       		.byte	0x1
+  64 0011 3C010000 		.4byte	.LASF14
+  65 0015 BF000000 		.4byte	.LASF15
+  66 0019 00000000 		.4byte	.Ldebug_ranges0+0
+  67 001d 00000000 		.4byte	0
+  68 0021 00000000 		.4byte	0
+  69 0025 00000000 		.4byte	.Ldebug_line0
+  70 0029 02       		.uleb128 0x2
+  71 002a 01       		.byte	0x1
+  72 002b 06       		.byte	0x6
+  73 002c 2A010000 		.4byte	.LASF0
+  74 0030 02       		.uleb128 0x2
+  75 0031 01       		.byte	0x1
+  76 0032 08       		.byte	0x8
+  77 0033 92000000 		.4byte	.LASF1
+  78 0037 02       		.uleb128 0x2
+  79 0038 02       		.byte	0x2
+  80 0039 05       		.byte	0x5
+  81 003a AE000000 		.4byte	.LASF2
+  82 003e 02       		.uleb128 0x2
+  83 003f 02       		.byte	0x2
+  84 0040 07       		.byte	0x7
+  85 0041 17010000 		.4byte	.LASF3
+  86 0045 02       		.uleb128 0x2
+  87 0046 04       		.byte	0x4
+  88 0047 05       		.byte	0x5
+  89 0048 A5000000 		.4byte	.LASF4
+  90 004c 02       		.uleb128 0x2
+ARM GAS  C:\Users\Felix\AppData\Local\Temp\ccQeQlWd.s 			page 3
+
+
+  91 004d 04       		.byte	0x4
+  92 004e 07       		.byte	0x7
+  93 004f 69000000 		.4byte	.LASF5
+  94 0053 02       		.uleb128 0x2
+  95 0054 08       		.byte	0x8
+  96 0055 05       		.byte	0x5
+  97 0056 00000000 		.4byte	.LASF6
+  98 005a 02       		.uleb128 0x2
+  99 005b 08       		.byte	0x8
+ 100 005c 07       		.byte	0x7
+ 101 005d 7B000000 		.4byte	.LASF7
+ 102 0061 03       		.uleb128 0x3
+ 103 0062 04       		.byte	0x4
+ 104 0063 05       		.byte	0x5
+ 105 0064 696E7400 		.ascii	"int\000"
+ 106 0068 02       		.uleb128 0x2
+ 107 0069 04       		.byte	0x4
+ 108 006a 07       		.byte	0x7
+ 109 006b 0E000000 		.4byte	.LASF8
+ 110 006f 02       		.uleb128 0x2
+ 111 0070 04       		.byte	0x4
+ 112 0071 04       		.byte	0x4
+ 113 0072 36010000 		.4byte	.LASF9
+ 114 0076 02       		.uleb128 0x2
+ 115 0077 08       		.byte	0x8
+ 116 0078 04       		.byte	0x4
+ 117 0079 B8000000 		.4byte	.LASF10
+ 118 007d 02       		.uleb128 0x2
+ 119 007e 01       		.byte	0x1
+ 120 007f 08       		.byte	0x8
+ 121 0080 A0000000 		.4byte	.LASF11
+ 122 0084 02       		.uleb128 0x2
+ 123 0085 04       		.byte	0x4
+ 124 0086 07       		.byte	0x7
+ 125 0087 45010000 		.4byte	.LASF12
+ 126 008b 04       		.uleb128 0x4
+ 127 008c 01       		.byte	0x1
+ 128 008d 1B000000 		.4byte	.LASF16
+ 129 0091 01       		.byte	0x1
+ 130 0092 0E       		.byte	0xe
+ 131 0093 61000000 		.4byte	0x61
+ 132 0097 00000000 		.4byte	.LFB33
+ 133 009b 14000000 		.4byte	.LFE33
+ 134 009f 00000000 		.4byte	.LLST0
+ 135 00a3 01       		.byte	0x1
+ 136 00a4 00       		.byte	0
+ 137              		.section	.debug_abbrev,"",%progbits
+ 138              	.Ldebug_abbrev0:
+ 139 0000 01       		.uleb128 0x1
+ 140 0001 11       		.uleb128 0x11
+ 141 0002 01       		.byte	0x1
+ 142 0003 25       		.uleb128 0x25
+ 143 0004 0E       		.uleb128 0xe
+ 144 0005 13       		.uleb128 0x13
+ 145 0006 0B       		.uleb128 0xb
+ 146 0007 03       		.uleb128 0x3
+ 147 0008 0E       		.uleb128 0xe
+ARM GAS  C:\Users\Felix\AppData\Local\Temp\ccQeQlWd.s 			page 4
+
+
+ 148 0009 1B       		.uleb128 0x1b
+ 149 000a 0E       		.uleb128 0xe
+ 150 000b 55       		.uleb128 0x55
+ 151 000c 06       		.uleb128 0x6
+ 152 000d 11       		.uleb128 0x11
+ 153 000e 01       		.uleb128 0x1
+ 154 000f 52       		.uleb128 0x52
+ 155 0010 01       		.uleb128 0x1
+ 156 0011 10       		.uleb128 0x10
+ 157 0012 06       		.uleb128 0x6
+ 158 0013 00       		.byte	0
+ 159 0014 00       		.byte	0
+ 160 0015 02       		.uleb128 0x2
+ 161 0016 24       		.uleb128 0x24
+ 162 0017 00       		.byte	0
+ 163 0018 0B       		.uleb128 0xb
+ 164 0019 0B       		.uleb128 0xb
+ 165 001a 3E       		.uleb128 0x3e
+ 166 001b 0B       		.uleb128 0xb
+ 167 001c 03       		.uleb128 0x3
+ 168 001d 0E       		.uleb128 0xe
+ 169 001e 00       		.byte	0
+ 170 001f 00       		.byte	0
+ 171 0020 03       		.uleb128 0x3
+ 172 0021 24       		.uleb128 0x24
+ 173 0022 00       		.byte	0
+ 174 0023 0B       		.uleb128 0xb
+ 175 0024 0B       		.uleb128 0xb
+ 176 0025 3E       		.uleb128 0x3e
+ 177 0026 0B       		.uleb128 0xb
+ 178 0027 03       		.uleb128 0x3
+ 179 0028 08       		.uleb128 0x8
+ 180 0029 00       		.byte	0
+ 181 002a 00       		.byte	0
+ 182 002b 04       		.uleb128 0x4
+ 183 002c 2E       		.uleb128 0x2e
+ 184 002d 00       		.byte	0
+ 185 002e 3F       		.uleb128 0x3f
+ 186 002f 0C       		.uleb128 0xc
+ 187 0030 03       		.uleb128 0x3
+ 188 0031 0E       		.uleb128 0xe
+ 189 0032 3A       		.uleb128 0x3a
+ 190 0033 0B       		.uleb128 0xb
+ 191 0034 3B       		.uleb128 0x3b
+ 192 0035 0B       		.uleb128 0xb
+ 193 0036 49       		.uleb128 0x49
+ 194 0037 13       		.uleb128 0x13
+ 195 0038 11       		.uleb128 0x11
+ 196 0039 01       		.uleb128 0x1
+ 197 003a 12       		.uleb128 0x12
+ 198 003b 01       		.uleb128 0x1
+ 199 003c 40       		.uleb128 0x40
+ 200 003d 06       		.uleb128 0x6
+ 201 003e 9642     		.uleb128 0x2116
+ 202 0040 0C       		.uleb128 0xc
+ 203 0041 00       		.byte	0
+ 204 0042 00       		.byte	0
+ARM GAS  C:\Users\Felix\AppData\Local\Temp\ccQeQlWd.s 			page 5
+
+
+ 205 0043 00       		.byte	0
+ 206              		.section	.debug_loc,"",%progbits
+ 207              	.Ldebug_loc0:
+ 208              	.LLST0:
+ 209 0000 00000000 		.4byte	.LFB33
+ 210 0004 02000000 		.4byte	.LCFI0
+ 211 0008 0200     		.2byte	0x2
+ 212 000a 7D       		.byte	0x7d
+ 213 000b 00       		.sleb128 0
+ 214 000c 02000000 		.4byte	.LCFI0
+ 215 0010 04000000 		.4byte	.LCFI1
+ 216 0014 0200     		.2byte	0x2
+ 217 0016 7D       		.byte	0x7d
+ 218 0017 08       		.sleb128 8
+ 219 0018 04000000 		.4byte	.LCFI1
+ 220 001c 14000000 		.4byte	.LFE33
+ 221 0020 0200     		.2byte	0x2
+ 222 0022 77       		.byte	0x77
+ 223 0023 08       		.sleb128 8
+ 224 0024 00000000 		.4byte	0
+ 225 0028 00000000 		.4byte	0
+ 226              		.section	.debug_aranges,"",%progbits
+ 227 0000 1C000000 		.4byte	0x1c
+ 228 0004 0200     		.2byte	0x2
+ 229 0006 00000000 		.4byte	.Ldebug_info0
+ 230 000a 04       		.byte	0x4
+ 231 000b 00       		.byte	0
+ 232 000c 0000     		.2byte	0
+ 233 000e 0000     		.2byte	0
+ 234 0010 00000000 		.4byte	.LFB33
+ 235 0014 14000000 		.4byte	.LFE33-.LFB33
+ 236 0018 00000000 		.4byte	0
+ 237 001c 00000000 		.4byte	0
+ 238              		.section	.debug_ranges,"",%progbits
+ 239              	.Ldebug_ranges0:
+ 240 0000 00000000 		.4byte	.LFB33
+ 241 0004 14000000 		.4byte	.LFE33
+ 242 0008 00000000 		.4byte	0
+ 243 000c 00000000 		.4byte	0
+ 244              		.section	.debug_line,"",%progbits
+ 245              	.Ldebug_line0:
+ 246 0000 41000000 		.section	.debug_str,"MS",%progbits,1
+ 246      02001F00 
+ 246      00000201 
+ 246      FB0E0D00 
+ 246      01010101 
+ 247              	.LASF6:
+ 248 0000 6C6F6E67 		.ascii	"long long int\000"
+ 248      206C6F6E 
+ 248      6720696E 
+ 248      7400
+ 249              	.LASF8:
+ 250 000e 756E7369 		.ascii	"unsigned int\000"
+ 250      676E6564 
+ 250      20696E74 
+ 250      00
+ 251              	.LASF16:
+ARM GAS  C:\Users\Felix\AppData\Local\Temp\ccQeQlWd.s 			page 6
+
+
+ 252 001b 6D61696E 		.ascii	"main\000"
+ 252      00
+ 253              	.LASF13:
+ 254 0020 474E5520 		.ascii	"GNU C 4.7.3 20130312 (release) [ARM/embedded-4_7-br"
+ 254      4320342E 
+ 254      372E3320 
+ 254      32303133 
+ 254      30333132 
+ 255 0053 616E6368 		.ascii	"anch revision 196615]\000"
+ 255      20726576 
+ 255      6973696F 
+ 255      6E203139 
+ 255      36363135 
+ 256              	.LASF5:
+ 257 0069 6C6F6E67 		.ascii	"long unsigned int\000"
+ 257      20756E73 
+ 257      69676E65 
+ 257      6420696E 
+ 257      7400
+ 258              	.LASF7:
+ 259 007b 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 259      206C6F6E 
+ 259      6720756E 
+ 259      7369676E 
+ 259      65642069 
+ 260              	.LASF1:
+ 261 0092 756E7369 		.ascii	"unsigned char\000"
+ 261      676E6564 
+ 261      20636861 
+ 261      7200
+ 262              	.LASF11:
+ 263 00a0 63686172 		.ascii	"char\000"
+ 263      00
+ 264              	.LASF4:
+ 265 00a5 6C6F6E67 		.ascii	"long int\000"
+ 265      20696E74 
+ 265      00
+ 266              	.LASF2:
+ 267 00ae 73686F72 		.ascii	"short int\000"
+ 267      7420696E 
+ 267      7400
+ 268              	.LASF10:
+ 269 00b8 646F7562 		.ascii	"double\000"
+ 269      6C6500
+ 270              	.LASF15:
+ 271 00bf 433A5C55 		.ascii	"C:\\Users\\Felix\\Git Repository\\PRJ3\\Design og i"
+ 271      73657273 
+ 271      5C46656C 
+ 271      69785C47 
+ 271      69742052 
+ 272 00ed 6D706C65 		.ascii	"mplementering\\Body SW\\BR3K\\BMTester.cydsn\000"
+ 272      6D656E74 
+ 272      6572696E 
+ 272      675C426F 
+ 272      64792053 
+ 273              	.LASF3:
+ 274 0117 73686F72 		.ascii	"short unsigned int\000"
+ARM GAS  C:\Users\Felix\AppData\Local\Temp\ccQeQlWd.s 			page 7
+
+
+ 274      7420756E 
+ 274      7369676E 
+ 274      65642069 
+ 274      6E7400
+ 275              	.LASF0:
+ 276 012a 7369676E 		.ascii	"signed char\000"
+ 276      65642063 
+ 276      68617200 
+ 277              	.LASF9:
+ 278 0136 666C6F61 		.ascii	"float\000"
+ 278      7400
+ 279              	.LASF14:
+ 280 013c 2E5C6D61 		.ascii	".\\main.c\000"
+ 280      696E2E63 
+ 280      00
+ 281              	.LASF12:
+ 282 0145 73697A65 		.ascii	"sizetype\000"
+ 282      74797065 
+ 282      00
+ 283              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.7.3 20130312 (release) [ARM/embedded-4_7-br

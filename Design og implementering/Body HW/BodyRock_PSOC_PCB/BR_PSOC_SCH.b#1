@@ -134,7 +134,7 @@
 <wire x1="94.92" y1="1.26" x2="-1.27" y2="1.26" width="0" layer="20"/>
 <text x="60.325" y="24.13" size="1.778" layer="16" rot="MR0">PSOC 4 Shield</text>
 <text x="60.325" y="27.94" size="2.1844" layer="16" rot="MR0">Body Rock 3K</text>
-<text x="40.005" y="24.13" size="1.27" layer="16" rot="MR0">V1.0</text>
+<text x="39.37" y="24.13" size="1.27" layer="16" rot="MR0">V1.0</text>
 </plain>
 <libraries>
 <library name="con-wago-500">

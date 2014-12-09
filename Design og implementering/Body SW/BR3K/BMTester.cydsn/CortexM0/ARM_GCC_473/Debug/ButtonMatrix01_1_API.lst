@@ -1,0 +1,2332 @@
+ARM GAS  C:\Users\Felix\AppData\Local\Temp\ccY0WrHG.s 			page 1
+
+
+   1              		.cpu cortex-m0
+   2              		.fpu softvfp
+   3              		.eabi_attribute 20, 1
+   4              		.eabi_attribute 21, 1
+   5              		.eabi_attribute 23, 3
+   6              		.eabi_attribute 24, 1
+   7              		.eabi_attribute 25, 1
+   8              		.eabi_attribute 26, 1
+   9              		.eabi_attribute 30, 6
+  10              		.eabi_attribute 34, 0
+  11              		.eabi_attribute 18, 4
+  12              		.code	16
+  13              		.file	"ButtonMatrix01_1_API.c"
+  14              		.text
+  15              	.Ltext0:
+  16              		.cfi_sections	.debug_frame
+  17              		.global	ButtonMatrix01_1_keyStates
+  18              		.bss
+  19              		.align	2
+  20              		.type	ButtonMatrix01_1_keyStates, %object
+  21              		.size	ButtonMatrix01_1_keyStates, 12
+  22              	ButtonMatrix01_1_keyStates:
+  23 0000 00000000 		.space	12
+  23      00000000 
+  23      00000000 
+  24              		.section	.text.ButtonMatrix01_1_Start,"ax",%progbits
+  25              		.align	2
+  26              		.global	ButtonMatrix01_1_Start
+  27              		.code	16
+  28              		.thumb_func
+  29              		.type	ButtonMatrix01_1_Start, %function
+  30              	ButtonMatrix01_1_Start:
+  31              	.LFB0:
+  32              		.file 1 ".\\Generated_Source\\PSoC4\\ButtonMatrix01_1_API.c"
+   1:.\Generated_Source\PSoC4/ButtonMatrix01_1_API.c **** /* ========================================
+   2:.\Generated_Source\PSoC4/ButtonMatrix01_1_API.c ****  *
+   3:.\Generated_Source\PSoC4/ButtonMatrix01_1_API.c ****  * This file holds the implementation of
+   4:.\Generated_Source\PSoC4/ButtonMatrix01_1_API.c ****  * the ButtonMatrix API
+   5:.\Generated_Source\PSoC4/ButtonMatrix01_1_API.c ****  *
+   6:.\Generated_Source\PSoC4/ButtonMatrix01_1_API.c ****  * ========================================
+   7:.\Generated_Source\PSoC4/ButtonMatrix01_1_API.c **** */
+   8:.\Generated_Source\PSoC4/ButtonMatrix01_1_API.c **** 
+   9:.\Generated_Source\PSoC4/ButtonMatrix01_1_API.c **** #include "ButtonMatrix01_1_API.h"
+  10:.\Generated_Source\PSoC4/ButtonMatrix01_1_API.c **** 
+  11:.\Generated_Source\PSoC4/ButtonMatrix01_1_API.c **** uint8_t ButtonMatrix01_1_keyStates[4][3] = 
+  12:.\Generated_Source\PSoC4/ButtonMatrix01_1_API.c **** {
+  13:.\Generated_Source\PSoC4/ButtonMatrix01_1_API.c ****     {0, 0, 0},
+  14:.\Generated_Source\PSoC4/ButtonMatrix01_1_API.c ****     {0, 0, 0},
+  15:.\Generated_Source\PSoC4/ButtonMatrix01_1_API.c ****     {0, 0, 0},
+  16:.\Generated_Source\PSoC4/ButtonMatrix01_1_API.c ****     {0, 0, 0}
+  17:.\Generated_Source\PSoC4/ButtonMatrix01_1_API.c **** };
+  18:.\Generated_Source\PSoC4/ButtonMatrix01_1_API.c **** 
+  19:.\Generated_Source\PSoC4/ButtonMatrix01_1_API.c **** CY_ISR_PROTO(ButtonMatrix01_1_ColumnAISR);
+  20:.\Generated_Source\PSoC4/ButtonMatrix01_1_API.c **** CY_ISR_PROTO(ButtonMatrix01_1_ColumnBISR);
+  21:.\Generated_Source\PSoC4/ButtonMatrix01_1_API.c **** CY_ISR_PROTO(ButtonMatrix01_1_ColumnCISR);
+  22:.\Generated_Source\PSoC4/ButtonMatrix01_1_API.c **** 
+  23:.\Generated_Source\PSoC4/ButtonMatrix01_1_API.c **** //control functions:
+ARM GAS  C:\Users\Felix\AppData\Local\Temp\ccY0WrHG.s 			page 2
+
+
+  24:.\Generated_Source\PSoC4/ButtonMatrix01_1_API.c **** void ButtonMatrix01_1_Start(void)
+  25:.\Generated_Source\PSoC4/ButtonMatrix01_1_API.c **** {
+  33              		.loc 1 25 0
+  34              		.cfi_startproc
+  35 0000 80B5     		push	{r7, lr}
+  36              	.LCFI0:
+  37              		.cfi_def_cfa_offset 8
+  38              		.cfi_offset 7, -8
+  39              		.cfi_offset 14, -4
+  40 0002 00AF     		add	r7, sp, #0
+  41              	.LCFI1:
+  42              		.cfi_def_cfa_register 7
+  26:.\Generated_Source\PSoC4/ButtonMatrix01_1_API.c ****     ButtonMatrix01_1_ISR_A_StartEx(ButtonMatrix01_1_ColumnAISR);
+  43              		.loc 1 26 0
+  44 0004 064B     		ldr	r3, .L2
+  45 0006 181C     		mov	r0, r3
+  46 0008 FFF7FEFF 		bl	ButtonMatrix01_1_ISR_A_StartEx
+  27:.\Generated_Source\PSoC4/ButtonMatrix01_1_API.c ****     ButtonMatrix01_1_ISR_B_StartEx(ButtonMatrix01_1_ColumnBISR);
+  47              		.loc 1 27 0
+  48 000c 054B     		ldr	r3, .L2+4
+  49 000e 181C     		mov	r0, r3
+  50 0010 FFF7FEFF 		bl	ButtonMatrix01_1_ISR_B_StartEx
+  28:.\Generated_Source\PSoC4/ButtonMatrix01_1_API.c ****     ButtonMatrix01_1_ISR_C_StartEx(ButtonMatrix01_1_ColumnCISR);
+  51              		.loc 1 28 0
+  52 0014 044B     		ldr	r3, .L2+8
+  53 0016 181C     		mov	r0, r3
+  54 0018 FFF7FEFF 		bl	ButtonMatrix01_1_ISR_C_StartEx
+  29:.\Generated_Source\PSoC4/ButtonMatrix01_1_API.c **** }
+  55              		.loc 1 29 0
+  56 001c BD46     		mov	sp, r7
+  57              		@ sp needed for prologue
+  58 001e 80BD     		pop	{r7, pc}
+  59              	.L3:
+  60              		.align	2
+  61              	.L2:
+  62 0020 00000000 		.word	ButtonMatrix01_1_ColumnAISR
+  63 0024 00000000 		.word	ButtonMatrix01_1_ColumnBISR
+  64 0028 00000000 		.word	ButtonMatrix01_1_ColumnCISR
+  65              		.cfi_endproc
+  66              	.LFE0:
+  67              		.size	ButtonMatrix01_1_Start, .-ButtonMatrix01_1_Start
+  68              		.section	.text.ButtonMatrix01_1_Stop,"ax",%progbits
+  69              		.align	2
+  70              		.global	ButtonMatrix01_1_Stop
+  71              		.code	16
+  72              		.thumb_func
+  73              		.type	ButtonMatrix01_1_Stop, %function
+  74              	ButtonMatrix01_1_Stop:
+  75              	.LFB1:
+  30:.\Generated_Source\PSoC4/ButtonMatrix01_1_API.c **** void ButtonMatrix01_1_Stop(void)
+  31:.\Generated_Source\PSoC4/ButtonMatrix01_1_API.c **** {
+  76              		.loc 1 31 0
+  77              		.cfi_startproc
+  78 0000 80B5     		push	{r7, lr}
+  79              	.LCFI2:
+  80              		.cfi_def_cfa_offset 8
+  81              		.cfi_offset 7, -8
+ARM GAS  C:\Users\Felix\AppData\Local\Temp\ccY0WrHG.s 			page 3
+
+
+  82              		.cfi_offset 14, -4
+  83 0002 00AF     		add	r7, sp, #0
+  84              	.LCFI3:
+  85              		.cfi_def_cfa_register 7
+  32:.\Generated_Source\PSoC4/ButtonMatrix01_1_API.c ****     ButtonMatrix01_1_ISR_A_Stop();
+  86              		.loc 1 32 0
+  87 0004 FFF7FEFF 		bl	ButtonMatrix01_1_ISR_A_Stop
+  33:.\Generated_Source\PSoC4/ButtonMatrix01_1_API.c ****     ButtonMatrix01_1_ISR_B_Stop();
+  88              		.loc 1 33 0
+  89 0008 FFF7FEFF 		bl	ButtonMatrix01_1_ISR_B_Stop
+  34:.\Generated_Source\PSoC4/ButtonMatrix01_1_API.c ****     ButtonMatrix01_1_ISR_C_Stop();
+  90              		.loc 1 34 0
+  91 000c FFF7FEFF 		bl	ButtonMatrix01_1_ISR_C_Stop
+  35:.\Generated_Source\PSoC4/ButtonMatrix01_1_API.c **** }
+  92              		.loc 1 35 0
+  93 0010 BD46     		mov	sp, r7
+  94              		@ sp needed for prologue
+  95 0012 80BD     		pop	{r7, pc}
+  96              		.cfi_endproc
+  97              	.LFE1:
+  98              		.size	ButtonMatrix01_1_Stop, .-ButtonMatrix01_1_Stop
+  99              		.section	.text.ButtonMatrix01_1_Enable,"ax",%progbits
+ 100              		.align	2
+ 101              		.global	ButtonMatrix01_1_Enable
+ 102              		.code	16
+ 103              		.thumb_func
+ 104              		.type	ButtonMatrix01_1_Enable, %function
+ 105              	ButtonMatrix01_1_Enable:
+ 106              	.LFB2:
+  36:.\Generated_Source\PSoC4/ButtonMatrix01_1_API.c **** void ButtonMatrix01_1_Enable(void)
+  37:.\Generated_Source\PSoC4/ButtonMatrix01_1_API.c **** {
+ 107              		.loc 1 37 0
+ 108              		.cfi_startproc
+ 109 0000 80B5     		push	{r7, lr}
+ 110              	.LCFI4:
+ 111              		.cfi_def_cfa_offset 8
+ 112              		.cfi_offset 7, -8
+ 113              		.cfi_offset 14, -4
+ 114 0002 00AF     		add	r7, sp, #0
+ 115              	.LCFI5:
+ 116              		.cfi_def_cfa_register 7
+  38:.\Generated_Source\PSoC4/ButtonMatrix01_1_API.c ****     ButtonMatrix01_1_ISR_A_Enable();
+ 117              		.loc 1 38 0
+ 118 0004 FFF7FEFF 		bl	ButtonMatrix01_1_ISR_A_Enable
+  39:.\Generated_Source\PSoC4/ButtonMatrix01_1_API.c ****     ButtonMatrix01_1_ISR_B_Enable();
+ 119              		.loc 1 39 0
+ 120 0008 FFF7FEFF 		bl	ButtonMatrix01_1_ISR_B_Enable
+  40:.\Generated_Source\PSoC4/ButtonMatrix01_1_API.c ****     ButtonMatrix01_1_ISR_C_Enable();
+ 121              		.loc 1 40 0
+ 122 000c FFF7FEFF 		bl	ButtonMatrix01_1_ISR_C_Enable
+  41:.\Generated_Source\PSoC4/ButtonMatrix01_1_API.c **** }
+ 123              		.loc 1 41 0
+ 124 0010 BD46     		mov	sp, r7
+ 125              		@ sp needed for prologue
+ 126 0012 80BD     		pop	{r7, pc}
+ 127              		.cfi_endproc
+ 128              	.LFE2:
+ARM GAS  C:\Users\Felix\AppData\Local\Temp\ccY0WrHG.s 			page 4
+
+
+ 129              		.size	ButtonMatrix01_1_Enable, .-ButtonMatrix01_1_Enable
+ 130              		.section	.text.ButtonMatrix01_1_Disable,"ax",%progbits
+ 131              		.align	2
+ 132              		.global	ButtonMatrix01_1_Disable
+ 133              		.code	16
+ 134              		.thumb_func
+ 135              		.type	ButtonMatrix01_1_Disable, %function
+ 136              	ButtonMatrix01_1_Disable:
+ 137              	.LFB3:
+  42:.\Generated_Source\PSoC4/ButtonMatrix01_1_API.c **** void ButtonMatrix01_1_Disable(void)
+  43:.\Generated_Source\PSoC4/ButtonMatrix01_1_API.c **** {
+ 138              		.loc 1 43 0
+ 139              		.cfi_startproc
+ 140 0000 80B5     		push	{r7, lr}
+ 141              	.LCFI6:
+ 142              		.cfi_def_cfa_offset 8
+ 143              		.cfi_offset 7, -8
+ 144              		.cfi_offset 14, -4
+ 145 0002 00AF     		add	r7, sp, #0
+ 146              	.LCFI7:
+ 147              		.cfi_def_cfa_register 7
+  44:.\Generated_Source\PSoC4/ButtonMatrix01_1_API.c ****     ButtonMatrix01_1_ISR_A_Disable();
+ 148              		.loc 1 44 0
+ 149 0004 FFF7FEFF 		bl	ButtonMatrix01_1_ISR_A_Disable
+  45:.\Generated_Source\PSoC4/ButtonMatrix01_1_API.c ****     ButtonMatrix01_1_ISR_B_Disable();
+ 150              		.loc 1 45 0
+ 151 0008 FFF7FEFF 		bl	ButtonMatrix01_1_ISR_B_Disable
+  46:.\Generated_Source\PSoC4/ButtonMatrix01_1_API.c ****     ButtonMatrix01_1_ISR_C_Disable();
+ 152              		.loc 1 46 0
+ 153 000c FFF7FEFF 		bl	ButtonMatrix01_1_ISR_C_Disable
+  47:.\Generated_Source\PSoC4/ButtonMatrix01_1_API.c **** }
+ 154              		.loc 1 47 0
+ 155 0010 BD46     		mov	sp, r7
+ 156              		@ sp needed for prologue
+ 157 0012 80BD     		pop	{r7, pc}
+ 158              		.cfi_endproc
+ 159              	.LFE3:
+ 160              		.size	ButtonMatrix01_1_Disable, .-ButtonMatrix01_1_Disable
+ 161              		.global	__aeabi_uidiv
+ 162              		.global	__aeabi_uidivmod
+ 163              		.section	.text.ButtonMatrix01_1_IsButtonPressed,"ax",%progbits
+ 164              		.align	2
+ 165              		.global	ButtonMatrix01_1_IsButtonPressed
+ 166              		.code	16
+ 167              		.thumb_func
+ 168              		.type	ButtonMatrix01_1_IsButtonPressed, %function
+ 169              	ButtonMatrix01_1_IsButtonPressed:
+ 170              	.LFB4:
+  48:.\Generated_Source\PSoC4/ButtonMatrix01_1_API.c **** 
+  49:.\Generated_Source\PSoC4/ButtonMatrix01_1_API.c **** //probing functions:
+  50:.\Generated_Source\PSoC4/ButtonMatrix01_1_API.c **** uint8_t ButtonMatrix01_1_IsButtonPressed(ButtonMatrix01_1_Key_t key)
+  51:.\Generated_Source\PSoC4/ButtonMatrix01_1_API.c **** {
+ 171              		.loc 1 51 0
+ 172              		.cfi_startproc
+ 173 0000 90B5     		push	{r4, r7, lr}
+ 174              	.LCFI8:
+ 175              		.cfi_def_cfa_offset 12
+ARM GAS  C:\Users\Felix\AppData\Local\Temp\ccY0WrHG.s 			page 5
+
+
+ 176              		.cfi_offset 4, -12
+ 177              		.cfi_offset 7, -8
+ 178              		.cfi_offset 14, -4
+ 179 0002 83B0     		sub	sp, sp, #12
+ 180              	.LCFI9:
+ 181              		.cfi_def_cfa_offset 24
+ 182 0004 00AF     		add	r7, sp, #0
+ 183              	.LCFI10:
+ 184              		.cfi_def_cfa_register 7
+ 185 0006 021C     		mov	r2, r0
+ 186 0008 FB1D     		add	r3, r7, #7
+ 187 000a 1A70     		strb	r2, [r3]
+  52:.\Generated_Source\PSoC4/ButtonMatrix01_1_API.c ****     return ButtonMatrix01_1_keyStates[key / 3][key % 3];
+ 188              		.loc 1 52 0
+ 189 000c FB1D     		add	r3, r7, #7
+ 190 000e 1B78     		ldrb	r3, [r3]
+ 191 0010 181C     		mov	r0, r3
+ 192 0012 0321     		mov	r1, #3
+ 193 0014 FFF7FEFF 		bl	__aeabi_uidiv
+ 194 0018 031C     		mov	r3, r0
+ 195 001a DBB2     		uxtb	r3, r3
+ 196 001c 1C1C     		mov	r4, r3
+ 197 001e FB1D     		add	r3, r7, #7
+ 198 0020 1B78     		ldrb	r3, [r3]
+ 199 0022 181C     		mov	r0, r3
+ 200 0024 0321     		mov	r1, #3
+ 201 0026 FFF7FEFF 		bl	__aeabi_uidivmod
+ 202 002a 0B1C     		mov	r3, r1
+ 203 002c DBB2     		uxtb	r3, r3
+ 204 002e 191C     		mov	r1, r3
+ 205 0030 044A     		ldr	r2, .L9
+ 206 0032 231C     		mov	r3, r4
+ 207 0034 5B00     		lsl	r3, r3, #1
+ 208 0036 1B19     		add	r3, r3, r4
+ 209 0038 5B18     		add	r3, r3, r1
+ 210 003a 9B5C     		ldrb	r3, [r3, r2]
+  53:.\Generated_Source\PSoC4/ButtonMatrix01_1_API.c **** }
+ 211              		.loc 1 53 0
+ 212 003c 181C     		mov	r0, r3
+ 213 003e BD46     		mov	sp, r7
+ 214 0040 03B0     		add	sp, sp, #12
+ 215              		@ sp needed for prologue
+ 216 0042 90BD     		pop	{r4, r7, pc}
+ 217              	.L10:
+ 218              		.align	2
+ 219              	.L9:
+ 220 0044 00000000 		.word	ButtonMatrix01_1_keyStates
+ 221              		.cfi_endproc
+ 222              	.LFE4:
+ 223              		.size	ButtonMatrix01_1_IsButtonPressed, .-ButtonMatrix01_1_IsButtonPressed
+ 224              		.section	.text.ButtonMatrix01_1_IsButtonReleased,"ax",%progbits
+ 225              		.align	2
+ 226              		.global	ButtonMatrix01_1_IsButtonReleased
+ 227              		.code	16
+ 228              		.thumb_func
+ 229              		.type	ButtonMatrix01_1_IsButtonReleased, %function
+ 230              	ButtonMatrix01_1_IsButtonReleased:
+ARM GAS  C:\Users\Felix\AppData\Local\Temp\ccY0WrHG.s 			page 6
+
+
+ 231              	.LFB5:
+  54:.\Generated_Source\PSoC4/ButtonMatrix01_1_API.c **** 
+  55:.\Generated_Source\PSoC4/ButtonMatrix01_1_API.c **** uint8_t ButtonMatrix01_1_IsButtonReleased(ButtonMatrix01_1_Key_t key)
+  56:.\Generated_Source\PSoC4/ButtonMatrix01_1_API.c **** {
+ 232              		.loc 1 56 0
+ 233              		.cfi_startproc
+ 234 0000 90B5     		push	{r4, r7, lr}
+ 235              	.LCFI11:
+ 236              		.cfi_def_cfa_offset 12
+ 237              		.cfi_offset 4, -12
+ 238              		.cfi_offset 7, -8
+ 239              		.cfi_offset 14, -4
+ 240 0002 83B0     		sub	sp, sp, #12
+ 241              	.LCFI12:
+ 242              		.cfi_def_cfa_offset 24
+ 243 0004 00AF     		add	r7, sp, #0
+ 244              	.LCFI13:
+ 245              		.cfi_def_cfa_register 7
+ 246 0006 021C     		mov	r2, r0
+ 247 0008 FB1D     		add	r3, r7, #7
+ 248 000a 1A70     		strb	r2, [r3]
+  57:.\Generated_Source\PSoC4/ButtonMatrix01_1_API.c ****      return !ButtonMatrix01_1_keyStates[key / 3][key % 3];
+ 249              		.loc 1 57 0
+ 250 000c FB1D     		add	r3, r7, #7
+ 251 000e 1B78     		ldrb	r3, [r3]
+ 252 0010 181C     		mov	r0, r3
+ 253 0012 0321     		mov	r1, #3
+ 254 0014 FFF7FEFF 		bl	__aeabi_uidiv
+ 255 0018 031C     		mov	r3, r0
+ 256 001a DBB2     		uxtb	r3, r3
+ 257 001c 1C1C     		mov	r4, r3
+ 258 001e FB1D     		add	r3, r7, #7
+ 259 0020 1B78     		ldrb	r3, [r3]
+ 260 0022 181C     		mov	r0, r3
+ 261 0024 0321     		mov	r1, #3
+ 262 0026 FFF7FEFF 		bl	__aeabi_uidivmod
+ 263 002a 0B1C     		mov	r3, r1
+ 264 002c DBB2     		uxtb	r3, r3
+ 265 002e 191C     		mov	r1, r3
+ 266 0030 064A     		ldr	r2, .L13
+ 267 0032 231C     		mov	r3, r4
+ 268 0034 5B00     		lsl	r3, r3, #1
+ 269 0036 1B19     		add	r3, r3, r4
+ 270 0038 5B18     		add	r3, r3, r1
+ 271 003a 9B5C     		ldrb	r3, [r3, r2]
+ 272 003c 5A42     		neg	r2, r3
+ 273 003e 5341     		adc	r3, r3, r2
+ 274 0040 DBB2     		uxtb	r3, r3
+  58:.\Generated_Source\PSoC4/ButtonMatrix01_1_API.c **** }
+ 275              		.loc 1 58 0
+ 276 0042 181C     		mov	r0, r3
+ 277 0044 BD46     		mov	sp, r7
+ 278 0046 03B0     		add	sp, sp, #12
+ 279              		@ sp needed for prologue
+ 280 0048 90BD     		pop	{r4, r7, pc}
+ 281              	.L14:
+ 282 004a C046     		.align	2
+ARM GAS  C:\Users\Felix\AppData\Local\Temp\ccY0WrHG.s 			page 7
+
+
+ 283              	.L13:
+ 284 004c 00000000 		.word	ButtonMatrix01_1_keyStates
+ 285              		.cfi_endproc
+ 286              	.LFE5:
+ 287              		.size	ButtonMatrix01_1_IsButtonReleased, .-ButtonMatrix01_1_IsButtonReleased
+ 288              		.section	.text.ButtonMatrix01_1_GetKeyState,"ax",%progbits
+ 289              		.align	2
+ 290              		.global	ButtonMatrix01_1_GetKeyState
+ 291              		.code	16
+ 292              		.thumb_func
+ 293              		.type	ButtonMatrix01_1_GetKeyState, %function
+ 294              	ButtonMatrix01_1_GetKeyState:
+ 295              	.LFB6:
+  59:.\Generated_Source\PSoC4/ButtonMatrix01_1_API.c **** 
+  60:.\Generated_Source\PSoC4/ButtonMatrix01_1_API.c **** ButtonMatrix01_1_KeyState_t ButtonMatrix01_1_GetKeyState(ButtonMatrix01_1_Key_t key)
+  61:.\Generated_Source\PSoC4/ButtonMatrix01_1_API.c **** {
+ 296              		.loc 1 61 0
+ 297              		.cfi_startproc
+ 298 0000 90B5     		push	{r4, r7, lr}
+ 299              	.LCFI14:
+ 300              		.cfi_def_cfa_offset 12
+ 301              		.cfi_offset 4, -12
+ 302              		.cfi_offset 7, -8
+ 303              		.cfi_offset 14, -4
+ 304 0002 83B0     		sub	sp, sp, #12
+ 305              	.LCFI15:
+ 306              		.cfi_def_cfa_offset 24
+ 307 0004 00AF     		add	r7, sp, #0
+ 308              	.LCFI16:
+ 309              		.cfi_def_cfa_register 7
+ 310 0006 021C     		mov	r2, r0
+ 311 0008 FB1D     		add	r3, r7, #7
+ 312 000a 1A70     		strb	r2, [r3]
+  62:.\Generated_Source\PSoC4/ButtonMatrix01_1_API.c ****     if(ButtonMatrix01_1_keyStates[key / 3][key % 3]) return KEY_PRESSED;
+ 313              		.loc 1 62 0
+ 314 000c FB1D     		add	r3, r7, #7
+ 315 000e 1B78     		ldrb	r3, [r3]
+ 316 0010 181C     		mov	r0, r3
+ 317 0012 0321     		mov	r1, #3
+ 318 0014 FFF7FEFF 		bl	__aeabi_uidiv
+ 319 0018 031C     		mov	r3, r0
+ 320 001a DBB2     		uxtb	r3, r3
+ 321 001c 1C1C     		mov	r4, r3
+ 322 001e FB1D     		add	r3, r7, #7
+ 323 0020 1B78     		ldrb	r3, [r3]
+ 324 0022 181C     		mov	r0, r3
+ 325 0024 0321     		mov	r1, #3
+ 326 0026 FFF7FEFF 		bl	__aeabi_uidivmod
+ 327 002a 0B1C     		mov	r3, r1
+ 328 002c DBB2     		uxtb	r3, r3
+ 329 002e 191C     		mov	r1, r3
+ 330 0030 074A     		ldr	r2, .L18
+ 331 0032 231C     		mov	r3, r4
+ 332 0034 5B00     		lsl	r3, r3, #1
+ 333 0036 1B19     		add	r3, r3, r4
+ 334 0038 5B18     		add	r3, r3, r1
+ 335 003a 9B5C     		ldrb	r3, [r3, r2]
+ARM GAS  C:\Users\Felix\AppData\Local\Temp\ccY0WrHG.s 			page 8
+
+
+ 336 003c 002B     		cmp	r3, #0
+ 337 003e 01D0     		beq	.L16
+ 338              		.loc 1 62 0 is_stmt 0 discriminator 1
+ 339 0040 0023     		mov	r3, #0
+ 340 0042 00E0     		b	.L17
+ 341              	.L16:
+  63:.\Generated_Source\PSoC4/ButtonMatrix01_1_API.c ****     else return KEY_RELEASED;
+ 342              		.loc 1 63 0 is_stmt 1
+ 343 0044 0123     		mov	r3, #1
+ 344              	.L17:
+  64:.\Generated_Source\PSoC4/ButtonMatrix01_1_API.c **** }
+ 345              		.loc 1 64 0
+ 346 0046 181C     		mov	r0, r3
+ 347 0048 BD46     		mov	sp, r7
+ 348 004a 03B0     		add	sp, sp, #12
+ 349              		@ sp needed for prologue
+ 350 004c 90BD     		pop	{r4, r7, pc}
+ 351              	.L19:
+ 352 004e C046     		.align	2
+ 353              	.L18:
+ 354 0050 00000000 		.word	ButtonMatrix01_1_keyStates
+ 355              		.cfi_endproc
+ 356              	.LFE6:
+ 357              		.size	ButtonMatrix01_1_GetKeyState, .-ButtonMatrix01_1_GetKeyState
+ 358              		.section	.text.ButtonMatrix01_1_readColumn,"ax",%progbits
+ 359              		.align	2
+ 360              		.global	ButtonMatrix01_1_readColumn
+ 361              		.code	16
+ 362              		.thumb_func
+ 363              		.type	ButtonMatrix01_1_readColumn, %function
+ 364              	ButtonMatrix01_1_readColumn:
+ 365              	.LFB7:
+  65:.\Generated_Source\PSoC4/ButtonMatrix01_1_API.c **** 
+  66:.\Generated_Source\PSoC4/ButtonMatrix01_1_API.c **** //ISR functionality 
+  67:.\Generated_Source\PSoC4/ButtonMatrix01_1_API.c **** uint8_t ButtonMatrix01_1_readColumn(uint8_t column)
+  68:.\Generated_Source\PSoC4/ButtonMatrix01_1_API.c **** {
+ 366              		.loc 1 68 0
+ 367              		.cfi_startproc
+ 368 0000 80B5     		push	{r7, lr}
+ 369              	.LCFI17:
+ 370              		.cfi_def_cfa_offset 8
+ 371              		.cfi_offset 7, -8
+ 372              		.cfi_offset 14, -4
+ 373 0002 82B0     		sub	sp, sp, #8
+ 374              	.LCFI18:
+ 375              		.cfi_def_cfa_offset 16
+ 376 0004 00AF     		add	r7, sp, #0
+ 377              	.LCFI19:
+ 378              		.cfi_def_cfa_register 7
+ 379 0006 021C     		mov	r2, r0
+ 380 0008 FB1D     		add	r3, r7, #7
+ 381 000a 1A70     		strb	r2, [r3]
+  69:.\Generated_Source\PSoC4/ButtonMatrix01_1_API.c ****     switch(column)
+ 382              		.loc 1 69 0
+ 383 000c FB1D     		add	r3, r7, #7
+ 384 000e 1B78     		ldrb	r3, [r3]
+ 385 0010 012B     		cmp	r3, #1
+ARM GAS  C:\Users\Felix\AppData\Local\Temp\ccY0WrHG.s 			page 9
+
+
+ 386 0012 07D0     		beq	.L23
+ 387 0014 022B     		cmp	r3, #2
+ 388 0016 09D0     		beq	.L24
+ 389 0018 002B     		cmp	r3, #0
+ 390 001a 0BD1     		bne	.L26
+ 391              	.L22:
+  70:.\Generated_Source\PSoC4/ButtonMatrix01_1_API.c ****     {
+  71:.\Generated_Source\PSoC4/ButtonMatrix01_1_API.c ****         case 0:
+  72:.\Generated_Source\PSoC4/ButtonMatrix01_1_API.c ****             return ButtonMatrix01_1_BM_A_Read();
+ 392              		.loc 1 72 0
+ 393 001c FFF7FEFF 		bl	ButtonMatrix01_1_BM_A_Read
+ 394 0020 031C     		mov	r3, r0
+ 395 0022 08E0     		b	.L25
+ 396              	.L23:
+  73:.\Generated_Source\PSoC4/ButtonMatrix01_1_API.c ****         case 1:
+  74:.\Generated_Source\PSoC4/ButtonMatrix01_1_API.c ****             return ButtonMatrix01_1_BM_B_Read();
+ 397              		.loc 1 74 0
+ 398 0024 FFF7FEFF 		bl	ButtonMatrix01_1_BM_B_Read
+ 399 0028 031C     		mov	r3, r0
+ 400 002a 04E0     		b	.L25
+ 401              	.L24:
+  75:.\Generated_Source\PSoC4/ButtonMatrix01_1_API.c ****         case 2:
+  76:.\Generated_Source\PSoC4/ButtonMatrix01_1_API.c ****             return ButtonMatrix01_1_BM_C_Read();
+ 402              		.loc 1 76 0
+ 403 002c FFF7FEFF 		bl	ButtonMatrix01_1_BM_C_Read
+ 404 0030 031C     		mov	r3, r0
+ 405 0032 00E0     		b	.L25
+ 406              	.L26:
+  77:.\Generated_Source\PSoC4/ButtonMatrix01_1_API.c ****         default:
+  78:.\Generated_Source\PSoC4/ButtonMatrix01_1_API.c ****             return -1;
+ 407              		.loc 1 78 0
+ 408 0034 FF23     		mov	r3, #255
+ 409              	.L25:
+  79:.\Generated_Source\PSoC4/ButtonMatrix01_1_API.c ****     }
+  80:.\Generated_Source\PSoC4/ButtonMatrix01_1_API.c **** }
+ 410              		.loc 1 80 0
+ 411 0036 181C     		mov	r0, r3
+ 412 0038 BD46     		mov	sp, r7
+ 413 003a 02B0     		add	sp, sp, #8
+ 414              		@ sp needed for prologue
+ 415 003c 80BD     		pop	{r7, pc}
+ 416              		.cfi_endproc
+ 417              	.LFE7:
+ 418              		.size	ButtonMatrix01_1_readColumn, .-ButtonMatrix01_1_readColumn
+ 419 003e C046     		.section	.text.ButtonMatrix01_1_scanForRow,"ax",%progbits
+ 420              		.align	2
+ 421              		.global	ButtonMatrix01_1_scanForRow
+ 422              		.code	16
+ 423              		.thumb_func
+ 424              		.type	ButtonMatrix01_1_scanForRow, %function
+ 425              	ButtonMatrix01_1_scanForRow:
+ 426              	.LFB8:
+  81:.\Generated_Source\PSoC4/ButtonMatrix01_1_API.c **** 
+  82:.\Generated_Source\PSoC4/ButtonMatrix01_1_API.c **** uint8_t ButtonMatrix01_1_scanForRow(uint8_t column)
+  83:.\Generated_Source\PSoC4/ButtonMatrix01_1_API.c **** {
+ 427              		.loc 1 83 0
+ 428              		.cfi_startproc
+ARM GAS  C:\Users\Felix\AppData\Local\Temp\ccY0WrHG.s 			page 10
+
+
+ 429 0000 80B5     		push	{r7, lr}
+ 430              	.LCFI20:
+ 431              		.cfi_def_cfa_offset 8
+ 432              		.cfi_offset 7, -8
+ 433              		.cfi_offset 14, -4
+ 434 0002 84B0     		sub	sp, sp, #16
+ 435              	.LCFI21:
+ 436              		.cfi_def_cfa_offset 24
+ 437 0004 00AF     		add	r7, sp, #0
+ 438              	.LCFI22:
+ 439              		.cfi_def_cfa_register 7
+ 440 0006 021C     		mov	r2, r0
+ 441 0008 FB1D     		add	r3, r7, #7
+ 442 000a 1A70     		strb	r2, [r3]
+  84:.\Generated_Source\PSoC4/ButtonMatrix01_1_API.c ****     uint8_t row = 0;
+ 443              		.loc 1 84 0
+ 444 000c 3B1C     		mov	r3, r7
+ 445 000e 0F33     		add	r3, r3, #15
+ 446 0010 0022     		mov	r2, #0
+ 447 0012 1A70     		strb	r2, [r3]
+  85:.\Generated_Source\PSoC4/ButtonMatrix01_1_API.c ****     
+  86:.\Generated_Source\PSoC4/ButtonMatrix01_1_API.c ****     ButtonMatrix01_1_Disable();
+ 448              		.loc 1 86 0
+ 449 0014 FFF7FEFF 		bl	ButtonMatrix01_1_Disable
+  87:.\Generated_Source\PSoC4/ButtonMatrix01_1_API.c ****     ButtonMatrix01_1_BM_1_Write(1);
+ 450              		.loc 1 87 0
+ 451 0018 0120     		mov	r0, #1
+ 452 001a FFF7FEFF 		bl	ButtonMatrix01_1_BM_1_Write
+  88:.\Generated_Source\PSoC4/ButtonMatrix01_1_API.c ****     if(ButtonMatrix01_1_readColumn(column)) row = 0;
+ 453              		.loc 1 88 0
+ 454 001e FB1D     		add	r3, r7, #7
+ 455 0020 1B78     		ldrb	r3, [r3]
+ 456 0022 181C     		mov	r0, r3
+ 457 0024 FFF7FEFF 		bl	ButtonMatrix01_1_readColumn
+ 458 0028 031C     		mov	r3, r0
+ 459 002a 002B     		cmp	r3, #0
+ 460 002c 03D0     		beq	.L28
+ 461              		.loc 1 88 0 is_stmt 0 discriminator 1
+ 462 002e 3B1C     		mov	r3, r7
+ 463 0030 0F33     		add	r3, r3, #15
+ 464 0032 0022     		mov	r2, #0
+ 465 0034 1A70     		strb	r2, [r3]
+ 466              	.L28:
+  89:.\Generated_Source\PSoC4/ButtonMatrix01_1_API.c ****     ButtonMatrix01_1_BM_1_Write(0);
+ 467              		.loc 1 89 0 is_stmt 1
+ 468 0036 0020     		mov	r0, #0
+ 469 0038 FFF7FEFF 		bl	ButtonMatrix01_1_BM_1_Write
+  90:.\Generated_Source\PSoC4/ButtonMatrix01_1_API.c ****     
+  91:.\Generated_Source\PSoC4/ButtonMatrix01_1_API.c ****     ButtonMatrix01_1_BM_2_Write(1);
+ 470              		.loc 1 91 0
+ 471 003c 0120     		mov	r0, #1
+ 472 003e FFF7FEFF 		bl	ButtonMatrix01_1_BM_2_Write
+  92:.\Generated_Source\PSoC4/ButtonMatrix01_1_API.c ****     if(ButtonMatrix01_1_readColumn(column)) row = 1;
+ 473              		.loc 1 92 0
+ 474 0042 FB1D     		add	r3, r7, #7
+ 475 0044 1B78     		ldrb	r3, [r3]
+ 476 0046 181C     		mov	r0, r3
+ARM GAS  C:\Users\Felix\AppData\Local\Temp\ccY0WrHG.s 			page 11
+
+
+ 477 0048 FFF7FEFF 		bl	ButtonMatrix01_1_readColumn
+ 478 004c 031C     		mov	r3, r0
+ 479 004e 002B     		cmp	r3, #0
+ 480 0050 03D0     		beq	.L29
+ 481              		.loc 1 92 0 is_stmt 0 discriminator 1
+ 482 0052 3B1C     		mov	r3, r7
+ 483 0054 0F33     		add	r3, r3, #15
+ 484 0056 0122     		mov	r2, #1
+ 485 0058 1A70     		strb	r2, [r3]
+ 486              	.L29:
+  93:.\Generated_Source\PSoC4/ButtonMatrix01_1_API.c ****     ButtonMatrix01_1_BM_2_Write(0);
+ 487              		.loc 1 93 0 is_stmt 1
+ 488 005a 0020     		mov	r0, #0
+ 489 005c FFF7FEFF 		bl	ButtonMatrix01_1_BM_2_Write
+  94:.\Generated_Source\PSoC4/ButtonMatrix01_1_API.c ****     
+  95:.\Generated_Source\PSoC4/ButtonMatrix01_1_API.c ****     ButtonMatrix01_1_BM_3_Write(1);
+ 490              		.loc 1 95 0
+ 491 0060 0120     		mov	r0, #1
+ 492 0062 FFF7FEFF 		bl	ButtonMatrix01_1_BM_3_Write
+  96:.\Generated_Source\PSoC4/ButtonMatrix01_1_API.c ****     if(ButtonMatrix01_1_readColumn(column)) row = 2;
+ 493              		.loc 1 96 0
+ 494 0066 FB1D     		add	r3, r7, #7
+ 495 0068 1B78     		ldrb	r3, [r3]
+ 496 006a 181C     		mov	r0, r3
+ 497 006c FFF7FEFF 		bl	ButtonMatrix01_1_readColumn
+ 498 0070 031C     		mov	r3, r0
+ 499 0072 002B     		cmp	r3, #0
+ 500 0074 03D0     		beq	.L30
+ 501              		.loc 1 96 0 is_stmt 0 discriminator 1
+ 502 0076 3B1C     		mov	r3, r7
+ 503 0078 0F33     		add	r3, r3, #15
+ 504 007a 0222     		mov	r2, #2
+ 505 007c 1A70     		strb	r2, [r3]
+ 506              	.L30:
+  97:.\Generated_Source\PSoC4/ButtonMatrix01_1_API.c ****     ButtonMatrix01_1_BM_3_Write(0);
+ 507              		.loc 1 97 0 is_stmt 1
+ 508 007e 0020     		mov	r0, #0
+ 509 0080 FFF7FEFF 		bl	ButtonMatrix01_1_BM_3_Write
+  98:.\Generated_Source\PSoC4/ButtonMatrix01_1_API.c ****     
+  99:.\Generated_Source\PSoC4/ButtonMatrix01_1_API.c ****     ButtonMatrix01_1_BM_4_Write(1);
+ 510              		.loc 1 99 0
+ 511 0084 0120     		mov	r0, #1
+ 512 0086 FFF7FEFF 		bl	ButtonMatrix01_1_BM_4_Write
+ 100:.\Generated_Source\PSoC4/ButtonMatrix01_1_API.c ****     if(ButtonMatrix01_1_readColumn(column)) row = 3;
+ 513              		.loc 1 100 0
+ 514 008a FB1D     		add	r3, r7, #7
+ 515 008c 1B78     		ldrb	r3, [r3]
+ 516 008e 181C     		mov	r0, r3
+ 517 0090 FFF7FEFF 		bl	ButtonMatrix01_1_readColumn
+ 518 0094 031C     		mov	r3, r0
+ 519 0096 002B     		cmp	r3, #0
+ 520 0098 03D0     		beq	.L31
+ 521              		.loc 1 100 0 is_stmt 0 discriminator 1
+ 522 009a 3B1C     		mov	r3, r7
+ 523 009c 0F33     		add	r3, r3, #15
+ 524 009e 0322     		mov	r2, #3
+ 525 00a0 1A70     		strb	r2, [r3]
+ARM GAS  C:\Users\Felix\AppData\Local\Temp\ccY0WrHG.s 			page 12
+
+
+ 526              	.L31:
+ 101:.\Generated_Source\PSoC4/ButtonMatrix01_1_API.c ****     ButtonMatrix01_1_BM_4_Write(0);
+ 527              		.loc 1 101 0 is_stmt 1
+ 528 00a2 0020     		mov	r0, #0
+ 529 00a4 FFF7FEFF 		bl	ButtonMatrix01_1_BM_4_Write
+ 102:.\Generated_Source\PSoC4/ButtonMatrix01_1_API.c ****     ButtonMatrix01_1_Enable();
+ 530              		.loc 1 102 0
+ 531 00a8 FFF7FEFF 		bl	ButtonMatrix01_1_Enable
+ 103:.\Generated_Source\PSoC4/ButtonMatrix01_1_API.c ****     return row;
+ 532              		.loc 1 103 0
+ 533 00ac 3B1C     		mov	r3, r7
+ 534 00ae 0F33     		add	r3, r3, #15
+ 535 00b0 1B78     		ldrb	r3, [r3]
+ 104:.\Generated_Source\PSoC4/ButtonMatrix01_1_API.c **** } 
+ 536              		.loc 1 104 0
+ 537 00b2 181C     		mov	r0, r3
+ 538 00b4 BD46     		mov	sp, r7
+ 539 00b6 04B0     		add	sp, sp, #16
+ 540              		@ sp needed for prologue
+ 541 00b8 80BD     		pop	{r7, pc}
+ 542              		.cfi_endproc
+ 543              	.LFE8:
+ 544              		.size	ButtonMatrix01_1_scanForRow, .-ButtonMatrix01_1_scanForRow
+ 545 00ba C046     		.section	.text.ButtonMatrix01_1_handleInterrupt,"ax",%progbits
+ 546              		.align	2
+ 547              		.global	ButtonMatrix01_1_handleInterrupt
+ 548              		.code	16
+ 549              		.thumb_func
+ 550              		.type	ButtonMatrix01_1_handleInterrupt, %function
+ 551              	ButtonMatrix01_1_handleInterrupt:
+ 552              	.LFB9:
+ 105:.\Generated_Source\PSoC4/ButtonMatrix01_1_API.c **** 
+ 106:.\Generated_Source\PSoC4/ButtonMatrix01_1_API.c **** void ButtonMatrix01_1_handleInterrupt(uint8_t column)
+ 107:.\Generated_Source\PSoC4/ButtonMatrix01_1_API.c **** {
+ 553              		.loc 1 107 0
+ 554              		.cfi_startproc
+ 555 0000 90B5     		push	{r4, r7, lr}
+ 556              	.LCFI23:
+ 557              		.cfi_def_cfa_offset 12
+ 558              		.cfi_offset 4, -12
+ 559              		.cfi_offset 7, -8
+ 560              		.cfi_offset 14, -4
+ 561 0002 85B0     		sub	sp, sp, #20
+ 562              	.LCFI24:
+ 563              		.cfi_def_cfa_offset 32
+ 564 0004 00AF     		add	r7, sp, #0
+ 565              	.LCFI25:
+ 566              		.cfi_def_cfa_register 7
+ 567 0006 021C     		mov	r2, r0
+ 568 0008 FB1D     		add	r3, r7, #7
+ 569 000a 1A70     		strb	r2, [r3]
+ 108:.\Generated_Source\PSoC4/ButtonMatrix01_1_API.c ****     ButtonMatrix01_1_Key_t key;
+ 109:.\Generated_Source\PSoC4/ButtonMatrix01_1_API.c ****     ButtonMatrix01_1_EventType_t et;
+ 110:.\Generated_Source\PSoC4/ButtonMatrix01_1_API.c ****     uint8_t row = 0;
+ 570              		.loc 1 110 0
+ 571 000c 3B1C     		mov	r3, r7
+ 572 000e 0E33     		add	r3, r3, #14
+ARM GAS  C:\Users\Felix\AppData\Local\Temp\ccY0WrHG.s 			page 13
+
+
+ 573 0010 0022     		mov	r2, #0
+ 574 0012 1A70     		strb	r2, [r3]
+ 111:.\Generated_Source\PSoC4/ButtonMatrix01_1_API.c ****     
+ 112:.\Generated_Source\PSoC4/ButtonMatrix01_1_API.c ****     if(!ButtonMatrix01_1_readColumn(column)){
+ 575              		.loc 1 112 0
+ 576 0014 FB1D     		add	r3, r7, #7
+ 577 0016 1B78     		ldrb	r3, [r3]
+ 578 0018 181C     		mov	r0, r3
+ 579 001a FFF7FEFF 		bl	ButtonMatrix01_1_readColumn
+ 580 001e 031C     		mov	r3, r0
+ 581 0020 002B     		cmp	r3, #0
+ 582 0022 19D1     		bne	.L34
+ 113:.\Generated_Source\PSoC4/ButtonMatrix01_1_API.c ****         et = KEY_PRESS;
+ 583              		.loc 1 113 0
+ 584 0024 3B1C     		mov	r3, r7
+ 585 0026 0F33     		add	r3, r3, #15
+ 586 0028 0122     		mov	r2, #1
+ 587 002a 1A70     		strb	r2, [r3]
+ 114:.\Generated_Source\PSoC4/ButtonMatrix01_1_API.c ****         row = ButtonMatrix01_1_scanForRow(column);
+ 588              		.loc 1 114 0
+ 589 002c 3C1C     		mov	r4, r7
+ 590 002e 0E34     		add	r4, r4, #14
+ 591 0030 FB1D     		add	r3, r7, #7
+ 592 0032 1B78     		ldrb	r3, [r3]
+ 593 0034 181C     		mov	r0, r3
+ 594 0036 FFF7FEFF 		bl	ButtonMatrix01_1_scanForRow
+ 595 003a 031C     		mov	r3, r0
+ 596 003c 2370     		strb	r3, [r4]
+ 115:.\Generated_Source\PSoC4/ButtonMatrix01_1_API.c ****         ButtonMatrix01_1_keyStates[row][column] = 1;
+ 597              		.loc 1 115 0
+ 598 003e 3B1C     		mov	r3, r7
+ 599 0040 0E33     		add	r3, r3, #14
+ 600 0042 1A78     		ldrb	r2, [r3]
+ 601 0044 FB1D     		add	r3, r7, #7
+ 602 0046 1878     		ldrb	r0, [r3]
+ 603 0048 2A49     		ldr	r1, .L39
+ 604 004a 131C     		mov	r3, r2
+ 605 004c 5B00     		lsl	r3, r3, #1
+ 606 004e 9B18     		add	r3, r3, r2
+ 607 0050 1B18     		add	r3, r3, r0
+ 608 0052 0122     		mov	r2, #1
+ 609 0054 5A54     		strb	r2, [r3, r1]
+ 610 0056 33E0     		b	.L35
+ 611              	.L34:
+ 612              	.LBB2:
+ 116:.\Generated_Source\PSoC4/ButtonMatrix01_1_API.c ****     }else{
+ 117:.\Generated_Source\PSoC4/ButtonMatrix01_1_API.c ****         et = KEY_RELEASE;
+ 613              		.loc 1 117 0
+ 614 0058 3B1C     		mov	r3, r7
+ 615 005a 0F33     		add	r3, r3, #15
+ 616 005c 0022     		mov	r2, #0
+ 617 005e 1A70     		strb	r2, [r3]
+ 118:.\Generated_Source\PSoC4/ButtonMatrix01_1_API.c ****         uint8_t i;
+ 119:.\Generated_Source\PSoC4/ButtonMatrix01_1_API.c ****         for(i = 0; i < 4; i++){
+ 618              		.loc 1 119 0
+ 619 0060 3B1C     		mov	r3, r7
+ 620 0062 0D33     		add	r3, r3, #13
+ARM GAS  C:\Users\Felix\AppData\Local\Temp\ccY0WrHG.s 			page 14
+
+
+ 621 0064 0022     		mov	r2, #0
+ 622 0066 1A70     		strb	r2, [r3]
+ 623 0068 25E0     		b	.L36
+ 624              	.L38:
+ 120:.\Generated_Source\PSoC4/ButtonMatrix01_1_API.c ****             if(ButtonMatrix01_1_keyStates[i][column] != 0){
+ 625              		.loc 1 120 0
+ 626 006a 3B1C     		mov	r3, r7
+ 627 006c 0D33     		add	r3, r3, #13
+ 628 006e 1A78     		ldrb	r2, [r3]
+ 629 0070 FB1D     		add	r3, r7, #7
+ 630 0072 1878     		ldrb	r0, [r3]
+ 631 0074 1F49     		ldr	r1, .L39
+ 632 0076 131C     		mov	r3, r2
+ 633 0078 5B00     		lsl	r3, r3, #1
+ 634 007a 9B18     		add	r3, r3, r2
+ 635 007c 1B18     		add	r3, r3, r0
+ 636 007e 5B5C     		ldrb	r3, [r3, r1]
+ 637 0080 002B     		cmp	r3, #0
+ 638 0082 11D0     		beq	.L37
+ 121:.\Generated_Source\PSoC4/ButtonMatrix01_1_API.c ****                 ButtonMatrix01_1_keyStates[i][column] = 0;
+ 639              		.loc 1 121 0
+ 640 0084 3B1C     		mov	r3, r7
+ 641 0086 0D33     		add	r3, r3, #13
+ 642 0088 1A78     		ldrb	r2, [r3]
+ 643 008a FB1D     		add	r3, r7, #7
+ 644 008c 1878     		ldrb	r0, [r3]
+ 645 008e 1949     		ldr	r1, .L39
+ 646 0090 131C     		mov	r3, r2
+ 647 0092 5B00     		lsl	r3, r3, #1
+ 648 0094 9B18     		add	r3, r3, r2
+ 649 0096 1B18     		add	r3, r3, r0
+ 650 0098 0022     		mov	r2, #0
+ 651 009a 5A54     		strb	r2, [r3, r1]
+ 122:.\Generated_Source\PSoC4/ButtonMatrix01_1_API.c ****                 row = i;
+ 652              		.loc 1 122 0
+ 653 009c 3B1C     		mov	r3, r7
+ 654 009e 0E33     		add	r3, r3, #14
+ 655 00a0 3A1C     		mov	r2, r7
+ 656 00a2 0D32     		add	r2, r2, #13
+ 657 00a4 1278     		ldrb	r2, [r2]
+ 658 00a6 1A70     		strb	r2, [r3]
+ 659              	.L37:
+ 119:.\Generated_Source\PSoC4/ButtonMatrix01_1_API.c ****         for(i = 0; i < 4; i++){
+ 660              		.loc 1 119 0
+ 661 00a8 3B1C     		mov	r3, r7
+ 662 00aa 0D33     		add	r3, r3, #13
+ 663 00ac 3A1C     		mov	r2, r7
+ 664 00ae 0D32     		add	r2, r2, #13
+ 665 00b0 1278     		ldrb	r2, [r2]
+ 666 00b2 0132     		add	r2, r2, #1
+ 667 00b4 1A70     		strb	r2, [r3]
+ 668              	.L36:
+ 119:.\Generated_Source\PSoC4/ButtonMatrix01_1_API.c ****         for(i = 0; i < 4; i++){
+ 669              		.loc 1 119 0 is_stmt 0 discriminator 1
+ 670 00b6 3B1C     		mov	r3, r7
+ 671 00b8 0D33     		add	r3, r3, #13
+ 672 00ba 1B78     		ldrb	r3, [r3]
+ARM GAS  C:\Users\Felix\AppData\Local\Temp\ccY0WrHG.s 			page 15
+
+
+ 673 00bc 032B     		cmp	r3, #3
+ 674 00be D4D9     		bls	.L38
+ 675              	.L35:
+ 676              	.LBE2:
+ 123:.\Generated_Source\PSoC4/ButtonMatrix01_1_API.c ****             }
+ 124:.\Generated_Source\PSoC4/ButtonMatrix01_1_API.c ****         }
+ 125:.\Generated_Source\PSoC4/ButtonMatrix01_1_API.c ****     }
+ 126:.\Generated_Source\PSoC4/ButtonMatrix01_1_API.c ****     key = row * 3 + column;
+ 677              		.loc 1 126 0 is_stmt 1
+ 678 00c0 3B1C     		mov	r3, r7
+ 679 00c2 0E33     		add	r3, r3, #14
+ 680 00c4 1B78     		ldrb	r3, [r3]
+ 681 00c6 1A1C     		add	r2, r3, #0
+ 682 00c8 5200     		lsl	r2, r2, #1
+ 683 00ca D318     		add	r3, r2, r3
+ 684 00cc D9B2     		uxtb	r1, r3
+ 685 00ce 3B1C     		mov	r3, r7
+ 686 00d0 0C33     		add	r3, r3, #12
+ 687 00d2 FA1D     		add	r2, r7, #7
+ 688 00d4 1278     		ldrb	r2, [r2]
+ 689 00d6 8A18     		add	r2, r1, r2
+ 690 00d8 1A70     		strb	r2, [r3]
+ 127:.\Generated_Source\PSoC4/ButtonMatrix01_1_API.c ****     _KeyEvent(key, et);
+ 691              		.loc 1 127 0
+ 692 00da 3B1C     		mov	r3, r7
+ 693 00dc 0C33     		add	r3, r3, #12
+ 694 00de 1A78     		ldrb	r2, [r3]
+ 695 00e0 3B1C     		mov	r3, r7
+ 696 00e2 0F33     		add	r3, r3, #15
+ 697 00e4 1B78     		ldrb	r3, [r3]
+ 698 00e6 101C     		mov	r0, r2
+ 699 00e8 191C     		mov	r1, r3
+ 700 00ea FFF7FEFF 		bl	_KeyEvent
+ 128:.\Generated_Source\PSoC4/ButtonMatrix01_1_API.c **** }
+ 701              		.loc 1 128 0
+ 702 00ee BD46     		mov	sp, r7
+ 703 00f0 05B0     		add	sp, sp, #20
+ 704              		@ sp needed for prologue
+ 705 00f2 90BD     		pop	{r4, r7, pc}
+ 706              	.L40:
+ 707              		.align	2
+ 708              	.L39:
+ 709 00f4 00000000 		.word	ButtonMatrix01_1_keyStates
+ 710              		.cfi_endproc
+ 711              	.LFE9:
+ 712              		.size	ButtonMatrix01_1_handleInterrupt, .-ButtonMatrix01_1_handleInterrupt
+ 713              		.section	.text.ButtonMatrix01_1_ColumnAISR,"ax",%progbits
+ 714              		.align	2
+ 715              		.global	ButtonMatrix01_1_ColumnAISR
+ 716              		.code	16
+ 717              		.thumb_func
+ 718              		.type	ButtonMatrix01_1_ColumnAISR, %function
+ 719              	ButtonMatrix01_1_ColumnAISR:
+ 720              	.LFB10:
+ 129:.\Generated_Source\PSoC4/ButtonMatrix01_1_API.c **** 
+ 130:.\Generated_Source\PSoC4/ButtonMatrix01_1_API.c **** CY_ISR(ButtonMatrix01_1_ColumnAISR)
+ 131:.\Generated_Source\PSoC4/ButtonMatrix01_1_API.c **** {
+ARM GAS  C:\Users\Felix\AppData\Local\Temp\ccY0WrHG.s 			page 16
+
+
+ 721              		.loc 1 131 0
+ 722              		.cfi_startproc
+ 723 0000 80B5     		push	{r7, lr}
+ 724              	.LCFI26:
+ 725              		.cfi_def_cfa_offset 8
+ 726              		.cfi_offset 7, -8
+ 727              		.cfi_offset 14, -4
+ 728 0002 00AF     		add	r7, sp, #0
+ 729              	.LCFI27:
+ 730              		.cfi_def_cfa_register 7
+ 132:.\Generated_Source\PSoC4/ButtonMatrix01_1_API.c ****     ButtonMatrix01_1_handleInterrupt(0);
+ 731              		.loc 1 132 0
+ 732 0004 0020     		mov	r0, #0
+ 733 0006 FFF7FEFF 		bl	ButtonMatrix01_1_handleInterrupt
+ 133:.\Generated_Source\PSoC4/ButtonMatrix01_1_API.c ****     ButtonMatrix01_1_BM_A_ClearInterrupt();
+ 734              		.loc 1 133 0
+ 735 000a FFF7FEFF 		bl	ButtonMatrix01_1_BM_A_ClearInterrupt
+ 134:.\Generated_Source\PSoC4/ButtonMatrix01_1_API.c **** }
+ 736              		.loc 1 134 0
+ 737 000e BD46     		mov	sp, r7
+ 738              		@ sp needed for prologue
+ 739 0010 80BD     		pop	{r7, pc}
+ 740              		.cfi_endproc
+ 741              	.LFE10:
+ 742              		.size	ButtonMatrix01_1_ColumnAISR, .-ButtonMatrix01_1_ColumnAISR
+ 743 0012 C046     		.section	.text.ButtonMatrix01_1_ColumnBISR,"ax",%progbits
+ 744              		.align	2
+ 745              		.global	ButtonMatrix01_1_ColumnBISR
+ 746              		.code	16
+ 747              		.thumb_func
+ 748              		.type	ButtonMatrix01_1_ColumnBISR, %function
+ 749              	ButtonMatrix01_1_ColumnBISR:
+ 750              	.LFB11:
+ 135:.\Generated_Source\PSoC4/ButtonMatrix01_1_API.c **** 
+ 136:.\Generated_Source\PSoC4/ButtonMatrix01_1_API.c **** CY_ISR(ButtonMatrix01_1_ColumnBISR)
+ 137:.\Generated_Source\PSoC4/ButtonMatrix01_1_API.c **** {
+ 751              		.loc 1 137 0
+ 752              		.cfi_startproc
+ 753 0000 80B5     		push	{r7, lr}
+ 754              	.LCFI28:
+ 755              		.cfi_def_cfa_offset 8
+ 756              		.cfi_offset 7, -8
+ 757              		.cfi_offset 14, -4
+ 758 0002 00AF     		add	r7, sp, #0
+ 759              	.LCFI29:
+ 760              		.cfi_def_cfa_register 7
+ 138:.\Generated_Source\PSoC4/ButtonMatrix01_1_API.c ****     ButtonMatrix01_1_handleInterrupt(1);
+ 761              		.loc 1 138 0
+ 762 0004 0120     		mov	r0, #1
+ 763 0006 FFF7FEFF 		bl	ButtonMatrix01_1_handleInterrupt
+ 139:.\Generated_Source\PSoC4/ButtonMatrix01_1_API.c ****     ButtonMatrix01_1_BM_B_ClearInterrupt();
+ 764              		.loc 1 139 0
+ 765 000a FFF7FEFF 		bl	ButtonMatrix01_1_BM_B_ClearInterrupt
+ 140:.\Generated_Source\PSoC4/ButtonMatrix01_1_API.c **** }
+ 766              		.loc 1 140 0
+ 767 000e BD46     		mov	sp, r7
+ 768              		@ sp needed for prologue
+ARM GAS  C:\Users\Felix\AppData\Local\Temp\ccY0WrHG.s 			page 17
+
+
+ 769 0010 80BD     		pop	{r7, pc}
+ 770              		.cfi_endproc
+ 771              	.LFE11:
+ 772              		.size	ButtonMatrix01_1_ColumnBISR, .-ButtonMatrix01_1_ColumnBISR
+ 773 0012 C046     		.section	.text.ButtonMatrix01_1_ColumnCISR,"ax",%progbits
+ 774              		.align	2
+ 775              		.global	ButtonMatrix01_1_ColumnCISR
+ 776              		.code	16
+ 777              		.thumb_func
+ 778              		.type	ButtonMatrix01_1_ColumnCISR, %function
+ 779              	ButtonMatrix01_1_ColumnCISR:
+ 780              	.LFB12:
+ 141:.\Generated_Source\PSoC4/ButtonMatrix01_1_API.c **** 
+ 142:.\Generated_Source\PSoC4/ButtonMatrix01_1_API.c **** CY_ISR(ButtonMatrix01_1_ColumnCISR)
+ 143:.\Generated_Source\PSoC4/ButtonMatrix01_1_API.c **** {
+ 781              		.loc 1 143 0
+ 782              		.cfi_startproc
+ 783 0000 80B5     		push	{r7, lr}
+ 784              	.LCFI30:
+ 785              		.cfi_def_cfa_offset 8
+ 786              		.cfi_offset 7, -8
+ 787              		.cfi_offset 14, -4
+ 788 0002 00AF     		add	r7, sp, #0
+ 789              	.LCFI31:
+ 790              		.cfi_def_cfa_register 7
+ 144:.\Generated_Source\PSoC4/ButtonMatrix01_1_API.c ****     ButtonMatrix01_1_handleInterrupt(2);
+ 791              		.loc 1 144 0
+ 792 0004 0220     		mov	r0, #2
+ 793 0006 FFF7FEFF 		bl	ButtonMatrix01_1_handleInterrupt
+ 145:.\Generated_Source\PSoC4/ButtonMatrix01_1_API.c ****     ButtonMatrix01_1_BM_C_ClearInterrupt();
+ 794              		.loc 1 145 0
+ 795 000a FFF7FEFF 		bl	ButtonMatrix01_1_BM_C_ClearInterrupt
+ 146:.\Generated_Source\PSoC4/ButtonMatrix01_1_API.c **** }
+ 796              		.loc 1 146 0
+ 797 000e BD46     		mov	sp, r7
+ 798              		@ sp needed for prologue
+ 799 0010 80BD     		pop	{r7, pc}
+ 800              		.cfi_endproc
+ 801              	.LFE12:
+ 802              		.size	ButtonMatrix01_1_ColumnCISR, .-ButtonMatrix01_1_ColumnCISR
+ 803 0012 C046     		.text
+ 804              	.Letext0:
+ 805              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\3.0\\psoc creator\\import\\gnu_cs\\arm\\4
+ 806              		.file 3 ".\\Generated_Source\\PSoC4\\ButtonMatrix01_1_API.h"
+ 807              		.section	.debug_info,"",%progbits
+ 808              	.Ldebug_info0:
+ 809 0000 5A030000 		.4byte	0x35a
+ 810 0004 0200     		.2byte	0x2
+ 811 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 812 000a 04       		.byte	0x4
+ 813 000b 01       		.uleb128 0x1
+ 814 000c 3A010000 		.4byte	.LASF47
+ 815 0010 01       		.byte	0x1
+ 816 0011 0A010000 		.4byte	.LASF48
+ 817 0015 92020000 		.4byte	.LASF49
+ 818 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 819 001d 00000000 		.4byte	0
+ARM GAS  C:\Users\Felix\AppData\Local\Temp\ccY0WrHG.s 			page 18
+
+
+ 820 0021 00000000 		.4byte	0
+ 821 0025 00000000 		.4byte	.Ldebug_line0
+ 822 0029 02       		.uleb128 0x2
+ 823 002a 01       		.byte	0x1
+ 824 002b 06       		.byte	0x6
+ 825 002c E7010000 		.4byte	.LASF0
+ 826 0030 03       		.uleb128 0x3
+ 827 0031 A7000000 		.4byte	.LASF25
+ 828 0035 02       		.byte	0x2
+ 829 0036 2A       		.byte	0x2a
+ 830 0037 3B000000 		.4byte	0x3b
+ 831 003b 02       		.uleb128 0x2
+ 832 003c 01       		.byte	0x1
+ 833 003d 08       		.byte	0x8
+ 834 003e A9010000 		.4byte	.LASF1
+ 835 0042 02       		.uleb128 0x2
+ 836 0043 02       		.byte	0x2
+ 837 0044 05       		.byte	0x5
+ 838 0045 37000000 		.4byte	.LASF2
+ 839 0049 02       		.uleb128 0x2
+ 840 004a 02       		.byte	0x2
+ 841 004b 07       		.byte	0x7
+ 842 004c 7F020000 		.4byte	.LASF3
+ 843 0050 02       		.uleb128 0x2
+ 844 0051 04       		.byte	0x4
+ 845 0052 05       		.byte	0x5
+ 846 0053 01010000 		.4byte	.LASF4
+ 847 0057 02       		.uleb128 0x2
+ 848 0058 04       		.byte	0x4
+ 849 0059 07       		.byte	0x7
+ 850 005a 5F030000 		.4byte	.LASF5
+ 851 005e 02       		.uleb128 0x2
+ 852 005f 08       		.byte	0x8
+ 853 0060 05       		.byte	0x5
+ 854 0061 B5000000 		.4byte	.LASF6
+ 855 0065 02       		.uleb128 0x2
+ 856 0066 08       		.byte	0x8
+ 857 0067 07       		.byte	0x7
+ 858 0068 F3010000 		.4byte	.LASF7
+ 859 006c 04       		.uleb128 0x4
+ 860 006d 04       		.byte	0x4
+ 861 006e 05       		.byte	0x5
+ 862 006f 696E7400 		.ascii	"int\000"
+ 863 0073 02       		.uleb128 0x2
+ 864 0074 04       		.byte	0x4
+ 865 0075 07       		.byte	0x7
+ 866 0076 0A020000 		.4byte	.LASF8
+ 867 007a 02       		.uleb128 0x2
+ 868 007b 04       		.byte	0x4
+ 869 007c 04       		.byte	0x4
+ 870 007d AF000000 		.4byte	.LASF9
+ 871 0081 02       		.uleb128 0x2
+ 872 0082 08       		.byte	0x8
+ 873 0083 04       		.byte	0x4
+ 874 0084 89030000 		.4byte	.LASF10
+ 875 0088 02       		.uleb128 0x2
+ 876 0089 01       		.byte	0x1
+ARM GAS  C:\Users\Felix\AppData\Local\Temp\ccY0WrHG.s 			page 19
+
+
+ 877 008a 08       		.byte	0x8
+ 878 008b EA020000 		.4byte	.LASF11
+ 879 008f 05       		.uleb128 0x5
+ 880 0090 50000000 		.4byte	.LASF26
+ 881 0094 01       		.byte	0x1
+ 882 0095 03       		.byte	0x3
+ 883 0096 1C       		.byte	0x1c
+ 884 0097 EA000000 		.4byte	0xea
+ 885 009b 06       		.uleb128 0x6
+ 886 009c 00000000 		.4byte	.LASF12
+ 887 00a0 00       		.sleb128 0
+ 888 00a1 06       		.uleb128 0x6
+ 889 00a2 B7010000 		.4byte	.LASF13
+ 890 00a6 01       		.sleb128 1
+ 891 00a7 06       		.uleb128 0x6
+ 892 00a8 BD010000 		.4byte	.LASF14
+ 893 00ac 02       		.sleb128 2
+ 894 00ad 06       		.uleb128 0x6
+ 895 00ae C3010000 		.4byte	.LASF15
+ 896 00b2 03       		.sleb128 3
+ 897 00b3 06       		.uleb128 0x6
+ 898 00b4 C9010000 		.4byte	.LASF16
+ 899 00b8 04       		.sleb128 4
+ 900 00b9 06       		.uleb128 0x6
+ 901 00ba CF010000 		.4byte	.LASF17
+ 902 00be 05       		.sleb128 5
+ 903 00bf 06       		.uleb128 0x6
+ 904 00c0 D5010000 		.4byte	.LASF18
+ 905 00c4 06       		.sleb128 6
+ 906 00c5 06       		.uleb128 0x6
+ 907 00c6 DB010000 		.4byte	.LASF19
+ 908 00ca 07       		.sleb128 7
+ 909 00cb 06       		.uleb128 0x6
+ 910 00cc E1010000 		.4byte	.LASF20
+ 911 00d0 08       		.sleb128 8
+ 912 00d1 06       		.uleb128 0x6
+ 913 00d2 4A000000 		.4byte	.LASF21
+ 914 00d6 09       		.sleb128 9
+ 915 00d7 06       		.uleb128 0x6
+ 916 00d8 A3010000 		.4byte	.LASF22
+ 917 00dc 0A       		.sleb128 10
+ 918 00dd 06       		.uleb128 0x6
+ 919 00de 4C020000 		.4byte	.LASF23
+ 920 00e2 0B       		.sleb128 11
+ 921 00e3 06       		.uleb128 0x6
+ 922 00e4 9F000000 		.4byte	.LASF24
+ 923 00e8 0C       		.sleb128 12
+ 924 00e9 00       		.byte	0
+ 925 00ea 03       		.uleb128 0x3
+ 926 00eb 50000000 		.4byte	.LASF26
+ 927 00ef 03       		.byte	0x3
+ 928 00f0 23       		.byte	0x23
+ 929 00f1 8F000000 		.4byte	0x8f
+ 930 00f5 05       		.uleb128 0x5
+ 931 00f6 06000000 		.4byte	.LASF27
+ 932 00fa 01       		.byte	0x1
+ 933 00fb 03       		.byte	0x3
+ARM GAS  C:\Users\Felix\AppData\Local\Temp\ccY0WrHG.s 			page 20
+
+
+ 934 00fc 25       		.byte	0x25
+ 935 00fd 0E010000 		.4byte	0x10e
+ 936 0101 06       		.uleb128 0x6
+ 937 0102 83010000 		.4byte	.LASF28
+ 938 0106 01       		.sleb128 1
+ 939 0107 06       		.uleb128 0x6
+ 940 0108 C8030000 		.4byte	.LASF29
+ 941 010c 00       		.sleb128 0
+ 942 010d 00       		.byte	0
+ 943 010e 03       		.uleb128 0x3
+ 944 010f 06000000 		.4byte	.LASF27
+ 945 0113 03       		.byte	0x3
+ 946 0114 28       		.byte	0x28
+ 947 0115 F5000000 		.4byte	0xf5
+ 948 0119 05       		.uleb128 0x5
+ 949 011a 90030000 		.4byte	.LASF30
+ 950 011e 01       		.byte	0x1
+ 951 011f 03       		.byte	0x3
+ 952 0120 2A       		.byte	0x2a
+ 953 0121 32010000 		.4byte	0x132
+ 954 0125 06       		.uleb128 0x6
+ 955 0126 73020000 		.4byte	.LASF31
+ 956 012a 00       		.sleb128 0
+ 957 012b 06       		.uleb128 0x6
+ 958 012c 2A000000 		.4byte	.LASF32
+ 959 0130 01       		.sleb128 1
+ 960 0131 00       		.byte	0
+ 961 0132 03       		.uleb128 0x3
+ 962 0133 90030000 		.4byte	.LASF30
+ 963 0137 03       		.byte	0x3
+ 964 0138 2D       		.byte	0x2d
+ 965 0139 19010000 		.4byte	0x119
+ 966 013d 07       		.uleb128 0x7
+ 967 013e 01       		.byte	0x1
+ 968 013f 11030000 		.4byte	.LASF33
+ 969 0143 01       		.byte	0x1
+ 970 0144 18       		.byte	0x18
+ 971 0145 01       		.byte	0x1
+ 972 0146 00000000 		.4byte	.LFB0
+ 973 014a 2C000000 		.4byte	.LFE0
+ 974 014e 00000000 		.4byte	.LLST0
+ 975 0152 01       		.byte	0x1
+ 976 0153 07       		.uleb128 0x7
+ 977 0154 01       		.byte	0x1
+ 978 0155 8D010000 		.4byte	.LASF34
+ 979 0159 01       		.byte	0x1
+ 980 015a 1E       		.byte	0x1e
+ 981 015b 01       		.byte	0x1
+ 982 015c 00000000 		.4byte	.LFB1
+ 983 0160 14000000 		.4byte	.LFE1
+ 984 0164 2C000000 		.4byte	.LLST1
+ 985 0168 01       		.byte	0x1
+ 986 0169 07       		.uleb128 0x7
+ 987 016a 01       		.byte	0x1
+ 988 016b 71030000 		.4byte	.LASF35
+ 989 016f 01       		.byte	0x1
+ 990 0170 24       		.byte	0x24
+ARM GAS  C:\Users\Felix\AppData\Local\Temp\ccY0WrHG.s 			page 21
+
+
+ 991 0171 01       		.byte	0x1
+ 992 0172 00000000 		.4byte	.LFB2
+ 993 0176 14000000 		.4byte	.LFE2
+ 994 017a 58000000 		.4byte	.LLST2
+ 995 017e 01       		.byte	0x1
+ 996 017f 07       		.uleb128 0x7
+ 997 0180 01       		.byte	0x1
+ 998 0181 17020000 		.4byte	.LASF36
+ 999 0185 01       		.byte	0x1
+ 1000 0186 2A       		.byte	0x2a
+ 1001 0187 01       		.byte	0x1
+ 1002 0188 00000000 		.4byte	.LFB3
+ 1003 018c 14000000 		.4byte	.LFE3
+ 1004 0190 84000000 		.4byte	.LLST3
+ 1005 0194 01       		.byte	0x1
+ 1006 0195 08       		.uleb128 0x8
+ 1007 0196 01       		.byte	0x1
+ 1008 0197 C3000000 		.4byte	.LASF37
+ 1009 019b 01       		.byte	0x1
+ 1010 019c 32       		.byte	0x32
+ 1011 019d 01       		.byte	0x1
+ 1012 019e 30000000 		.4byte	0x30
+ 1013 01a2 00000000 		.4byte	.LFB4
+ 1014 01a6 48000000 		.4byte	.LFE4
+ 1015 01aa B0000000 		.4byte	.LLST4
+ 1016 01ae 01       		.byte	0x1
+ 1017 01af C2010000 		.4byte	0x1c2
+ 1018 01b3 09       		.uleb128 0x9
+ 1019 01b4 6B657900 		.ascii	"key\000"
+ 1020 01b8 01       		.byte	0x1
+ 1021 01b9 32       		.byte	0x32
+ 1022 01ba EA000000 		.4byte	0xea
+ 1023 01be 02       		.byte	0x2
+ 1024 01bf 91       		.byte	0x91
+ 1025 01c0 6F       		.sleb128 -17
+ 1026 01c1 00       		.byte	0
+ 1027 01c2 08       		.uleb128 0x8
+ 1028 01c3 01       		.byte	0x1
+ 1029 01c4 EF020000 		.4byte	.LASF38
+ 1030 01c8 01       		.byte	0x1
+ 1031 01c9 37       		.byte	0x37
+ 1032 01ca 01       		.byte	0x1
+ 1033 01cb 30000000 		.4byte	0x30
+ 1034 01cf 00000000 		.4byte	.LFB5
+ 1035 01d3 50000000 		.4byte	.LFE5
+ 1036 01d7 E8000000 		.4byte	.LLST5
+ 1037 01db 01       		.byte	0x1
+ 1038 01dc EF010000 		.4byte	0x1ef
+ 1039 01e0 09       		.uleb128 0x9
+ 1040 01e1 6B657900 		.ascii	"key\000"
+ 1041 01e5 01       		.byte	0x1
+ 1042 01e6 37       		.byte	0x37
+ 1043 01e7 EA000000 		.4byte	0xea
+ 1044 01eb 02       		.byte	0x2
+ 1045 01ec 91       		.byte	0x91
+ 1046 01ed 6F       		.sleb128 -17
+ 1047 01ee 00       		.byte	0
+ARM GAS  C:\Users\Felix\AppData\Local\Temp\ccY0WrHG.s 			page 22
+
+
+ 1048 01ef 08       		.uleb128 0x8
+ 1049 01f0 01       		.byte	0x1
+ 1050 01f1 E4000000 		.4byte	.LASF39
+ 1051 01f5 01       		.byte	0x1
+ 1052 01f6 3C       		.byte	0x3c
+ 1053 01f7 01       		.byte	0x1
+ 1054 01f8 32010000 		.4byte	0x132
+ 1055 01fc 00000000 		.4byte	.LFB6
+ 1056 0200 54000000 		.4byte	.LFE6
+ 1057 0204 20010000 		.4byte	.LLST6
+ 1058 0208 01       		.byte	0x1
+ 1059 0209 1C020000 		.4byte	0x21c
+ 1060 020d 09       		.uleb128 0x9
+ 1061 020e 6B657900 		.ascii	"key\000"
+ 1062 0212 01       		.byte	0x1
+ 1063 0213 3C       		.byte	0x3c
+ 1064 0214 EA000000 		.4byte	0xea
+ 1065 0218 02       		.byte	0x2
+ 1066 0219 91       		.byte	0x91
+ 1067 021a 6F       		.sleb128 -17
+ 1068 021b 00       		.byte	0
+ 1069 021c 08       		.uleb128 0x8
+ 1070 021d 01       		.byte	0x1
+ 1071 021e 67000000 		.4byte	.LASF40
+ 1072 0222 01       		.byte	0x1
+ 1073 0223 43       		.byte	0x43
+ 1074 0224 01       		.byte	0x1
+ 1075 0225 30000000 		.4byte	0x30
+ 1076 0229 00000000 		.4byte	.LFB7
+ 1077 022d 3E000000 		.4byte	.LFE7
+ 1078 0231 58010000 		.4byte	.LLST7
+ 1079 0235 01       		.byte	0x1
+ 1080 0236 49020000 		.4byte	0x249
+ 1081 023a 0A       		.uleb128 0xa
+ 1082 023b 23000000 		.4byte	.LASF41
+ 1083 023f 01       		.byte	0x1
+ 1084 0240 43       		.byte	0x43
+ 1085 0241 30000000 		.4byte	0x30
+ 1086 0245 02       		.byte	0x2
+ 1087 0246 91       		.byte	0x91
+ 1088 0247 77       		.sleb128 -9
+ 1089 0248 00       		.byte	0
+ 1090 0249 08       		.uleb128 0x8
+ 1091 024a 01       		.byte	0x1
+ 1092 024b 30020000 		.4byte	.LASF42
+ 1093 024f 01       		.byte	0x1
+ 1094 0250 52       		.byte	0x52
+ 1095 0251 01       		.byte	0x1
+ 1096 0252 30000000 		.4byte	0x30
+ 1097 0256 00000000 		.4byte	.LFB8
+ 1098 025a BA000000 		.4byte	.LFE8
+ 1099 025e 90010000 		.4byte	.LLST8
+ 1100 0262 01       		.byte	0x1
+ 1101 0263 84020000 		.4byte	0x284
+ 1102 0267 0A       		.uleb128 0xa
+ 1103 0268 23000000 		.4byte	.LASF41
+ 1104 026c 01       		.byte	0x1
+ARM GAS  C:\Users\Felix\AppData\Local\Temp\ccY0WrHG.s 			page 23
+
+
+ 1105 026d 52       		.byte	0x52
+ 1106 026e 30000000 		.4byte	0x30
+ 1107 0272 02       		.byte	0x2
+ 1108 0273 91       		.byte	0x91
+ 1109 0274 6F       		.sleb128 -17
+ 1110 0275 0B       		.uleb128 0xb
+ 1111 0276 726F7700 		.ascii	"row\000"
+ 1112 027a 01       		.byte	0x1
+ 1113 027b 54       		.byte	0x54
+ 1114 027c 30000000 		.4byte	0x30
+ 1115 0280 02       		.byte	0x2
+ 1116 0281 91       		.byte	0x91
+ 1117 0282 77       		.sleb128 -9
+ 1118 0283 00       		.byte	0
+ 1119 0284 0C       		.uleb128 0xc
+ 1120 0285 01       		.byte	0x1
+ 1121 0286 52020000 		.4byte	.LASF50
+ 1122 028a 01       		.byte	0x1
+ 1123 028b 6A       		.byte	0x6a
+ 1124 028c 01       		.byte	0x1
+ 1125 028d 00000000 		.4byte	.LFB9
+ 1126 0291 F8000000 		.4byte	.LFE9
+ 1127 0295 C8010000 		.4byte	.LLST9
+ 1128 0299 01       		.byte	0x1
+ 1129 029a EC020000 		.4byte	0x2ec
+ 1130 029e 0A       		.uleb128 0xa
+ 1131 029f 23000000 		.4byte	.LASF41
+ 1132 02a3 01       		.byte	0x1
+ 1133 02a4 6A       		.byte	0x6a
+ 1134 02a5 30000000 		.4byte	0x30
+ 1135 02a9 02       		.byte	0x2
+ 1136 02aa 91       		.byte	0x91
+ 1137 02ab 67       		.sleb128 -25
+ 1138 02ac 0B       		.uleb128 0xb
+ 1139 02ad 6B657900 		.ascii	"key\000"
+ 1140 02b1 01       		.byte	0x1
+ 1141 02b2 6C       		.byte	0x6c
+ 1142 02b3 EA000000 		.4byte	0xea
+ 1143 02b7 02       		.byte	0x2
+ 1144 02b8 91       		.byte	0x91
+ 1145 02b9 6C       		.sleb128 -20
+ 1146 02ba 0B       		.uleb128 0xb
+ 1147 02bb 657400   		.ascii	"et\000"
+ 1148 02be 01       		.byte	0x1
+ 1149 02bf 6D       		.byte	0x6d
+ 1150 02c0 0E010000 		.4byte	0x10e
+ 1151 02c4 02       		.byte	0x2
+ 1152 02c5 91       		.byte	0x91
+ 1153 02c6 6F       		.sleb128 -17
+ 1154 02c7 0B       		.uleb128 0xb
+ 1155 02c8 726F7700 		.ascii	"row\000"
+ 1156 02cc 01       		.byte	0x1
+ 1157 02cd 6E       		.byte	0x6e
+ 1158 02ce 30000000 		.4byte	0x30
+ 1159 02d2 02       		.byte	0x2
+ 1160 02d3 91       		.byte	0x91
+ 1161 02d4 6E       		.sleb128 -18
+ARM GAS  C:\Users\Felix\AppData\Local\Temp\ccY0WrHG.s 			page 24
+
+
+ 1162 02d5 0D       		.uleb128 0xd
+ 1163 02d6 58000000 		.4byte	.LBB2
+ 1164 02da C0000000 		.4byte	.LBE2
+ 1165 02de 0B       		.uleb128 0xb
+ 1166 02df 6900     		.ascii	"i\000"
+ 1167 02e1 01       		.byte	0x1
+ 1168 02e2 76       		.byte	0x76
+ 1169 02e3 30000000 		.4byte	0x30
+ 1170 02e7 02       		.byte	0x2
+ 1171 02e8 91       		.byte	0x91
+ 1172 02e9 6D       		.sleb128 -19
+ 1173 02ea 00       		.byte	0
+ 1174 02eb 00       		.byte	0
+ 1175 02ec 07       		.uleb128 0x7
+ 1176 02ed 01       		.byte	0x1
+ 1177 02ee AC030000 		.4byte	.LASF43
+ 1178 02f2 01       		.byte	0x1
+ 1179 02f3 82       		.byte	0x82
+ 1180 02f4 01       		.byte	0x1
+ 1181 02f5 00000000 		.4byte	.LFB10
+ 1182 02f9 12000000 		.4byte	.LFE10
+ 1183 02fd 00020000 		.4byte	.LLST10
+ 1184 0301 01       		.byte	0x1
+ 1185 0302 07       		.uleb128 0x7
+ 1186 0303 01       		.byte	0x1
+ 1187 0304 83000000 		.4byte	.LASF44
+ 1188 0308 01       		.byte	0x1
+ 1189 0309 88       		.byte	0x88
+ 1190 030a 01       		.byte	0x1
+ 1191 030b 00000000 		.4byte	.LFB11
+ 1192 030f 12000000 		.4byte	.LFE11
+ 1193 0313 2C020000 		.4byte	.LLST11
+ 1194 0317 01       		.byte	0x1
+ 1195 0318 07       		.uleb128 0x7
+ 1196 0319 01       		.byte	0x1
+ 1197 031a 28030000 		.4byte	.LASF45
+ 1198 031e 01       		.byte	0x1
+ 1199 031f 8E       		.byte	0x8e
+ 1200 0320 01       		.byte	0x1
+ 1201 0321 00000000 		.4byte	.LFB12
+ 1202 0325 12000000 		.4byte	.LFE12
+ 1203 0329 58020000 		.4byte	.LLST12
+ 1204 032d 01       		.byte	0x1
+ 1205 032e 0E       		.uleb128 0xe
+ 1206 032f 30000000 		.4byte	0x30
+ 1207 0333 44030000 		.4byte	0x344
+ 1208 0337 0F       		.uleb128 0xf
+ 1209 0338 44030000 		.4byte	0x344
+ 1210 033c 03       		.byte	0x3
+ 1211 033d 0F       		.uleb128 0xf
+ 1212 033e 44030000 		.4byte	0x344
+ 1213 0342 02       		.byte	0x2
+ 1214 0343 00       		.byte	0
+ 1215 0344 02       		.uleb128 0x2
+ 1216 0345 04       		.byte	0x4
+ 1217 0346 07       		.byte	0x7
+ 1218 0347 41000000 		.4byte	.LASF46
+ARM GAS  C:\Users\Felix\AppData\Local\Temp\ccY0WrHG.s 			page 25
+
+
+ 1219 034b 10       		.uleb128 0x10
+ 1220 034c 44030000 		.4byte	.LASF51
+ 1221 0350 01       		.byte	0x1
+ 1222 0351 0B       		.byte	0xb
+ 1223 0352 2E030000 		.4byte	0x32e
+ 1224 0356 01       		.byte	0x1
+ 1225 0357 05       		.byte	0x5
+ 1226 0358 03       		.byte	0x3
+ 1227 0359 00000000 		.4byte	ButtonMatrix01_1_keyStates
+ 1228 035d 00       		.byte	0
+ 1229              		.section	.debug_abbrev,"",%progbits
+ 1230              	.Ldebug_abbrev0:
+ 1231 0000 01       		.uleb128 0x1
+ 1232 0001 11       		.uleb128 0x11
+ 1233 0002 01       		.byte	0x1
+ 1234 0003 25       		.uleb128 0x25
+ 1235 0004 0E       		.uleb128 0xe
+ 1236 0005 13       		.uleb128 0x13
+ 1237 0006 0B       		.uleb128 0xb
+ 1238 0007 03       		.uleb128 0x3
+ 1239 0008 0E       		.uleb128 0xe
+ 1240 0009 1B       		.uleb128 0x1b
+ 1241 000a 0E       		.uleb128 0xe
+ 1242 000b 55       		.uleb128 0x55
+ 1243 000c 06       		.uleb128 0x6
+ 1244 000d 11       		.uleb128 0x11
+ 1245 000e 01       		.uleb128 0x1
+ 1246 000f 52       		.uleb128 0x52
+ 1247 0010 01       		.uleb128 0x1
+ 1248 0011 10       		.uleb128 0x10
+ 1249 0012 06       		.uleb128 0x6
+ 1250 0013 00       		.byte	0
+ 1251 0014 00       		.byte	0
+ 1252 0015 02       		.uleb128 0x2
+ 1253 0016 24       		.uleb128 0x24
+ 1254 0017 00       		.byte	0
+ 1255 0018 0B       		.uleb128 0xb
+ 1256 0019 0B       		.uleb128 0xb
+ 1257 001a 3E       		.uleb128 0x3e
+ 1258 001b 0B       		.uleb128 0xb
+ 1259 001c 03       		.uleb128 0x3
+ 1260 001d 0E       		.uleb128 0xe
+ 1261 001e 00       		.byte	0
+ 1262 001f 00       		.byte	0
+ 1263 0020 03       		.uleb128 0x3
+ 1264 0021 16       		.uleb128 0x16
+ 1265 0022 00       		.byte	0
+ 1266 0023 03       		.uleb128 0x3
+ 1267 0024 0E       		.uleb128 0xe
+ 1268 0025 3A       		.uleb128 0x3a
+ 1269 0026 0B       		.uleb128 0xb
+ 1270 0027 3B       		.uleb128 0x3b
+ 1271 0028 0B       		.uleb128 0xb
+ 1272 0029 49       		.uleb128 0x49
+ 1273 002a 13       		.uleb128 0x13
+ 1274 002b 00       		.byte	0
+ 1275 002c 00       		.byte	0
+ARM GAS  C:\Users\Felix\AppData\Local\Temp\ccY0WrHG.s 			page 26
+
+
+ 1276 002d 04       		.uleb128 0x4
+ 1277 002e 24       		.uleb128 0x24
+ 1278 002f 00       		.byte	0
+ 1279 0030 0B       		.uleb128 0xb
+ 1280 0031 0B       		.uleb128 0xb
+ 1281 0032 3E       		.uleb128 0x3e
+ 1282 0033 0B       		.uleb128 0xb
+ 1283 0034 03       		.uleb128 0x3
+ 1284 0035 08       		.uleb128 0x8
+ 1285 0036 00       		.byte	0
+ 1286 0037 00       		.byte	0
+ 1287 0038 05       		.uleb128 0x5
+ 1288 0039 04       		.uleb128 0x4
+ 1289 003a 01       		.byte	0x1
+ 1290 003b 03       		.uleb128 0x3
+ 1291 003c 0E       		.uleb128 0xe
+ 1292 003d 0B       		.uleb128 0xb
+ 1293 003e 0B       		.uleb128 0xb
+ 1294 003f 3A       		.uleb128 0x3a
+ 1295 0040 0B       		.uleb128 0xb
+ 1296 0041 3B       		.uleb128 0x3b
+ 1297 0042 0B       		.uleb128 0xb
+ 1298 0043 01       		.uleb128 0x1
+ 1299 0044 13       		.uleb128 0x13
+ 1300 0045 00       		.byte	0
+ 1301 0046 00       		.byte	0
+ 1302 0047 06       		.uleb128 0x6
+ 1303 0048 28       		.uleb128 0x28
+ 1304 0049 00       		.byte	0
+ 1305 004a 03       		.uleb128 0x3
+ 1306 004b 0E       		.uleb128 0xe
+ 1307 004c 1C       		.uleb128 0x1c
+ 1308 004d 0D       		.uleb128 0xd
+ 1309 004e 00       		.byte	0
+ 1310 004f 00       		.byte	0
+ 1311 0050 07       		.uleb128 0x7
+ 1312 0051 2E       		.uleb128 0x2e
+ 1313 0052 00       		.byte	0
+ 1314 0053 3F       		.uleb128 0x3f
+ 1315 0054 0C       		.uleb128 0xc
+ 1316 0055 03       		.uleb128 0x3
+ 1317 0056 0E       		.uleb128 0xe
+ 1318 0057 3A       		.uleb128 0x3a
+ 1319 0058 0B       		.uleb128 0xb
+ 1320 0059 3B       		.uleb128 0x3b
+ 1321 005a 0B       		.uleb128 0xb
+ 1322 005b 27       		.uleb128 0x27
+ 1323 005c 0C       		.uleb128 0xc
+ 1324 005d 11       		.uleb128 0x11
+ 1325 005e 01       		.uleb128 0x1
+ 1326 005f 12       		.uleb128 0x12
+ 1327 0060 01       		.uleb128 0x1
+ 1328 0061 40       		.uleb128 0x40
+ 1329 0062 06       		.uleb128 0x6
+ 1330 0063 9642     		.uleb128 0x2116
+ 1331 0065 0C       		.uleb128 0xc
+ 1332 0066 00       		.byte	0
+ARM GAS  C:\Users\Felix\AppData\Local\Temp\ccY0WrHG.s 			page 27
+
+
+ 1333 0067 00       		.byte	0
+ 1334 0068 08       		.uleb128 0x8
+ 1335 0069 2E       		.uleb128 0x2e
+ 1336 006a 01       		.byte	0x1
+ 1337 006b 3F       		.uleb128 0x3f
+ 1338 006c 0C       		.uleb128 0xc
+ 1339 006d 03       		.uleb128 0x3
+ 1340 006e 0E       		.uleb128 0xe
+ 1341 006f 3A       		.uleb128 0x3a
+ 1342 0070 0B       		.uleb128 0xb
+ 1343 0071 3B       		.uleb128 0x3b
+ 1344 0072 0B       		.uleb128 0xb
+ 1345 0073 27       		.uleb128 0x27
+ 1346 0074 0C       		.uleb128 0xc
+ 1347 0075 49       		.uleb128 0x49
+ 1348 0076 13       		.uleb128 0x13
+ 1349 0077 11       		.uleb128 0x11
+ 1350 0078 01       		.uleb128 0x1
+ 1351 0079 12       		.uleb128 0x12
+ 1352 007a 01       		.uleb128 0x1
+ 1353 007b 40       		.uleb128 0x40
+ 1354 007c 06       		.uleb128 0x6
+ 1355 007d 9642     		.uleb128 0x2116
+ 1356 007f 0C       		.uleb128 0xc
+ 1357 0080 01       		.uleb128 0x1
+ 1358 0081 13       		.uleb128 0x13
+ 1359 0082 00       		.byte	0
+ 1360 0083 00       		.byte	0
+ 1361 0084 09       		.uleb128 0x9
+ 1362 0085 05       		.uleb128 0x5
+ 1363 0086 00       		.byte	0
+ 1364 0087 03       		.uleb128 0x3
+ 1365 0088 08       		.uleb128 0x8
+ 1366 0089 3A       		.uleb128 0x3a
+ 1367 008a 0B       		.uleb128 0xb
+ 1368 008b 3B       		.uleb128 0x3b
+ 1369 008c 0B       		.uleb128 0xb
+ 1370 008d 49       		.uleb128 0x49
+ 1371 008e 13       		.uleb128 0x13
+ 1372 008f 02       		.uleb128 0x2
+ 1373 0090 0A       		.uleb128 0xa
+ 1374 0091 00       		.byte	0
+ 1375 0092 00       		.byte	0
+ 1376 0093 0A       		.uleb128 0xa
+ 1377 0094 05       		.uleb128 0x5
+ 1378 0095 00       		.byte	0
+ 1379 0096 03       		.uleb128 0x3
+ 1380 0097 0E       		.uleb128 0xe
+ 1381 0098 3A       		.uleb128 0x3a
+ 1382 0099 0B       		.uleb128 0xb
+ 1383 009a 3B       		.uleb128 0x3b
+ 1384 009b 0B       		.uleb128 0xb
+ 1385 009c 49       		.uleb128 0x49
+ 1386 009d 13       		.uleb128 0x13
+ 1387 009e 02       		.uleb128 0x2
+ 1388 009f 0A       		.uleb128 0xa
+ 1389 00a0 00       		.byte	0
+ARM GAS  C:\Users\Felix\AppData\Local\Temp\ccY0WrHG.s 			page 28
+
+
+ 1390 00a1 00       		.byte	0
+ 1391 00a2 0B       		.uleb128 0xb
+ 1392 00a3 34       		.uleb128 0x34
+ 1393 00a4 00       		.byte	0
+ 1394 00a5 03       		.uleb128 0x3
+ 1395 00a6 08       		.uleb128 0x8
+ 1396 00a7 3A       		.uleb128 0x3a
+ 1397 00a8 0B       		.uleb128 0xb
+ 1398 00a9 3B       		.uleb128 0x3b
+ 1399 00aa 0B       		.uleb128 0xb
+ 1400 00ab 49       		.uleb128 0x49
+ 1401 00ac 13       		.uleb128 0x13
+ 1402 00ad 02       		.uleb128 0x2
+ 1403 00ae 0A       		.uleb128 0xa
+ 1404 00af 00       		.byte	0
+ 1405 00b0 00       		.byte	0
+ 1406 00b1 0C       		.uleb128 0xc
+ 1407 00b2 2E       		.uleb128 0x2e
+ 1408 00b3 01       		.byte	0x1
+ 1409 00b4 3F       		.uleb128 0x3f
+ 1410 00b5 0C       		.uleb128 0xc
+ 1411 00b6 03       		.uleb128 0x3
+ 1412 00b7 0E       		.uleb128 0xe
+ 1413 00b8 3A       		.uleb128 0x3a
+ 1414 00b9 0B       		.uleb128 0xb
+ 1415 00ba 3B       		.uleb128 0x3b
+ 1416 00bb 0B       		.uleb128 0xb
+ 1417 00bc 27       		.uleb128 0x27
+ 1418 00bd 0C       		.uleb128 0xc
+ 1419 00be 11       		.uleb128 0x11
+ 1420 00bf 01       		.uleb128 0x1
+ 1421 00c0 12       		.uleb128 0x12
+ 1422 00c1 01       		.uleb128 0x1
+ 1423 00c2 40       		.uleb128 0x40
+ 1424 00c3 06       		.uleb128 0x6
+ 1425 00c4 9642     		.uleb128 0x2116
+ 1426 00c6 0C       		.uleb128 0xc
+ 1427 00c7 01       		.uleb128 0x1
+ 1428 00c8 13       		.uleb128 0x13
+ 1429 00c9 00       		.byte	0
+ 1430 00ca 00       		.byte	0
+ 1431 00cb 0D       		.uleb128 0xd
+ 1432 00cc 0B       		.uleb128 0xb
+ 1433 00cd 01       		.byte	0x1
+ 1434 00ce 11       		.uleb128 0x11
+ 1435 00cf 01       		.uleb128 0x1
+ 1436 00d0 12       		.uleb128 0x12
+ 1437 00d1 01       		.uleb128 0x1
+ 1438 00d2 00       		.byte	0
+ 1439 00d3 00       		.byte	0
+ 1440 00d4 0E       		.uleb128 0xe
+ 1441 00d5 01       		.uleb128 0x1
+ 1442 00d6 01       		.byte	0x1
+ 1443 00d7 49       		.uleb128 0x49
+ 1444 00d8 13       		.uleb128 0x13
+ 1445 00d9 01       		.uleb128 0x1
+ 1446 00da 13       		.uleb128 0x13
+ARM GAS  C:\Users\Felix\AppData\Local\Temp\ccY0WrHG.s 			page 29
+
+
+ 1447 00db 00       		.byte	0
+ 1448 00dc 00       		.byte	0
+ 1449 00dd 0F       		.uleb128 0xf
+ 1450 00de 21       		.uleb128 0x21
+ 1451 00df 00       		.byte	0
+ 1452 00e0 49       		.uleb128 0x49
+ 1453 00e1 13       		.uleb128 0x13
+ 1454 00e2 2F       		.uleb128 0x2f
+ 1455 00e3 0B       		.uleb128 0xb
+ 1456 00e4 00       		.byte	0
+ 1457 00e5 00       		.byte	0
+ 1458 00e6 10       		.uleb128 0x10
+ 1459 00e7 34       		.uleb128 0x34
+ 1460 00e8 00       		.byte	0
+ 1461 00e9 03       		.uleb128 0x3
+ 1462 00ea 0E       		.uleb128 0xe
+ 1463 00eb 3A       		.uleb128 0x3a
+ 1464 00ec 0B       		.uleb128 0xb
+ 1465 00ed 3B       		.uleb128 0x3b
+ 1466 00ee 0B       		.uleb128 0xb
+ 1467 00ef 49       		.uleb128 0x49
+ 1468 00f0 13       		.uleb128 0x13
+ 1469 00f1 3F       		.uleb128 0x3f
+ 1470 00f2 0C       		.uleb128 0xc
+ 1471 00f3 02       		.uleb128 0x2
+ 1472 00f4 0A       		.uleb128 0xa
+ 1473 00f5 00       		.byte	0
+ 1474 00f6 00       		.byte	0
+ 1475 00f7 00       		.byte	0
+ 1476              		.section	.debug_loc,"",%progbits
+ 1477              	.Ldebug_loc0:
+ 1478              	.LLST0:
+ 1479 0000 00000000 		.4byte	.LFB0
+ 1480 0004 02000000 		.4byte	.LCFI0
+ 1481 0008 0200     		.2byte	0x2
+ 1482 000a 7D       		.byte	0x7d
+ 1483 000b 00       		.sleb128 0
+ 1484 000c 02000000 		.4byte	.LCFI0
+ 1485 0010 04000000 		.4byte	.LCFI1
+ 1486 0014 0200     		.2byte	0x2
+ 1487 0016 7D       		.byte	0x7d
+ 1488 0017 08       		.sleb128 8
+ 1489 0018 04000000 		.4byte	.LCFI1
+ 1490 001c 2C000000 		.4byte	.LFE0
+ 1491 0020 0200     		.2byte	0x2
+ 1492 0022 77       		.byte	0x77
+ 1493 0023 08       		.sleb128 8
+ 1494 0024 00000000 		.4byte	0
+ 1495 0028 00000000 		.4byte	0
+ 1496              	.LLST1:
+ 1497 002c 00000000 		.4byte	.LFB1
+ 1498 0030 02000000 		.4byte	.LCFI2
+ 1499 0034 0200     		.2byte	0x2
+ 1500 0036 7D       		.byte	0x7d
+ 1501 0037 00       		.sleb128 0
+ 1502 0038 02000000 		.4byte	.LCFI2
+ 1503 003c 04000000 		.4byte	.LCFI3
+ARM GAS  C:\Users\Felix\AppData\Local\Temp\ccY0WrHG.s 			page 30
+
+
+ 1504 0040 0200     		.2byte	0x2
+ 1505 0042 7D       		.byte	0x7d
+ 1506 0043 08       		.sleb128 8
+ 1507 0044 04000000 		.4byte	.LCFI3
+ 1508 0048 14000000 		.4byte	.LFE1
+ 1509 004c 0200     		.2byte	0x2
+ 1510 004e 77       		.byte	0x77
+ 1511 004f 08       		.sleb128 8
+ 1512 0050 00000000 		.4byte	0
+ 1513 0054 00000000 		.4byte	0
+ 1514              	.LLST2:
+ 1515 0058 00000000 		.4byte	.LFB2
+ 1516 005c 02000000 		.4byte	.LCFI4
+ 1517 0060 0200     		.2byte	0x2
+ 1518 0062 7D       		.byte	0x7d
+ 1519 0063 00       		.sleb128 0
+ 1520 0064 02000000 		.4byte	.LCFI4
+ 1521 0068 04000000 		.4byte	.LCFI5
+ 1522 006c 0200     		.2byte	0x2
+ 1523 006e 7D       		.byte	0x7d
+ 1524 006f 08       		.sleb128 8
+ 1525 0070 04000000 		.4byte	.LCFI5
+ 1526 0074 14000000 		.4byte	.LFE2
+ 1527 0078 0200     		.2byte	0x2
+ 1528 007a 77       		.byte	0x77
+ 1529 007b 08       		.sleb128 8
+ 1530 007c 00000000 		.4byte	0
+ 1531 0080 00000000 		.4byte	0
+ 1532              	.LLST3:
+ 1533 0084 00000000 		.4byte	.LFB3
+ 1534 0088 02000000 		.4byte	.LCFI6
+ 1535 008c 0200     		.2byte	0x2
+ 1536 008e 7D       		.byte	0x7d
+ 1537 008f 00       		.sleb128 0
+ 1538 0090 02000000 		.4byte	.LCFI6
+ 1539 0094 04000000 		.4byte	.LCFI7
+ 1540 0098 0200     		.2byte	0x2
+ 1541 009a 7D       		.byte	0x7d
+ 1542 009b 08       		.sleb128 8
+ 1543 009c 04000000 		.4byte	.LCFI7
+ 1544 00a0 14000000 		.4byte	.LFE3
+ 1545 00a4 0200     		.2byte	0x2
+ 1546 00a6 77       		.byte	0x77
+ 1547 00a7 08       		.sleb128 8
+ 1548 00a8 00000000 		.4byte	0
+ 1549 00ac 00000000 		.4byte	0
+ 1550              	.LLST4:
+ 1551 00b0 00000000 		.4byte	.LFB4
+ 1552 00b4 02000000 		.4byte	.LCFI8
+ 1553 00b8 0200     		.2byte	0x2
+ 1554 00ba 7D       		.byte	0x7d
+ 1555 00bb 00       		.sleb128 0
+ 1556 00bc 02000000 		.4byte	.LCFI8
+ 1557 00c0 04000000 		.4byte	.LCFI9
+ 1558 00c4 0200     		.2byte	0x2
+ 1559 00c6 7D       		.byte	0x7d
+ 1560 00c7 0C       		.sleb128 12
+ARM GAS  C:\Users\Felix\AppData\Local\Temp\ccY0WrHG.s 			page 31
+
+
+ 1561 00c8 04000000 		.4byte	.LCFI9
+ 1562 00cc 06000000 		.4byte	.LCFI10
+ 1563 00d0 0200     		.2byte	0x2
+ 1564 00d2 7D       		.byte	0x7d
+ 1565 00d3 18       		.sleb128 24
+ 1566 00d4 06000000 		.4byte	.LCFI10
+ 1567 00d8 48000000 		.4byte	.LFE4
+ 1568 00dc 0200     		.2byte	0x2
+ 1569 00de 77       		.byte	0x77
+ 1570 00df 18       		.sleb128 24
+ 1571 00e0 00000000 		.4byte	0
+ 1572 00e4 00000000 		.4byte	0
+ 1573              	.LLST5:
+ 1574 00e8 00000000 		.4byte	.LFB5
+ 1575 00ec 02000000 		.4byte	.LCFI11
+ 1576 00f0 0200     		.2byte	0x2
+ 1577 00f2 7D       		.byte	0x7d
+ 1578 00f3 00       		.sleb128 0
+ 1579 00f4 02000000 		.4byte	.LCFI11
+ 1580 00f8 04000000 		.4byte	.LCFI12
+ 1581 00fc 0200     		.2byte	0x2
+ 1582 00fe 7D       		.byte	0x7d
+ 1583 00ff 0C       		.sleb128 12
+ 1584 0100 04000000 		.4byte	.LCFI12
+ 1585 0104 06000000 		.4byte	.LCFI13
+ 1586 0108 0200     		.2byte	0x2
+ 1587 010a 7D       		.byte	0x7d
+ 1588 010b 18       		.sleb128 24
+ 1589 010c 06000000 		.4byte	.LCFI13
+ 1590 0110 50000000 		.4byte	.LFE5
+ 1591 0114 0200     		.2byte	0x2
+ 1592 0116 77       		.byte	0x77
+ 1593 0117 18       		.sleb128 24
+ 1594 0118 00000000 		.4byte	0
+ 1595 011c 00000000 		.4byte	0
+ 1596              	.LLST6:
+ 1597 0120 00000000 		.4byte	.LFB6
+ 1598 0124 02000000 		.4byte	.LCFI14
+ 1599 0128 0200     		.2byte	0x2
+ 1600 012a 7D       		.byte	0x7d
+ 1601 012b 00       		.sleb128 0
+ 1602 012c 02000000 		.4byte	.LCFI14
+ 1603 0130 04000000 		.4byte	.LCFI15
+ 1604 0134 0200     		.2byte	0x2
+ 1605 0136 7D       		.byte	0x7d
+ 1606 0137 0C       		.sleb128 12
+ 1607 0138 04000000 		.4byte	.LCFI15
+ 1608 013c 06000000 		.4byte	.LCFI16
+ 1609 0140 0200     		.2byte	0x2
+ 1610 0142 7D       		.byte	0x7d
+ 1611 0143 18       		.sleb128 24
+ 1612 0144 06000000 		.4byte	.LCFI16
+ 1613 0148 54000000 		.4byte	.LFE6
+ 1614 014c 0200     		.2byte	0x2
+ 1615 014e 77       		.byte	0x77
+ 1616 014f 18       		.sleb128 24
+ 1617 0150 00000000 		.4byte	0
+ARM GAS  C:\Users\Felix\AppData\Local\Temp\ccY0WrHG.s 			page 32
+
+
+ 1618 0154 00000000 		.4byte	0
+ 1619              	.LLST7:
+ 1620 0158 00000000 		.4byte	.LFB7
+ 1621 015c 02000000 		.4byte	.LCFI17
+ 1622 0160 0200     		.2byte	0x2
+ 1623 0162 7D       		.byte	0x7d
+ 1624 0163 00       		.sleb128 0
+ 1625 0164 02000000 		.4byte	.LCFI17
+ 1626 0168 04000000 		.4byte	.LCFI18
+ 1627 016c 0200     		.2byte	0x2
+ 1628 016e 7D       		.byte	0x7d
+ 1629 016f 08       		.sleb128 8
+ 1630 0170 04000000 		.4byte	.LCFI18
+ 1631 0174 06000000 		.4byte	.LCFI19
+ 1632 0178 0200     		.2byte	0x2
+ 1633 017a 7D       		.byte	0x7d
+ 1634 017b 10       		.sleb128 16
+ 1635 017c 06000000 		.4byte	.LCFI19
+ 1636 0180 3E000000 		.4byte	.LFE7
+ 1637 0184 0200     		.2byte	0x2
+ 1638 0186 77       		.byte	0x77
+ 1639 0187 10       		.sleb128 16
+ 1640 0188 00000000 		.4byte	0
+ 1641 018c 00000000 		.4byte	0
+ 1642              	.LLST8:
+ 1643 0190 00000000 		.4byte	.LFB8
+ 1644 0194 02000000 		.4byte	.LCFI20
+ 1645 0198 0200     		.2byte	0x2
+ 1646 019a 7D       		.byte	0x7d
+ 1647 019b 00       		.sleb128 0
+ 1648 019c 02000000 		.4byte	.LCFI20
+ 1649 01a0 04000000 		.4byte	.LCFI21
+ 1650 01a4 0200     		.2byte	0x2
+ 1651 01a6 7D       		.byte	0x7d
+ 1652 01a7 08       		.sleb128 8
+ 1653 01a8 04000000 		.4byte	.LCFI21
+ 1654 01ac 06000000 		.4byte	.LCFI22
+ 1655 01b0 0200     		.2byte	0x2
+ 1656 01b2 7D       		.byte	0x7d
+ 1657 01b3 18       		.sleb128 24
+ 1658 01b4 06000000 		.4byte	.LCFI22
+ 1659 01b8 BA000000 		.4byte	.LFE8
+ 1660 01bc 0200     		.2byte	0x2
+ 1661 01be 77       		.byte	0x77
+ 1662 01bf 18       		.sleb128 24
+ 1663 01c0 00000000 		.4byte	0
+ 1664 01c4 00000000 		.4byte	0
+ 1665              	.LLST9:
+ 1666 01c8 00000000 		.4byte	.LFB9
+ 1667 01cc 02000000 		.4byte	.LCFI23
+ 1668 01d0 0200     		.2byte	0x2
+ 1669 01d2 7D       		.byte	0x7d
+ 1670 01d3 00       		.sleb128 0
+ 1671 01d4 02000000 		.4byte	.LCFI23
+ 1672 01d8 04000000 		.4byte	.LCFI24
+ 1673 01dc 0200     		.2byte	0x2
+ 1674 01de 7D       		.byte	0x7d
+ARM GAS  C:\Users\Felix\AppData\Local\Temp\ccY0WrHG.s 			page 33
+
+
+ 1675 01df 0C       		.sleb128 12
+ 1676 01e0 04000000 		.4byte	.LCFI24
+ 1677 01e4 06000000 		.4byte	.LCFI25
+ 1678 01e8 0200     		.2byte	0x2
+ 1679 01ea 7D       		.byte	0x7d
+ 1680 01eb 20       		.sleb128 32
+ 1681 01ec 06000000 		.4byte	.LCFI25
+ 1682 01f0 F8000000 		.4byte	.LFE9
+ 1683 01f4 0200     		.2byte	0x2
+ 1684 01f6 77       		.byte	0x77
+ 1685 01f7 20       		.sleb128 32
+ 1686 01f8 00000000 		.4byte	0
+ 1687 01fc 00000000 		.4byte	0
+ 1688              	.LLST10:
+ 1689 0200 00000000 		.4byte	.LFB10
+ 1690 0204 02000000 		.4byte	.LCFI26
+ 1691 0208 0200     		.2byte	0x2
+ 1692 020a 7D       		.byte	0x7d
+ 1693 020b 00       		.sleb128 0
+ 1694 020c 02000000 		.4byte	.LCFI26
+ 1695 0210 04000000 		.4byte	.LCFI27
+ 1696 0214 0200     		.2byte	0x2
+ 1697 0216 7D       		.byte	0x7d
+ 1698 0217 08       		.sleb128 8
+ 1699 0218 04000000 		.4byte	.LCFI27
+ 1700 021c 12000000 		.4byte	.LFE10
+ 1701 0220 0200     		.2byte	0x2
+ 1702 0222 77       		.byte	0x77
+ 1703 0223 08       		.sleb128 8
+ 1704 0224 00000000 		.4byte	0
+ 1705 0228 00000000 		.4byte	0
+ 1706              	.LLST11:
+ 1707 022c 00000000 		.4byte	.LFB11
+ 1708 0230 02000000 		.4byte	.LCFI28
+ 1709 0234 0200     		.2byte	0x2
+ 1710 0236 7D       		.byte	0x7d
+ 1711 0237 00       		.sleb128 0
+ 1712 0238 02000000 		.4byte	.LCFI28
+ 1713 023c 04000000 		.4byte	.LCFI29
+ 1714 0240 0200     		.2byte	0x2
+ 1715 0242 7D       		.byte	0x7d
+ 1716 0243 08       		.sleb128 8
+ 1717 0244 04000000 		.4byte	.LCFI29
+ 1718 0248 12000000 		.4byte	.LFE11
+ 1719 024c 0200     		.2byte	0x2
+ 1720 024e 77       		.byte	0x77
+ 1721 024f 08       		.sleb128 8
+ 1722 0250 00000000 		.4byte	0
+ 1723 0254 00000000 		.4byte	0
+ 1724              	.LLST12:
+ 1725 0258 00000000 		.4byte	.LFB12
+ 1726 025c 02000000 		.4byte	.LCFI30
+ 1727 0260 0200     		.2byte	0x2
+ 1728 0262 7D       		.byte	0x7d
+ 1729 0263 00       		.sleb128 0
+ 1730 0264 02000000 		.4byte	.LCFI30
+ 1731 0268 04000000 		.4byte	.LCFI31
+ARM GAS  C:\Users\Felix\AppData\Local\Temp\ccY0WrHG.s 			page 34
+
+
+ 1732 026c 0200     		.2byte	0x2
+ 1733 026e 7D       		.byte	0x7d
+ 1734 026f 08       		.sleb128 8
+ 1735 0270 04000000 		.4byte	.LCFI31
+ 1736 0274 12000000 		.4byte	.LFE12
+ 1737 0278 0200     		.2byte	0x2
+ 1738 027a 77       		.byte	0x77
+ 1739 027b 08       		.sleb128 8
+ 1740 027c 00000000 		.4byte	0
+ 1741 0280 00000000 		.4byte	0
+ 1742              		.section	.debug_aranges,"",%progbits
+ 1743 0000 7C000000 		.4byte	0x7c
+ 1744 0004 0200     		.2byte	0x2
+ 1745 0006 00000000 		.4byte	.Ldebug_info0
+ 1746 000a 04       		.byte	0x4
+ 1747 000b 00       		.byte	0
+ 1748 000c 0000     		.2byte	0
+ 1749 000e 0000     		.2byte	0
+ 1750 0010 00000000 		.4byte	.LFB0
+ 1751 0014 2C000000 		.4byte	.LFE0-.LFB0
+ 1752 0018 00000000 		.4byte	.LFB1
+ 1753 001c 14000000 		.4byte	.LFE1-.LFB1
+ 1754 0020 00000000 		.4byte	.LFB2
+ 1755 0024 14000000 		.4byte	.LFE2-.LFB2
+ 1756 0028 00000000 		.4byte	.LFB3
+ 1757 002c 14000000 		.4byte	.LFE3-.LFB3
+ 1758 0030 00000000 		.4byte	.LFB4
+ 1759 0034 48000000 		.4byte	.LFE4-.LFB4
+ 1760 0038 00000000 		.4byte	.LFB5
+ 1761 003c 50000000 		.4byte	.LFE5-.LFB5
+ 1762 0040 00000000 		.4byte	.LFB6
+ 1763 0044 54000000 		.4byte	.LFE6-.LFB6
+ 1764 0048 00000000 		.4byte	.LFB7
+ 1765 004c 3E000000 		.4byte	.LFE7-.LFB7
+ 1766 0050 00000000 		.4byte	.LFB8
+ 1767 0054 BA000000 		.4byte	.LFE8-.LFB8
+ 1768 0058 00000000 		.4byte	.LFB9
+ 1769 005c F8000000 		.4byte	.LFE9-.LFB9
+ 1770 0060 00000000 		.4byte	.LFB10
+ 1771 0064 12000000 		.4byte	.LFE10-.LFB10
+ 1772 0068 00000000 		.4byte	.LFB11
+ 1773 006c 12000000 		.4byte	.LFE11-.LFB11
+ 1774 0070 00000000 		.4byte	.LFB12
+ 1775 0074 12000000 		.4byte	.LFE12-.LFB12
+ 1776 0078 00000000 		.4byte	0
+ 1777 007c 00000000 		.4byte	0
+ 1778              		.section	.debug_ranges,"",%progbits
+ 1779              	.Ldebug_ranges0:
+ 1780 0000 00000000 		.4byte	.LFB0
+ 1781 0004 2C000000 		.4byte	.LFE0
+ 1782 0008 00000000 		.4byte	.LFB1
+ 1783 000c 14000000 		.4byte	.LFE1
+ 1784 0010 00000000 		.4byte	.LFB2
+ 1785 0014 14000000 		.4byte	.LFE2
+ 1786 0018 00000000 		.4byte	.LFB3
+ 1787 001c 14000000 		.4byte	.LFE3
+ 1788 0020 00000000 		.4byte	.LFB4
+ARM GAS  C:\Users\Felix\AppData\Local\Temp\ccY0WrHG.s 			page 35
+
+
+ 1789 0024 48000000 		.4byte	.LFE4
+ 1790 0028 00000000 		.4byte	.LFB5
+ 1791 002c 50000000 		.4byte	.LFE5
+ 1792 0030 00000000 		.4byte	.LFB6
+ 1793 0034 54000000 		.4byte	.LFE6
+ 1794 0038 00000000 		.4byte	.LFB7
+ 1795 003c 3E000000 		.4byte	.LFE7
+ 1796 0040 00000000 		.4byte	.LFB8
+ 1797 0044 BA000000 		.4byte	.LFE8
+ 1798 0048 00000000 		.4byte	.LFB9
+ 1799 004c F8000000 		.4byte	.LFE9
+ 1800 0050 00000000 		.4byte	.LFB10
+ 1801 0054 12000000 		.4byte	.LFE10
+ 1802 0058 00000000 		.4byte	.LFB11
+ 1803 005c 12000000 		.4byte	.LFE11
+ 1804 0060 00000000 		.4byte	.LFB12
+ 1805 0064 12000000 		.4byte	.LFE12
+ 1806 0068 00000000 		.4byte	0
+ 1807 006c 00000000 		.4byte	0
+ 1808              		.section	.debug_line,"",%progbits
+ 1809              	.Ldebug_line0:
+ 1810 0000 47020000 		.section	.debug_str,"MS",%progbits,1
+ 1810      02000601 
+ 1810      00000201 
+ 1810      FB0E0D00 
+ 1810      01010101 
+ 1811              	.LASF12:
+ 1812 0000 4B45595F 		.ascii	"KEY_1\000"
+ 1812      3100
+ 1813              	.LASF27:
+ 1814 0006 42757474 		.ascii	"ButtonMatrix01_1_EventType_t\000"
+ 1814      6F6E4D61 
+ 1814      74726978 
+ 1814      30315F31 
+ 1814      5F457665 
+ 1815              	.LASF41:
+ 1816 0023 636F6C75 		.ascii	"column\000"
+ 1816      6D6E00
+ 1817              	.LASF32:
+ 1818 002a 4B45595F 		.ascii	"KEY_RELEASED\000"
+ 1818      52454C45 
+ 1818      41534544 
+ 1818      00
+ 1819              	.LASF2:
+ 1820 0037 73686F72 		.ascii	"short int\000"
+ 1820      7420696E 
+ 1820      7400
+ 1821              	.LASF46:
+ 1822 0041 73697A65 		.ascii	"sizetype\000"
+ 1822      74797065 
+ 1822      00
+ 1823              	.LASF21:
+ 1824 004a 4B45595F 		.ascii	"KEY_A\000"
+ 1824      4100
+ 1825              	.LASF26:
+ 1826 0050 42757474 		.ascii	"ButtonMatrix01_1_Key_t\000"
+ 1826      6F6E4D61 
+ARM GAS  C:\Users\Felix\AppData\Local\Temp\ccY0WrHG.s 			page 36
+
+
+ 1826      74726978 
+ 1826      30315F31 
+ 1826      5F4B6579 
+ 1827              	.LASF40:
+ 1828 0067 42757474 		.ascii	"ButtonMatrix01_1_readColumn\000"
+ 1828      6F6E4D61 
+ 1828      74726978 
+ 1828      30315F31 
+ 1828      5F726561 
+ 1829              	.LASF44:
+ 1830 0083 42757474 		.ascii	"ButtonMatrix01_1_ColumnBISR\000"
+ 1830      6F6E4D61 
+ 1830      74726978 
+ 1830      30315F31 
+ 1830      5F436F6C 
+ 1831              	.LASF24:
+ 1832 009f 4B45595F 		.ascii	"KEY_ANY\000"
+ 1832      414E5900 
+ 1833              	.LASF25:
+ 1834 00a7 75696E74 		.ascii	"uint8_t\000"
+ 1834      385F7400 
+ 1835              	.LASF9:
+ 1836 00af 666C6F61 		.ascii	"float\000"
+ 1836      7400
+ 1837              	.LASF6:
+ 1838 00b5 6C6F6E67 		.ascii	"long long int\000"
+ 1838      206C6F6E 
+ 1838      6720696E 
+ 1838      7400
+ 1839              	.LASF37:
+ 1840 00c3 42757474 		.ascii	"ButtonMatrix01_1_IsButtonPressed\000"
+ 1840      6F6E4D61 
+ 1840      74726978 
+ 1840      30315F31 
+ 1840      5F497342 
+ 1841              	.LASF39:
+ 1842 00e4 42757474 		.ascii	"ButtonMatrix01_1_GetKeyState\000"
+ 1842      6F6E4D61 
+ 1842      74726978 
+ 1842      30315F31 
+ 1842      5F476574 
+ 1843              	.LASF4:
+ 1844 0101 6C6F6E67 		.ascii	"long int\000"
+ 1844      20696E74 
+ 1844      00
+ 1845              	.LASF48:
+ 1846 010a 2E5C4765 		.ascii	".\\Generated_Source\\PSoC4\\ButtonMatrix01_1_API.c\000"
+ 1846      6E657261 
+ 1846      7465645F 
+ 1846      536F7572 
+ 1846      63655C50 
+ 1847              	.LASF47:
+ 1848 013a 474E5520 		.ascii	"GNU C 4.7.3 20130312 (release) [ARM/embedded-4_7-br"
+ 1848      4320342E 
+ 1848      372E3320 
+ 1848      32303133 
+ 1848      30333132 
+ARM GAS  C:\Users\Felix\AppData\Local\Temp\ccY0WrHG.s 			page 37
+
+
+ 1849 016d 616E6368 		.ascii	"anch revision 196615]\000"
+ 1849      20726576 
+ 1849      6973696F 
+ 1849      6E203139 
+ 1849      36363135 
+ 1850              	.LASF28:
+ 1851 0183 4B45595F 		.ascii	"KEY_PRESS\000"
+ 1851      50524553 
+ 1851      5300
+ 1852              	.LASF34:
+ 1853 018d 42757474 		.ascii	"ButtonMatrix01_1_Stop\000"
+ 1853      6F6E4D61 
+ 1853      74726978 
+ 1853      30315F31 
+ 1853      5F53746F 
+ 1854              	.LASF22:
+ 1855 01a3 4B45595F 		.ascii	"KEY_0\000"
+ 1855      3000
+ 1856              	.LASF1:
+ 1857 01a9 756E7369 		.ascii	"unsigned char\000"
+ 1857      676E6564 
+ 1857      20636861 
+ 1857      7200
+ 1858              	.LASF13:
+ 1859 01b7 4B45595F 		.ascii	"KEY_2\000"
+ 1859      3200
+ 1860              	.LASF14:
+ 1861 01bd 4B45595F 		.ascii	"KEY_3\000"
+ 1861      3300
+ 1862              	.LASF15:
+ 1863 01c3 4B45595F 		.ascii	"KEY_4\000"
+ 1863      3400
+ 1864              	.LASF16:
+ 1865 01c9 4B45595F 		.ascii	"KEY_5\000"
+ 1865      3500
+ 1866              	.LASF17:
+ 1867 01cf 4B45595F 		.ascii	"KEY_6\000"
+ 1867      3600
+ 1868              	.LASF18:
+ 1869 01d5 4B45595F 		.ascii	"KEY_7\000"
+ 1869      3700
+ 1870              	.LASF19:
+ 1871 01db 4B45595F 		.ascii	"KEY_8\000"
+ 1871      3800
+ 1872              	.LASF20:
+ 1873 01e1 4B45595F 		.ascii	"KEY_9\000"
+ 1873      3900
+ 1874              	.LASF0:
+ 1875 01e7 7369676E 		.ascii	"signed char\000"
+ 1875      65642063 
+ 1875      68617200 
+ 1876              	.LASF7:
+ 1877 01f3 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 1877      206C6F6E 
+ 1877      6720756E 
+ 1877      7369676E 
+ 1877      65642069 
+ARM GAS  C:\Users\Felix\AppData\Local\Temp\ccY0WrHG.s 			page 38
+
+
+ 1878              	.LASF8:
+ 1879 020a 756E7369 		.ascii	"unsigned int\000"
+ 1879      676E6564 
+ 1879      20696E74 
+ 1879      00
+ 1880              	.LASF36:
+ 1881 0217 42757474 		.ascii	"ButtonMatrix01_1_Disable\000"
+ 1881      6F6E4D61 
+ 1881      74726978 
+ 1881      30315F31 
+ 1881      5F446973 
+ 1882              	.LASF42:
+ 1883 0230 42757474 		.ascii	"ButtonMatrix01_1_scanForRow\000"
+ 1883      6F6E4D61 
+ 1883      74726978 
+ 1883      30315F31 
+ 1883      5F736361 
+ 1884              	.LASF23:
+ 1885 024c 4B45595F 		.ascii	"KEY_H\000"
+ 1885      4800
+ 1886              	.LASF50:
+ 1887 0252 42757474 		.ascii	"ButtonMatrix01_1_handleInterrupt\000"
+ 1887      6F6E4D61 
+ 1887      74726978 
+ 1887      30315F31 
+ 1887      5F68616E 
+ 1888              	.LASF31:
+ 1889 0273 4B45595F 		.ascii	"KEY_PRESSED\000"
+ 1889      50524553 
+ 1889      53454400 
+ 1890              	.LASF3:
+ 1891 027f 73686F72 		.ascii	"short unsigned int\000"
+ 1891      7420756E 
+ 1891      7369676E 
+ 1891      65642069 
+ 1891      6E7400
+ 1892              	.LASF49:
+ 1893 0292 433A5C55 		.ascii	"C:\\Users\\Felix\\Git Repository\\PRJ3\\Design og i"
+ 1893      73657273 
+ 1893      5C46656C 
+ 1893      69785C47 
+ 1893      69742052 
+ 1894 02c0 6D706C65 		.ascii	"mplementering\\Body SW\\BR3K\\BMTester.cydsn\000"
+ 1894      6D656E74 
+ 1894      6572696E 
+ 1894      675C426F 
+ 1894      64792053 
+ 1895              	.LASF11:
+ 1896 02ea 63686172 		.ascii	"char\000"
+ 1896      00
+ 1897              	.LASF38:
+ 1898 02ef 42757474 		.ascii	"ButtonMatrix01_1_IsButtonReleased\000"
+ 1898      6F6E4D61 
+ 1898      74726978 
+ 1898      30315F31 
+ 1898      5F497342 
+ 1899              	.LASF33:
+ARM GAS  C:\Users\Felix\AppData\Local\Temp\ccY0WrHG.s 			page 39
+
+
+ 1900 0311 42757474 		.ascii	"ButtonMatrix01_1_Start\000"
+ 1900      6F6E4D61 
+ 1900      74726978 
+ 1900      30315F31 
+ 1900      5F537461 
+ 1901              	.LASF45:
+ 1902 0328 42757474 		.ascii	"ButtonMatrix01_1_ColumnCISR\000"
+ 1902      6F6E4D61 
+ 1902      74726978 
+ 1902      30315F31 
+ 1902      5F436F6C 
+ 1903              	.LASF51:
+ 1904 0344 42757474 		.ascii	"ButtonMatrix01_1_keyStates\000"
+ 1904      6F6E4D61 
+ 1904      74726978 
+ 1904      30315F31 
+ 1904      5F6B6579 
+ 1905              	.LASF5:
+ 1906 035f 6C6F6E67 		.ascii	"long unsigned int\000"
+ 1906      20756E73 
+ 1906      69676E65 
+ 1906      6420696E 
+ 1906      7400
+ 1907              	.LASF35:
+ 1908 0371 42757474 		.ascii	"ButtonMatrix01_1_Enable\000"
+ 1908      6F6E4D61 
+ 1908      74726978 
+ 1908      30315F31 
+ 1908      5F456E61 
+ 1909              	.LASF10:
+ 1910 0389 646F7562 		.ascii	"double\000"
+ 1910      6C6500
+ 1911              	.LASF30:
+ 1912 0390 42757474 		.ascii	"ButtonMatrix01_1_KeyState_t\000"
+ 1912      6F6E4D61 
+ 1912      74726978 
+ 1912      30315F31 
+ 1912      5F4B6579 
+ 1913              	.LASF43:
+ 1914 03ac 42757474 		.ascii	"ButtonMatrix01_1_ColumnAISR\000"
+ 1914      6F6E4D61 
+ 1914      74726978 
+ 1914      30315F31 
+ 1914      5F436F6C 
+ 1915              	.LASF29:
+ 1916 03c8 4B45595F 		.ascii	"KEY_RELEASE\000"
+ 1916      52454C45 
+ 1916      41534500 
+ 1917              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.7.3 20130312 (release) [ARM/embedded-4_7-br
