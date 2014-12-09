@@ -9,10 +9,16 @@
 #include <string>
 #include <iostream>
 
-using namespace std;
-
 struct MidiSignal
 {
+	MidiSignal():	channel_('1'), 
+					command_ ('8'),
+					param1_(0),
+					param2_(0),
+					param1Old_(0),
+					param2Old_(0)
+	{}
+
 	/** ATRIBUTES USED FOR ALSA **/
 	char channel_;
 	char command_;
@@ -25,10 +31,10 @@ struct MidiSignal
 
 	void print()
 	{
-		cout<<   "     channel_ = " << hex << channel_
-			<< "\n     command_ = " << hex << command_
-			<< "\n     param1_ = "<< dec << param1_
-			<< "\n     param2_ = "<< dec << param2_ << endl;
+		std::cout<<   "     channel_ = " << std::hex << channel_
+			<< "\n     command_ = " << std::hex << command_
+			<< "\n     param1_ = "<< std::dec << param1_
+			<< "\n     param2_ = "<< std::dec << param2_ << std::endl;
 	}
 };
 

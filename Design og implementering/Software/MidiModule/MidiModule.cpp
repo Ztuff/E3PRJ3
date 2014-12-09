@@ -1,83 +1,137 @@
 #include "MidiModule.hpp"
 
-MidiModule::MidiModule(AlsaAdapter* alsaAdapter)
+void* MidiModuleThreadFunction(void* arg)
 {
-	timeout_in_milliseconds_ = 20;	//50 times per second = 20 ms
-	mute_ = 0;	
-	
-	alsaAdapter_ = alsaAdapter;
-
+	static_cast<MidiModule*>(arg)->eventDispatcher();
+	return NULL;
 }
+
+using namespace std;
+
+MidiModule::MidiModule(AlsaAdapter* alsaAdapter) 	//in test
+ : alsaAdapter_(alsaAdapter),
+   msgQ(50)
+   {}
 
 MidiModule::~MidiModule()
+{}
+
+MsgQueue* MidiModule::getMsgQueue()
 {
+	return &msgQ;
+}
+
+
+void MidiModule::start()
+{
+  int Ct = pthread_create(&threadHandle, NULL,
+  	 MidiModuleThreadFunction, this);
+  if( Ct != 0)
+  {
+    BR3K_error(Ct, "Error: Couldn't create MidiModule thread");
+  }
+}
+
+void MidiModule::join()
+{
+  int Cj = pthread_join(threadHandle, NULL);
+  if( Cj != 0)
+  {
+    BR3K_error(Cj, "Error: Couldn't join MidiModule thread");
+  }
+}
+
+void MidiModule::BR3K_error(int errorNum, std::string msg)
+{
+	std::cout << "An error has occured." << std::endl;
+	std::cout << "Error code: " << errorNum << std::endl;
+	std::cout << "Msg: " << msg << std::endl;
+}
+
+
+
+
+void MidiModule::eventDispatcher()
+{
+	 Message* msgPtr;
+	 unsigned long id;
+	 bool active = true;
+	 while(active){
+	 	msgPtr = msgQ.receive(id);
+	 	
+	 	switch(id)
+	 	{
+	 		case DATA_MSG:
+	 			handleDataMsg
+	 				(static_cast<DataMsg*>(msgPtr));
+	 			break;
+	 		case SHUTDOWN_MSG:
+	 			handleShutdownMsg();
+	 			active = false;
+	 			break;
+	 		default:
+	 			BR3K_error(-1, "MidiModule eventDispatch received unknown type.\n");
+	 			break;
+	 	}
+	 	delete msgPtr;
+	 }
+	 
+	 return;
+}
+
+void MidiModule::setPreset(list<SensorConfiguration> & sensConfList)
+{
+	/** Send stop to all MidiSignals **/
+	//stopMidiSignals();
+
 	
+	/** Initialize new preset **/
+	sensorConfList_ = sensConfList;
+	midiSignalVector_ = std::vector<MidiSignal>(sensConfList.size());
+
 }
 
-list<SensorConfiguration>::iterator MidiModule::createSensorConfList()
+void MidiModule::handleDataMsg(DataMsg* msg)
 {
-	//oprette list af sensorkonfs
-
-	//returnere iterator over denne liste
-}
-
-void MidiModule::startTimer()
-{
-	init_timer(&my_timer_); 
-	my_timer_.expires = jiffies + timeout_in_sec*HZ; 
-	my_timer_.function = timer_funct; 
-	add_timer(&my_timer_);
-}
-
-void MidiModule::timerFunct()
-{
-	my_timer_.expires = jiffies + timeout_in_milliseconds*HZ;    //Re-schedule the timer 
-	add_timer(&my_timer_);                					 	 //Add to timer queue
-	
-	wqFlag = 1;
-	wake_up_interruptible(&wq);
-}
-
-void MidiModule::handleTick(list<SensKonfiguration> myList)
-{
-	handleQueue();
-	
+	/******* Update vector<MidiSignal> jf modtaget data. *******/
 	int data = 0;
-	
-	for (list<SensKonfiguration>::iterator i = myList.begin(); i != myList.end(); ++i)	//Iterate through sensor konfigurations
+	int index = 0;
+	for (list<SensorConfiguration>::iterator i = sensorConfList_.begin(); i != sensorConfList_.end(); ++i)	//Iterate through sensor konfigurations
 	{
-		switch ((*i).accis)	//Find correct data in dataArray
+		switch ((*i).getAxis())	//Find correct data in dataArray
 		{
-			case 'x'
-				data = dataArray[(*i).ID].x;
+			case 'x':
+				data = (*msg)[(*i).getSensorID()].x;
 				break;
-			case 'y'
-				data = dataArray[(*i).ID].y;
+			case 'y':
+				data = (*msg)[(*i).getSensorID()].y;
 				break;
-			case 'z'
-				data = dataArray[(*i).ID].z;
+			case 'z':
+				data = (*msg)[(*i).getSensorID()].z;
 				break;
 			default:
-				data = dataArray[(*i).ID].x;
+				data = (*msg)[(*i).getSensorID()].x;
 				break;
 		}
 		
-		(*i).MappingScheme.map(data,(*i).(*MidiIter));		/* 	Prototype: bool map(int data, MidiSignal & signal);
+		(*i).getMScheme().map(data,midiSignalVector_[index++]);		/* 	Prototype: bool map(int data, MidiSignal & signal);
 																alder map i den givne SensKonfigurations MappingScheme
 																og giver den datapunkt jf. i SensKonfiguration indstillet sensor
-																og vectorplads jf indstillet  i SensKonfiguration indstillet vectorplads */
-																
+																og vectorplads jf indstillet  i SensKonfiguration indstillet vectorplads */															
 	}	
-
+	
+	/******* Send opdateret vector af MidiSignaler *******/
+	#ifdef DEBUG
+	midiSignalVector_[0].print();
+	#endif
+	
+	alsaAdapter_->send(midiSignalVector_);		
 }
 
-bool MidiModule::sendVector()
-{
-	//se på timer:
-	//når den proc'er så send midiSignalVector_
-	//til alsaadapter. 
+void MidiModule::handleShutdownMsg(){
+	cout << "MidiModule shutting down." << endl;
 }
 
 
-
-
+	 	
+	

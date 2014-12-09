@@ -33,8 +33,8 @@
 
 
 #define MAXREGNUM 96 //Maks antal registre at læse fra 
-#define MAXSENSDATA 66 // Maks antal som skal fyldes i array'et som sendes via BT
-#define START_SENSDATA 100 // Start byte, 
+#define MAXSENSDATA 16 // Maks antal som skal fyldes i array'et som sendes via BT
+#define START_SENSDATA 0x0F // Start byte, 
 #define DEFAULT_DATA -1 // Default data i array sættes til 0. 
 //Accelerometer ADXL345 defines
 #define ACCEL_ADDRESS 0x53 // jumperen sættes til GND 
@@ -74,6 +74,7 @@ void initADXL345();
 void initMPU6050();
 void setSensArray(int deviceAddress, int registerToRead, int dataTarget);
 void setdataArray(int ID, int x_data, int y_data, int z_data);
+void senddataArrays();
 int readI2C(int numOfReg);
 void convSensData();
 void handleI2CError();
@@ -105,7 +106,7 @@ int main()
         
         //Tjekker at data bliver samlet korrekt. 
         convSensData();
-            
+        senddataArrays();    
           
             
 		
@@ -242,38 +243,58 @@ void convSensData()
 void setdataArray(int ID, int x_data, int y_data, int z_data)
 {
     int i;
-    dataArray[0] = START_SENSDATA; //Sætter de første 5 pladser i Array'et
-    dataArray[1] = 48;//ID+1; 
-    dataArray[2] = 49;//x_data+1;
-    dataArray[3] = 50;//y_data+1;
-    dataArray[4] = 51;//z_data+1;
-    dataArray[5] = 52;
-    dataArray[6] = 53;
-    dataArray[7] = 54;
-    dataArray[8] = 55; //Sætter de første 5 pladser i Array'et
-    dataArray[9] = 56; 
-    dataArray[10] = 57;//x_data+1;
-    dataArray[11] = 58;//y_data+1;
-    dataArray[12] = 59;//z_data+1;
-    dataArray[13] = 60;
-    dataArray[14] = 61;
-    dataArray[15] = 62;
-   
-    
-    for(i = 16; i<MAXSENSDATA; i++) //Sætter de resterende pladser i array'et til 1. 
+    dataArray[0] = ID+1; 
+    dataArray[1] = x_data+1;
+    dataArray[2] = y_data+1;
+    dataArray[3] = z_data+1;
+     
+    for(i = 4; i<MAXSENSDATA; i++) //Sætter de resterende pladser i array'et til 1. 
     {
-        dataArray[i] = 48; 
+        dataArray[i] = 1; 
     }
-    dataArray[64] = 66;
-    dataArray[63] = 65;
-    dataArray[65] = 0; 
     
-    // Sender dataArray over UART vha. forløkke og PutChar
-           while(1)
-           {
-            UART_1_UartPutString(dataArray);
-            CyDelay(2000);
-           }
+}
+
+void senddataArrays()
+{
+    char accelArray[6];
+    char gyroArray[6];
+    char proxArray[6];
+    char flexArray[6];
+    // Sættter accelerometer array.
+    accelArray[0] = START_SENSDATA;
+    accelArray[1] = dataArray[0];   // ID 0
+    accelArray[2] = dataArray[1];   // x
+    accelArray[3] = dataArray[2];   // y
+    accelArray[4] = dataArray[3];   // z
+    accelArray[5] = 0; //Nul terminering 
+    //Sætter gyroskop array
+    gyroArray[0] = START_SENSDATA;
+    gyroArray[1] = 1+1;             // ID 1
+    gyroArray[2] = 1;               // x
+    gyroArray[3] = 1;               // y
+    gyroArray[4] = 1;               // z
+    gyroArray[5] = 0; //Nul terminering
+    //Sætter Proximity array
+    proxArray[0] = START_SENSDATA;
+    proxArray[1] = 2+1;             // ID 2
+    proxArray[2] = 1;               // x
+    proxArray[3] = 1;               // y
+    proxArray[4] = 1;               // z
+    proxArray[5] = 0; //Nul terminering
+    //Sætter flex array
+    flexArray[0] = START_SENSDATA;
+    flexArray[1] = 3+1;             // ID 3
+    flexArray[2] = 1;               // x
+    flexArray[3] = 1;               // y
+    flexArray[4] = 1;               // z
+    flexArray[5] = 0; //Nul terminering
+    
+    UART_1_UartPutString(accelArray);
+    UART_1_UartPutString(gyroArray);
+    UART_1_UartPutString(proxArray);
+    UART_1_UartPutString(flexArray);
+    
 }
     
 

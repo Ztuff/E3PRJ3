@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Kristian\AppData\Local\Temp\ccxO18ms.s 			page 1
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccqZVCCb.s 			page 1
 
 
    1              		.cpu cortex-m0
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Kristian\AppData\Local\Temp\ccxO18ms.s 			page 1
   30:.\Generated_Source\PSoC4/UART_1_SPI_UART_INT.c **** *  None
   31:.\Generated_Source\PSoC4/UART_1_SPI_UART_INT.c **** *
   32:.\Generated_Source\PSoC4/UART_1_SPI_UART_INT.c **** * Return:
-ARM GAS  C:\Users\Kristian\AppData\Local\Temp\ccxO18ms.s 			page 2
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccqZVCCb.s 			page 2
 
 
   33:.\Generated_Source\PSoC4/UART_1_SPI_UART_INT.c **** *  None
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Kristian\AppData\Local\Temp\ccxO18ms.s 			page 1
   67:.\Generated_Source\PSoC4/UART_1_SPI_UART_INT.c **** 
   68:.\Generated_Source\PSoC4/UART_1_SPI_UART_INT.c ****                 /* Move local head index */
   69:.\Generated_Source\PSoC4/UART_1_SPI_UART_INT.c ****                 locHead = (UART_1_rxBufferHead + 1u);
-ARM GAS  C:\Users\Kristian\AppData\Local\Temp\ccxO18ms.s 			page 3
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccqZVCCb.s 			page 3
 
 
   70:.\Generated_Source\PSoC4/UART_1_SPI_UART_INT.c **** 
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Kristian\AppData\Local\Temp\ccxO18ms.s 			page 1
  124:.\Generated_Source\PSoC4/UART_1_SPI_UART_INT.c ****                 {
  125:.\Generated_Source\PSoC4/UART_1_SPI_UART_INT.c ****                     /* TX software buffer is empty: complete transmition */
  126:.\Generated_Source\PSoC4/UART_1_SPI_UART_INT.c ****                     UART_1_DISABLE_INTR_TX(UART_1_INTR_TX_NOT_FULL);
-ARM GAS  C:\Users\Kristian\AppData\Local\Temp\ccxO18ms.s 			page 4
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccqZVCCb.s 			page 4
 
 
  127:.\Generated_Source\PSoC4/UART_1_SPI_UART_INT.c ****                     break;
@@ -212,9 +212,9 @@ ARM GAS  C:\Users\Kristian\AppData\Local\Temp\ccxO18ms.s 			page 1
   65 0006 00000000 		.4byte	.Ldebug_abbrev0
   66 000a 04       		.byte	0x4
   67 000b 01       		.uleb128 0x1
-  68 000c 7C000000 		.4byte	.LASF13
+  68 000c AA000000 		.4byte	.LASF13
   69 0010 01       		.byte	0x1
-  70 0011 3D010000 		.4byte	.LASF14
+  70 0011 6B010000 		.4byte	.LASF14
   71 0015 0E000000 		.4byte	.LASF15
   72 0019 00000000 		.4byte	.Ldebug_ranges0+0
   73 001d 00000000 		.4byte	0
@@ -223,30 +223,30 @@ ARM GAS  C:\Users\Kristian\AppData\Local\Temp\ccxO18ms.s 			page 1
   76 0029 02       		.uleb128 0x2
   77 002a 01       		.byte	0x1
   78 002b 06       		.byte	0x6
-  79 002c 31010000 		.4byte	.LASF0
+  79 002c 5F010000 		.4byte	.LASF0
   80 0030 02       		.uleb128 0x2
   81 0031 01       		.byte	0x1
   82 0032 08       		.byte	0x8
-  83 0033 EE000000 		.4byte	.LASF1
+  83 0033 1C010000 		.4byte	.LASF1
   84 0037 02       		.uleb128 0x2
   85 0038 02       		.byte	0x2
   86 0039 05       		.byte	0x5
-  87 003a 72010000 		.4byte	.LASF2
+  87 003a A0010000 		.4byte	.LASF2
   88 003e 02       		.uleb128 0x2
   89 003f 02       		.byte	0x2
   90 0040 07       		.byte	0x7
-  91 0041 1E010000 		.4byte	.LASF3
+  91 0041 4C010000 		.4byte	.LASF3
   92 0045 02       		.uleb128 0x2
   93 0046 04       		.byte	0x4
-ARM GAS  C:\Users\Kristian\AppData\Local\Temp\ccxO18ms.s 			page 5
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccqZVCCb.s 			page 5
 
 
   94 0047 05       		.byte	0x5
-  95 0048 01010000 		.4byte	.LASF4
+  95 0048 2F010000 		.4byte	.LASF4
   96 004c 02       		.uleb128 0x2
   97 004d 04       		.byte	0x4
   98 004e 07       		.byte	0x7
-  99 004f C5000000 		.4byte	.LASF5
+  99 004f F3000000 		.4byte	.LASF5
  100 0053 02       		.uleb128 0x2
  101 0054 08       		.byte	0x8
  102 0055 05       		.byte	0x5
@@ -254,7 +254,7 @@ ARM GAS  C:\Users\Kristian\AppData\Local\Temp\ccxO18ms.s 			page 1
  104 005a 02       		.uleb128 0x2
  105 005b 08       		.byte	0x8
  106 005c 07       		.byte	0x7
- 107 005d D7000000 		.4byte	.LASF7
+ 107 005d 05010000 		.4byte	.LASF7
  108 0061 03       		.uleb128 0x3
  109 0062 04       		.byte	0x4
  110 0063 05       		.byte	0x5
@@ -262,21 +262,21 @@ ARM GAS  C:\Users\Kristian\AppData\Local\Temp\ccxO18ms.s 			page 1
  112 0068 02       		.uleb128 0x2
  113 0069 04       		.byte	0x4
  114 006a 07       		.byte	0x7
- 115 006b 42000000 		.4byte	.LASF8
+ 115 006b AA010000 		.4byte	.LASF8
  116 006f 02       		.uleb128 0x2
  117 0070 04       		.byte	0x4
  118 0071 04       		.byte	0x4
- 119 0072 6C010000 		.4byte	.LASF9
+ 119 0072 9A010000 		.4byte	.LASF9
  120 0076 02       		.uleb128 0x2
  121 0077 08       		.byte	0x8
  122 0078 04       		.byte	0x4
- 123 0079 17010000 		.4byte	.LASF10
+ 123 0079 45010000 		.4byte	.LASF10
  124 007d 02       		.uleb128 0x2
  125 007e 01       		.byte	0x1
  126 007f 08       		.byte	0x8
- 127 0080 FC000000 		.4byte	.LASF11
+ 127 0080 2A010000 		.4byte	.LASF11
  128 0084 04       		.uleb128 0x4
- 129 0085 0A010000 		.4byte	.LASF16
+ 129 0085 38010000 		.4byte	.LASF16
  130 0089 02       		.byte	0x2
  131 008a 0201     		.2byte	0x102
  132 008c 90000000 		.4byte	0x90
@@ -288,22 +288,22 @@ ARM GAS  C:\Users\Kristian\AppData\Local\Temp\ccxO18ms.s 			page 1
  138 0098 02       		.uleb128 0x2
  139 0099 04       		.byte	0x4
  140 009a 07       		.byte	0x7
- 141 009b 7C010000 		.4byte	.LASF12
+ 141 009b B7010000 		.4byte	.LASF12
  142 009f 07       		.uleb128 0x7
  143 00a0 01       		.byte	0x1
- 144 00a1 68000000 		.4byte	.LASF17
+ 144 00a1 96000000 		.4byte	.LASF17
  145 00a5 01       		.byte	0x1
  146 00a6 24       		.byte	0x24
  147 00a7 01       		.byte	0x1
  148 00a8 00000000 		.4byte	.LFB0
  149 00ac 1C000000 		.4byte	.LFE0
  150 00b0 00000000 		.4byte	.LLST0
-ARM GAS  C:\Users\Kristian\AppData\Local\Temp\ccxO18ms.s 			page 6
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccqZVCCb.s 			page 6
 
 
  151 00b4 01       		.byte	0x1
  152 00b5 08       		.uleb128 0x8
- 153 00b6 4F000000 		.4byte	.LASF18
+ 153 00b6 7D000000 		.4byte	.LASF18
  154 00ba 03       		.byte	0x3
  155 00bb 37       		.byte	0x37
  156 00bc 84000000 		.4byte	0x84
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\Kristian\AppData\Local\Temp\ccxO18ms.s 			page 1
  205 002b 04       		.uleb128 0x4
  206 002c 16       		.uleb128 0x16
  207 002d 00       		.byte	0
-ARM GAS  C:\Users\Kristian\AppData\Local\Temp\ccxO18ms.s 			page 7
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccqZVCCb.s 			page 7
 
 
  208 002e 03       		.uleb128 0x3
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\Kristian\AppData\Local\Temp\ccxO18ms.s 			page 1
  262 0065 3A       		.uleb128 0x3a
  263 0066 0B       		.uleb128 0xb
  264 0067 3B       		.uleb128 0x3b
-ARM GAS  C:\Users\Kristian\AppData\Local\Temp\ccxO18ms.s 			page 8
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccqZVCCb.s 			page 8
 
 
  265 0068 0B       		.uleb128 0xb
@@ -478,108 +478,116 @@ ARM GAS  C:\Users\Kristian\AppData\Local\Temp\ccxO18ms.s 			page 1
  315      01010101 
  316              	.LASF6:
  317 0000 6C6F6E67 		.ascii	"long long int\000"
-ARM GAS  C:\Users\Kristian\AppData\Local\Temp\ccxO18ms.s 			page 9
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccqZVCCb.s 			page 9
 
 
  317      206C6F6E 
  317      6720696E 
  317      7400
  318              	.LASF15:
- 319 000e 433A5C55 		.ascii	"C:\\Users\\Kristian\\Desktop\\Body_main\\Body_main."
+ 319 000e 433A5C55 		.ascii	"C:\\Users\\Jeppe\\Documents\\Engineer\\3_Semester\\"
  319      73657273 
- 319      5C4B7269 
- 319      73746961 
- 319      6E5C4465 
- 320 003c 63796473 		.ascii	"cydsn\000"
- 320      6E00
- 321              	.LASF8:
- 322 0042 756E7369 		.ascii	"unsigned int\000"
- 322      676E6564 
- 322      20696E74 
- 322      00
- 323              	.LASF18:
- 324 004f 55415254 		.ascii	"UART_1_customIntrHandler\000"
- 324      5F315F63 
- 324      7573746F 
- 324      6D496E74 
- 324      7248616E 
- 325              	.LASF17:
- 326 0068 55415254 		.ascii	"UART_1_SPI_UART_ISR\000"
- 326      5F315F53 
- 326      50495F55 
- 326      4152545F 
- 326      49535200 
- 327              	.LASF13:
- 328 007c 474E5520 		.ascii	"GNU C 4.7.3 20130312 (release) [ARM/embedded-4_7-br"
- 328      4320342E 
- 328      372E3320 
- 328      32303133 
- 328      30333132 
- 329 00af 616E6368 		.ascii	"anch revision 196615]\000"
- 329      20726576 
- 329      6973696F 
- 329      6E203139 
- 329      36363135 
- 330              	.LASF5:
- 331 00c5 6C6F6E67 		.ascii	"long unsigned int\000"
- 331      20756E73 
- 331      69676E65 
- 331      6420696E 
- 331      7400
- 332              	.LASF7:
- 333 00d7 6C6F6E67 		.ascii	"long long unsigned int\000"
- 333      206C6F6E 
- 333      6720756E 
- 333      7369676E 
- 333      65642069 
- 334              	.LASF1:
- 335 00ee 756E7369 		.ascii	"unsigned char\000"
- 335      676E6564 
- 335      20636861 
- 335      7200
- 336              	.LASF11:
-ARM GAS  C:\Users\Kristian\AppData\Local\Temp\ccxO18ms.s 			page 10
+ 319      5C4A6570 
+ 319      70655C44 
+ 319      6F63756D 
+ 320 003b 45335052 		.ascii	"E3PRJ3\\Design og implementering\\Body SW\\Body_mai"
+ 320      4A335C44 
+ 320      65736967 
+ 320      6E206F67 
+ 320      20696D70 
+ 321 006b 6E5C426F 		.ascii	"n\\Body_main.cydsn\000"
+ 321      64795F6D 
+ 321      61696E2E 
+ 321      63796473 
+ 321      6E00
+ 322              	.LASF18:
+ 323 007d 55415254 		.ascii	"UART_1_customIntrHandler\000"
+ 323      5F315F63 
+ 323      7573746F 
+ 323      6D496E74 
+ 323      7248616E 
+ 324              	.LASF17:
+ 325 0096 55415254 		.ascii	"UART_1_SPI_UART_ISR\000"
+ 325      5F315F53 
+ 325      50495F55 
+ 325      4152545F 
+ 325      49535200 
+ 326              	.LASF13:
+ 327 00aa 474E5520 		.ascii	"GNU C 4.7.3 20130312 (release) [ARM/embedded-4_7-br"
+ 327      4320342E 
+ 327      372E3320 
+ 327      32303133 
+ 327      30333132 
+ 328 00dd 616E6368 		.ascii	"anch revision 196615]\000"
+ 328      20726576 
+ 328      6973696F 
+ 328      6E203139 
+ 328      36363135 
+ 329              	.LASF5:
+ 330 00f3 6C6F6E67 		.ascii	"long unsigned int\000"
+ 330      20756E73 
+ 330      69676E65 
+ 330      6420696E 
+ 330      7400
+ 331              	.LASF7:
+ 332 0105 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 332      206C6F6E 
+ 332      6720756E 
+ 332      7369676E 
+ 332      65642069 
+ 333              	.LASF1:
+ 334 011c 756E7369 		.ascii	"unsigned char\000"
+ 334      676E6564 
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccqZVCCb.s 			page 10
 
 
- 337 00fc 63686172 		.ascii	"char\000"
- 337      00
- 338              	.LASF4:
- 339 0101 6C6F6E67 		.ascii	"long int\000"
- 339      20696E74 
- 339      00
- 340              	.LASF16:
- 341 010a 63796973 		.ascii	"cyisraddress\000"
- 341      72616464 
- 341      72657373 
- 341      00
- 342              	.LASF10:
- 343 0117 646F7562 		.ascii	"double\000"
- 343      6C6500
- 344              	.LASF3:
- 345 011e 73686F72 		.ascii	"short unsigned int\000"
- 345      7420756E 
- 345      7369676E 
- 345      65642069 
- 345      6E7400
- 346              	.LASF0:
- 347 0131 7369676E 		.ascii	"signed char\000"
- 347      65642063 
- 347      68617200 
- 348              	.LASF14:
- 349 013d 2E5C4765 		.ascii	".\\Generated_Source\\PSoC4\\UART_1_SPI_UART_INT.c\000"
- 349      6E657261 
- 349      7465645F 
- 349      536F7572 
- 349      63655C50 
- 350              	.LASF9:
- 351 016c 666C6F61 		.ascii	"float\000"
- 351      7400
- 352              	.LASF2:
- 353 0172 73686F72 		.ascii	"short int\000"
- 353      7420696E 
- 353      7400
- 354              	.LASF12:
- 355 017c 73697A65 		.ascii	"sizetype\000"
- 355      74797065 
- 355      00
- 356              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.7.3 20130312 (release) [ARM/embedded-4_7-br
+ 334      20636861 
+ 334      7200
+ 335              	.LASF11:
+ 336 012a 63686172 		.ascii	"char\000"
+ 336      00
+ 337              	.LASF4:
+ 338 012f 6C6F6E67 		.ascii	"long int\000"
+ 338      20696E74 
+ 338      00
+ 339              	.LASF16:
+ 340 0138 63796973 		.ascii	"cyisraddress\000"
+ 340      72616464 
+ 340      72657373 
+ 340      00
+ 341              	.LASF10:
+ 342 0145 646F7562 		.ascii	"double\000"
+ 342      6C6500
+ 343              	.LASF3:
+ 344 014c 73686F72 		.ascii	"short unsigned int\000"
+ 344      7420756E 
+ 344      7369676E 
+ 344      65642069 
+ 344      6E7400
+ 345              	.LASF0:
+ 346 015f 7369676E 		.ascii	"signed char\000"
+ 346      65642063 
+ 346      68617200 
+ 347              	.LASF14:
+ 348 016b 2E5C4765 		.ascii	".\\Generated_Source\\PSoC4\\UART_1_SPI_UART_INT.c\000"
+ 348      6E657261 
+ 348      7465645F 
+ 348      536F7572 
+ 348      63655C50 
+ 349              	.LASF9:
+ 350 019a 666C6F61 		.ascii	"float\000"
+ 350      7400
+ 351              	.LASF2:
+ 352 01a0 73686F72 		.ascii	"short int\000"
+ 352      7420696E 
+ 352      7400
+ 353              	.LASF8:
+ 354 01aa 756E7369 		.ascii	"unsigned int\000"
+ 354      676E6564 
+ 354      20696E74 
+ 354      00
+ 355              	.LASF12:
+ 356 01b7 73697A65 		.ascii	"sizetype\000"
+ 356      74797065 
+ 356      00
+ 357              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.7.3 20130312 (release) [ARM/embedded-4_7-br
