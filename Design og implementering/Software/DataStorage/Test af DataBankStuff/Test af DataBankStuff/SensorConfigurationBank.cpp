@@ -212,7 +212,7 @@ void SensorConfigurationBank::save()
 		ptree myTree;
 		myTree.put("name", it->second.getName());
 		myTree.put("sensorid", it->second.getSensorID());
-		myTree.put("axis", it->second.getSensorID());
+		myTree.put("axis", it->second.getAxis());
 		MappingScheme myScheme = it->second.getMScheme();
 		myTree.put("mappingscheme", myScheme.getId());
 		SoundPack mySound = it->second.getSound();
