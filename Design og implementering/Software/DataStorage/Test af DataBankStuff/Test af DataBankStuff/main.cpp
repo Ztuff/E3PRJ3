@@ -20,7 +20,7 @@ void testSensorConfigurationBank()
 
 int main()
 {
-	//testSampleBank();
+	testSampleBank();
 	testSensorConfigurationBank();
 	DataBank db;
 	vector<string> mappingSchemes = db.getSensorIDs();

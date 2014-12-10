@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccdrhvgl.s 			page 1
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccKDN4Hq.s 			page 1
 
 
    1              		.cpu cortex-m0
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccdrhvgl.s 			page 1
   23:.\Sensor.c    **** {
   33              		.loc 1 23 0
   34              		.cfi_startproc
-ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccdrhvgl.s 			page 2
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccKDN4Hq.s 			page 2
 
 
   35 0000 80B5     		push	{r7, lr}
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccdrhvgl.s 			page 1
   80 000e 1B78     		ldrb	r3, [r3]
   81 0010 1A1C     		mov	r2, r3
   82 0012 1549     		ldr	r1, .L3+4
-ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccdrhvgl.s 			page 3
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccKDN4Hq.s 			page 3
 
 
   83 0014 131C     		mov	r3, r2
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccdrhvgl.s 			page 1
  131 0068 00000000 		.word	sensArray
  132              		.cfi_endproc
  133              	.LFE34:
-ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccdrhvgl.s 			page 4
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccKDN4Hq.s 			page 4
 
 
  134              		.size	setSensArray, .-setSensArray
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccdrhvgl.s 			page 1
   48:.\Sensor.c    **** 	}
   49:.\Sensor.c    **** 	
   50:.\Sensor.c    **** }
-ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccdrhvgl.s 			page 5
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccKDN4Hq.s 			page 5
 
 
  177              		.loc 1 50 0 is_stmt 1
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccdrhvgl.s 			page 1
  222 001a 0E33     		add	r3, r3, #14
  223 001c 1B88     		ldrh	r3, [r3]
  224 001e D318     		add	r3, r2, r3
-ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccdrhvgl.s 			page 6
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccKDN4Hq.s 			page 6
 
 
  225 0020 9AB2     		uxth	r2, r3
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccdrhvgl.s 			page 1
   72:.\Sensor.c    ****     /*char ADXL345_data[32];
   73:.\Sensor.c    ****     sprintf(ADXL345_data, "\n\rx is: %d, y is: %d, z is: %d\n\r", x, y, z);
   74:.\Sensor.c    ****     UART_1_UartPutString(ADXL345_data); */
-ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccdrhvgl.s 			page 7
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccKDN4Hq.s 			page 7
 
 
   75:.\Sensor.c    ****     
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccdrhvgl.s 			page 1
  316 00c2 1A70     		strb	r2, [r3]
   80:.\Sensor.c    ****     
   81:.\Sensor.c    ****     setdataArray(ACC1_ID, x1, y1, z1);
-ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccdrhvgl.s 			page 8
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccKDN4Hq.s 			page 8
 
 
  317              		.loc 1 81 0
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccdrhvgl.s 			page 1
  348              		.loc 1 104 0
  349              		.cfi_startproc
  350 0000 80B5     		push	{r7, lr}
-ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccdrhvgl.s 			page 9
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccKDN4Hq.s 			page 9
 
 
  351              	.LCFI11:
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccdrhvgl.s 			page 1
  398 004e 5B58     		ldr	r3, [r3, r1]
  399 0050 181C     		mov	r0, r3
  400 0052 0121     		mov	r1, #1
-ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccdrhvgl.s 			page 10
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccKDN4Hq.s 			page 10
 
 
  401 0054 FFF7FEFF 		bl	I2C_1_I2CMasterSendRestart
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccdrhvgl.s 			page 1
  444              		.thumb_func
  445              		.type	handleI2CError, %function
  446              	handleI2CError:
-ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccdrhvgl.s 			page 11
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccKDN4Hq.s 			page 11
 
 
  447              	.LFB38:
@@ -638,10 +638,10 @@ ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccdrhvgl.s 			page 1
  475 0006 00000000 		.4byte	.Ldebug_abbrev0
  476 000a 04       		.byte	0x4
  477 000b 01       		.uleb128 0x1
- 478 000c 51010000 		.4byte	.LASF26
+ 478 000c A3010000 		.4byte	.LASF26
  479 0010 01       		.byte	0x1
- 480 0011 F5000000 		.4byte	.LASF27
- 481 0015 5E000000 		.4byte	.LASF28
+ 480 0011 3F010000 		.4byte	.LASF27
+ 481 0015 1E000000 		.4byte	.LASF28
  482 0019 00000000 		.4byte	.Ldebug_ranges0+0
  483 001d 00000000 		.4byte	0
  484 0021 00000000 		.4byte	0
@@ -649,23 +649,23 @@ ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccdrhvgl.s 			page 1
  486 0029 02       		.uleb128 0x2
  487 002a 01       		.byte	0x1
  488 002b 06       		.byte	0x6
- 489 002c B4010000 		.4byte	.LASF0
+ 489 002c 06020000 		.4byte	.LASF0
  490 0030 03       		.uleb128 0x3
- 491 0031 1E000000 		.4byte	.LASF9
+ 491 0031 53010000 		.4byte	.LASF9
  492 0035 02       		.byte	0x2
  493 0036 2A       		.byte	0x2a
  494 0037 3B000000 		.4byte	0x3b
  495 003b 02       		.uleb128 0x2
  496 003c 01       		.byte	0x1
  497 003d 08       		.byte	0x8
-ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccdrhvgl.s 			page 12
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccKDN4Hq.s 			page 12
 
 
- 498 003e 50000000 		.4byte	.LASF1
+ 498 003e CB000000 		.4byte	.LASF1
  499 0042 02       		.uleb128 0x2
  500 0043 02       		.byte	0x2
  501 0044 05       		.byte	0x5
- 502 0045 38010000 		.4byte	.LASF2
+ 502 0045 8A010000 		.4byte	.LASF2
  503 0049 02       		.uleb128 0x2
  504 004a 02       		.byte	0x2
  505 004b 07       		.byte	0x7
@@ -673,19 +673,19 @@ ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccdrhvgl.s 			page 1
  507 0050 02       		.uleb128 0x2
  508 0051 04       		.byte	0x4
  509 0052 05       		.byte	0x5
- 510 0053 A2010000 		.4byte	.LASF4
+ 510 0053 F4010000 		.4byte	.LASF4
  511 0057 02       		.uleb128 0x2
  512 0058 04       		.byte	0x4
  513 0059 07       		.byte	0x7
- 514 005a 95000000 		.4byte	.LASF5
+ 514 005a DF000000 		.4byte	.LASF5
  515 005e 02       		.uleb128 0x2
  516 005f 08       		.byte	0x8
  517 0060 05       		.byte	0x5
- 518 0061 09010000 		.4byte	.LASF6
+ 518 0061 5B010000 		.4byte	.LASF6
  519 0065 02       		.uleb128 0x2
  520 0066 08       		.byte	0x8
  521 0067 07       		.byte	0x7
- 522 0068 D0000000 		.4byte	.LASF7
+ 522 0068 1A010000 		.4byte	.LASF7
  523 006c 04       		.uleb128 0x4
  524 006d 04       		.byte	0x4
  525 006e 05       		.byte	0x5
@@ -693,39 +693,39 @@ ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccdrhvgl.s 			page 1
  527 0073 02       		.uleb128 0x2
  528 0074 04       		.byte	0x4
  529 0075 07       		.byte	0x7
- 530 0076 C3000000 		.4byte	.LASF8
+ 530 0076 0D010000 		.4byte	.LASF8
  531 007a 03       		.uleb128 0x3
- 532 007b A7000000 		.4byte	.LASF10
+ 532 007b F1000000 		.4byte	.LASF10
  533 007f 03       		.byte	0x3
  534 0080 5B       		.byte	0x5b
  535 0081 3B000000 		.4byte	0x3b
  536 0085 03       		.uleb128 0x3
- 537 0086 8F000000 		.4byte	.LASF11
+ 537 0086 D9000000 		.4byte	.LASF11
  538 008a 03       		.byte	0x3
  539 008b 5F       		.byte	0x5f
  540 008c 42000000 		.4byte	0x42
  541 0090 02       		.uleb128 0x2
  542 0091 04       		.byte	0x4
  543 0092 04       		.byte	0x4
- 544 0093 3D000000 		.4byte	.LASF12
+ 544 0093 B8000000 		.4byte	.LASF12
  545 0097 02       		.uleb128 0x2
  546 0098 08       		.byte	0x8
  547 0099 04       		.byte	0x4
- 548 009a AD000000 		.4byte	.LASF13
+ 548 009a F7000000 		.4byte	.LASF13
  549 009e 02       		.uleb128 0x2
  550 009f 01       		.byte	0x1
  551 00a0 08       		.byte	0x8
- 552 00a1 17010000 		.4byte	.LASF14
+ 552 00a1 69010000 		.4byte	.LASF14
  553 00a5 02       		.uleb128 0x2
  554 00a6 04       		.byte	0x4
-ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccdrhvgl.s 			page 13
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccKDN4Hq.s 			page 13
 
 
  555 00a7 07       		.byte	0x7
- 556 00a8 00010000 		.4byte	.LASF15
+ 556 00a8 4A010000 		.4byte	.LASF15
  557 00ac 05       		.uleb128 0x5
  558 00ad 01       		.byte	0x1
- 559 00ae AB010000 		.4byte	.LASF29
+ 559 00ae FD010000 		.4byte	.LASF29
  560 00b2 01       		.byte	0x1
  561 00b3 16       		.byte	0x16
  562 00b4 01       		.byte	0x1
@@ -735,7 +735,7 @@ ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccdrhvgl.s 			page 1
  566 00c1 01       		.byte	0x1
  567 00c2 06       		.uleb128 0x6
  568 00c3 01       		.byte	0x1
- 569 00c4 1C010000 		.4byte	.LASF19
+ 569 00c4 6E010000 		.4byte	.LASF19
  570 00c8 01       		.byte	0x1
  571 00c9 1E       		.byte	0x1e
  572 00ca 01       		.byte	0x1
@@ -745,7 +745,7 @@ ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccdrhvgl.s 			page 1
  576 00d7 01       		.byte	0x1
  577 00d8 07010000 		.4byte	0x107
  578 00dc 07       		.uleb128 0x7
- 579 00dd E7000000 		.4byte	.LASF16
+ 579 00dd 31010000 		.4byte	.LASF16
  580 00e1 01       		.byte	0x1
  581 00e2 1E       		.byte	0x1e
  582 00e3 6C000000 		.4byte	0x6c
@@ -753,7 +753,7 @@ ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccdrhvgl.s 			page 1
  584 00e8 91       		.byte	0x91
  585 00e9 74       		.sleb128 -12
  586 00ea 07       		.uleb128 0x7
- 587 00eb 29010000 		.4byte	.LASF17
+ 587 00eb 7B010000 		.4byte	.LASF17
  588 00ef 01       		.byte	0x1
  589 00f0 1E       		.byte	0x1e
  590 00f1 6C000000 		.4byte	0x6c
@@ -771,20 +771,20 @@ ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccdrhvgl.s 			page 1
  602 0106 00       		.byte	0
  603 0107 08       		.uleb128 0x8
  604 0108 01       		.byte	0x1
- 605 0109 26000000 		.4byte	.LASF20
+ 605 0109 A1000000 		.4byte	.LASF20
  606 010d 01       		.byte	0x1
  607 010e 2A       		.byte	0x2a
  608 010f 01       		.byte	0x1
  609 0110 00000000 		.4byte	.LFB35
  610 0114 30000000 		.4byte	.LFE35
  611 0118 64000000 		.4byte	.LLST2
-ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccdrhvgl.s 			page 14
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccKDN4Hq.s 			page 14
 
 
  612 011c 01       		.byte	0x1
  613 011d 30010000 		.4byte	0x130
  614 0121 09       		.uleb128 0x9
- 615 0122 C0010000 		.4byte	.LASF21
+ 615 0122 12020000 		.4byte	.LASF21
  616 0126 01       		.byte	0x1
  617 0127 2C       		.byte	0x2c
  618 0128 6C000000 		.4byte	0x6c
@@ -794,7 +794,7 @@ ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccdrhvgl.s 			page 1
  622 012f 00       		.byte	0
  623 0130 0A       		.uleb128 0xa
  624 0131 01       		.byte	0x1
- 625 0132 43000000 		.4byte	.LASF30
+ 625 0132 BE000000 		.4byte	.LASF30
  626 0136 01       		.byte	0x1
  627 0137 34       		.byte	0x34
  628 0138 00000000 		.4byte	.LFB36
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccdrhvgl.s 			page 1
  666 017b 793100   		.ascii	"y1\000"
  667 017e 01       		.byte	0x1
  668 017f 38       		.byte	0x38
-ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccdrhvgl.s 			page 15
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccKDN4Hq.s 			page 15
 
 
  669 0180 3B000000 		.4byte	0x3b
@@ -856,7 +856,7 @@ ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccdrhvgl.s 			page 1
  681 0194 00       		.byte	0
  682 0195 08       		.uleb128 0x8
  683 0196 01       		.byte	0x1
- 684 0197 35000000 		.4byte	.LASF22
+ 684 0197 B0000000 		.4byte	.LASF22
  685 019b 01       		.byte	0x1
  686 019c 67       		.byte	0x67
  687 019d 01       		.byte	0x1
@@ -866,7 +866,7 @@ ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccdrhvgl.s 			page 1
  691 01aa 01       		.byte	0x1
  692 01ab CC010000 		.4byte	0x1cc
  693 01af 07       		.uleb128 0x7
- 694 01b0 C0010000 		.4byte	.LASF21
+ 694 01b0 12020000 		.4byte	.LASF21
  695 01b4 01       		.byte	0x1
  696 01b5 67       		.byte	0x67
  697 01b6 6C000000 		.4byte	0x6c
@@ -874,7 +874,7 @@ ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccdrhvgl.s 			page 1
  699 01bb 91       		.byte	0x91
  700 01bc 6C       		.sleb128 -20
  701 01bd 09       		.uleb128 0x9
- 702 01be 9A010000 		.4byte	.LASF23
+ 702 01be EC010000 		.4byte	.LASF23
  703 01c2 01       		.byte	0x1
  704 01c3 69       		.byte	0x69
  705 01c4 7A000000 		.4byte	0x7a
@@ -884,7 +884,7 @@ ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccdrhvgl.s 			page 1
  709 01cb 00       		.byte	0
  710 01cc 0C       		.uleb128 0xc
  711 01cd 01       		.byte	0x1
- 712 01ce B4000000 		.4byte	.LASF31
+ 712 01ce FE000000 		.4byte	.LASF31
  713 01d2 01       		.byte	0x1
  714 01d3 7D       		.byte	0x7d
  715 01d4 00000000 		.4byte	.LFB38
@@ -892,13 +892,13 @@ ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccdrhvgl.s 			page 1
  717 01dc 0C010000 		.4byte	.LLST5
  718 01e0 01       		.byte	0x1
  719 01e1 0D       		.uleb128 0xd
- 720 01e2 42010000 		.4byte	.LASF24
+ 720 01e2 94010000 		.4byte	.LASF24
  721 01e6 01       		.byte	0x1
  722 01e7 12       		.byte	0x12
  723 01e8 30000000 		.4byte	0x30
  724 01ec 01       		.byte	0x1
  725 01ed 05       		.byte	0x5
-ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccdrhvgl.s 			page 16
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccKDN4Hq.s 			page 16
 
 
  726 01ee 03       		.byte	0x3
@@ -914,7 +914,7 @@ ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccdrhvgl.s 			page 1
  736 0207 02       		.byte	0x2
  737 0208 00       		.byte	0
  738 0209 0D       		.uleb128 0xd
- 739 020a C9010000 		.4byte	.LASF25
+ 739 020a 1B020000 		.4byte	.LASF25
  740 020e 01       		.byte	0x1
  741 020f 13       		.byte	0x13
  742 0210 F3010000 		.4byte	0x1f3
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccdrhvgl.s 			page 1
  780 001e 00       		.byte	0
  781 001f 00       		.byte	0
  782 0020 03       		.uleb128 0x3
-ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccdrhvgl.s 			page 17
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccKDN4Hq.s 			page 17
 
 
  783 0021 16       		.uleb128 0x16
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccdrhvgl.s 			page 1
  837 0058 0B       		.uleb128 0xb
  838 0059 3B       		.uleb128 0x3b
  839 005a 0B       		.uleb128 0xb
-ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccdrhvgl.s 			page 18
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccKDN4Hq.s 			page 18
 
 
  840 005b 27       		.uleb128 0x27
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccdrhvgl.s 			page 1
  894 0093 09       		.uleb128 0x9
  895 0094 34       		.uleb128 0x34
  896 0095 00       		.byte	0
-ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccdrhvgl.s 			page 19
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccKDN4Hq.s 			page 19
 
 
  897 0096 03       		.uleb128 0x3
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccdrhvgl.s 			page 1
  951 00cd 0C       		.uleb128 0xc
  952 00ce 03       		.uleb128 0x3
  953 00cf 0E       		.uleb128 0xe
-ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccdrhvgl.s 			page 20
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccKDN4Hq.s 			page 20
 
 
  954 00d0 3A       		.uleb128 0x3a
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccdrhvgl.s 			page 1
  1008 0004 02000000 		.4byte	.LCFI0
  1009 0008 0200     		.2byte	0x2
  1010 000a 7D       		.byte	0x7d
-ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccdrhvgl.s 			page 21
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccKDN4Hq.s 			page 21
 
 
  1011 000b 00       		.sleb128 0
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccdrhvgl.s 			page 1
  1065 0090 0200     		.2byte	0x2
  1066 0092 77       		.byte	0x77
  1067 0093 10       		.sleb128 16
-ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccdrhvgl.s 			page 22
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccKDN4Hq.s 			page 22
 
 
  1068 0094 00000000 		.4byte	0
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccdrhvgl.s 			page 1
  1122 0118 02000000 		.4byte	.LCFI14
  1123 011c 04000000 		.4byte	.LCFI15
  1124 0120 0200     		.2byte	0x2
-ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccdrhvgl.s 			page 23
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccKDN4Hq.s 			page 23
 
 
  1125 0122 7D       		.byte	0x7d
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccdrhvgl.s 			page 1
  1175              	.LASF18:
  1176 0000 64617461 		.ascii	"dataTarget\000"
  1176      54617267 
-ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccdrhvgl.s 			page 24
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccKDN4Hq.s 			page 24
 
 
  1176      657400
@@ -1388,146 +1388,155 @@ ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccdrhvgl.s 			page 1
  1178      7369676E 
  1178      65642069 
  1178      6E7400
- 1179              	.LASF9:
- 1180 001e 75696E74 		.ascii	"uint8_t\000"
- 1180      385F7400 
- 1181              	.LASF20:
- 1182 0026 72656164 		.ascii	"readAllSensors\000"
- 1182      416C6C53 
- 1182      656E736F 
- 1182      727300
- 1183              	.LASF22:
- 1184 0035 72656164 		.ascii	"readI2C\000"
- 1184      49324300 
- 1185              	.LASF12:
- 1186 003d 666C6F61 		.ascii	"float\000"
- 1186      7400
- 1187              	.LASF30:
- 1188 0043 636F6E76 		.ascii	"convSensData\000"
- 1188      53656E73 
- 1188      44617461 
- 1188      00
- 1189              	.LASF1:
- 1190 0050 756E7369 		.ascii	"unsigned char\000"
- 1190      676E6564 
- 1190      20636861 
- 1190      7200
- 1191              	.LASF28:
- 1192 005e 433A5C55 		.ascii	"C:\\Users\\Jeppe\\Desktop\\Body_main\\Body_main.cyd"
- 1192      73657273 
- 1192      5C4A6570 
- 1192      70655C44 
- 1192      65736B74 
- 1193 008c 736E00   		.ascii	"sn\000"
- 1194              	.LASF11:
- 1195 008f 696E7431 		.ascii	"int16\000"
- 1195      3600
- 1196              	.LASF5:
- 1197 0095 6C6F6E67 		.ascii	"long unsigned int\000"
- 1197      20756E73 
- 1197      69676E65 
- 1197      6420696E 
- 1197      7400
- 1198              	.LASF10:
- 1199 00a7 75696E74 		.ascii	"uint8\000"
- 1199      3800
- 1200              	.LASF13:
- 1201 00ad 646F7562 		.ascii	"double\000"
- 1201      6C6500
- 1202              	.LASF31:
- 1203 00b4 68616E64 		.ascii	"handleI2CError\000"
- 1203      6C654932 
- 1203      43457272 
-ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccdrhvgl.s 			page 25
+ 1179              	.LASF28:
+ 1180 001e 433A5C55 		.ascii	"C:\\Users\\Jeppe\\Documents\\Engineer\\3_Semester\\"
+ 1180      73657273 
+ 1180      5C4A6570 
+ 1180      70655C44 
+ 1180      6F63756D 
+ 1181 004b 45335052 		.ascii	"E3PRJ3\\Design og implementering\\Body SW\\Body_mai"
+ 1181      4A335C44 
+ 1181      65736967 
+ 1181      6E206F67 
+ 1181      20696D70 
+ 1182 007b 6E5F5665 		.ascii	"n_Version_4\\Body_main\\Body_main.cydsn\000"
+ 1182      7273696F 
+ 1182      6E5F345C 
+ 1182      426F6479 
+ 1182      5F6D6169 
+ 1183              	.LASF20:
+ 1184 00a1 72656164 		.ascii	"readAllSensors\000"
+ 1184      416C6C53 
+ 1184      656E736F 
+ 1184      727300
+ 1185              	.LASF22:
+ 1186 00b0 72656164 		.ascii	"readI2C\000"
+ 1186      49324300 
+ 1187              	.LASF12:
+ 1188 00b8 666C6F61 		.ascii	"float\000"
+ 1188      7400
+ 1189              	.LASF30:
+ 1190 00be 636F6E76 		.ascii	"convSensData\000"
+ 1190      53656E73 
+ 1190      44617461 
+ 1190      00
+ 1191              	.LASF1:
+ 1192 00cb 756E7369 		.ascii	"unsigned char\000"
+ 1192      676E6564 
+ 1192      20636861 
+ 1192      7200
+ 1193              	.LASF11:
+ 1194 00d9 696E7431 		.ascii	"int16\000"
+ 1194      3600
+ 1195              	.LASF5:
+ 1196 00df 6C6F6E67 		.ascii	"long unsigned int\000"
+ 1196      20756E73 
+ 1196      69676E65 
+ 1196      6420696E 
+ 1196      7400
+ 1197              	.LASF10:
+ 1198 00f1 75696E74 		.ascii	"uint8\000"
+ 1198      3800
+ 1199              	.LASF13:
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccKDN4Hq.s 			page 25
 
 
- 1203      6F7200
- 1204              	.LASF8:
- 1205 00c3 756E7369 		.ascii	"unsigned int\000"
- 1205      676E6564 
- 1205      20696E74 
- 1205      00
- 1206              	.LASF7:
- 1207 00d0 6C6F6E67 		.ascii	"long long unsigned int\000"
- 1207      206C6F6E 
- 1207      6720756E 
- 1207      7369676E 
- 1207      65642069 
- 1208              	.LASF16:
- 1209 00e7 64657669 		.ascii	"deviceAddress\000"
- 1209      63654164 
- 1209      64726573 
- 1209      7300
- 1210              	.LASF27:
- 1211 00f5 2E5C5365 		.ascii	".\\Sensor.c\000"
- 1211      6E736F72 
- 1211      2E6300
- 1212              	.LASF15:
- 1213 0100 73697A65 		.ascii	"sizetype\000"
- 1213      74797065 
- 1213      00
- 1214              	.LASF6:
- 1215 0109 6C6F6E67 		.ascii	"long long int\000"
- 1215      206C6F6E 
- 1215      6720696E 
- 1215      7400
- 1216              	.LASF14:
- 1217 0117 63686172 		.ascii	"char\000"
- 1217      00
- 1218              	.LASF19:
- 1219 011c 73657453 		.ascii	"setSensArray\000"
- 1219      656E7341 
- 1219      72726179 
- 1219      00
- 1220              	.LASF17:
- 1221 0129 72656769 		.ascii	"registerToRead\000"
- 1221      73746572 
- 1221      546F5265 
- 1221      616400
- 1222              	.LASF2:
- 1223 0138 73686F72 		.ascii	"short int\000"
- 1223      7420696E 
- 1223      7400
- 1224              	.LASF24:
- 1225 0142 6E756D4F 		.ascii	"numOfRegToRead\000"
- 1225      66526567 
- 1225      546F5265 
- 1225      616400
- 1226              	.LASF26:
- 1227 0151 474E5520 		.ascii	"GNU C 4.7.3 20130312 (release) [ARM/embedded-4_7-br"
- 1227      4320342E 
- 1227      372E3320 
- 1227      32303133 
-ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccdrhvgl.s 			page 26
+ 1200 00f7 646F7562 		.ascii	"double\000"
+ 1200      6C6500
+ 1201              	.LASF31:
+ 1202 00fe 68616E64 		.ascii	"handleI2CError\000"
+ 1202      6C654932 
+ 1202      43457272 
+ 1202      6F7200
+ 1203              	.LASF8:
+ 1204 010d 756E7369 		.ascii	"unsigned int\000"
+ 1204      676E6564 
+ 1204      20696E74 
+ 1204      00
+ 1205              	.LASF7:
+ 1206 011a 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 1206      206C6F6E 
+ 1206      6720756E 
+ 1206      7369676E 
+ 1206      65642069 
+ 1207              	.LASF16:
+ 1208 0131 64657669 		.ascii	"deviceAddress\000"
+ 1208      63654164 
+ 1208      64726573 
+ 1208      7300
+ 1209              	.LASF27:
+ 1210 013f 2E5C5365 		.ascii	".\\Sensor.c\000"
+ 1210      6E736F72 
+ 1210      2E6300
+ 1211              	.LASF15:
+ 1212 014a 73697A65 		.ascii	"sizetype\000"
+ 1212      74797065 
+ 1212      00
+ 1213              	.LASF9:
+ 1214 0153 75696E74 		.ascii	"uint8_t\000"
+ 1214      385F7400 
+ 1215              	.LASF6:
+ 1216 015b 6C6F6E67 		.ascii	"long long int\000"
+ 1216      206C6F6E 
+ 1216      6720696E 
+ 1216      7400
+ 1217              	.LASF14:
+ 1218 0169 63686172 		.ascii	"char\000"
+ 1218      00
+ 1219              	.LASF19:
+ 1220 016e 73657453 		.ascii	"setSensArray\000"
+ 1220      656E7341 
+ 1220      72726179 
+ 1220      00
+ 1221              	.LASF17:
+ 1222 017b 72656769 		.ascii	"registerToRead\000"
+ 1222      73746572 
+ 1222      546F5265 
+ 1222      616400
+ 1223              	.LASF2:
+ 1224 018a 73686F72 		.ascii	"short int\000"
+ 1224      7420696E 
+ 1224      7400
+ 1225              	.LASF24:
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccKDN4Hq.s 			page 26
 
 
- 1227      30333132 
- 1228 0184 616E6368 		.ascii	"anch revision 196615]\000"
- 1228      20726576 
- 1228      6973696F 
- 1228      6E203139 
- 1228      36363135 
- 1229              	.LASF23:
- 1230 019a 72617744 		.ascii	"rawData\000"
- 1230      61746100 
- 1231              	.LASF4:
- 1232 01a2 6C6F6E67 		.ascii	"long int\000"
- 1232      20696E74 
- 1232      00
- 1233              	.LASF29:
- 1234 01ab 73657475 		.ascii	"setupI2C\000"
- 1234      70493243 
- 1234      00
- 1235              	.LASF0:
- 1236 01b4 7369676E 		.ascii	"signed char\000"
- 1236      65642063 
- 1236      68617200 
- 1237              	.LASF21:
- 1238 01c0 6E756D4F 		.ascii	"numOfReg\000"
- 1238      66526567 
- 1238      00
- 1239              	.LASF25:
- 1240 01c9 73656E73 		.ascii	"sensArray\000"
- 1240      41727261 
- 1240      7900
- 1241              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.7.3 20130312 (release) [ARM/embedded-4_7-br
+ 1226 0194 6E756D4F 		.ascii	"numOfRegToRead\000"
+ 1226      66526567 
+ 1226      546F5265 
+ 1226      616400
+ 1227              	.LASF26:
+ 1228 01a3 474E5520 		.ascii	"GNU C 4.7.3 20130312 (release) [ARM/embedded-4_7-br"
+ 1228      4320342E 
+ 1228      372E3320 
+ 1228      32303133 
+ 1228      30333132 
+ 1229 01d6 616E6368 		.ascii	"anch revision 196615]\000"
+ 1229      20726576 
+ 1229      6973696F 
+ 1229      6E203139 
+ 1229      36363135 
+ 1230              	.LASF23:
+ 1231 01ec 72617744 		.ascii	"rawData\000"
+ 1231      61746100 
+ 1232              	.LASF4:
+ 1233 01f4 6C6F6E67 		.ascii	"long int\000"
+ 1233      20696E74 
+ 1233      00
+ 1234              	.LASF29:
+ 1235 01fd 73657475 		.ascii	"setupI2C\000"
+ 1235      70493243 
+ 1235      00
+ 1236              	.LASF0:
+ 1237 0206 7369676E 		.ascii	"signed char\000"
+ 1237      65642063 
+ 1237      68617200 
+ 1238              	.LASF21:
+ 1239 0212 6E756D4F 		.ascii	"numOfReg\000"
+ 1239      66526567 
+ 1239      00
+ 1240              	.LASF25:
+ 1241 021b 73656E73 		.ascii	"sensArray\000"
+ 1241      41727261 
+ 1241      7900
+ 1242              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.7.3 20130312 (release) [ARM/embedded-4_7-br

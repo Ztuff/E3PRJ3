@@ -21,18 +21,14 @@ struct Velocity
 {
 	int lowerThreshold_;			//value from 0 to 127
 };
-struct ContControl
+struct ControlChange
 {
 	int cNum_;						//0-127
 	int minVal_;					//0-127
 	int maxVal_;					//0-127
 	int speed_;						//strategies: SLOW, MEDIUM, FAST, egt 1,2,3
 };
-struct CCRel						/**** dataIn is Rel CC change with 0-point at 64 ****/
-{
-	int cNum_;						//0-127
-	
-};
+
 
 class MappingScheme	//KODEN KAN EVT EFFEKTIVISERES VED AT BRUGE DEFINES I STEDET FOR STRINGS I KEY
 {
@@ -65,7 +61,7 @@ private:
 	std::string param_;
 	Key key_;
 	Velocity velocity_;
-	ContControl CC_;
+	ControlChange CC_;
 	int channel_;
 };
 

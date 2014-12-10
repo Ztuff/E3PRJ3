@@ -105,7 +105,40 @@
 <v>Body_main\Body_main\Generated_Source\PSoC4\cymetadata.c</v>
 <v>Body_main\Body_main\Generated_Source\PSoC4\project.h</v>
 </ExpandedNodeIds>
-<VisibleNodeIds />
+<VisibleNodeIds>
+<v>Body_main</v>
+<v>Body_main\Body_main</v>
+<v>Body_main\Body_main\TopDesign.cysch</v>
+<v>Body_main\Body_main\Body_main.cydwr</v>
+<v>Body_main\Body_main\Header Files</v>
+<v>Body_main\Body_main\Header Files\BTUART.h</v>
+<v>Body_main\Body_main\Header Files\Sensor.h</v>
+<v>Body_main\Body_main\Source Files</v>
+<v>Body_main\Body_main\Source Files\BTUART.c</v>
+<v>Body_main\Body_main\Source Files\main.c</v>
+<v>Body_main\Body_main\Source Files\Sensor.c</v>
+<v>Body_main\Body_main\Generated_Source</v>
+<v>Body_main\Body_main\Generated_Source\PSoC4</v>
+<v>Body_main\Body_main\Generated_Source\PSoC4\cy_boot</v>
+<v>Body_main\Body_main\Generated_Source\PSoC4\cy_boot\cm0gcc.ld</v>
+<v>Body_main\Body_main\Generated_Source\PSoC4\cy_boot\Cm0Iar.icf</v>
+<v>Body_main\Body_main\Generated_Source\PSoC4\cy_boot\Cm0RealView.scat</v>
+<v>Body_main\Body_main\Generated_Source\PSoC4\cy_boot\Cm0Start.c</v>
+<v>Body_main\Body_main\Generated_Source\PSoC4\cy_boot\core_cm0.h</v>
+<v>Body_main\Body_main\Generated_Source\PSoC4\cy_boot\core_cm0_psoc4.h</v>
+<v>Body_main\Body_main\Generated_Source\PSoC4\cy_boot\core_cmFunc.h</v>
+<v>Body_main\Body_main\Generated_Source\PSoC4\cy_boot\core_cmInstr.h</v>
+<v>Body_main\Body_main\Generated_Source\PSoC4\cy_boot\CyBootAsmGnu.s</v>
+<v>Body_main\Body_main\Generated_Source\PSoC4\cy_boot\CyBootAsmIar.s</v>
+<v>Body_main\Body_main\Generated_Source\PSoC4\cy_boot\CyBootAsmRv.s</v>
+<v>Body_main\Body_main\Generated_Source\PSoC4\cy_boot\CyFlash.c</v>
+<v>Body_main\Body_main\Generated_Source\PSoC4\cy_boot\CyFlash.h</v>
+<v>Body_main\Body_main\Generated_Source\PSoC4\cy_boot\CyLib.c</v>
+<v>Body_main\Body_main\Generated_Source\PSoC4\cy_boot\CyLib.h</v>
+<v>Body_main\Body_main\Generated_Source\PSoC4\cy_boot\cypins.h</v>
+<v>Body_main\Body_main\Generated_Source\PSoC4\cy_boot\cyPm.c</v>
+<v>Body_main\Body_main\Generated_Source\PSoC4\cy_boot\cyPm.h</v>
+</VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 <CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
 <ExpandedNodeIds>
@@ -114,7 +147,12 @@
 <v>Body_main\Body_main\TopDesign</v>
 <v>Body_main\Body_main\TopDesign\TopDesign.cysch</v>
 </ExpandedNodeIds>
-<VisibleNodeIds />
+<VisibleNodeIds>
+<v>Body_main</v>
+<v>Body_main\Body_main</v>
+<v>Body_main\Body_main\TopDesign</v>
+<v>Body_main\Body_main\TopDesign\TopDesign.cysch</v>
+</VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 <CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
 <ExpandedNodeIds>
@@ -159,7 +197,40 @@
 <v>Body_main\Body_main\Body_main.rpt</v>
 <v>Body_main\Body_main\Body_main_timing.html</v>
 </ExpandedNodeIds>
-<VisibleNodeIds />
+<VisibleNodeIds>
+<v>Body_main</v>
+<v>Body_main\Body_main</v>
+<v>Body_main\Body_main\CortexM0</v>
+<v>Body_main\Body_main\CortexM0\ARM_GCC_473</v>
+<v>Body_main\Body_main\CortexM0\ARM_GCC_473\Debug</v>
+<v>Body_main\Body_main\CortexM0\ARM_GCC_473\Debug\Listing Files</v>
+<v>Body_main\Body_main\CortexM0\ARM_GCC_473\Debug\Listing Files\BTUART.lst</v>
+<v>Body_main\Body_main\CortexM0\ARM_GCC_473\Debug\Listing Files\Cm0Start.lst</v>
+<v>Body_main\Body_main\CortexM0\ARM_GCC_473\Debug\Listing Files\CyBootAsmGnu.lst</v>
+<v>Body_main\Body_main\CortexM0\ARM_GCC_473\Debug\Listing Files\cyfitter_cfg.lst</v>
+<v>Body_main\Body_main\CortexM0\ARM_GCC_473\Debug\Listing Files\CyFlash.lst</v>
+<v>Body_main\Body_main\CortexM0\ARM_GCC_473\Debug\Listing Files\CyLib.lst</v>
+<v>Body_main\Body_main\CortexM0\ARM_GCC_473\Debug\Listing Files\cymetadata.lst</v>
+<v>Body_main\Body_main\CortexM0\ARM_GCC_473\Debug\Listing Files\cyPm.lst</v>
+<v>Body_main\Body_main\CortexM0\ARM_GCC_473\Debug\Listing Files\cyutils.lst</v>
+<v>Body_main\Body_main\CortexM0\ARM_GCC_473\Debug\Listing Files\I2C_1.lst</v>
+<v>Body_main\Body_main\CortexM0\ARM_GCC_473\Debug\Listing Files\I2C_1_BOOT.lst</v>
+<v>Body_main\Body_main\CortexM0\ARM_GCC_473\Debug\Listing Files\I2C_1_I2C.lst</v>
+<v>Body_main\Body_main\CortexM0\ARM_GCC_473\Debug\Listing Files\I2C_1_I2C_BOOT.lst</v>
+<v>Body_main\Body_main\CortexM0\ARM_GCC_473\Debug\Listing Files\I2C_1_I2C_INT.lst</v>
+<v>Body_main\Body_main\CortexM0\ARM_GCC_473\Debug\Listing Files\I2C_1_I2C_MASTER.lst</v>
+<v>Body_main\Body_main\CortexM0\ARM_GCC_473\Debug\Listing Files\I2C_1_PM.lst</v>
+<v>Body_main\Body_main\CortexM0\ARM_GCC_473\Debug\Listing Files\I2C_1_scl.lst</v>
+<v>Body_main\Body_main\CortexM0\ARM_GCC_473\Debug\Listing Files\I2C_1_sda.lst</v>
+<v>Body_main\Body_main\CortexM0\ARM_GCC_473\Debug\Listing Files\main.lst</v>
+<v>Body_main\Body_main\CortexM0\ARM_GCC_473\Debug\Listing Files\Sensor.lst</v>
+<v>Body_main\Body_main\CortexM0\ARM_GCC_473\Debug\Listing Files\UART_1.lst</v>
+<v>Body_main\Body_main\CortexM0\ARM_GCC_473\Debug\Listing Files\UART_1_BOOT.lst</v>
+<v>Body_main\Body_main\CortexM0\ARM_GCC_473\Debug\Listing Files\UART_1_PM.lst</v>
+<v>Body_main\Body_main\CortexM0\ARM_GCC_473\Debug\Listing Files\UART_1_rx.lst</v>
+<v>Body_main\Body_main\CortexM0\ARM_GCC_473\Debug\Listing Files\UART_1_SPI_UART.lst</v>
+<v>Body_main\Body_main\CortexM0\ARM_GCC_473\Debug\Listing Files\UART_1_SPI_UART_INT.lst</v>
+</VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 </TreeStates>
 <TreeKeysV2>
@@ -175,7 +246,14 @@
 <v>Body_main\Body_main\System Reference Guide v4_11</v>
 <v>Body_main\Body_main\SCB_P4_v1_20</v>
 </ExpandedNodeIds>
-<VisibleNodeIds />
+<VisibleNodeIds>
+<v>Body_main</v>
+<v>Body_main\Body_main</v>
+<v>Body_main\Body_main\PSoC 4 Architecture TRM</v>
+<v>Body_main\Body_main\PSoC 4200 Family Datasheet</v>
+<v>Body_main\Body_main\System Reference Guide v4_11</v>
+<v>Body_main\Body_main\SCB_P4_v1_20</v>
+</VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 </TreeStatesV2>
 </CyGuid_1b906a0f-a7b6-4e4d-a428-82f98b53cb35>

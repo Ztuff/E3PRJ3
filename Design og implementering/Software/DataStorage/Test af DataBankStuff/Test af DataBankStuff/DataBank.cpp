@@ -26,6 +26,11 @@ void DataBank::saveSensorConf(SensorConfiguration sensorConf)
 	cbank_.add(sensorConf);
 }
 
+void DataBank::editSensorConf(SensorConfiguration sensorConf)
+{
+	cbank_.edit(sensorConf);
+}
+
 void DataBank::removeSensorConf(SensorConfiguration sensorConf)
 {
 	cbank_.removeSensorConf(sensorConf.getName());
