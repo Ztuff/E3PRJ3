@@ -17,11 +17,15 @@ NySensorKonf::NySensorKonf(QWidget *parent) :
     ui->setupUi(this);
     this->setWindowState(Qt::WindowFullScreen);
 
+    QStringList akser;
+    QStringList sensorer;
     QStringList test;
-    test << "hej" << "farvel" << "MAthias lugter";
-    ui->Sensordropdown->addItems(test);
+    sensorer << "Accelerometer" << "Gyroskop";
+    akser << "x" << "y" << "z";
+    test << "sads" << "sadsa";
+    ui->Sensordropdown->addItems(sensorer);
     ui->MappingschemeDropdown->addItems(test);
-    ui->MidiParameterDropdown->addItems(test);
+    ui->AkseDropdown->addItems(akser);
     ui->LydpakkeDropdown->addItems(test);
 }
 
@@ -41,11 +45,11 @@ void NySensorKonf::on_saveButton_clicked()
 {
     QString sensorvalg = ui->Sensordropdown->currentText();
     QString MSchemeValg = ui->MappingschemeDropdown->currentText();
-    QString MParameterValg = ui->MidiParameterDropdown->currentText();
+    QString AkseValg = ui->AkseDropdown->currentText();
     QString LydpakkeValg = ui->LydpakkeDropdown->currentText();
     QStringList SensorKonf;
-    SensorKonf << sensorvalg << MSchemeValg << MParameterValg <<LydpakkeValg;
+    //SensorKonf << sensorvalg << MSchemeValg << MParameterValg <<LydpakkeValg;
 
-    qDebug() << SensorKonf() ;
+    //qDebug() << SensorKonf() ;
     //QMessageBox::information(this, "title", SensorKonf);
 }

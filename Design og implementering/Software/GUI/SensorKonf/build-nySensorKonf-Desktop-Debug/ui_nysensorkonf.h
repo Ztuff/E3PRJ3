@@ -32,7 +32,7 @@ public:
     QLabel *label_4;
     QLabel *label_5;
     QComboBox *Sensordropdown;
-    QComboBox *MidiParameterDropdown;
+    QComboBox *AkseDropdown;
     QPushButton *saveButton;
     QLineEdit *SensorName;
     QPushButton *backButton;
@@ -65,9 +65,9 @@ public:
         Sensordropdown = new QComboBox(NySensorKonf);
         Sensordropdown->setObjectName(QString::fromUtf8("Sensordropdown"));
         Sensordropdown->setGeometry(QRect(20, 92, 211, 21));
-        MidiParameterDropdown = new QComboBox(NySensorKonf);
-        MidiParameterDropdown->setObjectName(QString::fromUtf8("MidiParameterDropdown"));
-        MidiParameterDropdown->setGeometry(QRect(240, 90, 211, 23));
+        AkseDropdown = new QComboBox(NySensorKonf);
+        AkseDropdown->setObjectName(QString::fromUtf8("AkseDropdown"));
+        AkseDropdown->setGeometry(QRect(240, 90, 211, 23));
         saveButton = new QPushButton(NySensorKonf);
         saveButton->setObjectName(QString::fromUtf8("saveButton"));
         saveButton->setGeometry(QRect(410, 240, 61, 23));
@@ -93,7 +93,7 @@ public:
     {
         NySensorKonf->setWindowTitle(QApplication::translate("NySensorKonf", "Form", 0, QApplication::UnicodeUTF8));
         label->setText(QApplication::translate("NySensorKonf", "Sensor", 0, QApplication::UnicodeUTF8));
-        label_2->setText(QApplication::translate("NySensorKonf", "MIDI-Parameter", 0, QApplication::UnicodeUTF8));
+        label_2->setText(QApplication::translate("NySensorKonf", "Akse", 0, QApplication::UnicodeUTF8));
         label_3->setText(QApplication::translate("NySensorKonf", "Mapping Scheme", 0, QApplication::UnicodeUTF8));
         label_4->setText(QApplication::translate("NySensorKonf", "Lydpakke", 0, QApplication::UnicodeUTF8));
         label_5->setText(QApplication::translate("NySensorKonf", "Ny Sensorkonfiguration", 0, QApplication::UnicodeUTF8));

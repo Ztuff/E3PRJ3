@@ -36,7 +36,7 @@
     </rect>
    </property>
    <property name="text">
-    <string>MIDI-Parameter</string>
+    <string>Akse</string>
    </property>
   </widget>
   <widget class="QComboBox" name="MappingschemeDropdown">
@@ -98,7 +98,7 @@
     </rect>
    </property>
   </widget>
-  <widget class="QComboBox" name="MidiParameterDropdown">
+  <widget class="QComboBox" name="AkseDropdown">
    <property name="geometry">
     <rect>
      <x>240</x>
