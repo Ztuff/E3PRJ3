@@ -4,21 +4,21 @@
 		<configuration>
 			<name>SensorConfiguration1</name>
 			<sensorid>1</sensorid>
-			<axis>1</axis>
+			<axis>z</axis>
 			<mappingscheme>mappingscheme1</mappingscheme>
 			<soundpack>test1.wav</soundpack>
 		</configuration>
 		<configuration>
 			<name>SensorConfiguration2</name>
 			<sensorid>2</sensorid>
-			<axis>2</axis>
+			<axis>y</axis>
 			<mappingscheme>mappingscheme1</mappingscheme>
 			<soundpack>test2.wav</soundpack>
 		</configuration>
 		<configuration>
 			<name>SensorConfiguration3</name>
 			<sensorid>3</sensorid>
-			<axis>3</axis>
+			<axis>x</axis>
 			<mappingscheme>mappingscheme2</mappingscheme>
 			<soundpack>test3.wav</soundpack>
 		</configuration>

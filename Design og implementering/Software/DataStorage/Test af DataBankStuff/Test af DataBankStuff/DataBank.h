@@ -10,6 +10,7 @@ public:
 	std::vector<std::string>		getSoundPacks();
 
 	void saveSensorConf(SensorConfiguration sensorConf); //tilføjer sensorkonf til banken og derefter gemmer banken selv
+	void editSensorConf(SensorConfiguration sensorConf);
 	void removeSensorConf(SensorConfiguration sensorConf);
 	void saveSample(SoundPack sound);
 	void removeSample(SoundPack sound);

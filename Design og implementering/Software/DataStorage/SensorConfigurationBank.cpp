@@ -50,7 +50,6 @@ SensorConfigurationBank::SensorConfigurationBank()
 			sensorConfigurations_.insert(make_pair(newSensorConf.getName(), newSensorConf));
 		}
 	}
-	save();
 }
 
 vector<string> SensorConfigurationBank::getMappingSchemes()
