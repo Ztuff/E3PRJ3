@@ -10,8 +10,6 @@ int main()
 	mySig.command_ = '8';
 	mySig.param1_ = 0;
 	mySig.param2_ = 0;
-	mySig.param1Old_ = 0;
-	mySig.param2Old_ = 0;
 
 	mySig.print();
 

@@ -14,9 +14,7 @@ struct MidiSignal
 	MidiSignal():	channel_('1'), 
 					command_ ('8'),
 					param1_(0),
-					param2_(0),
-					param1Old_(0),
-					param2Old_(0)
+					param2_(0)
 	{}
 
 	/** ATRIBUTES USED FOR ALSA **/
@@ -25,16 +23,12 @@ struct MidiSignal
 	int param1_;
 	int param2_;
 
-	/** UTILITY ATRIBUTES **/
-	int param1Old_;
-	int param2Old_;
-
 	void print()
 	{
-		std::cout<<   "     channel_ = " << std::hex << channel_
-			<< "\n     command_ = " << std::hex << command_
-			<< "\n     param1_ = "<< std::dec << param1_
-			<< "\n     param2_ = "<< std::dec << param2_ << std::endl;
+		std::cout<<  "     channel_ = " << std::hex << channel_
+				<< "\n     command_ = " << std::hex << command_
+				<< "\n     param1_ = "<< std::dec << param1_
+				<< "\n     param2_ = "<< std::dec << param2_ << std::endl;
 	}
 };
 
