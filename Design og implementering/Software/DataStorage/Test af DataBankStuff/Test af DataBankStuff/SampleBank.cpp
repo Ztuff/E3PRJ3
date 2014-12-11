@@ -82,4 +82,3 @@ void SampleBank::save()
 	boost::property_tree::xml_writer_settings<std::string> settings('\t', 1);
 	write_xml("SampleBank.xml", pt, std::locale(), settings); //Sletter den gamle fil og laver en helt ny, i princippet.
 }
-
