@@ -95,8 +95,7 @@ vector<MidiSignal>::iterator MidiSignalVectorAdd(vector<MidiSignal> &vec, int nu
 		vec[i].command_=NOTEOFF;
 		vec[i].param1_=0;
 		vec[i].param2_=0;
-		vec[i].param1Old_=0;
-		vec[i].param2Old_=0;
+		
 	}
 	
 	return vec.end();
