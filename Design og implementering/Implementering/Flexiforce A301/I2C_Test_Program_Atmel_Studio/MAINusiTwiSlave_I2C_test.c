@@ -1,4 +1,22 @@
-
+//========================================================================
+// FILENAME : MAINusiTwiSlave_I2C_test.c
+// CREATED : 30-11-2014
+// AUTHOR  : Jeppe Hofni
+// DESCR.  : c file for ATtiny26P
+//
+//------------------------------------------------------------------------
+//
+// REV.  DATE/AUTHOR  CHANGE DESCRIPTION
+// 0.1  30-11-2014 - Jeppe - First writeup of main.
+// 0.2	06-12-2014 - Jeppe - Sorted main function
+// 0.3	10-12-2014 - Jeppe - Made in to test version from orginal MainusiTwiSlave
+//------------------------------------------------------------------------
+// KNOWN ISSUES:
+// REV. - ISSUE(S)
+// 0.1 - Needs to be sorted proper
+// 0.2 - Needs ISR and full implementation of functions
+// 0.3 - Needs ADC and pointer receiving funktion
+//========================================================================
 
 
 #define F_CPU 8000000UL	      // Sets up the default speed for delay.h
