@@ -1,7 +1,6 @@
 #pragma once
 
 #include "MsgHandler.hpp"
-#include "Controller.h"
 
 using namespace std;
 
