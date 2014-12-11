@@ -47,13 +47,13 @@ int main(void)
 	while(1)
 	{
 				
-		while(!usiTwiReceiveByte());		// Wait for master
+		while(!usiTwiDataInReceiveBuffer());		// Wait for master
 		usiTwiTransmitByte(adcArray[0]);	// Send sensor ID
 		
-		while(!usiTwiReceiveByte());		// Wait for master
+		while(!usiTwiDataInReceiveBuffer());		// Wait for master
 		usiTwiTransmitByte(adcArray[1]);	// Send low part of sensordata
 	
-		while(!usiTwiReceiveByte());		// Wait for master
+		while(!usiTwiDataInReceiveBuffer());		// Wait for master
 		usiTwiTransmitByte(adcArray[2]);	// Send high part of sensordata
 		
 	}

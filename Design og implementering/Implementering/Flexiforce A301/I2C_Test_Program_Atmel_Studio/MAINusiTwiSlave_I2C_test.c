@@ -31,13 +31,13 @@ int main(void)
 	while(1)
 	{
 				
-		while(!usiTwiReceiveByte());
+		while(!usiTwiDataInReceiveBuffer());
 		usiTwiTransmitByte(registers[0];
 		
-		while(!usiTwiReceiveByte());
+		while(!usiTwiDataInReceiveBuffer());
 		usiTwiTransmitByte(registers[1];
 	
-		while(!usiTwiReceiveByte());
+		while(!usiTwiDataInReceiveBuffer());
 		usiTwiTransmitByte(registers[2];
 		
 	}
