@@ -38,9 +38,9 @@
 void setupI2C(void);
 void setSensArray(int deviceAddress, int registerToRead, int dataTarget);
 void readAllSensors(void);
-void convSensData();
+void convSensData(void);
 void readI2C(int numOfReg);
-void handleI2CError();
+void handleI2CError(void);
 
 
 

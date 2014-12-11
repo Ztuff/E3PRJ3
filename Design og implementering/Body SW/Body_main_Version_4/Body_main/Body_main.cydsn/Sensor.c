@@ -49,7 +49,7 @@ void readAllSensors()
 	
 }
 
-void convSensData()
+void convSensData(void)
 {
     //ADXL345
     int16 x, y, z; // Da det er to 8 bit registre som skal lægges sammen
@@ -69,9 +69,7 @@ void convSensData()
    
     
    
-    /*char ADXL345_data[32];
-    sprintf(ADXL345_data, "\n\rx is: %d, y is: %d, z is: %d\n\r", x, y, z);
-    UART_1_UartPutString(ADXL345_data); */
+ 
     
     //conversion from int16 to uint8 which is the scale midi can receive
     x1 = (x+512)/8; 
@@ -80,22 +78,7 @@ void convSensData()
     
     setdataArray(ACC1_ID, x1, y1, z1);
     
-        /*
-        // Skal slettes
-        // Tester med UART at array'et bliver fyldt rigtig 
-        UART_1_UartPutString("Sensor Array is:\n\r"); 
-        int i;
-        char arrayString[20];
-        for(i = 0; i < numOfRegToRead; i++)
-        {
-            sprintf(arrayString, "%d: %d, %d, %d\n\r", i, sensArray[i][0], sensArray[i][1], sensArray[i][2]);
-            UART_1_UartPutString(arrayString); 
-        }
-        */
     
-    /*char ADXL345_data2[32];
-    sprintf(ADXL345_data2, "\n\rx is: %d, y is: %d, z is: %d\n\r", x1, y1, z1);
-    UART_1_UartPutString(ADXL345_data2); */
 }
 
 
@@ -113,6 +96,7 @@ void readI2C(int numOfReg)
                 rawData = I2C_1_I2CMasterReadByte(I2C_1_I2C_NAK_DATA);
                 I2C_1_I2CMasterSendStop();
 				
+                
 				sensArray[numOfReg][2] = rawData; // gemmer rawData på den tilhørende plads i sensArray. 
 			}
 		}
@@ -122,7 +106,7 @@ void readI2C(int numOfReg)
 }
 
 
-void handleI2CError()
+void handleI2CError(void)
 {
     I2C_1_I2CMasterSendStop();	 
 }

@@ -44,24 +44,24 @@
 
 //Prototyper
 void initSensors(void);
-void initADXL345();
-void initMPU6050();
+void initADXL345(void);
+void initMPU6050(void);
 
-//ISR prototype
+// ISR prototype
 CY_ISR_PROTO(ISR_BT_Handler);
 
-//Flags
+// Flags
 int ready_to_send_flag = 0;
 
 
 
 int main()
 {
-    
-    initSensors();
     initUART();
-	setupI2C(); 
-	
+    initSensors();
+    
+	//setupI2C(); //Spørg Kristian om denne?
+    
     //ISR enable
 	//isr_sendBT_StartEx(ISR_BT_Handler);
     //CyGlobalIntEnable;
@@ -69,7 +69,8 @@ int main()
     
 	while(1)
     {
-	    readAllSensors();
+        setupI2C();
+        readAllSensors();
         //Tjekker at data bliver samlet korrekt. 
         convSensData();
         
@@ -103,7 +104,7 @@ void initSensors()
 
 
 //init accelerometer
-void initADXL345()
+void initADXL345(void)
 {
 	// Fylder ADXL345 ind i sensor array'et. 
 	setSensArray(ACCEL_ADDRESS, DATAX0, DEFAULT_DATA);
@@ -121,7 +122,7 @@ void initADXL345()
 }
 
 //init gyroscope 
-void initMPU6050()
+void initMPU6050(void)
 {
 	// Fylder ADXL345 ind i sensor array'et. 
 	setSensArray(GYRO_ADDRESS, GYRO_XOUT_H, DEFAULT_DATA);
