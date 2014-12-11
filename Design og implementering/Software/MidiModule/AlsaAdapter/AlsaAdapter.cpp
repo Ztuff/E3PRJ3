@@ -66,6 +66,8 @@ bool AlsaAdapter::open()
 
 		case 2 :
 
+		
+
 			if (snd_rawmidi_open(NULL, &midiport_external,"hw:2,0,0", SND_RAWMIDI_SYNC) < 0) //skal det vaere sync eller append eller en anden?
 			{
 				cout << "Error opening external MIDI device" << endl;
@@ -124,7 +126,7 @@ bool AlsaAdapter::send(const vector<MidiSignal> &signal)
 			{
 		
 
-					 char midiMessage[3] = {(signal[i].command_ << 4) + signal[i].channel_, signal[i].param1_, signal[i].param2_}; //husk at command skal være de 4 MSB, så f.eks. 0x90 for noteon, ikke 0x9 
+					char midiMessage[3] = {signal[i].command_ +signal[i].channel_, signal[i].param1_, signal[i].param2_}; //husk at command skal være de 4 MSB, så f.eks. 0x90 for noteon, ikke 0x9 
 
 					
 
@@ -145,7 +147,9 @@ bool AlsaAdapter::send(const vector<MidiSignal> &signal)
 
 			for(int i=0; i<signal.size(); i++) //evt noget signal.getlenght? / maxlenght i stedet for 16
 			{
-					char midiMessage[3] = {(signal[i].command_ + signal[i].channel_), signal[i].param1_, signal[i].param2_}; //husk at command skal være de 4 MSB, så f.eks. 0x90 for noteon, ikke 0x9
+					
+
+					char midiMessage[3] = { signal[i].command_ +signal[i].channel_, signal[i].param1_, signal[i].param2_}; //husk at command skal være de 4 MSB, så f.eks. 0x90 for noteon, ikke 0x9
 
 
 					if(snd_rawmidi_write(midiport_external, midiMessage, 3)<0) //det er egentligt en ops write, så den returner -1 ved fejl. 
@@ -154,16 +158,16 @@ bool AlsaAdapter::send(const vector<MidiSignal> &signal)
 							cout << "Error: rawmidi write to external port failed" << endl;
 							return false;
 						}
-					if(snd_rawmidi_write(midiport_internal, midiMessage, 3)<0) //det er egentligt en ops write, så den returner -1 ved fejl. 
+					/*if(snd_rawmidi_write(midiport_internal, midiMessage, 3)<0) //det er egentligt en ops write, så den returner -1 ved fejl. 
 
 						{
 							cout << "Error: rawmidi write to internal port failed" << endl;
 							return false;
-						}
+						}*/
 			}
 
 			
-			break;
+			break; 
 	
 		
 
@@ -171,7 +175,7 @@ bool AlsaAdapter::send(const vector<MidiSignal> &signal)
 
 			for(int i=0; i<signal.size(); i++) //evt noget signal.getlenght? / maxlenght i stedet for 16
 			{
-				char midiMessage[3] = {(signal[i].command_ + signal[i].channel_), signal[i].param1_, signal[i].param2_}; //husk at command skal være de 4 MSB, så f.eks. 0x90 for noteon, ikke 0x9 
+				char midiMessage[3] = {signal[i].command_ +signal[i].channel_, signal[i].param1_, signal[i].param2_}; //husk at command skal være de 4 MSB, så f.eks. 0x90 for noteon, ikke 0x9 
 				if(snd_rawmidi_write(midiport_internal, midiMessage, 3)<0) //det er egentligt en ops write, så den returner -1 ved fejl. 
 
 						{

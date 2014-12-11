@@ -1,7 +1,7 @@
 #ifndef MAPPINGSCHEME_H_
 #define MAPPINGSCHEME_H_
 
-#define MAPDEBUG 0
+#define MAPDEBUG 1
 
 #define SLOW 1		//Used for CCRel
 #define MEDIUM 2
