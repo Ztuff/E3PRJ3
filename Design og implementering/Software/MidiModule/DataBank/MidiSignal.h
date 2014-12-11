@@ -15,8 +15,6 @@ struct MidiSignal
 					command_ ('8'),
 					param1_(0),
 					param2_(0),
-					param1Old_(0),
-					param2Old_(0)
 	{}
 
 	/** ATRIBUTES USED FOR ALSA **/
