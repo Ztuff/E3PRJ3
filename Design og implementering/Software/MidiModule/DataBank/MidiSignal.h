@@ -25,10 +25,6 @@ struct MidiSignal
 	int param1_;
 	int param2_;
 
-	/** UTILITY ATRIBUTES **/
-	int param1Old_;
-	int param2Old_;
-
 	void print()
 	{
 		std::cout<<  "     channel_ = " << std::hex << channel_

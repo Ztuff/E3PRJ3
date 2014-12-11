@@ -101,13 +101,10 @@ bool MappingScheme::mapKey(int data, MidiSignal & signal)
 	
 	if(signal.param1_ != data)
 	{
-		if(data != signal.param1Old_)
-		{
+		if(data != signal.param1_)
 			signal.command_ = NOTEOFF;		//Note Off
-			signal.param1Old_ = data;
-		}
-		else
-			signal.param1_ = data;	//set key value hvis forrige tone er slukket.
+		
+		signal.param1_ = data;	//set key value hvis forrige tone er slukket.
 	}
 	return 1;
 }
@@ -154,8 +151,6 @@ bool MappingScheme::mapCCAbs(int data, MidiSignal & signal)
 	signal.command_ = CONTIUOUSCONTROLLER;	//Set command
 	signal.param1_ = CC_.cNum_;				//Set CC#
 	signal.param2_ = data;					//Set controller value
-
-	signal.param2Old_ = data;				//Set old value
 	
 	return 1;
 }
@@ -192,14 +187,14 @@ bool MappingScheme::mapCCRel(int data, MidiSignal & signal)
 	signal.command_ = CONTIUOUSCONTROLLER;			//Set command
 	signal.param1_ = CC_.cNum_;						//Set CC#
 	
-	if(((signal.param2Old_ + strategy) <= CC_.maxVal_) && ((signal.param2Old_ + strategy)>= CC_.minVal_))
-		signal.param2_ = signal.param2Old_ + strategy;	//Set controller value relative to old
-	else if((signal.param2Old_ + strategy) > CC_.maxVal_)
+	if(((signal.param2_ + strategy) <= CC_.maxVal_) && ((signal.param2_ + strategy)>= CC_.minVal_))
+		signal.param2_ = signal.param2_ + strategy;	//Set controller value relative to old
+	else if((signal.param2_ + strategy) > CC_.maxVal_)
 		signal.param2_ = CC_.maxVal_;
 	else
 		signal.param2_ = CC_.minVal_;
 
-	signal.param2Old_ = signal.param2_;				//Set old value
+	signal.param2_ = signal.param2_;				//Set old value
 	
 	return 1;
 }
