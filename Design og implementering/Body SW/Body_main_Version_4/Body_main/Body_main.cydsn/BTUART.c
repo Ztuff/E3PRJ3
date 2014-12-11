@@ -85,7 +85,14 @@ void sendDataArray()
     UART_1_UartPutString(proxArray);
     CyDelay(3);
     UART_1_UartPutString(flexArray);
-     
+    
+    //Reset dataArray to known acii value 48 = '0';
+    int i;
+    for(i = 0; i < MAXSENSDATA; i++)
+    {
+        dataArray[i] = 48;
+    }
+    
 }
 
 

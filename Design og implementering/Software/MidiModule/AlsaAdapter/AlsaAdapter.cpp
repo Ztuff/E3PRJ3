@@ -124,7 +124,7 @@ bool AlsaAdapter::send(const vector<MidiSignal> &signal)
 			{
 		
 
-					 char midiMessage[3] = {signal[i].command_ + signal[i].channel_, signal[i].param1_, signal[i].param2_}; //husk at command skal være de 4 MSB, så f.eks. 0x90 for noteon, ikke 0x9 
+					 char midiMessage[3] = {(signal[i].command_ << 4) + signal[i].channel_, signal[i].param1_, signal[i].param2_}; //husk at command skal være de 4 MSB, så f.eks. 0x90 for noteon, ikke 0x9 
 
 					
 

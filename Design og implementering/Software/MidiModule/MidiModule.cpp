@@ -121,9 +121,9 @@ void MidiModule::handleDataMsg(DataMsg* msg)
 	}	
 	
 	/******* Send opdateret vector af MidiSignaler *******/
-	#ifdef DEBUG
+
 	midiSignalVector_[0].print();
-	#endif
+	
 	
 	alsaAdapter_->send(midiSignalVector_);		
 }
