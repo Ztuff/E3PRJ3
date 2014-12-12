@@ -12,17 +12,17 @@ int main()
 	/*** Opret DataStruct array Dummy ***/
 	DataMsg myData;
 	
-	for (int i = 50 ; i< 64; ++i)
+	for (int i = 0 ; i< 16; i++)
 	{
-		myData[i].x = i;
-		myData[i].y = i;
-		myData[i].z = i;
+		myData[i].x = i+50;
+		myData[i].y = i+50;
+		myData[i].z = i+50;
 	}
 	
 		
 	/*** Opret Mapping Scheme og SensorConfiguration Dummy ***/
 	MappingScheme *testMSchemePtr = new MappingScheme(	"test",					//id
-														0,						//channel
+														1,						//channel
 														"key",					//param
 														"cis", "major", "rising",	//key params
 														0,						//velocity params
@@ -55,22 +55,18 @@ int main()
 	MsgQueue* msgQPtr = myMidiModule.getMsgQueue();
 	for(int i = 0; i<1; i++)
 	{
-		for(int i = 0; i<16; i++)
-		{
-			for (int index = 50; index< 64; ++index)	//opdater data
+			for (int index = 50; index< 100; ++index)	//opdater data
 			{
-				myData[i].x = index;
-				myData[i].y = index;
-				myData[i].z = index;
-			usleep(10000);		//sleep. T=20ms -> f=50Hz
+				myData[1].x = index;
+				myData[1].y = index;
+				myData[1].z = index;
+			usleep(100000);		//sleep. T=20ms -> f=50Hz
 			msgQPtr->send(MidiModule::DATA_MSG, &myData);
-			usleep(10000);		//sleep. T=20ms -> f=50Hz
+			usleep(100000);		//sleep. T=20ms -> f=50Hz
 			msgQPtr->send(MidiModule::DATA_MSG, &myData);
 
 			}
 
-			
-		}
 	}
 
 	
