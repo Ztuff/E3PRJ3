@@ -46,7 +46,7 @@ void sendDataArray()
     char gyroArray[6];
     char proxArray[6];
     char flexArray[6];
-    // Sættter accelerometer array.
+    // Sætter accelerometer array.
     accelArray[0] = START_SENSDATA;
     accelArray[1] = dataArray[0];   // ID 0
     accelArray[2] = dataArray[1];   // x
@@ -80,11 +80,11 @@ void sendDataArray()
     CyDelay(3);
     UART_1_UartPutString(accelArray);
     CyDelay(3);
-    UART_1_UartPutString(gyroArray);
+    //UART_1_UartPutString(gyroArray);
     CyDelay(3);
-    UART_1_UartPutString(proxArray);
+    //UART_1_UartPutString(proxArray);
     CyDelay(3);
-    UART_1_UartPutString(flexArray);
+    //UART_1_UartPutString(flexArray);
     
     //Error Check if I2C sensordata is valid
     if((dataArray[1] == 61)&&(dataArray[2] == 61)&&(dataArray[3] == 61))

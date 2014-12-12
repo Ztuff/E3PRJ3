@@ -66,10 +66,6 @@ void convSensData(void)
     z = sensArray[5][2]<< 8; 
     z+= sensArray[4][2];
     
-   
-    
-   
- 
     
     //conversion from int16 to uint8 which is the scale midi can receive
     x1 = (x+512)/8; 
@@ -102,7 +98,6 @@ void readI2C(int numOfReg)
 		}
 	}
 				
-	
 }
 
 
