@@ -2,6 +2,7 @@
 #include <queue>
 #include <pthread.h>
 #include <iostream>
+#include "MsgHandlerDefs"
 
 class Message
 {
