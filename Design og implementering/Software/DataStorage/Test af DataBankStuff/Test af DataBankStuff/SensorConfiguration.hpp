@@ -8,7 +8,7 @@ class SensorConfiguration
 {
 	public:
 		SensorConfiguration(); //default-constructor
-		SensorConfiguration( 	std::string name,
+		SensorConfiguration( 	string name,
 								string sensorID,
 								char axis,
 								string mScheme,
@@ -17,7 +17,7 @@ class SensorConfiguration
 		~SensorConfiguration();
 
 		/*----- GET-SET METODER -----*/
-		std::string getName();
+		string getName();
 		string getSensorID();
 		char getAxis();
 		string getMScheme();

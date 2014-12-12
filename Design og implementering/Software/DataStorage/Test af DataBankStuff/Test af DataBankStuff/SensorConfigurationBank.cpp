@@ -16,9 +16,9 @@ SensorConfigurationBank::SensorConfigurationBank()
 		if (v.first == "configuration")
 		{
 			string name;
-			int sensorid;
+			string sensorid;
 			char axis;
-			MappingScheme mscheme;
+			string mscheme;
 			SoundPack sound;
 			BOOST_FOREACH(ptree::value_type &w,v.second)
 			{
@@ -28,9 +28,7 @@ SensorConfigurationBank::SensorConfigurationBank()
 				}
 				if(w.first == "sensorid")
 				{
-					string stringToInt = w.second.data();
-					istringstream iss(stringToInt);
-					iss >> sensorid;
+					sensorid = w.second.data();
 				}
 				if(w.first == "axis")
 				{
@@ -38,7 +36,7 @@ SensorConfigurationBank::SensorConfigurationBank()
 				}
 				if(w.first == "mappingscheme")
 				{
-					mscheme = getMappingScheme(w.second.data());
+					mscheme = w.second.data();
 				}
 				if(w.first == "soundpack")
 				{
@@ -234,8 +232,7 @@ void SensorConfigurationBank::save()
 		myTree.put("name", it->second.getName());
 		myTree.put("sensorid", it->second.getSensorID());
 		myTree.put("axis", it->second.getAxis());
-		MappingScheme myScheme = it->second.getMScheme();
-		myTree.put("mappingscheme", myScheme.getId());
+		myTree.put("mappingscheme", it->second.getMScheme());
 		SoundPack mySound = it->second.getSound();
 		myTree.put("soundpack", mySound.filepath_);
 
