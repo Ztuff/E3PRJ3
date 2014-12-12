@@ -24,12 +24,6 @@ class MidiModule
 		void eventDispatcher();
 		
 		void setPreset(list<SensorConfiguration> & sensConfList);
-
-		enum typeId
-		{
-			SHUTDOWN_MSG,
-			DATA_MSG
-		};
 			
 	private:		
 		AlsaAdapter* alsaAdapter_;

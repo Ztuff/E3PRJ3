@@ -61,10 +61,10 @@ void MidiModule::eventDispatcher()
 	 	
 	 	switch(id)
 	 	{
-	 		case DATA_MSG:
+	 		case DataMsg::DATA_ARRAY:
 	 			handleDataMsg(static_cast<DataMsg*>(msgPtr));
 	 			break;
-	 		case SHUTDOWN_MSG:
+	 		case DataMsg::SHUTDOWN_MSG:
 	 			handleShutdownMsg();
 	 			active = false;
 	 			break;
@@ -72,7 +72,7 @@ void MidiModule::eventDispatcher()
 	 			BR3K_error(-1, "MidiModule eventDispatch received unknown type.\n");
 	 			break;
 	 	}
-	 	//if(msgPtr != NULL) delete msgPtr;
+	 	//delete msgPtr;
 	 }
 	 
 	 return;

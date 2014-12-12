@@ -1,29 +1,23 @@
 //Stærkt inspireret af
 //http://www.raspberry-projects.com/pi/programming-in-c/uart-serial-port/using-the-uart
-
-#pragma once
-
-#include <iostream>
-#include <unistd.h>     //Used for UART
-#include <fcntl.h>      //Used for UART
-#include <termios.h>    //Used for UART
-#include "BTRock.hpp"
+#include "Receiver.hpp"
 
 using namespace std;
 
-BTRock::BTRock( /*MsgQueue* contrQ, MsgQueue* midiQ*/ )
+Receiver::Receiver( /*MsgQueue* contrQ,*/ MsgQueue* midiQ )
+: midiQ_( midiQ )
 {
   connect();
   /*msgQs msgQs_ = { contrQ, midiQ };
   pthread_create(*/
 }
 
-BTRock::~BTRock()
+Receiver::~Receiver()
 {
   disconnect();
 }
 
-void BTRock::connect()
+void Receiver::connect()
 {
   //-------------------------
   //----- SETUP USART 0 -----
@@ -42,7 +36,7 @@ void BTRock::connect()
   //                      immediately with a failure status if the output can't be written immediately.
   //
   //  O_NOCTTY - When set and path identifies a terminal device, open() shall not cause the terminal device to become the controlling terminal for the process.
-  uart0_filestream_ = open( "/dev/ttyAMA0", O_RDWR | O_NOCTTY | O_NDELAY );    //Open in non blocking read/write mode
+  uart0_filestream_ = open( "/dev/ttyAMA0", O_RDONLY | O_NOCTTY & ~O_NDELAY & ~O_NONBLOCK );    //Open in blocking read-only mode
   if ( uart0_filestream_ == -1 )
   {
     //ERROR - CAN'T OPEN SERIAL PORT
@@ -69,13 +63,14 @@ void BTRock::connect()
   tcsetattr( uart0_filestream_, TCSANOW, &options );
 }
 
-void BTRock::disconnect()
+void Receiver::disconnect()
 {
   //----- CLOSE THE UART -----
   close( uart0_filestream_ );
 }
 
-void BTRock::send() // Vi skal overveje hvad der skal sendes, og hvilken form det har
+/* Test function for send. Function not needed by current version of BodyRock3000
+void Receiver::send()
 {
   //----- TX BYTES -----
   unsigned char tx_buffer[ 20 ]; // Statisk eller dynamisk størrelse?
@@ -96,30 +91,86 @@ void BTRock::send() // Vi skal overveje hvad der skal sendes, og hvilken form de
       cout << "UART TX error" << endl;
     }
   }
-}
+}*/
 
-void BTRock::receive()  // Skal tilpasses til mængden af data som modtages, og evt. returnere en struct?
-                    // Eller skal der et array med som argument, som skrives direkte i?
+
+void Receiver::receive()
 {
   //----- CHECK FOR ANY RX BYTES -----
   if ( uart0_filestream_ != -1 )
   {
-    // Read up to 255 characters from the port if they are there
-    unsigned char rx_buffer[ 256 ];
-    int rx_length = read( uart0_filestream_, ( void* )rx_buffer, 255 );    //filestream_, buffer to store in, number of bytes to read (max)
+    // Read up to 100 characters from the port if they are there
+    unsigned char rx_buffer[ ( MAX_SENSORS * 5 ) + 1 ] = { 0 };
+    int rx_length = read( uart0_filestream_, ( void* )rx_buffer, ( MAX_SENSORS * 5 ) );    //filestream_, buffer to store in, number of bytes to read (max)
+    rx_buffer[rx_length] = '\0';
+    
     if ( rx_length < 0 )
     {
       //An error occured (will occur if there are no bytes)
     }
+    
+    else if ( rx_length > ( MAX_SENSORS * 5 ) )
+    {
+      cout << "rx_length too long. Fuck this shit.." << endl;
+    }
+    
     else if ( rx_length == 0 )
     {
-      //No data waiting
+      cout << "ERROR: No data waiting" << endl;//No data waiting
     }
+    
     else
     {
+      // Til test: Udskriv nøjagtig det array som er modtaget
+      for( int i = 0; ( i < rx_length ); i++ )
+        cout << "[" << (int)rx_buffer[ i ] << "]";
+      
       //Bytes received
-      rx_buffer[rx_length] = '\0';
-      cout << rx_length << " bytes read: " << rx_buffer << endl;
+      if( ( rx_buffer[ 0 ] == 0x0F ) && rx_buffer[ 1 ] && rx_buffer[ 2 ] && rx_buffer[ 3 ] && rx_buffer[ 4 ] ) // Hvis 0x0F er data-startbit'en
+      {          
+        /*Udkommenteret, da vi kun sender for én sensor af gangen
+        if( lastID_ <= rx_buffer[ 1 ] ) // Send og start forfra efter sidste ID
+        {
+          // Send data (skal implementeres)
+          // Til test udskrives det i stedet.
+          
+          allData.print();
+          cout << endl << "----------------------------------------------" << endl << endl;
+        }
+
+        // Husk sidste ID
+        lastID_ = rx_buffer[ 0 ];*/
+        
+        // Opret dataobjekt med dynamisk hukommelse
+        DataMsg* allData = new DataMsg;
+        
+        // Nulstil data
+        allData->reset();
+          
+        // Pak til data-struct
+        allData->pack( rx_buffer );
+        
+        // Til test: Udskriv data-struct som pakket
+        /*cout << endl << "ID: " << rx_buffer[ 1 ] - 1 << endl
+          << "x value: " << ( int )( allData.dataArray_[ rx_buffer[ 1 ] - 1 ].x )
+          << ", y value: " << ( int )( allData.dataArray_[ rx_buffer[ 1 ] - 1 ].y )
+          << ", z value: " << ( int )( allData.dataArray_[ rx_buffer[ 1 ] - 1 ].z ) << endl;
+        
+        cout << endl << "----------------------------------------------" << endl << endl;*/
+        
+        midiQ_->send( DataMsg::DATA_ARRAY, allData );
+      }
+      
+/*      else if( rx_buffer[ 0 ] == 0xF0 ) // Hvis 0xF0 er preset-startbit'en
+      {
+        //sendData( rx_buffer[ 1 ] );// Send preset til rette modtager
+      }*/
     }
   }
+}
+
+void Receiver::start(unsigned long loops )
+{
+  for( int i = 0; i < loops; i++ )
+    Receiver::receive();
 }

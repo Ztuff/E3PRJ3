@@ -1,7 +1,13 @@
+#ifndef RECEIVER_HPP
+#define RECEIVER_HPP
+
 //#include <pthread.h>    //For thread handling
 //#include "MsgQueue.hpp" //For event based programming
 #include <iostream>
-#include "DataMsg.hpp"
+#include <unistd.h>     //Used for UART
+#include <fcntl.h>      //Used for UART
+#include <termios.h>    //Used for UART
+#include "../MidiModule/DataMsg.hpp"
 
 #define MAX_RECEIVED_BYTES 66
 
@@ -32,3 +38,5 @@ private:
     MsgQueue* midiQ;
   };*/
 };
+
+#endif
