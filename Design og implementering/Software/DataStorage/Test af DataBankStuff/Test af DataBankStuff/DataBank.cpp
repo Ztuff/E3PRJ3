@@ -1,4 +1,4 @@
-#include "DataBank.h"
+#include "DataBank.hpp"
 
 using namespace std;
 
@@ -21,8 +21,24 @@ vector<string> DataBank::getSensorIDs()
 	return cbank_.getSensorIDs();
 }
 
-void DataBank::saveSensorConf(SensorConfiguration sensorConf)
+vector<string> DataBank::getSoundPacks()
 {
+	return sbank_.list();
+}
+
+void DataBank::saveMappingScheme(MappingScheme m)
+{
+	cbank_.addMappingScheme(m);
+}
+
+void DataBank::setSensorKonf(string id, string akse, string mScheme, string sPack)
+{
+	SensorConfiguration sensorConf;
+	sensorConf.setName(id);
+	sensorConf.setSensorID(id);
+	sensorConf.setAxis(akse[0]);
+	sensorConf.setMappingScheme(mScheme);
+	sensorConf.setSoundPack(sPack);
 	cbank_.add(sensorConf);
 }
 

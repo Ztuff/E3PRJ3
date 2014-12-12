@@ -9,9 +9,12 @@ class SensorConfigurationBank
 {	
 public:
 	SensorConfigurationBank();
+	void addMappingScheme(MappingScheme mScheme);
+	void loadMappingSchemes();
+	void saveMappingSchemes();
 	MappingScheme getMappingScheme(std::string id);
-	std::vector<std::string> getSensorIDs();
 	std::vector<std::string> getMappingSchemes();
+	std::vector<std::string> getSensorIDs();
 	~SensorConfigurationBank();
 	void edit(SensorConfiguration sensorConf);
 	std::vector<std::string> list();
@@ -23,5 +26,6 @@ public:
 	
 private:
 	std::map<std::string, SensorConfiguration> sensorConfigurations_;
+	std::map<std::string, MappingScheme> mappingSchemes_;
 };
 	

@@ -10,7 +10,7 @@ SensorConfigurationBank::SensorConfigurationBank()
 	using boost::property_tree::ptree;
 	ptree pt;
 	read_xml("SensorConfigurationBank.xml", pt); //kør fejlhåndtering her. hvis den ikke er der, lav den
-
+	loadMappingSchemes();
 	BOOST_FOREACH(ptree::value_type &v, pt.get_child("root.sensorconfigurations"))
 	{
 		if (v.first == "configuration")
@@ -53,26 +53,6 @@ SensorConfigurationBank::SensorConfigurationBank()
 	save();
 }
 
-vector<string> SensorConfigurationBank::getMappingSchemes()
-{
-	using boost::property_tree::ptree;
-	ptree pt;
-	read_xml("MappingSchemes.xml", pt);
-	vector<string> myMappingSchemeList;
-
-	BOOST_FOREACH(ptree::value_type &v, pt.get_child("root.mappingschemes"))
-	{
-		BOOST_FOREACH(ptree::value_type &w, v.second)
-		{
-			if (w.first == "id")
-			{
-				myMappingSchemeList.push_back(w.second.data());
-			}
-		}
-	}
-	return myMappingSchemeList;
-}
-
 vector<string> SensorConfigurationBank::getSensorIDs()
 {
 	using boost::property_tree::ptree;
@@ -93,76 +73,117 @@ vector<string> SensorConfigurationBank::getSensorIDs()
 	return mySensorIDs;
 }
 
-MappingScheme SensorConfigurationBank::getMappingScheme(string id) //finder specifikt mapping scheme i MappingSchemes.xml
+vector<string> SensorConfigurationBank::getMappingSchemes()
+{
+	vector<string> mappingSchemeList;
+	for(map<string, MappingScheme>:: iterator it = mappingSchemes_.begin(); it != mappingSchemes_.end(); ++it) 
+	{
+		mappingSchemeList.push_back(it->first);
+	}
+	return mappingSchemeList;
+}
+
+void SensorConfigurationBank::loadMappingSchemes()
 {
 	string m_level;
 	using boost::property_tree::ptree;
 	ptree pt;
 	read_xml("MappingSchemes.xml", pt);
-	MappingScheme myMappingScheme;
 
 	BOOST_FOREACH(ptree::value_type &v, pt.get_child("root.mappingschemes"))
 	{
 		ptree pt = v.second;
-		string checkID = pt.get<string>("id");
-		if ( checkID == id)
-		{
-			BOOST_FOREACH(ptree::value_type &w,v.second)
-			{	
-				if(w.first == "id"){
-					myMappingScheme.setId(w.second.data());
-				}
-				if(w.first == "param"){
-					myMappingScheme.setParam(w.second.data());
-				}
-				if(w.first == "root"){
-					myMappingScheme.setRoot(w.second.data());
-				}
-				if(w.first == "scale"){
-					myMappingScheme.setScale(w.second.data());
-				}
-				if(w.first == "direction"){
-					myMappingScheme.setDirection(w.second.data());
-				}
-				if(w.first == "lowerthreshold"){
-					string stringToInt = w.second.data();
-					istringstream iss(stringToInt);
-					int value;
-					iss >> value;
-					myMappingScheme.setLowerThreshold(value);
-				}
-				if(w.first == "cnum"){
-					string stringToInt = w.second.data();
-					istringstream iss(stringToInt);
-					int value;
-					iss >> value;
-					myMappingScheme.setCNum(value);
-				}
-				if(w.first == "minval"){
-					string stringToInt = w.second.data();
-					istringstream iss(stringToInt);
-					int value;
-					iss >> value;
-					myMappingScheme.setMinVal(value);
-				}
-				if(w.first == "maxval"){
-					string stringToInt = w.second.data();
-					istringstream iss(stringToInt);
-					int value;
-					iss >> value;
-					myMappingScheme.setMaxVal(value);
-				}
-				if(w.first == "speed"){
-					string stringToInt = w.second.data();
-					istringstream iss(stringToInt);
-					int value;
-					iss >> value;
-					myMappingScheme.setSpeed(value);
-				}
+		MappingScheme myMappingScheme;
+		BOOST_FOREACH(ptree::value_type &w,v.second)
+		{	
+			if(w.first == "id"){
+				myMappingScheme.setId(w.second.data());
+			}
+			if(w.first == "param"){
+				myMappingScheme.setParam(w.second.data());
+			}
+			if(w.first == "root"){
+				myMappingScheme.setRoot(w.second.data());
+			}
+			if(w.first == "scale"){
+				myMappingScheme.setScale(w.second.data());
+			}
+			if(w.first == "direction"){
+				myMappingScheme.setDirection(w.second.data());
+			}
+			if(w.first == "lowerthreshold"){
+				string stringToInt = w.second.data();
+				istringstream iss(stringToInt);
+				int value;
+				iss >> value;
+				myMappingScheme.setLowerThreshold(value);
+			}
+			if(w.first == "cnum"){
+				string stringToInt = w.second.data();
+				istringstream iss(stringToInt);
+				int value;
+				iss >> value;
+				myMappingScheme.setCNum(value);
+			}
+			if(w.first == "minval"){
+				string stringToInt = w.second.data();
+				istringstream iss(stringToInt);
+				int value;
+				iss >> value;
+				myMappingScheme.setMinVal(value);
+			}
+			if(w.first == "maxval"){
+				string stringToInt = w.second.data();
+				istringstream iss(stringToInt);
+				int value;
+				iss >> value;
+				myMappingScheme.setMaxVal(value);
+			}
+			if(w.first == "speed"){
+				string stringToInt = w.second.data();
+				istringstream iss(stringToInt);
+				int value;
+				iss >> value;
+				myMappingScheme.setSpeed(value);
 			}
 		}
+		mappingSchemes_.insert(std::make_pair(myMappingScheme.getId(), myMappingScheme));
 	}
-	return myMappingScheme;
+}
+
+MappingScheme SensorConfigurationBank::getMappingScheme(string id) //finder specifikt mapping scheme i MappingSchemes.xml
+{
+	return mappingSchemes_[id];
+}
+
+void SensorConfigurationBank::addMappingScheme(MappingScheme mScheme)
+{
+	mappingSchemes_.insert(std::make_pair(mScheme.getId(), mScheme));
+	saveMappingSchemes();
+}
+
+void SensorConfigurationBank::saveMappingSchemes()
+{
+	using boost::property_tree::ptree;
+	ptree pt;
+	for(map<string, MappingScheme>:: iterator it = mappingSchemes_.begin(); it != mappingSchemes_.end(); ++it) 
+	{
+		ptree myTree;
+		myTree.put("id", it->second.getId());
+		myTree.put("param", it->second.getParam());
+		myTree.put("root", it->second.getRoot());
+		myTree.put("scale", it->second.getScale());
+		myTree.put("direction", it->second.getDirection());
+		myTree.put("lowerthreshold", it->second.getLowerThreshold());
+		myTree.put("cnum", it->second.getCNum());
+		myTree.put("minval", it->second.getMinVal());
+		myTree.put("maxval", it->second.getMaxVal());
+		myTree.put("speed", it->second.getSpeed());
+
+		pt.add_child("root.mappingschemes.scheme", myTree);
+	}
+	boost::property_tree::xml_writer_settings<std::string> settings('\t', 1);
+	write_xml("MappingSchemes.xml", pt, std::locale(), settings);
 }
 
 SensorConfigurationBank::~SensorConfigurationBank()
