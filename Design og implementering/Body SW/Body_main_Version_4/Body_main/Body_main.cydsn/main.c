@@ -47,34 +47,24 @@ void initSensors(void);
 void initADXL345(void);
 void initMPU6050(void);
 
-// ISR prototype
-CY_ISR_PROTO(ISR_BT_Handler);
-
-// Flags
-int ready_to_send_flag = 0;
-
-
 
 int main()
 {
+    //Initialization
     initUART();
     initSensors();
     
-	//setupI2C(); //Spørg Kristian om denne?
-    
-    //ISR enable
-	//isr_sendBT_StartEx(ISR_BT_Handler);
-    //CyGlobalIntEnable;
-     //Timer_1_Start();
+    // Tænd Power indikator
+    POWERPIN_Write(1);
     
 	while(1)
     {
         setupI2C();
+        
         readAllSensors();
-        //Tjekker at data bliver samlet korrekt. 
+         
         convSensData();
         
-       
         sendDataArray(); 
         CyDelay(7);
      
@@ -84,12 +74,6 @@ int main()
 	return 0;
 }
 
-CY_ISR(ISR_BT_Handler)
-{
-        //SEND DATA VIA BT
-        sendDataArray(); 
-        ready_to_send_flag = 0;
-}
 
 
 

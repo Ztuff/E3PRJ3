@@ -75,7 +75,7 @@ void sendDataArray()
     flexArray[4] = 1+1;               // z
     flexArray[5] = 0; //Nul terminering
     
-    //UART_1_UartPutString("Test");
+    
     
     CyDelay(3);
     UART_1_UartPutString(accelArray);
@@ -85,6 +85,12 @@ void sendDataArray()
     UART_1_UartPutString(proxArray);
     CyDelay(3);
     UART_1_UartPutString(flexArray);
+    
+    //Error Check if I2C sensordata is valid
+    if((dataArray[1] == 61)&&(dataArray[2] == 61)&&(dataArray[3] == 61))
+    {
+        ERRORPIN_Write(1);
+    }
     
     //Reset dataArray to known acii value 48 = '0';
     int i;

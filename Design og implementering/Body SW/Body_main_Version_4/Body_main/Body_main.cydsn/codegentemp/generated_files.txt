@@ -38,6 +38,12 @@
   <file name="C:\Users\Jeppe\Documents\Engineer\3_Semester\E3PRJ3\Design og implementering\Body SW\Body_main_Version_4\Body_main\Body_main.cydsn\codegentemp\UART_1_PINS.h" value="NONE;UART_1" />
   <file name="C:\Users\Jeppe\Documents\Engineer\3_Semester\E3PRJ3\Design og implementering\Body SW\Body_main_Version_4\Body_main\Body_main.cydsn\codegentemp\UART_1_SPI_UART_PVT.h" value="NONE;UART_1" />
   <file name="C:\Users\Jeppe\Documents\Engineer\3_Semester\E3PRJ3\Design og implementering\Body SW\Body_main_Version_4\Body_main\Body_main.cydsn\codegentemp\UART_1_PVT.h" value="NONE;UART_1" />
+  <file name="C:\Users\Jeppe\Documents\Engineer\3_Semester\E3PRJ3\Design og implementering\Body SW\Body_main_Version_4\Body_main\Body_main.cydsn\codegentemp\ERRORPIN.c" value="ARM_C_FILE;ERRORPIN" />
+  <file name="C:\Users\Jeppe\Documents\Engineer\3_Semester\E3PRJ3\Design og implementering\Body SW\Body_main_Version_4\Body_main\Body_main.cydsn\codegentemp\ERRORPIN.h" value="NONE;ERRORPIN" />
+  <file name="C:\Users\Jeppe\Documents\Engineer\3_Semester\E3PRJ3\Design og implementering\Body SW\Body_main_Version_4\Body_main\Body_main.cydsn\codegentemp\ERRORPIN_aliases.h" value="NONE;ERRORPIN" />
+  <file name="C:\Users\Jeppe\Documents\Engineer\3_Semester\E3PRJ3\Design og implementering\Body SW\Body_main_Version_4\Body_main\Body_main.cydsn\codegentemp\POWERPIN.c" value="ARM_C_FILE;POWERPIN" />
+  <file name="C:\Users\Jeppe\Documents\Engineer\3_Semester\E3PRJ3\Design og implementering\Body SW\Body_main_Version_4\Body_main\Body_main.cydsn\codegentemp\POWERPIN.h" value="NONE;POWERPIN" />
+  <file name="C:\Users\Jeppe\Documents\Engineer\3_Semester\E3PRJ3\Design og implementering\Body SW\Body_main_Version_4\Body_main\Body_main.cydsn\codegentemp\POWERPIN_aliases.h" value="NONE;POWERPIN" />
   <file name="C:\Users\Jeppe\Documents\Engineer\3_Semester\E3PRJ3\Design og implementering\Body SW\Body_main_Version_4\Body_main\Body_main.cydsn\codegentemp\I2C_1_sda.c" value="ARM_C_FILE;I2C_1_sda" />
   <file name="C:\Users\Jeppe\Documents\Engineer\3_Semester\E3PRJ3\Design og implementering\Body SW\Body_main_Version_4\Body_main\Body_main.cydsn\codegentemp\I2C_1_sda.h" value="NONE;I2C_1_sda" />
   <file name="C:\Users\Jeppe\Documents\Engineer\3_Semester\E3PRJ3\Design og implementering\Body SW\Body_main_Version_4\Body_main\Body_main.cydsn\codegentemp\I2C_1_sda_aliases.h" value="NONE;I2C_1_sda" />

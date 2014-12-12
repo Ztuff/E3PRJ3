@@ -7,9 +7,9 @@
   <width>32</width>
   <peripherals>
     <peripheral>
-      <name>UART_1</name>
+      <name>I2C_1</name>
       <description>Serial Communication Block</description>
-      <baseAddress>0x40070000</baseAddress>
+      <baseAddress>0x40060000</baseAddress>
       <addressBlock>
         <offset>0</offset>
         <size>0xFCD</size>
@@ -2049,9 +2049,9 @@
       </registers>
     </peripheral>
     <peripheral>
-      <name>I2C_1</name>
+      <name>UART_1</name>
       <description>Serial Communication Block</description>
-      <baseAddress>0x40060000</baseAddress>
+      <baseAddress>0x40070000</baseAddress>
       <addressBlock>
         <offset>0</offset>
         <size>0xFCD</size>

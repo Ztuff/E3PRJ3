@@ -104,6 +104,12 @@
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\core_cmInstr.h</File>
           <File BuildType="BUILD" Toolchain="IAR EWARM">.\Generated_Source\PSoC4\CyBootAsmIar.s</File>
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\project.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\ERRORPIN.c</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\ERRORPIN.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\ERRORPIN_aliases.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\POWERPIN.c</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\POWERPIN.h</File>
+          <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\POWERPIN_aliases.h</File>
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\prebuild.bat</File>
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\postbuild.bat</File>
           <File BuildType="BUILD" Toolchain="">.\Generated_Source\PSoC4\CyElfTool.exe</File>

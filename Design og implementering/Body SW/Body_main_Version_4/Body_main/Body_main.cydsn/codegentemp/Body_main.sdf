@@ -1,6 +1,6 @@
 (DELAYFILE
  (SDFVERSION "IEEE 1497 4.0")
- (DATE "2014-12-08T14:52:51Z")
+ (DATE "2014-12-12T12:00:45Z")
  (DESIGN "Body_main")
  (VENDOR "Cypress Semiconductor")
  (PROGRAM "cydsfit")
@@ -12,6 +12,8 @@
   (INSTANCE *)
   (DELAY
    (ABSOLUTE
+    (INTERCONNECT ClockBlock.hfclk ERRORPIN\(0\).in_clock (0.000:0.000:0.000))
+    (INTERCONNECT ClockBlock.hfclk POWERPIN\(0\).in_clock (0.000:0.000:0.000))
     (INTERCONNECT ClockBlock.hfclk \\I2C_1\:SCB_IRQ\\.clock (0.000:0.000:0.000))
     (INTERCONNECT \\I2C_1\:SCB\\.interrupt \\I2C_1\:SCB_IRQ\\.interrupt (1.000:1.000:1.000))
     (INTERCONNECT ClockBlock.ff_div_2 \\I2C_1\:SCB\\.clock (0.000:0.000:0.000))
@@ -21,6 +23,8 @@
     (INTERCONNECT \\UART_1\:rx\(0\)\\.fb \\UART_1\:SCB\\.rx (0.000:0.000:0.000))
     (INTERCONNECT \\UART_1\:SCB\\.tx \\UART_1\:tx\(0\)\\.pin_input (0.000:0.000:0.000))
     (INTERCONNECT \\UART_1\:tx\(0\)\\.pad_out \\UART_1\:tx\(0\)\\.pad_in (0.000:0.000:0.000))
+    (INTERCONNECT ERRORPIN\(0\)_PAD ERRORPIN\(0\).pad_in (0.000:0.000:0.000))
+    (INTERCONNECT POWERPIN\(0\)_PAD POWERPIN\(0\).pad_in (0.000:0.000:0.000))
     (INTERCONNECT \\I2C_1\:scl\(0\)_PAD\\ \\I2C_1\:scl\(0\)\\.pad_in (0.000:0.000:0.000))
     (INTERCONNECT \\I2C_1\:sda\(0\)_PAD\\ \\I2C_1\:sda\(0\)\\.pad_in (0.000:0.000:0.000))
     (INTERCONNECT \\UART_1\:rx\(0\)_PAD\\ \\UART_1\:rx\(0\)\\.pad_in (0.000:0.000:0.000))
