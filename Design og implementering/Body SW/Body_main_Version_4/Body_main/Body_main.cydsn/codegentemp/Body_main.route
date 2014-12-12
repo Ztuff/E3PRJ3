@@ -1,5 +1,11 @@
 net ClockBlock_HFCLK
 	term   ":m0s8clockblockcell.hfclk"
+	switch ":m0s8clockblockcell.hfclk==>:ioport1_clock_io_mux.hfclk"
+	switch ":ioport1_clock_io_mux.clk_in==>:ioport1:pin7.in_clock"
+	term   ":ioport1:pin7.in_clock"
+	switch ":m0s8clockblockcell.hfclk==>:ioport0_clock_io_mux.hfclk"
+	switch ":ioport0_clock_io_mux.clk_in==>:ioport0:pin6.in_clock"
+	term   ":ioport0:pin6.in_clock"
 	switch ":m0s8clockblockcell.hfclk==>:interrupt_10.clock"
 	term   ":interrupt_10.clock"
 end ClockBlock_HFCLK

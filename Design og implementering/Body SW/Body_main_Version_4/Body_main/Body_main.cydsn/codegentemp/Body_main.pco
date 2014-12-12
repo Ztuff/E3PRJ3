@@ -1,5 +1,5 @@
 # Body_main
-# 2014-12-08 14:52:50Z
+# 2014-12-12 12:00:44Z
 
 # IO_2@[IOP=(3)][IoId=(2)] is reserved: SWDDebugEnabled
 dont_use_io iocell 3 2
@@ -7,6 +7,8 @@ dont_use_io iocell 3 2
 dont_use_io iocell 3 3
 set_location "ClockBlock" m0s8clockblockcell -1 -1 0
 set_location "ClockGenBlock" m0s8clockgenblockcell -1 -1 0
+set_io "ERRORPIN(0)" iocell 1 7
+set_io "POWERPIN(0)" iocell 0 6
 set_location "\I2C_1:SCB\" m0s8scbcell -1 -1 0
 set_location "\I2C_1:SCB_IRQ\" interrupt -1 -1 10
 set_io "\I2C_1:scl(0)\" iocell 4 0

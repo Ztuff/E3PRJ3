@@ -1,4 +1,4 @@
-#include "DataBank.h"
+#include "DataBank.hpp"
 #include <vector>
 #include <string>
 
@@ -20,9 +20,20 @@ void testSensorConfigurationBank()
 
 int main()
 {
-	testSampleBank();
-	testSensorConfigurationBank();
+	//testSampleBank();
+	//testSensorConfigurationBank();
 	DataBank db;
-	vector<string> mappingSchemes = db.getSensorIDs();
+	MappingScheme mScheme;
+	mScheme.setId("mappingscheme4");
+	mScheme.setParam("velocity");
+	mScheme.setRoot("d");
+	mScheme.setScale("cromatic");
+	mScheme.setDirection("falling");
+	mScheme.setLowerThreshold(32);
+	mScheme.setCNum(8);
+	mScheme.setMinVal(8);
+	mScheme.setMaxVal(16);
+	mScheme.setSpeed(2);
+	db.saveMappingScheme(mScheme);
 }
 

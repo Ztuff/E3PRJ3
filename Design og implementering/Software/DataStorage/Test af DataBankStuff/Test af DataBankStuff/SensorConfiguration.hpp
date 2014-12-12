@@ -9,30 +9,31 @@ class SensorConfiguration
 	public:
 		SensorConfiguration(); //default-constructor
 		SensorConfiguration( 	std::string name,
-								int sensorID,
+								string sensorID,
 								char axis,
-								MappingScheme mScheme,
+								string mScheme,
 								SoundPack sound,
 								std::vector<MidiSignal> &midiVec);
 		~SensorConfiguration();
 
 		/*----- GET-SET METODER -----*/
 		std::string getName();
-		int getSensorID();
+		string getSensorID();
 		char getAxis();
-		MappingScheme &getMScheme();
+		string getMScheme();
 		SoundPack getSound();
 		void setName(std::string name);
-		void setSensorID(int sensorID);
+		void setSensorID(string sensorID);
 		void setAxis(char axis);
-		void setMappingScheme(MappingScheme &mScheme);
+		void setMappingScheme(string mScheme); 
+		void putNewMappingScheme(string mScheme); //Når en helt ny sensorkonfiguration tilføjes
 		void setSoundPack(SoundPack sound);
 		
 	private:
 		std::string name_;
-		int sensorID_;
+		string sensorID_;
 		char axis_;
-		MappingScheme mScheme_;
+		string mScheme_;
 		SoundPack sound_;
 		std::vector<MidiSignal>::iterator midiIter_;
 };

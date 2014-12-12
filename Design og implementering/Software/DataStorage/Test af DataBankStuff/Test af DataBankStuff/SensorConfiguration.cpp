@@ -2,12 +2,11 @@
 
 SensorConfiguration::SensorConfiguration()
 {
-	MappingScheme mScheme;
 	SoundPack sound;
 	string defaultName = "Default Sensorconfiguration";
 	char defaultAxis = 'x';
 	vector<MidiSignal> midiVec;
-	SensorConfiguration(defaultName, 1, defaultAxis, mScheme, sound, midiVec);
+	SensorConfiguration(defaultName, "Accelerometer", defaultAxis, "mappingscheme1", sound, midiVec);
 }
 
 /** Udvider vector med "num" og initialiserer til default **/
@@ -29,9 +28,9 @@ vector<MidiSignal>::iterator MidiSignalVectorAdd(vector<MidiSignal> &vec, int nu
 }
 
 SensorConfiguration::SensorConfiguration(	string name,
-											int sensorID,
+											string sensorID,
 											char axis,
-											MappingScheme mScheme,
+											string mScheme,
 											SoundPack sound,
 											vector<MidiSignal> &midiVec)
 {
@@ -56,7 +55,7 @@ string SensorConfiguration::getName()
 	return name_;
 }
 
-int SensorConfiguration::getSensorID()
+string SensorConfiguration::getSensorID()
 {
 	return sensorID_;
 }
@@ -66,7 +65,7 @@ char SensorConfiguration::getAxis()
 	return axis_;
 }
 		
-MappingScheme &SensorConfiguration::getMScheme()
+string SensorConfiguration::getMScheme()
 {
 	return mScheme_;
 }
@@ -81,7 +80,7 @@ void SensorConfiguration::setName(string name)
 	name_ = name;
 }
 
-void SensorConfiguration::setSensorID(int sensorID)
+void SensorConfiguration::setSensorID(string sensorID)
 {
 	sensorID_ = sensorID;
 }
@@ -91,7 +90,7 @@ void SensorConfiguration::setAxis(char axis)
 	axis_ = axis;
 }
 
-void SensorConfiguration::setMappingScheme(MappingScheme &mScheme)
+void SensorConfiguration::setMappingScheme(string mScheme)
 {
 	mScheme_ = mScheme;
 }

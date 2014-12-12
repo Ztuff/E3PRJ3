@@ -85,7 +85,7 @@
     <ClCompile Include="SensorConfigurationBank.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="DataBank.h" />
+    <ClInclude Include="DataBank.hpp" />
     <ClInclude Include="MappingScheme\MappingScheme.h" />
     <ClInclude Include="PresetBank.hpp" />
     <ClInclude Include="SampleBank.hpp" />

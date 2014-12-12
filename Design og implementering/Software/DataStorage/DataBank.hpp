@@ -9,11 +9,13 @@ public:
 	std::vector<std::string>		getSensorIDs();
 	std::vector<std::string>		getSoundPacks();
 
-	void saveSensorConf(SensorConfiguration sensorConf); //tilføjer sensorkonf til banken og derefter gemmer banken selv
+	void setSensorKonf(string id, string axis, string mScheme, string sPack); //tilføjer sensorkonf til banken og derefter gemmer banken selv
+	void editSensorConf(SensorConfiguration sensorConf);
 	void removeSensorConf(SensorConfiguration sensorConf);
 	void saveSample(SoundPack sound);
 	void removeSample(SoundPack sound);
 	void savePreset(Preset p);
+	void saveMappingScheme(MappingScheme m);
 
 	
 private:

@@ -28,6 +28,10 @@
 #include <UART_1_PINS.h>
 #include <UART_1_SPI_UART_PVT.h>
 #include <UART_1_PVT.h>
+#include <ERRORPIN.h>
+#include <ERRORPIN_aliases.h>
+#include <POWERPIN.h>
+#include <POWERPIN_aliases.h>
 #include <I2C_1_sda.h>
 #include <I2C_1_sda_aliases.h>
 #include <I2C_1_scl.h>

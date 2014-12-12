@@ -1,6 +1,6 @@
 // ======================================================================
 // Body_main.v generated from TopDesign.cysch
-// 12/08/2014 at 15:52
+// 12/12/2014 at 13:00
 // This file is auto generated. ANY EDITS YOU MAKE MAY BE LOST WHEN THIS FILE IS REGENERATED!!!
 // ======================================================================
 
@@ -612,6 +612,8 @@ endmodule
 // top
 module top ;
 
+          wire  Net_176;
+          wire  Net_175;
           wire  Net_12;
           wire  Net_11;
           wire  Net_10;
@@ -628,6 +630,142 @@ module top ;
         .sclk(Net_10),
         .interrupt(Net_11),
         .clock(1'b0));
+
+	wire [0:0] tmpOE__ERRORPIN_net;
+	wire [0:0] tmpFB_0__ERRORPIN_net;
+	wire [0:0] tmpINTERRUPT_0__ERRORPIN_net;
+	electrical [0:0] tmpSIOVREF__ERRORPIN_net;
+
+	cy_psoc3_pins_v1_10
+		#(.id("f98e490e-1f33-4351-83d9-47c65c82d673"),
+		  .drive_mode(3'b100),
+		  .ibuf_enabled(1'b1),
+		  .init_dr_st(1'b0),
+		  .input_clk_en(0),
+		  .input_sync(1'b1),
+		  .input_sync_mode(1'b0),
+		  .intr_mode(2'b00),
+		  .invert_in_clock(0),
+		  .invert_in_clock_en(0),
+		  .invert_in_reset(0),
+		  .invert_out_clock(0),
+		  .invert_out_clock_en(0),
+		  .invert_out_reset(0),
+		  .io_voltage(""),
+		  .layout_mode("CONTIGUOUS"),
+		  .oe_conn(1'b0),
+		  .oe_reset(0),
+		  .oe_sync(1'b0),
+		  .output_clk_en(0),
+		  .output_clock_mode(1'b0),
+		  .output_conn(1'b0),
+		  .output_mode(1'b0),
+		  .output_reset(0),
+		  .output_sync(1'b0),
+		  .pa_in_clock(-1),
+		  .pa_in_clock_en(-1),
+		  .pa_in_reset(-1),
+		  .pa_out_clock(-1),
+		  .pa_out_clock_en(-1),
+		  .pa_out_reset(-1),
+		  .pin_aliases(""),
+		  .pin_mode("B"),
+		  .por_state(4),
+		  .sio_group_cnt(0),
+		  .sio_hyst(1'b0),
+		  .sio_ibuf(""),
+		  .sio_info(2'b00),
+		  .sio_obuf(""),
+		  .sio_refsel(""),
+		  .sio_vtrip(""),
+		  .slew_rate(1'b0),
+		  .spanning(0),
+		  .use_annotation(1'b0),
+		  .vtrip(2'b00),
+		  .width(1))
+		ERRORPIN
+		 (.oe(tmpOE__ERRORPIN_net),
+		  .y({1'b0}),
+		  .fb({tmpFB_0__ERRORPIN_net[0:0]}),
+		  .io({Net_175}),
+		  .siovref(tmpSIOVREF__ERRORPIN_net),
+		  .interrupt({tmpINTERRUPT_0__ERRORPIN_net[0:0]}),
+		  .in_clock({1'b0}),
+		  .in_clock_en({1'b1}),
+		  .in_reset({1'b0}),
+		  .out_clock({1'b0}),
+		  .out_clock_en({1'b1}),
+		  .out_reset({1'b0}));
+
+	assign tmpOE__ERRORPIN_net = (`CYDEV_CHIP_MEMBER_USED == `CYDEV_CHIP_MEMBER_3A && `CYDEV_CHIP_REVISION_USED < `CYDEV_CHIP_REVISION_3A_ES3) ? ~{1'b1} : {1'b1};
+
+	wire [0:0] tmpOE__POWERPIN_net;
+	wire [0:0] tmpFB_0__POWERPIN_net;
+	wire [0:0] tmpINTERRUPT_0__POWERPIN_net;
+	electrical [0:0] tmpSIOVREF__POWERPIN_net;
+
+	cy_psoc3_pins_v1_10
+		#(.id("c3a89a57-8535-4d34-a054-a9256876d3a0"),
+		  .drive_mode(3'b100),
+		  .ibuf_enabled(1'b1),
+		  .init_dr_st(1'b0),
+		  .input_clk_en(0),
+		  .input_sync(1'b1),
+		  .input_sync_mode(1'b0),
+		  .intr_mode(2'b00),
+		  .invert_in_clock(0),
+		  .invert_in_clock_en(0),
+		  .invert_in_reset(0),
+		  .invert_out_clock(0),
+		  .invert_out_clock_en(0),
+		  .invert_out_reset(0),
+		  .io_voltage(""),
+		  .layout_mode("CONTIGUOUS"),
+		  .oe_conn(1'b0),
+		  .oe_reset(0),
+		  .oe_sync(1'b0),
+		  .output_clk_en(0),
+		  .output_clock_mode(1'b0),
+		  .output_conn(1'b0),
+		  .output_mode(1'b0),
+		  .output_reset(0),
+		  .output_sync(1'b0),
+		  .pa_in_clock(-1),
+		  .pa_in_clock_en(-1),
+		  .pa_in_reset(-1),
+		  .pa_out_clock(-1),
+		  .pa_out_clock_en(-1),
+		  .pa_out_reset(-1),
+		  .pin_aliases(""),
+		  .pin_mode("B"),
+		  .por_state(4),
+		  .sio_group_cnt(0),
+		  .sio_hyst(1'b0),
+		  .sio_ibuf(""),
+		  .sio_info(2'b00),
+		  .sio_obuf(""),
+		  .sio_refsel(""),
+		  .sio_vtrip(""),
+		  .slew_rate(1'b0),
+		  .spanning(0),
+		  .use_annotation(1'b0),
+		  .vtrip(2'b00),
+		  .width(1))
+		POWERPIN
+		 (.oe(tmpOE__POWERPIN_net),
+		  .y({1'b0}),
+		  .fb({tmpFB_0__POWERPIN_net[0:0]}),
+		  .io({Net_176}),
+		  .siovref(tmpSIOVREF__POWERPIN_net),
+		  .interrupt({tmpINTERRUPT_0__POWERPIN_net[0:0]}),
+		  .in_clock({1'b0}),
+		  .in_clock_en({1'b1}),
+		  .in_reset({1'b0}),
+		  .out_clock({1'b0}),
+		  .out_clock_en({1'b1}),
+		  .out_reset({1'b0}));
+
+	assign tmpOE__POWERPIN_net = (`CYDEV_CHIP_MEMBER_USED == `CYDEV_CHIP_MEMBER_3A && `CYDEV_CHIP_REVISION_USED < `CYDEV_CHIP_REVISION_3A_ES3) ? ~{1'b1} : {1'b1};
 
 
 

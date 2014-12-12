@@ -4,26 +4,50 @@
 		<scheme>
 			<id>mappingscheme1</id>
 			<param>velocity</param>
-			<root>c</root>
+			<root>d</root>
 			<scale>cromatic</scale>
-			<direction>rising</direction>
-			<lowerthreshold>16</lowerthreshold>
-			<cnum>16</cnum>
-			<minval>16</minval>
+			<direction>falling</direction>
+			<lowerthreshold>32</lowerthreshold>
+			<cnum>8</cnum>
+			<minval>8</minval>
 			<maxval>16</maxval>
-			<speed>0</speed>
+			<speed>2</speed>
 		</scheme>
 		<scheme>
 			<id>mappingscheme2</id>
-			<param>key</param>
-			<root>a</root>
+			<param>velocity</param>
+			<root>d</root>
 			<scale>cromatic</scale>
 			<direction>falling</direction>
-			<lowerthreshold>16</lowerthreshold>
-			<cnum>16</cnum>
-			<minval>16</minval>
+			<lowerthreshold>32</lowerthreshold>
+			<cnum>8</cnum>
+			<minval>8</minval>
 			<maxval>16</maxval>
-			<speed>0</speed>
+			<speed>2</speed>
+		</scheme>
+		<scheme>
+			<id>mappingscheme3</id>
+			<param>velocity</param>
+			<root>d</root>
+			<scale>cromatic</scale>
+			<direction>falling</direction>
+			<lowerthreshold>32</lowerthreshold>
+			<cnum>8</cnum>
+			<minval>8</minval>
+			<maxval>16</maxval>
+			<speed>2</speed>
+		</scheme>
+		<scheme>
+			<id>mappingscheme4</id>
+			<param>velocity</param>
+			<root>d</root>
+			<scale>cromatic</scale>
+			<direction>falling</direction>
+			<lowerthreshold>32</lowerthreshold>
+			<cnum>8</cnum>
+			<minval>8</minval>
+			<maxval>16</maxval>
+			<speed>2</speed>
 		</scheme>
 	</mappingschemes>
 </root>
