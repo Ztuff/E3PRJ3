@@ -28,27 +28,43 @@ SensorConfiguration::~SensorConfiguration()
 
 }
 
-string SensorConfiguration::getName()
+SensorConfiguration::SensorConfiguration(const SensorConfiguration &sensorConfigurationToCopy)
+{
+	name_ = sensorConfigurationToCopy.name_;
+	sensorID_ = sensorConfigurationToCopy.sensorID_;
+	axis_ = sensorConfigurationToCopy.axis_;
+	mScheme_ = sensorConfigurationToCopy.mScheme_;
+}
+
+const SensorConfiguration& SensorConfiguration::operator=(const SensorConfiguration &right) // const return avoids: ( a1 = a2 ) = a3
+{
+	if (&right != this)							// avoids self-assignment
+	{
+		name_ = right.name_;
+		sensorID_ = right.sensorID_;
+		axis_ = right.axis_;
+		mScheme_ = right.mScheme_;
+	}
+
+	return *this;   		// enables x = y = z
+}
+
+string SensorConfiguration::getName() const
 {
 	return name_;
 }
 
-int SensorConfiguration::getSensorID()
+int SensorConfiguration::getSensorID() const
 {
 	return sensorID_;
 }
 
-char SensorConfiguration::getAxis()
+char SensorConfiguration::getAxis() const
 {
 	return axis_;
 }
-
-int SensorConfiguration::getChannel() const
-{
-	return channel_;
-}
 		
-MappingScheme& SensorConfiguration::getMScheme()
+MappingScheme SensorConfiguration::getMScheme() const
 {
 	return mScheme_;
 }
