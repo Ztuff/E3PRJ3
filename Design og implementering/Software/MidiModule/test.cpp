@@ -74,8 +74,8 @@ int main()
 	msgQPtr->send(MidiModule::SHUTDOWN_MSG, NULL);
 	myMidiModule.join();
 	
-	delete testMSchemePtr;
 	delete testSensConfPtr;
+	delete testMSchemePtr;
 	
 	return 0;
 }
