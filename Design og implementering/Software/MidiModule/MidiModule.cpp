@@ -62,8 +62,7 @@ void MidiModule::eventDispatcher()
 	 	switch(id)
 	 	{
 	 		case DATA_MSG:
-	 			handleDataMsg
-	 				(static_cast<DataMsg*>(msgPtr));
+	 			handleDataMsg(static_cast<DataMsg*>(msgPtr));
 	 			break;
 	 		case SHUTDOWN_MSG:
 	 			handleShutdownMsg();
@@ -93,6 +92,7 @@ void MidiModule::setPreset(list<SensorConfiguration> & sensConfList)
 
 void MidiModule::handleDataMsg(DataMsg* msg)
 {
+	cout << "entering handleDataMsg" << endl;
 	/******* Update vector<MidiSignal> jf modtaget data. *******/
 	int data = 0;
 	int index = 0;
@@ -101,7 +101,10 @@ void MidiModule::handleDataMsg(DataMsg* msg)
 		switch ((*i).getAxis())	//Find correct data in dataArray
 		{
 			case 'x':
-				data = (*msg)[(*i).getSensorID()].x;
+				cout << "setting data = x "<< endl;
+				cout << "sensorID is = " << (*i).getSensorID() << endl;
+				data = msg->operator[]((*i).getSensorID()).x;
+				cout << "Data is: " << data << endl;
 				break;
 			case 'y':
 				data = (*msg)[(*i).getSensorID()].y;
@@ -113,7 +116,9 @@ void MidiModule::handleDataMsg(DataMsg* msg)
 				data = (*msg)[(*i).getSensorID()].x;
 				break;
 		}
+		midiSignalVector_[0].print();
 		
+
 		(*i).getMScheme().map(data,midiSignalVector_[index++]);		/* 	Prototype: bool map(int data, MidiSignal & signal);
 																alder map i den givne SensKonfigurations MappingScheme
 																og giver den datapunkt jf. i SensKonfiguration indstillet sensor

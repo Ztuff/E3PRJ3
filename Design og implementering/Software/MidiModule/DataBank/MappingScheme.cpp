@@ -34,7 +34,7 @@ MappingScheme::	MappingScheme(	string id,
 
 	key_.direction_=((direction == "rising" || direction == "falling") ? direction : "0");
 
-	velocity_.lowerThreshold_=((lowerThreshold < 128 || lowerThreshold >= 0) ? lowerThreshold : NULL);
+	velocity_.lowerThreshold_=((lowerThreshold < 128 || lowerThreshold >= 0) ? lowerThreshold : 0);
 
 	CC_.cNum_=((cNum < 128 || cNum >= 0) ? cNum : NULL); //set both CCAbs and CCRel 
 	
@@ -111,8 +111,8 @@ bool MappingScheme::mapKey(int data, MidiSignal & signal)
 
 bool MappingScheme::mapVelocity(int data, MidiSignal & signal)
 {
-	if(MAPDEBUG)
-		cout << "Inside mapVelocity\n";
+	//if(MAPDEBUG)
+	cout << "Inside mapVelocity\n";
 
 	signal.channel_ = channel_;
 	
