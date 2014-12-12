@@ -42,7 +42,7 @@ void Receiver::connect()
   //                      immediately with a failure status if the output can't be written immediately.
   //
   //  O_NOCTTY - When set and path identifies a terminal device, open() shall not cause the terminal device to become the controlling terminal for the process.
-  uart0_filestream_ = open( "/dev/ttyAMA0", O_RDONLY | O_NOCTTY | O_NDELAY );    //Open in non blocking read/write mode
+  uart0_filestream_ = open( "/dev/ttyAMA0", O_RDONLY | O_NOCTTY | O_NDELAY );    //Open in non blocking read mode
   if ( uart0_filestream_ == -1 )
   {
     //ERROR - CAN'T OPEN SERIAL PORT
@@ -106,18 +106,25 @@ void Receiver::receive()
   if ( uart0_filestream_ != -1 )
   {
     // Read up to 100 characters from the port if they are there
-    unsigned char rx_buffer[ 256 ] = { 0 };
-    int rx_length = read( uart0_filestream_, ( void* )rx_buffer, 256 );    //filestream_, buffer to store in, number of bytes to read (max)
+    unsigned char rx_buffer[ ( MAX_SENSORS * 5 ) + 1 ] = { 0 };
+    int rx_length = read( uart0_filestream_, ( void* )rx_buffer, ( MAX_SENSORS * 5 ) );    //filestream_, buffer to store in, number of bytes to read (max)
     rx_buffer[rx_length] = '\0';
     
     if ( rx_length < 0 )
     {
       //An error occured (will occur if there are no bytes)
     }
+    
+    else if ( rx_length > ( MAX_SENSORS * 5 ) )
+    {
+      cout << "rx_length too long. Fuck this shit.." << endl;
+    }
+    
     else if ( rx_length == 0 )
     {
       cout << "ERROR: No data waiting" << endl;//No data waiting
     }
+    
     else
     {
       // Til test: Udskriv nøjagtig det array som er modtaget
@@ -125,8 +132,9 @@ void Receiver::receive()
         cout << "[" << (int)rx_buffer[ i ] << "]";
       
       //Bytes received
-      if( rx_buffer[ 0 ] == 0x0F ) // Hvis 0x0F er data-startbit'en
+      if( ( rx_buffer[ 0 ] == 0x0F ) && rx_buffer[ 1 ] && rx_buffer[ 2 ] && rx_buffer[ 3 ] && rx_buffer[ 4 ] ) // Hvis 0x0F er data-startbit'en
       {          
+        /*Udkommenteret, da vi kun sender for én sensor af gangen
         if( lastID_ <= rx_buffer[ 1 ] ) // Send og start forfra efter sidste ID
         {
           // Send data (skal implementeres)
@@ -137,7 +145,7 @@ void Receiver::receive()
         }
 
         // Husk sidste ID
-        lastID_ = rx_buffer[ 0 ];
+        lastID_ = rx_buffer[ 0 ];*/
         
         // Nulstil data
         allData.reset();
@@ -154,10 +162,10 @@ void Receiver::receive()
         cout << endl << "----------------------------------------------" << endl << endl;
       }
       
-      else if( rx_buffer[ 0 ] == 0xF0 ) // Hvis 0xF0 er preset-startbit'en
+/*      else if( rx_buffer[ 0 ] == 0xF0 ) // Hvis 0xF0 er preset-startbit'en
       {
         //sendData( rx_buffer[ 1 ] );// Send preset til rette modtager
-      }
+      }*/
     }
   }
 }
