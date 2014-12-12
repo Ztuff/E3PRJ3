@@ -14,7 +14,7 @@ struct MidiSignal
 	MidiSignal():	channel_(0), 
 					command_ (NOTEOFF),
 					param1_(0),
-					param2_(0)
+					param2_(50)
 	{}
 
 	/** ATRIBUTES USED FOR ALSA **/

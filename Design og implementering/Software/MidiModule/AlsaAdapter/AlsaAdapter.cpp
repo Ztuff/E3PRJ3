@@ -68,7 +68,7 @@ bool AlsaAdapter::open()
 
 		
 
-			if (snd_rawmidi_open(NULL, midiport_external,"hw:2,0,0", SND_RAWMIDI_SYNC) < 0) //skal det vaere sync eller append eller en anden?
+			if (snd_rawmidi_open(NULL, &midiport_external,"hw:2,0,0", SND_RAWMIDI_SYNC) < 0) //skal det vaere sync eller append eller en anden?
 			{
 				cout << "Error opening external MIDI device" << endl;
 				return false;
@@ -79,7 +79,7 @@ bool AlsaAdapter::open()
 
 		case 3	:
 
-			if (snd_rawmidi_open(NULL, midiport_external,"hw:2,0,0", SND_RAWMIDI_SYNC) < 0) //skal det vaere sync eller append eller en anden?
+			if (snd_rawmidi_open(NULL, &midiport_external,"hw:2,0,0", SND_RAWMIDI_SYNC) < 0) //skal det vaere sync eller append eller en anden?
 			{
 				cout << "Error opening external MIDI device" << endl;
 				return false;
@@ -87,7 +87,7 @@ bool AlsaAdapter::open()
 
 			cout << "external midi opened" << endl;
 
-			if (snd_rawmidi_open(NULL, midiport_internal,"hw:1,0,0", SND_RAWMIDI_SYNC) < 0) //skal det vaere sync eller append eller en anden?
+			if (snd_rawmidi_open(NULL, &midiport_internal,"hw:1,0,0", SND_RAWMIDI_SYNC) < 0) //skal det vaere sync eller append eller en anden?
 			{
 				cout << "Error opening internal MIDI device" << endl;
 				return false;
@@ -99,7 +99,7 @@ bool AlsaAdapter::open()
 
 		default 		:
 
-			if (snd_rawmidi_open(NULL, midiport_internal,"hw:1,0,0", SND_RAWMIDI_SYNC) < 0) //skal det vaere sync eller append eller en anden?
+			if (snd_rawmidi_open(NULL, &midiport_internal,"hw:1,0,0", SND_RAWMIDI_SYNC) < 0) //skal det vaere sync eller append eller en anden?
 			{
 				cout << "Error opening internal MIDI device" << endl;
 				return false;

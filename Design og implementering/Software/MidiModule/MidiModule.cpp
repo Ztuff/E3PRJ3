@@ -72,7 +72,7 @@ void MidiModule::eventDispatcher()
 	 			BR3K_error(-1, "MidiModule eventDispatch received unknown type.\n");
 	 			break;
 	 	}
-	 	delete msgPtr;
+	 	//if(msgPtr != NULL) delete msgPtr;
 	 }
 	 
 	 return;
@@ -129,7 +129,7 @@ void MidiModule::handleDataMsg(DataMsg* msg)
 
 	midiSignalVector_[0].print();
 	
-	
+	cout << "Size of signalVector: " << midiSignalVector_.size() << endl;
 	alsaAdapter_->send(midiSignalVector_);		
 }
 

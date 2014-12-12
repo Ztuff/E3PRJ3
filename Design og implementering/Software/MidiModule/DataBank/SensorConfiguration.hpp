@@ -18,15 +18,14 @@ class SensorConfiguration
 								MappingScheme mScheme
 								//SoundPack sound,
 								);
-		~SensorConfiguration();												//destructot
-		SensorConfiguration(const SensorConfiguration &);					//copy constructor
-		const SensorConfiguration &operator=(const SensorConfiguration &);	// assignment operator
+		~SensorConfiguration();
 
 		/*----- GET-SET METODER -----*/
-		string getName() const;
-		int getSensorID() const;
-		char getAxis() const;
-		MappingScheme getMScheme() const;
+		string getName();
+		int getSensorID();
+		char getAxis();
+		MappingScheme& getMScheme();
+		int getChannel() const;
 		//SoundPack getSound();
 		void setName(string name);
 		void setSensorID(int sensorID);
@@ -40,6 +39,7 @@ class SensorConfiguration
 		char axis_;
 		MappingScheme mScheme_;
 		//SoundPack sound_;
+		int channel_;
 	
 };
 

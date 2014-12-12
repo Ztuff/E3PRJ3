@@ -20,6 +20,12 @@ struct DataMsg: public Message
 		{
 			reset();
 		}
+		
+		~DataMsg()
+		{
+			
+		}
+			
   
 		void reset()
 		{
@@ -58,8 +64,9 @@ struct DataMsg: public Message
 		  	return dataArray_[i];
 		  }
 		  
-	private:
-		Data dataArray_[MAX_SENSORS];
+		  Data dataArray_[MAX_SENSORS];
+		  private:
+		  
 };
 
 #endif
