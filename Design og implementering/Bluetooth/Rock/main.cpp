@@ -6,9 +6,6 @@ using namespace std;
 
 int main()
 {
-  Receiver rcv;  for(;;)
-  {
-    rcv.receive();
-    sleep( 1 );
-  }
+  Receiver rcv;
+  rcv.start( 10000 );
 }

@@ -11,7 +11,8 @@
 
 using namespace std;
 
-Receiver::Receiver( /*MsgQueue* contrQ, MsgQueue* midiQ*/ )
+Receiver::Receiver( /*MsgQueue* contrQ,*/ MsgQueue* midiQ )
+: midiQ_( midiQ )
 {
   connect();
   /*msgQs msgQs_ = { contrQ, midiQ };
@@ -42,7 +43,7 @@ void Receiver::connect()
   //                      immediately with a failure status if the output can't be written immediately.
   //
   //  O_NOCTTY - When set and path identifies a terminal device, open() shall not cause the terminal device to become the controlling terminal for the process.
-  uart0_filestream_ = open( "/dev/ttyAMA0", O_RDONLY | O_NOCTTY | O_NDELAY );    //Open in non blocking read mode
+  uart0_filestream_ = open( "/dev/ttyAMA0", O_RDONLY | O_NOCTTY & ~O_NDELAY & ~O_NONBLOCK );    //Open in blocking read-only mode
   if ( uart0_filestream_ == -1 )
   {
     //ERROR - CAN'T OPEN SERIAL PORT
@@ -147,6 +148,9 @@ void Receiver::receive()
         // Husk sidste ID
         lastID_ = rx_buffer[ 0 ];*/
         
+        // Opret dataobjekt med dynamisk hukommelse
+        DataMsg* allData = new DataMsg;
+        
         // Nulstil data
         allData.reset();
           
@@ -154,12 +158,14 @@ void Receiver::receive()
         allData.pack( rx_buffer );
         
         // Til test: Udskriv data-struct som pakket
-        cout << endl << "ID: " << rx_buffer[ 1 ] - 1 << endl
+        /*cout << endl << "ID: " << rx_buffer[ 1 ] - 1 << endl
           << "x value: " << ( int )( allData.dataArray_[ rx_buffer[ 1 ] - 1 ].x )
           << ", y value: " << ( int )( allData.dataArray_[ rx_buffer[ 1 ] - 1 ].y )
           << ", z value: " << ( int )( allData.dataArray_[ rx_buffer[ 1 ] - 1 ].z ) << endl;
         
-        cout << endl << "----------------------------------------------" << endl << endl;
+        cout << endl << "----------------------------------------------" << endl << endl;*/
+        
+        midiQ_->send( DATA_ARRAY, allData );
       }
       
 /*      else if( rx_buffer[ 0 ] == 0xF0 ) // Hvis 0xF0 er preset-startbit'en
@@ -168,4 +174,10 @@ void Receiver::receive()
       }*/
     }
   }
+}
+
+void Receiver::start(unsigned long loops )
+{
+  for( int i = 0; i < loops; i++ )
+    Receiver::receive();
 }

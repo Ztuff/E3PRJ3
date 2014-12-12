@@ -8,10 +8,11 @@
 class Receiver
 {
 public:
-  Receiver( /*MsgQueue* contrQ, MsgQueue* midiQ*/ );
+  Receiver( /*MsgQueue* contrQ,*/ MsgQueue* midiQ );
   ~Receiver();
 //void send();
   void receive();
+  void start( unsigned long loops );
 //MsgQueue* getMsgQueue();
   
 private:
@@ -20,10 +21,7 @@ private:
   int uart0_filestream_;
   unsigned char lastID_;
   
-  
-  DataMsg allData;
-  
-  
+  MsgQueue* midiQ_;
   
   /*MsgQueue msgQ_( 10 );
   pthread_t btThr_;
