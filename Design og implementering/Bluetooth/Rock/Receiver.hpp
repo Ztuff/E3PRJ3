@@ -4,8 +4,6 @@
 #include "DataMsg.hpp"
 
 #define MAX_RECEIVED_BYTES 66
-#define MAX_SENSORS 16
-
 
 class Receiver
 {
@@ -23,7 +21,7 @@ private:
   unsigned char lastID_;
   
   
-  AllData allData;
+  DataMsg allData;
   
   
   

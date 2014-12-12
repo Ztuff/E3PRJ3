@@ -25,10 +25,10 @@ struct MidiSignal
 
 	void print()
 	{
-		std::cout<<  "     channel_ = " << std::hex << channel_
-				<< "\n     command_ = " << std::hex << command_
-				<< "\n     param1_ = "<< std::hex << param1_
-				<< "\n     param2_ = "<< std::hex << param2_ << std::endl;
+		std::cout<<  "     channel_ = " << std::dec << channel_
+				<< "\n     command_ = " << std::dec << command_
+				<< "\n     param1_ = "<< std::dec << param1_
+				<< "\n     param2_ = "<< std::dec << param2_ << std::endl;
 	}
 };
 
