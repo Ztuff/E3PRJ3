@@ -15,31 +15,29 @@ class SensorConfiguration
 		SensorConfiguration( 	string name,
 								int sensorID,
 								char axis,
-								MappingScheme mScheme
+								MappingScheme & mScheme
 								//SoundPack sound,
 								);
-		~SensorConfiguration();
+		//~SensorConfiguration();
 
 		/*----- GET-SET METODER -----*/
-		string getName();
-		int getSensorID();
-		char getAxis();
-		MappingScheme& getMScheme();
-		int getChannel() const;
+		string getName() const;
+		int getSensorID() const;
+		char getAxis() const;
+		MappingScheme& getMScheme() const;
 		//SoundPack getSound();
 		void setName(string name);
 		void setSensorID(int sensorID);
 		void setAxis(char axis);
-		void setMappingScheme(MappingScheme mScheme);
+		void setMappingScheme(MappingScheme & mScheme);
 		//void setSoundPack(SoundPack sound);
 		
 	private:
 		string name_;
 		int sensorID_;
 		char axis_;
-		MappingScheme mScheme_;
+		MappingScheme &mScheme_;
 		//SoundPack sound_;
-		int channel_;
 	
 };
 

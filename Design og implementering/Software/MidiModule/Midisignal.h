@@ -1,10 +1,10 @@
 #ifndef MIDISIGNAL_H_
 #define MIDISIGNAL_H_
 
-#define NOTEOFF 0x80
-#define NOTEON 0x90
-#define AFTERTOUCH 0xA0
-#define CONTIUOUSCONTROLLER 0xB0
+#define NOTEOFF 0x8
+#define NOTEON 0x9
+#define AFTERTOUCH 0xA
+#define CONTIUOUSCONTROLLER 0xB
 
 #include <string>
 #include <iostream>
