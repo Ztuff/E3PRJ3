@@ -100,12 +100,12 @@ bool MappingScheme::mapKey(int data, MidiSignal & signal)
 		cout << "Data post quantizeDiatonic: " << data<< endl;
 	
 	if(signal.param1_ != data)
-	{
-		if(data != signal.param1_)
-			signal.command_ = NOTEOFF;		//Note Off
-		
-		signal.param1_ = data;	//set key value hvis forrige tone er slukket.
-	}
+		signal.command_ = NOTEOFF;	
+	else
+		signal.command_ = NOTEON;	
+	
+	signal.param1_ = data;	//set key value hvis forrige tone er slukket.
+
 	return 1;
 }
 
@@ -123,7 +123,7 @@ bool MappingScheme::mapVelocity(int data, MidiSignal & signal)
 		signal.command_ = NOTEON;	
 	else if((signal.command_== NOTEON) && (data > velocity_.lowerThreshold_))	//Hvis Note-On og data er højere end lowerThreshold
 		signal.command_ = AFTERTOUCH;	
-	else if((signal.command_== NOTEON) && (data < velocity_.lowerThreshold_))	//Hvis Note-On og data er lavere end lowerThreshold
+	else if(((signal.command_== NOTEON)||(signal.command_== AFTERTOUCH)) && (data < velocity_.lowerThreshold_))	//Hvis Note-On og data er lavere end lowerThreshold
 		signal.command_ = NOTEOFF;	
 
 	return 1;
@@ -148,7 +148,7 @@ bool MappingScheme::mapCCAbs(int data, MidiSignal & signal)
 	}
 				
 	/*** Set MidiSignal ***/
-	signal.command_ = CONTIUOUSCONTROLLER;	//Set command
+	signal.command_ = CONTROLCHANGE;	//Set command
 	signal.param1_ = CC_.cNum_;				//Set CC#
 	signal.param2_ = data;					//Set controller value
 	
@@ -184,7 +184,7 @@ bool MappingScheme::mapCCRel(int data, MidiSignal & signal)
 		cout << "Strategy post scaling: " << strategy << endl;												
 	
 	/*** Set MidiSignal ***/
-	signal.command_ = CONTIUOUSCONTROLLER;			//Set command
+	signal.command_ = CONTROLCHANGE;			//Set command
 	signal.param1_ = CC_.cNum_;						//Set CC#
 	
 	if(((signal.param2_ + strategy) <= CC_.maxVal_) && ((signal.param2_ + strategy)>= CC_.minVal_))
