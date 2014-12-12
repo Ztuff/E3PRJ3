@@ -67,7 +67,7 @@ int main()
         
         sendDataArray(); 
         CyDelay(7);
-     
+        
     }     
             
 		

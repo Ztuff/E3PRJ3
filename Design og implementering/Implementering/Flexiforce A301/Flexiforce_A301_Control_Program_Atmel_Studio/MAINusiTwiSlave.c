@@ -35,7 +35,7 @@
 // Local variables
 uint8_t slaveadress = 2;	// Static slave address set to 2
 uint8_t adcArray[3];		// Register for Device ID [0] and ADC data [1..2]
-
+unit8_t ADC_flag = 1;
 
 // Prototypes
 void InitADC(void);
@@ -43,9 +43,8 @@ void InitADC(void);
 // ISR definition
 ISR (ADC_vect)
 {
-	// Set ADC result in
-	adcArray[1] = ADCL;
-	adcArray[2] = ADCH;
+	// Set ADC_flag
+	ADC_flag = 1;
 }
 
 
@@ -66,7 +65,15 @@ int main(void)
 	//********** Main functions **********
 	while(1)
 	{
-				
+		
+		if(!ADC_flag)
+		{
+		adcArray[1] = ADCL;
+		adcArray[2] = ADCH;
+		ADC_flag = 0;
+		}
+
+		
 		while(!usiTwiDataInReceiveBuffer());		// Wait for master
 		usiTwiTransmitByte(adcArray[0]);	// Send sensor ID
 		

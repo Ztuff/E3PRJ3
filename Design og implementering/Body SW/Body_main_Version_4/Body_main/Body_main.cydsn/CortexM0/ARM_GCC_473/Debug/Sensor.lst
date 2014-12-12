@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccC7h0eh.s 			page 1
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\cc477o6h.s 			page 1
 
 
    1              		.cpu cortex-m0
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccC7h0eh.s 			page 1
   23:.\Sensor.c    **** {
   33              		.loc 1 23 0
   34              		.cfi_startproc
-ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccC7h0eh.s 			page 2
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\cc477o6h.s 			page 2
 
 
   35 0000 80B5     		push	{r7, lr}
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccC7h0eh.s 			page 1
   80 000e 1B78     		ldrb	r3, [r3]
   81 0010 1A1C     		mov	r2, r3
   82 0012 1549     		ldr	r1, .L3+4
-ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccC7h0eh.s 			page 3
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\cc477o6h.s 			page 3
 
 
   83 0014 131C     		mov	r3, r2
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccC7h0eh.s 			page 1
  131 0068 00000000 		.word	sensArray
  132              		.cfi_endproc
  133              	.LFE34:
-ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccC7h0eh.s 			page 4
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\cc477o6h.s 			page 4
 
 
  134              		.size	setSensArray, .-setSensArray
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccC7h0eh.s 			page 1
   48:.\Sensor.c    **** 	}
   49:.\Sensor.c    **** 	
   50:.\Sensor.c    **** }
-ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccC7h0eh.s 			page 5
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\cc477o6h.s 			page 5
 
 
  177              		.loc 1 50 0 is_stmt 1
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccC7h0eh.s 			page 1
  222 001a 0E33     		add	r3, r3, #14
  223 001c 1B88     		ldrh	r3, [r3]
  224 001e D318     		add	r3, r2, r3
-ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccC7h0eh.s 			page 6
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\cc477o6h.s 			page 6
 
 
  225 0020 9AB2     		uxth	r2, r3
@@ -352,19 +352,15 @@ ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccC7h0eh.s 			page 1
  265 0068 0A33     		add	r3, r3, #10
  266 006a 1A80     		strh	r2, [r3]
   68:.\Sensor.c    ****     
-  69:.\Sensor.c    ****    
-  70:.\Sensor.c    ****     
-  71:.\Sensor.c    ****    
-  72:.\Sensor.c    ****  
-  73:.\Sensor.c    ****     
-  74:.\Sensor.c    ****     //conversion from int16 to uint8 which is the scale midi can receive
-ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccC7h0eh.s 			page 7
-
-
-  75:.\Sensor.c    ****     x1 = (x+512)/8; 
- 267              		.loc 1 75 0
+  69:.\Sensor.c    ****     
+  70:.\Sensor.c    ****     //conversion from int16 to uint8 which is the scale midi can receive
+  71:.\Sensor.c    ****     x1 = (x+512)/8; 
+ 267              		.loc 1 71 0
  268 006c 3B1C     		mov	r3, r7
  269 006e 0E33     		add	r3, r3, #14
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\cc477o6h.s 			page 7
+
+
  270 0070 0022     		mov	r2, #0
  271 0072 9B5E     		ldrsh	r3, [r3, r2]
  272 0074 8022     		mov	r2, #128
@@ -379,8 +375,8 @@ ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccC7h0eh.s 			page 1
  281 0084 3B1C     		mov	r3, r7
  282 0086 0933     		add	r3, r3, #9
  283 0088 1A70     		strb	r2, [r3]
-  76:.\Sensor.c    ****     y1 = (y+512)/8;
- 284              		.loc 1 76 0
+  72:.\Sensor.c    ****     y1 = (y+512)/8;
+ 284              		.loc 1 72 0
  285 008a 3B1C     		mov	r3, r7
  286 008c 0C33     		add	r3, r3, #12
  287 008e 0022     		mov	r2, #0
@@ -397,8 +393,8 @@ ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccC7h0eh.s 			page 1
  298 00a2 3B1C     		mov	r3, r7
  299 00a4 0833     		add	r3, r3, #8
  300 00a6 1A70     		strb	r2, [r3]
-  77:.\Sensor.c    ****     z1 = (z+512)/8;
- 301              		.loc 1 77 0
+  73:.\Sensor.c    ****     z1 = (z+512)/8;
+ 301              		.loc 1 73 0
  302 00a8 3B1C     		mov	r3, r7
  303 00aa 0A33     		add	r3, r3, #10
  304 00ac 0022     		mov	r2, #0
@@ -414,26 +410,26 @@ ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccC7h0eh.s 			page 1
  314 00be 1A1C     		mov	r2, r3
  315 00c0 FB1D     		add	r3, r7, #7
  316 00c2 1A70     		strb	r2, [r3]
-  78:.\Sensor.c    ****     
-  79:.\Sensor.c    ****     setdataArray(ACC1_ID, x1, y1, z1);
- 317              		.loc 1 79 0
+  74:.\Sensor.c    ****     
+  75:.\Sensor.c    ****     setdataArray(ACC1_ID, x1, y1, z1);
+ 317              		.loc 1 75 0
  318 00c4 3B1C     		mov	r3, r7
-ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccC7h0eh.s 			page 8
-
-
  319 00c6 0933     		add	r3, r3, #9
  320 00c8 1978     		ldrb	r1, [r3]
  321 00ca 3B1C     		mov	r3, r7
  322 00cc 0833     		add	r3, r3, #8
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\cc477o6h.s 			page 8
+
+
  323 00ce 1A78     		ldrb	r2, [r3]
  324 00d0 FB1D     		add	r3, r7, #7
  325 00d2 1B78     		ldrb	r3, [r3]
  326 00d4 0020     		mov	r0, #0
  327 00d6 FFF7FEFF 		bl	setdataArray
-  80:.\Sensor.c    ****     
-  81:.\Sensor.c    ****     
-  82:.\Sensor.c    **** }
- 328              		.loc 1 82 0
+  76:.\Sensor.c    ****     
+  77:.\Sensor.c    ****     
+  78:.\Sensor.c    **** }
+ 328              		.loc 1 78 0
  329 00da BD46     		mov	sp, r7
  330 00dc 04B0     		add	sp, sp, #16
  331              		@ sp needed for prologue
@@ -453,12 +449,12 @@ ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccC7h0eh.s 			page 1
  345              		.type	readI2C, %function
  346              	readI2C:
  347              	.LFB37:
-  83:.\Sensor.c    **** 
-  84:.\Sensor.c    **** 
-  85:.\Sensor.c    **** 
-  86:.\Sensor.c    **** void readI2C(int numOfReg)
-  87:.\Sensor.c    **** {
- 348              		.loc 1 87 0
+  79:.\Sensor.c    **** 
+  80:.\Sensor.c    **** 
+  81:.\Sensor.c    **** 
+  82:.\Sensor.c    **** void readI2C(int numOfReg)
+  83:.\Sensor.c    **** {
+ 348              		.loc 1 83 0
  349              		.cfi_startproc
  350 0000 80B5     		push	{r7, lr}
  351              	.LCFI11:
@@ -472,19 +468,19 @@ ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccC7h0eh.s 			page 1
  359              	.LCFI13:
  360              		.cfi_def_cfa_register 7
  361 0006 7860     		str	r0, [r7, #4]
-  88:.\Sensor.c    ****    	uint8 rawData; 
-  89:.\Sensor.c    ****     
-  90:.\Sensor.c    **** 	if (I2C_1_I2CMasterSendStart(sensArray[numOfReg][0], I2C_1_I2C_WRITE_XFER_MODE) == I2C_1_I2C_MSTR_
- 362              		.loc 1 90 0
+  84:.\Sensor.c    ****    	uint8 rawData; 
+  85:.\Sensor.c    ****     
+  86:.\Sensor.c    **** 	if (I2C_1_I2CMasterSendStart(sensArray[numOfReg][0], I2C_1_I2C_WRITE_XFER_MODE) == I2C_1_I2C_MSTR_
+ 362              		.loc 1 86 0
  363 0008 2149     		ldr	r1, .L18
  364 000a 7A68     		ldr	r2, [r7, #4]
-ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccC7h0eh.s 			page 9
-
-
  365 000c 131C     		mov	r3, r2
  366 000e 5B00     		lsl	r3, r3, #1
  367 0010 9B18     		add	r3, r3, r2
  368 0012 9B00     		lsl	r3, r3, #2
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\cc477o6h.s 			page 9
+
+
  369 0014 5B58     		ldr	r3, [r3, r1]
  370 0016 181C     		mov	r0, r3
  371 0018 0021     		mov	r1, #0
@@ -492,9 +488,9 @@ ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccC7h0eh.s 			page 1
  373 001e 031C     		mov	r3, r0
  374 0020 002B     		cmp	r3, #0
  375 0022 31D1     		bne	.L16
-  91:.\Sensor.c    ****     { 
-  92:.\Sensor.c    ****         if(I2C_1_I2CMasterWriteByte(sensArray[numOfReg][1]) == I2C_1_I2C_MSTR_NO_ERROR)
- 376              		.loc 1 92 0
+  87:.\Sensor.c    ****     { 
+  88:.\Sensor.c    ****         if(I2C_1_I2CMasterWriteByte(sensArray[numOfReg][1]) == I2C_1_I2C_MSTR_NO_ERROR)
+ 376              		.loc 1 88 0
  377 0024 1A49     		ldr	r1, .L18
  378 0026 7A68     		ldr	r2, [r7, #4]
  379 0028 131C     		mov	r3, r2
@@ -509,9 +505,9 @@ ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccC7h0eh.s 			page 1
  388 003c 031C     		mov	r3, r0
  389 003e 002B     		cmp	r3, #0
  390 0040 22D1     		bne	.L16
-  93:.\Sensor.c    **** 		{
-  94:.\Sensor.c    ****             if(I2C_1_I2CMasterSendRestart(sensArray[numOfReg][0], I2C_1_I2C_READ_XFER_MODE) == I2C_
- 391              		.loc 1 94 0
+  89:.\Sensor.c    **** 		{
+  90:.\Sensor.c    ****             if(I2C_1_I2CMasterSendRestart(sensArray[numOfReg][0], I2C_1_I2C_READ_XFER_MODE) == I2C_
+ 391              		.loc 1 90 0
  392 0042 1349     		ldr	r1, .L18
  393 0044 7A68     		ldr	r2, [r7, #4]
  394 0046 131C     		mov	r3, r2
@@ -525,26 +521,26 @@ ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccC7h0eh.s 			page 1
  402 0058 031C     		mov	r3, r0
  403 005a 002B     		cmp	r3, #0
  404 005c 14D1     		bne	.L16
-  95:.\Sensor.c    **** 			{
-  96:.\Sensor.c    ****                 rawData = I2C_1_I2CMasterReadByte(I2C_1_I2C_NAK_DATA);
- 405              		.loc 1 96 0
+  91:.\Sensor.c    **** 			{
+  92:.\Sensor.c    ****                 rawData = I2C_1_I2CMasterReadByte(I2C_1_I2C_NAK_DATA);
+ 405              		.loc 1 92 0
  406 005e 0120     		mov	r0, #1
  407 0060 FFF7FEFF 		bl	I2C_1_I2CMasterReadByte
  408 0064 021C     		mov	r2, r0
  409 0066 3B1C     		mov	r3, r7
  410 0068 0F33     		add	r3, r3, #15
  411 006a 1A70     		strb	r2, [r3]
-  97:.\Sensor.c    ****                 I2C_1_I2CMasterSendStop();
- 412              		.loc 1 97 0
+  93:.\Sensor.c    ****                 I2C_1_I2CMasterSendStop();
+ 412              		.loc 1 93 0
  413 006c FFF7FEFF 		bl	I2C_1_I2CMasterSendStop
-  98:.\Sensor.c    **** 				
-ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccC7h0eh.s 			page 10
-
-
-  99:.\Sensor.c    ****                 
- 100:.\Sensor.c    **** 				sensArray[numOfReg][2] = rawData; // gemmer rawData på den tilhørende plads i sensArray. 
- 414              		.loc 1 100 0
+  94:.\Sensor.c    **** 				
+  95:.\Sensor.c    ****                 
+  96:.\Sensor.c    **** 				sensArray[numOfReg][2] = rawData; // gemmer rawData på den tilhørende plads i sensArray. 
+ 414              		.loc 1 96 0
  415 0070 3B1C     		mov	r3, r7
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\cc477o6h.s 			page 10
+
+
  416 0072 0F33     		add	r3, r3, #15
  417 0074 1978     		ldrb	r1, [r3]
  418 0076 0648     		ldr	r0, .L18
@@ -557,13 +553,12 @@ ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccC7h0eh.s 			page 1
  425 0084 0833     		add	r3, r3, #8
  426 0086 1960     		str	r1, [r3]
  427              	.L16:
- 101:.\Sensor.c    **** 			}
- 102:.\Sensor.c    **** 		}
- 103:.\Sensor.c    **** 	}
- 104:.\Sensor.c    **** 				
- 105:.\Sensor.c    **** 	
- 106:.\Sensor.c    **** }
- 428              		.loc 1 106 0
+  97:.\Sensor.c    **** 			}
+  98:.\Sensor.c    **** 		}
+  99:.\Sensor.c    **** 	}
+ 100:.\Sensor.c    **** 				
+ 101:.\Sensor.c    **** }
+ 428              		.loc 1 101 0
  429 0088 BD46     		mov	sp, r7
  430 008a 04B0     		add	sp, sp, #16
  431              		@ sp needed for prologue
@@ -583,11 +578,11 @@ ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccC7h0eh.s 			page 1
  445              		.type	handleI2CError, %function
  446              	handleI2CError:
  447              	.LFB38:
- 107:.\Sensor.c    **** 
- 108:.\Sensor.c    **** 
- 109:.\Sensor.c    **** void handleI2CError(void)
- 110:.\Sensor.c    **** {
- 448              		.loc 1 110 0
+ 102:.\Sensor.c    **** 
+ 103:.\Sensor.c    **** 
+ 104:.\Sensor.c    **** void handleI2CError(void)
+ 105:.\Sensor.c    **** {
+ 448              		.loc 1 105 0
  449              		.cfi_startproc
  450 0000 80B5     		push	{r7, lr}
  451              	.LCFI14:
@@ -597,15 +592,15 @@ ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccC7h0eh.s 			page 1
  455 0002 00AF     		add	r7, sp, #0
  456              	.LCFI15:
  457              		.cfi_def_cfa_register 7
- 111:.\Sensor.c    ****     I2C_1_I2CMasterSendStop();	 
-ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccC7h0eh.s 			page 11
-
-
- 458              		.loc 1 111 0
+ 106:.\Sensor.c    ****     I2C_1_I2CMasterSendStop();	 
+ 458              		.loc 1 106 0
  459 0004 FFF7FEFF 		bl	I2C_1_I2CMasterSendStop
- 112:.\Sensor.c    **** }
- 460              		.loc 1 112 0
+ 107:.\Sensor.c    **** }
+ 460              		.loc 1 107 0
  461 0008 BD46     		mov	sp, r7
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\cc477o6h.s 			page 11
+
+
  462              		@ sp needed for prologue
  463 000a 80BD     		pop	{r7, pc}
  464              		.cfi_endproc
@@ -658,14 +653,14 @@ ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccC7h0eh.s 			page 1
  511 0057 02       		.uleb128 0x2
  512 0058 04       		.byte	0x4
  513 0059 07       		.byte	0x7
-ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccC7h0eh.s 			page 12
-
-
  514 005a DF000000 		.4byte	.LASF5
  515 005e 02       		.uleb128 0x2
  516 005f 08       		.byte	0x8
  517 0060 05       		.byte	0x5
  518 0061 5B010000 		.4byte	.LASF6
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\cc477o6h.s 			page 12
+
+
  519 0065 02       		.uleb128 0x2
  520 0066 08       		.byte	0x8
  521 0067 07       		.byte	0x7
@@ -718,14 +713,14 @@ ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccC7h0eh.s 			page 1
  568 00c3 01       		.byte	0x1
  569 00c4 6E010000 		.4byte	.LASF19
  570 00c8 01       		.byte	0x1
-ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccC7h0eh.s 			page 13
-
-
  571 00c9 1E       		.byte	0x1e
  572 00ca 01       		.byte	0x1
  573 00cb 00000000 		.4byte	.LFB34
  574 00cf 6C000000 		.4byte	.LFE34
  575 00d3 2C000000 		.4byte	.LLST1
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\cc477o6h.s 			page 13
+
+
  576 00d7 01       		.byte	0x1
  577 00d8 07010000 		.4byte	0x107
  578 00dc 07       		.uleb128 0x7
@@ -778,14 +773,14 @@ ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccC7h0eh.s 			page 1
  625 0132 BE000000 		.4byte	.LASF21
  626 0136 01       		.byte	0x1
  627 0137 34       		.byte	0x34
-ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccC7h0eh.s 			page 14
-
-
  628 0138 01       		.byte	0x1
  629 0139 00000000 		.4byte	.LFB36
  630 013d E4000000 		.4byte	.LFE36
  631 0141 9C000000 		.4byte	.LLST3
  632 0145 01       		.byte	0x1
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\cc477o6h.s 			page 14
+
+
  633 0146 96010000 		.4byte	0x196
  634 014a 0A       		.uleb128 0xa
  635 014b 7800     		.ascii	"x\000"
@@ -838,14 +833,14 @@ ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccC7h0eh.s 			page 1
  682 0195 00       		.byte	0
  683 0196 08       		.uleb128 0x8
  684 0197 01       		.byte	0x1
-ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccC7h0eh.s 			page 15
-
-
  685 0198 B0000000 		.4byte	.LASF23
  686 019c 01       		.byte	0x1
- 687 019d 56       		.byte	0x56
+ 687 019d 52       		.byte	0x52
  688 019e 01       		.byte	0x1
  689 019f 00000000 		.4byte	.LFB37
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\cc477o6h.s 			page 15
+
+
  690 01a3 94000000 		.4byte	.LFE37
  691 01a7 D4000000 		.4byte	.LLST4
  692 01ab 01       		.byte	0x1
@@ -853,7 +848,7 @@ ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccC7h0eh.s 			page 1
  694 01b0 07       		.uleb128 0x7
  695 01b1 12020000 		.4byte	.LASF22
  696 01b5 01       		.byte	0x1
- 697 01b6 56       		.byte	0x56
+ 697 01b6 52       		.byte	0x52
  698 01b7 6C000000 		.4byte	0x6c
  699 01bb 02       		.byte	0x2
  700 01bc 91       		.byte	0x91
@@ -861,7 +856,7 @@ ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccC7h0eh.s 			page 1
  702 01be 09       		.uleb128 0x9
  703 01bf EC010000 		.4byte	.LASF24
  704 01c3 01       		.byte	0x1
- 705 01c4 58       		.byte	0x58
+ 705 01c4 54       		.byte	0x54
  706 01c5 7A000000 		.4byte	0x7a
  707 01c9 02       		.byte	0x2
  708 01ca 91       		.byte	0x91
@@ -871,7 +866,7 @@ ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccC7h0eh.s 			page 1
  712 01ce 01       		.byte	0x1
  713 01cf FE000000 		.4byte	.LASF26
  714 01d3 01       		.byte	0x1
- 715 01d4 6D       		.byte	0x6d
+ 715 01d4 68       		.byte	0x68
  716 01d5 01       		.byte	0x1
  717 01d6 00000000 		.4byte	.LFB38
  718 01da 0C000000 		.4byte	.LFE38
@@ -898,14 +893,14 @@ ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccC7h0eh.s 			page 1
  739 020a 00       		.byte	0
  740 020b 0B       		.uleb128 0xb
  741 020c 1B020000 		.4byte	.LASF28
-ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccC7h0eh.s 			page 16
-
-
  742 0210 01       		.byte	0x1
  743 0211 13       		.byte	0x13
  744 0212 F5010000 		.4byte	0x1f5
  745 0216 01       		.byte	0x1
  746 0217 05       		.byte	0x5
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\cc477o6h.s 			page 16
+
+
  747 0218 03       		.byte	0x3
  748 0219 00000000 		.4byte	sensArray
  749 021d 00       		.byte	0
@@ -958,14 +953,14 @@ ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccC7h0eh.s 			page 1
  796 002c 00       		.byte	0
  797 002d 04       		.uleb128 0x4
  798 002e 24       		.uleb128 0x24
-ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccC7h0eh.s 			page 17
-
-
  799 002f 00       		.byte	0
  800 0030 0B       		.uleb128 0xb
  801 0031 0B       		.uleb128 0xb
  802 0032 3E       		.uleb128 0x3e
  803 0033 0B       		.uleb128 0xb
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\cc477o6h.s 			page 17
+
+
  804 0034 03       		.uleb128 0x3
  805 0035 08       		.uleb128 0x8
  806 0036 00       		.byte	0
@@ -1018,14 +1013,14 @@ ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccC7h0eh.s 			page 1
  853 0067 13       		.uleb128 0x13
  854 0068 00       		.byte	0
  855 0069 00       		.byte	0
-ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccC7h0eh.s 			page 18
-
-
  856 006a 07       		.uleb128 0x7
  857 006b 05       		.uleb128 0x5
  858 006c 00       		.byte	0
  859 006d 03       		.uleb128 0x3
  860 006e 0E       		.uleb128 0xe
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\cc477o6h.s 			page 18
+
+
  861 006f 3A       		.uleb128 0x3a
  862 0070 0B       		.uleb128 0xb
  863 0071 3B       		.uleb128 0x3b
@@ -1078,14 +1073,14 @@ ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccC7h0eh.s 			page 1
  910 00a1 00       		.byte	0
  911 00a2 0A       		.uleb128 0xa
  912 00a3 34       		.uleb128 0x34
-ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccC7h0eh.s 			page 19
-
-
  913 00a4 00       		.byte	0
  914 00a5 03       		.uleb128 0x3
  915 00a6 08       		.uleb128 0x8
  916 00a7 3A       		.uleb128 0x3a
  917 00a8 0B       		.uleb128 0xb
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\cc477o6h.s 			page 19
+
+
  918 00a9 3B       		.uleb128 0x3b
  919 00aa 0B       		.uleb128 0xb
  920 00ab 49       		.uleb128 0x49
@@ -1138,14 +1133,14 @@ ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccC7h0eh.s 			page 1
  967 0008 0200     		.2byte	0x2
  968 000a 7D       		.byte	0x7d
  969 000b 00       		.sleb128 0
-ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccC7h0eh.s 			page 20
-
-
  970 000c 02000000 		.4byte	.LCFI0
  971 0010 04000000 		.4byte	.LCFI1
  972 0014 0200     		.2byte	0x2
  973 0016 7D       		.byte	0x7d
  974 0017 08       		.sleb128 8
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\cc477o6h.s 			page 20
+
+
  975 0018 04000000 		.4byte	.LCFI1
  976 001c 10000000 		.4byte	.LFE33
  977 0020 0200     		.2byte	0x2
@@ -1198,14 +1193,14 @@ ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccC7h0eh.s 			page 1
  1024 0092 77       		.byte	0x77
  1025 0093 10       		.sleb128 16
  1026 0094 00000000 		.4byte	0
-ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccC7h0eh.s 			page 21
-
-
  1027 0098 00000000 		.4byte	0
  1028              	.LLST3:
  1029 009c 00000000 		.4byte	.LFB36
  1030 00a0 02000000 		.4byte	.LCFI8
  1031 00a4 0200     		.2byte	0x2
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\cc477o6h.s 			page 21
+
+
  1032 00a6 7D       		.byte	0x7d
  1033 00a7 00       		.sleb128 0
  1034 00a8 02000000 		.4byte	.LCFI8
@@ -1258,14 +1253,14 @@ ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccC7h0eh.s 			page 1
  1081 011c 04000000 		.4byte	.LCFI15
  1082 0120 0200     		.2byte	0x2
  1083 0122 7D       		.byte	0x7d
-ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccC7h0eh.s 			page 22
-
-
  1084 0123 08       		.sleb128 8
  1085 0124 04000000 		.4byte	.LCFI15
  1086 0128 0C000000 		.4byte	.LFE38
  1087 012c 0200     		.2byte	0x2
  1088 012e 77       		.byte	0x77
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\cc477o6h.s 			page 22
+
+
  1089 012f 08       		.sleb128 8
  1090 0130 00000000 		.4byte	0
  1091 0134 00000000 		.4byte	0
@@ -1318,14 +1313,14 @@ ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccC7h0eh.s 			page 1
  1134 0000 64617461 		.ascii	"dataTarget\000"
  1134      54617267 
  1134      657400
-ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccC7h0eh.s 			page 23
-
-
  1135              	.LASF3:
  1136 000b 73686F72 		.ascii	"short unsigned int\000"
  1136      7420756E 
  1136      7369676E 
  1136      65642069 
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\cc477o6h.s 			page 23
+
+
  1136      6E7400
  1137              	.LASF31:
  1138 001e 433A5C55 		.ascii	"C:\\Users\\Jeppe\\Documents\\Engineer\\3_Semester\\"
@@ -1378,14 +1373,14 @@ ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccC7h0eh.s 			page 1
  1156      3800
  1157              	.LASF13:
  1158 00f7 646F7562 		.ascii	"double\000"
-ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccC7h0eh.s 			page 24
-
-
  1158      6C6500
  1159              	.LASF26:
  1160 00fe 68616E64 		.ascii	"handleI2CError\000"
  1160      6C654932 
  1160      43457272 
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\cc477o6h.s 			page 24
+
+
  1160      6F7200
  1161              	.LASF8:
  1162 010d 756E7369 		.ascii	"unsigned int\000"
@@ -1438,14 +1433,14 @@ ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccC7h0eh.s 			page 1
  1182      7400
  1183              	.LASF27:
  1184 0194 6E756D4F 		.ascii	"numOfRegToRead\000"
-ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccC7h0eh.s 			page 25
-
-
  1184      66526567 
  1184      546F5265 
  1184      616400
  1185              	.LASF29:
  1186 01a3 474E5520 		.ascii	"GNU C 4.7.3 20130312 (release) [ARM/embedded-4_7-br"
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\cc477o6h.s 			page 25
+
+
  1186      4320342E 
  1186      372E3320 
  1186      32303133 
