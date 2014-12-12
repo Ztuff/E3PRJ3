@@ -36,11 +36,11 @@ MappingScheme::	MappingScheme(	string id,
 
 	velocity_.lowerThreshold_=((lowerThreshold < 128 || lowerThreshold >= 0) ? lowerThreshold : 0);
 
-	CC_.cNum_=((cNum < 128 || cNum >= 0) ? cNum : NULL); //set both CCAbs and CCRel 
+	CC_.cNum_=((cNum < 128 || cNum >= 0) ? cNum : 0); //set both CCAbs and CCRel 
 	
-	CC_.minVal_=((minVal < 128 || minVal >= 0) ? minVal : NULL);
+	CC_.minVal_=((minVal < 128 || minVal >= 0) ? minVal : 0);
 	
-	CC_.maxVal_=((maxVal < 128 || maxVal >= 0) ? maxVal : NULL);
+	CC_.maxVal_=((maxVal < 128 || maxVal >= 0) ? maxVal : 0);
 	
 	CC_.speed_ = ((speed == SLOW || speed == MEDIUM || speed == FAST) ? speed : SLOW);
 }
@@ -100,30 +100,30 @@ bool MappingScheme::mapKey(int data, MidiSignal & signal)
 		cout << "Data post quantizeDiatonic: " << data<< endl;
 	
 	if(signal.param1_ != data)
-	{
-		if(data != signal.param1_)
-			signal.command_ = NOTEOFF;		//Note Off
-		
-		signal.param1_ = data;	//set key value hvis forrige tone er slukket.
-	}
+		signal.command_ = NOTEOFF;	
+	else
+		signal.command_ = NOTEON;	
+	
+	signal.param1_ = data;	//set key value hvis forrige tone er slukket.
+
 	return 1;
 }
 
 bool MappingScheme::mapVelocity(int data, MidiSignal & signal)
 {
-	//if(MAPDEBUG)
-	cout << "Inside mapVelocity\n";
+	if(MAPDEBUG)
+		cout << "Inside mapVelocity\n";
 
 	signal.channel_ = channel_;
 	
 	data = ((data > 127) || (data < 0) ? 65 : data);
 	signal.param2_ = data;	//set velocity value
 
-	if((signal.command_== NOTEOFF) && (data > velocity_.lowerThreshold_))		//Hvis Note-Off og data er højere end lowerThreshold
+		if((signal.command_== NOTEOFF) && (data > velocity_.lowerThreshold_))		//Hvis Note-Off og data er højere end lowerThreshold
 		signal.command_ = NOTEON;	
 	else if((signal.command_== NOTEON) && (data > velocity_.lowerThreshold_))	//Hvis Note-On og data er højere end lowerThreshold
 		signal.command_ = AFTERTOUCH;	
-	else if((signal.command_== NOTEON) && (data < velocity_.lowerThreshold_))	//Hvis Note-On og data er lavere end lowerThreshold
+	else if(((signal.command_== NOTEON)||(signal.command_== AFTERTOUCH)) && (data < velocity_.lowerThreshold_))	//Hvis Note-On og data er lavere end lowerThreshold
 		signal.command_ = NOTEOFF;	
 
 	return 1;
