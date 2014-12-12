@@ -12,11 +12,11 @@ int main()
 	/*** Opret DataStruct array Dummy ***/
 	DataMsg myData;
 	
-	for (int i = 50 ; i< 54; ++i)
+	for (int i = 0 ; i< 4; ++i)
 	{
-		myData[i].x = i;
-		myData[i].y = i;
-		myData[i].z = i;
+		myData[i].x = i+50;
+		myData[i].y = i+50;
+		myData[i].z = i+50;
 	}
 	
 		

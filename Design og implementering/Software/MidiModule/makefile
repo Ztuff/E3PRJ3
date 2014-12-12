@@ -33,7 +33,7 @@ ${OBJDIR}/%.o: %.cpp | ${OBJDIR}
 .PHONY: all
 all:  ${EXECUTABLE}	
 ${EXECUTABLE}: ${OBJECTS} ${DEPS}
-	${CXX} -o $@ ${OBJECTS} ${CXXFLAGS}
+	${CXX} -o $@ ${OBJECTS} ${CXXFLAGS} -g
 
 ${OBJDIR}:
 	mkdir -p ${OBJDIR}
