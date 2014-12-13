@@ -13,19 +13,19 @@
 <v>Output</v>
 </TreeKeys>
 <TreeStates>
-<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="Body_main\Body_main\Source Files">
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="Body_main\Body_main\Header Files\SerialUnit.h">
 <ExpandedNodeIds>
 <v>Body_main</v>
 <v>Body_main\Body_main</v>
 <v>Body_main\Body_main\TopDesign.cysch</v>
 <v>Body_main\Body_main\Body_main.cydwr</v>
 <v>Body_main\Body_main\Header Files</v>
-<v>Body_main\Body_main\Header Files\BTUART.h</v>
 <v>Body_main\Body_main\Header Files\Sensor.h</v>
+<v>Body_main\Body_main\Header Files\SerialUnit.h</v>
 <v>Body_main\Body_main\Source Files</v>
-<v>Body_main\Body_main\Source Files\BTUART.c</v>
 <v>Body_main\Body_main\Source Files\main.c</v>
 <v>Body_main\Body_main\Source Files\Sensor.c</v>
+<v>Body_main\Body_main\Source Files\SerialUnit.c</v>
 <v>Body_main\Body_main\Generated_Source</v>
 <v>Body_main\Body_main\Generated_Source\PSoC4</v>
 <v>Body_main\Body_main\Generated_Source\PSoC4\cy_boot</v>
@@ -119,12 +119,12 @@
 <v>Body_main\Body_main\TopDesign.cysch</v>
 <v>Body_main\Body_main\Body_main.cydwr</v>
 <v>Body_main\Body_main\Header Files</v>
-<v>Body_main\Body_main\Header Files\BTUART.h</v>
 <v>Body_main\Body_main\Header Files\Sensor.h</v>
+<v>Body_main\Body_main\Header Files\SerialUnit.h</v>
 <v>Body_main\Body_main\Source Files</v>
-<v>Body_main\Body_main\Source Files\BTUART.c</v>
 <v>Body_main\Body_main\Source Files\main.c</v>
 <v>Body_main\Body_main\Source Files\Sensor.c</v>
+<v>Body_main\Body_main\Source Files\SerialUnit.c</v>
 <v>Body_main\Body_main\Generated_Source</v>
 <v>Body_main\Body_main\Generated_Source\PSoC4</v>
 <v>Body_main\Body_main\Generated_Source\PSoC4\cy_boot</v>
@@ -171,7 +171,6 @@
 <v>Body_main\Body_main\CortexM0\ARM_GCC_473</v>
 <v>Body_main\Body_main\CortexM0\ARM_GCC_473\Debug</v>
 <v>Body_main\Body_main\CortexM0\ARM_GCC_473\Debug\Listing Files</v>
-<v>Body_main\Body_main\CortexM0\ARM_GCC_473\Debug\Listing Files\BTUART.lst</v>
 <v>Body_main\Body_main\CortexM0\ARM_GCC_473\Debug\Listing Files\Cm0Start.lst</v>
 <v>Body_main\Body_main\CortexM0\ARM_GCC_473\Debug\Listing Files\CyBootAsmGnu.lst</v>
 <v>Body_main\Body_main\CortexM0\ARM_GCC_473\Debug\Listing Files\cyfitter_cfg.lst</v>
@@ -193,6 +192,7 @@
 <v>Body_main\Body_main\CortexM0\ARM_GCC_473\Debug\Listing Files\main.lst</v>
 <v>Body_main\Body_main\CortexM0\ARM_GCC_473\Debug\Listing Files\POWERPIN.lst</v>
 <v>Body_main\Body_main\CortexM0\ARM_GCC_473\Debug\Listing Files\Sensor.lst</v>
+<v>Body_main\Body_main\CortexM0\ARM_GCC_473\Debug\Listing Files\SerialUnit.lst</v>
 <v>Body_main\Body_main\CortexM0\ARM_GCC_473\Debug\Listing Files\UART_1.lst</v>
 <v>Body_main\Body_main\CortexM0\ARM_GCC_473\Debug\Listing Files\UART_1_BOOT.lst</v>
 <v>Body_main\Body_main\CortexM0\ARM_GCC_473\Debug\Listing Files\UART_1_PM.lst</v>
@@ -215,7 +215,6 @@
 <v>Body_main\Body_main\CortexM0\ARM_GCC_473</v>
 <v>Body_main\Body_main\CortexM0\ARM_GCC_473\Debug</v>
 <v>Body_main\Body_main\CortexM0\ARM_GCC_473\Debug\Listing Files</v>
-<v>Body_main\Body_main\CortexM0\ARM_GCC_473\Debug\Listing Files\BTUART.lst</v>
 <v>Body_main\Body_main\CortexM0\ARM_GCC_473\Debug\Listing Files\Cm0Start.lst</v>
 <v>Body_main\Body_main\CortexM0\ARM_GCC_473\Debug\Listing Files\CyBootAsmGnu.lst</v>
 <v>Body_main\Body_main\CortexM0\ARM_GCC_473\Debug\Listing Files\cyfitter_cfg.lst</v>
@@ -237,6 +236,7 @@
 <v>Body_main\Body_main\CortexM0\ARM_GCC_473\Debug\Listing Files\main.lst</v>
 <v>Body_main\Body_main\CortexM0\ARM_GCC_473\Debug\Listing Files\POWERPIN.lst</v>
 <v>Body_main\Body_main\CortexM0\ARM_GCC_473\Debug\Listing Files\Sensor.lst</v>
+<v>Body_main\Body_main\CortexM0\ARM_GCC_473\Debug\Listing Files\SerialUnit.lst</v>
 <v>Body_main\Body_main\CortexM0\ARM_GCC_473\Debug\Listing Files\UART_1.lst</v>
 <v>Body_main\Body_main\CortexM0\ARM_GCC_473\Debug\Listing Files\UART_1_BOOT.lst</v>
 <v>Body_main\Body_main\CortexM0\ARM_GCC_473\Debug\Listing Files\UART_1_PM.lst</v>
@@ -276,8 +276,8 @@
 </CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997>
 <Unloaded />
 <OpenDocs>
-<name v=".\Body_main.cydsn\BTUART.c" />
-<name v=".\Body_main.cydsn\BTUART.h" />
+<name v=".\Body_main.cydsn\SerialUnit.c" />
+<name v=".\Body_main.cydsn\SerialUnit.h" />
 <name v=".\Body_main.cydsn\Sensor.c" />
 <name v=".\Body_main.cydsn\Sensor.h" />
 <name v=".\Body_main.cydsn\main.c" />

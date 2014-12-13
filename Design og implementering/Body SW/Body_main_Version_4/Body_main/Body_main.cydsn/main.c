@@ -13,9 +13,8 @@
 #include "stdlib.h"
 #include <stdio.h>
 
-#include "BTUART.h"
+#include "SerialUnit.h"
 #include "Sensor.h"
-
 
 //Accelerometer ADXL345 defines
 #define ACCEL_ADDRESS 0x53 // jumperen sættes til GND 
@@ -38,10 +37,6 @@
 #define GYRO_ZOUT_L 0x48
 
 
-
-
-
-
 //Prototyper
 void initSensors(void);
 void initADXL345(void);
@@ -50,7 +45,7 @@ void initMPU6050(void);
 
 int main()
 {
-    //Initialization
+    //Initialisering
     initUART();
     initSensors();
     
@@ -59,14 +54,20 @@ int main()
     
 	while(1)
     {
+        // Klargøre I2C før hver aflæsning sensorer
         setupI2C();
         
+        // Læs sensorer
         readAllSensors();
          
+        // Standartiser sensordata
         convSensData();
         
+        // Send sensordata
         sendDataArray(); 
-        CyDelay(7);
+        
+        // Tilpas afsending til 50 Hz
+        CyDelay(19); // 19 ms
         
     }     
             

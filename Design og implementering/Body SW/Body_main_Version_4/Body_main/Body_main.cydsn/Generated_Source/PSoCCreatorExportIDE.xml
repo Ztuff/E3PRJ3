@@ -30,9 +30,9 @@
       <Folder BuildType="BUILD" Path="C:\Users\Jeppe\Documents\Engineer\3_Semester\E3PRJ3\Design og implementering\Body SW\Body_main_Version_4\Body_main\Body_main.cydsn">
         <Files Root="C:\Users\Jeppe\Documents\Engineer\3_Semester\E3PRJ3\Design og implementering\Body SW\Body_main_Version_4\Body_main\Body_main.cydsn">
           <File BuildType="BUILD" Toolchain="">.\main.c</File>
-          <File BuildType="BUILD" Toolchain="">.\BTUART.c</File>
+          <File BuildType="BUILD" Toolchain="">.\SerialUnit.c</File>
           <File BuildType="BUILD" Toolchain="">.\Sensor.c</File>
-          <File BuildType="BUILD" Toolchain="">.\BTUART.h</File>
+          <File BuildType="BUILD" Toolchain="">.\SerialUnit.h</File>
           <File BuildType="BUILD" Toolchain="">.\Sensor.h</File>
         </Files>
       </Folder>
