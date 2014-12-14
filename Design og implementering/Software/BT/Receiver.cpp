@@ -14,7 +14,20 @@ Receiver::Receiver( /*MsgQueue* contrQ,*/ MsgQueue* midiQ )
 
 Receiver::~Receiver()
 {
+  pthread_cancel( threadHandle );
   disconnect();
+}
+
+void* threadFunction( void* arg )
+{
+  for(;;)
+    static_cast< Receiver* >( arg )->receive();
+  return NULL;
+}
+
+void Receiver::start()
+{
+  pthread_create( &threadHandle, NULL, threadFunction, this );
 }
 
 void Receiver::connect()
@@ -167,10 +180,4 @@ void Receiver::receive()
       }*/
     }
   }
-}
-
-void Receiver::start(unsigned long loops )
-{
-  for( int i = 0; i < loops; i++ )
-    Receiver::receive();
 }

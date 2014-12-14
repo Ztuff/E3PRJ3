@@ -1,0 +1,1157 @@
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccw1UznF.s 			page 1
+
+
+   1              		.cpu cortex-m0
+   2              		.fpu softvfp
+   3              		.eabi_attribute 20, 1
+   4              		.eabi_attribute 21, 1
+   5              		.eabi_attribute 23, 3
+   6              		.eabi_attribute 24, 1
+   7              		.eabi_attribute 25, 1
+   8              		.eabi_attribute 26, 1
+   9              		.eabi_attribute 30, 6
+  10              		.eabi_attribute 34, 0
+  11              		.eabi_attribute 18, 4
+  12              		.code	16
+  13              		.file	"SerialUnit.c"
+  14              		.text
+  15              	.Ltext0:
+  16              		.cfi_sections	.debug_frame
+  17              		.comm	dataArray,16,4
+  18              		.section	.text.initUART,"ax",%progbits
+  19              		.align	2
+  20              		.global	initUART
+  21              		.code	16
+  22              		.thumb_func
+  23              		.type	initUART, %function
+  24              	initUART:
+  25              	.LFB33:
+  26              		.file 1 ".\\SerialUnit.c"
+   1:.\SerialUnit.c **** /* ========================================
+   2:.\SerialUnit.c ****  *
+   3:.\SerialUnit.c ****  * Copyright YOUR COMPANY, THE YEAR
+   4:.\SerialUnit.c ****  * All Rights Reserved
+   5:.\SerialUnit.c ****  * UNPUBLISHED, LICENSED SOFTWARE.
+   6:.\SerialUnit.c ****  *
+   7:.\SerialUnit.c ****  * CONFIDENTIAL AND PROPRIETARY INFORMATION
+   8:.\SerialUnit.c ****  * WHICH IS THE PROPERTY OF your company.
+   9:.\SerialUnit.c ****  *
+  10:.\SerialUnit.c ****  * ========================================
+  11:.\SerialUnit.c **** */
+  12:.\SerialUnit.c **** #include "SerialUnit.h"
+  13:.\SerialUnit.c **** #include "Sensor.h"
+  14:.\SerialUnit.c **** 
+  15:.\SerialUnit.c **** 
+  16:.\SerialUnit.c **** // Klasse-lokalt array
+  17:.\SerialUnit.c **** char dataArray[MAXSENSDATA];     // Array with id-number and data to send via BT
+  18:.\SerialUnit.c **** 
+  19:.\SerialUnit.c **** void initUART()
+  20:.\SerialUnit.c **** {
+  27              		.loc 1 20 0
+  28              		.cfi_startproc
+  29 0000 80B5     		push	{r7, lr}
+  30              	.LCFI0:
+  31              		.cfi_def_cfa_offset 8
+  32              		.cfi_offset 7, -8
+  33              		.cfi_offset 14, -4
+  34 0002 00AF     		add	r7, sp, #0
+  35              	.LCFI1:
+  36              		.cfi_def_cfa_register 7
+  21:.\SerialUnit.c ****     // Enable og initier UART komponenten
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccw1UznF.s 			page 2
+
+
+  22:.\SerialUnit.c ****     UART_1_Start();
+  37              		.loc 1 22 0
+  38 0004 FFF7FEFF 		bl	UART_1_Start
+  23:.\SerialUnit.c **** }
+  39              		.loc 1 23 0
+  40 0008 BD46     		mov	sp, r7
+  41              		@ sp needed for prologue
+  42 000a 80BD     		pop	{r7, pc}
+  43              		.cfi_endproc
+  44              	.LFE33:
+  45              		.size	initUART, .-initUART
+  46              		.section	.text.setdataArray,"ax",%progbits
+  47              		.align	2
+  48              		.global	setdataArray
+  49              		.code	16
+  50              		.thumb_func
+  51              		.type	setdataArray, %function
+  52              	setdataArray:
+  53              	.LFB34:
+  24:.\SerialUnit.c **** 
+  25:.\SerialUnit.c **** 
+  26:.\SerialUnit.c **** 
+  27:.\SerialUnit.c **** void setdataArray(int ID, int x_data, int y_data, int z_data)
+  28:.\SerialUnit.c **** {
+  54              		.loc 1 28 0
+  55              		.cfi_startproc
+  56 0000 80B5     		push	{r7, lr}
+  57              	.LCFI2:
+  58              		.cfi_def_cfa_offset 8
+  59              		.cfi_offset 7, -8
+  60              		.cfi_offset 14, -4
+  61 0002 86B0     		sub	sp, sp, #24
+  62              	.LCFI3:
+  63              		.cfi_def_cfa_offset 32
+  64 0004 00AF     		add	r7, sp, #0
+  65              	.LCFI4:
+  66              		.cfi_def_cfa_register 7
+  67 0006 F860     		str	r0, [r7, #12]
+  68 0008 B960     		str	r1, [r7, #8]
+  69 000a 7A60     		str	r2, [r7, #4]
+  70 000c 3B60     		str	r3, [r7]
+  29:.\SerialUnit.c ****     // // Klasse-lokale dataarray til ID, x_data, y_data, z_data
+  30:.\SerialUnit.c ****     dataArray[0] = ID+1; 
+  71              		.loc 1 30 0
+  72 000e FB68     		ldr	r3, [r7, #12]
+  73 0010 DBB2     		uxtb	r3, r3
+  74 0012 0133     		add	r3, r3, #1
+  75 0014 DAB2     		uxtb	r2, r3
+  76 0016 124B     		ldr	r3, .L5
+  77 0018 1A70     		strb	r2, [r3]
+  31:.\SerialUnit.c ****     dataArray[1] = x_data+1;
+  78              		.loc 1 31 0
+  79 001a BB68     		ldr	r3, [r7, #8]
+  80 001c DBB2     		uxtb	r3, r3
+  81 001e 0133     		add	r3, r3, #1
+  82 0020 DAB2     		uxtb	r2, r3
+  83 0022 0F4B     		ldr	r3, .L5
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccw1UznF.s 			page 3
+
+
+  84 0024 5A70     		strb	r2, [r3, #1]
+  32:.\SerialUnit.c ****     dataArray[2] = y_data+1;
+  85              		.loc 1 32 0
+  86 0026 7B68     		ldr	r3, [r7, #4]
+  87 0028 DBB2     		uxtb	r3, r3
+  88 002a 0133     		add	r3, r3, #1
+  89 002c DAB2     		uxtb	r2, r3
+  90 002e 0C4B     		ldr	r3, .L5
+  91 0030 9A70     		strb	r2, [r3, #2]
+  33:.\SerialUnit.c ****     dataArray[3] = z_data+1;
+  92              		.loc 1 33 0
+  93 0032 3B68     		ldr	r3, [r7]
+  94 0034 DBB2     		uxtb	r3, r3
+  95 0036 0133     		add	r3, r3, #1
+  96 0038 DAB2     		uxtb	r2, r3
+  97 003a 094B     		ldr	r3, .L5
+  98 003c DA70     		strb	r2, [r3, #3]
+  34:.\SerialUnit.c ****     
+  35:.\SerialUnit.c ****     //Sætter de resterende pladser i array'et til 1.
+  36:.\SerialUnit.c ****     int i;
+  37:.\SerialUnit.c ****     for(i = 4; i<MAXSENSDATA; i++)  
+  99              		.loc 1 37 0
+ 100 003e 0423     		mov	r3, #4
+ 101 0040 7B61     		str	r3, [r7, #20]
+ 102 0042 07E0     		b	.L3
+ 103              	.L4:
+  38:.\SerialUnit.c ****     {
+  39:.\SerialUnit.c ****         dataArray[i] = 1; 
+ 104              		.loc 1 39 0 discriminator 2
+ 105 0044 064A     		ldr	r2, .L5
+ 106 0046 7B69     		ldr	r3, [r7, #20]
+ 107 0048 D318     		add	r3, r2, r3
+ 108 004a 0122     		mov	r2, #1
+ 109 004c 1A70     		strb	r2, [r3]
+  37:.\SerialUnit.c ****     for(i = 4; i<MAXSENSDATA; i++)  
+ 110              		.loc 1 37 0 discriminator 2
+ 111 004e 7B69     		ldr	r3, [r7, #20]
+ 112 0050 0133     		add	r3, r3, #1
+ 113 0052 7B61     		str	r3, [r7, #20]
+ 114              	.L3:
+  37:.\SerialUnit.c ****     for(i = 4; i<MAXSENSDATA; i++)  
+ 115              		.loc 1 37 0 is_stmt 0 discriminator 1
+ 116 0054 7B69     		ldr	r3, [r7, #20]
+ 117 0056 0F2B     		cmp	r3, #15
+ 118 0058 F4DD     		ble	.L4
+  40:.\SerialUnit.c ****     }
+  41:.\SerialUnit.c ****     
+  42:.\SerialUnit.c **** }
+ 119              		.loc 1 42 0 is_stmt 1
+ 120 005a BD46     		mov	sp, r7
+ 121 005c 06B0     		add	sp, sp, #24
+ 122              		@ sp needed for prologue
+ 123 005e 80BD     		pop	{r7, pc}
+ 124              	.L6:
+ 125              		.align	2
+ 126              	.L5:
+ 127 0060 00000000 		.word	dataArray
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccw1UznF.s 			page 4
+
+
+ 128              		.cfi_endproc
+ 129              	.LFE34:
+ 130              		.size	setdataArray, .-setdataArray
+ 131              		.section	.text.sendDataArray,"ax",%progbits
+ 132              		.align	2
+ 133              		.global	sendDataArray
+ 134              		.code	16
+ 135              		.thumb_func
+ 136              		.type	sendDataArray, %function
+ 137              	sendDataArray:
+ 138              	.LFB35:
+  43:.\SerialUnit.c **** 
+  44:.\SerialUnit.c **** 
+  45:.\SerialUnit.c **** void sendDataArray()
+  46:.\SerialUnit.c **** {
+ 139              		.loc 1 46 0
+ 140              		.cfi_startproc
+ 141 0000 80B5     		push	{r7, lr}
+ 142              	.LCFI5:
+ 143              		.cfi_def_cfa_offset 8
+ 144              		.cfi_offset 7, -8
+ 145              		.cfi_offset 14, -4
+ 146 0002 8AB0     		sub	sp, sp, #40
+ 147              	.LCFI6:
+ 148              		.cfi_def_cfa_offset 48
+ 149 0004 00AF     		add	r7, sp, #0
+ 150              	.LCFI7:
+ 151              		.cfi_def_cfa_register 7
+  47:.\SerialUnit.c ****     // Opret et array med seks pladser pr sensor 
+  48:.\SerialUnit.c ****     char accelArray[6];
+  49:.\SerialUnit.c ****     char gyroArray[6];
+  50:.\SerialUnit.c ****     char proxArray[6];
+  51:.\SerialUnit.c ****     char flexArray[6];
+  52:.\SerialUnit.c ****     
+  53:.\SerialUnit.c ****     // Sætter accelerometer array.
+  54:.\SerialUnit.c ****     accelArray[0] = START_SENSDATA;
+ 152              		.loc 1 54 0
+ 153 0006 3B1C     		mov	r3, r7
+ 154 0008 1C33     		add	r3, r3, #28
+ 155 000a 0F22     		mov	r2, #15
+ 156 000c 1A70     		strb	r2, [r3]
+  55:.\SerialUnit.c ****     accelArray[1] = dataArray[0];   // dataArray[0] - ID 0
+ 157              		.loc 1 55 0
+ 158 000e 3F4B     		ldr	r3, .L11
+ 159 0010 1A78     		ldrb	r2, [r3]
+ 160 0012 3B1C     		mov	r3, r7
+ 161 0014 1C33     		add	r3, r3, #28
+ 162 0016 5A70     		strb	r2, [r3, #1]
+  56:.\SerialUnit.c ****     accelArray[2] = dataArray[1];   // dataArray[1] - x
+ 163              		.loc 1 56 0
+ 164 0018 3C4B     		ldr	r3, .L11
+ 165 001a 5A78     		ldrb	r2, [r3, #1]
+ 166 001c 3B1C     		mov	r3, r7
+ 167 001e 1C33     		add	r3, r3, #28
+ 168 0020 9A70     		strb	r2, [r3, #2]
+  57:.\SerialUnit.c ****     accelArray[3] = dataArray[2];   // dataArray[2] - y
+ 169              		.loc 1 57 0
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccw1UznF.s 			page 5
+
+
+ 170 0022 3A4B     		ldr	r3, .L11
+ 171 0024 9A78     		ldrb	r2, [r3, #2]
+ 172 0026 3B1C     		mov	r3, r7
+ 173 0028 1C33     		add	r3, r3, #28
+ 174 002a DA70     		strb	r2, [r3, #3]
+  58:.\SerialUnit.c ****     accelArray[4] = dataArray[3];   // dataArray[3] - z
+ 175              		.loc 1 58 0
+ 176 002c 374B     		ldr	r3, .L11
+ 177 002e DA78     		ldrb	r2, [r3, #3]
+ 178 0030 3B1C     		mov	r3, r7
+ 179 0032 1C33     		add	r3, r3, #28
+ 180 0034 1A71     		strb	r2, [r3, #4]
+  59:.\SerialUnit.c ****     accelArray[5] = 0;              // Nul terminering 
+ 181              		.loc 1 59 0
+ 182 0036 3B1C     		mov	r3, r7
+ 183 0038 1C33     		add	r3, r3, #28
+ 184 003a 0022     		mov	r2, #0
+ 185 003c 5A71     		strb	r2, [r3, #5]
+  60:.\SerialUnit.c ****     
+  61:.\SerialUnit.c ****     // Sætter gyroskop array
+  62:.\SerialUnit.c ****     gyroArray[0] = START_SENSDATA;
+ 186              		.loc 1 62 0
+ 187 003e 3B1C     		mov	r3, r7
+ 188 0040 1433     		add	r3, r3, #20
+ 189 0042 0F22     		mov	r2, #15
+ 190 0044 1A70     		strb	r2, [r3]
+  63:.\SerialUnit.c ****     gyroArray[1] = 1+1;             // dataArray[4] - ID 1
+ 191              		.loc 1 63 0
+ 192 0046 3B1C     		mov	r3, r7
+ 193 0048 1433     		add	r3, r3, #20
+ 194 004a 0222     		mov	r2, #2
+ 195 004c 5A70     		strb	r2, [r3, #1]
+  64:.\SerialUnit.c ****     gyroArray[2] = 1+1;             // dataArray[5] - x
+ 196              		.loc 1 64 0
+ 197 004e 3B1C     		mov	r3, r7
+ 198 0050 1433     		add	r3, r3, #20
+ 199 0052 0222     		mov	r2, #2
+ 200 0054 9A70     		strb	r2, [r3, #2]
+  65:.\SerialUnit.c ****     gyroArray[3] = 1+1;             // dataArray[6] - y
+ 201              		.loc 1 65 0
+ 202 0056 3B1C     		mov	r3, r7
+ 203 0058 1433     		add	r3, r3, #20
+ 204 005a 0222     		mov	r2, #2
+ 205 005c DA70     		strb	r2, [r3, #3]
+  66:.\SerialUnit.c ****     gyroArray[4] = 1+1;             // dataArray[7] - z
+ 206              		.loc 1 66 0
+ 207 005e 3B1C     		mov	r3, r7
+ 208 0060 1433     		add	r3, r3, #20
+ 209 0062 0222     		mov	r2, #2
+ 210 0064 1A71     		strb	r2, [r3, #4]
+  67:.\SerialUnit.c ****     gyroArray[5] = 0;               // Nul terminering
+ 211              		.loc 1 67 0
+ 212 0066 3B1C     		mov	r3, r7
+ 213 0068 1433     		add	r3, r3, #20
+ 214 006a 0022     		mov	r2, #0
+ 215 006c 5A71     		strb	r2, [r3, #5]
+  68:.\SerialUnit.c ****     
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccw1UznF.s 			page 6
+
+
+  69:.\SerialUnit.c ****     // Sætter Proximity array
+  70:.\SerialUnit.c ****     proxArray[0] = START_SENSDATA;
+ 216              		.loc 1 70 0
+ 217 006e 3B1C     		mov	r3, r7
+ 218 0070 0C33     		add	r3, r3, #12
+ 219 0072 0F22     		mov	r2, #15
+ 220 0074 1A70     		strb	r2, [r3]
+  71:.\SerialUnit.c ****     proxArray[1] = 2+1;             // dataArray[8]  - ID 2
+ 221              		.loc 1 71 0
+ 222 0076 3B1C     		mov	r3, r7
+ 223 0078 0C33     		add	r3, r3, #12
+ 224 007a 0322     		mov	r2, #3
+ 225 007c 5A70     		strb	r2, [r3, #1]
+  72:.\SerialUnit.c ****     proxArray[2] = 1+1;             // dataArray[9]  - x
+ 226              		.loc 1 72 0
+ 227 007e 3B1C     		mov	r3, r7
+ 228 0080 0C33     		add	r3, r3, #12
+ 229 0082 0222     		mov	r2, #2
+ 230 0084 9A70     		strb	r2, [r3, #2]
+  73:.\SerialUnit.c ****     proxArray[3] = 1+1;             // dataArray[10] - y
+ 231              		.loc 1 73 0
+ 232 0086 3B1C     		mov	r3, r7
+ 233 0088 0C33     		add	r3, r3, #12
+ 234 008a 0222     		mov	r2, #2
+ 235 008c DA70     		strb	r2, [r3, #3]
+  74:.\SerialUnit.c ****     proxArray[4] = 1+1;             // dataArray[11] - z
+ 236              		.loc 1 74 0
+ 237 008e 3B1C     		mov	r3, r7
+ 238 0090 0C33     		add	r3, r3, #12
+ 239 0092 0222     		mov	r2, #2
+ 240 0094 1A71     		strb	r2, [r3, #4]
+  75:.\SerialUnit.c ****     proxArray[5] = 0;               // Nul terminering
+ 241              		.loc 1 75 0
+ 242 0096 3B1C     		mov	r3, r7
+ 243 0098 0C33     		add	r3, r3, #12
+ 244 009a 0022     		mov	r2, #0
+ 245 009c 5A71     		strb	r2, [r3, #5]
+  76:.\SerialUnit.c ****     
+  77:.\SerialUnit.c ****     // Sætter flex array
+  78:.\SerialUnit.c ****     flexArray[0] = START_SENSDATA;
+ 246              		.loc 1 78 0
+ 247 009e 3B1D     		add	r3, r7, #4
+ 248 00a0 0F22     		mov	r2, #15
+ 249 00a2 1A70     		strb	r2, [r3]
+  79:.\SerialUnit.c ****     flexArray[1] = 3+1;             // dataArray[12] - ID 3
+ 250              		.loc 1 79 0
+ 251 00a4 3B1D     		add	r3, r7, #4
+ 252 00a6 0422     		mov	r2, #4
+ 253 00a8 5A70     		strb	r2, [r3, #1]
+  80:.\SerialUnit.c ****     flexArray[2] = 1+1;             // dataArray[13] - x
+ 254              		.loc 1 80 0
+ 255 00aa 3B1D     		add	r3, r7, #4
+ 256 00ac 0222     		mov	r2, #2
+ 257 00ae 9A70     		strb	r2, [r3, #2]
+  81:.\SerialUnit.c ****     flexArray[3] = 1+1;             // dataArray[14] - y
+ 258              		.loc 1 81 0
+ 259 00b0 3B1D     		add	r3, r7, #4
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccw1UznF.s 			page 7
+
+
+ 260 00b2 0222     		mov	r2, #2
+ 261 00b4 DA70     		strb	r2, [r3, #3]
+  82:.\SerialUnit.c ****     flexArray[4] = 1+1;             // dataArray[15] - z
+ 262              		.loc 1 82 0
+ 263 00b6 3B1D     		add	r3, r7, #4
+ 264 00b8 0222     		mov	r2, #2
+ 265 00ba 1A71     		strb	r2, [r3, #4]
+  83:.\SerialUnit.c ****     flexArray[5] = 0;               // Nul terminering
+ 266              		.loc 1 83 0
+ 267 00bc 3B1D     		add	r3, r7, #4
+ 268 00be 0022     		mov	r2, #0
+ 269 00c0 5A71     		strb	r2, [r3, #5]
+  84:.\SerialUnit.c ****     
+  85:.\SerialUnit.c ****     
+  86:.\SerialUnit.c ****     
+  87:.\SerialUnit.c ****     
+  88:.\SerialUnit.c ****     // Send sensordata
+  89:.\SerialUnit.c ****     //CyDelay(3);
+  90:.\SerialUnit.c ****     UART_1_UartPutString(accelArray);
+ 270              		.loc 1 90 0
+ 271 00c2 3B1C     		mov	r3, r7
+ 272 00c4 1C33     		add	r3, r3, #28
+ 273 00c6 181C     		mov	r0, r3
+ 274 00c8 FFF7FEFF 		bl	UART_1_UartPutString
+  91:.\SerialUnit.c ****     //CyDelay(3);
+  92:.\SerialUnit.c ****     //UART_1_UartPutString(gyroArray);
+  93:.\SerialUnit.c ****     //CyDelay(3);
+  94:.\SerialUnit.c ****     //UART_1_UartPutString(proxArray);
+  95:.\SerialUnit.c ****     //CyDelay(3);
+  96:.\SerialUnit.c ****     //UART_1_UartPutString(flexArray);
+  97:.\SerialUnit.c ****     
+  98:.\SerialUnit.c ****     //Error Check om I2C sensordata er valid
+  99:.\SerialUnit.c ****     if((dataArray[1] == 65)&&(dataArray[2] == 65)&&(dataArray[3] == 65))
+ 275              		.loc 1 99 0
+ 276 00cc 0F4B     		ldr	r3, .L11
+ 277 00ce 5B78     		ldrb	r3, [r3, #1]
+ 278 00d0 412B     		cmp	r3, #65
+ 279 00d2 0AD1     		bne	.L8
+ 280              		.loc 1 99 0 is_stmt 0 discriminator 1
+ 281 00d4 0D4B     		ldr	r3, .L11
+ 282 00d6 9B78     		ldrb	r3, [r3, #2]
+ 283 00d8 412B     		cmp	r3, #65
+ 284 00da 06D1     		bne	.L8
+ 285 00dc 0B4B     		ldr	r3, .L11
+ 286 00de DB78     		ldrb	r3, [r3, #3]
+ 287 00e0 412B     		cmp	r3, #65
+ 288 00e2 02D1     		bne	.L8
+ 100:.\SerialUnit.c ****     {
+ 101:.\SerialUnit.c ****         ERRORPIN_Write(1);
+ 289              		.loc 1 101 0 is_stmt 1
+ 290 00e4 0120     		mov	r0, #1
+ 291 00e6 FFF7FEFF 		bl	ERRORPIN_Write
+ 292              	.L8:
+ 102:.\SerialUnit.c ****     }
+ 103:.\SerialUnit.c ****     
+ 104:.\SerialUnit.c ****     //Reset dataArray til kendt acii værdier 48 = '0';
+ 105:.\SerialUnit.c ****     int i;
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccw1UznF.s 			page 8
+
+
+ 106:.\SerialUnit.c ****     for(i = 0; i < MAXSENSDATA; i++)
+ 293              		.loc 1 106 0
+ 294 00ea 0023     		mov	r3, #0
+ 295 00ec 7B62     		str	r3, [r7, #36]
+ 296 00ee 07E0     		b	.L9
+ 297              	.L10:
+ 107:.\SerialUnit.c ****     {
+ 108:.\SerialUnit.c ****         dataArray[i] = 48;
+ 298              		.loc 1 108 0 discriminator 2
+ 299 00f0 064A     		ldr	r2, .L11
+ 300 00f2 7B6A     		ldr	r3, [r7, #36]
+ 301 00f4 D318     		add	r3, r2, r3
+ 302 00f6 3022     		mov	r2, #48
+ 303 00f8 1A70     		strb	r2, [r3]
+ 106:.\SerialUnit.c ****     for(i = 0; i < MAXSENSDATA; i++)
+ 304              		.loc 1 106 0 discriminator 2
+ 305 00fa 7B6A     		ldr	r3, [r7, #36]
+ 306 00fc 0133     		add	r3, r3, #1
+ 307 00fe 7B62     		str	r3, [r7, #36]
+ 308              	.L9:
+ 106:.\SerialUnit.c ****     for(i = 0; i < MAXSENSDATA; i++)
+ 309              		.loc 1 106 0 is_stmt 0 discriminator 1
+ 310 0100 7B6A     		ldr	r3, [r7, #36]
+ 311 0102 0F2B     		cmp	r3, #15
+ 312 0104 F4DD     		ble	.L10
+ 109:.\SerialUnit.c ****     }
+ 110:.\SerialUnit.c ****     
+ 111:.\SerialUnit.c **** }
+ 313              		.loc 1 111 0 is_stmt 1
+ 314 0106 BD46     		mov	sp, r7
+ 315 0108 0AB0     		add	sp, sp, #40
+ 316              		@ sp needed for prologue
+ 317 010a 80BD     		pop	{r7, pc}
+ 318              	.L12:
+ 319              		.align	2
+ 320              	.L11:
+ 321 010c 00000000 		.word	dataArray
+ 322              		.cfi_endproc
+ 323              	.LFE35:
+ 324              		.size	sendDataArray, .-sendDataArray
+ 325              		.text
+ 326              	.Letext0:
+ 327              		.section	.debug_info,"",%progbits
+ 328              	.Ldebug_info0:
+ 329 0000 8D010000 		.4byte	0x18d
+ 330 0004 0200     		.2byte	0x2
+ 331 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 332 000a 04       		.byte	0x4
+ 333 000b 01       		.uleb128 0x1
+ 334 000c 2C000000 		.4byte	.LASF22
+ 335 0010 01       		.byte	0x1
+ 336 0011 56010000 		.4byte	.LASF23
+ 337 0015 96000000 		.4byte	.LASF24
+ 338 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 339 001d 00000000 		.4byte	0
+ 340 0021 00000000 		.4byte	0
+ 341 0025 00000000 		.4byte	.Ldebug_line0
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccw1UznF.s 			page 9
+
+
+ 342 0029 02       		.uleb128 0x2
+ 343 002a 01       		.byte	0x1
+ 344 002b 06       		.byte	0x6
+ 345 002c AE010000 		.4byte	.LASF0
+ 346 0030 02       		.uleb128 0x2
+ 347 0031 01       		.byte	0x1
+ 348 0032 08       		.byte	0x8
+ 349 0033 23010000 		.4byte	.LASF1
+ 350 0037 02       		.uleb128 0x2
+ 351 0038 02       		.byte	0x2
+ 352 0039 05       		.byte	0x5
+ 353 003a 75000000 		.4byte	.LASF2
+ 354 003e 02       		.uleb128 0x2
+ 355 003f 02       		.byte	0x2
+ 356 0040 07       		.byte	0x7
+ 357 0041 9B010000 		.4byte	.LASF3
+ 358 0045 02       		.uleb128 0x2
+ 359 0046 04       		.byte	0x4
+ 360 0047 05       		.byte	0x5
+ 361 0048 88010000 		.4byte	.LASF4
+ 362 004c 02       		.uleb128 0x2
+ 363 004d 04       		.byte	0x4
+ 364 004e 07       		.byte	0x7
+ 365 004f 6F010000 		.4byte	.LASF5
+ 366 0053 02       		.uleb128 0x2
+ 367 0054 08       		.byte	0x8
+ 368 0055 05       		.byte	0x5
+ 369 0056 00000000 		.4byte	.LASF6
+ 370 005a 02       		.uleb128 0x2
+ 371 005b 08       		.byte	0x8
+ 372 005c 07       		.byte	0x7
+ 373 005d 7F000000 		.4byte	.LASF7
+ 374 0061 03       		.uleb128 0x3
+ 375 0062 04       		.byte	0x4
+ 376 0063 05       		.byte	0x5
+ 377 0064 696E7400 		.ascii	"int\000"
+ 378 0068 02       		.uleb128 0x2
+ 379 0069 04       		.byte	0x4
+ 380 006a 07       		.byte	0x7
+ 381 006b 0E000000 		.4byte	.LASF8
+ 382 006f 02       		.uleb128 0x2
+ 383 0070 04       		.byte	0x4
+ 384 0071 04       		.byte	0x4
+ 385 0072 BA010000 		.4byte	.LASF9
+ 386 0076 02       		.uleb128 0x2
+ 387 0077 08       		.byte	0x8
+ 388 0078 04       		.byte	0x4
+ 389 0079 81010000 		.4byte	.LASF10
+ 390 007d 02       		.uleb128 0x2
+ 391 007e 01       		.byte	0x1
+ 392 007f 08       		.byte	0x8
+ 393 0080 3C010000 		.4byte	.LASF11
+ 394 0084 02       		.uleb128 0x2
+ 395 0085 04       		.byte	0x4
+ 396 0086 07       		.byte	0x7
+ 397 0087 DD010000 		.4byte	.LASF12
+ 398 008b 04       		.uleb128 0x4
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccw1UznF.s 			page 10
+
+
+ 399 008c 01       		.byte	0x1
+ 400 008d C0010000 		.4byte	.LASF25
+ 401 0091 01       		.byte	0x1
+ 402 0092 13       		.byte	0x13
+ 403 0093 01       		.byte	0x1
+ 404 0094 00000000 		.4byte	.LFB33
+ 405 0098 0C000000 		.4byte	.LFE33
+ 406 009c 00000000 		.4byte	.LLST0
+ 407 00a0 01       		.byte	0x1
+ 408 00a1 05       		.uleb128 0x5
+ 409 00a2 01       		.byte	0x1
+ 410 00a3 C9010000 		.4byte	.LASF16
+ 411 00a7 01       		.byte	0x1
+ 412 00a8 1B       		.byte	0x1b
+ 413 00a9 01       		.byte	0x1
+ 414 00aa 00000000 		.4byte	.LFB34
+ 415 00ae 64000000 		.4byte	.LFE34
+ 416 00b2 2C000000 		.4byte	.LLST1
+ 417 00b6 01       		.byte	0x1
+ 418 00b7 FF000000 		.4byte	0xff
+ 419 00bb 06       		.uleb128 0x6
+ 420 00bc 494400   		.ascii	"ID\000"
+ 421 00bf 01       		.byte	0x1
+ 422 00c0 1B       		.byte	0x1b
+ 423 00c1 61000000 		.4byte	0x61
+ 424 00c5 02       		.byte	0x2
+ 425 00c6 91       		.byte	0x91
+ 426 00c7 6C       		.sleb128 -20
+ 427 00c8 07       		.uleb128 0x7
+ 428 00c9 D6010000 		.4byte	.LASF13
+ 429 00cd 01       		.byte	0x1
+ 430 00ce 1B       		.byte	0x1b
+ 431 00cf 61000000 		.4byte	0x61
+ 432 00d3 02       		.byte	0x2
+ 433 00d4 91       		.byte	0x91
+ 434 00d5 68       		.sleb128 -24
+ 435 00d6 07       		.uleb128 0x7
+ 436 00d7 1B000000 		.4byte	.LASF14
+ 437 00db 01       		.byte	0x1
+ 438 00dc 1B       		.byte	0x1b
+ 439 00dd 61000000 		.4byte	0x61
+ 440 00e1 02       		.byte	0x2
+ 441 00e2 91       		.byte	0x91
+ 442 00e3 64       		.sleb128 -28
+ 443 00e4 07       		.uleb128 0x7
+ 444 00e5 4F010000 		.4byte	.LASF15
+ 445 00e9 01       		.byte	0x1
+ 446 00ea 1B       		.byte	0x1b
+ 447 00eb 61000000 		.4byte	0x61
+ 448 00ef 02       		.byte	0x2
+ 449 00f0 91       		.byte	0x91
+ 450 00f1 60       		.sleb128 -32
+ 451 00f2 08       		.uleb128 0x8
+ 452 00f3 6900     		.ascii	"i\000"
+ 453 00f5 01       		.byte	0x1
+ 454 00f6 24       		.byte	0x24
+ 455 00f7 61000000 		.4byte	0x61
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccw1UznF.s 			page 11
+
+
+ 456 00fb 02       		.byte	0x2
+ 457 00fc 91       		.byte	0x91
+ 458 00fd 74       		.sleb128 -12
+ 459 00fe 00       		.byte	0
+ 460 00ff 09       		.uleb128 0x9
+ 461 0100 01       		.byte	0x1
+ 462 0101 41010000 		.4byte	.LASF17
+ 463 0105 01       		.byte	0x1
+ 464 0106 2D       		.byte	0x2d
+ 465 0107 01       		.byte	0x1
+ 466 0108 00000000 		.4byte	.LFB35
+ 467 010c 10010000 		.4byte	.LFE35
+ 468 0110 64000000 		.4byte	.LLST2
+ 469 0114 01       		.byte	0x1
+ 470 0115 5E010000 		.4byte	0x15e
+ 471 0119 0A       		.uleb128 0xa
+ 472 011a 31010000 		.4byte	.LASF18
+ 473 011e 01       		.byte	0x1
+ 474 011f 30       		.byte	0x30
+ 475 0120 5E010000 		.4byte	0x15e
+ 476 0124 02       		.byte	0x2
+ 477 0125 91       		.byte	0x91
+ 478 0126 6C       		.sleb128 -20
+ 479 0127 0A       		.uleb128 0xa
+ 480 0128 91010000 		.4byte	.LASF19
+ 481 012c 01       		.byte	0x1
+ 482 012d 31       		.byte	0x31
+ 483 012e 5E010000 		.4byte	0x15e
+ 484 0132 02       		.byte	0x2
+ 485 0133 91       		.byte	0x91
+ 486 0134 64       		.sleb128 -28
+ 487 0135 0A       		.uleb128 0xa
+ 488 0136 22000000 		.4byte	.LASF20
+ 489 013a 01       		.byte	0x1
+ 490 013b 32       		.byte	0x32
+ 491 013c 5E010000 		.4byte	0x15e
+ 492 0140 02       		.byte	0x2
+ 493 0141 91       		.byte	0x91
+ 494 0142 5C       		.sleb128 -36
+ 495 0143 0A       		.uleb128 0xa
+ 496 0144 19010000 		.4byte	.LASF21
+ 497 0148 01       		.byte	0x1
+ 498 0149 33       		.byte	0x33
+ 499 014a 5E010000 		.4byte	0x15e
+ 500 014e 02       		.byte	0x2
+ 501 014f 91       		.byte	0x91
+ 502 0150 54       		.sleb128 -44
+ 503 0151 08       		.uleb128 0x8
+ 504 0152 6900     		.ascii	"i\000"
+ 505 0154 01       		.byte	0x1
+ 506 0155 69       		.byte	0x69
+ 507 0156 61000000 		.4byte	0x61
+ 508 015a 02       		.byte	0x2
+ 509 015b 91       		.byte	0x91
+ 510 015c 74       		.sleb128 -12
+ 511 015d 00       		.byte	0
+ 512 015e 0B       		.uleb128 0xb
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccw1UznF.s 			page 12
+
+
+ 513 015f 7D000000 		.4byte	0x7d
+ 514 0163 6E010000 		.4byte	0x16e
+ 515 0167 0C       		.uleb128 0xc
+ 516 0168 84000000 		.4byte	0x84
+ 517 016c 05       		.byte	0x5
+ 518 016d 00       		.byte	0
+ 519 016e 0B       		.uleb128 0xb
+ 520 016f 7D000000 		.4byte	0x7d
+ 521 0173 7E010000 		.4byte	0x17e
+ 522 0177 0C       		.uleb128 0xc
+ 523 0178 84000000 		.4byte	0x84
+ 524 017c 0F       		.byte	0xf
+ 525 017d 00       		.byte	0
+ 526 017e 0D       		.uleb128 0xd
+ 527 017f 65010000 		.4byte	.LASF26
+ 528 0183 01       		.byte	0x1
+ 529 0184 11       		.byte	0x11
+ 530 0185 6E010000 		.4byte	0x16e
+ 531 0189 01       		.byte	0x1
+ 532 018a 05       		.byte	0x5
+ 533 018b 03       		.byte	0x3
+ 534 018c 00000000 		.4byte	dataArray
+ 535 0190 00       		.byte	0
+ 536              		.section	.debug_abbrev,"",%progbits
+ 537              	.Ldebug_abbrev0:
+ 538 0000 01       		.uleb128 0x1
+ 539 0001 11       		.uleb128 0x11
+ 540 0002 01       		.byte	0x1
+ 541 0003 25       		.uleb128 0x25
+ 542 0004 0E       		.uleb128 0xe
+ 543 0005 13       		.uleb128 0x13
+ 544 0006 0B       		.uleb128 0xb
+ 545 0007 03       		.uleb128 0x3
+ 546 0008 0E       		.uleb128 0xe
+ 547 0009 1B       		.uleb128 0x1b
+ 548 000a 0E       		.uleb128 0xe
+ 549 000b 55       		.uleb128 0x55
+ 550 000c 06       		.uleb128 0x6
+ 551 000d 11       		.uleb128 0x11
+ 552 000e 01       		.uleb128 0x1
+ 553 000f 52       		.uleb128 0x52
+ 554 0010 01       		.uleb128 0x1
+ 555 0011 10       		.uleb128 0x10
+ 556 0012 06       		.uleb128 0x6
+ 557 0013 00       		.byte	0
+ 558 0014 00       		.byte	0
+ 559 0015 02       		.uleb128 0x2
+ 560 0016 24       		.uleb128 0x24
+ 561 0017 00       		.byte	0
+ 562 0018 0B       		.uleb128 0xb
+ 563 0019 0B       		.uleb128 0xb
+ 564 001a 3E       		.uleb128 0x3e
+ 565 001b 0B       		.uleb128 0xb
+ 566 001c 03       		.uleb128 0x3
+ 567 001d 0E       		.uleb128 0xe
+ 568 001e 00       		.byte	0
+ 569 001f 00       		.byte	0
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccw1UznF.s 			page 13
+
+
+ 570 0020 03       		.uleb128 0x3
+ 571 0021 24       		.uleb128 0x24
+ 572 0022 00       		.byte	0
+ 573 0023 0B       		.uleb128 0xb
+ 574 0024 0B       		.uleb128 0xb
+ 575 0025 3E       		.uleb128 0x3e
+ 576 0026 0B       		.uleb128 0xb
+ 577 0027 03       		.uleb128 0x3
+ 578 0028 08       		.uleb128 0x8
+ 579 0029 00       		.byte	0
+ 580 002a 00       		.byte	0
+ 581 002b 04       		.uleb128 0x4
+ 582 002c 2E       		.uleb128 0x2e
+ 583 002d 00       		.byte	0
+ 584 002e 3F       		.uleb128 0x3f
+ 585 002f 0C       		.uleb128 0xc
+ 586 0030 03       		.uleb128 0x3
+ 587 0031 0E       		.uleb128 0xe
+ 588 0032 3A       		.uleb128 0x3a
+ 589 0033 0B       		.uleb128 0xb
+ 590 0034 3B       		.uleb128 0x3b
+ 591 0035 0B       		.uleb128 0xb
+ 592 0036 27       		.uleb128 0x27
+ 593 0037 0C       		.uleb128 0xc
+ 594 0038 11       		.uleb128 0x11
+ 595 0039 01       		.uleb128 0x1
+ 596 003a 12       		.uleb128 0x12
+ 597 003b 01       		.uleb128 0x1
+ 598 003c 40       		.uleb128 0x40
+ 599 003d 06       		.uleb128 0x6
+ 600 003e 9642     		.uleb128 0x2116
+ 601 0040 0C       		.uleb128 0xc
+ 602 0041 00       		.byte	0
+ 603 0042 00       		.byte	0
+ 604 0043 05       		.uleb128 0x5
+ 605 0044 2E       		.uleb128 0x2e
+ 606 0045 01       		.byte	0x1
+ 607 0046 3F       		.uleb128 0x3f
+ 608 0047 0C       		.uleb128 0xc
+ 609 0048 03       		.uleb128 0x3
+ 610 0049 0E       		.uleb128 0xe
+ 611 004a 3A       		.uleb128 0x3a
+ 612 004b 0B       		.uleb128 0xb
+ 613 004c 3B       		.uleb128 0x3b
+ 614 004d 0B       		.uleb128 0xb
+ 615 004e 27       		.uleb128 0x27
+ 616 004f 0C       		.uleb128 0xc
+ 617 0050 11       		.uleb128 0x11
+ 618 0051 01       		.uleb128 0x1
+ 619 0052 12       		.uleb128 0x12
+ 620 0053 01       		.uleb128 0x1
+ 621 0054 40       		.uleb128 0x40
+ 622 0055 06       		.uleb128 0x6
+ 623 0056 9742     		.uleb128 0x2117
+ 624 0058 0C       		.uleb128 0xc
+ 625 0059 01       		.uleb128 0x1
+ 626 005a 13       		.uleb128 0x13
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccw1UznF.s 			page 14
+
+
+ 627 005b 00       		.byte	0
+ 628 005c 00       		.byte	0
+ 629 005d 06       		.uleb128 0x6
+ 630 005e 05       		.uleb128 0x5
+ 631 005f 00       		.byte	0
+ 632 0060 03       		.uleb128 0x3
+ 633 0061 08       		.uleb128 0x8
+ 634 0062 3A       		.uleb128 0x3a
+ 635 0063 0B       		.uleb128 0xb
+ 636 0064 3B       		.uleb128 0x3b
+ 637 0065 0B       		.uleb128 0xb
+ 638 0066 49       		.uleb128 0x49
+ 639 0067 13       		.uleb128 0x13
+ 640 0068 02       		.uleb128 0x2
+ 641 0069 0A       		.uleb128 0xa
+ 642 006a 00       		.byte	0
+ 643 006b 00       		.byte	0
+ 644 006c 07       		.uleb128 0x7
+ 645 006d 05       		.uleb128 0x5
+ 646 006e 00       		.byte	0
+ 647 006f 03       		.uleb128 0x3
+ 648 0070 0E       		.uleb128 0xe
+ 649 0071 3A       		.uleb128 0x3a
+ 650 0072 0B       		.uleb128 0xb
+ 651 0073 3B       		.uleb128 0x3b
+ 652 0074 0B       		.uleb128 0xb
+ 653 0075 49       		.uleb128 0x49
+ 654 0076 13       		.uleb128 0x13
+ 655 0077 02       		.uleb128 0x2
+ 656 0078 0A       		.uleb128 0xa
+ 657 0079 00       		.byte	0
+ 658 007a 00       		.byte	0
+ 659 007b 08       		.uleb128 0x8
+ 660 007c 34       		.uleb128 0x34
+ 661 007d 00       		.byte	0
+ 662 007e 03       		.uleb128 0x3
+ 663 007f 08       		.uleb128 0x8
+ 664 0080 3A       		.uleb128 0x3a
+ 665 0081 0B       		.uleb128 0xb
+ 666 0082 3B       		.uleb128 0x3b
+ 667 0083 0B       		.uleb128 0xb
+ 668 0084 49       		.uleb128 0x49
+ 669 0085 13       		.uleb128 0x13
+ 670 0086 02       		.uleb128 0x2
+ 671 0087 0A       		.uleb128 0xa
+ 672 0088 00       		.byte	0
+ 673 0089 00       		.byte	0
+ 674 008a 09       		.uleb128 0x9
+ 675 008b 2E       		.uleb128 0x2e
+ 676 008c 01       		.byte	0x1
+ 677 008d 3F       		.uleb128 0x3f
+ 678 008e 0C       		.uleb128 0xc
+ 679 008f 03       		.uleb128 0x3
+ 680 0090 0E       		.uleb128 0xe
+ 681 0091 3A       		.uleb128 0x3a
+ 682 0092 0B       		.uleb128 0xb
+ 683 0093 3B       		.uleb128 0x3b
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccw1UznF.s 			page 15
+
+
+ 684 0094 0B       		.uleb128 0xb
+ 685 0095 27       		.uleb128 0x27
+ 686 0096 0C       		.uleb128 0xc
+ 687 0097 11       		.uleb128 0x11
+ 688 0098 01       		.uleb128 0x1
+ 689 0099 12       		.uleb128 0x12
+ 690 009a 01       		.uleb128 0x1
+ 691 009b 40       		.uleb128 0x40
+ 692 009c 06       		.uleb128 0x6
+ 693 009d 9642     		.uleb128 0x2116
+ 694 009f 0C       		.uleb128 0xc
+ 695 00a0 01       		.uleb128 0x1
+ 696 00a1 13       		.uleb128 0x13
+ 697 00a2 00       		.byte	0
+ 698 00a3 00       		.byte	0
+ 699 00a4 0A       		.uleb128 0xa
+ 700 00a5 34       		.uleb128 0x34
+ 701 00a6 00       		.byte	0
+ 702 00a7 03       		.uleb128 0x3
+ 703 00a8 0E       		.uleb128 0xe
+ 704 00a9 3A       		.uleb128 0x3a
+ 705 00aa 0B       		.uleb128 0xb
+ 706 00ab 3B       		.uleb128 0x3b
+ 707 00ac 0B       		.uleb128 0xb
+ 708 00ad 49       		.uleb128 0x49
+ 709 00ae 13       		.uleb128 0x13
+ 710 00af 02       		.uleb128 0x2
+ 711 00b0 0A       		.uleb128 0xa
+ 712 00b1 00       		.byte	0
+ 713 00b2 00       		.byte	0
+ 714 00b3 0B       		.uleb128 0xb
+ 715 00b4 01       		.uleb128 0x1
+ 716 00b5 01       		.byte	0x1
+ 717 00b6 49       		.uleb128 0x49
+ 718 00b7 13       		.uleb128 0x13
+ 719 00b8 01       		.uleb128 0x1
+ 720 00b9 13       		.uleb128 0x13
+ 721 00ba 00       		.byte	0
+ 722 00bb 00       		.byte	0
+ 723 00bc 0C       		.uleb128 0xc
+ 724 00bd 21       		.uleb128 0x21
+ 725 00be 00       		.byte	0
+ 726 00bf 49       		.uleb128 0x49
+ 727 00c0 13       		.uleb128 0x13
+ 728 00c1 2F       		.uleb128 0x2f
+ 729 00c2 0B       		.uleb128 0xb
+ 730 00c3 00       		.byte	0
+ 731 00c4 00       		.byte	0
+ 732 00c5 0D       		.uleb128 0xd
+ 733 00c6 34       		.uleb128 0x34
+ 734 00c7 00       		.byte	0
+ 735 00c8 03       		.uleb128 0x3
+ 736 00c9 0E       		.uleb128 0xe
+ 737 00ca 3A       		.uleb128 0x3a
+ 738 00cb 0B       		.uleb128 0xb
+ 739 00cc 3B       		.uleb128 0x3b
+ 740 00cd 0B       		.uleb128 0xb
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccw1UznF.s 			page 16
+
+
+ 741 00ce 49       		.uleb128 0x49
+ 742 00cf 13       		.uleb128 0x13
+ 743 00d0 3F       		.uleb128 0x3f
+ 744 00d1 0C       		.uleb128 0xc
+ 745 00d2 02       		.uleb128 0x2
+ 746 00d3 0A       		.uleb128 0xa
+ 747 00d4 00       		.byte	0
+ 748 00d5 00       		.byte	0
+ 749 00d6 00       		.byte	0
+ 750              		.section	.debug_loc,"",%progbits
+ 751              	.Ldebug_loc0:
+ 752              	.LLST0:
+ 753 0000 00000000 		.4byte	.LFB33
+ 754 0004 02000000 		.4byte	.LCFI0
+ 755 0008 0200     		.2byte	0x2
+ 756 000a 7D       		.byte	0x7d
+ 757 000b 00       		.sleb128 0
+ 758 000c 02000000 		.4byte	.LCFI0
+ 759 0010 04000000 		.4byte	.LCFI1
+ 760 0014 0200     		.2byte	0x2
+ 761 0016 7D       		.byte	0x7d
+ 762 0017 08       		.sleb128 8
+ 763 0018 04000000 		.4byte	.LCFI1
+ 764 001c 0C000000 		.4byte	.LFE33
+ 765 0020 0200     		.2byte	0x2
+ 766 0022 77       		.byte	0x77
+ 767 0023 08       		.sleb128 8
+ 768 0024 00000000 		.4byte	0
+ 769 0028 00000000 		.4byte	0
+ 770              	.LLST1:
+ 771 002c 00000000 		.4byte	.LFB34
+ 772 0030 02000000 		.4byte	.LCFI2
+ 773 0034 0200     		.2byte	0x2
+ 774 0036 7D       		.byte	0x7d
+ 775 0037 00       		.sleb128 0
+ 776 0038 02000000 		.4byte	.LCFI2
+ 777 003c 04000000 		.4byte	.LCFI3
+ 778 0040 0200     		.2byte	0x2
+ 779 0042 7D       		.byte	0x7d
+ 780 0043 08       		.sleb128 8
+ 781 0044 04000000 		.4byte	.LCFI3
+ 782 0048 06000000 		.4byte	.LCFI4
+ 783 004c 0200     		.2byte	0x2
+ 784 004e 7D       		.byte	0x7d
+ 785 004f 20       		.sleb128 32
+ 786 0050 06000000 		.4byte	.LCFI4
+ 787 0054 64000000 		.4byte	.LFE34
+ 788 0058 0200     		.2byte	0x2
+ 789 005a 77       		.byte	0x77
+ 790 005b 20       		.sleb128 32
+ 791 005c 00000000 		.4byte	0
+ 792 0060 00000000 		.4byte	0
+ 793              	.LLST2:
+ 794 0064 00000000 		.4byte	.LFB35
+ 795 0068 02000000 		.4byte	.LCFI5
+ 796 006c 0200     		.2byte	0x2
+ 797 006e 7D       		.byte	0x7d
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccw1UznF.s 			page 17
+
+
+ 798 006f 00       		.sleb128 0
+ 799 0070 02000000 		.4byte	.LCFI5
+ 800 0074 04000000 		.4byte	.LCFI6
+ 801 0078 0200     		.2byte	0x2
+ 802 007a 7D       		.byte	0x7d
+ 803 007b 08       		.sleb128 8
+ 804 007c 04000000 		.4byte	.LCFI6
+ 805 0080 06000000 		.4byte	.LCFI7
+ 806 0084 0200     		.2byte	0x2
+ 807 0086 7D       		.byte	0x7d
+ 808 0087 30       		.sleb128 48
+ 809 0088 06000000 		.4byte	.LCFI7
+ 810 008c 10010000 		.4byte	.LFE35
+ 811 0090 0200     		.2byte	0x2
+ 812 0092 77       		.byte	0x77
+ 813 0093 30       		.sleb128 48
+ 814 0094 00000000 		.4byte	0
+ 815 0098 00000000 		.4byte	0
+ 816              		.section	.debug_aranges,"",%progbits
+ 817 0000 2C000000 		.4byte	0x2c
+ 818 0004 0200     		.2byte	0x2
+ 819 0006 00000000 		.4byte	.Ldebug_info0
+ 820 000a 04       		.byte	0x4
+ 821 000b 00       		.byte	0
+ 822 000c 0000     		.2byte	0
+ 823 000e 0000     		.2byte	0
+ 824 0010 00000000 		.4byte	.LFB33
+ 825 0014 0C000000 		.4byte	.LFE33-.LFB33
+ 826 0018 00000000 		.4byte	.LFB34
+ 827 001c 64000000 		.4byte	.LFE34-.LFB34
+ 828 0020 00000000 		.4byte	.LFB35
+ 829 0024 10010000 		.4byte	.LFE35-.LFB35
+ 830 0028 00000000 		.4byte	0
+ 831 002c 00000000 		.4byte	0
+ 832              		.section	.debug_ranges,"",%progbits
+ 833              	.Ldebug_ranges0:
+ 834 0000 00000000 		.4byte	.LFB33
+ 835 0004 0C000000 		.4byte	.LFE33
+ 836 0008 00000000 		.4byte	.LFB34
+ 837 000c 64000000 		.4byte	.LFE34
+ 838 0010 00000000 		.4byte	.LFB35
+ 839 0014 10010000 		.4byte	.LFE35
+ 840 0018 00000000 		.4byte	0
+ 841 001c 00000000 		.4byte	0
+ 842              		.section	.debug_line,"",%progbits
+ 843              	.Ldebug_line0:
+ 844 0000 A8000000 		.section	.debug_str,"MS",%progbits,1
+ 844      02002500 
+ 844      00000201 
+ 844      FB0E0D00 
+ 844      01010101 
+ 845              	.LASF6:
+ 846 0000 6C6F6E67 		.ascii	"long long int\000"
+ 846      206C6F6E 
+ 846      6720696E 
+ 846      7400
+ 847              	.LASF8:
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccw1UznF.s 			page 18
+
+
+ 848 000e 756E7369 		.ascii	"unsigned int\000"
+ 848      676E6564 
+ 848      20696E74 
+ 848      00
+ 849              	.LASF14:
+ 850 001b 795F6461 		.ascii	"y_data\000"
+ 850      746100
+ 851              	.LASF20:
+ 852 0022 70726F78 		.ascii	"proxArray\000"
+ 852      41727261 
+ 852      7900
+ 853              	.LASF22:
+ 854 002c 474E5520 		.ascii	"GNU C 4.7.3 20130312 (release) [ARM/embedded-4_7-br"
+ 854      4320342E 
+ 854      372E3320 
+ 854      32303133 
+ 854      30333132 
+ 855 005f 616E6368 		.ascii	"anch revision 196615]\000"
+ 855      20726576 
+ 855      6973696F 
+ 855      6E203139 
+ 855      36363135 
+ 856              	.LASF2:
+ 857 0075 73686F72 		.ascii	"short int\000"
+ 857      7420696E 
+ 857      7400
+ 858              	.LASF7:
+ 859 007f 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 859      206C6F6E 
+ 859      6720756E 
+ 859      7369676E 
+ 859      65642069 
+ 860              	.LASF24:
+ 861 0096 433A5C55 		.ascii	"C:\\Users\\Jeppe\\Documents\\Engineer\\3_Semester\\"
+ 861      73657273 
+ 861      5C4A6570 
+ 861      70655C44 
+ 861      6F63756D 
+ 862 00c3 45335052 		.ascii	"E3PRJ3\\Design og implementering\\Body SW\\Body_mai"
+ 862      4A335C44 
+ 862      65736967 
+ 862      6E206F67 
+ 862      20696D70 
+ 863 00f3 6E5F5665 		.ascii	"n_Version_4\\Body_main\\Body_main.cydsn\000"
+ 863      7273696F 
+ 863      6E5F345C 
+ 863      426F6479 
+ 863      5F6D6169 
+ 864              	.LASF21:
+ 865 0119 666C6578 		.ascii	"flexArray\000"
+ 865      41727261 
+ 865      7900
+ 866              	.LASF1:
+ 867 0123 756E7369 		.ascii	"unsigned char\000"
+ 867      676E6564 
+ 867      20636861 
+ 867      7200
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccw1UznF.s 			page 19
+
+
+ 868              	.LASF18:
+ 869 0131 61636365 		.ascii	"accelArray\000"
+ 869      6C417272 
+ 869      617900
+ 870              	.LASF11:
+ 871 013c 63686172 		.ascii	"char\000"
+ 871      00
+ 872              	.LASF17:
+ 873 0141 73656E64 		.ascii	"sendDataArray\000"
+ 873      44617461 
+ 873      41727261 
+ 873      7900
+ 874              	.LASF15:
+ 875 014f 7A5F6461 		.ascii	"z_data\000"
+ 875      746100
+ 876              	.LASF23:
+ 877 0156 2E5C5365 		.ascii	".\\SerialUnit.c\000"
+ 877      7269616C 
+ 877      556E6974 
+ 877      2E6300
+ 878              	.LASF26:
+ 879 0165 64617461 		.ascii	"dataArray\000"
+ 879      41727261 
+ 879      7900
+ 880              	.LASF5:
+ 881 016f 6C6F6E67 		.ascii	"long unsigned int\000"
+ 881      20756E73 
+ 881      69676E65 
+ 881      6420696E 
+ 881      7400
+ 882              	.LASF10:
+ 883 0181 646F7562 		.ascii	"double\000"
+ 883      6C6500
+ 884              	.LASF4:
+ 885 0188 6C6F6E67 		.ascii	"long int\000"
+ 885      20696E74 
+ 885      00
+ 886              	.LASF19:
+ 887 0191 6779726F 		.ascii	"gyroArray\000"
+ 887      41727261 
+ 887      7900
+ 888              	.LASF3:
+ 889 019b 73686F72 		.ascii	"short unsigned int\000"
+ 889      7420756E 
+ 889      7369676E 
+ 889      65642069 
+ 889      6E7400
+ 890              	.LASF0:
+ 891 01ae 7369676E 		.ascii	"signed char\000"
+ 891      65642063 
+ 891      68617200 
+ 892              	.LASF9:
+ 893 01ba 666C6F61 		.ascii	"float\000"
+ 893      7400
+ 894              	.LASF25:
+ 895 01c0 696E6974 		.ascii	"initUART\000"
+ 895      55415254 
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccw1UznF.s 			page 20
+
+
+ 895      00
+ 896              	.LASF16:
+ 897 01c9 73657464 		.ascii	"setdataArray\000"
+ 897      61746141 
+ 897      72726179 
+ 897      00
+ 898              	.LASF13:
+ 899 01d6 785F6461 		.ascii	"x_data\000"
+ 899      746100
+ 900              	.LASF12:
+ 901 01dd 73697A65 		.ascii	"sizetype\000"
+ 901      74797065 
+ 901      00
+ 902              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.7.3 20130312 (release) [ARM/embedded-4_7-br

@@ -17,15 +17,15 @@ public:
   Receiver( /*MsgQueue* contrQ,*/ MsgQueue* midiQ );
   ~Receiver();
 //void send();
-  void receive();
   void start( unsigned long loops );
 //MsgQueue* getMsgQueue();
   
 private:
+  void receive();
   void connect();
   void disconnect();
   int uart0_filestream_;
-  unsigned char lastID_;
+//  unsigned char lastID_;
   
   MsgQueue* midiQ_;
   

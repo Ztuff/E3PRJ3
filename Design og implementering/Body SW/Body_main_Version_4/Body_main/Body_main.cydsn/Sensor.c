@@ -11,7 +11,7 @@
 */
 
 #include "Sensor.h"
-#include "BTUART.h"
+#include "SerialUnit.h"
 
 
 
@@ -52,8 +52,11 @@ void readAllSensors()
 void convSensData(void)
 {
     //ADXL345
+    
+    // Opret variabler
     int16 x, y, z; // Da det er to 8 bit registre som skal lægges sammen
     unsigned char x1, y1, z1; 
+    
     //Samler most significant og least significant for X
     x = sensArray[1][2]<< 8; 
     x+= sensArray[0][2];
@@ -64,17 +67,15 @@ void convSensData(void)
     
     //Samler most significant og least significant for Z
     z = sensArray[5][2]<< 8; 
-    z+= sensArray[4][2];
+    z+= sensArray[4][2]; 
     
-    
-    //conversion from int16 to uint8 which is the scale midi can receive
+    //Konvertering fra int16 til uint8 
     x1 = (x+512)/8; 
     y1 = (y+512)/8;
     z1 = (z+512)/8;
     
+    // Sæt dataarray i SerialUnit
     setdataArray(ACC1_ID, x1, y1, z1);
-    
-    
 }
 
 
