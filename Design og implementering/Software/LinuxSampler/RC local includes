@@ -1,0 +1,13 @@
+midi / alsa relaterede ting, der skal inkluderes i /etc/rc.local
+
+#insert virtual midi sound card as the second ALSA card
+sudo modprobe snd_virmidi snd_index=1
+
+#start linuxsampler engine as user "pi" as backgound process
+(su - pi -c "linuxsampler")&
+
+#wait 5 secs to ensure linuxsampler loadsand then load correct settings into engine
+(sleep 5;su - pi -c "netcat -t localhost 8888 < /home/pi/linuxsampler/RPi.lscp")
+
+#set system volume to max and unmute
+(su - pi -c "amixer set PCM -- 0400 unmute")
