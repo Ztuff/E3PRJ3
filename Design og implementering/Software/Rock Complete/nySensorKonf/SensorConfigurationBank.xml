@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<sensorconfigurations>
+		<configuration>
+			<name>SensorConfiguration1</name>
+			<sensorid>Accelerometer</sensorid>
+			<axis>x</axis>
+			<mappingscheme>mappingscheme1</mappingscheme>
+			<soundpack>test1.wav</soundpack>
+		</configuration>
+		<configuration>
+			<name>SensorConfiguration2</name>
+			<sensorid>Accelerometer</sensorid>
+			<axis>y</axis>
+			<mappingscheme>mappingscheme2</mappingscheme>
+			<soundpack>test2.wav</soundpack>
+		</configuration>
+		<configuration>
+			<name>SensorConfiguration3</name>
+			<sensorid>Accelerometer</sensorid>
+			<axis>z</axis>
+			<mappingscheme>mappingscheme3</mappingscheme>
+			<soundpack>test3.wav</soundpack>
+		</configuration>
+	</sensorconfigurations>
+</root>
