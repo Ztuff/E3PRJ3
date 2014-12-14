@@ -1,0 +1,10 @@
+#!/bin/bash
+
+if ! pidof linuxsampler&> /dev/null
+then
+	linuxsampler 
+
+	sleep 5
+
+netcat -t localhost 8888  < /home/stud/midi/string_test.lscp
+
