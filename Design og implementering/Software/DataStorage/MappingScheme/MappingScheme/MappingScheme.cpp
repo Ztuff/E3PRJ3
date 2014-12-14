@@ -34,17 +34,29 @@ MappingScheme::	MappingScheme(	string id,
 
 	key_.direction_=((direction == "rising" || direction == "falling") ? direction : "0");
 
-	velocity_.lowerThreshold_=((lowerThreshold < 128 || lowerThreshold >= 0) ? lowerThreshold : NULL);
+	velocity_.lowerThreshold_=((lowerThreshold < 128 || lowerThreshold >= 0) ? lowerThreshold : 0);
 
-	CC_.cNum_=((cNum < 128 || cNum >= 0) ? cNum : NULL); //set both CCAbs and CCRel 
+	CC_.cNum_=((cNum < 128 || cNum >= 0) ? cNum : 0); //set both CCAbs and CCRel 
 	
-	CC_.minVal_=((minVal < 128 || minVal >= 0) ? minVal : NULL);
+	CC_.minVal_=((minVal < 128 || minVal >= 0) ? minVal : 0);
 	
-	CC_.maxVal_=((maxVal < 128 || maxVal >= 0) ? maxVal : NULL);
+	CC_.maxVal_=((maxVal < 128 || maxVal >= 0) ? maxVal : 0);
 	
 	CC_.speed_ = ((speed == SLOW || speed == MEDIUM || speed == FAST) ? speed : SLOW);
+
+	for (int i = 0; i<CHANNELNO; i++)
+	{
+		noteOn[i] = 1;				//Initialize noteOn to 1 as default
+	}
 }
 
+MappingScheme::~MappingScheme()
+{
+	for (int i = 0; i<CHANNELNO; i++)
+	{
+		noteOn[i] = 1;				//set noteOn to 1
+	}
+}
 
 bool MappingScheme::map(int data, MidiSignal & signal)
 {
@@ -99,7 +111,7 @@ bool MappingScheme::mapKey(int data, MidiSignal & signal)
 	if(MAPDEBUG)
 		cout << "Data post quantizeDiatonic: " << data<< endl;
 	
-	if(signal.param1_ != data)
+	if((signal.param1_ != data) || (noteOn == 0))
 		signal.command_ = NOTEOFF;	
 	else
 		signal.command_ = NOTEON;	
@@ -120,11 +132,20 @@ bool MappingScheme::mapVelocity(int data, MidiSignal & signal)
 	signal.param2_ = data;	//set velocity value
 
 	if((signal.command_== NOTEOFF) && (data > velocity_.lowerThreshold_))		//Hvis Note-Off og data er højere end lowerThreshold
-		signal.command_ = NOTEON;	
+	{
+		signal.command_ = NOTEON;
+		noteOn[channel_] = 1;
+	}	
 	else if((signal.command_== NOTEON) && (data > velocity_.lowerThreshold_))	//Hvis Note-On og data er højere end lowerThreshold
+	{
 		signal.command_ = AFTERTOUCH;	
+	}
 	else if(((signal.command_== NOTEON)||(signal.command_== AFTERTOUCH)) && (data < velocity_.lowerThreshold_))	//Hvis Note-On og data er lavere end lowerThreshold
-		signal.command_ = NOTEOFF;	
+	{
+		signal.command_ = NOTEOFF;
+		noteOn[channel_] = 0;
+	}
+	
 
 	return 1;
 }

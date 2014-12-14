@@ -2,6 +2,7 @@
 #define MAPPINGSCHEME_H_
 
 #define MAPDEBUG 1
+#define CHANNELNO 16
 
 #define SLOW 1		//Used for CCRel
 #define MEDIUM 2
@@ -10,6 +11,8 @@
 #include <string>
 #include <iostream>
 #include "MidiSignal.h"
+
+static bool noteOn[CHANNELNO];			//These variables enable key MappingSchemes to detect when a velocity MappingScheme of same channel mutes the note.
 
 struct Key
 {
@@ -46,6 +49,7 @@ public:
 					int maxVal,			//CCAbs.maxVal, value from 0 to 127
 					int speed);			//CCRel.speed, strategies: SLOW, MEDIUM, FAST
 
+	~MappingScheme();
 	bool map(int data, MidiSignal & signal);	
 private:
 	bool mapKey(int data, MidiSignal & signal);

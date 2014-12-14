@@ -43,8 +43,20 @@ MappingScheme::	MappingScheme(	string id,
 	CC_.maxVal_=((maxVal < 128 || maxVal >= 0) ? maxVal : 0);
 	
 	CC_.speed_ = ((speed == SLOW || speed == MEDIUM || speed == FAST) ? speed : SLOW);
+
+	for (int i = 0; i<CHANNELNO; i++)
+	{
+		noteOn[i] = 1;				//Initialize noteOn to 1 as default
+	}
 }
 
+MappingScheme::~MappingScheme()
+{
+	for (int i = 0; i<CHANNELNO; i++)
+	{
+		noteOn[i] = 1;				//set noteOn to 1
+	}
+}
 
 bool MappingScheme::map(int data, MidiSignal & signal)
 {
@@ -99,7 +111,7 @@ bool MappingScheme::mapKey(int data, MidiSignal & signal)
 	if(MAPDEBUG)
 		cout << "Data post quantizeDiatonic: " << data<< endl;
 	
-	if(signal.param1_ != data)
+	if((signal.param1_ != data) || (noteOn == 0))
 		signal.command_ = NOTEOFF;	
 	else
 		signal.command_ = NOTEON;	
@@ -119,12 +131,21 @@ bool MappingScheme::mapVelocity(int data, MidiSignal & signal)
 	data = ((data > 127) || (data < 0) ? 65 : data);
 	signal.param2_ = data;	//set velocity value
 
-		if((signal.command_== NOTEOFF) && (data > velocity_.lowerThreshold_))		//Hvis Note-Off og data er højere end lowerThreshold
-		signal.command_ = NOTEON;	
+	if((signal.command_== NOTEOFF) && (data > velocity_.lowerThreshold_))		//Hvis Note-Off og data er højere end lowerThreshold
+	{
+		signal.command_ = NOTEON;
+		noteOn[channel_] = 1;
+	}	
 	else if((signal.command_== NOTEON) && (data > velocity_.lowerThreshold_))	//Hvis Note-On og data er højere end lowerThreshold
+	{
 		signal.command_ = AFTERTOUCH;	
+	}
 	else if(((signal.command_== NOTEON)||(signal.command_== AFTERTOUCH)) && (data < velocity_.lowerThreshold_))	//Hvis Note-On og data er lavere end lowerThreshold
-		signal.command_ = NOTEOFF;	
+	{
+		signal.command_ = NOTEOFF;
+		noteOn[channel_] = 0;
+	}
+	
 
 	return 1;
 }
@@ -148,7 +169,7 @@ bool MappingScheme::mapCCAbs(int data, MidiSignal & signal)
 	}
 				
 	/*** Set MidiSignal ***/
-	signal.command_ = CONTIUOUSCONTROLLER;	//Set command
+	signal.command_ = CONTROLCHANGE;	//Set command
 	signal.param1_ = CC_.cNum_;				//Set CC#
 	signal.param2_ = data;					//Set controller value
 	
@@ -184,7 +205,7 @@ bool MappingScheme::mapCCRel(int data, MidiSignal & signal)
 		cout << "Strategy post scaling: " << strategy << endl;												
 	
 	/*** Set MidiSignal ***/
-	signal.command_ = CONTIUOUSCONTROLLER;			//Set command
+	signal.command_ = CONTROLCHANGE;			//Set command
 	signal.param1_ = CC_.cNum_;						//Set CC#
 	
 	if(((signal.param2_ + strategy) <= CC_.maxVal_) && ((signal.param2_ + strategy)>= CC_.minVal_))
