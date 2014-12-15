@@ -4,7 +4,7 @@
 #define NOTEOFF 0x80
 #define NOTEON 0x90
 #define AFTERTOUCH 0xA0
-#define CONTIUOUSCONTROLLER 0xB0
+#define CONTROLCHANGE 0xB0
 
 #include <string>
 #include <iostream>
