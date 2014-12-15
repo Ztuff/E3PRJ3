@@ -38,12 +38,12 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QString::fromUtf8("MainWindow"));
-        MainWindow->resize(480, 272);
+        MainWindow->resize(320, 240);
         centralWidget = new QWidget(MainWindow);
         centralWidget->setObjectName(QString::fromUtf8("centralWidget"));
         gridLayoutWidget = new QWidget(centralWidget);
         gridLayoutWidget->setObjectName(QString::fromUtf8("gridLayoutWidget"));
-        gridLayoutWidget->setGeometry(QRect(0, 60, 481, 151));
+        gridLayoutWidget->setGeometry(QRect(0, 50, 321, 151));
         gridLayout = new QGridLayout(gridLayoutWidget);
         gridLayout->setSpacing(6);
         gridLayout->setContentsMargins(11, 11, 11, 11);
@@ -71,7 +71,7 @@ public:
 
         label = new QLabel(centralWidget);
         label->setObjectName(QString::fromUtf8("label"));
-        label->setGeometry(QRect(190, 10, 101, 16));
+        label->setGeometry(QRect(110, 10, 101, 16));
         CloseButton = new QPushButton(centralWidget);
         CloseButton->setObjectName(QString::fromUtf8("CloseButton"));
         CloseButton->setGeometry(QRect(10, 10, 31, 23));
@@ -85,9 +85,12 @@ public:
     void retranslateUi(QMainWindow *MainWindow)
     {
         MainWindow->setWindowTitle(QApplication::translate("MainWindow", "MainWindow", 0, QApplication::UnicodeUTF8));
-        Sensorer->setText(QApplication::translate("MainWindow", "Sensorer", 0, QApplication::UnicodeUTF8));
-        Lydpakker->setText(QApplication::translate("MainWindow", "Lydpakker", 0, QApplication::UnicodeUTF8));
-        Presets->setText(QApplication::translate("MainWindow", "Presets", 0, QApplication::UnicodeUTF8));
+        Sensorer->setText(QApplication::translate("MainWindow", "Konfigurer\n"
+"sensor", 0, QApplication::UnicodeUTF8));
+        Lydpakker->setText(QApplication::translate("MainWindow", "Indstall\303\251r \n"
+"lydpakker", 0, QApplication::UnicodeUTF8));
+        Presets->setText(QApplication::translate("MainWindow", "Indstil\n"
+" presets", 0, QApplication::UnicodeUTF8));
         label->setText(QApplication::translate("MainWindow", "BodyRock 3000", 0, QApplication::UnicodeUTF8));
         CloseButton->setText(QApplication::translate("MainWindow", "X", 0, QApplication::UnicodeUTF8));
     } // retranslateUi

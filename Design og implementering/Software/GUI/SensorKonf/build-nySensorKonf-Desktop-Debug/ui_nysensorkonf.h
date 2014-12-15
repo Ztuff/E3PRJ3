@@ -43,46 +43,46 @@ public:
     {
         if (NySensorKonf->objectName().isEmpty())
             NySensorKonf->setObjectName(QString::fromUtf8("NySensorKonf"));
-        NySensorKonf->resize(480, 272);
+        NySensorKonf->resize(320, 240);
         label = new QLabel(NySensorKonf);
         label->setObjectName(QString::fromUtf8("label"));
         label->setGeometry(QRect(20, 70, 57, 15));
         label_2 = new QLabel(NySensorKonf);
         label_2->setObjectName(QString::fromUtf8("label_2"));
-        label_2->setGeometry(QRect(240, 70, 111, 16));
+        label_2->setGeometry(QRect(190, 70, 111, 16));
         MappingschemeDropdown = new QComboBox(NySensorKonf);
         MappingschemeDropdown->setObjectName(QString::fromUtf8("MappingschemeDropdown"));
-        MappingschemeDropdown->setGeometry(QRect(20, 150, 161, 21));
+        MappingschemeDropdown->setGeometry(QRect(10, 150, 111, 21));
         label_3 = new QLabel(NySensorKonf);
         label_3->setObjectName(QString::fromUtf8("label_3"));
-        label_3->setGeometry(QRect(20, 130, 121, 16));
+        label_3->setGeometry(QRect(10, 130, 121, 16));
         label_4 = new QLabel(NySensorKonf);
         label_4->setObjectName(QString::fromUtf8("label_4"));
-        label_4->setGeometry(QRect(240, 130, 121, 16));
+        label_4->setGeometry(QRect(180, 130, 121, 16));
         label_5 = new QLabel(NySensorKonf);
         label_5->setObjectName(QString::fromUtf8("label_5"));
-        label_5->setGeometry(QRect(160, 10, 161, 16));
+        label_5->setGeometry(QRect(90, 10, 161, 16));
         Sensordropdown = new QComboBox(NySensorKonf);
         Sensordropdown->setObjectName(QString::fromUtf8("Sensordropdown"));
-        Sensordropdown->setGeometry(QRect(20, 92, 211, 21));
+        Sensordropdown->setGeometry(QRect(10, 90, 131, 21));
         AkseDropdown = new QComboBox(NySensorKonf);
         AkseDropdown->setObjectName(QString::fromUtf8("AkseDropdown"));
-        AkseDropdown->setGeometry(QRect(240, 90, 211, 23));
+        AkseDropdown->setGeometry(QRect(180, 90, 131, 23));
         saveButton = new QPushButton(NySensorKonf);
         saveButton->setObjectName(QString::fromUtf8("saveButton"));
-        saveButton->setGeometry(QRect(410, 240, 61, 23));
+        saveButton->setGeometry(QRect(250, 210, 61, 23));
         SensorName = new QLineEdit(NySensorKonf);
         SensorName->setObjectName(QString::fromUtf8("SensorName"));
-        SensorName->setGeometry(QRect(172, 40, 131, 23));
+        SensorName->setGeometry(QRect(100, 40, 131, 23));
         backButton = new QPushButton(NySensorKonf);
         backButton->setObjectName(QString::fromUtf8("backButton"));
         backButton->setGeometry(QRect(10, 10, 31, 23));
         NewMappingscheme = new QPushButton(NySensorKonf);
         NewMappingscheme->setObjectName(QString::fromUtf8("NewMappingscheme"));
-        NewMappingscheme->setGeometry(QRect(190, 150, 41, 23));
+        NewMappingscheme->setGeometry(QRect(130, 150, 41, 23));
         LydpakkeDropdown = new QComboBox(NySensorKonf);
         LydpakkeDropdown->setObjectName(QString::fromUtf8("LydpakkeDropdown"));
-        LydpakkeDropdown->setGeometry(QRect(240, 150, 211, 23));
+        LydpakkeDropdown->setGeometry(QRect(180, 150, 131, 23));
 
         retranslateUi(NySensorKonf);
 

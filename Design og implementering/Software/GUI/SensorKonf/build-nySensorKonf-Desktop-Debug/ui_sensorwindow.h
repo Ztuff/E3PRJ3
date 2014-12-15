@@ -36,11 +36,11 @@ public:
     {
         if (SensorWindow->objectName().isEmpty())
             SensorWindow->setObjectName(QString::fromUtf8("SensorWindow"));
-        SensorWindow->resize(480, 272);
-        SensorWindow->setMinimumSize(QSize(480, 272));
+        SensorWindow->resize(320, 240);
+        SensorWindow->setMinimumSize(QSize(0, 0));
         gridLayoutWidget = new QWidget(SensorWindow);
         gridLayoutWidget->setObjectName(QString::fromUtf8("gridLayoutWidget"));
-        gridLayoutWidget->setGeometry(QRect(0, 70, 481, 131));
+        gridLayoutWidget->setGeometry(QRect(0, 70, 321, 131));
         gridLayout = new QGridLayout(gridLayoutWidget);
         gridLayout->setObjectName(QString::fromUtf8("gridLayout"));
         gridLayout->setHorizontalSpacing(10);
@@ -68,7 +68,7 @@ public:
 
         label = new QLabel(SensorWindow);
         label->setObjectName(QString::fromUtf8("label"));
-        label->setGeometry(QRect(170, 10, 151, 16));
+        label->setGeometry(QRect(110, 10, 151, 16));
         backButton = new QPushButton(SensorWindow);
         backButton->setObjectName(QString::fromUtf8("backButton"));
         backButton->setGeometry(QRect(10, 10, 31, 23));
@@ -81,13 +81,11 @@ public:
     void retranslateUi(QWidget *SensorWindow)
     {
         SensorWindow->setWindowTitle(QApplication::translate("SensorWindow", "Form", 0, QApplication::UnicodeUTF8));
-        RedigerSensorKon->setText(QApplication::translate("SensorWindow", "Rediger \n"
-"Sensorkonfiguration", 0, QApplication::UnicodeUTF8));
-        NySensorkon->setText(QApplication::translate("SensorWindow", "Ny \n"
-"Sensorkonfiguration", 0, QApplication::UnicodeUTF8));
-        SletSensorKon->setText(QApplication::translate("SensorWindow", "Slet \n"
-"Sensorkonfiguration", 0, QApplication::UnicodeUTF8));
-        label->setText(QApplication::translate("SensorWindow", "Sensorkonfigurationer", 0, QApplication::UnicodeUTF8));
+        RedigerSensorKon->setText(QApplication::translate("SensorWindow", "Rediger\n"
+"eksisterende", 0, QApplication::UnicodeUTF8));
+        NySensorkon->setText(QApplication::translate("SensorWindow", "Opret ny", 0, QApplication::UnicodeUTF8));
+        SletSensorKon->setText(QApplication::translate("SensorWindow", "Slet", 0, QApplication::UnicodeUTF8));
+        label->setText(QApplication::translate("SensorWindow", "Konfigurer sensor", 0, QApplication::UnicodeUTF8));
         backButton->setText(QApplication::translate("SensorWindow", "<", 0, QApplication::UnicodeUTF8));
     } // retranslateUi
 

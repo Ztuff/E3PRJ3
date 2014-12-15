@@ -6,7 +6,7 @@
 ** WARNING! All changes made in this file will be lost!
 *****************************************************************************/
 
-#include "../nySensorKonf/nysensorkonf.h"
+#include "../../../Rock Complete/nySensorKonf/nysensorkonf.h"
 #if !defined(Q_MOC_OUTPUT_REVISION)
 #error "The header file 'nysensorkonf.h' doesn't include <QObject>."
 #elif Q_MOC_OUTPUT_REVISION != 63
@@ -50,6 +50,7 @@ void NySensorKonf::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id
         NySensorKonf *_t = static_cast<NySensorKonf *>(_o);
         switch (_id) {
         case 0: _t->on_backButton_clicked(); break;
+        //case 1: _t->on_Sensordropdown_activated((*reinterpret_cast< const QString(*)>(_a[1]))); break;
         case 2: _t->on_saveButton_clicked(); break;
         default: ;
         }

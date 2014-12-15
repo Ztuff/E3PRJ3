@@ -6,7 +6,7 @@
 ** WARNING! All changes made in this file will be lost!
 *****************************************************************************/
 
-#include "../nySensorKonf/sensorwindow.h"
+#include "../../../Rock Complete/nySensorKonf/sensorwindow.h"
 #if !defined(Q_MOC_OUTPUT_REVISION)
 #error "The header file 'sensorwindow.h' doesn't include <QObject>."
 #elif Q_MOC_OUTPUT_REVISION != 63
@@ -22,7 +22,7 @@ static const uint qt_meta_data_SensorWindow[] = {
        6,       // revision
        0,       // classname
        0,    0, // classinfo
-       2,   14, // methods
+       4,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -32,6 +32,8 @@ static const uint qt_meta_data_SensorWindow[] = {
  // slots: signature, parameters, type, tag, flags
       14,   13,   13,   13, 0x08,
       38,   13,   13,   13, 0x08,
+      63,   13,   13,   13, 0x08,
+      93,   13,   13,   13, 0x08,
 
        0        // eod
 };
@@ -39,6 +41,8 @@ static const uint qt_meta_data_SensorWindow[] = {
 static const char qt_meta_stringdata_SensorWindow[] = {
     "SensorWindow\0\0on_backButton_clicked()\0"
     "on_NySensorkon_clicked()\0"
+    "on_RedigerSensorKon_clicked()\0"
+    "on_SletSensorKon_clicked()\0"
 };
 
 void SensorWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
@@ -49,6 +53,8 @@ void SensorWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id
         switch (_id) {
         case 0: _t->on_backButton_clicked(); break;
         case 1: _t->on_NySensorkon_clicked(); break;
+        case 2: _t->on_RedigerSensorKon_clicked(); break;
+        case 3: _t->on_SletSensorKon_clicked(); break;
         default: ;
         }
     }
@@ -87,9 +93,9 @@ int SensorWindow::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 2)
+        if (_id < 4)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 2;
+        _id -= 4;
     }
     return _id;
 }

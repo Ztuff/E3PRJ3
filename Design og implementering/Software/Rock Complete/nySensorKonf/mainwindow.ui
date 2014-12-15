@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>480</width>
-    <height>272</height>
+    <width>320</width>
+    <height>240</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -18,8 +18,8 @@
     <property name="geometry">
      <rect>
       <x>0</x>
-      <y>60</y>
-      <width>481</width>
+      <y>50</y>
+      <width>321</width>
       <height>151</height>
      </rect>
     </property>
@@ -45,7 +45,8 @@
         </size>
        </property>
        <property name="text">
-        <string>Sensorer</string>
+        <string>Konfigurer
+sensor</string>
        </property>
       </widget>
      </item>
@@ -58,7 +59,8 @@
         </size>
        </property>
        <property name="text">
-        <string>Lydpakker</string>
+        <string>Indstallér 
+lydpakker</string>
        </property>
       </widget>
      </item>
@@ -71,7 +73,8 @@
         </size>
        </property>
        <property name="text">
-        <string>Presets</string>
+        <string>Indstil
+ presets</string>
        </property>
       </widget>
      </item>
@@ -80,7 +83,7 @@
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
-      <x>190</x>
+      <x>110</x>
       <y>10</y>
       <width>101</width>
       <height>16</height>

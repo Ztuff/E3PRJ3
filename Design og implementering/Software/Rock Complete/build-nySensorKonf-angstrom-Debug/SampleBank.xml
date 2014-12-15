@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<samples>
+		<sample>Admin.wav</sample>
+		<sample>Finance.wav</sample>
+		<sample>HR.wav</sample>
+		<sample>test.mp3</sample>
+	</samples>
+</root>
