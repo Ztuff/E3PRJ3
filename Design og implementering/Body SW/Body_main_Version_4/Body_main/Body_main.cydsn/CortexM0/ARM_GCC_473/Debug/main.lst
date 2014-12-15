@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccpc9pEf.s 			page 1
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\cc7A3gYn.s 			page 1
 
 
    1              		.cpu cortex-m0
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccpc9pEf.s 			page 1
   30:.\main.c      **** //Gyroscope MPU6050 defines 
   31:.\main.c      **** #define GYRO_ADDRESS 0x68 //Jumperen sættes til GND 
   32:.\main.c      **** #define GYRO_XOUT_H 0x43 // Most significant
-ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccpc9pEf.s 			page 2
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\cc7A3gYn.s 			page 2
 
 
   33:.\main.c      **** #define GYRO_XOUT_L 0x44 // Least significant 
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccpc9pEf.s 			page 1
   48              		.loc 1 64 0 discriminator 1
   49 001a FFF7FEFF 		bl	convSensData
   65:.\main.c      ****         
-ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccpc9pEf.s 			page 3
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\cc7A3gYn.s 			page 3
 
 
   66:.\main.c      ****         // Send sensordata
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccpc9pEf.s 			page 1
   82              		@ sp needed for prologue
   83 000a 80BD     		pop	{r7, pc}
   84              		.cfi_endproc
-ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccpc9pEf.s 			page 4
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\cc7A3gYn.s 			page 4
 
 
   85              	.LFE34:
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccpc9pEf.s 			page 1
  128 0030 5B42     		neg	r3, r3
  129 0032 5320     		mov	r0, #83
  130 0034 3521     		mov	r1, #53
-ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccpc9pEf.s 			page 5
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\cc7A3gYn.s 			page 5
 
 
  131 0036 1A1C     		mov	r2, r3
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccpc9pEf.s 			page 1
  176 0086 C046     		.section	.text.initMPU6050,"ax",%progbits
  177              		.align	2
  178              		.global	initMPU6050
-ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccpc9pEf.s 			page 6
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\cc7A3gYn.s 			page 6
 
 
  179              		.code	16
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccpc9pEf.s 			page 1
  223 003c 0123     		mov	r3, #1
  224 003e 5B42     		neg	r3, r3
  225 0040 6820     		mov	r0, #104
-ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccpc9pEf.s 			page 7
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\cc7A3gYn.s 			page 7
 
 
  226 0042 4721     		mov	r1, #71
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccpc9pEf.s 			page 1
  274 0030 02       		.uleb128 0x2
  275 0031 01       		.byte	0x1
  276 0032 08       		.byte	0x8
-ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccpc9pEf.s 			page 8
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\cc7A3gYn.s 			page 8
 
 
  277 0033 21010000 		.4byte	.LASF1
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccpc9pEf.s 			page 1
  331 0093 61000000 		.4byte	0x61
  332 0097 00000000 		.4byte	.LFB33
  333 009b 2A000000 		.4byte	.LFE33
-ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccpc9pEf.s 			page 9
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\cc7A3gYn.s 			page 9
 
 
  334 009f 00000000 		.4byte	.LLST0
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccpc9pEf.s 			page 1
  388 0013 00       		.byte	0
  389 0014 00       		.byte	0
  390 0015 02       		.uleb128 0x2
-ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccpc9pEf.s 			page 10
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\cc7A3gYn.s 			page 10
 
 
  391 0016 24       		.uleb128 0x24
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccpc9pEf.s 			page 1
  445 004d 0B       		.uleb128 0xb
  446 004e 27       		.uleb128 0x27
  447 004f 0C       		.uleb128 0xc
-ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccpc9pEf.s 			page 11
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\cc7A3gYn.s 			page 11
 
 
  448 0050 11       		.uleb128 0x11
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccpc9pEf.s 			page 1
  502 0063 00       		.sleb128 0
  503 0064 02000000 		.4byte	.LCFI4
  504 0068 04000000 		.4byte	.LCFI5
-ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccpc9pEf.s 			page 12
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\cc7A3gYn.s 			page 12
 
 
  505 006c 0200     		.2byte	0x2
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccpc9pEf.s 			page 1
  559 0018 00000000 		.4byte	.LFB36
  560 001c 6E000000 		.4byte	.LFE36
  561 0020 00000000 		.4byte	0
-ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccpc9pEf.s 			page 13
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\cc7A3gYn.s 			page 13
 
 
  562 0024 00000000 		.4byte	0
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccpc9pEf.s 			page 1
  581      20696D70 
  582 00ef 6E5F5665 		.ascii	"n_Version_4\\Body_main\\Body_main.cydsn\000"
  582      7273696F 
-ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\ccpc9pEf.s 			page 14
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\cc7A3gYn.s 			page 14
 
 
  582      6E5F345C 
