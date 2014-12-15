@@ -56,7 +56,7 @@ int main()
     {
         // Klargøre I2C før hver aflæsning sensorer
         setupI2C();
-  
+ 
         // Læs sensorer
         readAllSensors();
          
