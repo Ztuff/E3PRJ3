@@ -111,12 +111,17 @@ bool MappingScheme::mapKey(int data, MidiSignal & signal)
 	if(MAPDEBUG)
 		cout << "Data post quantizeDiatonic: " << data<< endl;
 	
-	if((signal.param1_ != data) || (noteOn == 0))
+	if((signal.param1Old_ != data) || (noteOn[channel_] == 0))
 		signal.command_ = NOTEOFF;	
 	else
-		signal.command_ = NOTEON;	
+	{
+		signal.command_ = NOTEON;
+		signal.param1_ = data;	//set key value hvis forrige tone er slukket.	
+	}
 	
-	signal.param1_ = data;	//set key value hvis forrige tone er slukket.
+	param1Old_ = data;
+	
+	
 
 	return 1;
 }

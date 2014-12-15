@@ -2,7 +2,7 @@
 #define MAPPINGSCHEME_H_
 
 #define MAPDEBUG 1
-#define CHANNELNO 16
+#define CHANNELNOS 16
 
 #define SLOW 1		//Used for CCRel
 #define MEDIUM 2
@@ -12,7 +12,7 @@
 #include <iostream>
 #include "MidiSignal.h"
 
-static bool noteOn[CHANNELNO];			//These variables enable key MappingSchemes to detect when a velocity MappingScheme of same channel mutes the note.
+static bool noteOn[CHANNELNOS];			//These variables enable key MappingSchemes to detect when a velocity MappingScheme of same channel mutes the note.
 
 struct Key
 {
@@ -67,6 +67,8 @@ private:
 	Velocity velocity_;
 	ControlChange CC_;
 	int channel_;
+	int param1Old_;
+	int param2Old_;
 };
 
 #endif /* MAPPINGSCHEME_H_ */
