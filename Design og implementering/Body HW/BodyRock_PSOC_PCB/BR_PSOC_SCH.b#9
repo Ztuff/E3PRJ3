@@ -129,8 +129,8 @@
 <board>
 <plain>
 <wire x1="94.92" y1="1.27" x2="94.92" y2="58.41" width="0" layer="20"/>
-<wire x1="94.92" y1="58.41" x2="-1.27" y2="58.41" width="0" layer="20"/>
-<wire x1="-1.27" y1="58.41" x2="-1.27" y2="1.27" width="0" layer="20"/>
+<wire x1="94.92" y1="58.41" x2="-2.54" y2="58.41" width="0" layer="20"/>
+<wire x1="-2.54" y1="58.41" x2="-2.54" y2="1.27" width="0" layer="20"/>
 <wire x1="94.92" y1="1.26" x2="-1.27" y2="1.26" width="0" layer="20"/>
 </plain>
 <libraries>
@@ -2457,9 +2457,9 @@ design rules under a new name.</description>
 <signal name="N$16">
 <contactref element="R1" pad="1"/>
 <contactref element="ERR_LED" pad="A"/>
-<wire x1="1.27" y1="40.64" x2="-0.3175" y2="42.2275" width="0.6096" layer="16"/>
-<wire x1="-0.3175" y1="42.2275" x2="-0.3175" y2="53.0225" width="0.6096" layer="16"/>
-<wire x1="-0.3175" y1="53.0225" x2="1.27" y2="54.61" width="0.6096" layer="16"/>
+<wire x1="1.27" y1="40.64" x2="-0.9525" y2="43.4975" width="0.6096" layer="16"/>
+<wire x1="-0.9525" y1="43.4975" x2="-0.9525" y2="52.3875" width="0.6096" layer="16"/>
+<wire x1="-0.9525" y1="52.3875" x2="1.27" y2="54.61" width="0.6096" layer="16"/>
 </signal>
 <signal name="N$17">
 <contactref element="ERR_LED" pad="K"/>
