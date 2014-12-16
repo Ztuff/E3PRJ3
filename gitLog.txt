@@ -1,0 +1,4179 @@
+commit 68bee922b6d276e6d7edfcf473f1b3e3c951a30f
+Author: Boye555 <201370738@post.au.dk>
+Date:   Tue Dec 16 16:59:39 2014 +0100
+
+    Yderligere rettelser
+
+commit 1212749837ce0d77230186202b61185cca7c2d9b
+Author: Boye555 <201370738@post.au.dk>
+Date:   Tue Dec 16 16:13:43 2014 +0100
+
+    Forsat rettelse Projektrapport
+
+commit 3d8ce47676d968bdd8472988bafb036a47660e6d
+Author: Zwrah <201370801@iha.dk>
+Date:   Tue Dec 16 16:06:14 2014 +0100
+
+    Projektdokumentation streamlinet og accepttest sat ind
+
+commit eb2a4900e3b6673ef4658ba3b6b7cca4510cf5f8
+Author: JonasNik <jonasnikolajsen@gmail.com>
+Date:   Tue Dec 16 15:50:07 2014 +0100
+
+    Bilag oversigt final
+
+commit 55e50c364d823aed8a108f0992e95e55d3da94a6
+Author: JonasNik <jonasnikolajsen@gmail.com>
+Date:   Tue Dec 16 15:43:12 2014 +0100
+
+    Turnusordning update
+    Bilags oversigt + bilag 36
+
+commit a31442f19576d22aabde727b21a9309554e5c67f
+Merge: fb59001 f77b9b7
+Author: Felix Blix Everberg <felixblix@gmail.com>
+Date:   Tue Dec 16 15:38:55 2014 +0100
+
+    Merge branch 'master' of https://github.com/Ztuff/E3PRJ3
+
+commit fb590016f45fb6ff57bc2d95dc865ff062f1c16f
+Author: Felix Blix Everberg <felixblix@gmail.com>
+Date:   Tue Dec 16 15:36:05 2014 +0100
+
+    Started correcting the project report. -Felix
+
+commit f77b9b77aa355a39d2bd54f4c2daed8263942f53
+Author: Kristoffer Lerbæk Pedersen <201370952@iha.dk>
+Date:   Tue Dec 16 15:27:39 2014 +0100
+
+    Projektdokumentation streamlinet til side 62 (af 90)
+
+commit cc197800877660b72b48ee683d22abf2199b6634
+Author: JonasNik <jonasnikolajsen@gmail.com>
+Date:   Tue Dec 16 15:17:50 2014 +0100
+
+    Bilag sortering
+
+commit 6f7fc3cbcdb57451157a6b1d14d27e7fb96967cd
+Author: Zwrah <201370801@iha.dk>
+Date:   Tue Dec 16 15:07:15 2014 +0100
+
+    Bilag 35
+
+commit f2d17cacd810f749fcdc5fa73ad05b4fb20fbe1e
+Author: Zwrah <201370801@iha.dk>
+Date:   Tue Dec 16 14:57:25 2014 +0100
+
+    Bilag 29 og 30
+
+commit 3b6766db849986d688790e937eda7ae50fe35a07
+Author: Zwrah <201370801@iha.dk>
+Date:   Tue Dec 16 14:28:57 2014 +0100
+
+    Accepttest færdig
+
+commit f06718b2cdb751fd2f6c653a7e20e864f598c87a
+Author: Felix Blix Everberg <felixblix@gmail.com>
+Date:   Tue Dec 16 13:55:17 2014 +0100
+
+    Finished MidiModule section -Felix
+
+commit e25885b24748b0675ffc5fed9e7b6c11ca1ca526
+Author: mathiassiig <mathias_sn@hotmail.com>
+Date:   Tue Dec 16 13:53:46 2014 +0100
+
+    Alt rettet, mangler afsnit
+
+commit beb1e7b6d3072be730005eba6989692fa83271bd
+Author: Zwrah <201370801@iha.dk>
+Date:   Tue Dec 16 13:45:17 2014 +0100
+
+    Flere bilag
+
+commit 9626935355c60b95adad072fdb20fb79e7369ff2
+Author: Lasse Fisker <201205998@iha.dk>
+Date:   Tue Dec 16 13:42:00 2014 +0100
+
+    integrationstest fast lane til lyd ud
+
+commit 448d33791f3fa13282080d0541f426bdbb614b16
+Author: Lasse Fisker <201205998@iha.dk>
+Date:   Tue Dec 16 13:34:10 2014 +0100
+
+    temp fil -midimodule opdateret til doku
+
+commit 8ffdcb0a7eccbdde1e7723bc5424142772a0d439
+Author: Lasse Fisker <201205998@iha.dk>
+Date:   Tue Dec 16 13:20:58 2014 +0100
+
+    temp fil - opdateret midimodule dokumentation. skal indsættes i endelig doku
+
+commit b70ec931c00a8e8381e3694dd9990b6a008893ef
+Author: Lasse Fisker <201205998@iha.dk>
+Date:   Tue Dec 16 13:20:29 2014 +0100
+
+    rettet type til type_ i midimodule klassediagram
+
+commit b1e77c7405fc94f7724357e1fd1cee5aef4dfb29
+Author: Lasse Fisker <201205998@iha.dk>
+Date:   Tue Dec 16 13:13:23 2014 +0100
+
+    deleted temp file
+
+commit bc0782777a6e4fbb015d8d86fde1c3835a6d71f7
+Author: Lasse Fisker <201205998@iha.dk>
+Date:   Tue Dec 16 13:10:02 2014 +0100
+
+    Opdateret Midimodulbeskrivelse - temp fil
+
+commit c647219f1c0aa611e3b0829172a80bc5063a8cc8
+Merge: a95e72f ce2fa58
+Author: Felix Blix Everberg <felixblix@gmail.com>
+Date:   Tue Dec 16 13:09:03 2014 +0100
+
+    Merge branch 'master' of https://github.com/Ztuff/E3PRJ3
+
+commit a95e72f0d4b06127af641b5eb032f6b701e23d31
+Author: Felix Blix Everberg <felixblix@gmail.com>
+Date:   Tue Dec 16 13:08:28 2014 +0100
+
+    r tilføjet et klassediagram for Rock -Felix
+
+commit ce2fa584f148a24676ffa858ed0d135c2b268c9e
+Author: JonasNik <jonasnikolajsen@gmail.com>
+Date:   Tue Dec 16 12:51:00 2014 +0100
+
+    Projektdokumentation rettet til side 80
+
+commit 6ab0035282881eb58e33eddddf5b47701a15a3d3
+Author: Kristoffer Lerbæk Pedersen <201370952@iha.dk>
+Date:   Tue Dec 16 12:14:03 2014 +0100
+
+    Smårettelser i rapport
+
+commit b5b83b9c13a20f3938157dd0eed0172c538a452d
+Author: Kristoffer Lerbæk Pedersen <201370952@iha.dk>
+Date:   Tue Dec 16 12:10:16 2014 +0100
+
+    Rapport rettet igennem fælles
+
+commit e55913772934cf974eb009ba296860ac25608a74
+Author: Zwrah <201370801@iha.dk>
+Date:   Tue Dec 16 11:48:53 2014 +0100
+
+    Flere bilag sat ind
+
+commit d740a558bf742d98b52527dd6d69c2bef0bed2d8
+Author: Boye555 <201370738@post.au.dk>
+Date:   Tue Dec 16 11:46:40 2014 +0100
+
+    Enhedstest Accelerometer
+
+commit ccfd28af0e2d04bbafaf7aa9c8915b20cb7db67f
+Author: Zwrah <201370801@iha.dk>
+Date:   Tue Dec 16 11:04:22 2014 +0100
+
+    Projektdokumentation
+
+commit a1f25fd15e2be627bbad864ed4757ba539d469f9
+Author: Boye555 <201370738@post.au.dk>
+Date:   Tue Dec 16 10:40:56 2014 +0100
+
+    Bilag flexiforce
+
+commit de6047a57995cc724e2cf5f819b177cdcabc59e8
+Author: Boye555 <201370738@post.au.dk>
+Date:   Tue Dec 16 10:30:37 2014 +0100
+
+    Bilag
+
+commit 6b19b512615e8080a4ca3ac037dcfe55759c87f8
+Author: Boye555 <201370738@post.au.dk>
+Date:   Tue Dec 16 10:24:54 2014 +0100
+
+    Bilag HC-SR04
+
+commit 21de5c723e011713ba4034e12a075032f4a22ba7
+Author: Boye555 <201370738@post.au.dk>
+Date:   Tue Dec 16 10:18:41 2014 +0100
+
+    Bilag MPU6050
+
+commit 40ea19215cf87489b08381677014c7ef55d32a8d
+Author: Boye555 <201370738@post.au.dk>
+Date:   Tue Dec 16 09:28:05 2014 +0100
+
+    Rettelse af dokumentation
+
+commit f939caa4f08c201e074714cc69223b4cc6985a94
+Author: Kristoffer Lerbæk Pedersen <201370952@iha.dk>
+Date:   Tue Dec 16 00:58:05 2014 +0100
+
+    Tilpasset Receiver i domænemodel i projektdokumentation
+
+commit e073e837cc043f518d4a6bc9492dac8e8d76b124
+Author: Kristoffer Lerbæk Pedersen <201370952@iha.dk>
+Date:   Tue Dec 16 00:47:36 2014 +0100
+
+    Opdateret projektrapport med sidehoved og sidefod
+
+commit f132f858a3f876b8f933575251a48668a7257d41
+Author: Kristoffer Lerbæk Pedersen <201370952@iha.dk>
+Date:   Tue Dec 16 00:47:17 2014 +0100
+
+    Opdateret projektdokumentation med sidehoved, sidefod og forside
+
+commit af158bc099a5b4e4869c6d40527996b8aa879801
+Author: Kristoffer Lerbæk Pedersen <201370952@iha.dk>
+Date:   Tue Dec 16 00:31:39 2014 +0100
+
+    Alsa indsat i rapport, og alt korrekturlæst. Der mangler stadig enkelte afsnit.
+
+commit aad37a83ae25567d2a7a36f74402780fa4e89163
+Author: Mathias Siig Nørregaard <mathias_sn@hotmail.com>
+Date:   Mon Dec 15 19:20:40 2014 +0100
+
+    Tilføjet Databankens funktioner. Der står ikke så meget andet om Rock SW....? Controlleren fx? :)
+
+commit 737d42194cf12cea6a41a5b489956bc4df33fac8
+Author: Boye555 <201370738@post.au.dk>
+Date:   Mon Dec 15 17:54:52 2014 +0100
+
+    yderlige rettelser - Kristian
+
+commit 10f3fed9b70aba74c6e1c63d8929288e4c87cc02
+Author: Zwrah <201370801@iha.dk>
+Date:   Mon Dec 15 17:22:21 2014 +0100
+
+    Bilag
+
+commit 9e252f84e7631cf728258c513b9e62379937b155
+Author: Zwrah <201370801@iha.dk>
+Date:   Mon Dec 15 17:18:03 2014 +0100
+
+    Bilag
+
+commit bb4c2c3edf19670ab5caa7d020053803ca1487d8
+Merge: 35a4cf3 915b9e4
+Author: Lukas Hedegaard <lukas_hedegaard@hotmail.com>
+Date:   Mon Dec 15 17:16:03 2014 +0100
+
+    Merge remote-tracking branch 'origin/master'
+
+commit 35a4cf3dfc04b467355649b7aab6607d5047d061
+Author: Lukas Hedegaard <lukas_hedegaard@hotmail.com>
+Date:   Mon Dec 15 17:15:57 2014 +0100
+
+    Projektdokumentation fælles gennemgang til og med Systemarkitektur SW
+
+commit 915b9e40887d484a76958dd46f8e10af09e12bb5
+Author: mathiassiig <mathias_sn@hotmail.com>
+Date:   Mon Dec 15 16:25:08 2014 +0100
+
+    Abstract + Resultater udkast
+
+commit 9b9634516f1a6e9d02072a4bd307c2a569c807c8
+Merge: 00c5fc4 6953c86
+Author: Lukas Hedegaard <lukas_hedegaard@hotmail.com>
+Date:   Mon Dec 15 16:11:18 2014 +0100
+
+    Merge remote-tracking branch 'origin/master'
+
+commit 6953c8600b08b3761a20571a5255aba983a73afe
+Author: Felix Blix Everberg <felixblix@gmail.com>
+Date:   Mon Dec 15 15:10:25 2014 +0100
+
+    added personal conclusion -Felix
+
+commit 00c5fc42cd4ba65afd2c850b8be2251240dfb69c
+Merge: 0c68810 04960a3
+Author: Lukas Hedegaard <lukas_hedegaard@hotmail.com>
+Date:   Mon Dec 15 14:57:21 2014 +0100
+
+    Merge remote-tracking branch 'origin/master'
+
+commit 0c688101e95f12429f2e46ff8d561722eaaf190a
+Author: Lukas Hedegaard <lukas_hedegaard@hotmail.com>
+Date:   Mon Dec 15 14:55:55 2014 +0100
+
+    SensorConfiguration opdatering
+
+commit d041cf515fb7a39d056088da52dabe081c8f048e
+Author: Lukas Hedegaard <lukas_hedegaard@hotmail.com>
+Date:   Mon Dec 15 14:55:45 2014 +0100
+
+    MappingScheme dokumentation opdatering
+
+commit 2c67ca4065174162a6d1682a2c79f7637754e936
+Author: Lukas Hedegaard <lukas_hedegaard@hotmail.com>
+Date:   Mon Dec 15 14:55:28 2014 +0100
+
+    MidiModule dokumentation Lukas' andel
+
+commit 04960a3e43eb55b7cc1c2ac4ee0cb8331e4b80cd
+Author: Kristoffer Lerbæk Pedersen <201370952@iha.dk>
+Date:   Mon Dec 15 14:38:21 2014 +0100
+
+    Konklusion færdig
+
+commit c8882e26211723ce68ebe72e74163127cc63363d
+Author: Zwrah <201370801@iha.dk>
+Date:   Mon Dec 15 14:24:37 2014 +0100
+
+    To rapport afsnit
+
+commit cced44efa34ca29e6a5cb362cc62221eebcbd413
+Author: JonasNik <jonasnikolajsen@gmail.com>
+Date:   Mon Dec 15 14:24:30 2014 +0100
+
+    Specifikation og analyse tilføjet
+
+commit 948931be23e0f432224d3c29d236f4329e828f5e
+Merge: 83f5901 3af25a1
+Author: Felix Blix Everberg <felixblix@gmail.com>
+Date:   Mon Dec 15 13:24:03 2014 +0100
+
+    Merge branch 'master' of https://github.com/Ztuff/E3PRJ3
+
+commit 3af25a12ef35ca79919d417dd0e1f3bc53f809f2
+Author: Boye555 <201370738@post.au.dk>
+Date:   Mon Dec 15 14:23:09 2014 +0100
+
+    opdatering - Kristian
+
+commit addbb0ca4c3308b779562f0fde67c00fd9edd0d8
+Author: Kristoffer Lerbæk Pedersen <201370952@iha.dk>
+Date:   Mon Dec 15 14:12:53 2014 +0100
+
+    Konklusion delvist skrevet, forside rettet til kun at fylde én side
+
+commit 04a4fb06c2954a9597dee1d5390c7a748321a3c8
+Author: Boye555 <201370738@post.au.dk>
+Date:   Mon Dec 15 14:03:37 2014 +0100
+
+    Sidste funktioner til Body control
+
+commit 8cc839718726ee43f4fa83b75259c599219eee7f
+Author: JonasNik <jonasnikolajsen@gmail.com>
+Date:   Mon Dec 15 13:54:10 2014 +0100
+
+    Integrations test GUI med billeder
+
+commit 83f590130c92d552d37489b63f71869cca575931
+Author: Felix Blix Everberg <felixblix@gmail.com>
+Date:   Mon Dec 15 13:22:54 2014 +0100
+
+    Added a section about the PSoC shield. -Felix
+
+commit 5217b9f4eb048c937fe94551f40e6da0976c1572
+Merge: b1e330c 40b62cd
+Author: Felix Blix Everberg <felixblix@gmail.com>
+Date:   Mon Dec 15 12:32:38 2014 +0100
+
+    Merge branch 'master' of https://github.com/Ztuff/E3PRJ3
+
+commit 40b62cd8ca94189c8747363c553faeb8cdae29ae
+Author: Kristoffer Lerbæk Pedersen <201370952@iha.dk>
+Date:   Mon Dec 15 12:52:47 2014 +0100
+
+    Korrekturlæst og indsat individuelle konklusioner fra Lasse og Mathias
+
+commit 2ca123a127545d6b1b4ada3a2b28009945286877
+Author: Lasse Fisker <201205998@iha.dk>
+Date:   Mon Dec 15 12:41:43 2014 +0100
+
+    tilføjet GUI tech undersøgelse til dokumentation
+
+commit 7a8ff10315b984c25416a0b7a4c53d98ceae2d36
+Author: Kristoffer Lerbæk Pedersen <201370952@iha.dk>
+Date:   Mon Dec 15 12:30:07 2014 +0100
+
+    Individuelle konklusioner fra Jeppe, Kristian, Lukas og Kristoffer korrekturlæst og indsat
+
+commit b1e330cd8c8a6986f523b647f70a62bc5f13df8b
+Author: Felix Blix Everberg <felixblix@gmail.com>
+Date:   Mon Dec 15 12:28:33 2014 +0100
+
+    Added to sensordokumentationv2.docx. -Felix
+
+commit c1c9a01c33a98caa969ef28d28128f57d88431c5
+Author: Lasse Fisker <201205998@iha.dk>
+Date:   Mon Dec 15 11:07:57 2014 +0100
+
+    tilføjet nye samples til Linuxsampler
+
+commit 0c437a445515468f5b4c58349767a1c4871b8729
+Author: Kristoffer Lerbæk Pedersen <201370952@iha.dk>
+Date:   Mon Dec 15 10:30:03 2014 +0100
+
+    Konklusion Kristoffer
+
+commit 0e3a7f9f9ba25b7bd93dfef6f2ea8ae929cc3ccd
+Author: Zwrah <201370801@iha.dk>
+Date:   Mon Dec 15 10:26:43 2014 +0100
+
+    Opdateret ikke funktionelle krav
+
+commit 2205e6bddab300ce20422c9857d1622a1c6d62de
+Merge: de3ea9a bd4a008
+Author: Lukas Hedegaard <lukas_hedegaard@hotmail.com>
+Date:   Mon Dec 15 10:26:43 2014 +0100
+
+    Merge remote-tracking branch 'origin/master'
+
+commit de3ea9a627898b7c9ebcc6a204b5a5e4a70d797e
+Author: Lukas Hedegaard <lukas_hedegaard@hotmail.com>
+Date:   Mon Dec 15 10:26:37 2014 +0100
+
+    Mapping Scheme tilrettelse. Afventer test med to akser
+
+commit bd4a00810ba08e579ca7064f3f3298423cffd8c6
+Author: Zwrah <201370801@iha.dk>
+Date:   Mon Dec 15 10:25:58 2014 +0100
+
+    Opdateret main Body
+
+commit a21581087ee94050f0e2fed3f3777252dccba7c8
+Author: Boye555 <201370738@post.au.dk>
+Date:   Mon Dec 15 10:24:28 2014 +0100
+
+    opdateret afgrænsning
+
+commit 5bcb4173e2c824f643d12287a23e5e5940ce5f8e
+Author: Boye555 <201370738@post.au.dk>
+Date:   Mon Dec 15 09:47:09 2014 +0100
+
+    Personlig konklusion
+
+commit ba3d9c9367432b388194944d1853ad65673f288d
+Author: Zwrah <201370801@iha.dk>
+Date:   Mon Dec 15 09:43:20 2014 +0100
+
+    .
+
+commit 2322d41c2cc930b896fafd826632ba6dc5c3fa97
+Author: Zwrah <201370801@iha.dk>
+Date:   Mon Dec 15 09:20:20 2014 +0100
+
+    Produkdokumentation opdateret
+
+commit 11e6264c46f55dad493cab2e1e115d1b4393be20
+Merge: 6a479a0 c68cd1e
+Author: Jonas Nikolajsen <201370914@iha.dk>
+Date:   Mon Dec 15 09:18:02 2014 +0100
+
+    Merge branch 'master' of https://github.com/Ztuff/E3PRJ3
+
+commit 6a479a01793de46e79bae911d2f0dd12d2439e89
+Author: Jonas Nikolajsen <201370914@iha.dk>
+Date:   Mon Dec 15 09:17:29 2014 +0100
+
+    Gui arbejde
+
+commit c68cd1e691580c5c30b418fd0bc032776f4f1e50
+Author: Lasse Fisker <201205998@iha.dk>
+Date:   Mon Dec 15 09:02:41 2014 +0100
+
+    ændret til CONTROLCHANGE
+
+commit 476a8b84a1b019aa30a38741fcf5c88a3116dc46
+Author: JonasNik <jonasnikolajsen@gmail.com>
+Date:   Mon Dec 15 08:33:17 2014 +0100
+
+    projektrapport
+
+commit 97fc8d706e7ee98457521aff3a2fc674ee9fa9e0
+Author: Lasse Fisker <201205998@iha.dk>
+Date:   Sun Dec 14 22:04:06 2014 +0100
+
+    kort beskrivelse af brugen af og valget om alsa
+
+commit 7d01011bca5d2c70a2573e832853a2404db2e6a9
+Author: Lasse Fisker <201205998@iha.dk>
+Date:   Sun Dec 14 21:48:02 2014 +0100
+
+    beskrivelse af kommandoer, der skal inkluderes i /etc/rc.local
+
+commit cf24cf03e56a9fba5808cf42df9aea2b04897be0
+Author: Mathias Siig Nørregaard <mathias_sn@hotmail.com>
+Date:   Sun Dec 14 21:17:11 2014 +0100
+
+    Kom sgu lige til at overwritte Lasses, sorry!
+
+commit 2d8de9243fd84c68258cf3471329a29c937f0353
+Merge: 2122cf2 cd35190
+Author: Mathias Siig Nørregaard <mathias_sn@hotmail.com>
+Date:   Sun Dec 14 21:15:59 2014 +0100
+
+    Merge branch 'master' of https://github.com/Ztuff/E3PRJ3
+
+commit 2122cf28e3201f627fa409d2f995301cde5786dc
+Author: Mathias Siig Nørregaard <mathias_sn@hotmail.com>
+Date:   Sun Dec 14 21:14:37 2014 +0100
+
+    initial commit
+    
+    Signed-off-by: Mathias Siig Nørregaard <mathias_sn@hotmail.com>
+
+commit cd3519015f228eebe720111b3a8c047242c7a4c2
+Author: Lasse Fisker <201205998@iha.dk>
+Date:   Sun Dec 14 20:59:45 2014 +0100
+
+    personlig konklusion for lasse
+
+commit ec6c3b935bcf6096e6f7025c10214bf009ae8489
+Author: Lasse Fisker <201205998@iha.dk>
+Date:   Sun Dec 14 20:25:50 2014 +0100
+
+    linuxsampler relaterede filer
+
+commit 1595fecaf95c02cc925eb3c186b3010463d9a638
+Merge: 905eea6 8edb522
+Author: Lukas Hedegaard <lukas_hedegaard@hotmail.com>
+Date:   Sun Dec 14 18:07:11 2014 +0100
+
+    Merge remote-tracking branch 'origin/master'
+
+commit 905eea6ae79ed25cfb8ec8e310578883d524e2f7
+Author: Lukas Hedegaard <lukas_hedegaard@hotmail.com>
+Date:   Sun Dec 14 18:06:48 2014 +0100
+
+    MappingScheme: Key slukker tone når Velocity sætter noteOn = 0
+
+commit 8edb522d8c9da46f7dc9ba2aac2767a731488cd9
+Author: Kristoffer Lerbæk Pedersen <201370952@iha.dk>
+Date:   Sun Dec 14 17:36:06 2014 +0100
+
+    Integrationstest af sensorforsendelser på Body indsat i projektdokumentation
+
+commit 2a0f287fda9eaf68f27ebb0d0baf8231468611dc
+Author: Kristoffer Lerbæk Pedersen <201370952@iha.dk>
+Date:   Sun Dec 14 17:30:09 2014 +0100
+
+    Integrationstest af sensorforsendelser på Body er færdiggjort
+
+commit cfccfdda08dd47c0d5cde3c2bace497504075186
+Author: Zwrah <201370801@iha.dk>
+Date:   Sun Dec 14 17:24:18 2014 +0100
+
+    Opdateret accepttest_Use_Case_6
+
+commit 02d705c3f9f17245176e180562b2a80b7ec230cc
+Author: Zwrah <201370801@iha.dk>
+Date:   Sun Dec 14 17:08:59 2014 +0100
+
+    Opdateret Projektrapport
+
+commit b61bc7e504d7d9c948cf89859e4a2d1609b7196c
+Author: mathiassiig <mathias_sn@hotmail.com>
+Date:   Sun Dec 14 17:07:22 2014 +0100
+
+    DataBank, Controller og GUI i én
+
+commit 9c17f0c92f6e76e2add60f214d533edbbcfab998
+Author: Zwrah <201370801@iha.dk>
+Date:   Sun Dec 14 16:59:19 2014 +0100
+
+    Opdateret projekt dokumentation og rapport
+
+commit 1cd621e7616b82717beb55ed54d4ae39586e6279
+Merge: ef94149 9cec4ef
+Author: Lukas Hedegaard <lukas_hedegaard@hotmail.com>
+Date:   Sun Dec 14 13:40:16 2014 +0100
+
+    Merge remote-tracking branch 'origin/master'
+
+commit ef941493e1645f14186730507154ce60e00405be
+Author: Lukas Hedegaard <lukas_hedegaard@hotmail.com>
+Date:   Sun Dec 14 13:39:51 2014 +0100
+
+    Personlig konklusion
+
+commit 9cec4efa4c3360523e5da6681cd10a3aec29cf89
+Author: Kristoffer Lerbæk Pedersen <201370952@iha.dk>
+Date:   Sun Dec 14 13:32:41 2014 +0100
+
+    Dokumentation for Receiver opdateret
+
+commit c8e2e34a3b92ae36b732b5d74f24aac2df141da0
+Author: Kristoffer Lerbæk Pedersen <201370952@iha.dk>
+Date:   Sun Dec 14 13:32:25 2014 +0100
+
+    Fjernet tomme overskrifter i rapport
+
+commit 956f630f68b7b8e84316c0c88a85414d6117d72c
+Author: Kristoffer Lerbæk Pedersen <201370952@iha.dk>
+Date:   Sun Dec 14 13:32:05 2014 +0100
+
+    Projektdokumentation opdateret med Receiver
+
+commit dc98859e0866c14985a324f57e8c2c5365882719
+Author: Zwrah <201370801@iha.dk>
+Date:   Sun Dec 14 13:14:56 2014 +0100
+
+    V4 af sensordokumentation
+
+commit e4c360b8d82af03777b2450426ab696ebb70410c
+Author: Zwrah <201370801@iha.dk>
+Date:   Sun Dec 14 12:54:14 2014 +0100
+
+    Indsat i projektdokumentation:
+    
+    Trådløs kommunikations protokol
+    Enhedstest(HW) - Trådløs kommunikations moduler
+    Enhedstests(SW) - Sensor software
+    Implementering af Body control
+
+commit 3f18b9eb7f9ec1c9057f2bb926449c9d488cafa7
+Author: Kristoffer Lerbæk Pedersen <201370952@iha.dk>
+Date:   Sun Dec 14 12:53:01 2014 +0100
+
+    Opdateret klassen Receiver til at starte en tråd, som modtager data fra Bluetooth ved at kalde receive() i en uendelig løkke.
+
+commit 92e2dd262a773b73eaaba5b034e4d165eddf3a20
+Author: Kristoffer Lerbæk Pedersen <201370952@iha.dk>
+Date:   Sun Dec 14 11:25:07 2014 +0100
+
+    Dokumentation af receiver
+
+commit 482e44a202c4dc29bb56834954329d19db263e53
+Author: Lasse Fisker <201205998@iha.dk>
+Date:   Sun Dec 14 03:29:53 2014 +0100
+
+    Teknologiundersøgelse af Lydsampler tilføjer
+
+commit abd4f12d302329eeada91ce5770f39c35df41d4f
+Author: Lasse Fisker <201205998@iha.dk>
+Date:   Sun Dec 14 03:29:32 2014 +0100
+
+    dokumentation af AlsaAdapter
+
+commit 1cb1696dcc0f899059d0f634f944c71780997738
+Author: Lasse Fisker <201205998@iha.dk>
+Date:   Sun Dec 14 03:29:21 2014 +0100
+
+    dokumentation af ALSA
+
+commit 73249e6bf0ed2bede2a3071f9c3bc167e2da0c15
+Author: Kristoffer Lerbæk Pedersen <201370952@iha.dk>
+Date:   Sun Dec 14 03:09:50 2014 +0100
+
+    Læst korrektur af afsnittet om mapping schemes
+
+commit 6009e8d6e814458dac85bceec71029e4cbf10b1b
+Author: Kristoffer Lerbæk Pedersen <201370952@iha.dk>
+Date:   Sun Dec 14 02:15:54 2014 +0100
+
+    Læst korrektur af afsnittet om Databank
+
+commit 07c3d489432ee15deda21948df201e86a0a0fdf4
+Author: Kristoffer Lerbæk Pedersen <201370952@iha.dk>
+Date:   Sun Dec 14 01:45:50 2014 +0100
+
+    Læst korrektur af afsnit om spændingsforsyning
+
+commit e010fe6005741e8022e7503a167577a16a5c3083
+Author: Kristoffer Lerbæk Pedersen <201370952@iha.dk>
+Date:   Sun Dec 14 01:36:37 2014 +0100
+
+    Korrekturlæst afsnit om sensorer
+
+commit a54f26265997428f18d2afd3e8f082f20370e69a
+Author: Kristoffer Lerbæk Pedersen <201370952@iha.dk>
+Date:   Sun Dec 14 00:58:07 2014 +0100
+
+    Læst korrektur af afsnittene: Krav, Projektgennemførsel, Metoder, Fremtidigt arbejde
+
+commit e7f23851ac1d3dbd37cc110c02144a25997c3674
+Author: Kristoffer Lerbæk Pedersen <201370952@iha.dk>
+Date:   Sun Dec 14 00:57:19 2014 +0100
+
+    Korrektur af uc-diagram for BR3K
+
+commit d09ec284eb237e3ac1e1713c4a6384a9b1f15488
+Author: Zwrah <201370801@iha.dk>
+Date:   Sat Dec 13 20:01:31 2014 +0100
+
+    Nye beregner af Baudrate sat in i bluetooth opsætning
+
+commit edd58ec41c6009118ffe8504eb3326325c763210
+Author: Zwrah <201370801@iha.dk>
+Date:   Sat Dec 13 14:40:08 2014 +0100
+
+    Opdateret projektdokumentation og implementering af Body Control
+
+commit 96e2f9cbb370c14982832bb66cf17e728bea2fdb
+Merge: 4254883 8f7a05b
+Author: Lukas Hedegaard <lukas_hedegaard@hotmail.com>
+Date:   Sat Dec 13 12:17:26 2014 +0100
+
+    Merge remote-tracking branch 'origin/master'
+
+commit 4254883136d6b678c1df2cd6d058e4382856ee51
+Author: Lukas Hedegaard <lukas_hedegaard@hotmail.com>
+Date:   Sat Dec 13 12:17:20 2014 +0100
+
+    Midi teknologiundersøgelse færdigskrevet
+
+commit 8f7a05b577d95fb587be490079e2beff1a29f8f3
+Author: JonasNik <jonasnikolajsen@gmail.com>
+Date:   Fri Dec 12 20:43:07 2014 +0100
+
+    opdatering
+
+commit bc88d5f40db96953e171d2283d93608bb1a4af17
+Author: JonasNik <jonasnikolajsen@gmail.com>
+Date:   Fri Dec 12 20:42:25 2014 +0100
+
+    Opdateret
+
+commit 72935ce231449a4c4d5cdce6e22c12183e8773ee
+Merge: 48ad13d c103d5f
+Author: Felix Blix Everberg <felixblix@gmail.com>
+Date:   Fri Dec 12 17:01:35 2014 +0100
+
+    Merged sensor to sound test with newest commit..
+    This is the one to checkout if sensor to sound test should be documented
+    -Felix
+    
+    Merge branch 'master' of https://github.com/Ztuff/E3PRJ3
+
+commit 48ad13da7589404404e307bbbab875f4969dc5f9
+Author: Felix Blix Everberg <felixblix@gmail.com>
+Date:   Fri Dec 12 16:59:53 2014 +0100
+
+    Moved Bluetooth receiver implementation to Software folder -Felix
+    OBS!!: btw this commit contains a working sensor to sound test ;)
+
+commit c103d5f61f8acb0bc766caf64d2ba8a1f0489c5c
+Author: Zwrah <201370801@iha.dk>
+Date:   Fri Dec 12 16:49:30 2014 +0100
+
+    FlexiForce SD og SW beskrivelse
+
+commit a34832144cfc17db0a70e9170f8ec71ba32517fc
+Author: Zwrah <201370801@iha.dk>
+Date:   Fri Dec 12 15:43:22 2014 +0100
+
+    Produktdokumentation opdateret med Trådløs kommunikations protokol og Body system arkitektur
+
+commit 4b5bdec991328063fff3579a0cafe4aa1852826f
+Author: Kristoffer Lerbæk Pedersen <201370952@iha.dk>
+Date:   Fri Dec 12 15:29:54 2014 +0100
+
+    Tilpasset Receiver til at sende videre til midiModule
+
+commit ffddb17a40d6e1518710557320a64d823fe9c699
+Author: Boye555 <201370738@post.au.dk>
+Date:   Fri Dec 12 14:52:37 2014 +0100
+
+    opdateret
+
+commit 20a8b7cc2d7323543af2d0bda06f872b91348bac
+Merge: 48faebc 1a94da3
+Author: Felix Blix Everberg <felixblix@gmail.com>
+Date:   Fri Dec 12 14:46:53 2014 +0100
+
+    Merge branch 'master' of https://github.com/Ztuff/E3PRJ3
+
+commit 1a94da3ce0f0590b11454834285d79c23c667cc2
+Author: Kristoffer Lerbæk Pedersen <201370952@iha.dk>
+Date:   Fri Dec 12 14:46:22 2014 +0100
+
+    Bluetooth-kommunikation på Receiver opdateret til at fungere!!
+
+commit 48faebcd3ce1106f825ffa79572d380987173390
+Author: Felix Blix Everberg <felixblix@gmail.com>
+Date:   Fri Dec 12 14:45:38 2014 +0100
+
+    finished the midiModule initial test. checkout this commit, copy MidiModule folder to the pie, make, and run, to test the midi module -Felix
+
+commit 3aab8619bc9f7ea292f0cf7e13ce5d70b89affba
+Author: Boye555 <201370738@post.au.dk>
+Date:   Fri Dec 12 14:19:22 2014 +0100
+
+    Indsat HW beskrivelse
+
+commit a2147d5744dc5c8fb209e42c3019eb3c3fc7c60e
+Merge: ad40926 b35ae32
+Author: Felix Blix Everberg <felixblix@gmail.com>
+Date:   Fri Dec 12 14:07:10 2014 +0100
+
+    Merge branch 'master' of https://github.com/Ztuff/E3PRJ3
+
+commit ad409263c61e612d6d05a601a17302e6c56a9774
+Author: Felix Blix Everberg <felixblix@gmail.com>
+Date:   Fri Dec 12 14:05:27 2014 +0100
+
+    MidiModule changes made. not done debugging -Felix
+
+commit b35ae32e57132ac984810d311ccd42cc3940fb10
+Author: JonasNik <jonasnikolajsen@gmail.com>
+Date:   Fri Dec 12 14:01:08 2014 +0100
+
+    Projektrapport udkast - elementer mangler
+
+commit ad05dc0260bbeb266e9a8b2ac70acd10ce97a859
+Author: Boye555 <201370738@post.au.dk>
+Date:   Fri Dec 12 13:49:08 2014 +0100
+
+    V3
+
+commit 7f573bf602b82c82cb170b2181cda2b305ceda2d
+Author: Boye555 <201370738@post.au.dk>
+Date:   Fri Dec 12 13:48:31 2014 +0100
+
+    Version 1 design og implementering af hardware
+
+commit 08fd2345d298cf82ac1a4a0f5a025f4b52656cc3
+Author: mathiassiig <mathias_sn@hotmail.com>
+Date:   Fri Dec 12 13:18:54 2014 +0100
+
+    Fix!
+
+commit 3dd7376099fbcac5fe284770c7f9cf85384de9bb
+Merge: 0b4c708 737fd40
+Author: Lukas Hedegaard <lukas_hedegaard@hotmail.com>
+Date:   Fri Dec 12 13:13:40 2014 +0100
+
+    Merge remote-tracking branch 'origin/master'
+
+commit 0b4c708b18f676414187bec8eb7f73a20b3e8473
+Author: Lukas Hedegaard <lukas_hedegaard@hotmail.com>
+Date:   Fri Dec 12 13:13:29 2014 +0100
+
+    Sletning af ekstra MidiModule mappe i MidiModule
+
+commit 826967e023f02244d2b0dbb9f3eff12547498573
+Author: Lukas Hedegaard <lukas_hedegaard@hotmail.com>
+Date:   Fri Dec 12 13:12:32 2014 +0100
+
+    SensorConfiguration assignement operator, copy constructor, const rettelser for get-funktioner
+
+commit 737fd4057cfe81bdca3f9e54cf804fc6c872ff23
+Author: Zwrah <201370801@iha.dk>
+Date:   Fri Dec 12 13:10:37 2014 +0100
+
+    Opdatering af sensordokumentation
+
+commit 25363bfb8e2aa67eb7a753a801be105979a56316
+Author: Lukas Hedegaard <lukas_hedegaard@hotmail.com>
+Date:   Fri Dec 12 13:10:56 2014 +0100
+
+    Mapping Scheme mapKey og mapVelocity funktionsrettelser
+
+commit 9d3529601242fb9e872136c9119d25027d9c11e5
+Author: Kristoffer Lerbæk Pedersen <201370952@iha.dk>
+Date:   Fri Dec 12 13:09:46 2014 +0100
+
+    Filer til MsgHandler
+
+commit 4681906752f10d5949b445c1bfdd8c4a36ae6781
+Author: Kristoffer Lerbæk Pedersen <201370952@iha.dk>
+Date:   Fri Dec 12 13:09:32 2014 +0100
+
+    MsgHandler færdigskrevet (men ikke testet)
+
+commit 2538e07dec9511d19464061883feb626a9894374
+Author: Kristoffer Lerbæk Pedersen <201370952@iha.dk>
+Date:   Fri Dec 12 13:03:45 2014 +0100
+
+    Controller tilpasset til MsgHandler
+
+commit 145c68bafcd254c7356ad3dec34853b0aa68ffd5
+Merge: 42f10f5 45ef1c0
+Author: mathiassiig <mathias_sn@hotmail.com>
+Date:   Fri Dec 12 13:06:23 2014 +0100
+
+    Merge branch 'master' of https://github.com/Ztuff/E3PRJ3
+
+commit 42f10f5e37fcb4229e2dbe9b5e79a89424abdcad
+Author: mathiassiig <mathias_sn@hotmail.com>
+Date:   Fri Dec 12 13:06:10 2014 +0100
+
+    DataBank opdateret
+
+commit 45ef1c048f95adbd7b195262eb329f1369486ea3
+Author: JonasNik <jonasnikolajsen@gmail.com>
+Date:   Fri Dec 12 12:33:43 2014 +0100
+
+    Med indsatte færdige dokumenter - Ikke korekturrettet alt sammen
+
+commit 3695e9dadb4f524a5473bef9fbf4646a4cc76065
+Merge: b6e0ef0 78fdad1
+Author: mathiassiig <mathias_sn@hotmail.com>
+Date:   Fri Dec 12 12:15:28 2014 +0100
+
+    Merge branch 'master' of https://github.com/Ztuff/E3PRJ3
+
+commit 78fdad18e937b59bcec47f99d35e844db67b134b
+Author: Lasse Fisker <201205998@iha.dk>
+Date:   Fri Dec 12 11:52:46 2014 +0100
+
+    test og alsaadapter
+
+commit e5ffa5d28421f3e9a6cd099949fb2583e4c01b03
+Author: Zwrah <201370801@iha.dk>
+Date:   Fri Dec 12 11:49:49 2014 +0100
+
+    Trådløs kommunikations protokol mm.
+
+commit 6dc33afd61b893d6c8d61dd6c3fb11c532c8e6a8
+Author: Boye555 <201370738@post.au.dk>
+Date:   Fri Dec 12 11:42:29 2014 +0100
+
+    Første udkast til dokumentation Body shield
+
+commit ea4a6d87f2025b30d1ee61a154e6fd28d41c93ad
+Author: Lasse Fisker <201205998@iha.dk>
+Date:   Fri Dec 12 11:30:59 2014 +0100
+
+    Midimodule og msghandler - Udgave fra torsdag
+
+commit b6e0ef0b4d17159803a3c41ee874dbfb5aaf083a
+Author: mathiassiig <mathias_sn@hotmail.com>
+Date:   Fri Dec 12 11:18:02 2014 +0100
+
+    Flyttet DataBank-afsnittet
+
+commit dde46961ccddc1cb790763b488c6af1cd5975e06
+Merge: 278d26c 27a64c7
+Author: Lukas Hedegaard <lukas_hedegaard@hotmail.com>
+Date:   Fri Dec 12 11:00:14 2014 +0100
+
+    Merge remote-tracking branch 'origin/master'
+
+commit 278d26c5976c7bdd290d35fd2b2720c17102adde
+Author: Lukas Hedegaard <lukas_hedegaard@hotmail.com>
+Date:   Fri Dec 12 10:59:38 2014 +0100
+
+    Beskrivelse af MidiModule
+
+commit 27a64c766e4003bafbd3a5df90d185152efbb680
+Author: Lasse Fisker <201205998@iha.dk>
+Date:   Fri Dec 12 10:58:03 2014 +0100
+
+    makefile opdateret med debug
+
+commit c0b0f61137baf376302c7ac0d50a105f6675e799
+Merge: 3ce0f30 023341b
+Author: Lukas Hedegaard <lukas_hedegaard@hotmail.com>
+Date:   Fri Dec 12 10:46:05 2014 +0100
+
+    Merge remote-tracking branch 'origin/master'
+
+commit 3ce0f30644cece62b7c931734c1ddbf2d4ff99a8
+Author: Lukas Hedegaard <lukas_hedegaard@hotmail.com>
+Date:   Fri Dec 12 10:46:00 2014 +0100
+
+    rettelse af kundeundersøgelse
+
+commit 023341bc567639b0f873119fcf727f026e771387
+Author: JonasNik <jonasnikolajsen@gmail.com>
+Date:   Fri Dec 12 10:39:23 2014 +0100
+
+    Flytning af fil
+
+commit 381535922cc806ff08d72f680a130b7f3461ab7a
+Merge: a965b44 4d6fdd4
+Author: Lukas Hedegaard <lukas_hedegaard@hotmail.com>
+Date:   Fri Dec 12 10:08:05 2014 +0100
+
+    Merge remote-tracking branch 'origin/master'
+
+commit a965b44693626c410a0850592a7484f001b03cca
+Author: Lukas Hedegaard <lukas_hedegaard@hotmail.com>
+Date:   Fri Dec 12 10:08:00 2014 +0100
+
+    MappingScheme dokumentation færdiggørelse
+    SensorConfiguratino dokumentation påbegyndt
+    SensorConfiguration klasserettelser
+
+commit 4d6fdd4ff01737218694b79126a8d6eab45edcd2
+Author: JonasNik <jonasnikolajsen@gmail.com>
+Date:   Fri Dec 12 10:04:13 2014 +0100
+
+    GUI dokumentation done
+    GUI Rapport done
+    Konklusion Jonas done
+
+commit dbb2aa476eadbee5479ef5fa48157238451ac74b
+Author: Boye555 <201370738@post.au.dk>
+Date:   Fri Dec 12 10:00:14 2014 +0100
+
+    Sensordokumentation
+
+commit 38c1688bd08119f82ca4361770887d0a0e61b46b
+Merge: 9cdab0e 6e13a45
+Author: Lukas Hedegaard <lukas_hedegaard@hotmail.com>
+Date:   Fri Dec 12 08:58:17 2014 +0100
+
+    Merge remote-tracking branch 'origin/master'
+
+commit 9cdab0eceabe15cd650fcc12265d76cc93192a39
+Author: Lukas Hedegaard <lukas_hedegaard@hotmail.com>
+Date:   Fri Dec 12 08:58:09 2014 +0100
+
+    Mapping Scheme test, rettelser og dokumentation
+
+commit 6e13a4564619f21fe96b91eb36d2db799fde0373
+Author: Lasse Fisker <201205998@iha.dk>
+Date:   Thu Dec 11 15:46:42 2014 +0100
+
+    opdateret midimodule
+
+commit 375b8d5527f3a158c6360e751a53a830fbe3dab0
+Author: Zwrah <201370801@iha.dk>
+Date:   Thu Dec 11 15:17:28 2014 +0100
+
+    Til retning af I2C test dokumenter, bluetooth opsætning mm.
+
+commit c7e40995915daebe480b8c9843f65b0f4750cd99
+Author: Kristoffer Lerbæk Pedersen <201370952@iha.dk>
+Date:   Thu Dec 11 15:04:39 2014 +0100
+
+    Fjernet inkludering af Controller fra MsgHandler
+
+commit 995281d70bbc8e64ce6b7829504913aa32d91b5e
+Merge: 328bb87 e6d2312
+Author: mathiassiig <mathias_sn@hotmail.com>
+Date:   Thu Dec 11 15:01:55 2014 +0100
+
+    Merge branch 'master' of https://github.com/Ztuff/E3PRJ3
+
+commit 328bb8762f10999800a69d78a1124b83d01cac31
+Author: mathiassiig <mathias_sn@hotmail.com>
+Date:   Thu Dec 11 14:58:32 2014 +0100
+
+    Udkast til resumé
+
+commit e6d231257a6d2c1cd932b4a82dac7a3560e3a57d
+Author: JonasNik <jonasnikolajsen@gmail.com>
+Date:   Thu Dec 11 14:57:23 2014 +0100
+
+    Design og implementering Software - rapport
+
+commit 8996410dbcb9f7555362374a0b9fe1286463cd5f
+Author: Zwrah <201370801@iha.dk>
+Date:   Thu Dec 11 14:53:32 2014 +0100
+
+    .
+
+commit 6bf71935a952ad6d74dce0ef8d6205b01788e950
+Author: Kristoffer Lerbæk Pedersen <201370952@iha.dk>
+Date:   Thu Dec 11 14:50:14 2014 +0100
+
+    Guide til løsning af problemet med at boote direkte til GUI på Pi
+
+commit 3f8e8728a5ee5b7301c02bdd9bfa91a49cc591e1
+Author: Kristoffer Lerbæk Pedersen <201370952@iha.dk>
+Date:   Thu Dec 11 14:49:35 2014 +0100
+
+    MsgHandler skrevet færdig, men ikke testet
+
+commit 9d29b8da1d0b96b65333103ed71975253f2a42e7
+Author: Kristoffer Lerbæk Pedersen <201370952@iha.dk>
+Date:   Thu Dec 11 14:49:19 2014 +0100
+
+    message.hpp gjort mere overskuelig ifm. MsgHandler-test
+
+commit efe6d1078481848519ade6a20bea9f711531dfb0
+Author: Zwrah <201370801@iha.dk>
+Date:   Thu Dec 11 14:47:21 2014 +0100
+
+    Opdateret ATtiny26L mainkode
+
+commit c2a12c84cbbcf07967609cd7a22d21bed068f1c7
+Author: Zwrah <201370801@iha.dk>
+Date:   Thu Dec 11 14:22:49 2014 +0100
+
+    ATtiny26L beskrivelse og test af FlexiForce dataforsendelse
+
+commit af8613afd6ff575bc8caecc74a025a0d478bc5b0
+Author: mathiassiig <mathias_sn@hotmail.com>
+Date:   Thu Dec 11 13:59:44 2014 +0100
+
+    Færdig og flyttet til anden mappe
+
+commit 00fad6a7e88edae9ba601ffe4fc012f7756e9732
+Merge: d95b36b 12190ae
+Author: Lukas Hedegaard <lukas_hedegaard@hotmail.com>
+Date:   Thu Dec 11 11:37:58 2014 +0100
+
+    Merge remote-tracking branch 'origin/master'
+
+commit d95b36baa4c05fc66bd989e5368f0335c906ffa6
+Author: Lukas Hedegaard <lukas_hedegaard@hotmail.com>
+Date:   Thu Dec 11 11:37:53 2014 +0100
+
+    MidiSignal rettelse af command og channel til int
+
+commit 12190ae5d76fbf81c3e0a23eed5d040078480b6a
+Author: Lasse Fisker <201205998@iha.dk>
+Date:   Thu Dec 11 11:35:53 2014 +0100
+
+    fjernet debug define vedrørende print
+
+commit ed33ae31aa889f80d120cb909a7bab5843150f3a
+Author: Lasse Fisker <201205998@iha.dk>
+Date:   Thu Dec 11 11:35:31 2014 +0100
+
+    fjernet unødvendige oldParam
+
+commit f43420d3a8937a5662cfa77b93cc7a36790d3f2a
+Author: Lasse Fisker <201205998@iha.dk>
+Date:   Thu Dec 11 11:34:43 2014 +0100
+
+    rettet format for midisignal
+
+commit f0108481c3ae389f19a74cdd44fe127faef99f74
+Author: Lukas Hedegaard <lukas_hedegaard@hotmail.com>
+Date:   Thu Dec 11 11:34:23 2014 +0100
+
+    Mapping Scheme and MidiSignal test
+
+commit a86bb60c02f21ea650d82d2dc116e02b1405c1fd
+Author: Zwrah <201370801@iha.dk>
+Date:   Thu Dec 11 11:26:16 2014 +0100
+
+    Flexiforce A301 test and control version 0.1
+
+commit a8be2024abec5beb6bd6cadc09a2fc597f22add9
+Author: Zwrah <201370801@iha.dk>
+Date:   Thu Dec 11 11:25:06 2014 +0100
+
+    Flexiforce A301 test and Version 1
+
+commit 68c4cccc4c489b810522120038a1e17fbef96af9
+Author: Lukas Hedegaard <lukas_hedegaard@hotmail.com>
+Date:   Thu Dec 11 10:56:36 2014 +0100
+
+    MidiSignal rettelse
+
+commit 9d917af86c6a6913107e30e6ca16ed5ca89dcc47
+Author: Lukas Hedegaard <lukas_hedegaard@hotmail.com>
+Date:   Thu Dec 11 10:53:08 2014 +0100
+
+    MidiSignal header rettet
+
+commit 92822f3bc4923cae93e890c43b46c70ce62485ec
+Merge: 870a6fa 678525b
+Author: Lukas Hedegaard <lukas_hedegaard@hotmail.com>
+Date:   Thu Dec 11 10:49:52 2014 +0100
+
+    Merge remote-tracking branch 'origin/master'
+
+commit 870a6fa7de79ed821511aaa76eeb9b02645e368e
+Author: Lukas Hedegaard <lukas_hedegaard@hotmail.com>
+Date:   Thu Dec 11 10:49:48 2014 +0100
+
+    Dokumentation af MidiSignal samt MidiSignal rettelser
+
+commit 678525bd9e99ee23cd99be2b1581a781ab8beee8
+Author: Felix Blix Everberg <felixblix@gmail.com>
+Date:   Thu Dec 11 09:25:01 2014 +0100
+
+    added changes to sensor dokumentation -Felix
+
+commit ff9826eb720c5c1dfebb61e46f13da110c7f9463
+Merge: 8cfa40d 62d0f1e
+Author: Jonas Nikolajsen <201370914@iha.dk>
+Date:   Thu Dec 11 09:24:43 2014 +0100
+
+    Merge branch 'master' of https://github.com/Ztuff/E3PRJ3
+
+commit 8cfa40dcc472f2259727a3cffc97c453e3446bfc
+Author: Jonas Nikolajsen <201370914@iha.dk>
+Date:   Thu Dec 11 09:23:21 2014 +0100
+
+    Qt arbejde - Jonas
+
+commit 62d0f1e912d638a5bc5e6608b34d33411d50e52c
+Author: mathiassiig <mathias_sn@hotmail.com>
+Date:   Wed Dec 10 15:47:30 2014 +0100
+
+    Fix fix fix :)
+
+commit 6b76e4037f064a17185f939e0bcec2e203823c39
+Author: JonasNik <jonasnikolajsen@gmail.com>
+Date:   Wed Dec 10 15:43:59 2014 +0100
+
+    Tilføgejlser til GUI implementering
+
+commit 67fc114e61697606c113d4843383ebf3214eeff3
+Author: Zwrah <201370801@iha.dk>
+Date:   Wed Dec 10 14:03:28 2014 +0100
+
+    Tilretning af Body main
+
+commit 28a14ba766cb058d7711bc7f65771adfd0031381
+Merge: 627b8ef 4d9f414
+Author: Jonas Nikolajsen <201370914@iha.dk>
+Date:   Wed Dec 10 13:35:34 2014 +0100
+
+    Merge branch 'master' of https://github.com/Ztuff/E3PRJ3
+
+commit 627b8ef4a2becb3e10e00f8411643d013c0dda17
+Author: Jonas Nikolajsen <201370914@iha.dk>
+Date:   Wed Dec 10 13:33:16 2014 +0100
+
+    Gui opdateringer - Jonas
+
+commit 4d9f41434f5a5dd2b9dd5b3d2382e598331970a5
+Author: mathiassiig <mathias_sn@hotmail.com>
+Date:   Wed Dec 10 13:28:40 2014 +0100
+
+    Fix af gemme-fejl. Æstetisk fix.
+
+commit 18df9937c5b257c78ee3405df3d48c796c3abb5b
+Author: mathiassiig <mathias_sn@hotmail.com>
+Date:   Wed Dec 10 13:22:53 2014 +0100
+
+    Databank rapport-del færdig. Databank dokumentation (funktionsbeskrivelser) on the way!
+
+commit 4742e1ddb8a5d23ffbe9f35582fb88fa7194c830
+Merge: 897c912 28d9d1e
+Author: Lukas Hedegaard <lukas_hedegaard@hotmail.com>
+Date:   Tue Dec 9 17:11:43 2014 +0100
+
+    Merge remote-tracking branch 'origin/master'
+
+commit 897c912f98f34e0371b3702de20b825fa713d3b4
+Author: Lukas Hedegaard <lukas_hedegaard@hotmail.com>
+Date:   Tue Dec 9 17:11:38 2014 +0100
+
+    Tilrettelser jf. Dokumentation af MappingScheme
+
+commit 28d9d1eade79c054ecfd29a41feee7a85a6720e1
+Author: JonasNik <jonasnikolajsen@gmail.com>
+Date:   Tue Dec 9 15:40:13 2014 +0100
+
+    Gui implementering tilføjelser
+
+commit aa3cb419d53e2b285e8c08ab8debcba4eb4de070
+Author: Lukas Hedegaard <lukas_hedegaard@hotmail.com>
+Date:   Tue Dec 9 15:01:06 2014 +0100
+
+    Tilrettelser af 16) "Fremtidigt arbejde", kundeundersøgelse samt tilføjelse af Mapping Scheme krav i Projektdokumentation
+
+commit de988389c0b7241f7e412ed16c1a01bc3a39a045
+Author: Lukas Hedegaard <lukas_hedegaard@hotmail.com>
+Date:   Tue Dec 9 14:25:07 2014 +0100
+
+    Udkast til afsnit "Kunde undersøgelse" i 9) "Specifikation og analyse"
+
+commit aee5b308731360055c0bbeb323c43dafb2e1a7a3
+Merge: 84a0d2a d1352e1
+Author: Lukas Hedegaard <lukas_hedegaard@hotmail.com>
+Date:   Tue Dec 9 13:59:31 2014 +0100
+
+    Merge remote-tracking branch 'origin/master'
+
+commit 84a0d2a0eed04c2a1c631c61dfd613be76dabfa7
+Author: Lukas Hedegaard <lukas_hedegaard@hotmail.com>
+Date:   Tue Dec 9 13:59:06 2014 +0100
+
+    Specifikation og analyse mappe-struktur opdatering
+
+commit d1352e12dd451f4ee85a63a562b165d9df26e157
+Merge: 489ac2e bf66ca6
+Author: Felix Blix Everberg <felixblix@gmail.com>
+Date:   Tue Dec 9 13:57:01 2014 +0100
+
+    Merge branch 'master' of https://github.com/Ztuff/E3PRJ3
+
+commit bf66ca6988336af41a88e07a780efe27b912042f
+Author: Kristoffer Lerbæk Pedersen <201370952@iha.dk>
+Date:   Tue Dec 9 13:56:31 2014 +0100
+
+    Screenshots til test af BT på Body
+
+commit 489ac2e0f1e3476fa619f136ce0aef0dc4194ba2
+Merge: b0772e9 98c178e
+Author: Felix Blix Everberg <felixblix@gmail.com>
+Date:   Tue Dec 9 13:56:12 2014 +0100
+
+    Merge branch 'master' of https://github.com/Ztuff/E3PRJ3
+
+commit 51a32bea2463bb798c7f60ad9576798d36aad428
+Author: Kristoffer Lerbæk Pedersen <201370952@iha.dk>
+Date:   Tue Dec 9 13:55:34 2014 +0100
+
+    Modultest af BT på Body er færdig
+
+commit 98c178ee9fab9e8840060ddff6995b4391b93cef
+Author: Kristoffer Lerbæk Pedersen <201370952@iha.dk>
+Date:   Tue Dec 9 13:55:17 2014 +0100
+
+    Rettet småfejl i modultest af BT på Rock
+
+commit b0772e9edd33b93134e9040c73c266a527824c5f
+Author: Felix Blix Everberg <felixblix@gmail.com>
+Date:   Tue Dec 9 13:54:45 2014 +0100
+
+    Added a section about devTools for the repport. -Felix
+
+commit e3dd319b194d830f79cd86b11aa2707f8749c137
+Merge: 91319dd 3131e8f
+Author: Felix Blix Everberg <felixblix@gmail.com>
+Date:   Tue Dec 9 13:54:19 2014 +0100
+
+    Merge branch 'master' of https://github.com/Ztuff/E3PRJ3
+
+commit 3131e8f9cc0d8040af5171562e4bacec79adda0f
+Author: Zwrah <201370801@iha.dk>
+Date:   Tue Dec 9 13:34:43 2014 +0100
+
+    UML af Body, Rettelse af receiver, sudo kode af Body main
+
+commit ca1420bccda6ba9cfccafa624bbe1cf71f5b3f63
+Merge: 6d9957d 80d511f
+Author: Lukas Hedegaard <lukas_hedegaard@hotmail.com>
+Date:   Tue Dec 9 12:55:13 2014 +0100
+
+    Merge remote-tracking branch 'origin/master'
+
+commit 6d9957d344aaf9053070ce723e3eb99089404ad2
+Author: Lukas Hedegaard <lukas_hedegaard@hotmail.com>
+Date:   Tue Dec 9 12:55:00 2014 +0100
+
+    Udfærdigelse af rapport afsnit "Metoder"
+
+commit 80d511fdeb60fd51a4a24c36c723fb1c8aaaf069
+Author: Kristoffer Lerbæk Pedersen <201370952@iha.dk>
+Date:   Tue Dec 9 12:34:35 2014 +0100
+
+    Skabelon til funktionsbeskrivelser
+
+commit 144a5e73bc9e0156cf896f868893c7d09f148df1
+Author: Boye555 <201370738@post.au.dk>
+Date:   Tue Dec 9 12:29:38 2014 +0100
+
+    V. 1 sensordokumentation
+
+commit 91319ddc734c41d090a13c414caddea57a818e0b
+Merge: e2893c5 33bc13d
+Author: Felix Blix Everberg <felixblix@gmail.com>
+Date:   Tue Dec 9 11:42:22 2014 +0100
+
+    Merge branch 'master' of https://github.com/Ztuff/E3PRJ3
+
+commit 33bc13d720f9776cce2d87e7513ed10920357365
+Author: Boye555 <201370738@post.au.dk>
+Date:   Tue Dec 9 11:33:34 2014 +0100
+
+    Første udkast til funktionsbeskrivelser af body control
+
+commit bc073da58dfc11d392a574ace772e312f063066b
+Author: Kristoffer Lerbæk Pedersen <201370952@iha.dk>
+Date:   Tue Dec 9 11:11:23 2014 +0100
+
+    Billede PSoC og HC-05
+
+commit f55ae83d82006bdedbc6d4a3c5f1a6937ef690b3
+Author: Zwrah <201370801@iha.dk>
+Date:   Tue Dec 9 11:01:59 2014 +0100
+
+    Opdatering af Body main
+
+commit 3d2d2e5d9f3fb4264c4b4d2d3ed7e0c76ed67021
+Author: Lukas Hedegaard <lukas_hedegaard@hotmail.com>
+Date:   Tue Dec 9 10:44:44 2014 +0100
+
+    Færdigskitsering af rapportafsnit "fremtidigt arbejde"
+
+commit 9c52623f9c7832bad42761be354efb37a4b0666c
+Merge: dbc763e 75a18da
+Author: Lukas Hedegaard <lukas_hedegaard@hotmail.com>
+Date:   Tue Dec 9 10:30:28 2014 +0100
+
+    Merge remote-tracking branch 'origin/master'
+
+commit dbc763eaa8cfb4bd879158dc21b02882c53f4dd5
+Author: Lukas Hedegaard <lukas_hedegaard@hotmail.com>
+Date:   Tue Dec 9 10:30:08 2014 +0100
+
+    MidiSignal namespace std rettelse
+
+commit 75a18da30b4cb15246716bd7c491b0aefa57e7b7
+Author: JonasNik <jonasnikolajsen@gmail.com>
+Date:   Tue Dec 9 10:20:55 2014 +0100
+
+    Første udkast, GUI implementering
+
+commit f04262772cd92ec8e6444c36be9e012b8da90c99
+Author: Kristoffer Lerbæk Pedersen <201370952@iha.dk>
+Date:   Mon Dec 8 17:12:03 2014 +0100
+
+    Opgaveformulering korrekturlæst og indsat i projektrapport
+
+commit 5822273c2b07ba684f461b0fccd5c3a83af5e6ca
+Author: JonasNik <jonasnikolajsen@gmail.com>
+Date:   Mon Dec 8 15:03:43 2014 +0100
+
+    Opgaveformulering og udkast til klassediagram
+
+commit 2a23614264b57beac23647530e95b8209918cb14
+Author: Kristoffer Lerbæk Pedersen <201370952@iha.dk>
+Date:   Mon Dec 8 14:32:10 2014 +0100
+
+    Omdøbt fil og fuldført modultest for Bluetooth på Rock
+
+commit 62a8d8fa7557c9455e9da339d2cae66cc62081f9
+Author: Kristoffer Lerbæk Pedersen <201370952@iha.dk>
+Date:   Mon Dec 8 14:31:48 2014 +0100
+
+    Omdøbt fil
+
+commit 8b5579384aadde21770ecd1e6fe026b76cc50603
+Author: Kristoffer Lerbæk Pedersen <201370952@iha.dk>
+Date:   Mon Dec 8 14:21:34 2014 +0100
+
+    Billeder til modultest af Bluetooth på Rock
+
+commit fad88fb37af546a20a0a1b78452b15c266f0655c
+Author: Kristoffer Lerbæk Pedersen <201370952@iha.dk>
+Date:   Mon Dec 8 11:32:11 2014 +0100
+
+    Tilføjet billede af Rock-fladkabel til Bluetooth-HW-vejledning
+
+commit a455a6d94eeaed13a91be6d0f75a90443d69cb7d
+Author: Kristoffer Lerbæk Pedersen <201370952@iha.dk>
+Date:   Mon Dec 8 11:31:04 2014 +0100
+
+    Beskåret billede af Rock-fladkabel m. forbindelser
+
+commit 6f92606beb081e00f51bdac889e4b4c7562f6572
+Author: Zwrah <201370801@iha.dk>
+Date:   Mon Dec 8 11:20:15 2014 +0100
+
+    Rettelse af Projektgennemførelse og første udgaver af modul test af datamodtagelse og -forsendelse på Body og Rock
+
+commit ef1b03acfd9637011224529d019d5550a579cd38
+Author: Boye555 <201370738@post.au.dk>
+Date:   Sun Dec 7 10:41:59 2014 +0100
+
+    Dokumentation for Body implementering
+
+commit 281d6a467f4df3eeb6df78e6fb3cb850be1b16d0
+Author: Boye555 <201370738@post.au.dk>
+Date:   Sat Dec 6 17:33:13 2014 +0100
+
+    Første udkast til krav
+
+commit d33b343b555a450d6b6791b7735aab61ccf0acee
+Author: Kristoffer Lerbæk Pedersen <201370952@iha.dk>
+Date:   Fri Dec 5 19:01:11 2014 +0100
+
+    Afsnit om Receiver-klassen er færdigt
+
+commit 2bc91a793d4d0ebf6313f0609b24f3c1bc9de956
+Author: Lukas Hedegaard <lukas_hedegaard@hotmail.com>
+Date:   Thu Dec 4 20:40:32 2014 +0100
+
+    Updated test function in MidiModule. Now uses usleep to simulate time
+    between msg sends.
+
+commit 9d4e57d88cc2ead53d455e7000e1438eaa13c481
+Author: Lukas Hedegaard <lukas_hedegaard@hotmail.com>
+Date:   Thu Dec 4 20:15:02 2014 +0100
+
+    Updated MidiSignal.h - har nu default constructor og benytter std på
+    kkorrekt vis. includes rettede for resterende filer i MidiModule
+
+commit 61919b2b6ec40a4a9640e14e5e19ffff2fb3aaee
+Author: Kristoffer Lerbæk Pedersen <201370952@iha.dk>
+Date:   Fri Dec 5 13:16:01 2014 +0100
+
+    Temp-fil fjernet
+
+commit 54048ee2e86c127925b48d7a2d8c1900aab68900
+Author: Kristoffer Lerbæk Pedersen <201370952@iha.dk>
+Date:   Fri Dec 5 13:15:33 2014 +0100
+
+    Opdateret med Indledning og Projektafgrænsning
+
+commit cee5af7c0ba7d2a76d3063c7b15ede55d8ff07fc
+Author: Kristoffer Lerbæk Pedersen <201370952@iha.dk>
+Date:   Fri Dec 5 13:14:57 2014 +0100
+
+    Korrektur
+
+commit 1ae078229c8c1b19b33890e01a90ad377015b149
+Author: Kristoffer Lerbæk Pedersen <201370952@iha.dk>
+Date:   Fri Dec 5 13:04:26 2014 +0100
+
+    Gendannet
+
+commit 47d608788f20606eff1f8112e8ee449edd331122
+Author: Kristoffer Lerbæk Pedersen <201370952@iha.dk>
+Date:   Fri Dec 5 12:48:27 2014 +0100
+
+    Korrekturlæst
+
+commit 18253450ee73afc884e805f991b1e164489c1ab3
+Author: Zwrah <201370801@iha.dk>
+Date:   Fri Dec 5 12:20:41 2014 +0100
+
+    2.udgave af projektafgrænsning
+    1. udgave af projektgennemførelse
+    1. udgave af integrationstest af datamodtagelse på Rock og Sensorforsendelse på Body
+
+commit ba795fdc35067774572419e57747fe7fe1e53d79
+Author: Kristoffer Lerbæk Pedersen <201370952@iha.dk>
+Date:   Fri Dec 5 11:54:07 2014 +0100
+
+    Opdateret numre, da der var to af nummer 8
+
+commit ee7802b6c46cecb5e305cbf465fe8e59e2588cf0
+Author: Felix Blix Everberg <felixblix@gmail.com>
+Date:   Thu Dec 4 22:41:58 2014 +0100
+
+    Added stl files for the casing for the distance sensor -Felix
+
+commit b47a108a291786cdccbc149ca20a810e570c3f25
+Author: Lasse Fisker <201205998@iha.dk>
+Date:   Thu Dec 4 19:28:23 2014 +0100
+
+    type ændret til ekstern
+
+commit 1883d05730efe830a118e593dfc27c998137138b
+Author: Lasse Fisker <201205998@iha.dk>
+Date:   Thu Dec 4 19:24:26 2014 +0100
+
+    ændret channel til 0
+
+commit 6dd77a61cb6c7eafd7246cee5e67264606c6c9f1
+Author: Lukas Hedegaard <lukas_hedegaard@hotmail.com>
+Date:   Thu Dec 4 19:08:45 2014 +0100
+
+    MidiModule Test now plays notes from 0-127 in sequence
+
+commit daa8d01c14b65d4470383a462c3a2c240f62d84e
+Author: Lukas Hedegaard <lukas_hedegaard@hotmail.com>
+Date:   Thu Dec 4 19:02:27 2014 +0100
+
+    modified test for MidiModule. Sender tone kontinuert
+
+commit e23f2bc5a8e637a58407e7986b9bac1bcc67ff89
+Merge: ba62e5e 9741e3e
+Author: Lukas Hedegaard <lukas_hedegaard@hotmail.com>
+Date:   Thu Dec 4 18:53:09 2014 +0100
+
+    Merge branch 'origin/master'
+
+commit ba62e5e1f11ed56c21445ae8601f8942c34b6dc5
+Author: Lukas Hedegaard <lukas_hedegaard@hotmail.com>
+Date:   Thu Dec 4 18:48:25 2014 +0100
+
+    Debug af MidiModule
+
+commit 9741e3eb1f56e0dc231064f8f449c92c2156d5d4
+Author: Boye555 <201370738@post.au.dk>
+Date:   Thu Dec 4 17:06:38 2014 +0100
+
+    Udkast til indledning
+
+commit 0f9dc1bb277d3e5bc6efc77225841fca3a3644e8
+Author: Lukas Hedegaard <lukas_hedegaard@hotmail.com>
+Date:   Thu Dec 4 15:49:50 2014 +0100
+
+    Projektrapport skabelon rettelser
+
+commit c7bf6f82da9e9241a15d17889f292ddc836d80e2
+Merge: 9413c2d aa3c420
+Author: Felix Blix Everberg <felixblix@gmail.com>
+Date:   Thu Dec 4 15:48:41 2014 +0100
+
+    Merge branch 'master' of https://github.com/Ztuff/E3PRJ3
+
+commit 9413c2d8c99321ee289b0600cf6d09a1ee0fe37c
+Author: Felix Blix Everberg <felixblix@gmail.com>
+Date:   Thu Dec 4 15:47:49 2014 +0100
+
+    Started debugging the MidiModule test. not done -Felix
+
+commit aa3c42066c526dde3723f580fd87436a3a2c21c0
+Author: Boye555 <201370738@post.au.dk>
+Date:   Wed Dec 3 16:13:25 2014 +0100
+
+    Enhedstest for accelerometer
+
+commit a858c2caecccfc6581eaaf249f1aed6e080e136e
+Author: Zwrah <201370801@iha.dk>
+Date:   Wed Dec 3 16:07:09 2014 +0100
+
+    Første udgave af Bluetooth opsætning, teknologiundersøgesel Trådløskommunikation og Projektafgrænsning
+
+commit 0fc0ae58c79cae00784e27b8080a89b1393f0f45
+Merge: ad9c87f feb7372
+Author: Lukas Hedegaard <lukas_hedegaard@hotmail.com>
+Date:   Wed Dec 3 15:29:18 2014 +0100
+
+    Merge remote-tracking branch 'origin/master'
+
+commit ad9c87f6ab0f64fc3df467a1824978ad5ad76917
+Author: Lukas Hedegaard <lukas_hedegaard@hotmail.com>
+Date:   Wed Dec 3 15:29:12 2014 +0100
+
+    MidiModule, Sensorkonf og test init klar til test
+
+commit feb7372fd0283608a2248798282069a0903c2db3
+Author: Lasse Fisker <201205998@iha.dk>
+Date:   Wed Dec 3 15:05:20 2014 +0100
+
+    opdateret alsaadaper til at modtage en const vector ref
+    
+    opdateret alsaadaper til at modtage en const vector ref
+
+commit 69e512d730a28e128e5a38f658c92b494fe8977f
+Author: Felix Blix Everberg <felixblix@gmail.com>
+Date:   Wed Dec 3 14:32:56 2014 +0100
+
+    Added modified controller class for implementing MidiModule thread functionality -Felix
+
+commit b56a26ecb78cbaddebc01a746faa93c41aef47d0
+Author: Felix Blix Everberg <felixblix@gmail.com>
+Date:   Tue Dec 2 18:28:02 2014 +0100
+
+    Added a solidworks model of a case for the distance sensor - Felix
+
+commit fbbec86aaa295d37d981f6a518cbface9c88bd70
+Merge: f4b8f51 ff56866
+Author: Lukas Hedegaard <lukas_hedegaard@hotmail.com>
+Date:   Tue Dec 2 13:22:58 2014 +0100
+
+    Merge remote-tracking branch 'origin/master'
+
+commit f4b8f51a0d0c7437ef1ebbaf11f95d6f56ce5e9d
+Author: Lukas Hedegaard <lukas_hedegaard@hotmail.com>
+Date:   Tue Dec 2 13:22:36 2014 +0100
+
+    Klargøring til projektrapport
+
+commit ff56866320c9d6d7e5815880cf5a85aa8cd46280
+Author: Zwrah <201370801@iha.dk>
+Date:   Mon Dec 1 14:49:30 2014 +0100
+
+    Version 4 af Body Control - Rettet til klasser og sender med frekvens 50 Hz
+
+commit d81701c52ef69fc0a498fd250be0771701ab7ba7
+Author: Kristoffer Lerbæk Pedersen <201370952@iha.dk>
+Date:   Mon Dec 1 14:35:09 2014 +0100
+
+    Opdateret til kun at håndtere modtagelse af ét ID af gangen. Virker muligvis ikke helt endnu.
+
+commit b0a784bed2ba2b148acc1d32aea61c9efe501d4e
+Merge: 61bdcc0 d5aec8b
+Author: Lukas Hedegaard <lukas_hedegaard@hotmail.com>
+Date:   Mon Dec 1 13:49:20 2014 +0100
+
+    Merge remote-tracking branch 'origin/master'
+
+commit 61bdcc03352835960e87e7b660bd9b020d1a60cc
+Author: Lukas Hedegaard <lukas_hedegaard@hotmail.com>
+Date:   Mon Dec 1 13:49:13 2014 +0100
+
+    Klargøring til rapport-skrivning:
+    * Indholdsfortegnelse og overskrifter
+    * Beskrivelser af enkelte afsnit (ligger i projektrapport)
+    * Mappe struktur i repo
+
+commit d5aec8bc5d506a643f93de145a31824abfb80c44
+Author: Boye555 <201370738@post.au.dk>
+Date:   Mon Dec 1 12:30:30 2014 +0100
+
+    Version3, data som skal sendes pakkes i 4 forskellige arrays
+
+commit 4acd0503ee09c81f599bb312588680682ccab054
+Author: Kristoffer Lerbæk Pedersen <201370952@iha.dk>
+Date:   Mon Dec 1 10:36:51 2014 +0100
+
+    Møde 01-12-2014
+
+commit e2893c5d3c731011072a6eec95444af48a0e74b2
+Merge: 956be6a 4acd050
+Author: Felix Blix Everberg <felixblix@gmail.com>
+Date:   Mon Dec 1 09:40:22 2014 +0100
+
+    Merge branch 'master' of https://github.com/Ztuff/E3PRJ3
+
+commit 16dece7ac44ed452227bbbe91e2ce1e8275acf90
+Author: Kristoffer Lerbæk Pedersen <201370952@iha.dk>
+Date:   Mon Dec 1 00:07:58 2014 +0100
+
+    Bare kopieret, og MsgHandler oprettet, mangler noget Qt for at kunne indpasse det
+
+commit 4216f5bd56516ed5e2f8fe89c3242f3ceefc1b4d
+Author: JonasNik <jonasnikolajsen@gmail.com>
+Date:   Sun Nov 30 18:59:44 2014 +0100
+
+    Mødedokumenter
+
+commit 301ff33da968963630540d528fa1b1cbbab9bf32
+Author: JonasNik <jonasnikolajsen@gmail.com>
+Date:   Sun Nov 30 15:38:29 2014 +0100
+
+    Opdateret projektdokumentation med slow lane SD diagram og beskrivelse
+
+commit ea089a9084f5623b69a2e9107cd43c5d96b9ed17
+Author: Lukas Hedegaard <lukas_hedegaard@hotmail.com>
+Date:   Sun Nov 30 11:45:22 2014 +0100
+
+    Videre arbejde med projektdokumentation.
+    Indeholder:
+    *Rettet opstilling af kravspecifikation
+    *Nye SW systemarkitektur beskrivelser
+    *Applikationsmodel for MidiModule (mangler beskrivelser)
+
+commit 494b3cc1bccc6cf4baae0375f1a2453c79870f87
+Author: Lukas Hedegaard <lukas_hedegaard@hotmail.com>
+Date:   Sat Nov 29 23:02:43 2014 +0100
+
+    Applikationsmodel for MidiModule
+
+commit f59e151ef3b5e6b748328b8dd55fce568e69a53c
+Merge: f6bbefe 548fb3c
+Author: Lukas Hedegaard <lukas_hedegaard@hotmail.com>
+Date:   Sat Nov 29 18:10:04 2014 +0100
+
+    Merge remote-tracking branch 'origin/master'
+
+commit f6bbefe39e34742888c927b02c819fb7ccb73c93
+Author: Lukas Hedegaard <lukas_hedegaard@hotmail.com>
+Date:   Sat Nov 29 18:08:15 2014 +0100
+
+    updated test for MidiModule
+
+commit 548fb3c5d42b34665e6919a65597327787c699cd
+Author: mathiassiig <mathias_sn@hotmail.com>
+Date:   Sat Nov 29 13:46:53 2014 +0100
+
+    Mere fix af Felix!
+
+commit 5f875fcd147de6f59357e1574d64f19ed75d1190
+Author: Kristoffer Lerbæk Pedersen <201370952@iha.dk>
+Date:   Fri Nov 28 16:09:45 2014 +0100
+
+    Forsøgt omskrevet til at aflæse sensordata. Driller en del, den aflæser ikke alt, og pakker ikke ID 0 helt rigtigt.
+
+commit 742e11960aded25d1610c26856e9d45c1350fa9a
+Author: Kristoffer Lerbæk Pedersen <201370952@iha.dk>
+Date:   Fri Nov 28 16:08:48 2014 +0100
+
+    Genskabt, da den er udgangspunktet for en fungerende BT-klasse
+
+commit a357f3b40ddb498265ae97db74f612a8c007583d
+Author: Jonas Nikolajsen <201370914@iha.dk>
+Date:   Fri Nov 28 15:21:09 2014 +0100
+
+    Qt arbejde med sensor konfigurations ui
+
+commit 4599a88c31fd7fc7284299a4c5f06fd5010122f1
+Merge: 12fe0c7 5f9da22
+Author: mathiassiig <mathias_sn@hotmail.com>
+Date:   Fri Nov 28 14:50:55 2014 +0100
+
+    Merge branch 'master' of https://github.com/Ztuff/E3PRJ3
+
+commit 12fe0c78078142214235d7b4f7ef0df058d72a01
+Author: mathiassiig <mathias_sn@hotmail.com>
+Date:   Fri Nov 28 14:50:16 2014 +0100
+
+    Fix af Felix-feberen
+
+commit 5f9da22edfe4757e3e823cdc9fc26fe98d94b688
+Author: Boye555 <201370738@post.au.dk>
+Date:   Fri Nov 28 14:49:36 2014 +0100
+
+    v3
+
+commit b4430e4513c90b96faa6ffd162a5aa727288ba95
+Author: Felix Blix Everberg <felixblix@gmail.com>
+Date:   Fri Nov 28 14:40:49 2014 +0100
+
+    Cleaned up after the none destructive merge.. Sry for all the useless commits -Felix
+
+commit c616cd14685eb40110bb141cc61992c03c598ca9
+Merge: c2a3d69 6b288d5
+Author: Felix Blix Everberg <felixblix@gmail.com>
+Date:   Fri Nov 28 14:36:16 2014 +0100
+
+    Merge branch 'master' of https://github.com/Ztuff/E3PRJ3
+    
+    Conflicts:
+    	Design og implementering/Software/Controller.cpp
+
+commit c2a3d690ef960d1a16d8d8a10890fe2c1fce93dd
+Author: Felix Blix Everberg <felixblix@gmail.com>
+Date:   Fri Nov 28 14:32:52 2014 +0100
+
+    Cleaned up the Software dir -Felix
+
+commit 15f10d223d5751c3d2ca177e7a35312129be2f81
+Author: Felix Blix Everberg <felixblix@gmail.com>
+Date:   Fri Nov 28 14:29:54 2014 +0100
+
+    added a MsgQueue implementation and did substantial fixes to Controller.cpp -Felix
+
+commit 6b288d5762cc6c4a83e4e9dd98b428f856a8ad8e
+Merge: 6469c42 c27fb86
+Author: Lukas Hedegaard <lukas_hedegaard@hotmail.com>
+Date:   Fri Nov 28 13:04:06 2014 +0100
+
+    Merge remote-tracking branch 'origin/master'
+
+commit 6469c422ca729ea12476b5697a242ffe5813e489
+Author: Lukas Hedegaard <lukas_hedegaard@hotmail.com>
+Date:   Fri Nov 28 13:03:37 2014 +0100
+
+    videre arbejde med test til MidiModule
+
+commit c27fb86b4c8e246ee8103ea8f9924d5c8b222138
+Author: mathiassiig <mathias_sn@hotmail.com>
+Date:   Fri Nov 28 12:36:40 2014 +0100
+
+    DataBank initial commit.
+
+commit 04fce85593f23d79800fbfd35fa293b660732eff
+Merge: 0c97f7c 6e0120e
+Author: Lukas Hedegaard <lukas_hedegaard@hotmail.com>
+Date:   Fri Nov 28 11:31:53 2014 +0100
+
+    Merge remote-tracking branch 'origin/master'
+
+commit 0c97f7c1fada9dd31eddf89e8b165661ed60be7f
+Author: Lukas Hedegaard <lukas_hedegaard@hotmail.com>
+Date:   Fri Nov 28 11:31:42 2014 +0100
+
+    Arbejde på MidiModule
+
+commit 6e0120e30e465f2073f26b52088d18a575535606
+Author: mathiassiig <mathias_sn@hotmail.com>
+Date:   Fri Nov 28 11:13:23 2014 +0100
+
+    SignalIndex fjernet. Et eller andet vector<MidiSignal> tilføjet. SensorConfiguration og SensorConfigurationsbank er splittet ad i to filer.
+
+commit 9f66a4edefe21a8cec2cbf4c78a44366c65ee5b6
+Author: Zwrah <201370801@iha.dk>
+Date:   Thu Nov 27 16:38:54 2014 +0100
+
+    BODY Sensor-overblik
+
+commit 7629f106bcd2d598923b00d4c46b4c1d1f5d121f
+Author: Lukas Hedegaard <lukas_hedegaard@hotmail.com>
+Date:   Thu Nov 27 15:47:45 2014 +0100
+
+    Klargøring af MidiModule test
+
+commit d137e3ae81a2244ff8d48c754686e15023ca619d
+Author: Lukas Hedegaard <lukas_hedegaard@hotmail.com>
+Date:   Thu Nov 27 15:24:33 2014 +0100
+
+    omorganisering af foldere
+
+commit 641fb858bd249b46994140fc79fb1aab8ca5ee0f
+Merge: 9f82b90 9dcacb3
+Author: Lukas Hedegaard <lukas_hedegaard@hotmail.com>
+Date:   Thu Nov 27 15:21:31 2014 +0100
+
+    Merge remote-tracking branch 'origin/master'
+
+commit 9f82b90537627d390897d2f84b277ba30cac2c58
+Author: Lukas Hedegaard <lukas_hedegaard@hotmail.com>
+Date:   Thu Nov 27 15:21:05 2014 +0100
+
+    Omorganisering af foldere
+
+commit 9dcacb30ddbee4d69a4f1e1336a94fcbdf20bc84
+Author: Lasse Fisker <201205998@iha.dk>
+Date:   Thu Nov 27 15:21:02 2014 +0100
+
+    opdateret sonsor konf og midimudule
+    
+    opdateret sonsor konf og midimudule
+
+commit b8f4017129ffcc3d9a980ff318c40caf4cb10a9e
+Merge: 8d2ddae 104d097
+Author: Lasse Fisker <201205998@iha.dk>
+Date:   Thu Nov 27 15:20:37 2014 +0100
+
+    Merge branch 'master' of https://github.com/Ztuff/E3PRJ3
+
+commit 104d09799031f37e1080571da229c96732369e84
+Merge: c3a7c84 4a24753
+Author: Boye555 <201370738@post.au.dk>
+Date:   Thu Nov 27 15:15:20 2014 +0100
+
+    Merge remote-tracking branch 'origin/master'
+
+commit c3a7c84a3a439d13c0407ecc11aaae8659d56cfc
+Author: Boye555 <201370738@post.au.dk>
+Date:   Thu Nov 27 15:14:45 2014 +0100
+
+    Skrevet funktion som converterer fra int16 til int8 og funktionen som sender det vha. putchar
+
+commit 8d2ddae012ba2d36a0585e0b4eb83af5d20f2283
+Author: Lasse Fisker <201205998@iha.dk>
+Date:   Thu Nov 27 15:10:23 2014 +0100
+
+    opdateret sensorconf cpp og hpp
+    
+    opdateret sensorconf cpp og hpp
+
+commit 4a2475371cc6919cc9812c07e50b09ffc6820619
+Merge: 7475743 fda8ebd
+Author: Lukas Hedegaard <lukas_hedegaard@hotmail.com>
+Date:   Thu Nov 27 15:05:14 2014 +0100
+
+    Merge remote-tracking branch 'origin/master'
+
+commit 74757435bd213978c184dc27a61f7404d8efb982
+Author: Lukas Hedegaard <lukas_hedegaard@hotmail.com>
+Date:   Thu Nov 27 15:05:01 2014 +0100
+
+    Oprettelse af ændret SensorConfiguration klasse til samarbejde med MidiModule, samt oprettelse i egen hpp og cpp
+
+commit fda8ebda618ac2f4376ec2828c583ed97115a2fe
+Author: Lasse Fisker <201205998@iha.dk>
+Date:   Thu Nov 27 14:54:14 2014 +0100
+
+    midimodule opdatering
+
+commit a3f5f4ef47012a8adacd29fc29489dde4e11a6de
+Author: Kristoffer Lerbæk Pedersen <201370952@iha.dk>
+Date:   Thu Nov 27 14:39:42 2014 +0100
+
+    Sender nu data videre i et array af data-structs
+
+commit fc3d91bcab15537b25d078138234852dd2e66d39
+Author: Lukas Hedegaard <lukas_hedegaard@hotmail.com>
+Date:   Thu Nov 27 14:38:28 2014 +0100
+
+    implementering af timer-funktioner og handleTick
+
+commit 23180c267dc58e330df3aed4885cc00eb385a652
+Author: Lasse Fisker <201205998@iha.dk>
+Date:   Thu Nov 27 14:26:41 2014 +0100
+
+    cpp go hop dil for Midimodule.
+
+commit 293b10ca4bb7ee629f8deae91fc5fbb5b057c4b6
+Author: Lukas Hedegaard <lukas_hedegaard@hotmail.com>
+Date:   Thu Nov 27 13:55:23 2014 +0100
+
+    Tilføgelse af vector<MidiSignal>::iterator som attribut i SensorConfiguration
+
+commit 403e61d211e1483e079bac1ddd89de8e94057484
+Author: Lukas Hedegaard <lukas_hedegaard@hotmail.com>
+Date:   Thu Nov 27 13:06:54 2014 +0100
+
+    Mapping Scheme rettelse til channel og command = char
+
+commit 41595cced607e03dada20de6afb2d50470861d28
+Merge: 7185b1d 3eb3c6d
+Author: mathiassiig <mathias_sn@hotmail.com>
+Date:   Thu Nov 27 12:20:29 2014 +0100
+
+    Merge branch 'master' of https://github.com/Ztuff/E3PRJ3
+
+commit 7185b1d8406168873fc99ff13fbd924817e9a1c9
+Author: mathiassiig <mathias_sn@hotmail.com>
+Date:   Thu Nov 27 12:19:34 2014 +0100
+
+    Tilføjet 'axis'-attribut til Sensorkonfiguration. SensorID lavet til int igen, frem for string.
+
+commit 3eb3c6df3d5619e2c97c34f1b3ddf3277b643f62
+Merge: eb0ed47 a0dee95
+Author: Lukas Hedegaard <lukas_hedegaard@hotmail.com>
+Date:   Wed Nov 26 16:32:40 2014 +0100
+
+    Merge remote-tracking branch 'origin/master'
+
+commit eb0ed47bb66c36d1f7ad101a165b5e146d9501de
+Author: Lukas Hedegaard <lukas_hedegaard@hotmail.com>
+Date:   Wed Nov 26 16:32:00 2014 +0100
+
+    Update af MappingScheme test samt arbejde på Midi vector og håndtering af sensordata gennem sensorkonfigurationer
+
+commit a0dee95136fa22aa95d8c2a7adb8d56ae1147bb4
+Author: JonasNik <jonasnikolajsen@gmail.com>
+Date:   Wed Nov 26 16:18:31 2014 +0100
+
+    SD diagram + beskrivelse
+    Slowlane beskrivelse
+
+commit 548c907968a7c1b3601ead75102cdc598319ffe0
+Author: mathiassiig <mathias_sn@hotmail.com>
+Date:   Wed Nov 26 15:13:14 2014 +0100
+
+    Sensorkonfigurationsbank done
+
+commit 1aa420c4331a8e6a408a5d4209ac1fdc2dfd045b
+Author: mathiassiig <mathias_sn@hotmail.com>
+Date:   Wed Nov 26 15:08:11 2014 +0100
+
+    leviosaaaaaaaaaaaaaaaaa
+
+commit 1d9e3df9b38b99e6cb10c99b29240c19a2a487b5
+Author: mathiassiig <mathias_sn@hotmail.com>
+Date:   Tue Nov 25 15:25:27 2014 +0100
+
+    Sensorkonfigurationsbank nearly done...
+
+commit deee227660c8ce5da16693150b5703303909ba75
+Author: Kristoffer Lerbæk Pedersen <201370952@iha.dk>
+Date:   Tue Nov 25 13:45:12 2014 +0100
+
+    Klassenavn ændret fra BTRock til Receiver. Udkommenteret send-funktion, da den ikke skal benyttes. Tilføjet sortering til receive-funktion, mangler at vide hvor hhv. data og preset skal sendes hen
+
+commit f07cebdaad7cd9afaef183d9f499dc086b520b92
+Author: Kristoffer Lerbæk Pedersen <201370952@iha.dk>
+Date:   Tue Nov 25 13:43:15 2014 +0100
+
+    Rettet små syntax-fejl
+
+commit 5ea15f459aaa6639c480a96ec8be95a57c80e2c4
+Author: Kristoffer Lerbæk Pedersen <201370952@iha.dk>
+Date:   Tue Nov 25 13:42:34 2014 +0100
+
+    BTRock har skiftet navn til Receiver, opdateret i main
+
+commit 76d2c7a232242a3d801e3ae42a06aadac022a66d
+Author: Kristoffer Lerbæk Pedersen <201370952@iha.dk>
+Date:   Tue Nov 25 12:16:27 2014 +0100
+
+    Inkludering af header-filen
+
+commit b1b0ad653d3b3f728484f61d98815d3cbe61eaa1
+Author: Kristoffer Lerbæk Pedersen <201370952@iha.dk>
+Date:   Tue Nov 25 10:19:00 2014 +0100
+
+    Endeligt referat fra gårsdagens møde
+
+commit 9ce82a9368f47acaff7f3f23d9aab7a82699f4f4
+Author: Kristoffer Lerbæk Pedersen <201370952@iha.dk>
+Date:   Tue Nov 25 10:18:47 2014 +0100
+
+    Rettet navngivning ift. syntax
+
+commit dd412ba833d460603e4e565ca4994e0b40c9a7f7
+Author: Kristoffer Lerbæk Pedersen <201370952@iha.dk>
+Date:   Tue Nov 25 10:18:31 2014 +0100
+
+    Opdateret tidsplan
+
+commit 489111d1af1eaef59ab5e5d4ff2bb4b91b3480d8
+Author: Kristoffer Lerbæk Pedersen <201370952@iha.dk>
+Date:   Mon Nov 24 17:08:46 2014 +0100
+
+    Opdateret tidsplan
+
+commit e265a7e20dee7b4eb298984c48f5cd6a5bbbe5d5
+Author: Kristoffer Lerbæk Pedersen <201370952@iha.dk>
+Date:   Mon Nov 24 16:27:00 2014 +0100
+
+    Mødereferat
+
+commit cf45c218dd8bb86a77ab331386726529e3a8ef50
+Author: JonasNik <jonasnikolajsen@gmail.com>
+Date:   Mon Nov 24 16:26:16 2014 +0100
+
+    Tidsplan update
+
+commit 2d1e69139879c03ddd49eae1f222a888027df155
+Author: mathiassiig <mathias_sn@hotmail.com>
+Date:   Mon Nov 24 13:06:22 2014 +0100
+
+    Den rigtige hedder 'Klassediagram Databank'
+
+commit 5e307eb42aebad2fa782848721766010c9a4a9fe
+Author: mathiassiig <mathias_sn@hotmail.com>
+Date:   Mon Nov 24 12:34:44 2014 +0100
+
+    Så er den i pdf version
+
+commit 1786809326be90394d23f7b9b63596c041d35490
+Merge: 1bd320d c7fe20d
+Author: mathiassiig <mathias_sn@hotmail.com>
+Date:   Mon Nov 24 12:32:44 2014 +0100
+
+    Merge branch 'master' of https://github.com/Ztuff/E3PRJ3
+
+commit 1bd320d85bed024291e7f2b0632099dc15fadb62
+Author: mathiassiig <mathias_sn@hotmail.com>
+Date:   Mon Nov 24 12:32:05 2014 +0100
+
+    Hej
+
+commit c7fe20d8f5c38812d15b78d504b1161aac19b6f9
+Author: Lasse Fisker <201205998@iha.dk>
+Date:   Mon Nov 24 03:04:09 2014 +0100
+
+    Opdateret  headerfil og .cpp fil for AlsaAdapter.
+    
+    Opdateret  headerfil og .cpp fl for AlsaAdapter.
+    NB: indeholder p.t. en test-main til demonstration. denne fjernes
+    snarligt.
+
+commit 9c0915d1a7d0ccff5dfea7fa2ac173c8166bd003
+Author: Kristoffer Lerbæk Pedersen <201370952@iha.dk>
+Date:   Mon Nov 24 12:19:41 2014 +0100
+
+    Pins på RN-42
+
+commit c13f8703b5c3c24a1384d2821b863af81209a8aa
+Author: Boye555 <201370738@post.au.dk>
+Date:   Mon Nov 24 12:11:28 2014 +0100
+
+    Opdateret med dato, Felix og Kristoffer bytter plads som referent
+
+commit 9c04b273a97a4a842108863eff9cbc3539c0d845
+Author: Zwrah <201370801@iha.dk>
+Date:   Mon Nov 24 12:06:59 2014 +0100
+
+    Opdatering af ATTiny26(L) og turnusordning
+
+commit fb8c2f4530c64c56ce884e021941914e4da51758
+Author: Boye555 <201370738@post.au.dk>
+Date:   Mon Nov 24 10:04:09 2014 +0100
+
+    Body main Version 1.0
+
+commit f784e7289715ffb596cac6ee714880e9a2d5f865
+Author: Jonas Nikolajsen <201370914@iha.dk>
+Date:   Sat Nov 22 15:44:16 2014 +0100
+
+    En god dags arbejde på t :) -Jonas
+
+commit 768224d30bea0313e2175d2bd3de146554e33904
+Author: Kristoffer Lerbæk Pedersen <201370952@iha.dk>
+Date:   Sat Nov 22 15:40:22 2014 +0100
+
+    GPIO-connections ifm. BT
+
+commit 24eec24e813d8a205f9abbc50fdc704d5238a329
+Author: Kristoffer Lerbæk Pedersen <201370952@iha.dk>
+Date:   Sat Nov 22 15:39:33 2014 +0100
+
+    Bluetooth-klassen til Rpi fungerer nu, og kan kompileres. Dog ikke tilpasset projektets specifikke behov.
+
+commit ed9dc635dfde41f56a9720564576a8c715d2157f
+Author: JonasNik <jonasnikolajsen@gmail.com>
+Date:   Sat Nov 22 15:35:09 2014 +0100
+
+    Felix MessageQueue
+
+commit b7f893fc2383a695496967528062906f30baa57a
+Author: JonasNik <jonasnikolajsen@gmail.com>
+Date:   Sat Nov 22 15:20:04 2014 +0100
+
+    MsgQueue added til gui
+
+commit 3aaa88d3841b7598e786c411076ec7f33061539c
+Author: JonasNik <jonasnikolajsen@gmail.com>
+Date:   Sat Nov 22 15:17:39 2014 +0100
+
+    MsgQueue added til GUI
+
+commit 5f2815cb079b44469c5666c3ddef8e0096241813
+Merge: db839bb 6f5ef80
+Author: mathiassiig <mathias_sn@hotmail.com>
+Date:   Sat Nov 22 14:54:55 2014 +0100
+
+    Merge branch 'master' of https://github.com/Ztuff/E3PRJ3
+
+commit db839bb26b2d106152b7f7a61ce9db2bda3ac958
+Author: mathiassiig <mathias_sn@hotmail.com>
+Date:   Sat Nov 22 14:54:47 2014 +0100
+
+    Tilføjet ID. Tilføjet Default Constructor
+
+commit 6f5ef803a1d06a0c8195e7de270f2245b334e453
+Author: Felix Blix Everberg <felixblix@gmail.com>
+Date:   Sat Nov 22 13:55:03 2014 +0100
+
+    added a bit to controller class -Felix
+
+commit 908e37265a7d6a537aa3e2f7c0b1e780489735dd
+Merge: 0d5fc71 66bd16a
+Author: mathiassiig <mathias_sn@hotmail.com>
+Date:   Sat Nov 22 10:52:27 2014 +0100
+
+    Merge branch 'master' of https://github.com/Ztuff/E3PRJ3
+
+commit 0d5fc719b5d3bbe8ebed41bff7fc15db1c211a08
+Author: mathiassiig <mathias_sn@hotmail.com>
+Date:   Sat Nov 22 10:50:21 2014 +0100
+
+    SampleBank done
+
+commit 66bd16ac51b295d011b29ec16035e191b40ee22a
+Author: Kristoffer Lerbæk Pedersen <201370952@iha.dk>
+Date:   Sat Nov 22 09:16:48 2014 +0100
+
+    Utestet, men umiddelbart funktionsdygtig BT-klasse. Skal tilpasses projektets behov.
+
+commit 923c0c149178f1e32f815759ff1573177451b30a
+Author: Boye555 <201370738@post.au.dk>
+Date:   Fri Nov 21 14:06:43 2014 +0100
+
+    Videreudvikling af funktionerne til main body
+
+commit 016405a5d58a1022cfbab187a8b104078022aeb9
+Author: JonasNik <jonasnikolajsen@gmail.com>
+Date:   Fri Nov 21 13:28:43 2014 +0100
+
+    Tilføjet kode - Jonas
+
+commit 66564644ada923897d9cd3ee2c700df02fbab913
+Author: Felix Blix Everberg <felixblix@gmail.com>
+Date:   Fri Nov 21 12:58:33 2014 +0100
+
+    added controller class stub -Felix
+
+commit a1c3a90296451efa063f1076a8b5becc51fb9d67
+Author: Boye555 <201370738@post.au.dk>
+Date:   Fri Nov 21 10:38:28 2014 +0100
+
+    Opdateret
+
+commit f0643459d6314a69d10b39b486c4322c1bbf9c85
+Author: mathiassiig <mathias_sn@hotmail.com>
+Date:   Thu Nov 20 11:28:47 2014 +0100
+
+    Header-filer færdige
+    CPP-filer påbegyndt.
+
+commit e1b3b417b3bc96fd7f37b1269b561cab54afbcdc
+Author: Kristoffer Lerbæk Pedersen <201370952@iha.dk>
+Date:   Wed Nov 19 15:50:01 2014 +0100
+
+    Guide til opsætning af WiFi på Raspberry Pi
+
+commit 6d690f71ee871c483e2e83dfe907b90327d82d57
+Author: Kristoffer Lerbæk Pedersen <201370952@iha.dk>
+Date:   Wed Nov 19 15:49:02 2014 +0100
+
+    Tilføjet kommandoer til tekstredigering med "vi"
+
+commit e0f1487a0e256a052c64f01cce022cf3840017e9
+Author: Lukas Hedegaard <lukas_hedegaard@hotmail.com>
+Date:   Wed Nov 19 15:38:55 2014 +0100
+
+    Body functions update
+
+commit 19143be61fdfe77613ca160ac7e75b3ffb505d56
+Merge: cc7bf4e dd34481
+Author: Lukas Hedegaard <lukas_hedegaard@hotmail.com>
+Date:   Wed Nov 19 15:33:36 2014 +0100
+
+    Merge remote-tracking branch 'origin/master'
+
+commit cc7bf4e4e4a8d47eb5fa395b85828d5ba4242388
+Author: Lukas Hedegaard <lukas_hedegaard@hotmail.com>
+Date:   Wed Nov 19 15:33:06 2014 +0100
+
+    indledende skitsering af Body SW funktioner og struktur
+
+commit dd34481ad6e77b280de752b8fb6d353074912fe0
+Author: mathiassiig <mathias_sn@hotmail.com>
+Date:   Tue Nov 18 15:49:18 2014 +0100
+
+    Klassen oprettet, næsten færdig
+
+commit 6b396b88c41811360a79d5a98749a65364b1e66e
+Author: Lukas Hedegaard <lukas_hedegaard@hotmail.com>
+Date:   Tue Nov 18 15:39:14 2014 +0100
+
+    All functions implemented in Mapping Scheme
+
+commit 9835a117219a65457862aeef991043f1e09df2c9
+Author: Lukas Hedegaard <lukas_hedegaard@hotmail.com>
+Date:   Tue Nov 18 14:42:58 2014 +0100
+
+    Implementation of Mapping Scheme Velocity, and CCAbs
+
+commit f03db0ede74e5d4cf8cde5314a3b2d82bab893d5
+Author: Lukas Hedegaard <lukas_hedegaard@hotmail.com>
+Date:   Mon Nov 17 23:41:48 2014 +0100
+
+    Implementation of final Mapping Scheme
+
+commit 38c30e88cf011fa8b559cb451c55f3c1dcf019a5
+Author: Kristoffer Lerbæk Pedersen <201370952@iha.dk>
+Date:   Mon Nov 17 20:47:40 2014 +0100
+
+    Første udkast til Bluetooth på Rock implementeret som klasse
+
+commit 519ec54e86550eb544e3e89c3866713ced156c71
+Author: Kristoffer Lerbæk Pedersen <201370952@iha.dk>
+Date:   Mon Nov 17 20:47:03 2014 +0100
+
+    Tilrettet baud rate fra 9600 til 115200
+
+commit 28e3b81accf13dde1bd095f8dcb6ca54ae02736b
+Author: Lukas Hedegaard <lukas_hedegaard@hotmail.com>
+Date:   Mon Nov 17 14:53:52 2014 +0100
+
+    domail model SWsysark rettelse
+
+commit bc30a5dadd073cdff1e0291e49bba719fd2c6ca5
+Merge: 847bb0f 2bd36ce
+Author: Lukas Hedegaard <lukas_hedegaard@hotmail.com>
+Date:   Mon Nov 17 13:03:59 2014 +0100
+
+    Merge remote-tracking branch 'origin/master'
+
+commit 847bb0f4cfecc8ce149e0697c1ec222bbc0db791
+Author: Lukas Hedegaard <lukas_hedegaard@hotmail.com>
+Date:   Mon Nov 17 13:03:46 2014 +0100
+
+    Rettelser efter kort internt review
+
+commit 2bd36ce7a0cefa6924129e3be61fd5f70d95f9dd
+Author: Kristoffer Lerbæk Pedersen <201370952@iha.dk>
+Date:   Mon Nov 17 12:42:41 2014 +0100
+
+    Kode rykket ind i main-funktion
+
+commit 2c727830d422e638070b22bebfaa6673b820878a
+Author: Kristoffer Lerbæk Pedersen <201370952@iha.dk>
+Date:   Mon Nov 17 12:41:20 2014 +0100
+
+    Nyttige kommandoer på RPi
+
+commit 05f9004976f0e2563730955fa63d94d2a3151a1f
+Author: Kristoffer Lerbæk Pedersen <201370952@iha.dk>
+Date:   Mon Nov 17 12:40:32 2014 +0100
+
+    GPIO på RPi
+
+commit 956be6a7cd57309e472434e29bbbaad80dc30b92
+Merge: 65fba44 bc261ef
+Author: Felix Blix Everberg <felixblix@gmail.com>
+Date:   Mon Nov 17 12:30:55 2014 +0100
+
+    Merge branch 'master' of https://github.com/Ztuff/E3PRJ3
+
+commit bc261efdaab525d63fa4a8bbecdcf4f8409d19e7
+Author: Zwrah <201370801@iha.dk>
+Date:   Sun Nov 16 21:10:40 2014 +0100
+
+    Først og anden udgave af I2C_Slave for Flexiforce 301A
+
+commit 9a21963d121937123984678b959965d1a1c10472
+Author: Zwrah <201370801@iha.dk>
+Date:   Tue Nov 11 14:01:23 2014 +0100
+
+    .
+
+commit f7353cb6fcfa8ac7ce5aeb479183897ee903203c
+Author: Lukas Hedegaard <lukas_hedegaard@hotmail.com>
+Date:   Sun Nov 16 18:08:40 2014 +0100
+
+    Systemarkitektur. Rettelse jf. Raspberry Pi samt SD for Body og Fast Lane
+
+commit 65fba44ea0e49a6cdadb2623b8d68b31ecf2d2da
+Author: Felix Blix Everberg <felixblix@gmail.com>
+Date:   Sat Nov 15 13:46:01 2014 +0100
+
+    Added the Battery Board layout in BodyHW -Felix
+
+commit 3f9cbfb867bc4f98f098d65efe32f46f7a0bb693
+Author: Lasse Fisker <201205998@iha.dk>
+Date:   Fri Nov 14 21:18:17 2014 +0100
+
+    Grænseflade for ekstern MIDI
+    
+    Grænsefladebeskrivelse for MIDI out / ekstern midi
+
+commit cd2bccc53ba4d75cf20f12bed1011584cfaa72be
+Author: Felix Blix Everberg <felixblix@gmail.com>
+Date:   Wed Nov 12 16:05:01 2014 +0100
+
+    har tilføjet en stubbed header til AlsaAdapter klassen med beskrivelse af ønsket brugerflade. -Felix
+
+commit 732ce14f2de5d16721cdc41c05f9b30a7cfd3e02
+Author: Jonas Nikolajsen <201370914@iha.dk>
+Date:   Wed Nov 12 13:50:39 2014 +0100
+
+    GUI tilføjelser - Jonas og Mathias
+
+commit 80c150048df2ec87e414ef076d19c84fb5ac823e
+Author: 201370952 <ztuffer@gmail.com>
+Date:   Tue Nov 11 20:49:34 2014 +0100
+
+    Flyttet til dedikeret Bluetooth-mappe
+
+commit 3eb362139ee0da42e7e8cf7a05165854277710ac
+Author: JonasNik <jonasnikolajsen@gmail.com>
+Date:   Tue Nov 11 13:03:20 2014 +0100
+
+    Opdateret tidsplan
+
+commit 0d19f2ffa844b75abc1cf2d9ad410f2a507ed79e
+Author: Kristoffer Lerbæk Pedersen <201370952@iha.dk>
+Date:   Mon Nov 10 22:05:47 2014 +0100
+
+    Udkast til UART-driver på RPi
+
+commit 830bd92efc43c628db196e16882e84f71978078d
+Author: Felix Blix Everberg <felixblix@gmail.com>
+Date:   Tue Nov 11 02:28:54 2014 +0100
+
+    Added a folder for the dataStorage implementation as well as a few incomplete .hpp files -Felix
+
+commit cc978e596ab96a59ae1ccfa7329cea8a2721462e
+Author: Jonas Nikolajsen <201370914@iha.dk>
+Date:   Sat Nov 8 18:56:58 2014 +0100
+
+    tilføjet Rock gui - Jonas
+
+commit c8cda10b38cbabc1b63daa5feea5e9d47366fe61
+Author: 201370952 <ztuffer@gmail.com>
+Date:   Mon Nov 10 14:05:13 2014 +0100
+
+    Info om Raspberry Pi
+
+commit 772869153590aa7140189f72e42955751e77fb5b
+Author: Lasse Fisker <201205998@iha.dk>
+Date:   Mon Nov 10 10:37:28 2014 +0100
+
+    Beskrivelse af ssh - setup til RPi på windows.
+
+commit c9bbfb7362cefe7de88e1757b7c364fae2aaab06
+Author: Felix Blix Everberg <felixblix@gmail.com>
+Date:   Mon Nov 10 08:13:23 2014 +0100
+
+    Finished the Force Sensor circuit and sent it and the mpu6050 board for
+    production -Felix
+
+commit 669d5d1a3caf113ce82428adcceb7e55c24ab08f
+Author: Felix Blix Everberg <felixblix@gmail.com>
+Date:   Mon Nov 10 02:00:08 2014 +0100
+
+    Added improved Force sensor design -Felix
+
+commit 80b7ab7cca6b83e2cfa6809639777d232ad54a35
+Author: 201370952 <ztuffer@gmail.com>
+Date:   Sun Nov 9 12:15:18 2014 +0100
+
+    Nyttige vejledninger ifm. BT på RPi
+
+commit 789dca58f00cbfee6bfefd701a19d00dd17ef701
+Author: Zwrah <201370801@iha.dk>
+Date:   Fri Nov 7 16:41:46 2014 +0100
+
+    Bluetooth Connection(Grænsefladebeskrivelse) og AT-Tiny26P datasheet
+
+commit 984b5a1f92999c821aae956022de9369e0cd7b0b
+Author: mathiassiig <mathias_sn@hotmail.com>
+Date:   Fri Nov 7 13:18:14 2014 +0100
+
+    Ændret databank til datastorage. Men pisse fedt jeg ikke har ændret filnavnet!
+
+commit feb30038607b99ba3ea75367c60bc0247461742c
+Author: 201370952 <ztuffer@gmail.com>
+Date:   Fri Nov 7 12:50:41 2014 +0100
+
+    Guide til opsætning og brug af UART på RPi i C++
+
+commit 36c0fbc40ad5e3758325aa6a1e685b9cba2c049e
+Author: 201370952 <ztuffer@gmail.com>
+Date:   Fri Nov 7 12:29:23 2014 +0100
+
+    Indskrivning fra gruppearbejde på tavle
+
+commit e0eb17fd20dc52a8427cfd8254fc03f88ed9381f
+Author: 201370952 <ztuffer@gmail.com>
+Date:   Fri Nov 7 12:28:17 2014 +0100
+
+    Opdatering af BlueTooth-driver fra 05-11-2014 som ikke var blevet pushet
+
+commit e9a1a054ed5255a74b9111c6a51cf7cf09ec6c75
+Author: 201370952 <ztuffer@gmail.com>
+Date:   Wed Nov 5 16:27:33 2014 +0100
+
+    Forsøgt at implementere interrupts
+
+commit fded8d1786e21a93a2efe0cb5c920e38b63bdcee
+Merge: ab9c07f 727e996
+Author: Lukas Hedegaard <lukas_hedegaard@hotmail.com>
+Date:   Wed Nov 5 15:44:44 2014 +0100
+
+    Merge remote-tracking branch 'origin/master'
+
+commit ab9c07f87e955a737b0f33366e9f0c7b6f9bfaf8
+Author: Lukas Hedegaard <lukas_hedegaard@hotmail.com>
+Date:   Wed Nov 5 15:44:17 2014 +0100
+
+    System arkitektur arbejde. Klasseidentifikation og -beskrivelse er nu implementerede. Ramme for øvrige SW-arkitektur afsnit også implementeret
+
+commit 727e996c4817a208c81c19ca96a450541bcc5193
+Author: 201370952 <ztuffer@gmail.com>
+Date:   Wed Nov 5 15:08:16 2014 +0100
+
+    Dobbelt forekomst
+
+commit 5536836a6aa6e8616d4c6c1fbaa813fe7c4599b7
+Author: 201370952 <ztuffer@gmail.com>
+Date:   Wed Nov 5 15:07:39 2014 +0100
+
+    Spørgsmål til gruppen efter gruppearbejde på datastrukturen
+
+commit 32016fe60506ed4fd16582ccd65af4948dcd5284
+Author: Zwrah <201370801@iha.dk>
+Date:   Wed Nov 5 15:05:04 2014 +0100
+
+    Bluetooth Rock
+
+commit 242b1548fad38ec044f8db68f90e1fe4bef9f864
+Merge: 8d36454 a8fedea
+Author: Lukas Hedegaard <lukas_hedegaard@hotmail.com>
+Date:   Wed Nov 5 14:10:03 2014 +0100
+
+    Merge remote-tracking branch 'origin/master'
+
+commit 8d364541c7f4bb1dbd817100b6ebe7ac1968c759
+Author: Lukas Hedegaard <lukas_hedegaard@hotmail.com>
+Date:   Wed Nov 5 14:09:54 2014 +0100
+
+    Tilrettelse og indføring af Ikke-funktionelle krav i projektrapporten
+
+commit a8fedeae061f4d1edd22e713040101c2d7eb026c
+Author: mathiassiig <mathias_sn@hotmail.com>
+Date:   Wed Nov 5 13:53:59 2014 +0100
+
+    By Stuff, Mathias & Jonas
+
+commit 749504c0d4b23d76a4f7e929481e9a9c9076ccab
+Author: Felix Blix Everberg <felixblix@gmail.com>
+Date:   Wed Nov 5 09:00:10 2014 +0100
+
+    Tilføjet FORCE_SENSOR PCB, rettet ACCEL_GYRO_SENSOR -Felix
+
+commit 3f79aa8b1f3e06c66b4068ed07decf433f0dd728
+Author: Felix Blix Everberg <felixblix@gmail.com>
+Date:   Sun Nov 2 23:58:43 2014 +0100
+
+    Made final changes to eagle designs and exported to gerber -Felix
+
+commit d29a3251409c9ad2d91f94dfbc70746957dec6d4
+Author: Boye555 <201370738@post.au.dk>
+Date:   Sun Nov 2 22:19:04 2014 +0100
+
+    Eagle filer til proximity sensor
+
+commit 20fb0dcbc488acc966a64ce0f772da937cbb944c
+Author: Lukas Hedegaard <lukas_hedegaard@hotmail.com>
+Date:   Thu Oct 30 16:01:59 2014 +0100
+
+    rename af dokument
+
+commit 112848b93cc108ad63f09a5837b8cc071dcafb78
+Author: Lukas Hedegaard <lukas_hedegaard@hotmail.com>
+Date:   Thu Oct 30 16:01:40 2014 +0100
+
+    SW sys ark Jeppe + Lukas arbejde
+
+commit 6b0515ea28ff1b03fa14736c600705a7ec74245e
+Merge: e336b6c 5864ab0
+Author: Lukas Hedegaard <lukas_hedegaard@hotmail.com>
+Date:   Thu Oct 30 14:51:39 2014 +0100
+
+    Merge remote-tracking branch 'origin/master'
+
+commit e336b6cf562124fd92f80f3107d657ffb6ffdd94
+Author: Lukas Hedegaard <lukas_hedegaard@hotmail.com>
+Date:   Thu Oct 30 14:51:30 2014 +0100
+
+    Domain model til Applikationsmodel
+
+commit 5864ab018f55fdfa5a7b5b85b8e1fa4cf3dd06ba
+Author: Zwrah <201370801@iha.dk>
+Date:   Thu Oct 30 13:57:47 2014 +0100
+
+    Software arkitektur fordelling mm.
+
+commit c6c20e02d0fea855c9c333bcaa9644e75617a522
+Author: 201370952 <ztuffer@gmail.com>
+Date:   Wed Oct 29 15:48:14 2014 +0100
+
+    Funktioner til grænseflade for 'databank' på Rock
+
+commit e914ff8297787f441fec54629227e627a4e9c3ad
+Author: mathiassiig <mathias_sn@hotmail.com>
+Date:   Wed Oct 29 15:46:50 2014 +0100
+
+    Manglede 'Preset' og typen på denne
+
+commit ce0a05b8302731e62217519a1eef74ceccd0fdc3
+Author: mathiassiig <mathias_sn@hotmail.com>
+Date:   Wed Oct 29 15:42:12 2014 +0100
+
+    Noter fra 29-10-2014. Der er måske nogle få rettelser til noget systemarkitektur
+
+commit d9d1ef5cf1f9d069072ebbf71af8acc0265e51aa
+Author: Felix Blix Everberg <felixblix@gmail.com>
+Date:   Tue Oct 28 20:44:23 2014 +0100
+
+    Added schematics and board designs for the body HW -Felix
+
+commit d721e144dc77ad4e6371bffbe9e3b0a9a83e9362
+Author: mathiassiig <mathias_sn@hotmail.com>
+Date:   Mon Oct 27 13:16:18 2014 +0100
+
+    Rough trådeopsætning i main
+
+commit 70340276c781e85ed780ebdf4b3eb04c764d4909
+Author: mathiassiig <mathias_sn@hotmail.com>
+Date:   Mon Oct 27 12:44:27 2014 +0100
+
+    Oprettelse af fil
+
+commit 02003e403db77c876126d4467340ff74c3876279
+Merge: 7d845a4 61396c8
+Author: Lukas Hedegaard <lukas_hedegaard@hotmail.com>
+Date:   Sat Oct 25 16:35:29 2014 +0200
+
+    Merge remote-tracking branch 'origin/master'
+
+commit 7d845a48a78df12137c5451930a8176ce7913d3f
+Merge: f4ac26a 4d74ca0
+Author: Lukas Hedegaard <lukas_hedegaard@hotmail.com>
+Date:   Sat Oct 25 16:35:21 2014 +0200
+
+    System-arkitetkur rettelser
+
+commit 61396c8ebf95c1671c2fb3ecea1137bae315b50c
+Author: 201370952 <ztuffer@gmail.com>
+Date:   Fri Oct 24 15:41:22 2014 +0200
+
+    Liste over kommandoer og opsætning af HC-05 (Body)
+
+commit f4ac26a4eeca37b49210a3ab59c74c958ea9f613
+Author: Lukas Hedegaard <lukas_hedegaard@hotmail.com>
+Date:   Fri Oct 24 13:29:19 2014 +0200
+
+    deleted temp files
+
+commit cb11bd0e80633770b3ffebb1e895990bce397955
+Author: Lukas Hedegaard <lukas_hedegaard@hotmail.com>
+Date:   Fri Oct 24 13:24:44 2014 +0200
+
+    Noter til sysark rettelser
+
+commit ea300e497fe52a7fb16249ddecb9014428bc4383
+Author: Lukas Hedegaard <lukas_hedegaard@hotmail.com>
+Date:   Fri Oct 24 13:22:03 2014 +0200
+
+    Rettelse af allokeringsprogrammer
+
+commit f48ec70f4473b7f6121fb0cce5a2b85ee8f4246b
+Author: Lukas Hedegaard <lukas_hedegaard@hotmail.com>
+Date:   Fri Oct 24 10:24:18 2014 +0200
+
+    function protypes for printStrategies()
+
+commit 06149ae20d88c2ac7e5300186b1830b13e8bac54
+Author: Lukas Hedegaard <lukas_hedegaard@hotmail.com>
+Date:   Thu Oct 23 19:51:54 2014 +0200
+
+    CCAbsGen + CCRelGen skelet nu implementeret
+
+commit 78608cdfc2c5d0b269f8f18403a1e115cd9534ad
+Author: Lukas Hedegaard <lukas_hedegaard@hotmail.com>
+Date:   Thu Oct 23 16:57:08 2014 +0200
+
+    Videre implementering med polymorfi. singleNoteGen og contNoteGen skelet fungerende
+
+commit 4d74ca08e79adda6dacb96ef480be6c87f3e5bf6
+Author: Lukas Hedegaard <lukas_hedegaard@hotmail.com>
+Date:   Thu Oct 23 13:44:14 2014 +0200
+
+    ..
+
+commit 9ed61ba70f8b4ee33a2e884f651a1a0123d57dfc
+Merge: b85811f 0f7fc95
+Author: Lukas Hedegaard <lukas_hedegaard@hotmail.com>
+Date:   Thu Oct 23 13:43:22 2014 +0200
+
+    Merge remote-tracking branch 'origin/master'
+
+commit 0f7fc958b1fdf8cf330053c5fb82ef022a3ae228
+Author: mathiassiig <mathias_sn@hotmail.com>
+Date:   Fri Oct 24 12:49:06 2014 +0200
+
+    Rettelser
+
+commit 4c11ac3df2bb658fc925a5dd6eb5470154d3f0ab
+Author: mathiassiig <mathias_sn@hotmail.com>
+Date:   Fri Oct 24 12:37:29 2014 +0200
+
+    Tilføjet GUI-block
+
+commit 212112e5fdffc2380ba0cc5ac4ba4a770b712d1e
+Author: mathiassiig <mathias_sn@hotmail.com>
+Date:   Fri Oct 24 12:28:39 2014 +0200
+
+    Overordnet Skitse til implementering af task 'Main (Controller)'
+
+commit d17dd8a2a8f43dc7155f504b2554250c2f443b62
+Merge: 53277df f48ec70
+Author: mathiassiig <mathias_sn@hotmail.com>
+Date:   Fri Oct 24 12:24:04 2014 +0200
+
+    Merge branch 'master' of https://github.com/Ztuff/E3PRJ3
+
+commit 53277df49c8e27ae02740bcf988595adf8e6d915
+Author: mathiassiig <mathias_sn@hotmail.com>
+Date:   Fri Oct 24 10:43:47 2014 +0200
+
+    Navnefejl
+
+commit b85811f68cb1b4183fb00f1a624f0bdf95b3f9c7
+Author: Lukas Hedegaard <lukas_hedegaard@hotmail.com>
+Date:   Thu Oct 23 13:41:57 2014 +0200
+
+    compilation rettelser på linux
+
+commit f2a81094947d947be4bcdd8689cf2ac97c0a10b8
+Merge: 9f94fc0 9e2e675
+Author: Boye555 <201370738@post.au.dk>
+Date:   Thu Oct 23 09:50:40 2014 +0200
+
+    Merge remote-tracking branch 'origin/master'
+
+commit 9f94fc029bebf786e73e2c8a4ca7c230268d725b
+Author: Boye555 <201370738@post.au.dk>
+Date:   Thu Oct 23 09:50:05 2014 +0200
+
+    Version 2
+
+commit 9e2e67526453d343640f236b881e93b17a082ee2
+Author: Lukas Hedegaard <lukas_hedegaard@hotmail.com>
+Date:   Thu Oct 23 09:41:36 2014 +0200
+
+    Noter fra review af vores projekt-dokumentation
+
+commit 459513a57e47d9f83a5a5d4bbd3ecee9508784dd
+Merge: 18eff74 9a3e8d2
+Author: Lukas Hedegaard <lukas_hedegaard@hotmail.com>
+Date:   Thu Oct 23 09:41:08 2014 +0200
+
+    Merge remote-tracking branch 'origin/master'
+
+commit 9a3e8d24e74154953a5f14f3b8cb13b88dc45089
+Author: Boye555 <201370738@post.au.dk>
+Date:   Thu Oct 23 09:02:50 2014 +0200
+
+    Review af gruppe 8 i pdf form
+
+commit a344fbbd7aa754cfe46e38d6067d85bbe131b9b0
+Author: Felix Blix Everberg <felixblix@gmail.com>
+Date:   Thu Oct 23 06:29:52 2014 +0200
+
+    har tilføjet filerne til review fra gruppe 8 -Felix
+
+commit 18eff74434015a2632bc3e719cf3f2457ed39e11
+Merge: a699624 97bc515
+Author: Lukas Hedegaard <lukas_hedegaard@hotmail.com>
+Date:   Wed Oct 22 22:38:44 2014 +0200
+
+    Merge remote-tracking branch 'origin/master'
+
+commit a6996246a0ec0830ae4d08b25e263d932c405e59
+Author: Lukas Hedegaard <lukas_hedegaard@hotmail.com>
+Date:   Wed Oct 22 22:38:16 2014 +0200
+
+    Implementering af objekt orienteret MIDIGen
+
+commit 97bc515cb0b80de5c8bc181ea1236c1a8dedf2ab
+Author: JonasNik <jonasnikolajsen@gmail.com>
+Date:   Wed Oct 22 15:16:14 2014 +0200
+
+    Projektdokumentation med kommentar fra review
+
+commit ac5da7d4f5e09b33a61637c1c38e8fbabcbc4344
+Author: Zwrah <201370801@iha.dk>
+Date:   Wed Oct 22 11:53:41 2014 +0200
+
+    Yderligere yderligere ændringer i repository strukturen
+
+commit 467126478a9acdbc0857c9ee76b2c6e695615095
+Author: 201370952 <ztuffer@gmail.com>
+Date:   Wed Oct 22 11:19:17 2014 +0200
+
+    Sletning af midlertidige filer
+
+commit b9ff55fdebe0ee117d28d102493c0e56c8ec0c6c
+Author: Zwrah <201370801@iha.dk>
+Date:   Wed Oct 22 11:17:47 2014 +0200
+
+    Yderligere omstrukturering af repository
+
+commit d6565e8ec7b1f24b79134c1774d5d8c6d855d293
+Author: Zwrah <201370801@iha.dk>
+Date:   Tue Oct 21 21:32:30 2014 +0200
+
+    Omorganisering af repository
+
+commit 09e8248314326ad803b1483caa7d0309d59f26c3
+Author: Zwrah <201370801@iha.dk>
+Date:   Tue Oct 21 21:09:38 2014 +0200
+
+    Spændingsregulator datasheet
+
+commit c9705dce165d6e33ed29c088642a8c9526f384f5
+Merge: 5022671 ff23aad
+Author: Lukas Hedegaard <lukas_hedegaard@hotmail.com>
+Date:   Tue Oct 21 15:27:00 2014 +0200
+
+    Merge remote-tracking branch 'origin/master'
+    
+    Conflicts:
+    	Projektdokumentation/Projektdokumentation.docx
+
+commit 5022671cb875196a26f9f76c270421bae33e2732
+Author: Lukas Hedegaard <lukas_hedegaard@hotmail.com>
+Date:   Tue Oct 21 15:24:26 2014 +0200
+
+    rettelse af systemtegning
+
+commit ff23aad079c31435b7be74d53477ba9b9feedf30
+Author: JonasNik <jonasnikolajsen@gmail.com>
+Date:   Mon Oct 20 17:15:05 2014 +0200
+
+    Projektdoku
+    + IBD tilrettet
+
+commit 2a1dda58db790387071744ea6749fc29650e8298
+Merge: bf488f0 fce4b0a
+Author: Lukas Hedegaard <lukas_hedegaard@hotmail.com>
+Date:   Mon Oct 20 16:51:41 2014 +0200
+
+    Merge remote-tracking branch 'origin/master'
+
+commit bf488f0e1aaa656ebaa7eb2f41517d1f6cc7a970
+Author: Lukas Hedegaard <lukas_hedegaard@hotmail.com>
+Date:   Mon Oct 20 16:51:35 2014 +0200
+
+    preset-knap-modul rettelse
+
+commit fce4b0ab9c1924699421ad3cd604211a9bf577a2
+Author: JonasNik <jonasnikolajsen@gmail.com>
+Date:   Mon Oct 20 16:37:58 2014 +0200
+
+    Projektdokumentation
+
+commit e7678f8d7456300741483f75e61c9468cab88e2a
+Author: mathiassiig <mathias_sn@hotmail.com>
+Date:   Mon Oct 20 16:30:25 2014 +0200
+
+    Navneskift fra 'Bluetooth Module' til henholdsvis Bluetooth Rock og Bluetooth Body
+
+commit 13f1e0af18577ff3d12cdcfac1d9ebb57d8cd7d1
+Merge: 2c1d1a4 1c1abfa
+Author: Lukas Hedegaard <lukas_hedegaard@hotmail.com>
+Date:   Mon Oct 20 16:17:48 2014 +0200
+
+    Merge remote-tracking branch 'origin/master'
+
+commit 2c1d1a40c99f7aa9195396b274b01d5e354b9d6b
+Author: Lukas Hedegaard <lukas_hedegaard@hotmail.com>
+Date:   Mon Oct 20 16:17:43 2014 +0200
+
+    fælles rettelser
+
+commit 1c1abfabb09ecf42c867d81074d9481d58f9c8c7
+Author: Boye555 <201370738@post.au.dk>
+Date:   Mon Oct 20 16:13:52 2014 +0200
+
+    Version 2, to blokke samlet til 1 blok
+
+commit c013c46fad2de8dbdab0f600796d8478337e3a0b
+Author: 201370952 <ztuffer@gmail.com>
+Date:   Mon Oct 20 16:09:59 2014 +0200
+
+    Stavefejl
+
+commit b7c9aa8ff5435a731f0b891884db772ba10c54a9
+Author: Zwrah <201370801@iha.dk>
+Date:   Mon Oct 20 16:08:07 2014 +0200
+
+    Rettet opdatering af IBD af Body og generisk sensorenehed - Jeppe og Lukas
+
+commit 0ea095b746e3f2de85b42f70ae1ab614e49fa437
+Merge: f695572 39c7f56
+Author: Felix Blix Everberg <felixblix@gmail.com>
+Date:   Mon Oct 20 13:56:11 2014 +0200
+
+    Merge branch 'master' of https://github.com/Ztuff/E3PRJ3
+
+commit 39c7f564e4b69350a3aa9d02f2c50bf7514c6471
+Author: Zwrah <201370801@iha.dk>
+Date:   Mon Oct 20 15:44:51 2014 +0200
+
+    Opdatering af IBD Body og IBD generisk sensorenhed af Jeppe og Lukas
+
+commit a94227abf52b737bb95c53fe3548142ad570483c
+Merge: cc8bf1e d5bcf62
+Author: Lukas Hedegaard <lukas_hedegaard@hotmail.com>
+Date:   Mon Oct 20 15:39:44 2014 +0200
+
+    Merge remote-tracking branch 'origin/master'
+
+commit cc8bf1ea64b2cef94fd1421195c0f7daf1a23e4e
+Author: Lukas Hedegaard <lukas_hedegaard@hotmail.com>
+Date:   Mon Oct 20 15:39:31 2014 +0200
+
+    første udkast til diagramtext
+
+commit d5bcf6237af479027519ea4bc35d54e53391610a
+Author: mathiassiig <mathias_sn@hotmail.com>
+Date:   Mon Oct 20 15:39:23 2014 +0200
+
+    Oprettelse af dokument.
+
+commit 09c0934d98e6cde1b149f8038db01fc4a18e1be0
+Author: mathiassiig <mathias_sn@hotmail.com>
+Date:   Mon Oct 20 15:35:06 2014 +0200
+
+    Smårettelse
+
+commit 1a55ca4b8c28218bf2de616f77e89334890d9054
+Author: mathiassiig <mathias_sn@hotmail.com>
+Date:   Mon Oct 20 15:34:40 2014 +0200
+
+    Attributer og metoder tilføjet - Thias og Ztuff
+
+commit cff8e11b39193d5f8d9cebb279f2dfc5fa51984b
+Author: 201370952 <ztuffer@gmail.com>
+Date:   Mon Oct 20 15:33:31 2014 +0200
+
+    Funktionsbeskrivelser for SW-klassediagrammer, Bluetooth
+
+commit f6955725662cf46ff9104a8c31140d13d04b5538
+Author: Felix Blix Everberg <felixblix@gmail.com>
+Date:   Mon Oct 20 13:55:11 2014 +0200
+
+    har rettet lidt i signalbeskrivelsen -Felix
+
+commit 416726341b7063c66e73cb74a5b02d953efaee9c
+Author: Lukas Hedegaard <lukas_hedegaard@hotmail.com>
+Date:   Mon Oct 20 13:53:52 2014 +0200
+
+    første skitsering af diagramtekst
+
+commit 7e50b8b40269f6286ac965f7b41a729582b61b40
+Author: Lukas Hedegaard <lukas_hedegaard@hotmail.com>
+Date:   Mon Oct 20 13:53:36 2014 +0200
+
+    rettelse af association mellem body og rock
+
+commit b07e2e2d203519bdb73371ef1036df53a6472fcc
+Author: mathiassiig <mathias_sn@hotmail.com>
+Date:   Mon Oct 20 13:50:02 2014 +0200
+
+    Rettet én fejl
+
+commit 10274eee0538604cc7a199cf0423a40566a2b18c
+Author: mathiassiig <mathias_sn@hotmail.com>
+Date:   Mon Oct 20 13:46:35 2014 +0200
+
+    Tilføjet type til attributer. Tvivl om alle attributer skal være public
+
+commit d4dfd0b498f97bc212ec12e22ab854e480581e91
+Author: Felix Blix Everberg <felixblix@gmail.com>
+Date:   Mon Oct 20 13:41:00 2014 +0200
+
+    har tilføjet et software ibd for rock -Felix
+
+commit 02bcea3f3de011744dc9b07379ce927104f0530e
+Merge: 545fa53 f9ce21e
+Author: Lukas Hedegaard <lukas_hedegaard@hotmail.com>
+Date:   Mon Oct 20 13:37:20 2014 +0200
+
+    Merge remote-tracking branch 'origin/master'
+
+commit 545fa53d6b65289671fce01dcf7c40f9d640d106
+Author: Lukas Hedegaard <lukas_hedegaard@hotmail.com>
+Date:   Mon Oct 20 13:37:05 2014 +0200
+
+    Rettelse til "blutooth modul". Godkendelse af diagram
+
+commit f9ce21e5dbc7f3b56fabbdf506951b314ee05ab1
+Author: 201370952 <ztuffer@gmail.com>
+Date:   Mon Oct 20 13:36:59 2014 +0200
+
+    Opdateret tidsplan efter gruppemøde
+
+commit b11899c534bf47048ef25eeaaca067272526a6f1
+Merge: 7390177 6a584ab
+Author: Lukas Hedegaard <lukas_hedegaard@hotmail.com>
+Date:   Mon Oct 20 13:31:07 2014 +0200
+
+    Merge remote-tracking branch 'origin/master'
+
+commit 73901775ec0a5b9958f89114cab02d503fa8821d
+Author: Lukas Hedegaard <lukas_hedegaard@hotmail.com>
+Date:   Mon Oct 20 13:29:43 2014 +0200
+
+    Rettelse
+
+commit eb73b24b3445c959753a30fe9c35653efaabde0c
+Author: Felix Blix Everberg <felixblix@gmail.com>
+Date:   Mon Oct 20 13:25:20 2014 +0200
+
+    har tilføjet dokumentet signalBeskrivelse til system arkitektur - Felix
+
+commit 3fe6c08ca5363c5ca140c5811f48fee9258bb68f
+Author: JonasNik <jonasnikolajsen@gmail.com>
+Date:   Mon Oct 20 15:00:12 2014 +0200
+
+    UC8 udkast 1
+
+commit f164d1147ebc1d65a58c97ef99d52dcaa5150945
+Author: Boye555 <201370738@post.au.dk>
+Date:   Mon Oct 20 14:14:48 2014 +0200
+
+    Første udkast til Allokeringsdiagram for Systemet
+
+commit 6a584ab86a806c9b49aad75e58c9d91943e218f7
+Author: JonasNik <jonasnikolajsen@gmail.com>
+Date:   Mon Oct 20 13:14:49 2014 +0200
+
+    Rettet til med kompositioner
+
+commit 4927c584542fa30c72c04a93fc1cbf810fa86f8d
+Author: 201370952 <ztuffer@gmail.com>
+Date:   Mon Oct 20 13:04:45 2014 +0200
+
+    Systemtegning
+
+commit d42810878e10eb5dc9dc746252eec28cbffa5822
+Merge: b2889e7 2c548c2
+Author: 201370952 <ztuffer@gmail.com>
+Date:   Mon Oct 20 13:03:13 2014 +0200
+
+    Merge remote-tracking branch 'origin/master'
+
+commit b2889e70613ecd2560a9aaf3007b41c861e5ac7e
+Author: 201370952 <ztuffer@gmail.com>
+Date:   Mon Oct 20 12:50:53 2014 +0200
+
+    Opdateret tidsplan
+
+commit 2c548c2edecb4641c81be7ecfe5db3b194a7c392
+Author: Lukas Hedegaard <lukas_hedegaard@hotmail.com>
+Date:   Mon Oct 20 12:47:56 2014 +0200
+
+    Rettelse af navne
+
+commit 399f2265801a1ace25d551c2e6d048992038f5b4
+Author: Boye555 <201370738@post.au.dk>
+Date:   Mon Oct 20 12:26:50 2014 +0200
+
+    Referat fra 20102014
+
+commit 9b615b5ea4e5f548641da65f14ec79483fb0570e
+Author: JonasNik <jonasnikolajsen@gmail.com>
+Date:   Mon Oct 20 12:24:14 2014 +0200
+
+    systemark 2. udkast
+
+commit 72cf1b32cc8bb4b9de7e2a404c1cdf4d2af15d05
+Author: JonasNik <jonasnikolajsen@gmail.com>
+Date:   Mon Oct 20 11:24:23 2014 +0200
+
+    Tilrettet
+
+commit d483e4e06add7299445a8812497e0a34a5c43073
+Author: 201370952 <ztuffer@gmail.com>
+Date:   Mon Oct 20 10:25:49 2014 +0200
+
+    Opdateret efter mødeindkaldelse
+
+commit c9091fdd615c2203837d92f573741d19899f80bc
+Author: JonasNik <jonasnikolajsen@gmail.com>
+Date:   Sun Oct 19 12:38:47 2014 +0200
+
+    Systemarkitektur opdateret og Domain model tilføjet
+
+commit af2bb026dc21e5ece466c69186ba757b77ac2c2d
+Author: JonasNik <jonasnikolajsen@gmail.com>
+Date:   Thu Oct 16 11:36:03 2014 +0200
+
+    BDD Rock SW + Klassediagrammer
+
+commit f3d29caf6a66a6a0901b52a7d386b4cbc59a6b63
+Author: mathiassiig <mathias_sn@hotmail.com>
+Date:   Wed Oct 15 14:22:32 2014 +0200
+
+    Tilføjet contNotes-metoden
+
+commit 7fbce44bc34352e350466dad8d778e5779112067
+Author: mathiassiig <mathias_sn@hotmail.com>
+Date:   Tue Oct 14 13:30:35 2014 +0200
+
+    SensordataToMidi version 0.1 (ikke funktionel)
+
+commit 44192c3bd86c5a29e49f0fef169a14f25ba0cf5f
+Author: JonasNik <jonasnikolajsen@gmail.com>
+Date:   Mon Oct 13 14:24:54 2014 +0200
+
+    Systemarkitektur udkast
+
+commit 105b4ef22907ebdc422f587de60f0b73290043ac
+Author: mathiassiig <mathias_sn@hotmail.com>
+Date:   Sun Oct 12 13:26:52 2014 +0200
+
+    Afklaret det sidste feedback fra Hofni
+
+commit 37c460b35da36d628470804d3993c66b0f35770b
+Author: mathiassiig <mathias_sn@hotmail.com>
+Date:   Sun Oct 12 12:55:10 2014 +0200
+
+    Gennemset review. Stadig 2 stående punkter tilbage
+
+commit d5033e725adac7d6a783c0e52b0fddb9be17f132
+Author: Zwrah <201370801@iha.dk>
+Date:   Sun Oct 12 12:47:14 2014 +0200
+
+    Feedback på ikke-funktionelle krav
+
+commit 9f7373ceb3f75f792ed6f76b76deca5c387b5a0e
+Author: mathiassiig <mathias_sn@hotmail.com>
+Date:   Sat Oct 11 15:40:56 2014 +0200
+
+    Mathias
+
+commit 3e99d12ce793e1dbf8d2972c1f68d37753a3236c
+Author: Boye555 <201370738@post.au.dk>
+Date:   Fri Oct 10 10:28:01 2014 +0200
+
+    BDD Body HW version 1
+
+commit 956418034af5c02baed892e6e2cb5734ec68aca2
+Author: Boye555 <201370738@post.au.dk>
+Date:   Fri Oct 10 10:20:24 2014 +0200
+
+    IBD Body version 1
+
+commit 2e3b1d02919b1ebfb4f2dbb89db82899dd6e704c
+Author: Boye555 <201370738@post.au.dk>
+Date:   Fri Oct 10 09:42:51 2014 +0200
+
+    IBD generisk sensorenhed version 1
+
+commit be69d55908ad987161b2a8e09e03146192d4eefb
+Author: Kenn Hedegaard Eskildsen <kenneskildsen@gmail.com>
+Date:   Thu Oct 9 10:41:39 2014 +0200
+
+    Datasheet for BT2
+
+commit d97e1212915c21955377a80a0feaac98a8dc8294
+Author: Boye555 <201370738@post.au.dk>
+Date:   Wed Oct 8 16:44:27 2014 +0200
+
+    Kode til sensorforbindelse og body
+    Felix og Kristian
+
+commit 9d62d2133f51b353b6585496cced63f61ed2bb43
+Author: 201370952 <ztuffer@gmail.com>
+Date:   Wed Oct 8 15:51:09 2014 +0200
+
+    Dokument med RN 42-kommandoer
+
+commit 0a7834b1410aeff1e5317899af6584857989c10e
+Author: 201370952 <ztuffer@gmail.com>
+Date:   Wed Oct 8 13:05:52 2014 +0200
+
+    Datasheet for HC-05 Bluetooth-modul
+
+commit a4bcf1d824de38ec6c64b43019a8e6e250954408
+Author: JonasNik <jonasnikolajsen@gmail.com>
+Date:   Mon Oct 6 19:14:40 2014 +0200
+
+    Referart
+
+commit d54fae89d86c8e4635714129d4c7ef7c5c7c52e3
+Author: Felix Blix Everberg <felixblix@gmail.com>
+Date:   Mon Oct 6 12:35:03 2014 +0200
+
+    tilføjet en mappe til sprint dokumenter -Felix
+
+commit f863b2e39a3b60c4606c09f309ecc63a8c823629
+Merge: 0fc8bc1 190a3d6
+Author: Lukas Hedegaard <lukas_hedegaard@hotmail.com>
+Date:   Mon Oct 6 13:57:10 2014 +0200
+
+    Merge remote-tracking branch 'origin/master'
+
+commit 0fc8bc14d808c613b9cf2548de37302735348ba2
+Author: Lukas Hedegaard <lukas_hedegaard@hotmail.com>
+Date:   Mon Oct 6 13:56:56 2014 +0200
+
+    skitse af sinalvej
+
+commit 190a3d6ff42c7b610e3ac480079181fcdd570a05
+Author: Zwrah <201370801@iha.dk>
+Date:   Mon Oct 6 13:49:32 2014 +0200
+
+    Foreslag til bluetoothforbindelse
+
+commit 55f226b5607b3afc586d029d410a041ddb514c25
+Author: Lukas Hedegaard <lukas_hedegaard@hotmail.com>
+Date:   Mon Oct 6 12:57:30 2014 +0200
+
+    rettelse efter fælles gennemgang
+
+commit 0276b5bd481bdebe44e318ed8b51c7a149cf2f9a
+Author: 201370952 <ztuffer@gmail.com>
+Date:   Mon Oct 6 12:35:00 2014 +0200
+
+    Opdateret tidspunkt og dirigent for dagen
+
+commit 8605eafa33ad18b6d9cf498923ee7ec8846d3707
+Author: Kenn Hedegaard Eskildsen <kenneskildsen@gmail.com>
+Date:   Mon Oct 6 12:13:59 2014 +0200
+
+    Opdatering af Projektplan
+
+commit 6c1809a1a053d02097f38077ad2d64343e819fff
+Author: Kenn Hedegaard Eskildsen <kenneskildsen@gmail.com>
+Date:   Mon Oct 6 12:08:54 2014 +0200
+
+    upadatering af Projektplan
+
+commit 15307b2fa3a73ea465977994ed8534182ac36723
+Merge: a55243f 5e8cd1f
+Author: Kenn Hedegaard Eskildsen <kenneskildsen@gmail.com>
+Date:   Mon Oct 6 11:52:10 2014 +0200
+
+    Merge remote-tracking branch 'origin/master'
+
+commit a55243f877827afa02795b74a81e829a625c2e90
+Author: Kenn Hedegaard Eskildsen <kenneskildsen@gmail.com>
+Date:   Mon Oct 6 11:51:22 2014 +0200
+
+    Opdatering af UC-diagram
+
+commit 47bf186a92c26a3e57166c0ea688b78ecf4001ea
+Author: JonasNik <jonasnikolajsen@gmail.com>
+Date:   Mon Oct 6 09:03:48 2014 +0200
+
+    TS - Seriel protokol
+
+commit 5e8cd1f65845423c4b2785a191232c70e778c51b
+Author: Felix Blix Everberg <felixblix@gmail.com>
+Date:   Mon Oct 6 08:34:17 2014 +0200
+
+    tilføjet mødeindkaldelse til møde d. 6/10 -felix
+
+commit 588b6a111ca80a0c5efdd6f3de63cf4e7f09292a
+Author: 201370952 <ztuffer@gmail.com>
+Date:   Sat Oct 4 13:39:07 2014 +0200
+
+    Korrekturlæst efter rettelser fra review
+
+commit 3ae45d4df6fc9a0bb4f6dea3fc7962de7f569ede
+Author: 201370952 <ztuffer@gmail.com>
+Date:   Fri Oct 3 22:11:17 2014 +0200
+
+    Links til info om QT
+
+commit 06cc26540f96bdc19bdfb16b5d77564a6a57d276
+Author: Zwrah <201370801@iha.dk>
+Date:   Fri Oct 3 10:56:04 2014 +0200
+
+    Teknologiundersøgelse af BodyRock3000 forbindelse
+
+commit d71068f21294609457ee1bb1be919372c84030da
+Author: Lukas Hedegaard <lukas_hedegaard@hotmail.com>
+Date:   Fri Oct 3 10:14:17 2014 +0200
+
+    deleted temp file
+
+commit a539e997a0fbefca857d1cfcc94d27e336f49764
+Author: JonasNik <jonasnikolajsen@gmail.com>
+Date:   Fri Oct 3 09:48:59 2014 +0200
+
+    merge
+
+commit fd0bccfba2aedd8b3c4f69b6540409a0cd1a2c28
+Author: Zwrah <201370801@iha.dk>
+Date:   Thu Oct 2 12:40:09 2014 +0200
+
+    Opdateret teknologiundersøgelse - trådløs kommunikation
+
+commit 49248072d7d81125729dbe0bf333ed3ffaa5878d
+Author: mathiassiig <mathias_sn@hotmail.com>
+Date:   Thu Oct 2 09:18:01 2014 +0200
+
+    BDD udkast Mathias & Lukas
+
+commit 86010c769437ab816b12a27da8136af49a9ee013
+Author: JonasNik <jonasnikolajsen@gmail.com>
+Date:   Wed Oct 1 16:04:23 2014 +0200
+
+    Teknologiundersøgelse - seriel protokol første udkast
+
+commit 9c2d36c810a654e15d58254f4a6c1efe7f463b62
+Author: Kenn Hedegaard Eskildsen <kenneskildsen@gmail.com>
+Date:   Wed Oct 1 12:16:37 2014 +0200
+
+    omarrangering af diverse dokumenter mappen
+
+commit 1369f7bbb1719aeef3a8ab302b5fc5b693588616
+Merge: d708adf 3d2c409
+Author: Lukas Hedegaard <lukas_hedegaard@hotmail.com>
+Date:   Tue Sep 30 15:14:41 2014 +0200
+
+    Merge remote-tracking branch 'origin/master'
+
+commit d708adfcd8090b33b39ee988861f55ebcb8d4fa1
+Author: Lukas Hedegaard <lukas_hedegaard@hotmail.com>
+Date:   Tue Sep 30 15:14:33 2014 +0200
+
+    Færdigskitsering af teknologiundersøgelse
+
+commit 3d2c4092c542f2a8a61a5828837ff8caa6575a06
+Author: Boye555 <201370738@post.au.dk>
+Date:   Mon Sep 29 14:43:02 2014 +0200
+
+    Zip-fil
+
+commit 2b3b33b6146e513cd37579b202cbcd0eca98d4cf
+Author: Zwrah <201370801@iha.dk>
+Date:   Sun Sep 28 11:32:19 2014 +0200
+
+    Teknologiundersøgelse af Trådløskommunikation til BodyRock3000
+
+commit 1453df12354be2cc97dad173039d9f62fa7c3892
+Author: mathiassiig <mathias_sn@hotmail.com>
+Date:   Fri Sep 26 12:07:28 2014 +0200
+
+    Tilføjet Lydmodul og Buffer på termlisten
+
+commit ebd7d810449ca81b9dc1216d2842011e60f45249
+Author: Lukas Hedegaard <lukas_hedegaard@hotmail.com>
+Date:   Thu Sep 25 10:19:14 2014 +0200
+
+    Første udkast
+
+commit dac89e97f7721db25c077c3d1a43573a1c3b85e8
+Author: Zwrah <201370801@iha.dk>
+Date:   Thu Sep 25 09:48:16 2014 +0200
+
+    Rettet efter review-feedback
+
+commit 30a674dc042a683ab1334c6a199ae22667e6ed71
+Author: 201370952 <ztuffer@gmail.com>
+Date:   Thu Sep 25 09:44:42 2014 +0200
+
+    Devkit8000 QT - eLinux
+
+commit d143b6dc21b1ac6752cf0c5b2e0cbaf209694fe9
+Merge: c3a8f08 38012b0
+Author: 201370952 <ztuffer@gmail.com>
+Date:   Thu Sep 25 09:35:22 2014 +0200
+
+    Merge remote-tracking branch 'origin/master'
+
+commit c3a8f08177fe3b93c6038ea51f49ecd427de5319
+Author: 201370952 <ztuffer@gmail.com>
+Date:   Thu Sep 25 09:28:15 2014 +0200
+
+    Getting started with Qt
+
+commit 38012b03e4f9cbcac47f77175f105d6080d8a4a2
+Merge: ca1698e bbd6a8e
+Author: mathiassiig <mathias_sn@hotmail.com>
+Date:   Thu Sep 25 09:23:39 2014 +0200
+
+    Merge branch 'master' of https://github.com/Ztuff/E3PRJ3
+
+commit ca1698e48716d882985a9fe0cecd1d2df15c8dcc
+Author: mathiassiig <mathias_sn@hotmail.com>
+Date:   Thu Sep 25 09:20:43 2014 +0200
+
+    Rettelser af UC numre og UC4 prækondition
+
+commit bbd6a8e24bd2041d23f7e90c6ebdbb3702e38260
+Author: 201370952 <ztuffer@gmail.com>
+Date:   Thu Sep 25 09:16:23 2014 +0200
+
+    Forum for support til devkit8000
+
+commit 8072359de05ac635decb9ae398618603f5f788e5
+Author: Zwrah <201370801@iha.dk>
+Date:   Thu Sep 25 09:07:11 2014 +0200
+
+    Rettelser
+
+commit d45ae3009d31fb8a10f40803314c9cfcffc1384b
+Author: mathiassiig <mathias_sn@hotmail.com>
+Date:   Thu Sep 25 09:06:33 2014 +0200
+
+    Jeppe retter nu
+
+commit e53aadb26a180745dcd46242d2570ec26fa29ef1
+Author: JonasNik <jonasnikolajsen@gmail.com>
+Date:   Thu Sep 25 09:01:46 2014 +0200
+
+    Rettelser af reviewet
+
+commit 7bc55f43743bc2eb34e3f20d4fb8f08d2a9708f1
+Author: JonasNik <jonasnikolajsen@gmail.com>
+Date:   Thu Sep 25 08:47:00 2014 +0200
+
+    Referart fra review
+
+commit 130da1dd56e4120103fa6d288b06986c4d8e2085
+Author: Felix Blix Everberg <felixblix@gmail.com>
+Date:   Wed Sep 24 15:15:06 2014 +0200
+
+    Kristian of felix' bidrag til review
+    
+    Felix
+
+commit 47af1a167323b62e0e8f43356f120e703e49f926
+Author: Lasse-Fisker <201205998@iha.dk>
+Date:   Wed Sep 24 12:28:23 2014 +0200
+
+    Opdateret med Lasses rettelser
+
+commit 8e1efbbce4681273cdc09d4b68d66d8a1e7c0e41
+Author: Lasse-Fisker <201205998@iha.dk>
+Date:   Wed Sep 24 12:28:13 2014 +0200
+
+    Opdateret med Lasses rettelser
+
+commit 4f55fb50a1b7226a25253c9f896ec21603898a85
+Author: JonasNik <jonasnikolajsen@gmail.com>
+Date:   Wed Sep 24 11:16:38 2014 +0200
+
+    Udkast til review af Jonas
+
+commit 83ca86f07d17e021786ed52432cce3fa3639e1de
+Author: 201370952 <ztuffer@gmail.com>
+Date:   Mon Sep 22 16:57:51 2014 +0200
+
+    Færdig accepttest
+
+commit 975c310ab7eb10cb641a51b4fa715f080080d650
+Author: Zwrah <201370801@iha.dk>
+Date:   Mon Sep 22 16:40:06 2014 +0200
+
+    Kravspec + UC1_accept + UC6_accept opdateret
+
+commit 76eac0865d63c35e8c0b8d5f8d9c9980742ee7dc
+Author: mathiassiig <mathias_sn@hotmail.com>
+Date:   Mon Sep 22 16:02:51 2014 +0200
+
+    Ændring af accepttest UC8 til at den følger uce casen. Der mangler stadig testscenarie.
+
+commit 52db74afce7901b99b1d164d09018aad30b8e5de
+Merge: 5137da4 2b4bc29
+Author: Lukas Hedegaard <lukas_hedegaard@hotmail.com>
+Date:   Mon Sep 22 15:46:09 2014 +0200
+
+    Merge remote-tracking branch 'origin/master'
+
+commit 5137da42c748c71f892b166e4ee3046fae3e856c
+Author: Lukas Hedegaard <lukas_hedegaard@hotmail.com>
+Date:   Mon Sep 22 15:45:20 2014 +0200
+
+    Omskrivning af UC5 + rettelse af UC5 Undtagelser i Kravspec
+
+commit 2b4bc29ebcd12c1c1aad69b3c8141bff0d54c01b
+Author: 201370952 <ztuffer@gmail.com>
+Date:   Mon Sep 22 15:40:46 2014 +0200
+
+    Modtagede review-dokumenter
+
+commit cd25b4fc68e1eb93edc9cd65cd6b1484958f5b92
+Author: Lukas Hedegaard <lukas_hedegaard@hotmail.com>
+Date:   Mon Sep 22 15:27:49 2014 +0200
+
+    Små-rettelser i forbindelsd med skitsering af accepttest
+
+commit 698c668d4059f18aae5f8bae739078936d171b55
+Merge: 543a595 9b7c3dc
+Author: mathiassiig <mathias_sn@hotmail.com>
+Date:   Mon Sep 22 15:15:42 2014 +0200
+
+    Merge branch 'master' of https://github.com/Ztuff/E3PRJ3
+
+commit 543a5953681a397b50712e2f6fd33cf52a341fc3
+Author: mathiassiig <mathias_sn@hotmail.com>
+Date:   Mon Sep 22 15:15:10 2014 +0200
+
+    Rettet et ord i UC5 fra Body til Rock
+
+commit 9b7c3dc9f73277f901c4cb6158bf434d4420d59d
+Author: Zwrah <201370801@iha.dk>
+Date:   Mon Sep 22 15:13:27 2014 +0200
+
+    Ny udgave af UC6 Accepttest
+
+commit 73778dcbef3111289d97147583b285e0f20f9bfc
+Author: mathiassiig <mathias_sn@hotmail.com>
+Date:   Mon Sep 22 15:11:20 2014 +0200
+
+    Fjernet en testfil
+
+commit f5f1d3af0c1bae497859167a4f4503b8c3886c04
+Author: mathiassiig <mathias_sn@hotmail.com>
+Date:   Mon Sep 22 15:10:41 2014 +0200
+
+    Slettet et punkt i UC4 undtagelse
+
+commit da8849564a86c710eea9552b3271a185ab4e13ed
+Author: mathiassiig <mathias_sn@hotmail.com>
+Date:   Mon Sep 22 15:08:08 2014 +0200
+
+    Rettet til Lukas' metode
+
+commit 2241c78e7cb8761a7b990114b7aac2abc6f28fbf
+Author: Zwrah <201370801@iha.dk>
+Date:   Mon Sep 22 14:50:12 2014 +0200
+
+    Merge-test
+
+commit 26072d23c7539f0b5d9db521cc5f3fe5c03181a3
+Author: Kenn Hedegaard Eskildsen <kenneskildsen@gmail.com>
+Date:   Mon Sep 22 13:55:47 2014 +0200
+
+    Opdateret tidsplan 140922
+
+commit 9dfc2561b47ab7d8f9b7ddbcb2b2e03600b59a73
+Author: Kenn Hedegaard Eskildsen <kenneskildsen@gmail.com>
+Date:   Mon Sep 22 13:24:49 2014 +0200
+
+    Teknologiunderøgelses dokument
+
+commit 3ee79c6956e66776ac449ca0625b253cfa7a9360
+Author: mathiassiig <mathias_sn@hotmail.com>
+Date:   Mon Sep 22 12:32:51 2014 +0200
+
+    Oprettelse af fil
+
+commit 747ea337f4c5447fa5474c1ba56292395a1ae381
+Merge: 7bbee47 5d871b7
+Author: 201370952 <ztuffer@gmail.com>
+Date:   Mon Sep 22 12:23:11 2014 +0200
+
+    Merge remote-tracking branch 'origin/master'
+
+commit 7bbee47accb6d5ef4a90cfe1c8c3695c2c652675
+Author: 201370952 <ztuffer@gmail.com>
+Date:   Mon Sep 22 12:21:18 2014 +0200
+
+    Tilføjet dato for dagens møde, byttet om på Jeppe og Jonas, da Jonas har meldt afbud.
+
+commit 5d871b7f246bbcba755cdca951c2574b6652cc86
+Merge: 97e436b cbeed82
+Author: Lukas Hedegaard <lukas_hedegaard@hotmail.com>
+Date:   Sun Sep 21 23:02:08 2014 +0200
+
+    Merge remote-tracking branch 'origin/master'
+
+commit 97e436b2768766499c669d8478f9d0d116cad270
+Author: Lukas Hedegaard <lukas_hedegaard@hotmail.com>
+Date:   Sun Sep 21 23:02:00 2014 +0200
+
+    Dokumenter til gruppemøde d. 22/9
+
+commit cbeed82b04b35188c4c609a64b1114c8e7a4a574
+Author: 201370952 <ztuffer@gmail.com>
+Date:   Sun Sep 21 11:25:10 2014 +0200
+
+    Tilføjelser til udvidet materiale
+
+commit 3ea73a37fa0471b4e161d64d7202c4f3f26ef96b
+Author: 201370952 <ztuffer@gmail.com>
+Date:   Sat Sep 20 22:29:57 2014 +0200
+
+    Korrekturlæst, klar til review
+
+commit 78db57264f3591c91537463e187af318eb4505b0
+Author: Lukas Hedegaard <lukas_hedegaard@hotmail.com>
+Date:   Sat Sep 20 12:16:44 2014 +0200
+
+    Opdateret med UC2+3
+
+commit 0a102cc977f3246f28510815636b8c0336597d11
+Author: Lukas Hedegaard <lukas_hedegaard@hotmail.com>
+Date:   Sat Sep 20 12:11:45 2014 +0200
+
+    Genindskrivning af Accepttest for UC2+3 efter computerproblemer
+
+commit 84aa3d2e98c0fb763ef36c8cbb96c9a119108d9d
+Author: Lukas Hedegaard <lukas_hedegaard@hotmail.com>
+Date:   Sat Sep 20 12:11:12 2014 +0200
+
+    Tilrettelse af UC2+3
+
+commit 2db39e63432e907168be15d22a4560f8bc8969bb
+Author: JonasNik <jonasnikolajsen@gmail.com>
+Date:   Fri Sep 19 14:52:22 2014 +0200
+
+    Accepttest samlet, mangler Use case 2 og 3
+
+commit cb72600e906afaef01b8f8c280e8b4a1c2d1d1e8
+Author: JonasNik <jonasnikolajsen@gmail.com>
+Date:   Fri Sep 19 14:37:42 2014 +0200
+
+    Kravspec samlet
+
+commit 13f1b1c72ba12e0ddcb8893b9ab873da8bbae43b
+Author: Zwrah <201370801@iha.dk>
+Date:   Fri Sep 19 14:06:11 2014 +0200
+
+    Udkast til teknologiundersøgelse
+
+commit 34575a1daf98e15c937be27d692d8e8a4adbed49
+Author: Kenn Hedegaard Eskildsen <kenneskildsen@gmail.com>
+Date:   Fri Sep 19 13:51:15 2014 +0200
+
+    opdatering af side
+
+commit c088d4d07ab2fdf782f64a5842488104c4b886a0
+Author: Kenn Hedegaard Eskildsen <kenneskildsen@gmail.com>
+Date:   Fri Sep 19 13:45:58 2014 +0200
+
+    side med Info om sensorer
+
+commit 6553238365a98281e82778bec51f48edce21f59a
+Author: JonasNik <jonasnikolajsen@gmail.com>
+Date:   Fri Sep 19 13:39:23 2014 +0200
+
+    Navn tilrettelse af use cases
+    Klar til strømlinging og korrektur
+
+commit cf6525e76c2161cf2836be960df93662132455e6
+Author: Kenn Hedegaard Eskildsen <kenneskildsen@gmail.com>
+Date:   Fri Sep 19 13:36:08 2014 +0200
+
+    Supergod side med masser af Tech info om MIDI protokollen.
+
+commit 1192739803282a6db6f15819ae3d079f163a248b
+Author: JonasNik <jonasnikolajsen@gmail.com>
+Date:   Thu Sep 18 10:35:32 2014 +0200
+
+    Kravspec der er sendt til Peter
+
+commit 5390e2c03204dd61465c94fce22b112c5a28dc46
+Author: JonasNik <jonasnikolajsen@gmail.com>
+Date:   Thu Sep 18 10:34:37 2014 +0200
+
+    Gruppe oversigt PRJ3
+
+commit ea29ae3602026c9d604e14341297391c323fd557
+Author: 201370952 <ztuffer@gmail.com>
+Date:   Tue Sep 16 20:27:24 2014 +0200
+
+    Stuff-edit af KE's første udkast til accepttest
+
+commit ce058227f340e024afde9b18098d72fe714f13a3
+Author: mathiassiig <mathias_sn@hotmail.com>
+Date:   Tue Sep 16 16:36:55 2014 +0200
+
+    oprettelse af accepttest ucecase4
+
+commit 3bd6c338bee9cf1f3c53433882c8a6ff294d2d43
+Author: Lasse-Fisker <201205998@iha.dk>
+Date:   Tue Sep 16 15:24:51 2014 +0200
+
+    Accepttest for use case 8
+
+commit e4b844efe08d55146108af30ec7949677b7207d4
+Author: LukasHedegaard <201370768@iha.dk>
+Date:   Tue Sep 16 14:59:22 2014 +0200
+
+    Indledende skitse af termliste
+
+commit f09b2a7b2a8ecac8e41ff5267a35b9f6f2e87a68
+Merge: c79749e 9e115c6
+Author: LukasHedegaard <201370768@iha.dk>
+Date:   Tue Sep 16 14:28:32 2014 +0200
+
+    Merge remote-tracking branch 'origin/master'
+
+commit c79749e276585b96f95a5308e5b19af3323b753c
+Author: LukasHedegaard <201370768@iha.dk>
+Date:   Tue Sep 16 14:28:17 2014 +0200
+
+    Rettelse af lingo for lister. Lister får nu ikke sin egen termforklaring, og uddybes i stedet for i use casen.
+
+commit 9e115c6ff3f3bb19a8f5e16a3895dbccc6fdd511
+Author: Kenn Hedegaard Eskildsen <kenneskildsen@gmail.com>
+Date:   Mon Sep 15 21:57:47 2014 +0200
+
+    Udkast til Accepttest for UC7
+
+commit 346c3debc9346734a69457c76ab50cc844c40b98
+Author: JonasNik <jonasnikolajsen@gmail.com>
+Date:   Mon Sep 15 19:42:04 2014 +0200
+
+    Aktørbeskrivelse udkast 1
+    Accepttest Use Case 1: Forbind Body og Rock
+
+commit 550e35ff0318a711c50ca9576ab13456ec14c4de
+Merge: a06ed87 743b27c
+Author: LukasHedegaard <201370768@iha.dk>
+Date:   Mon Sep 15 15:20:39 2014 +0200
+
+    Merge remote-tracking branch 'origin/master'
+
+commit a06ed874961fe9828bd8b89f21b548d275945fab
+Author: LukasHedegaard <201370768@iha.dk>
+Date:   Mon Sep 15 15:20:25 2014 +0200
+
+    Opdaterede datoer
+
+commit 743b27c5956351cd020475d466d6f343ee0f8a4d
+Author: mathiassiig <mathias_sn@hotmail.com>
+Date:   Mon Sep 15 15:15:58 2014 +0200
+
+    Rettelse af fejl
+
+commit 9b241104227605579bb178ac817d0b9c98db50a2
+Author: Zwrah <201370801@iha.dk>
+Date:   Mon Sep 15 14:55:36 2014 +0200
+
+    Slettet fil
+
+commit 223ef53d6443db03d8698be34b1ea2a0693591ed
+Author: Felix Blix Everberg <felixblix@gmail.com>
+Date:   Mon Sep 15 13:28:34 2014 +0200
+
+    Added a PDF version of the previously corrected minutes from the group
+    meeting 5/9 2014
+    
+    Felix
+
+commit ec46d33b2abfe96aeedd38694c79dea0d5893e00
+Author: Lasse-Fisker <201205998@iha.dk>
+Date:   Mon Sep 15 12:58:56 2014 +0200
+
+    Accepttest UC8 - Lasse - 140915
+
+commit 6f9f5a1a7e2512c486adb63bcad9883b0a8d3cd1
+Merge: 133b927 ff30326
+Author: Lasse-Fisker <201205998@iha.dk>
+Date:   Mon Sep 15 12:32:44 2014 +0200
+
+    Merge remote-tracking branch 'origin/master'
+
+commit ff30326b01819cb061556d12f21531d5cefcb2b1
+Author: Felix Blix Everberg <felixblix@gmail.com>
+Date:   Mon Sep 15 10:39:11 2014 +0200
+
+    merged and corrected the minutes from the meeting 5/9 2014, to comply with
+    the minute guidelines.
+    
+    Felix
+
+commit 74f77327124e19db4a1b2eb94788cd1d42235b2b
+Author: Boye555 <201370738@post.au.dk>
+Date:   Sun Sep 14 17:42:26 2014 +0200
+
+    Første udkast til UC5
+
+commit 1927b494c6229749d469091bbe016e48a818b5ce
+Merge: dcc1105 38bafd9
+Author: Boye555 <201370738@post.au.dk>
+Date:   Sun Sep 14 17:40:23 2014 +0200
+
+    Merge remote-tracking branch 'origin/master'
+
+commit dcc1105e71189133030c0f40c550b36ea20e31a8
+Author: Boye555 <201370738@post.au.dk>
+Date:   Sun Sep 14 17:40:00 2014 +0200
+
+    Første udkast til Accepttest UC5
+
+commit 38bafd9f46491de54aa09db31f79da57822352cd
+Author: Zwrah <201370801@iha.dk>
+Date:   Sun Sep 14 17:24:18 2014 +0200
+
+    Møde 15/09-14
+
+commit 733f85f3cb2497a06e144a11f714b189ffed8935
+Author: mathiassiig <mathias_sn@hotmail.com>
+Date:   Sun Sep 14 14:52:48 2014 +0200
+
+    ID-fejl
+
+commit 8aa17d91ac4f03d0e87128cf72a5f16956ecaf41
+Author: mathiassiig <mathias_sn@hotmail.com>
+Date:   Sun Sep 14 14:51:46 2014 +0200
+
+    Oprettelse af UC4
+
+commit d04e325856c59d8db32f5ba771cf19b643c27c6e
+Author: 201370952 <ztuffer@gmail.com>
+Date:   Sat Sep 13 17:35:51 2014 +0200
+
+    Korrigeret gruppenummer. Tilføjet følgende til mødeafslutning:
+    Aftale tidspunkt til næste gruppearbejde
+    Mødeindkalder til næste møde ajourfører kalenderen på CampusNet
+
+commit 69efd636c82ed08d2d8763bc9e8b514799c6c40b
+Author: Zwrah <201370801@iha.dk>
+Date:   Sat Sep 13 16:09:44 2014 +0200
+
+    Udkast til ikke-funktionellekrav
+
+commit 658ad72279b03b110944792d53d00d5ca7c476fe
+Author: Zwrah <201370801@iha.dk>
+Date:   Sat Sep 13 15:31:26 2014 +0200
+
+    Accepttest Use Case 6
+
+commit 4cfd9d593260b9af57ac8887a0b56cba1f4ef52a
+Author: Zwrah <201370801@iha.dk>
+Date:   Fri Sep 12 13:40:32 2014 +0200
+
+    Vi prøver igen
+
+commit db7d59266a63c93220a3db42d0f407887c24da1d
+Author: 201370952 <ztuffer@gmail.com>
+Date:   Fri Sep 12 23:40:37 2014 +0200
+
+    Use cases streamlinet og korrekturlæst
+
+commit 7c0749a63d7536ba3450070ce466918157bbba2d
+Author: 201370952 <ztuffer@gmail.com>
+Date:   Fri Sep 12 18:40:17 2014 +0200
+
+    Opdateret dato for afholdt møde
+
+commit ca1df6767fe994c59ab00473042700dc931e1296
+Author: Kenn Hedegaard Eskildsen <kenneskildsen@gmail.com>
+Date:   Fri Sep 12 14:49:15 2014 +0200
+
+    Skabeloner til Rapport og dokumentation
+    
+    Herfra kan hentes formattering til diverse afsnit.
+
+commit 13fdb0118b7b2c2b4803da1db7580f74dbba7f5a
+Author: JonasNik <jonasnikolajsen@gmail.com>
+Date:   Fri Sep 12 14:06:15 2014 +0200
+
+    Tidsplan opdatering
+
+commit 7e278e6cabb7adf9bd169539a8feb155a3ed0460
+Author: Kenn Hedegaard Eskildsen <kenneskildsen@gmail.com>
+Date:   Fri Sep 12 13:45:59 2014 +0200
+
+    referat + TO-DO liste for 141209
+
+commit e7ab824afb61f82072e83e8a88570c81f1c0f5b8
+Author: LukasHedegaard <201370768@iha.dk>
+Date:   Fri Sep 12 13:33:37 2014 +0200
+
+    Deleted old version - new name available
+
+commit 2333425ad65d6df1ab38a07e0e8976ae9d6a7ad7
+Author: LukasHedegaard <201370768@iha.dk>
+Date:   Fri Sep 12 13:25:47 2014 +0200
+
+    deleted old file
+
+commit 726891667c4225c43e28db31eb442791b7a67e5a
+Author: LukasHedegaard <201370768@iha.dk>
+Date:   Fri Sep 12 13:25:14 2014 +0200
+
+    rettet diagram - prøver at synce
+
+commit 68ef6665de80c7a6ddb8c93536799101decd39a9
+Merge: 188ca95 c245ce6
+Author: LukasHedegaard <201370768@iha.dk>
+Date:   Fri Sep 12 13:23:01 2014 +0200
+
+    Merge remote-tracking branch 'origin/master'
+
+commit 133b92731cf72fb4a0615e4c12b9e6c187ca67c5
+Author: Lasse-Fisker <201205998@iha.dk>
+Date:   Fri Sep 12 13:21:00 2014 +0200
+
+    internt reveiw af use case 8
+
+commit c245ce60549b515534330130d6bf2d22cb184a70
+Author: Kenn Hedegaard Eskildsen <kenneskildsen@gmail.com>
+Date:   Fri Sep 12 13:13:40 2014 +0200
+
+    Opdateret UC7 - Generer MIDI
+
+commit 863a6fb502d3e6d8f90ebe8e07a54512fe322d7d
+Merge: 52dd94a cc486f8
+Author: Kenn Hedegaard Eskildsen <kenneskildsen@gmail.com>
+Date:   Fri Sep 12 13:08:19 2014 +0200
+
+    Merge remote-tracking branch 'origin/master'
+
+commit 52dd94a6e7fda899117fd2880ada9249042523d5
+Author: Kenn Hedegaard Eskildsen <kenneskildsen@gmail.com>
+Date:   Fri Sep 12 13:03:43 2014 +0200
+
+    Tilrette UC7 - Generér MIDI
+
+commit cc486f8322b4d8c0a23570ec506d2b0ea7f07079
+Author: Boye555 <201370738@post.au.dk>
+Date:   Fri Sep 12 13:02:59 2014 +0200
+
+    Review af use case 6 - nyt navn
+
+commit 188ca956a8918aabdea57942cc094a1345b145f8
+Author: LukasHedegaard <201370768@iha.dk>
+Date:   Fri Sep 12 13:02:29 2014 +0200
+
+    UC navne rettelse
+
+commit d2a73fffb131514f21e0cb7c1948928b06096cb9
+Author: LukasHedegaard <201370768@iha.dk>
+Date:   Fri Sep 12 12:49:08 2014 +0200
+
+    Opdateret med UC "indstil preset" + omnummerering af Use Cases
+
+commit 998ee4d83acbc83383f60d2665326597233aef13
+Author: Boye555 <201370738@post.au.dk>
+Date:   Fri Sep 12 12:41:26 2014 +0200
+
+    Internt review af use case 5
+
+commit 6f3068ba978c77274e8adcfb3c028cedcb1d95e2
+Merge: d48ac9d 8a3280f
+Author: Boye555 <201370738@post.au.dk>
+Date:   Fri Sep 12 12:32:56 2014 +0200
+
+    Merge remote-tracking branch 'origin/master'
+
+commit d48ac9dfbc0923e6f3884244dfdf1e0981eeda06
+Author: Boye555 <201370738@post.au.dk>
+Date:   Fri Sep 12 11:33:27 2014 +0200
+
+    Internt review af use case 1
+
+commit 8a3280f0f45b26268e7a318d34c5700c8ff00ece
+Author: LukasHedegaard <201370768@iha.dk>
+Date:   Fri Sep 12 11:14:54 2014 +0200
+
+    Changed folder
+
+commit 985fcbdf73c7face4a4a9e90bd3b5f90c9fc2462
+Author: Kenn Hedegaard Eskildsen <kenneskildsen@gmail.com>
+Date:   Fri Sep 12 11:00:53 2014 +0200
+
+    Opdateret Referat-skabelon.
+    Mødeindkalder til næste møde sætter ligeledes gruppearbejde i CN-kalender.
+
+commit 1f41d9bf4bf80927a59ccf8e83075ccefe0f2869
+Author: Kenn Hedegaard Eskildsen <kenneskildsen@gmail.com>
+Date:   Fri Sep 12 09:47:13 2014 +0200
+
+    tilrettet projekplan
+
+commit 3840b04590d314a2a69a5d37dc33de8d4782602c
+Author: Kenn Hedegaard Eskildsen <kenneskildsen@gmail.com>
+Date:   Fri Sep 12 09:42:04 2014 +0200
+
+    Opdateret projektplan + tidsplan i forhold til rettelser på CN.
+
+commit ed5b2348577abdf74fd179fc2b488f542a8395e0
+Author: Lasse-Fisker <201205998@iha.dk>
+Date:   Fri Sep 12 02:23:20 2014 +0200
+
+    Fully dressed UC - UC 7
+
+commit e624afcac1e898eb5e648c7065d033ee71932281
+Author: mathiassiig <mathias_sn@hotmail.com>
+Date:   Thu Sep 11 20:14:48 2014 +0200
+
+    use case 4 version 1
+
+commit dd548f1be2a210c2052e338714b1bac125db537d
+Merge: 7b40c03 73478f8
+Author: mathiassiig <mathias_sn@hotmail.com>
+Date:   Thu Sep 11 19:50:23 2014 +0200
+
+    Merge remote-tracking branch 'origin/master'
+
+commit 73478f8ca0c4ff87b9629e42e6f5fbc65120b373
+Author: Zwrah <201370801@iha.dk>
+Date:   Thu Sep 11 12:50:05 2014 +0200
+
+    Første udkast til Use case 5 af KBJ og JHH
+
+commit a0c09256f70f33b7a529cb71d4c8eed3f9553258
+Author: Felix Blix Everberg <felixblix@gmail.com>
+Date:   Thu Sep 11 10:17:38 2014 +0200
+
+    Har slettet test filerne jeg oprettede for at
+    teste min forbindelse. Jeg er på uden problemer.
+    
+    Felix
+
+commit 8b7d4333ba33f13d05e7c1ed6297a9a6ae70c6fc
+Author: Felix Blix Everberg <felixblix@gmail.com>
+Date:   Thu Sep 11 10:09:35 2014 +0200
+
+    Hej Drenge.
+    
+    Jeg tester lige min forbindelse ved at tilføje en test fil.
+    
+    Felix
+
+commit 9d8401c4cefa9f57d834cc472bf4df33da659d25
+Merge: 27ed0e7 0db2897
+Author: LukasHedegaard <201370768@iha.dk>
+Date:   Wed Sep 10 15:36:42 2014 +0200
+
+    Merge remote-tracking branch 'origin/master'
+
+commit 27ed0e71799d4d5cc315d9483b4119428d62f230
+Author: LukasHedegaard <201370768@iha.dk>
+Date:   Wed Sep 10 15:36:14 2014 +0200
+
+    Initial sketch of Fully Dressed Use Case 2+3
+
+commit 0db2897c781d4a59443edf24f785c521f473738d
+Author: Kenn Hedegaard Eskildsen <kenneskildsen@gmail.com>
+Date:   Wed Sep 10 15:26:01 2014 +0200
+
+    Lidt mere til MIDI
+
+commit 94f1837215e3d785f2679fcdf73d5342fc63b322
+Author: Kenn Hedegaard Eskildsen <kenneskildsen@gmail.com>
+Date:   Wed Sep 10 15:23:06 2014 +0200
+
+    Oprettelse af UC6
+    Ændring i forudsætninger for UC6
+    /KE og Stuff
+
+commit 470cfb0e6ff7d2e6b10838c9c0d07214f3472a18
+Author: JonasNik <jonasnikolajsen@gmail.com>
+Date:   Wed Sep 10 15:00:56 2014 +0200
+
+    Færdig 2. udkast use case 1
+
+commit 78de2a6f6bc0745167f7ceafb8ceb4114fc8ecc0
+Author: Kenn Hedegaard Eskildsen <kenneskildsen@gmail.com>
+Date:   Wed Sep 10 14:29:20 2014 +0200
+
+    Endnu et basisdokument til forståelse af MIDI
+
+commit 0608ceeabe1c521a36962ef354e0ef93e187b8cf
+Author: Kenn Hedegaard Eskildsen <kenneskildsen@gmail.com>
+Date:   Wed Sep 10 13:12:29 2014 +0200
+
+    Lidt info omkring Musical Instrument Digital Interface MIDI
+
+commit e2e8a3c69b1a84e052e7d614834df5221bb1e451
+Author: JonasNik <jonasnikolajsen@gmail.com>
+Date:   Wed Sep 10 10:49:08 2014 +0200
+
+    Flytning til anden mappe
+
+commit 7f9553ec82f450c6cd0b525632fe2cf0f5d6cde7
+Merge: c2dd5f2 b3292e2
+Author: LukasHedegaard <201370768@iha.dk>
+Date:   Tue Sep 9 15:22:52 2014 +0200
+
+    Merge remote-tracking branch 'origin/master'
+
+commit c2dd5f22d99b9d083200f71404554018c4be9269
+Author: LukasHedegaard <201370768@iha.dk>
+Date:   Tue Sep 9 15:22:31 2014 +0200
+
+    Use case diagram + use case uddelegering
+
+commit b3292e2b91f2f50502cec185fec1d2c975bbc160
+Merge: da6756c 9bd2bfb
+Author: 201370952 <ztuffer@gmail.com>
+Date:   Mon Sep 8 14:04:56 2014 +0200
+
+    Merge remote-tracking branch 'origin/master'
+
+commit da6756ca8589fd2382a3ba6e91b66a1747caa682
+Author: 201370952 <ztuffer@gmail.com>
+Date:   Mon Sep 8 14:00:39 2014 +0200
+
+    Referat
+
+commit 9bd2bfbc5c58103981cbfcc65e8ee12e338f1b43
+Author: LukasHedegaard <201370768@iha.dk>
+Date:   Mon Sep 8 13:56:28 2014 +0200
+
+    Nu med Lasses underskrift
+
+commit 59bfe824d229e5c398d42c2064669286480d28a8
+Author: LukasHedegaard <201370768@iha.dk>
+Date:   Mon Sep 8 13:56:13 2014 +0200
+
+    Nu med Lasses underskrift
+
+commit 7b40c031086e08845a019a745d4902c3c8a28ae0
+Author: mathiassiig <mathias_sn@hotmail.com>
+Date:   Mon Sep 8 13:33:46 2014 +0200
+
+    Det her er faktisk en tom txt
+
+commit c29d68068b92c716a50b6e81dda52d1434f5b568
+Author: LukasHedegaard <201370768@iha.dk>
+Date:   Mon Sep 8 13:33:42 2014 +0200
+
+    Ny udgave efter fælles review på gruppen
+
+commit 18494978618646667037c9304e8413397e814ffc
+Author: LukasHedegaard <201370768@iha.dk>
+Date:   Mon Sep 8 13:33:17 2014 +0200
+
+    Pdf af opgaveformulering
+
+commit 183032d48c9d396c3932875921a5928efc4467ae
+Author: 201370952 <ztuffer@gmail.com>
+Date:   Mon Sep 8 13:27:08 2014 +0200
+
+    Fjernede filer
+
+commit cf6aa8b660c8f09cad93419d2002902a158c73e1
+Author: 201370952 <ztuffer@gmail.com>
+Date:   Mon Sep 8 13:25:34 2014 +0200
+
+    Dette er en test
+
+commit 23032eb6c8cfd5ee27237dc661d96a85cd988d1e
+Author: 201370952 <ztuffer@gmail.com>
+Date:   Mon Sep 8 13:09:53 2014 +0200
+
+    Fjernet ukorrekt tidsplan
+
+commit e616585dedacef9cc6456d45b14ade40e0902225
+Author: 201370952 <ztuffer@gmail.com>
+Date:   Mon Sep 8 13:07:34 2014 +0200
+
+    Opdateret tidsplan
+
+commit 470177d4f09536f6bd109fe0cb15185223d3d7db
+Author: 201370952 <ztuffer@gmail.com>
+Date:   Sun Sep 7 20:38:32 2014 +0200
+
+    Oprettelse af repo
+
+commit dde606cc3f6581cdf64b9582361c7ea3077d74e1
+Author: 201370952 <ztuffer@gmail.com>
+Date:   Thu Sep 4 14:17:50 2014 +0200
+
+    Udleveret materiale
+
+commit 45cb643ae796ae7ecc687180174e69c2a3515b49
+Author: Kristoffer Lerbæk Pedersen <ztuffer@gmail.com>
+Date:   Sun Aug 31 01:36:28 2014 +0200
+
+    Initial commit
