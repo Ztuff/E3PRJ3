@@ -24,7 +24,7 @@ void initUART()
 
 
 
-void setdataArray(int ID, int x_data, int y_data, int z_data)
+void setdataArray(uint8 ID, uint8 x_data, uint8 y_data, uint8 z_data)
 {
     // // Klasse-lokale dataarray til ID, x_data, y_data, z_data
     dataArray[0] = ID+1; 
