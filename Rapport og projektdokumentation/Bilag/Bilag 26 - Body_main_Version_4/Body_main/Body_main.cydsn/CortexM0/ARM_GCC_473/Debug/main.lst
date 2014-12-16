@@ -1,0 +1,839 @@
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\cc7kwxc1.s 			page 1
+
+
+   1              		.cpu cortex-m0
+   2              		.fpu softvfp
+   3              		.eabi_attribute 20, 1
+   4              		.eabi_attribute 21, 1
+   5              		.eabi_attribute 23, 3
+   6              		.eabi_attribute 24, 1
+   7              		.eabi_attribute 25, 1
+   8              		.eabi_attribute 26, 1
+   9              		.eabi_attribute 30, 6
+  10              		.eabi_attribute 34, 0
+  11              		.eabi_attribute 18, 4
+  12              		.code	16
+  13              		.file	"main.c"
+  14              		.text
+  15              	.Ltext0:
+  16              		.cfi_sections	.debug_frame
+  17              		.section	.text.main,"ax",%progbits
+  18              		.align	2
+  19              		.global	main
+  20              		.code	16
+  21              		.thumb_func
+  22              		.type	main, %function
+  23              	main:
+  24              	.LFB33:
+  25              		.file 1 ".\\main.c"
+   1:.\main.c      **** /* ========================================
+   2:.\main.c      ****  *
+   3:.\main.c      ****  * Copyright YOUR COMPANY, THE YEAR
+   4:.\main.c      ****  * All Rights Reserved
+   5:.\main.c      ****  * UNPUBLISHED, LICENSED SOFTWARE.
+   6:.\main.c      ****  *
+   7:.\main.c      ****  * CONFIDENTIAL AND PROPRIETARY INFORMATION
+   8:.\main.c      ****  * WHICH IS THE PROPERTY OF your company.
+   9:.\main.c      ****  *
+  10:.\main.c      ****  * ========================================
+  11:.\main.c      **** */
+  12:.\main.c      **** #include <project.h>
+  13:.\main.c      **** #include "stdlib.h"
+  14:.\main.c      **** #include <stdio.h>
+  15:.\main.c      **** 
+  16:.\main.c      **** #include "SerialUnit.h"
+  17:.\main.c      **** #include "Sensor.h"
+  18:.\main.c      **** 
+  19:.\main.c      **** //Accelerometer ADXL345 defines
+  20:.\main.c      **** #define ACCEL_ADDRESS 0x53 // jumperen sættes til GND 
+  21:.\main.c      **** #define PWR_CTRL_REG 0x2D //Power control registeret Datablad side 26
+  22:.\main.c      **** #define PWR_MODE (1<<3) // Sættes i measurement mode, standby til den skal måle (Strømbesparende
+  23:.\main.c      **** #define DATAX0 0x32 //least significant 
+  24:.\main.c      **** #define DATAX1 0x33 //most significant
+  25:.\main.c      **** #define DATAY0 0x34
+  26:.\main.c      **** #define DATAY1 0x35
+  27:.\main.c      **** #define DATAZ0 0x36
+  28:.\main.c      **** #define DATAZ1 0x37
+  29:.\main.c      **** 
+  30:.\main.c      **** //Gyroscope MPU6050 defines 
+  31:.\main.c      **** #define GYRO_ADDRESS 0x68 //Jumperen sættes til GND 
+  32:.\main.c      **** #define GYRO_XOUT_H 0x43 // Most significant
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\cc7kwxc1.s 			page 2
+
+
+  33:.\main.c      **** #define GYRO_XOUT_L 0x44 // Least significant 
+  34:.\main.c      **** #define GYRO_YOUT_H 0x45
+  35:.\main.c      **** #define GYRO_YOUT_L 0x46
+  36:.\main.c      **** #define GYRO_ZOUT_H 0x47
+  37:.\main.c      **** #define GYRO_ZOUT_L 0x48
+  38:.\main.c      **** 
+  39:.\main.c      **** 
+  40:.\main.c      **** //Prototyper
+  41:.\main.c      **** void initSensors(void);
+  42:.\main.c      **** void initADXL345(void);
+  43:.\main.c      **** void initMPU6050(void);
+  44:.\main.c      **** 
+  45:.\main.c      **** 
+  46:.\main.c      **** int main()
+  47:.\main.c      **** {
+  26              		.loc 1 47 0
+  27              		.cfi_startproc
+  28 0000 80B5     		push	{r7, lr}
+  29              	.LCFI0:
+  30              		.cfi_def_cfa_offset 8
+  31              		.cfi_offset 7, -8
+  32              		.cfi_offset 14, -4
+  33 0002 00AF     		add	r7, sp, #0
+  34              	.LCFI1:
+  35              		.cfi_def_cfa_register 7
+  48:.\main.c      ****     //Initialisering
+  49:.\main.c      ****     initUART();
+  36              		.loc 1 49 0
+  37 0004 FFF7FEFF 		bl	initUART
+  50:.\main.c      ****     initSensors();
+  38              		.loc 1 50 0
+  39 0008 FFF7FEFF 		bl	initSensors
+  51:.\main.c      ****     
+  52:.\main.c      ****     // Tænd Power indikator
+  53:.\main.c      ****     POWERPIN_Write(1);
+  40              		.loc 1 53 0
+  41 000c 0120     		mov	r0, #1
+  42 000e FFF7FEFF 		bl	POWERPIN_Write
+  43              	.L2:
+  54:.\main.c      ****     
+  55:.\main.c      **** 	while(1)
+  56:.\main.c      ****     {
+  57:.\main.c      ****         // Klargøre I2C før hver aflæsning sensorer
+  58:.\main.c      ****         setupI2C();
+  44              		.loc 1 58 0 discriminator 1
+  45 0012 FFF7FEFF 		bl	setupI2C
+  59:.\main.c      ****         
+  60:.\main.c      ****         // Læs sensorer
+  61:.\main.c      ****         readAllSensors();
+  46              		.loc 1 61 0 discriminator 1
+  47 0016 FFF7FEFF 		bl	readAllSensors
+  62:.\main.c      ****          
+  63:.\main.c      ****         // Standartiser sensordata
+  64:.\main.c      ****         convSensData();
+  48              		.loc 1 64 0 discriminator 1
+  49 001a FFF7FEFF 		bl	convSensData
+  65:.\main.c      ****         
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\cc7kwxc1.s 			page 3
+
+
+  66:.\main.c      ****         // Send sensordata
+  67:.\main.c      ****         sendDataArray(); 
+  50              		.loc 1 67 0 discriminator 1
+  51 001e FFF7FEFF 		bl	sendDataArray
+  68:.\main.c      ****         
+  69:.\main.c      ****         // Tilpas afsending til 50 Hz
+  70:.\main.c      ****         CyDelay(19); // 19 ms
+  52              		.loc 1 70 0 discriminator 1
+  53 0022 1320     		mov	r0, #19
+  54 0024 FFF7FEFF 		bl	CyDelay
+  71:.\main.c      ****         
+  72:.\main.c      ****     }     
+  55              		.loc 1 72 0 discriminator 1
+  56 0028 F3E7     		b	.L2
+  57              		.cfi_endproc
+  58              	.LFE33:
+  59              		.size	main, .-main
+  60 002a C046     		.section	.text.initSensors,"ax",%progbits
+  61              		.align	2
+  62              		.global	initSensors
+  63              		.code	16
+  64              		.thumb_func
+  65              		.type	initSensors, %function
+  66              	initSensors:
+  67              	.LFB34:
+  73:.\main.c      ****             
+  74:.\main.c      **** 		
+  75:.\main.c      **** 	return 0;
+  76:.\main.c      **** }
+  77:.\main.c      **** 
+  78:.\main.c      **** 
+  79:.\main.c      **** 
+  80:.\main.c      **** 
+  81:.\main.c      **** void initSensors()
+  82:.\main.c      **** {	
+  68              		.loc 1 82 0
+  69              		.cfi_startproc
+  70 0000 80B5     		push	{r7, lr}
+  71              	.LCFI2:
+  72              		.cfi_def_cfa_offset 8
+  73              		.cfi_offset 7, -8
+  74              		.cfi_offset 14, -4
+  75 0002 00AF     		add	r7, sp, #0
+  76              	.LCFI3:
+  77              		.cfi_def_cfa_register 7
+  83:.\main.c      **** 	/***** INIT INDIVIDUAL SENSORS *****/
+  84:.\main.c      **** 	//initMPU6050();	//Gyroscope
+  85:.\main.c      **** 	initADXL345();	//Accellerometer
+  78              		.loc 1 85 0
+  79 0004 FFF7FEFF 		bl	initADXL345
+  86:.\main.c      **** 	// ..osv
+  87:.\main.c      **** }
+  80              		.loc 1 87 0
+  81 0008 BD46     		mov	sp, r7
+  82              		@ sp needed for prologue
+  83 000a 80BD     		pop	{r7, pc}
+  84              		.cfi_endproc
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\cc7kwxc1.s 			page 4
+
+
+  85              	.LFE34:
+  86              		.size	initSensors, .-initSensors
+  87              		.section	.text.initADXL345,"ax",%progbits
+  88              		.align	2
+  89              		.global	initADXL345
+  90              		.code	16
+  91              		.thumb_func
+  92              		.type	initADXL345, %function
+  93              	initADXL345:
+  94              	.LFB35:
+  88:.\main.c      **** 
+  89:.\main.c      **** 
+  90:.\main.c      **** 
+  91:.\main.c      **** //init accelerometer
+  92:.\main.c      **** void initADXL345(void)
+  93:.\main.c      **** {
+  95              		.loc 1 93 0
+  96              		.cfi_startproc
+  97 0000 80B5     		push	{r7, lr}
+  98              	.LCFI4:
+  99              		.cfi_def_cfa_offset 8
+ 100              		.cfi_offset 7, -8
+ 101              		.cfi_offset 14, -4
+ 102 0002 00AF     		add	r7, sp, #0
+ 103              	.LCFI5:
+ 104              		.cfi_def_cfa_register 7
+  94:.\main.c      **** 	// Fylder ADXL345 ind i sensor array'et. 
+  95:.\main.c      **** 	setSensArray(ACCEL_ADDRESS, DATAX0, DEFAULT_DATA);
+ 105              		.loc 1 95 0
+ 106 0004 0123     		mov	r3, #1
+ 107 0006 5B42     		neg	r3, r3
+ 108 0008 5320     		mov	r0, #83
+ 109 000a 3221     		mov	r1, #50
+ 110 000c 1A1C     		mov	r2, r3
+ 111 000e FFF7FEFF 		bl	setSensArray
+  96:.\main.c      **** 	setSensArray(ACCEL_ADDRESS, DATAX1, DEFAULT_DATA);
+ 112              		.loc 1 96 0
+ 113 0012 0123     		mov	r3, #1
+ 114 0014 5B42     		neg	r3, r3
+ 115 0016 5320     		mov	r0, #83
+ 116 0018 3321     		mov	r1, #51
+ 117 001a 1A1C     		mov	r2, r3
+ 118 001c FFF7FEFF 		bl	setSensArray
+  97:.\main.c      **** 	setSensArray(ACCEL_ADDRESS, DATAY0, DEFAULT_DATA);
+ 119              		.loc 1 97 0
+ 120 0020 0123     		mov	r3, #1
+ 121 0022 5B42     		neg	r3, r3
+ 122 0024 5320     		mov	r0, #83
+ 123 0026 3421     		mov	r1, #52
+ 124 0028 1A1C     		mov	r2, r3
+ 125 002a FFF7FEFF 		bl	setSensArray
+  98:.\main.c      **** 	setSensArray(ACCEL_ADDRESS, DATAY1, DEFAULT_DATA);
+ 126              		.loc 1 98 0
+ 127 002e 0123     		mov	r3, #1
+ 128 0030 5B42     		neg	r3, r3
+ 129 0032 5320     		mov	r0, #83
+ 130 0034 3521     		mov	r1, #53
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\cc7kwxc1.s 			page 5
+
+
+ 131 0036 1A1C     		mov	r2, r3
+ 132 0038 FFF7FEFF 		bl	setSensArray
+  99:.\main.c      **** 	setSensArray(ACCEL_ADDRESS, DATAZ0, DEFAULT_DATA);
+ 133              		.loc 1 99 0
+ 134 003c 0123     		mov	r3, #1
+ 135 003e 5B42     		neg	r3, r3
+ 136 0040 5320     		mov	r0, #83
+ 137 0042 3621     		mov	r1, #54
+ 138 0044 1A1C     		mov	r2, r3
+ 139 0046 FFF7FEFF 		bl	setSensArray
+ 100:.\main.c      **** 	setSensArray(ACCEL_ADDRESS, DATAZ1, DEFAULT_DATA);
+ 140              		.loc 1 100 0
+ 141 004a 0123     		mov	r3, #1
+ 142 004c 5B42     		neg	r3, r3
+ 143 004e 5320     		mov	r0, #83
+ 144 0050 3721     		mov	r1, #55
+ 145 0052 1A1C     		mov	r2, r3
+ 146 0054 FFF7FEFF 		bl	setSensArray
+ 101:.\main.c      **** 	
+ 102:.\main.c      **** 	//Opsætter til I2C 
+ 103:.\main.c      **** 	if(I2C_1_I2CMasterSendStart(ACCEL_ADDRESS, I2C_1_I2C_WRITE_XFER_MODE) == I2C_1_I2C_MSTR_NO_ERROR /
+ 147              		.loc 1 103 0
+ 148 0058 5320     		mov	r0, #83
+ 149 005a 0021     		mov	r1, #0
+ 150 005c FFF7FEFF 		bl	I2C_1_I2CMasterSendStart
+ 151 0060 031C     		mov	r3, r0
+ 152 0062 002B     		cmp	r3, #0
+ 153 0064 0DD1     		bne	.L4
+ 104:.\main.c      ****         && I2C_1_I2CMasterWriteByte(PWR_CTRL_REG) == I2C_1_I2C_MSTR_NO_ERROR // POWER CONTROL REGIS
+ 154              		.loc 1 104 0
+ 155 0066 2D20     		mov	r0, #45
+ 156 0068 FFF7FEFF 		bl	I2C_1_I2CMasterWriteByte
+ 157 006c 031C     		mov	r3, r0
+ 158 006e 002B     		cmp	r3, #0
+ 159 0070 07D1     		bne	.L4
+ 105:.\main.c      ****         && I2C_1_I2CMasterWriteByte(PWR_MODE) == I2C_1_I2C_MSTR_NO_ERROR) // Sættes i measurement 
+ 160              		.loc 1 105 0
+ 161 0072 0820     		mov	r0, #8
+ 162 0074 FFF7FEFF 		bl	I2C_1_I2CMasterWriteByte
+ 163 0078 031C     		mov	r3, r0
+ 164 007a 002B     		cmp	r3, #0
+ 165 007c 01D1     		bne	.L4
+ 106:.\main.c      **** 	handleI2CError();
+ 166              		.loc 1 106 0
+ 167 007e FFF7FEFF 		bl	handleI2CError
+ 168              	.L4:
+ 107:.\main.c      **** }
+ 169              		.loc 1 107 0
+ 170 0082 BD46     		mov	sp, r7
+ 171              		@ sp needed for prologue
+ 172 0084 80BD     		pop	{r7, pc}
+ 173              		.cfi_endproc
+ 174              	.LFE35:
+ 175              		.size	initADXL345, .-initADXL345
+ 176 0086 C046     		.section	.text.initMPU6050,"ax",%progbits
+ 177              		.align	2
+ 178              		.global	initMPU6050
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\cc7kwxc1.s 			page 6
+
+
+ 179              		.code	16
+ 180              		.thumb_func
+ 181              		.type	initMPU6050, %function
+ 182              	initMPU6050:
+ 183              	.LFB36:
+ 108:.\main.c      **** 
+ 109:.\main.c      **** //init gyroscope 
+ 110:.\main.c      **** void initMPU6050(void)
+ 111:.\main.c      **** {
+ 184              		.loc 1 111 0
+ 185              		.cfi_startproc
+ 186 0000 80B5     		push	{r7, lr}
+ 187              	.LCFI6:
+ 188              		.cfi_def_cfa_offset 8
+ 189              		.cfi_offset 7, -8
+ 190              		.cfi_offset 14, -4
+ 191 0002 00AF     		add	r7, sp, #0
+ 192              	.LCFI7:
+ 193              		.cfi_def_cfa_register 7
+ 112:.\main.c      **** 	// Fylder ADXL345 ind i sensor array'et. 
+ 113:.\main.c      **** 	setSensArray(GYRO_ADDRESS, GYRO_XOUT_H, DEFAULT_DATA);
+ 194              		.loc 1 113 0
+ 195 0004 0123     		mov	r3, #1
+ 196 0006 5B42     		neg	r3, r3
+ 197 0008 6820     		mov	r0, #104
+ 198 000a 4321     		mov	r1, #67
+ 199 000c 1A1C     		mov	r2, r3
+ 200 000e FFF7FEFF 		bl	setSensArray
+ 114:.\main.c      ****     setSensArray(GYRO_ADDRESS, GYRO_XOUT_L, DEFAULT_DATA);
+ 201              		.loc 1 114 0
+ 202 0012 0123     		mov	r3, #1
+ 203 0014 5B42     		neg	r3, r3
+ 204 0016 6820     		mov	r0, #104
+ 205 0018 4421     		mov	r1, #68
+ 206 001a 1A1C     		mov	r2, r3
+ 207 001c FFF7FEFF 		bl	setSensArray
+ 115:.\main.c      **** 	setSensArray(GYRO_ADDRESS, GYRO_YOUT_H, DEFAULT_DATA);
+ 208              		.loc 1 115 0
+ 209 0020 0123     		mov	r3, #1
+ 210 0022 5B42     		neg	r3, r3
+ 211 0024 6820     		mov	r0, #104
+ 212 0026 4521     		mov	r1, #69
+ 213 0028 1A1C     		mov	r2, r3
+ 214 002a FFF7FEFF 		bl	setSensArray
+ 116:.\main.c      **** 	setSensArray(GYRO_ADDRESS, GYRO_YOUT_L, DEFAULT_DATA);
+ 215              		.loc 1 116 0
+ 216 002e 0123     		mov	r3, #1
+ 217 0030 5B42     		neg	r3, r3
+ 218 0032 6820     		mov	r0, #104
+ 219 0034 4621     		mov	r1, #70
+ 220 0036 1A1C     		mov	r2, r3
+ 221 0038 FFF7FEFF 		bl	setSensArray
+ 117:.\main.c      **** 	setSensArray(GYRO_ADDRESS, GYRO_ZOUT_H, DEFAULT_DATA);
+ 222              		.loc 1 117 0
+ 223 003c 0123     		mov	r3, #1
+ 224 003e 5B42     		neg	r3, r3
+ 225 0040 6820     		mov	r0, #104
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\cc7kwxc1.s 			page 7
+
+
+ 226 0042 4721     		mov	r1, #71
+ 227 0044 1A1C     		mov	r2, r3
+ 228 0046 FFF7FEFF 		bl	setSensArray
+ 118:.\main.c      **** 	setSensArray(GYRO_ADDRESS, GYRO_ZOUT_L, DEFAULT_DATA);
+ 229              		.loc 1 118 0
+ 230 004a 0123     		mov	r3, #1
+ 231 004c 5B42     		neg	r3, r3
+ 232 004e 6820     		mov	r0, #104
+ 233 0050 4821     		mov	r1, #72
+ 234 0052 1A1C     		mov	r2, r3
+ 235 0054 FFF7FEFF 		bl	setSensArray
+ 119:.\main.c      **** 	
+ 120:.\main.c      **** 	//Opsætter til I2C 
+ 121:.\main.c      **** 	if(I2C_1_I2CMasterSendStart(GYRO_ADDRESS, I2C_1_I2C_WRITE_XFER_MODE) == I2C_1_I2C_MSTR_NO_ERROR) /
+ 236              		.loc 1 121 0
+ 237 0058 6820     		mov	r0, #104
+ 238 005a 0021     		mov	r1, #0
+ 239 005c FFF7FEFF 		bl	I2C_1_I2CMasterSendStart
+ 240 0060 031C     		mov	r3, r0
+ 241 0062 002B     		cmp	r3, #0
+ 242 0064 01D1     		bne	.L6
+ 122:.\main.c      **** 	handleI2CError();
+ 243              		.loc 1 122 0
+ 244 0066 FFF7FEFF 		bl	handleI2CError
+ 245              	.L6:
+ 123:.\main.c      **** }
+ 246              		.loc 1 123 0
+ 247 006a BD46     		mov	sp, r7
+ 248              		@ sp needed for prologue
+ 249 006c 80BD     		pop	{r7, pc}
+ 250              		.cfi_endproc
+ 251              	.LFE36:
+ 252              		.size	initMPU6050, .-initMPU6050
+ 253 006e C046     		.text
+ 254              	.Letext0:
+ 255              		.section	.debug_info,"",%progbits
+ 256              	.Ldebug_info0:
+ 257 0000 E3000000 		.4byte	0xe3
+ 258 0004 0200     		.2byte	0x2
+ 259 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 260 000a 04       		.byte	0x4
+ 261 000b 01       		.uleb128 0x1
+ 262 000c 20000000 		.4byte	.LASF17
+ 263 0010 01       		.byte	0x1
+ 264 0011 7F010000 		.4byte	.LASF18
+ 265 0015 92000000 		.4byte	.LASF19
+ 266 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 267 001d 00000000 		.4byte	0
+ 268 0021 00000000 		.4byte	0
+ 269 0025 00000000 		.4byte	.Ldebug_line0
+ 270 0029 02       		.uleb128 0x2
+ 271 002a 01       		.byte	0x1
+ 272 002b 06       		.byte	0x6
+ 273 002c 61010000 		.4byte	.LASF0
+ 274 0030 02       		.uleb128 0x2
+ 275 0031 01       		.byte	0x1
+ 276 0032 08       		.byte	0x8
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\cc7kwxc1.s 			page 8
+
+
+ 277 0033 21010000 		.4byte	.LASF1
+ 278 0037 02       		.uleb128 0x2
+ 279 0038 02       		.byte	0x2
+ 280 0039 05       		.byte	0x5
+ 281 003a 3D010000 		.4byte	.LASF2
+ 282 003e 02       		.uleb128 0x2
+ 283 003f 02       		.byte	0x2
+ 284 0040 07       		.byte	0x7
+ 285 0041 4E010000 		.4byte	.LASF3
+ 286 0045 02       		.uleb128 0x2
+ 287 0046 04       		.byte	0x4
+ 288 0047 05       		.byte	0x5
+ 289 0048 34010000 		.4byte	.LASF4
+ 290 004c 02       		.uleb128 0x2
+ 291 004d 04       		.byte	0x4
+ 292 004e 07       		.byte	0x7
+ 293 004f 69000000 		.4byte	.LASF5
+ 294 0053 02       		.uleb128 0x2
+ 295 0054 08       		.byte	0x8
+ 296 0055 05       		.byte	0x5
+ 297 0056 00000000 		.4byte	.LASF6
+ 298 005a 02       		.uleb128 0x2
+ 299 005b 08       		.byte	0x8
+ 300 005c 07       		.byte	0x7
+ 301 005d 7B000000 		.4byte	.LASF7
+ 302 0061 03       		.uleb128 0x3
+ 303 0062 04       		.byte	0x4
+ 304 0063 05       		.byte	0x5
+ 305 0064 696E7400 		.ascii	"int\000"
+ 306 0068 02       		.uleb128 0x2
+ 307 0069 04       		.byte	0x4
+ 308 006a 07       		.byte	0x7
+ 309 006b 0E000000 		.4byte	.LASF8
+ 310 006f 02       		.uleb128 0x2
+ 311 0070 04       		.byte	0x4
+ 312 0071 04       		.byte	0x4
+ 313 0072 79010000 		.4byte	.LASF9
+ 314 0076 02       		.uleb128 0x2
+ 315 0077 08       		.byte	0x8
+ 316 0078 04       		.byte	0x4
+ 317 0079 47010000 		.4byte	.LASF10
+ 318 007d 02       		.uleb128 0x2
+ 319 007e 01       		.byte	0x1
+ 320 007f 08       		.byte	0x8
+ 321 0080 2F010000 		.4byte	.LASF11
+ 322 0084 02       		.uleb128 0x2
+ 323 0085 04       		.byte	0x4
+ 324 0086 07       		.byte	0x7
+ 325 0087 94010000 		.4byte	.LASF12
+ 326 008b 04       		.uleb128 0x4
+ 327 008c 01       		.byte	0x1
+ 328 008d 1B000000 		.4byte	.LASF13
+ 329 0091 01       		.byte	0x1
+ 330 0092 2E       		.byte	0x2e
+ 331 0093 61000000 		.4byte	0x61
+ 332 0097 00000000 		.4byte	.LFB33
+ 333 009b 2A000000 		.4byte	.LFE33
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\cc7kwxc1.s 			page 9
+
+
+ 334 009f 00000000 		.4byte	.LLST0
+ 335 00a3 01       		.byte	0x1
+ 336 00a4 05       		.uleb128 0x5
+ 337 00a5 01       		.byte	0x1
+ 338 00a6 15010000 		.4byte	.LASF14
+ 339 00aa 01       		.byte	0x1
+ 340 00ab 51       		.byte	0x51
+ 341 00ac 01       		.byte	0x1
+ 342 00ad 00000000 		.4byte	.LFB34
+ 343 00b1 0C000000 		.4byte	.LFE34
+ 344 00b5 2C000000 		.4byte	.LLST1
+ 345 00b9 01       		.byte	0x1
+ 346 00ba 05       		.uleb128 0x5
+ 347 00bb 01       		.byte	0x1
+ 348 00bc 88010000 		.4byte	.LASF15
+ 349 00c0 01       		.byte	0x1
+ 350 00c1 5C       		.byte	0x5c
+ 351 00c2 01       		.byte	0x1
+ 352 00c3 00000000 		.4byte	.LFB35
+ 353 00c7 86000000 		.4byte	.LFE35
+ 354 00cb 58000000 		.4byte	.LLST2
+ 355 00cf 01       		.byte	0x1
+ 356 00d0 05       		.uleb128 0x5
+ 357 00d1 01       		.byte	0x1
+ 358 00d2 6D010000 		.4byte	.LASF16
+ 359 00d6 01       		.byte	0x1
+ 360 00d7 6E       		.byte	0x6e
+ 361 00d8 01       		.byte	0x1
+ 362 00d9 00000000 		.4byte	.LFB36
+ 363 00dd 6E000000 		.4byte	.LFE36
+ 364 00e1 84000000 		.4byte	.LLST3
+ 365 00e5 01       		.byte	0x1
+ 366 00e6 00       		.byte	0
+ 367              		.section	.debug_abbrev,"",%progbits
+ 368              	.Ldebug_abbrev0:
+ 369 0000 01       		.uleb128 0x1
+ 370 0001 11       		.uleb128 0x11
+ 371 0002 01       		.byte	0x1
+ 372 0003 25       		.uleb128 0x25
+ 373 0004 0E       		.uleb128 0xe
+ 374 0005 13       		.uleb128 0x13
+ 375 0006 0B       		.uleb128 0xb
+ 376 0007 03       		.uleb128 0x3
+ 377 0008 0E       		.uleb128 0xe
+ 378 0009 1B       		.uleb128 0x1b
+ 379 000a 0E       		.uleb128 0xe
+ 380 000b 55       		.uleb128 0x55
+ 381 000c 06       		.uleb128 0x6
+ 382 000d 11       		.uleb128 0x11
+ 383 000e 01       		.uleb128 0x1
+ 384 000f 52       		.uleb128 0x52
+ 385 0010 01       		.uleb128 0x1
+ 386 0011 10       		.uleb128 0x10
+ 387 0012 06       		.uleb128 0x6
+ 388 0013 00       		.byte	0
+ 389 0014 00       		.byte	0
+ 390 0015 02       		.uleb128 0x2
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\cc7kwxc1.s 			page 10
+
+
+ 391 0016 24       		.uleb128 0x24
+ 392 0017 00       		.byte	0
+ 393 0018 0B       		.uleb128 0xb
+ 394 0019 0B       		.uleb128 0xb
+ 395 001a 3E       		.uleb128 0x3e
+ 396 001b 0B       		.uleb128 0xb
+ 397 001c 03       		.uleb128 0x3
+ 398 001d 0E       		.uleb128 0xe
+ 399 001e 00       		.byte	0
+ 400 001f 00       		.byte	0
+ 401 0020 03       		.uleb128 0x3
+ 402 0021 24       		.uleb128 0x24
+ 403 0022 00       		.byte	0
+ 404 0023 0B       		.uleb128 0xb
+ 405 0024 0B       		.uleb128 0xb
+ 406 0025 3E       		.uleb128 0x3e
+ 407 0026 0B       		.uleb128 0xb
+ 408 0027 03       		.uleb128 0x3
+ 409 0028 08       		.uleb128 0x8
+ 410 0029 00       		.byte	0
+ 411 002a 00       		.byte	0
+ 412 002b 04       		.uleb128 0x4
+ 413 002c 2E       		.uleb128 0x2e
+ 414 002d 00       		.byte	0
+ 415 002e 3F       		.uleb128 0x3f
+ 416 002f 0C       		.uleb128 0xc
+ 417 0030 03       		.uleb128 0x3
+ 418 0031 0E       		.uleb128 0xe
+ 419 0032 3A       		.uleb128 0x3a
+ 420 0033 0B       		.uleb128 0xb
+ 421 0034 3B       		.uleb128 0x3b
+ 422 0035 0B       		.uleb128 0xb
+ 423 0036 49       		.uleb128 0x49
+ 424 0037 13       		.uleb128 0x13
+ 425 0038 11       		.uleb128 0x11
+ 426 0039 01       		.uleb128 0x1
+ 427 003a 12       		.uleb128 0x12
+ 428 003b 01       		.uleb128 0x1
+ 429 003c 40       		.uleb128 0x40
+ 430 003d 06       		.uleb128 0x6
+ 431 003e 9642     		.uleb128 0x2116
+ 432 0040 0C       		.uleb128 0xc
+ 433 0041 00       		.byte	0
+ 434 0042 00       		.byte	0
+ 435 0043 05       		.uleb128 0x5
+ 436 0044 2E       		.uleb128 0x2e
+ 437 0045 00       		.byte	0
+ 438 0046 3F       		.uleb128 0x3f
+ 439 0047 0C       		.uleb128 0xc
+ 440 0048 03       		.uleb128 0x3
+ 441 0049 0E       		.uleb128 0xe
+ 442 004a 3A       		.uleb128 0x3a
+ 443 004b 0B       		.uleb128 0xb
+ 444 004c 3B       		.uleb128 0x3b
+ 445 004d 0B       		.uleb128 0xb
+ 446 004e 27       		.uleb128 0x27
+ 447 004f 0C       		.uleb128 0xc
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\cc7kwxc1.s 			page 11
+
+
+ 448 0050 11       		.uleb128 0x11
+ 449 0051 01       		.uleb128 0x1
+ 450 0052 12       		.uleb128 0x12
+ 451 0053 01       		.uleb128 0x1
+ 452 0054 40       		.uleb128 0x40
+ 453 0055 06       		.uleb128 0x6
+ 454 0056 9642     		.uleb128 0x2116
+ 455 0058 0C       		.uleb128 0xc
+ 456 0059 00       		.byte	0
+ 457 005a 00       		.byte	0
+ 458 005b 00       		.byte	0
+ 459              		.section	.debug_loc,"",%progbits
+ 460              	.Ldebug_loc0:
+ 461              	.LLST0:
+ 462 0000 00000000 		.4byte	.LFB33
+ 463 0004 02000000 		.4byte	.LCFI0
+ 464 0008 0200     		.2byte	0x2
+ 465 000a 7D       		.byte	0x7d
+ 466 000b 00       		.sleb128 0
+ 467 000c 02000000 		.4byte	.LCFI0
+ 468 0010 04000000 		.4byte	.LCFI1
+ 469 0014 0200     		.2byte	0x2
+ 470 0016 7D       		.byte	0x7d
+ 471 0017 08       		.sleb128 8
+ 472 0018 04000000 		.4byte	.LCFI1
+ 473 001c 2A000000 		.4byte	.LFE33
+ 474 0020 0200     		.2byte	0x2
+ 475 0022 77       		.byte	0x77
+ 476 0023 08       		.sleb128 8
+ 477 0024 00000000 		.4byte	0
+ 478 0028 00000000 		.4byte	0
+ 479              	.LLST1:
+ 480 002c 00000000 		.4byte	.LFB34
+ 481 0030 02000000 		.4byte	.LCFI2
+ 482 0034 0200     		.2byte	0x2
+ 483 0036 7D       		.byte	0x7d
+ 484 0037 00       		.sleb128 0
+ 485 0038 02000000 		.4byte	.LCFI2
+ 486 003c 04000000 		.4byte	.LCFI3
+ 487 0040 0200     		.2byte	0x2
+ 488 0042 7D       		.byte	0x7d
+ 489 0043 08       		.sleb128 8
+ 490 0044 04000000 		.4byte	.LCFI3
+ 491 0048 0C000000 		.4byte	.LFE34
+ 492 004c 0200     		.2byte	0x2
+ 493 004e 77       		.byte	0x77
+ 494 004f 08       		.sleb128 8
+ 495 0050 00000000 		.4byte	0
+ 496 0054 00000000 		.4byte	0
+ 497              	.LLST2:
+ 498 0058 00000000 		.4byte	.LFB35
+ 499 005c 02000000 		.4byte	.LCFI4
+ 500 0060 0200     		.2byte	0x2
+ 501 0062 7D       		.byte	0x7d
+ 502 0063 00       		.sleb128 0
+ 503 0064 02000000 		.4byte	.LCFI4
+ 504 0068 04000000 		.4byte	.LCFI5
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\cc7kwxc1.s 			page 12
+
+
+ 505 006c 0200     		.2byte	0x2
+ 506 006e 7D       		.byte	0x7d
+ 507 006f 08       		.sleb128 8
+ 508 0070 04000000 		.4byte	.LCFI5
+ 509 0074 86000000 		.4byte	.LFE35
+ 510 0078 0200     		.2byte	0x2
+ 511 007a 77       		.byte	0x77
+ 512 007b 08       		.sleb128 8
+ 513 007c 00000000 		.4byte	0
+ 514 0080 00000000 		.4byte	0
+ 515              	.LLST3:
+ 516 0084 00000000 		.4byte	.LFB36
+ 517 0088 02000000 		.4byte	.LCFI6
+ 518 008c 0200     		.2byte	0x2
+ 519 008e 7D       		.byte	0x7d
+ 520 008f 00       		.sleb128 0
+ 521 0090 02000000 		.4byte	.LCFI6
+ 522 0094 04000000 		.4byte	.LCFI7
+ 523 0098 0200     		.2byte	0x2
+ 524 009a 7D       		.byte	0x7d
+ 525 009b 08       		.sleb128 8
+ 526 009c 04000000 		.4byte	.LCFI7
+ 527 00a0 6E000000 		.4byte	.LFE36
+ 528 00a4 0200     		.2byte	0x2
+ 529 00a6 77       		.byte	0x77
+ 530 00a7 08       		.sleb128 8
+ 531 00a8 00000000 		.4byte	0
+ 532 00ac 00000000 		.4byte	0
+ 533              		.section	.debug_aranges,"",%progbits
+ 534 0000 34000000 		.4byte	0x34
+ 535 0004 0200     		.2byte	0x2
+ 536 0006 00000000 		.4byte	.Ldebug_info0
+ 537 000a 04       		.byte	0x4
+ 538 000b 00       		.byte	0
+ 539 000c 0000     		.2byte	0
+ 540 000e 0000     		.2byte	0
+ 541 0010 00000000 		.4byte	.LFB33
+ 542 0014 2A000000 		.4byte	.LFE33-.LFB33
+ 543 0018 00000000 		.4byte	.LFB34
+ 544 001c 0C000000 		.4byte	.LFE34-.LFB34
+ 545 0020 00000000 		.4byte	.LFB35
+ 546 0024 86000000 		.4byte	.LFE35-.LFB35
+ 547 0028 00000000 		.4byte	.LFB36
+ 548 002c 6E000000 		.4byte	.LFE36-.LFB36
+ 549 0030 00000000 		.4byte	0
+ 550 0034 00000000 		.4byte	0
+ 551              		.section	.debug_ranges,"",%progbits
+ 552              	.Ldebug_ranges0:
+ 553 0000 00000000 		.4byte	.LFB33
+ 554 0004 2A000000 		.4byte	.LFE33
+ 555 0008 00000000 		.4byte	.LFB34
+ 556 000c 0C000000 		.4byte	.LFE34
+ 557 0010 00000000 		.4byte	.LFB35
+ 558 0014 86000000 		.4byte	.LFE35
+ 559 0018 00000000 		.4byte	.LFB36
+ 560 001c 6E000000 		.4byte	.LFE36
+ 561 0020 00000000 		.4byte	0
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\cc7kwxc1.s 			page 13
+
+
+ 562 0024 00000000 		.4byte	0
+ 563              		.section	.debug_line,"",%progbits
+ 564              	.Ldebug_line0:
+ 565 0000 9B000000 		.section	.debug_str,"MS",%progbits,1
+ 565      02001F00 
+ 565      00000201 
+ 565      FB0E0D00 
+ 565      01010101 
+ 566              	.LASF6:
+ 567 0000 6C6F6E67 		.ascii	"long long int\000"
+ 567      206C6F6E 
+ 567      6720696E 
+ 567      7400
+ 568              	.LASF8:
+ 569 000e 756E7369 		.ascii	"unsigned int\000"
+ 569      676E6564 
+ 569      20696E74 
+ 569      00
+ 570              	.LASF13:
+ 571 001b 6D61696E 		.ascii	"main\000"
+ 571      00
+ 572              	.LASF17:
+ 573 0020 474E5520 		.ascii	"GNU C 4.7.3 20130312 (release) [ARM/embedded-4_7-br"
+ 573      4320342E 
+ 573      372E3320 
+ 573      32303133 
+ 573      30333132 
+ 574 0053 616E6368 		.ascii	"anch revision 196615]\000"
+ 574      20726576 
+ 574      6973696F 
+ 574      6E203139 
+ 574      36363135 
+ 575              	.LASF5:
+ 576 0069 6C6F6E67 		.ascii	"long unsigned int\000"
+ 576      20756E73 
+ 576      69676E65 
+ 576      6420696E 
+ 576      7400
+ 577              	.LASF7:
+ 578 007b 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 578      206C6F6E 
+ 578      6720756E 
+ 578      7369676E 
+ 578      65642069 
+ 579              	.LASF19:
+ 580 0092 433A5C55 		.ascii	"C:\\Users\\Jeppe\\Documents\\Engineer\\3_Semester\\"
+ 580      73657273 
+ 580      5C4A6570 
+ 580      70655C44 
+ 580      6F63756D 
+ 581 00bf 45335052 		.ascii	"E3PRJ3\\Design og implementering\\Body SW\\Body_mai"
+ 581      4A335C44 
+ 581      65736967 
+ 581      6E206F67 
+ 581      20696D70 
+ 582 00ef 6E5F5665 		.ascii	"n_Version_4\\Body_main\\Body_main.cydsn\000"
+ 582      7273696F 
+ARM GAS  C:\Users\Jeppe\AppData\Local\Temp\cc7kwxc1.s 			page 14
+
+
+ 582      6E5F345C 
+ 582      426F6479 
+ 582      5F6D6169 
+ 583              	.LASF14:
+ 584 0115 696E6974 		.ascii	"initSensors\000"
+ 584      53656E73 
+ 584      6F727300 
+ 585              	.LASF1:
+ 586 0121 756E7369 		.ascii	"unsigned char\000"
+ 586      676E6564 
+ 586      20636861 
+ 586      7200
+ 587              	.LASF11:
+ 588 012f 63686172 		.ascii	"char\000"
+ 588      00
+ 589              	.LASF4:
+ 590 0134 6C6F6E67 		.ascii	"long int\000"
+ 590      20696E74 
+ 590      00
+ 591              	.LASF2:
+ 592 013d 73686F72 		.ascii	"short int\000"
+ 592      7420696E 
+ 592      7400
+ 593              	.LASF10:
+ 594 0147 646F7562 		.ascii	"double\000"
+ 594      6C6500
+ 595              	.LASF3:
+ 596 014e 73686F72 		.ascii	"short unsigned int\000"
+ 596      7420756E 
+ 596      7369676E 
+ 596      65642069 
+ 596      6E7400
+ 597              	.LASF0:
+ 598 0161 7369676E 		.ascii	"signed char\000"
+ 598      65642063 
+ 598      68617200 
+ 599              	.LASF16:
+ 600 016d 696E6974 		.ascii	"initMPU6050\000"
+ 600      4D505536 
+ 600      30353000 
+ 601              	.LASF9:
+ 602 0179 666C6F61 		.ascii	"float\000"
+ 602      7400
+ 603              	.LASF18:
+ 604 017f 2E5C6D61 		.ascii	".\\main.c\000"
+ 604      696E2E63 
+ 604      00
+ 605              	.LASF15:
+ 606 0188 696E6974 		.ascii	"initADXL345\000"
+ 606      4144584C 
+ 606      33343500 
+ 607              	.LASF12:
+ 608 0194 73697A65 		.ascii	"sizetype\000"
+ 608      74797065 
+ 608      00
+ 609              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.7.3 20130312 (release) [ARM/embedded-4_7-br
